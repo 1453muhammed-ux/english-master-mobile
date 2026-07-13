@@ -11,14 +11,14 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.2.0">
   <title>English Master Professional</title>
 </head>
 <body>
 <div id="app">
   <header class="topbar">
     <button class="brand" data-nav="dashboard" aria-label="Ana sayfa">
-      <span class="brandmark">EM</span><span><b>English Master</b><small>Professional</small></span>
+      <span class="brandmark">EM</span><span><b>English Master</b><small>Professional · v2.2</small></span>
     </button>
     <div class="top-actions">
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
@@ -48,6 +48,20 @@
         <button class="kpi review" data-start="review"><span>↻</span><div><strong id="countReview">0</strong><small>Tekrar bekliyor</small></div></button>
       </div>
 
+
+      <section class="mobile-study-launch" aria-label="Hızlı çalışma">
+        <div>
+          <p class="eyebrow">ÇALIŞMA MODLARI</p>
+          <h3>Bugün ne çalışalım?</h3>
+          <p>Modunu ve kelime aralığını seç.</p>
+        </div>
+        <div class="mobile-launch-buttons">
+          <button class="primary" data-start="smart">Akıllı Quiz</button>
+          <button class="secondary" data-start="flash">Kelime Kartları</button>
+          <button class="range-launch" data-action="open-study-setup">Özel kelime aralığı</button>
+        </div>
+      </section>
+
       <div class="content-grid">
         <article class="panel study-panel">
           <div class="panel-head"><div><p class="eyebrow">ÇALIŞMA MODLARI</p><h3>Bugün ne çalışalım?</h3></div></div>
@@ -56,6 +70,13 @@
             <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve durumunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>EN → TR</b><small>İngilizceden Türkçeye yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>TR → EN</b><small>Türkçeden İngilizceye yaz</small></div><em>Başla</em></button>
+          </div>
+          <div class="custom-range-box">
+            <div><b>Özel çalışma aralığı</b><small>Başlangıç ve bitiş numarasını kendin gir.</small></div>
+            <label>Başlangıç<input id="customStart" type="number" min="1" max="6000" value="1" inputmode="numeric"></label>
+            <label>Bitiş<input id="customEnd" type="number" min="1" max="6000" value="50" inputmode="numeric"></label>
+            <select id="customMode" aria-label="Çalışma modu"><option value="smart">Akıllı Quiz</option><option value="flash">Kelime Kartları</option><option value="en-tr">EN → TR</option><option value="tr-en">TR → EN</option></select>
+            <button id="startCustomRange" class="primary">Bu aralığı çalış</button>
           </div>
         </article>
         <article class="panel insight-panel">
@@ -87,6 +108,7 @@
           <p id="studyPron" class="pron"></p>
           <div id="studyContent"></div>
           <div id="studyFeedback" class="feedback"></div>
+          <div id="studyWordInfo" class="study-word-info" hidden></div>
           <button id="nextQuestion" class="primary wide" hidden>Sonraki soru</button>
         </article>
       </div>
@@ -105,7 +127,7 @@
   <nav class="bottom-nav">
     <button data-nav="dashboard" class="active"><span>⌂</span><small>Ana Sayfa</small></button>
     <button data-nav="library"><span>▦</span><small>Kelimeler</small></button>
-    <button data-start="smart" class="study-main"><span>✦</span><small>Çalış</small></button>
+    <button data-action="open-study-setup" class="study-main"><span>✦</span><small>Çalış</small></button>
     <button data-nav="progress"><span>◔</span><small>İlerleme</small></button>
     <button data-action="open-profile"><span>○</span><small>Profil</small></button>
   </nav>
@@ -118,6 +140,58 @@
   <div id="wordDetails" class="detail-sections"></div>
 </dialog>
 
+
+<dialog id="studySetupDialog" class="modal study-setup-modal">
+  <button class="sheet-close" data-close="studySetupDialog">×</button>
+  <div class="setup-head">
+    <span class="setup-icon">✦</span>
+    <div>
+      <p class="eyebrow">ÇALIŞMA AYARLARI</p>
+      <h2>Bugün ne çalışalım?</h2>
+      <p>Çalışma modunu ve kelime aralığını kendin belirle.</p>
+    </div>
+  </div>
+  <form id="studySetupForm">
+    <label>Çalışma modu
+      <select id="setupMode">
+        <option value="smart">Akıllı Quiz</option>
+        <option value="flash">Kelime Kartları</option>
+        <option value="en-tr">Yaz EN → TR</option>
+        <option value="tr-en">Yaz TR → EN</option>
+        <option value="review">Zor ve tekrar bekleyenler</option>
+      </select>
+    </label>
+
+    <div class="range-choice">
+      <label class="radio-card">
+        <input type="radio" name="rangeType" value="quick" checked>
+        <span><b>Hızlı çalışma</b><small>20 kelimelik akıllı oturum</small></span>
+      </label>
+      <label class="radio-card">
+        <input type="radio" name="rangeType" value="custom">
+        <span><b>Özel kelime aralığı</b><small>Başlangıç ve bitişi kendin gir</small></span>
+      </label>
+    </div>
+
+    <div id="setupRangeFields" class="setup-range-fields" hidden>
+      <label>Başlangıç
+        <input id="setupStart" type="number" min="1" max="6000" value="1" inputmode="numeric">
+      </label>
+      <label>Bitiş
+        <input id="setupEnd" type="number" min="1" max="6000" value="50" inputmode="numeric">
+      </label>
+      <div class="range-presets">
+        <button type="button" data-range-preset="1,50">1–50</button>
+        <button type="button" data-range-preset="51,100">51–100</button>
+        <button type="button" data-range-preset="1,100">1–100</button>
+        <button type="button" data-range-preset="1,500">1–500</button>
+      </div>
+    </div>
+
+    <button class="primary wide" type="submit">Çalışmaya başla</button>
+  </form>
+</dialog>
+
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
   <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">KULLANICI PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">İlerlemen bu kullanıcı altında saklanır.</p></div></div>
@@ -127,5 +201,5 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js" defer></script>
+<script src="app.js?v=2.2.0" defer></script>
 </body></html>

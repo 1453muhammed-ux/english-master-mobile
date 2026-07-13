@@ -1,25 +1,22 @@
-ENGLISH MASTER PROFESSIONAL v2
+ENGLISH MASTER PROFESSIONAL v2.2
 
-BU SÜRÜMDE
-- Profesyonel ve telefon/iPad uyumlu dashboard
-- Cihaz içinde çalışan kullanıcı profili
-- Kullanıcıya özel Öğreniyorum / Ezberledim / Zorlanıyorum kayıtları
-- 5.488 dolu kelime kaydı
-- Kelime arama ve grup / seviye / durum filtreleri
-- Ayrıntılı kelime kartı ve İngilizce seslendirme
-- Akıllı Quiz, Kelime Kartları, EN→TR ve TR→EN çalışma modları
-- Doğru kelimeyi aynı oturumda tekrar etmeme
-- Yanlış kelimeyi birkaç soru sonra yeniden sorma
-- 3 yanlıştan sonra otomatik Zorlanıyorum işareti
-- Günlük hedef, seri, doğruluk ve ilerleme raporu
-- PWA / Ana Ekrana Ekle / çevrimdışı önbellek
+GitHub yükleme:
+1. Bu klasördeki TÜM dosyaları repository ana dizinine yükleyin.
+2. Aynı isimli dosyaların üzerine yazılmasına izin verin.
+3. Commit changes düğmesine basın.
+4. 1-3 dakika bekleyin.
 
-GITHUB GÜNCELLEME
-1. Bu klasördeki TÜM dosyaları seçin.
-2. GitHub > english-master-mobile > Add file > Upload files.
-3. Aynı adlı eski dosyaların üzerine yükleyip Commit changes yapın.
-4. GitHub Pages 1-2 dakika içinde v2'yi yayınlar.
-5. Eski görünüm kalırsa Safari/Chrome sayfasını yenileyin. Ana ekran uygulamasında tamamen kapatıp yeniden açın.
+v2.2 yenilikleri:
+- Telefonda 'Çalışma Modları / Bugün ne çalışalım?' alanı artık ana sayfada görünür.
+- Alt menüdeki Çalış düğmesi çalışma ayarları penceresini açar.
+- Kullanıcı 1-50 gibi başlangıç ve bitiş aralığını kendisi girebilir.
+- Hazır 1-50, 51-100, 1-100 ve 1-500 seçenekleri eklendi.
+- Doğru cevapta yaklaşık 1 saniye sonra otomatik ilerler.
+- Yanlış cevapta bilgi okumak için Sonraki soru düğmesi kalır.
+- Cevaptan sonra kelime bilgisi, telaffuz, anlam ve örnek görünür.
+- Eski telefon önbelleğini yenilemek için service worker v2.2 güncellendi.
 
-NOT
-Bu sürüm kullanıcı profilini ve ilerlemeyi cihazın localStorage alanında saklar. Gerçek cihazlar arası kullanıcı girişi/senkron için Firebase Authentication + Firestore bağlantısı sonraki aşamadır. Mimari buna hazırdır.
+iPhone ana ekran uygulamasında eski görünüm kalırsa:
+- Uygulamayı tamamen kapatıp yeniden açın.
+- Safari'de sayfayı bir kez yenileyin.
+- Gerekirse ana ekrandaki eski simgeyi silip Safari'den yeniden Ana Ekrana Ekle yapın.
