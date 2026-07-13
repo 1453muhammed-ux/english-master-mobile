@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#071a33">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="English Master">
+  <meta name="description" content="6000 kelimelik kişisel İngilizce öğrenme ve akıllı tekrar platformu.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <title>English Master Professional</title>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <button class="brand" data-nav="dashboard" aria-label="Ana sayfa">
+      <span class="brandmark">EM</span><span><b>English Master</b><small>Professional</small></span>
+    </button>
+    <div class="top-actions">
+      <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
+      <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="view-dashboard" class="view active">
+      <div class="welcome-row">
+        <div><p class="eyebrow">KİŞİSEL ÖĞRENME PANELİ</p><h1>Merhaba, <span id="helloName">Öğrenci</span> 👋</h1><p id="todayText" class="muted"></p></div>
+        <button class="secondary desktop-only" data-action="open-profile">Profili yönet</button>
+      </div>
+
+      <div class="hero-grid">
+        <article class="hero-card">
+          <div class="hero-copy"><span class="pill">BUGÜNKÜ PLAN</span><h2>Her gün biraz, kalıcı şekilde.</h2><p id="heroMessage">Akıllı tekrarların ve yeni kelimelerin hazır.</p><div class="hero-actions"><button class="primary" data-start="smart">Çalışmaya başla</button><button class="glass" data-nav="library">Kelimeleri aç</button></div></div>
+          <div class="goal-ring" id="goalRing"><div><strong id="goalPercent">0%</strong><span>günlük hedef</span></div></div>
+        </article>
+        <article class="streak-card"><span class="flame">🔥</span><div><small>Günlük seri</small><strong><span id="streak">0</span> gün</strong><p id="streakHint">İlk çalışmanı tamamla.</p></div></article>
+      </div>
+
+      <div class="kpi-grid">
+        <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
+        <button class="kpi memorized" data-filter-status="memorized"><span>E</span><div><strong id="countMem">0</strong><small>Ezberledim</small></div></button>
+        <button class="kpi hard" data-filter-status="hard"><span>Z</span><div><strong id="countHard">0</strong><small>Zorlanıyorum</small></div></button>
+        <button class="kpi review" data-start="review"><span>↻</span><div><strong id="countReview">0</strong><small>Tekrar bekliyor</small></div></button>
+      </div>
+
+      <div class="content-grid">
+        <article class="panel study-panel">
+          <div class="panel-head"><div><p class="eyebrow">ÇALIŞMA MODLARI</p><h3>Bugün ne çalışalım?</h3></div></div>
+          <div class="mode-grid">
+            <button class="mode-card" data-start="smart"><span class="mode-icon purple">✦</span><div><b>Akıllı Quiz</b><small>Seviyene göre karışık sorular</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve durumunu seç</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>EN → TR</b><small>İngilizceden Türkçeye yaz</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>TR → EN</b><small>Türkçeden İngilizceye yaz</small></div><em>Başla</em></button>
+          </div>
+        </article>
+        <article class="panel insight-panel">
+          <div class="panel-head"><div><p class="eyebrow">AKILLI İÇGÖRÜ</p><h3>Öğrenme özeti</h3></div></div>
+          <div class="insight"><div class="insight-icon">◎</div><p id="insightText">Çalışmaya başladığında güçlü ve zor kelimelerini analiz edeceğiz.</p></div>
+          <div class="mini-bars"><div><span>Bugünkü doğruluk</span><b id="accuracyText">—</b></div><progress id="accuracyBar" max="100" value="0"></progress><div><span>Toplam çözülen</span><b id="answeredTotal">0</b></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-library" class="view">
+      <div class="section-title"><div><p class="eyebrow">KELİME KÜTÜPHANESİ</p><h1>6000 Word Master</h1><p class="muted"><span id="resultCount">0</span> kayıt gösteriliyor</p></div></div>
+      <div class="filters panel">
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="İngilizce, Türkçe veya örnek cümle ara…"></label>
+        <select id="groupFilter"><option value="">Tüm gruplar</option><option>1-1000</option><option>1001-2000</option><option>2001-3000</option><option>3001-4000</option><option>4001-5000</option><option>5001-6000 Kalıplar</option></select>
+        <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
+        <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="unset">İşaretsiz</option></select>
+      </div>
+      <div id="wordList" class="word-list"></div>
+      <button id="loadMore" class="secondary wide">Daha fazla göster</button>
+    </section>
+
+    <section id="view-study" class="view">
+      <div class="study-shell">
+        <div class="study-header"><button id="exitStudy" class="icon-btn">←</button><div class="study-progress"><div><span id="studyModeName">Akıllı Quiz</span><b id="studyCounter">1 / 20</b></div><progress id="studyProgress" max="20" value="1"></progress></div><button id="studySpeak" class="icon-btn">🔊</button></div>
+        <article id="studyCard" class="study-card">
+          <span id="studyBadge" class="pill">SORU</span>
+          <h2 id="studyQuestion">Hazırlanıyor…</h2>
+          <p id="studyPron" class="pron"></p>
+          <div id="studyContent"></div>
+          <div id="studyFeedback" class="feedback"></div>
+          <button id="nextQuestion" class="primary wide" hidden>Sonraki soru</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="view-progress" class="view">
+      <div class="section-title"><div><p class="eyebrow">İLERLEME</p><h1>Öğrenme raporun</h1><p class="muted">Bu cihazdaki kişisel çalışma verilerin.</p></div></div>
+      <div class="report-grid">
+        <article class="panel report-main"><h3>Genel durum</h3><div class="donut" id="masteryDonut"><div><strong id="masteryPercent">0%</strong><span>işaretlendi</span></div></div><div class="legend"><span><i class="l1"></i>Öğreniyorum <b id="rLearn">0</b></span><span><i class="l2"></i>Ezberledim <b id="rMem">0</b></span><span><i class="l3"></i>Zorlanıyorum <b id="rHard">0</b></span></div></article>
+        <article class="panel"><h3>Performans</h3><div class="report-stat"><span>Toplam cevap</span><b id="rAnswers">0</b></div><div class="report-stat"><span>Doğru cevap</span><b id="rCorrect">0</b></div><div class="report-stat"><span>Başarı oranı</span><b id="rAccuracy">—</b></div><div class="report-stat"><span>En uzun seri</span><b id="rBestStreak">0 gün</b></div></article>
+        <article class="panel full"><h3>Seviye dağılımı</h3><div id="levelDistribution" class="level-dist"></div></article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <button data-nav="dashboard" class="active"><span>⌂</span><small>Ana Sayfa</small></button>
+    <button data-nav="library"><span>▦</span><small>Kelimeler</small></button>
+    <button data-start="smart" class="study-main"><span>✦</span><small>Çalış</small></button>
+    <button data-nav="progress"><span>◔</span><small>İlerleme</small></button>
+    <button data-action="open-profile"><span>○</span><small>Profil</small></button>
+  </nav>
+</div>
+
+<dialog id="wordDialog" class="sheet">
+  <button class="sheet-close" data-close="wordDialog">×</button>
+  <div class="word-title"><div><span id="wordLevel" class="pill"></span><h2 id="wordEnglish"></h2><p id="wordPron"></p></div><button id="wordSpeak" class="speak-big">🔊</button></div>
+  <div class="status-buttons"><button data-word-status="learn">Öğreniyorum</button><button data-word-status="memorized">Ezberledim</button><button data-word-status="hard">Zorlanıyorum</button></div>
+  <div id="wordDetails" class="detail-sections"></div>
+</dialog>
+
+<dialog id="profileDialog" class="modal">
+  <button class="sheet-close" data-close="profileDialog">×</button>
+  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">KULLANICI PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">İlerlemen bu kullanıcı altında saklanır.</p></div></div>
+  <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" required placeholder="ornek@email.com"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label><button class="primary wide" type="submit">Profili kaydet</button></form>
+  <div class="cloud-note"><span>☁</span><p><b>Bulut senkronizasyonuna hazır</b><br>Şu an veriler bu cihazda saklanır. Firebase bağlantısı açıldığında iPhone, iPad ve PC aynı ilerlemeyi kullanacak.</p></div>
+  <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
+</dialog>
+
+<div id="toast" class="toast"></div>
+<script src="app.js" defer></script>
+</body></html>
