@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.5.1">
+  <link rel="stylesheet" href="style.css?v=3.5.2">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.1</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.2</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -62,6 +62,21 @@
         <button class="kpi hard" data-filter-status="hard"><span>Z</span><div><strong id="countHard">0</strong><small>Zorlanıyorum</small></div></button>
         <button class="kpi streak" data-nav="progress"><span>🔥</span><div><strong><span id="streak">0</span> gün</strong><small>Çalışma serisi</small></div></button>
       </div>
+
+      <div id="guestBanner" class="guest-banner" hidden>
+        <span>!</span><p><b>Misafir modundasın.</b> İlerlemen Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
+        <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
+      </div>
+
+      <section class="home-tools panel">
+        <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Dosyalar ve uygulama</h2></div></div>
+        <div class="home-tool-grid">
+          <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
+          <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
+          <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı kullanım</b><small>Kelime verilerini bu cihaza indir</small></div><em>→</em></button>
+        </div>
+        <p id="offlineStatus" class="settings-note">Kelime verileri indirildiğinde internet olmadan da çalışır.</p>
+      </section>
 
 
       <section class="collections-section">
@@ -338,10 +353,14 @@
   <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen telefon ve bilgisayarda eşitlenir.</p></div></div>
 
   <section class="auth-section">
-    <div id="authSignedOut" class="auth-card">
+    <div id="authSignedOut" class="auth-card auth-card-signed-out">
       <span class="google-badge">G</span>
-      <div><b>Google ile giriş yap</b><small>Aynı e-posta ile tüm cihazlarda aynı profil açılır.</small></div>
-      <button id="googleSignInBtn" class="primary" type="button">Giriş yap</button>
+      <div><b>Google ile giriş yap</b><small>Aynı e-posta ile telefon ve bilgisayarda aynı profil açılır.</small></div>
+      <div class="auth-actions">
+        <button id="googleSignInBtn" class="primary" type="button">Google ile giriş</button>
+        <button id="guestContinueBtn" class="secondary" type="button">Misafir devam et</button>
+      </div>
+      <p class="guest-warning">Misafir modunda ilerleme Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
     </div>
     <div id="authSignedIn" class="auth-card signed-in" hidden>
       <span class="google-badge ok">✓</span>
@@ -353,21 +372,6 @@
   <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" readonly placeholder="Google ile giriş yaptığında otomatik gelir"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
   <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
   <button class="primary wide" type="submit">Profili kaydet</button></form>
-  <section class="settings-tools">
-    <div class="settings-title"><p class="eyebrow">UYGULAMA AYARLARI</p><h3>Telefon ve çevrimdışı kullanım</h3></div>
-    <div class="settings-action-grid">
-      <button id="installAppBtn" class="secondary wide" type="button">▣ Ana ekrana ekle</button>
-      <button id="offlineBtn" class="secondary wide" type="button">↓ Çevrimdışı modu indir</button>
-    </div>
-    <p id="offlineStatus" class="settings-note">Kelime verileri indirildiğinde internet olmadan da çalışır.</p>
-  </section>
-  <section class="pdf-downloads">
-    <div class="settings-title"><p class="eyebrow">PDF ÇALIŞMA DOSYALARI</p><h3>Google Drive üzerinden indir</h3></div>
-    <div class="download-list">
-      <a class="drive-folder-link" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer">Tüm PDF dosyalarını aç <span>DRIVE ↗</span></a>
-    </div>
-    <p class="pdf-file-summary">1–1000, 1001–2000, 2001–3000, 3001–4000, 4001–5000, 5001–6000 Kalıplar, 6000 Tüm, İngilizce Boş ve Türkçe Boş.</p>
-  </section>
   <div class="cloud-note"><span>☁</span><p id="cloudNoteText"><b>Google senkronizasyonu</b><br>Giriş yapınca ilerleme ve puanlar cihazlar arasında eşitlenir.</p></div>
   <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
 </dialog>
@@ -382,6 +386,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.5.1" defer></script>
+<script src="app.js?v=3.5.2" defer></script>
 </body>
 </html>

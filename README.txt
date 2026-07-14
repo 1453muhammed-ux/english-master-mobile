@@ -1,4 +1,4 @@
-WORDPILOT v3.5.1
+WORDPILOT v3.5.2
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -13,3 +13,8 @@ Bu sürümde:
 - Sağ üst profil düğmesi çalışır.
 - iPhone/iPad Safari ve Chrome ana ekrana ekleme yönergeleri güncellendi.
 - words.json ve eski yerel ilerleme anahtarı korunmuştur.
+
+- Google girişinde kapanan pencere için yönlendirmeli yedek giriş eklendi.
+- Çıkış işlemi masaüstü ve telefonda beklemeden tamamlanacak şekilde düzeltildi.
+- PDF, ana ekrana ekleme ve çevrimdışı kullanım ana sayfaya taşındı.
+- Google hesabı olmayanlar için uyarılı Misafir modu eklendi.

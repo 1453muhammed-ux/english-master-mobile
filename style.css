@@ -360,7 +360,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .leaderboard-row{grid-template-columns:29px 36px 1fr auto;padding:9px 8px;gap:7px}.leader-avatar{width:34px;height:34px}.leaderboard-row strong{font-size:11px}
 }
 
-/* WordPilot v3.5.1 — Google hesap ve Drive */
+/* WordPilot v3.5.2 — giriş, misafir ve ana sayfa araçları */
 .auth-section{margin:4px 0 18px}
 .auth-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;background:linear-gradient(135deg,#F7F8FF,#F8FBFF);border:1px solid #DDE3F0;border-radius:17px;padding:13px}
 .auth-card.signed-in{background:linear-gradient(135deg,#EFFAF5,#F4FBFF);border-color:#CBE8DB}
@@ -380,3 +380,15 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .auth-card{grid-template-columns:auto 1fr;gap:9px;padding:11px}
   .auth-card button{grid-column:1/-1;width:100%}
 }
+
+
+/* v3.5.2 ana sayfa araçları ve misafir modu */
+.guest-banner{margin:16px 0 20px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;background:#FFF8E8;border:1px solid #F0D99A;border-radius:16px;padding:12px 14px}
+.guest-banner[hidden]{display:none!important}.guest-banner>span{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#FFE5A8;color:#815C00;font-weight:1000}.guest-banner p{margin:0;font-size:12px;line-height:1.45;color:#6B5A2B}.guest-banner .text-link{white-space:nowrap}
+.home-tools{margin:18px 0 24px;padding:20px}.home-tools-head h2{margin:0 0 14px;font-size:22px}.home-tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.home-tool-card{appearance:none;border:1px solid var(--line);background:#F8FAFD;border-radius:16px;padding:14px;min-height:84px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;text-align:left;text-decoration:none;color:var(--ink);font:inherit;cursor:pointer;transition:.18s transform,.18s border-color,.18s background}
+.home-tool-card:hover{transform:translateY(-1px);border-color:#AFA5FF;background:#F4F1FF}.home-tool-card>span{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:14px;font-weight:1000;background:white;border:1px solid var(--line)}
+.home-tool-card b,.home-tool-card small{display:block}.home-tool-card b{font-size:14px}.home-tool-card small{font-size:11px;color:var(--muted);line-height:1.35;margin-top:4px}.home-tool-card em{font-style:normal;color:var(--primary);font-weight:1000}
+.home-tool-card.drive>span{color:#356AC3;background:#EEF5FF}.home-tool-card.install>span{color:#6C4FD3;background:#F2EFFF}.home-tool-card.offline>span{color:#20845F;background:#EAF8F1}
+.auth-card-signed-out{grid-template-columns:auto 1fr}.auth-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}.auth-actions button{width:100%}.guest-warning{grid-column:1/-1;margin:0;background:#FFF8E8;border:1px solid #F0D99A;border-radius:11px;padding:9px 10px;font-size:11px!important;line-height:1.45;color:#6B5A2B}
+@media(max-width:760px){.home-tool-grid{grid-template-columns:1fr}.home-tools{padding:15px}.guest-banner{grid-template-columns:auto 1fr}.guest-banner .text-link{grid-column:1/-1;width:100%;text-align:center}.auth-actions{grid-template-columns:1fr}}

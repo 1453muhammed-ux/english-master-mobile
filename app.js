@@ -2,8 +2,10 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.5.1';
+const VERSION='3.5.2';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
+const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
+const AUTH_REDIRECT_KEY=`${STORE}:auth_redirect_pending`;
 const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıyorum'};
 const MODE_LABEL={
   smart:'Akıllı Quiz',flash:'Kelime Kartları','en-tr':'Yaz EN → TR','tr-en':'Yaz TR → EN',
@@ -22,7 +24,7 @@ const FIREBASE_CONFIG={
 const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing';
 
 let words=[], profile=null, state=null, currentWord=null, listLimit=80, session=null, deferredPrompt=null;
-let fbAuth=null,fbDb=null,authUser=null,cloudReady=false,cloudSyncTimer=null,cloudSyncBusy=false,cloudSyncQueued=false,leaderboardFetch=null,cloudLeaderboard=null;
+let fbAuth=null,fbDb=null,authUser=null,cloudReady=false,cloudSyncTimer=null,cloudSyncBusy=false,cloudSyncQueued=false,leaderboardFetch=null,cloudLeaderboard=null,authBusy=false;
 const SESSION_KEY='wordpilot_active_session_v34';
 function selectedQuizStyle(){return document.querySelector('input[name="quizStyle"]:checked')?.value||'classic'}
 
@@ -164,9 +166,10 @@ function updateAuthUI(){
   if($('#authUserName'))$('#authUserName').textContent=authUser?.displayName||profile?.name||'Google hesabı bağlı';
   if($('#authUserEmail'))$('#authUserEmail').textContent=authUser?.email||'';
   if($('#profileEmail'))$('#profileEmail').value=signed?(authUser?.email||''):(profile?.email==='guest@local'?'':profile?.email||'');
+  if($('#guestBanner'))$('#guestBanner').hidden=signed;
   if($('#cloudNoteText'))$('#cloudNoteText').innerHTML=signed
     ?'<b>Google senkronizasyonu açık</b><br>İlerleme ve puanlar bu hesapla cihazlar arasında eşitlenir.'
-    :'<b>Google senkronizasyonu kapalı</b><br>Giriş yapana kadar ilerleme yalnızca bu cihazda saklanır.';
+    :'<b>Misafir modu</b><br>İlerleme Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.';
   if(!signed)setSyncStatus(window.firebase?'Google ile giriş bekleniyor':'Çevrimdışı kullanım açık','idle');
 }
 function scheduleCloudSync(delay=900){
@@ -252,43 +255,85 @@ async function loadFirebaseSdk(){
     return !!window.firebase;
   }catch(error){console.error('Firebase SDK load error',error);return false}
 }
+function googleProvider(){
+  const provider=new window.firebase.auth.GoogleAuthProvider();
+  provider.addScope('email');
+  provider.setCustomParameters({prompt:'select_account'});
+  return provider;
+}
+function authErrorMessage(error){
+  const code=error?.code||'';
+  if(code==='auth/unauthorized-domain')return 'Bu site adresi Firebase yetkili alanlarında bulunmuyor.';
+  if(code==='auth/network-request-failed')return 'İnternet bağlantısı nedeniyle Google girişi tamamlanamadı.';
+  if(code==='auth/web-storage-unsupported')return 'Tarayıcı çerez veya depolama iznini engelliyor.';
+  return 'Google girişi tamamlanamadı. Tekrar dene.';
+}
+function shouldUseRedirect(){
+  const ua=navigator.userAgent||'';
+  return isStandalone()||/Android|iPhone|iPad|iPod|Safari/i.test(ua)&&!/Chrome|Chromium|Edg/i.test(ua);
+}
+async function startGoogleRedirect(){
+  sessionStorage.setItem(AUTH_REDIRECT_KEY,'1');
+  toast('Google giriş sayfasına yönlendiriliyorsun…');
+  await fbAuth.signInWithRedirect(googleProvider());
+}
 async function initFirebase(){
   setSyncStatus('Google bağlantısı hazırlanıyor…','syncing');
   if(!await loadFirebaseSdk()){updateAuthUI();setSyncStatus('Çevrimdışı kullanım açık','idle');return false}
   try{
     if(!window.firebase.apps.length)window.firebase.initializeApp(FIREBASE_CONFIG);
     fbAuth=window.firebase.auth();fbDb=window.firebase.firestore();
+    fbAuth.useDeviceLanguage();
     await fbAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL);
     fbAuth.onAuthStateChanged(user=>handleAuthState(user).catch(error=>{console.error(error);setSyncStatus('Senkronizasyon başlatılamadı','error')}));
-    fbAuth.getRedirectResult().catch(error=>{if(error?.code!=='auth/no-auth-event')console.error('Redirect sign-in',error)});
+    try{
+      const redirectResult=await fbAuth.getRedirectResult();
+      if(redirectResult?.user)sessionStorage.removeItem(AUTH_REDIRECT_KEY);
+    }catch(error){
+      sessionStorage.removeItem(AUTH_REDIRECT_KEY);
+      console.error('Redirect sign-in',error);toast(authErrorMessage(error));
+    }
     return true;
   }catch(error){console.error('Firebase init error',error);updateAuthUI();return false}
 }
 async function signInWithGoogle(){
+  if(authBusy)return;
   if(!fbAuth||!window.firebase){toast('Google bağlantısı yüklenemedi. İnterneti kontrol et.');return}
-  const button=$('#googleSignInBtn');if(button)button.disabled=true;
+  const button=$('#googleSignInBtn'),original=button?.textContent||'Giriş yap';
+  authBusy=true;if(button){button.disabled=true;button.textContent='Açılıyor…'}
   try{
-    const provider=new window.firebase.auth.GoogleAuthProvider();
-    provider.setCustomParameters({prompt:'select_account'});
-    await fbAuth.signInWithPopup(provider);
+    if(shouldUseRedirect()){await startGoogleRedirect();return}
+    await fbAuth.signInWithPopup(googleProvider());
   }catch(error){
-    const redirectCodes=['auth/popup-blocked','auth/operation-not-supported-in-this-environment','auth/web-storage-unsupported'];
-    if(redirectCodes.includes(error?.code)){
-      const provider=new window.firebase.auth.GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});
-      await fbAuth.signInWithRedirect(provider);return;
-    }
-    if(error?.code!=='auth/popup-closed-by-user'){console.error(error);toast('Google girişi tamamlanamadı. Tekrar dene.')}
-  }finally{if(button)button.disabled=false}
+    const fallbackCodes=['auth/popup-blocked','auth/popup-closed-by-user','auth/cancelled-popup-request','auth/operation-not-supported-in-this-environment','auth/web-storage-unsupported'];
+    if(fallbackCodes.includes(error?.code)){
+      try{await startGoogleRedirect();return}catch(redirectError){console.error('Google redirect error',redirectError);toast(authErrorMessage(redirectError))}
+    }else{console.error('Google sign-in error',error);toast(authErrorMessage(error))}
+  }finally{authBusy=false;if(button){button.disabled=false;button.textContent=original}}
 }
-async function signOutGoogle(){
-  if(!fbAuth)return;
-  clearTimeout(cloudSyncTimer);
-  try{await syncCloudNow();await fbAuth.signOut()}catch(error){console.error(error)}
+function switchToGuestMode({closeDialog=true,announce=true}={}){
   authUser=null;cloudReady=false;cloudLeaderboard=null;
   const goal=Number(profile?.goal||20),voiceAccent=profile?.voiceAccent||'en-US';
-  profile={name:'Öğrenci',email:'guest@local',goal,voiceAccent};
-  state=readLocalState('guest@local')||defaultState();normalizeDay();save({cloud:false});
-  updateAuthUI();renderAll();toast('Google hesabından çıkış yapıldı.');
+  const guestState=readLocalState('guest@local')||defaultState();
+  profile={name:'Misafir',email:'guest@local',goal,voiceAccent};
+  state=ensureStateShape(guestState);normalizeDay();save({cloud:false});
+  localStorage.setItem(GUEST_ACK_KEY,'1');
+  updateAuthUI();renderAll();
+  if(closeDialog&&$('#profileDialog')?.open)$('#profileDialog').close();
+  if(announce)toast('Misafir modundasın. İlerleme yalnızca bu cihazda tutulur.');
+}
+async function signOutGoogle(){
+  if(authBusy||!fbAuth)return;
+  const button=$('#googleSignOutBtn'),original=button?.textContent||'Çıkış';
+  authBusy=true;clearTimeout(cloudSyncTimer);
+  if(button){button.disabled=true;button.textContent='Çıkılıyor…'}
+  try{
+    await Promise.race([syncCloudNow(),new Promise(resolve=>setTimeout(resolve,1200))]);
+    await Promise.race([fbAuth.signOut(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('signout-timeout')),6000))]);
+    switchToGuestMode({closeDialog:true,announce:false});
+    toast('Google hesabından çıkış yapıldı.');
+  }catch(error){console.error('Sign-out error',error);toast('Çıkış tamamlanamadı. Sayfayı yenileyip tekrar dene.')}
+  finally{authBusy=false;if(button){button.disabled=false;button.textContent=original}}
 }
 function renderLeaderboardRows(board,currentKey){
   const list=$('#leaderboardList');if(!list)return;
@@ -1135,6 +1180,7 @@ function setupEvents(){
   $('#offlineBtn').addEventListener('click',downloadOfflineMode);
   $('#googleSignInBtn').addEventListener('click',signInWithGoogle);
   $('#googleSignOutBtn').addEventListener('click',signOutGoogle);
+  $('#guestContinueBtn').addEventListener('click',()=>switchToGuestMode());
   window.addEventListener('online',()=>{if(authUser){syncCloudNow();refreshCloudLeaderboard(true)}});
   document.addEventListener('submit',e=>{
     if(e.target.id==='writeForm'){
@@ -1208,6 +1254,6 @@ async function init(){
   $('#installBtn').hidden=isStandalone();updateSelectedControls();
   const hasSaved=!!localStorage.getItem(SESSION_KEY);
   if(hasSaved&&confirm('Kaydedilmiş bir quiz oturumun var. Devam etmek ister misin?'))restoreSavedSession();
-  else if(profile.email==='guest@local')setTimeout(()=>{if(!authUser&&!$('#profileDialog').open)openProfile()},1200);
+  else if(profile.email==='guest@local'&&!localStorage.getItem(GUEST_ACK_KEY))setTimeout(()=>{if(!authUser&&!$('#profileDialog').open)openProfile()},1200);
 }
 init();
