@@ -1,21 +1,21 @@
 
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const STORE='wordpilot_v31';
+const STORE='wordpilot_v33';
 const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıyorum'};
 const MODE_LABEL={
   smart:'Akıllı Quiz',flash:'Kelime Kartları','en-tr':'Yaz EN → TR','tr-en':'Yaz TR → EN',
-  synonym:'Eş Anlamlı Quiz',antonym:'Zıt Anlamlı Quiz',review:'Akıllı Tekrar',comprehensive:'Kapsamlı Quiz'
+  synonym:'Eş Anlamlı Quiz',antonym:'Zıt Anlamlı Quiz',review:'Akıllı Tekrar',comprehensive:'Kapsamlı Quiz',listening:'Sesli / Gizli Mod',matching:'Eşleştirme','wrong-review':'Yanlışlar Tekrarı'
 };
 
 let words=[], profile=null, state=null, currentWord=null, listLimit=80, session=null, deferredPrompt=null;
-const SESSION_KEY='wordpilot_active_session_v32';
+const SESSION_KEY='wordpilot_active_session_v33';
 function selectedQuizStyle(){return document.querySelector('input[name="quizStyle"]:checked')?.value||'classic'}
 function saveSession(){
   if(!session)return;
   const serial={
     mode:session.mode,quizStyle:session.quizStyle,range:session.range,total:session.total,index:session.index,
-    correct:session.correct,score:session.score||0,lives:session.lives||3,currentId:session.current?.id||null,
+    correct:session.correct,score:session.score||0,lives:session.lives||3,currentId:session.current?.id||null,autoSpeak:session.autoSpeak,hiddenMode:session.hiddenMode,correctTarget:session.correctTarget,matchingOffset:session.matchingOffset||0,
     poolIds:session.pool.map(w=>w.id),done:[...session.done],
     queue:session.queue.map(q=>({id:q.word.id,due:q.due})),historyIds:session.historyIds||[]
   };
@@ -31,7 +31,7 @@ function restoreSavedSession(){
     mode:raw.mode||'smart',quizStyle:raw.quizStyle||'classic',range:raw.range||null,total:raw.total||pool.length,
     index:raw.index||0,correct:raw.correct||0,score:raw.score||0,lives:raw.lives??3,
     pool,done:new Set(raw.done||[]),queue:(raw.queue||[]).map(q=>({word:words.find(w=>w.id===q.id),due:q.due})).filter(q=>q.word),
-    historyIds:raw.historyIds||[],answered:false,current:null,advanceTimer:null,timerId:null,timeLeft:15,questionType:null
+    historyIds:raw.historyIds||[],answered:false,current:null,advanceTimer:null,timerId:null,timeLeft:15,questionType:null,autoSpeak:raw.autoSpeak!==false,hiddenMode:!!raw.hiddenMode,correctTarget:raw.correctTarget||'learn',matchingOffset:raw.matchingOffset||0,matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null
   };
   nav('study');nextStudy();
   toast('Kaydedilen oturuma devam ediliyor.');
@@ -51,7 +51,7 @@ function todayKey(){return new Date().toISOString().slice(0,10)}
 function profileKey(){return `${STORE}:${(profile?.email||'guest@local').toLowerCase()}`}
 function load(){
   try{profile=JSON.parse(localStorage.getItem(`${STORE}:profile`))}catch{}
-  if(!profile)profile={name:'Öğrenci',email:'guest@local',goal:20};
+  if(!profile)profile={name:'Öğrenci',email:'guest@local',goal:20,voiceAccent:'en-US'};if(!profile.voiceAccent)profile.voiceAccent='en-US';
   try{state=JSON.parse(localStorage.getItem(profileKey()))||defaultState()}catch{state=defaultState()}
   if(!state.stats)state.stats=defaultState().stats;
   if(!state.history)state.history={};
@@ -76,11 +76,33 @@ function normalizeDay(){
   }
   st.lastDay=d;
 }
-function speak(text,lang='en-US'){
+let speechVoices=[];
+function refreshSpeechVoices(){speechVoices=window.speechSynthesis?.getVoices?.()||[]}
+if('speechSynthesis'in window){
+  refreshSpeechVoices();
+  window.speechSynthesis.onvoiceschanged=refreshSpeechVoices;
+}
+function bestVoice(lang='en-US'){
+  refreshSpeechVoices();
+  const wanted=String(lang).toLowerCase();
+  const candidates=speechVoices.filter(v=>String(v.lang||'').toLowerCase().startsWith(wanted.toLowerCase()));
+  const preferred=lang==='en-GB'
+    ?['Daniel','Serena','Sonia','Google UK English Female','Google UK English Male','Microsoft Ryan','Microsoft Libby']
+    :['Samantha','Ava','Allison','Google US English','Microsoft Aria','Microsoft Jenny','Microsoft Guy'];
+  return candidates.sort((a,b)=>{
+    const ai=preferred.findIndex(n=>a.name.includes(n)),bi=preferred.findIndex(n=>b.name.includes(n));
+    const as=ai<0?999:ai,bs=bi<0?999:bi;
+    return as-bs||Number(b.localService)-Number(a.localService);
+  })[0]||speechVoices.find(v=>String(v.lang||'').toLowerCase().startsWith(lang.slice(0,2).toLowerCase()))||null;
+}
+function speak(text,lang=null){
   if(!text||!('speechSynthesis'in window))return;
+  const accent=lang||profile?.voiceAccent||'en-US';
+  const spoken=displayClean(String(text)).replace(/[_/\\]+/g,' ').replace(/\s+/g,' ').trim();
   speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(text);
-  u.lang=lang;u.rate=.86;
+  const u=new SpeechSynthesisUtterance(spoken);
+  u.lang=accent;u.rate=.82;u.pitch=1;
+  const voice=bestVoice(accent);if(voice)u.voice=voice;
   speechSynthesis.speak(u);
 }
 function toast(msg){
@@ -107,15 +129,27 @@ function reviewIds(){
     return !h.last||now-new Date(h.last).getTime()>interval*day;
   }).map(([id])=>+id);
 }
+
+function wrongIds(){
+  return Object.entries(state.history).filter(([id,h])=>h?.needsReview===true).map(([id])=>Number(id));
+}
+function applyCorrectTarget(word){
+  const target=session?.correctTarget;
+  if(!target)return;
+  state.statuses[word.id]=target;
+}
+
 function recordAnswer(word,correct){
   normalizeDay();
   const st=state.stats;
   st.answers++;st.todayAnswers++;
   if(correct){st.correct++;st.todayCorrect++}
-  const h=state.history[word.id]||{right:0,wrong:0,level:0,last:null};
-  if(correct){h.right++;h.level=Math.min(6,(h.level||0)+1)}
-  else{
-    h.wrong++;h.level=Math.max(0,(h.level||0)-1);
+  const h=state.history[word.id]||{right:0,wrong:0,level:0,last:null,needsReview:false};
+  if(correct){
+    h.right++;h.level=Math.min(6,(h.level||0)+1);
+    if(session?.mode==='wrong-review')h.needsReview=false;
+  }else{
+    h.wrong++;h.level=Math.max(0,(h.level||0)-1);h.needsReview=true;
     if(h.wrong>=3&&!statusOf(word.id))state.statuses[word.id]='hard';
   }
   h.last=new Date().toISOString();
@@ -139,7 +173,7 @@ function renderDashboard(){
   $('#countLearn').textContent=c.learn;
   $('#countMem').textContent=c.memorized;
   $('#countHard').textContent=c.hard;
-  $('#countReview').textContent=reviewIds().length;
+  $('#countReview').textContent=new Set([...reviewIds(),...wrongIds()]).size;
   $('#streak').textContent=st.streak||0;
   $('#goalPercent').textContent=`${pct}%`;
   $('#flightTrackFill').style.width=`${pct}%`;
@@ -165,7 +199,7 @@ function filteredWords(){
     const st=statusOf(w.id),lv=cefr(w);
     const groupOk=!g||(g==='core5000'?w.id<=5000:w.group===g);
     const levelOk=!l||(l==='A1-A2'?['A1','A2'].includes(lv):l==='B1-B2'?['B1','B2'].includes(lv):lv===l);
-    const statusOk=!s||(s==='unset'?!st:st===s);
+    const statusOk=!s||(s==='unset'?!st:s==='wrong'?state.history[w.id]?.needsReview===true:st===s);
     return(!q||hay.includes(q))&&groupOk&&levelOk&&statusOk;
   });
 }
@@ -174,7 +208,7 @@ function renderWords(reset=false){
   const arr=filteredWords();
   $('#resultCount').textContent=arr.length;
   $('#wordList').innerHTML=arr.slice(0,listLimit).map(w=>{
-    const s=statusOf(w.id);
+    const s=statusOf(w.id),isWrong=state.history[w.id]?.needsReview===true;
     return `<article class="word-row">
       <span class="word-id">#${w.id}</span>
       <div class="word-main">
@@ -182,7 +216,7 @@ function renderWords(reset=false){
         <small>${esc(w.pronunciation||'Okunuş bilgisi yok')}</small>
       </div>
       <div class="word-meaning">${esc(firstMeaning(w))}</div>
-      <span class="word-status ${s}">${s?STATUS_LABEL[s]:'İşaretsiz'}</span>
+      <span class="word-status ${isWrong?'wrong':(s||'new')}">${isWrong?'Yanlış':(s?STATUS_LABEL[s]:'Yeni')}</span>
       <div class="word-actions">
         <button class="word-action" data-speak="${esc(w.english)}" title="Dinle">🔊</button>
         <button class="word-action" data-info="${w.id}" title="Bilgi">ℹ️</button>
@@ -252,11 +286,14 @@ function hasRelation(w,mode){
   return relationCandidates(w,mode==='synonym'?'synonyms':'opposite').length>0;
 }
 function makePool(mode,range=null){
-  let pool=words.filter(w=>statusOf(w.id)!=='memorized');
+  let pool=words.filter(w=>statusOf(w.id)!=='memorized'||mode==='wrong-review');
   if(range)pool=pool.filter(w=>w.id>=range.start&&w.id<=range.end);
   if(mode==='review'){
     const review=new Set([...reviewIds(),...words.filter(w=>statusOf(w.id)==='hard').map(w=>w.id)]);
     pool=pool.filter(w=>review.has(w.id));
+  }
+  if(mode==='wrong-review'){
+    const wrong=new Set(wrongIds());pool=pool.filter(w=>wrong.has(w.id));
   }
   if(mode==='synonym'||mode==='antonym')pool=pool.filter(w=>hasRelation(w,mode));
   return pool.sort(()=>Math.random()-.5);
@@ -264,14 +301,18 @@ function makePool(mode,range=null){
 function startStudy(mode='smart',range=null,quizStyle=null){
   const style=quizStyle||selectedQuizStyle();
   let actualMode=mode;
-  if(style==='comprehensive')actualMode='comprehensive';
+  if(style==='comprehensive'&& !['matching','listening','wrong-review'].includes(mode))actualMode='comprehensive';
   const pool=makePool(actualMode==='comprehensive'?'smart':actualMode,range);
   if(!pool.length){toast('Bu seçimde çalışılabilir kelime bulunamadı.');return}
   const requested=range?pool.length:20,total=Math.min(requested,200);
   session={
     mode:actualMode,baseMode:mode,quizStyle:style,pool:pool.slice(0,total),queue:[],done:new Set(),
     historyIds:[],index:0,total,correct:0,score:0,lives:3,current:null,answered:false,range,
-    advanceTimer:null,timerId:null,timeLeft:15,questionType:null
+    advanceTimer:null,timerId:null,timeLeft:15,questionType:null,
+    autoSpeak:$('#autoSpeakToggle')?.checked!==false,
+    hiddenMode:mode==='listening'||$('#hiddenModeToggle')?.checked===true,
+    correctTarget:$('#correctTarget')?.value||'',
+    matchingOffset:0,matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null
   };
   clearSavedSession();
   nav('study');nextStudy();
@@ -322,6 +363,7 @@ function chooseComprehensiveType(w){
 
 function nextStudy(){
   stopQuestionTimer();
+  if(session?.mode==='matching'){renderMatchingRound();return}
   if(!session||session.index>=session.total||session.lives<=0){finishSession();return}
   const dueIndex=session.queue.findIndex(q=>q.due<=session.index);
   let w;
@@ -342,6 +384,9 @@ function nextStudy(){
   $('#studyActionBar').hidden=false;
   renderStudyQuestion();
   startQuestionTimer();
+  if(session.autoSpeak&&(session.questionType!=='tr-en'||session.hiddenMode)){
+    setTimeout(()=>speak(session.current.english),180);
+  }
 }
 function choiceOptions(correctWord,asMeaning=true){
   const wrong=words.filter(x=>x.id!==correctWord.id&&cefr(x)===cefr(correctWord))
@@ -374,8 +419,15 @@ function renderStudyQuestion(){
     </div>`;
     return;
   }
+  if(mode==='listening'){
+    $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(w.english);
+    $('#studyPron').innerHTML='<div class="listening-prompt"><button type="button" data-listen-again>🔊</button><span class="voice-note">Sesi dinle ve doğru anlamı seç</span></div>';
+    const opts=choiceOptions(w,true);
+    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;
+    return;
+  }
   if(mode==='smart'){
-    $('#studyQuestion').textContent=w.english;
+    $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(w.english);
     const opts=choiceOptions(w,true);
     $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;
     return;
@@ -415,7 +467,7 @@ function answer(correct,timeout=false){
   revealStudyInfo();
   $$('.choice').forEach(b=>b.classList.add('locked'));
   if(correct){
-    session.correct++;session.done.add(w.id);
+    session.correct++;session.done.add(w.id);applyCorrectTarget(w);
     const gained=session.quizStyle==='speed'?Math.max(20,Math.round(40+session.timeLeft*4)):100;
     session.score+=gained;
     $('#studyFeedback').className='feedback good';
@@ -440,6 +492,66 @@ function finishSession(){
   $('#studyFeedback').textContent='';$('#studyWordInfo').hidden=true;$('#nextQuestion').hidden=true;$('#studySpeak').hidden=true;
   $('#studyActionBar').hidden=true;$('#speedBar').hidden=true;
   renderAll();
+}
+
+
+function renderMatchingRound(){
+  stopQuestionTimer();
+  if(!session||session.matchingOffset>=session.total){finishSession();return}
+  const remaining=session.pool.filter(w=>!session.done.has(w.id));
+  const batch=remaining.slice(0,5);
+  if(!batch.length){finishSession();return}
+  session.matchBatch=batch;session.matchSelectedLeft=null;session.matchSelectedRight=null;session.answered=false;
+  const start=session.matchingOffset+1,end=Math.min(session.total,session.matchingOffset+batch.length);
+  $('#studyModeName').textContent='Eşleştirme';
+  $('#studyCounter').textContent=`${start}–${end} / ${session.total}`;
+  $('#studyProgress').max=session.total;$('#studyProgress').value=session.matchingOffset;
+  $('#studyBadge').textContent='EŞLEŞTİRME';
+  $('#studyQuestion').textContent='Kelime ve anlamı eşleştir';
+  $('#studyPron').textContent='';
+  $('#studySpeak').hidden=false;
+  $('#studyActionBar').hidden=true;
+  $('#studyFeedback').className='feedback';$('#studyFeedback').textContent='';
+  $('#studyWordInfo').hidden=true;$('#nextQuestion').hidden=true;
+  const left=[...batch].sort(()=>Math.random()-.5);
+  const right=[...batch].sort(()=>Math.random()-.5);
+  $('#studyContent').innerHTML=`<div class="matching-title"><span>İNGİLİZCE</span><span>TÜRKÇE</span></div>
+    <div class="matching-board">
+      <div class="match-column">${left.map(w=>`<button class="match-tile" data-match-side="left" data-match-id="${w.id}">${esc(w.english)}</button>`).join('')}</div>
+      <div class="match-column">${right.map(w=>`<button class="match-tile" data-match-side="right" data-match-id="${w.id}">${esc(firstMeaning(w))}</button>`).join('')}</div>
+    </div>`;
+  if(session.autoSpeak&&batch[0])setTimeout(()=>speak(batch[0].english),180);
+}
+function selectMatchTile(btn){
+  if(btn.classList.contains('matched'))return;
+  const side=btn.dataset.matchSide;
+  $$(`.match-tile[data-match-side="${side}"]`).forEach(x=>x.classList.remove('selected'));
+  btn.classList.add('selected');
+  if(side==='left'){session.matchSelectedLeft=btn;if(session.autoSpeak)speak(btn.textContent)}
+  else session.matchSelectedRight=btn;
+  if(!session.matchSelectedLeft||!session.matchSelectedRight)return;
+  const left=session.matchSelectedLeft,right=session.matchSelectedRight;
+  const correct=left.dataset.matchId===right.dataset.matchId;
+  if(correct){
+    const word=words.find(w=>w.id===Number(left.dataset.matchId));
+    left.classList.remove('selected');right.classList.remove('selected');
+    left.classList.add('matched');right.classList.add('matched');
+    session.done.add(word.id);session.correct++;session.score+=50;applyCorrectTarget(word);recordAnswer(word,true);
+    session.matchingOffset++;updateStudyScore();
+    session.matchSelectedLeft=null;session.matchSelectedRight=null;
+    if(session.matchBatch.every(w=>session.done.has(w.id))){
+      $('#studyFeedback').className='feedback good';$('#studyFeedback').textContent='Tur tamamlandı ✓';
+      $('#nextQuestion').hidden=false;saveSession();
+    }
+  }else{
+    left.classList.add('mismatch');right.classList.add('mismatch');
+    const wrongWord=words.find(w=>w.id===Number(left.dataset.matchId));
+    if(wrongWord)recordAnswer(wrongWord,false);
+    setTimeout(()=>{
+      left.classList.remove('selected','mismatch');right.classList.remove('selected','mismatch');
+      session.matchSelectedLeft=null;session.matchSelectedRight=null;
+    },500);
+  }
 }
 
 function showHintForCurrent(){
@@ -504,7 +616,7 @@ function selectedRangeType(){return document.querySelector('input[name="rangeTyp
 function openProfile(){
   $('#profileName').value=profile.name||'';
   $('#profileEmail').value=profile.email==='guest@local'?'':profile.email;
-  $('#dailyGoal').value=String(profile.goal||20);
+  $('#dailyGoal').value=String(profile.goal||20);$('#voiceAccent').value=profile.voiceAccent||'en-US';
   $('#profileTitle').textContent=profile.email==='guest@local'?'Profilini oluştur':profile.name;
   $('#profileAvatar').textContent=(profile.name||'M')[0].toUpperCase();
   $('#profileDialog').showModal();
@@ -516,7 +628,7 @@ function openCollection(type){
   if(type==='phrases')$('#groupFilter').value='5001-6000 Kalıplar';
   if(type==='beginner')$('#levelFilter').value='A1-A2';
   if(type==='intermediate')$('#levelFilter').value='B1-B2';
-  if(type==='hard')$('#statusFilter').value='hard';
+  if(type==='hard')$('#statusFilter').value='hard';if(type==='wrong')$('#statusFilter').value='wrong';
   if(type==='memorized')$('#statusFilter').value='memorized';
   renderWords(true);
 }
@@ -528,7 +640,7 @@ function setupEvents(){
     const setup=e.target.closest('[data-action="open-study-setup"]');if(setup){openStudySetup();return}
     const profileBtn=e.target.closest('[data-action="open-profile"]');if(profileBtn){openProfile();return}
     const close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close)?.close();return}
-    const sp=e.target.closest('[data-speak]');if(sp){speak(sp.dataset.speak);return}
+    const sp=e.target.closest('[data-speak]');if(sp){speak(sp.dataset.speak);return}const listenAgain=e.target.closest('[data-listen-again]');if(listenAgain){speak(session?.current?.english);return}
     const info=e.target.closest('[data-info]');if(info){openWord(info.dataset.info);return}
     const status=e.target.closest('[data-word-status]');if(status&&currentWord){setStatus(currentWord.id,status.dataset.wordStatus);return}
     const preset=e.target.closest('[data-range-preset]');
@@ -538,6 +650,7 @@ function setupEvents(){
       document.querySelector('input[name="rangeType"][value="custom"]').checked=true;
       $('#setupRangeFields').hidden=false;return;
     }
+    const matchTile=e.target.closest('[data-match-side]');if(matchTile){selectMatchTile(matchTile);return}
     const answerBtn=e.target.closest('[data-answer-id]');
     if(answerBtn){
       const correct=Number(answerBtn.dataset.answerId)===session.current.id;
@@ -566,7 +679,7 @@ function setupEvents(){
   $('#searchInput').addEventListener('input',()=>renderWords(true));
   ['groupFilter','levelFilter','statusFilter'].forEach(id=>$('#'+id).addEventListener('change',()=>renderWords(true)));
   $('#loadMore').addEventListener('click',()=>{listLimit+=80;renderWords()});
-  $('#wordSpeak').addEventListener('click',()=>speak(currentWord?.english));
+  $('#wordSpeakUS').addEventListener('click',()=>speak(currentWord?.english,'en-US'));$('#wordSpeakUK').addEventListener('click',()=>speak(currentWord?.english,'en-GB'));
   $('#studySpeak').addEventListener('click',()=>speak(session?.current?.english));
   $('#studyInfo').addEventListener('click',()=>session?.current&&openWord(session.current.id));
   $('#exitStudy').addEventListener('click',()=>{
@@ -586,7 +699,7 @@ function setupEvents(){
   $('#showHint').addEventListener('click',showHintForCurrent);
   $('#showAnswer').addEventListener('click',showAnswerForCurrent);
   $('#previousQuestion').addEventListener('click',previousQuestion);
-  $('#nextQuestion').addEventListener('click',nextStudy);
+  $('#nextQuestion').addEventListener('click',()=>{if(session?.mode==='matching')renderMatchingRound();else nextStudy()});
   document.addEventListener('submit',e=>{
     if(e.target.id==='writeForm'){
       e.preventDefault();
@@ -600,7 +713,7 @@ function setupEvents(){
     if(e.target.id==='profileForm'){
       e.preventDefault();
       const oldState=state;
-      profile={name:$('#profileName').value.trim()||'Öğrenci',email:($('#profileEmail').value.trim()||'guest@local').toLowerCase(),goal:Number($('#dailyGoal').value||20)};
+      profile={name:$('#profileName').value.trim()||'Öğrenci',email:($('#profileEmail').value.trim()||'guest@local').toLowerCase(),goal:Number($('#dailyGoal').value||20),voiceAccent:$('#voiceAccent').value||'en-US'};
       try{state=JSON.parse(localStorage.getItem(profileKey()))||oldState}catch{state=oldState}
       save();$('#profileDialog').close();renderAll();toast('Profil kaydedildi');
     }
@@ -610,6 +723,7 @@ function setupEvents(){
       state=defaultState();save();renderAll();$('#profileDialog').close();toast('İlerleme sıfırlandı');
     }
   });
+  $('#setupMode').addEventListener('change',()=>{if($('#setupMode').value==='listening'){$('#hiddenModeToggle').checked=true;$('#autoSpeakToggle').checked=true}});
   document.querySelectorAll('input[name="quizStyle"]').forEach(r=>r.addEventListener('change',()=>{$$('.quiz-style-card').forEach(c=>c.classList.toggle('active',c.querySelector('input').checked))}));
   document.querySelectorAll('input[name="rangeType"]').forEach(r=>r.addEventListener('change',()=>{$('#setupRangeFields').hidden=selectedRangeType()!=='custom'}));
   $('#studySetupForm').addEventListener('submit',e=>{
@@ -631,14 +745,14 @@ function setupEvents(){
 async function init(){
   load();
   try{
-    const response=await fetch('words.json?v=3.2.0',{cache:'no-store'});
+    const response=await fetch('words.json?v=3.3.0',{cache:'no-store'});
     if(!response.ok)throw new Error('words.json');
     words=await response.json();
   }catch{
     document.body.innerHTML='<main><div class="panel"><h2>Veri yüklenemedi</h2><p>Bağlantıyı kontrol edip sayfayı yenileyin.</p></div></main>';return;
   }
   setupEvents();renderAll();renderWords(true);
-  if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js?v=3.2.0');
+  if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js?v=3.3.0');
   const hasSaved=!!localStorage.getItem(SESSION_KEY);
   if(hasSaved&&confirm('Kaydedilmiş bir quiz oturumun var. Devam etmek ister misin?'))restoreSavedSession();
   else if(profile.email==='guest@local')setTimeout(openProfile,600);

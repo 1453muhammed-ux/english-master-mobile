@@ -1,22 +1,21 @@
-WORDPILOT v3.2
+WORDPILOT v3.3
 
 GitHub:
 1. ZIP'i aç.
-2. İçindeki tüm dosyaları repository ana dizinine yükle.
+2. Tüm dosyaları repository ana dizinine yükle.
 3. Aynı isimli dosyaların üzerine yaz.
 4. Commit changes.
-5. 1-3 dakika sonra Ctrl+F5 ile yenile.
+5. 1–3 dakika sonra Ctrl+F5 ile yenile.
 
-Yenilikler:
-- Klasik / Hız / Kapsamlı quiz modu
-- Hız modunda 15 saniye, 3 can ve zamana bağlı puan
-- Önceki soru
-- İpucu
-- Cevabı göster
-- Ses ve bilgi butonları
-- Cevap sonrası manuel Devam Et
-- Quizden çıkarken kaydetme seçeneği
-- Kaydedilen oturuma sonradan devam
-- Kelime ve cevaplarda ★ / ☆ işaretlerini gizleme
-- Doğru kelime aynı oturumda tekrar edilmez
-- Yanlış kelime 4 soru sonra geri gelir
+Eklenenler:
+- İşaretsiz yerine Yeni etiketi
+- Eşleştirme modu
+- Eş anlamlı quiz
+- Zıt anlamlı quiz
+- Sesli / gizli mod
+- Her soruda otomatik sesli okuma seçeneği
+- Yanlış Yaptıklarım listesi ve özel tekrar modu
+- Doğru cevapları Öğreniyorum veya Ezberledim listesine otomatik ekleme
+- ABD ve İngiltere sesi seçimi
+- iPhone için uygun İngilizce sesi önceliklendirme
+- Kelime bilgi ekranında ayrı 🇺🇸 ve 🇬🇧 ses butonları

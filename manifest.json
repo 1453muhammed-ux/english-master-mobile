@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "Klasik, hız ve kapsamlı quiz; ipucu, cevap gösterme, puanlama ve akıllı tekrar.",
+  "description": "Sesli ve gizli mod, eşleştirme, eş/zıt anlam, yanlış tekrar listesi ve akıllı kelime takibi.",
   "icons": [
     {
       "src": "icon-192.png",

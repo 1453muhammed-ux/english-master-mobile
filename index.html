@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.2.0">
+  <link rel="stylesheet" href="style.css?v=3.3.0">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.2</span>
+      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.3</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
     </div>
@@ -93,6 +93,10 @@
             <span class="collection-art">!</span>
             <div><b>Zorlandıklarım</b><small>Kişisel tekrar listen</small></div>
           </button>
+          <button class="collection-card peach" data-collection="wrong">
+            <span class="collection-art">×</span>
+            <div><b>Yanlış Yaptıklarım</b><small>Tekrar edilmesi gerekenler</small></div>
+          </button>
           <button class="collection-card mint" data-collection="memorized">
             <span class="collection-art">★</span>
             <div><b>Ezberlediklerim</b><small>Tamamladığın kelimeler</small></div>
@@ -108,6 +112,10 @@
             <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve işaretle</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
           </div>
           <button class="range-launch" data-action="open-study-setup">Özel kelime aralığı seç</button>
         </article>
@@ -135,7 +143,7 @@
         <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Kelime, Türkçe anlam veya örnek ara…"></label>
         <select id="groupFilter"><option value="">Tüm gruplar</option><option value="core5000">İlk 5000 Kelime</option><option>1-1000</option><option>1001-2000</option><option>2001-3000</option><option>3001-4000</option><option>4001-5000</option><option>5001-6000 Kalıplar</option></select>
         <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="A1-A2">A1–A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="B1-B2">B1–B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
-        <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="unset">İşaretsiz</option></select>
+        <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="wrong">Yanlış Yaptıklarım</option><option value="unset">Yeni / İşaretsiz</option></select>
       </div>
       <div id="wordList" class="word-list"></div>
       <button id="loadMore" class="secondary wide">Daha fazla göster</button>
@@ -203,7 +211,7 @@
   <button class="sheet-close" data-close="wordDialog">×</button>
   <div class="word-title">
     <div><span id="wordLevel" class="chip"></span><h2 id="wordEnglish"></h2><p id="wordPron"></p></div>
-    <button id="wordSpeak" class="speak-big">🔊</button>
+    <div class="word-voice-actions"><button id="wordSpeakUS" class="speak-big" title="Amerikan İngilizcesi">🇺🇸</button><button id="wordSpeakUK" class="speak-big" title="İngiliz İngilizcesi">🇬🇧</button></div>
   </div>
   <div class="status-buttons"><button data-word-status="learn">Öğreniyorum</button><button data-word-status="memorized">Ezberledim</button><button data-word-status="hard">Zorlanıyorum</button></div>
   <div id="wordDetails" class="detail-sections"></div>
@@ -241,7 +249,7 @@
         <option value="smart">Akıllı Quiz</option>
         <option value="flash">Kelime Kartları</option>
         <option value="en-tr">Yaz EN → TR</option>
-        <option value="tr-en">Yaz TR → EN</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option>
+        <option value="tr-en">Yaz TR → EN</option><option value="listening">Sesli / Gizli Mod</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
         <option value="review">Zor ve tekrar bekleyenler</option>
       </select>
     </label>
@@ -268,6 +276,24 @@
       </div>
     </div>
 
+
+    <div class="study-preferences">
+      <label class="toggle-row">
+        <input id="autoSpeakToggle" type="checkbox" checked>
+        <span><b>Otomatik sesli okuma</b><small>Her yeni soruda İngilizce kelimeyi okur.</small></span>
+      </label>
+      <label class="toggle-row">
+        <input id="hiddenModeToggle" type="checkbox">
+        <span><b>Gizli mod</b><small>İngilizce kelimeyi saklar; yalnızca sesi dinlersin.</small></span>
+      </label>
+      <label>Doğru cevapları otomatik ekle
+        <select id="correctTarget">
+          <option value="learn" selected>Öğreniyorum listesine</option>
+          <option value="memorized">Ezberledim listesine</option>
+          <option value="">Otomatik işaretleme yapma</option>
+        </select>
+      </label>
+    </div>
     <button class="primary wide" type="submit">Uçuşu başlat</button>
   </form>
 </dialog>
@@ -289,12 +315,14 @@
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
   <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PILOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">İlerlemen bu kullanıcı altında saklanır.</p></div></div>
-  <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" required placeholder="ornek@email.com"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label><button class="primary wide" type="submit">Profili kaydet</button></form>
+  <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" required placeholder="ornek@email.com"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
+  <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
+  <button class="primary wide" type="submit">Profili kaydet</button></form>
   <div class="cloud-note"><span>☁</span><p><b>Bulut senkronizasyonuna hazır</b><br>Şu an veriler bu cihazda saklanır. Kullanıcı hesabı altyapısı sonraki sürümde bağlanacak.</p></div>
   <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.2.0" defer></script>
+<script src="app.js?v=3.3.0" defer></script>
 </body>
 </html>
