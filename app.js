@@ -1,7 +1,7 @@
 
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const STORE='wordpilot_v33';
+const STORE='wordpilot_v34';
 const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıyorum'};
 const MODE_LABEL={
   smart:'Akıllı Quiz',flash:'Kelime Kartları','en-tr':'Yaz EN → TR','tr-en':'Yaz TR → EN',
@@ -9,19 +9,24 @@ const MODE_LABEL={
 };
 
 let words=[], profile=null, state=null, currentWord=null, listLimit=80, session=null, deferredPrompt=null;
-const SESSION_KEY='wordpilot_active_session_v33';
+const SESSION_KEY='wordpilot_active_session_v34';
 function selectedQuizStyle(){return document.querySelector('input[name="quizStyle"]:checked')?.value||'classic'}
+
 function saveSession(){
   if(!session)return;
   const serial={
     mode:session.mode,quizStyle:session.quizStyle,range:session.range,total:session.total,index:session.index,
-    correct:session.correct,score:session.score||0,lives:session.lives||3,currentId:session.current?.id||null,autoSpeak:session.autoSpeak,hiddenMode:session.hiddenMode,correctTarget:session.correctTarget,matchingOffset:session.matchingOffset||0,
+    correct:session.correct,score:session.score||0,currentId:session.current?.id||null,
+    autoSpeak:session.autoSpeak,hiddenMode:session.hiddenMode,correctTarget:session.correctTarget,
+    matchingOffset:session.matchingOffset||0,currentAttempts:session.currentAttempts||0,
     poolIds:session.pool.map(w=>w.id),done:[...session.done],
     queue:session.queue.map(q=>({id:q.word.id,due:q.due})),historyIds:session.historyIds||[]
   };
   localStorage.setItem(SESSION_KEY,JSON.stringify(serial));
 }
+
 function clearSavedSession(){localStorage.removeItem(SESSION_KEY)}
+
 function restoreSavedSession(){
   let raw;try{raw=JSON.parse(localStorage.getItem(SESSION_KEY))}catch{return false}
   if(!raw||!raw.poolIds?.length)return false;
@@ -29,15 +34,17 @@ function restoreSavedSession(){
   if(!pool.length)return false;
   session={
     mode:raw.mode||'smart',quizStyle:raw.quizStyle||'classic',range:raw.range||null,total:raw.total||pool.length,
-    index:raw.index||0,correct:raw.correct||0,score:raw.score||0,lives:raw.lives??3,
+    index:raw.index||0,correct:raw.correct||0,score:raw.score||0,
     pool,done:new Set(raw.done||[]),queue:(raw.queue||[]).map(q=>({word:words.find(w=>w.id===q.id),due:q.due})).filter(q=>q.word),
-    historyIds:raw.historyIds||[],answered:false,current:null,advanceTimer:null,timerId:null,timeLeft:15,questionType:null,autoSpeak:raw.autoSpeak!==false,hiddenMode:!!raw.hiddenMode,correctTarget:raw.correctTarget||'learn',matchingOffset:raw.matchingOffset||0,matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null
+    historyIds:raw.historyIds||[],answered:false,current:null,advanceTimer:null,timerId:null,timeLeft:15,
+    questionType:null,autoSpeak:raw.autoSpeak!==false,hiddenMode:!!raw.hiddenMode,
+    correctTarget:raw.correctTarget||'learn',matchingOffset:raw.matchingOffset||0,
+    matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null,currentAttempts:0,hintRevealCount:0
   };
   nav('study');nextStudy();
   toast('Kaydedilen oturuma devam ediliyor.');
   return true;
 }
-
 
 function defaultState(){
   return {statuses:{},history:{},stats:{answers:0,correct:0,todayAnswers:0,todayCorrect:0,lastDay:'',streak:0,bestStreak:0},lastActive:new Date().toISOString()};
@@ -298,21 +305,23 @@ function makePool(mode,range=null){
   if(mode==='synonym'||mode==='antonym')pool=pool.filter(w=>hasRelation(w,mode));
   return pool.sort(()=>Math.random()-.5);
 }
+
 function startStudy(mode='smart',range=null,quizStyle=null){
   const style=quizStyle||selectedQuizStyle();
   let actualMode=mode;
-  if(style==='comprehensive'&& !['matching','listening','wrong-review'].includes(mode))actualMode='comprehensive';
+  if(style==='comprehensive'&&!['matching','listening','wrong-review'].includes(mode))actualMode='comprehensive';
   const pool=makePool(actualMode==='comprehensive'?'smart':actualMode,range);
   if(!pool.length){toast('Bu seçimde çalışılabilir kelime bulunamadı.');return}
   const requested=range?pool.length:20,total=Math.min(requested,200);
   session={
     mode:actualMode,baseMode:mode,quizStyle:style,pool:pool.slice(0,total),queue:[],done:new Set(),
-    historyIds:[],index:0,total,correct:0,score:0,lives:3,current:null,answered:false,range,
+    historyIds:[],index:0,total,correct:0,score:0,current:null,answered:false,range,
     advanceTimer:null,timerId:null,timeLeft:15,questionType:null,
     autoSpeak:$('#autoSpeakToggle')?.checked!==false,
     hiddenMode:mode==='listening'||$('#hiddenModeToggle')?.checked===true,
     correctTarget:$('#correctTarget')?.value||'',
-    matchingOffset:0,matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null
+    matchingOffset:0,matchBatch:[],matchSelectedLeft:null,matchSelectedRight:null,
+    currentAttempts:0,hintRevealCount:0
   };
   clearSavedSession();
   nav('study');nextStudy();
@@ -321,39 +330,41 @@ function startStudy(mode='smart',range=null,quizStyle=null){
 function stopQuestionTimer(){
   if(session?.timerId){clearInterval(session.timerId);session.timerId=null}
 }
+
 function startQuestionTimer(){
   stopQuestionTimer();
   const isSpeed=session?.quizStyle==='speed';
   $('#speedBar').hidden=!isSpeed;
-  $('#studyHearts').hidden=!isSpeed;
-  if(!isSpeed){$('#studyTimer').textContent='—';$('#studyTimer').classList.remove('timer-warning');return}
+  $('#studyHearts').hidden=true;
+  if(!isSpeed){
+    $('#studyTimer').textContent='—';
+    $('#studyTimer').classList.remove('timer-warning');
+    return;
+  }
   session.timeLeft=15;
-  $('#studyHearts').textContent='♥'.repeat(Math.max(0,session.lives))+'♡'.repeat(Math.max(0,3-session.lives));
   const update=()=>{
-    $('#studyTimer').textContent=`${session.timeLeft}s`;
-    $('#studyTimer').classList.toggle('timer-warning',session.timeLeft<=5);
+    const shown=Math.max(0,Math.ceil(session.timeLeft));
+    $('#studyTimer').textContent=`${shown}s`;
+    $('#studyTimer').classList.toggle('timer-warning',shown<=5);
     $('#speedBar i').style.width=`${Math.max(0,session.timeLeft/15*100)}%`;
   };
   update();
   session.timerId=setInterval(()=>{
-    session.timeLeft-=.1;
-    if(session.timeLeft<=0){
-      session.timeLeft=0;update();stopQuestionTimer();
-      if(!session.answered){
-        session.lives=Math.max(0,session.lives-1);
-        answer(false,true);
-      }
-      return;
-    }
+    session.timeLeft=Math.max(0,session.timeLeft-.1);
     update();
+    if(session.timeLeft<=0){
+      stopQuestionTimer();
+      if(!session.answered)answer(false,true);
+    }
   },100);
 }
+
+
 function updateStudyScore(){
   $('#studyScore').textContent=`${Math.round(session?.score||0)} puan`;
-  if(session?.quizStyle==='speed'){
-    $('#studyHearts').textContent='♥'.repeat(Math.max(0,session.lives))+'♡'.repeat(Math.max(0,3-session.lives));
-  }
+  updateAttemptDisplay();
 }
+
 function chooseComprehensiveType(w){
   const options=['smart','en-tr','tr-en'];
   if(hasRelation(w,'synonym'))options.push('synonym');
@@ -361,17 +372,82 @@ function chooseComprehensiveType(w){
   return options[Math.floor(Math.random()*options.length)];
 }
 
+
+function updateAttemptDisplay(){
+  const left=Math.max(0,3-(session?.currentAttempts||0));
+  const el=$('#attemptText');
+  if(el)el.textContent=`${left} hak`;
+  const sound=$('#toggleAutoSpeak');
+  if(sound){
+    sound.classList.toggle('active',!!session?.autoSpeak);
+    sound.textContent=session?.autoSpeak?'🔊 Ses Açık':'🔇 Ses Kapalı';
+  }
+  const hidden=$('#toggleHiddenMode');
+  if(hidden){
+    hidden.classList.toggle('active',!!session?.hiddenMode);
+    hidden.textContent=session?.hiddenMode?'🙈 Gizli Açık':'👁 Kelime Açık';
+  }
+}
+function questionShowsEnglish(){
+  const mode=session?.questionType||session?.mode;
+  return ['smart','listening','en-tr','synonym','antonym'].includes(mode);
+}
+function updateQuestionVisibility(){
+  if(!session?.current||!questionShowsEnglish())return;
+  const mode=session.questionType||session.mode;
+  if(mode==='listening'||mode==='smart'||mode==='en-tr'){
+    $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(session.current.english);
+  }else if(mode==='synonym'||mode==='antonym'){
+    $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(session.current.english);
+  }
+}
+function hintTarget(){
+  const w=session?.current,mode=session?.questionType||session?.mode;
+  if(!w)return'';
+  if(mode==='tr-en')return clean(w.english);
+  if(mode==='synonym'||mode==='antonym')return clean(session.relationAnswer?.english||w.english);
+  return clean(firstMeaning(w));
+}
+function revealPattern(text,count){
+  let seen=0,out='';
+  for(const ch of text){
+    if(/\s/.test(ch)){out+=ch;continue}
+    seen++;
+    out+=seen<=count?ch:'_';
+  }
+  return out;
+}
+function resetCurrentQuestionForRetry(){
+  session.answered=false;
+  $('#nextQuestion').hidden=true;
+  $('#showHint').disabled=false;
+  $('#showAnswer').disabled=false;
+  $$('.choice').forEach(b=>{if(!b.classList.contains('used-wrong'))b.disabled=false});
+  const input=$('#writeAnswer');
+  if(input){input.disabled=false;input.value='';setTimeout(()=>input.focus(),50)}
+  if(session.quizStyle==='speed')startQuestionTimer();
+  updateAttemptDisplay();
+}
+function markFinalCorrectChoice(){
+  $$('.choice').forEach(b=>{
+    b.disabled=true;b.classList.add('locked');
+    if(Number(b.dataset.answerId)===session.current?.id)b.classList.add('correct');
+    if(Number(b.dataset.relationId)===session.relationAnswer?.id)b.classList.add('correct');
+  });
+}
+
+
 function nextStudy(){
   stopQuestionTimer();
   if(session?.mode==='matching'){renderMatchingRound();return}
-  if(!session||session.index>=session.total||session.lives<=0){finishSession();return}
+  if(!session||session.index>=session.total){finishSession();return}
   const dueIndex=session.queue.findIndex(q=>q.due<=session.index);
   let w;
-  if(dueIndex>=0){w=session.queue.splice(dueIndex,1)[0].word}
+  if(dueIndex>=0)w=session.queue.splice(dueIndex,1)[0].word;
   else w=session.pool.find(x=>!session.done.has(x.id));
   if(!w){finishSession();return}
   if(session.current)session.historyIds.push(session.current.id);
-  session.current=w;session.answered=false;session.index++;
+  session.current=w;session.answered=false;session.currentAttempts=0;session.hintRevealCount=0;session.index++;
   session.questionType=session.mode==='comprehensive'?chooseComprehensiveType(w):(session.mode==='review'?'smart':session.mode);
   $('#studyCounter').textContent=`${session.index} / ${session.total}`;
   $('#studyProgress').max=session.total;$('#studyProgress').value=session.index;
@@ -380,14 +456,13 @@ function nextStudy(){
   $('#nextQuestion').hidden=true;
   $('#showHint').disabled=false;$('#showAnswer').disabled=false;
   $('#previousQuestion').disabled=!session.historyIds.length;
-  updateStudyScore();
-  $('#studyActionBar').hidden=false;
-  renderStudyQuestion();
-  startQuestionTimer();
+  $('#studyActionBar').hidden=false;$('#studyToggleBar').hidden=false;
+  updateStudyScore();renderStudyQuestion();updateAttemptDisplay();startQuestionTimer();
   if(session.autoSpeak&&(session.questionType!=='tr-en'||session.hiddenMode)){
     setTimeout(()=>speak(session.current.english),180);
   }
 }
+
 function choiceOptions(correctWord,asMeaning=true){
   const wrong=words.filter(x=>x.id!==correctWord.id&&cefr(x)===cefr(correctWord))
     .sort(()=>Math.random()-.5).slice(0,3);
@@ -395,6 +470,7 @@ function choiceOptions(correctWord,asMeaning=true){
     id:w.id,text:asMeaning?firstMeaning(w):w.english
   }));
 }
+
 function renderStudyQuestion(){
   const w=session.current,mode=session.questionType||session.mode;
   $('#studyModeName').textContent=session.quizStyle==='speed'?`${MODE_LABEL[mode]||'Quiz'} · Hız`:session.mode==='comprehensive'?'Kapsamlı Quiz':MODE_LABEL[mode]||'Çalışma';
@@ -402,10 +478,8 @@ function renderStudyQuestion(){
   $('#studyBadge').textContent=mode==='flash'?'KELİME KARTI':mode==='synonym'?'EŞ ANLAM':mode==='antonym'?'ZIT ANLAM':'SORU';
   $('#studyPron').textContent='';
   if(mode==='flash'){
-    session.answered=true;
-    stopQuestionTimer();
-    $('#studyQuestion').textContent=w.english;
-    $('#studyPron').textContent=w.pronunciation||'';
+    session.answered=true;stopQuestionTimer();
+    $('#studyQuestion').textContent=w.english;$('#studyPron').textContent=w.pronunciation||'';
     $('#studyContent').innerHTML=`<div class="flash-card-inner">
       <button class="flip-button" data-flip>Karşılığını göster</button>
       <div class="flash-reveal" hidden>
@@ -416,41 +490,38 @@ function renderStudyQuestion(){
           <button data-flash="memorized">Ezberledim</button>
         </div>
       </div>
-    </div>`;
-    return;
+    </div>`;return;
   }
   if(mode==='listening'){
     $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(w.english);
     $('#studyPron').innerHTML='<div class="listening-prompt"><button type="button" data-listen-again>🔊</button><span class="voice-note">Sesi dinle ve doğru anlamı seç</span></div>';
     const opts=choiceOptions(w,true);
-    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;
-    return;
+    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;return;
   }
   if(mode==='smart'){
     $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(w.english);
     const opts=choiceOptions(w,true);
-    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;
-    return;
+    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-answer-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;return;
   }
   if(mode==='synonym'||mode==='antonym'){
     const field=mode==='synonym'?'synonyms':'opposite';
     const rel=relationCandidates(w,field)[0];
     if(!rel){session.questionType='smart';renderStudyQuestion();return}
     session.relationAnswer=rel;
-    $('#studyQuestion').textContent=w.english;
+    $('#studyQuestion').innerHTML=session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(w.english);
     $('#studyPron').innerHTML=`<span class="quiz-relation">${mode==='synonym'?'Eş anlamlısını seç':'Zıt anlamlısını seç'}</span>`;
     const opts=choiceOptions(rel,false);
-    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-relation-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;
-    return;
+    $('#studyContent').innerHTML=`<div class="choice-grid">${opts.map(o=>`<button class="choice" data-relation-id="${o.id}">${esc(displayClean(o.text))}</button>`).join('')}</div>`;return;
   }
   const ask=mode==='en-tr'?w.english:firstMeaning(w);
-  $('#studyQuestion').textContent=displayClean(ask);
+  $('#studyQuestion').innerHTML=mode==='en-tr'&&session.hiddenMode?'<span class="hidden-word">••••••</span>':esc(displayClean(ask));
   $('#studyContent').innerHTML=`<form class="answer-input" id="writeForm">
-    <input id="writeAnswer" autocomplete="off" placeholder="Cevabını yaz…">
+    <input id="writeAnswer" autocomplete="off" enterkeyhint="done" placeholder="Cevabını yaz…">
     <button class="primary">Kontrol et</button>
   </form>`;
   setTimeout(()=>$('#writeAnswer')?.focus(),80);
 }
+
 function revealStudyInfo(){
   const w=session?.current;if(!w)return;
   const info=$('#studyWordInfo');
@@ -460,28 +531,44 @@ function revealStudyInfo(){
     <div class="info-meaning">${esc(displayClean(w.meaning||''))}</div>
     ${w.example?`<div class="info-example">${esc(displayClean(w.example))}${w.translation?`\n${esc(displayClean(w.translation))}`:''}</div>`:''}`;
 }
+
 function answer(correct,timeout=false){
   if(session.answered)return;
-  session.answered=true;stopQuestionTimer();recordAnswer(session.current,correct);
+  stopQuestionTimer();
   const w=session.current;
-  revealStudyInfo();
-  $$('.choice').forEach(b=>b.classList.add('locked'));
   if(correct){
-    session.correct++;session.done.add(w.id);applyCorrectTarget(w);
+    session.answered=true;recordAnswer(w,true);session.correct++;session.done.add(w.id);applyCorrectTarget(w);
     const gained=session.quizStyle==='speed'?Math.max(20,Math.round(40+session.timeLeft*4)):100;
     session.score+=gained;
+    revealStudyInfo();
+    $$('.choice').forEach(b=>{b.disabled=true;b.classList.add('locked')});
     $('#studyFeedback').className='feedback good';
     $('#studyFeedback').textContent=`Doğru ✓  +${gained} puan`;
+    $('#nextQuestion').hidden=false;
+    $('#showHint').disabled=true;$('#showAnswer').disabled=true;
   }else{
-    session.queue.push({word:w,due:session.index+4});
-    if(session.quizStyle==='speed'&&!timeout)session.lives=Math.max(0,session.lives-1);
-    $('#studyFeedback').className='feedback bad';
-    $('#studyFeedback').textContent=timeout?`Süre doldu. Doğru cevap: ${w.english} — ${firstMeaning(w)}.`:`Doğru cevap: ${w.english} — ${firstMeaning(w)}.`;
+    session.currentAttempts=(session.currentAttempts||0)+1;
+    recordAnswer(w,false);
+    session.score=Math.max(0,(session.score||0)-10);
+    const remaining=Math.max(0,3-session.currentAttempts);
+    if(session.currentAttempts<3){
+      $('#studyFeedback').className='feedback bad';
+      $('#studyFeedback').textContent=timeout?`Süre doldu. ${remaining} hakkın kaldı.`:`Yanlış. ${remaining} hakkın kaldı.`;
+      resetCurrentQuestionForRetry();
+    }else{
+      session.answered=true;session.done.add(w.id);
+      session.queue.push({word:w,due:session.index+4});
+      if(session.total<300)session.total++;
+      markFinalCorrectChoice();revealStudyInfo();
+      $('#studyFeedback').className='feedback bad';
+      $('#studyFeedback').textContent=`3 hak bitti. Doğru cevap: ${w.english} — ${firstMeaning(w)}.`;
+      $('#nextQuestion').hidden=false;
+      $('#showHint').disabled=true;$('#showAnswer').disabled=true;
+    }
   }
-  $('#nextQuestion').hidden=false;
-  $('#showHint').disabled=true;$('#showAnswer').disabled=true;
   updateStudyScore();renderDashboard();saveSession();
 }
+
 function finishSession(){
   stopQuestionTimer();clearSavedSession();
   const score=session?Math.round(session.correct/Math.max(1,session.index)*100):0;
@@ -490,7 +577,7 @@ function finishSession(){
   $('#studyPron').textContent=`${session.correct} doğru · ${session.index-session.correct} yanlış · ${Math.round(session.score||0)} puan`;
   $('#studyContent').innerHTML=`<div class="flash-card-inner"><h3>Uçuş tamamlandı ✈</h3><p class="muted">Puanın kaydedildi. Yanlışların tekrar listene eklendi.</p><button class="primary wide" data-nav="dashboard">Ana sayfaya dön</button></div>`;
   $('#studyFeedback').textContent='';$('#studyWordInfo').hidden=true;$('#nextQuestion').hidden=true;$('#studySpeak').hidden=true;
-  $('#studyActionBar').hidden=true;$('#speedBar').hidden=true;
+  $('#studyActionBar').hidden=true;$('#studyToggleBar').hidden=true;$('#speedBar').hidden=true;
   renderAll();
 }
 
@@ -554,37 +641,34 @@ function selectMatchTile(btn){
   }
 }
 
+
 function showHintForCurrent(){
   const w=session?.current;if(!w||session.answered)return;
-  const mode=session.questionType||session.mode;
-  let hint='';
-  if(mode==='tr-en'){
-    const word=clean(w.english);
-    hint=`${word[0]?.toUpperCase()||''}${' _'.repeat(Math.max(0,word.length-1))}`;
-  }else{
-    const meaning=firstMeaning(w);
-    hint=meaning?`${meaning.slice(0,Math.min(3,meaning.length))}${'…'}`:'Kelimenin ilk harfi: '+w.english[0].toUpperCase();
-  }
+  const target=hintTarget();if(!target)return;
+  session.hintRevealCount=Math.min(target.replace(/\s/g,'').length,(session.hintRevealCount||0)+1);
   let box=$('#studyContent').querySelector('.hint-box');
   if(!box){box=document.createElement('div');box.className='hint-box';$('#studyContent').appendChild(box)}
-  box.textContent=`İpucu: ${hint}`;
-  session.score=Math.max(0,(session.score||0)-15);updateStudyScore();
+  box.textContent=`İpucu: ${revealPattern(target,session.hintRevealCount)}`;
+  session.score=Math.max(0,(session.score||0)-5);updateStudyScore();
 }
+
+
 function showAnswerForCurrent(){
   const w=session?.current;if(!w||session.answered)return;
-  stopQuestionTimer();
-  session.answered=true;
+  stopQuestionTimer();session.answered=true;session.currentAttempts=3;recordAnswer(w,false);
+  session.done.add(w.id);session.queue.push({word:w,due:session.index+4});
+  if(session.total<300)session.total++;
+  markFinalCorrectChoice();
   const box=document.createElement('div');box.className='answer-reveal';
   box.innerHTML=`<b>Doğru cevap</b>${esc(w.english)} — ${esc(firstMeaning(w))}`;
-  $('#studyContent').appendChild(box);
-  revealStudyInfo();
+  $('#studyContent').appendChild(box);revealStudyInfo();
   $('#studyFeedback').className='feedback bad';
-  $('#studyFeedback').textContent='Cevap gösterildi. Bu kelime tekrar listene eklendi.';
-  session.queue.push({word:w,due:session.index+4});
+  $('#studyFeedback').textContent='Cevap gösterildi. Kelime tekrar listene eklendi.';
   session.score=Math.max(0,(session.score||0)-25);
   $('#nextQuestion').hidden=false;$('#showHint').disabled=true;$('#showAnswer').disabled=true;
   updateStudyScore();saveSession();
 }
+
 function previousQuestion(){
   const prevId=session?.historyIds?.pop();if(!prevId)return;
   stopQuestionTimer();
@@ -606,12 +690,19 @@ function previousQuestion(){
   $('#previousQuestion').disabled=!session.historyIds.length;
 }
 
-function openStudySetup(){
-  $('#setupMode').value='smart';document.querySelector('input[name="quizStyle"][value="classic"]').checked=true;$$('.quiz-style-card').forEach(c=>c.classList.toggle('active',c.querySelector('input').checked));
+
+function openStudySetup(mode='smart'){
+  $('#setupMode').value=mode||'smart';
+  document.querySelector('input[name="quizStyle"][value="classic"]').checked=true;
+  $$('.quiz-style-card').forEach(c=>c.classList.toggle('active',c.querySelector('input').checked));
   document.querySelector('input[name="rangeType"][value="quick"]').checked=true;
   $('#setupRangeFields').hidden=true;
+  if(mode==='listening'){
+    $('#hiddenModeToggle').checked=true;$('#autoSpeakToggle').checked=true;
+  }
   $('#studySetupDialog').showModal();
 }
+
 function selectedRangeType(){return document.querySelector('input[name="rangeType"]:checked')?.value||'quick'}
 function openProfile(){
   $('#profileName').value=profile.name||'';
@@ -635,9 +726,9 @@ function openCollection(type){
 function setupEvents(){
   document.addEventListener('click',e=>{
     const navBtn=e.target.closest('[data-nav]');if(navBtn){nav(navBtn.dataset.nav);return}
-    const start=e.target.closest('[data-start]');if(start){startStudy(start.dataset.start);return}
+    const start=e.target.closest('[data-start]');if(start){openStudySetup(start.dataset.start);return}
     const collection=e.target.closest('[data-collection]');if(collection){openCollection(collection.dataset.collection);return}
-    const setup=e.target.closest('[data-action="open-study-setup"]');if(setup){openStudySetup();return}
+    const setup=e.target.closest('[data-action="open-study-setup"]');if(setup){openStudySetup(setup.dataset.mode||'smart');return}
     const profileBtn=e.target.closest('[data-action="open-profile"]');if(profileBtn){openProfile();return}
     const close=e.target.closest('[data-close]');if(close){document.getElementById(close.dataset.close)?.close();return}
     const sp=e.target.closest('[data-speak]');if(sp){speak(sp.dataset.speak);return}const listenAgain=e.target.closest('[data-listen-again]');if(listenAgain){speak(session?.current?.english);return}
@@ -654,15 +745,23 @@ function setupEvents(){
     const answerBtn=e.target.closest('[data-answer-id]');
     if(answerBtn){
       const correct=Number(answerBtn.dataset.answerId)===session.current.id;
-      $$('.choice').forEach(b=>{b.disabled=true;if(Number(b.dataset.answerId)===session.current.id)b.classList.add('correct')});
-      if(!correct)answerBtn.classList.add('wrong');
+      if(correct){
+        answerBtn.classList.add('correct');
+        $$('.choice').forEach(b=>b.disabled=true);
+      }else{
+        answerBtn.classList.add('wrong','used-wrong');answerBtn.disabled=true;
+      }
       answer(correct);return;
     }
     const relationBtn=e.target.closest('[data-relation-id]');
     if(relationBtn){
       const correct=Number(relationBtn.dataset.relationId)===session.relationAnswer?.id;
-      $$('.choice').forEach(b=>{b.disabled=true;if(Number(b.dataset.relationId)===session.relationAnswer?.id)b.classList.add('correct')});
-      if(!correct)relationBtn.classList.add('wrong');
+      if(correct){
+        relationBtn.classList.add('correct');
+        $$('.choice').forEach(b=>b.disabled=true);
+      }else{
+        relationBtn.classList.add('wrong','used-wrong');relationBtn.disabled=true;
+      }
       answer(correct);return;
     }
     const flip=e.target.closest('[data-flip]');
@@ -698,13 +797,21 @@ function setupEvents(){
   });
   $('#showHint').addEventListener('click',showHintForCurrent);
   $('#showAnswer').addEventListener('click',showAnswerForCurrent);
+  $('#toggleAutoSpeak').addEventListener('click',()=>{
+    if(!session)return;session.autoSpeak=!session.autoSpeak;updateAttemptDisplay();
+    if(session.autoSpeak&&session.current)speak(session.current.english);
+    saveSession();
+  });
+  $('#toggleHiddenMode').addEventListener('click',()=>{
+    if(!session)return;session.hiddenMode=!session.hiddenMode;updateQuestionVisibility();updateAttemptDisplay();saveSession();
+  });
   $('#previousQuestion').addEventListener('click',previousQuestion);
   $('#nextQuestion').addEventListener('click',()=>{if(session?.mode==='matching')renderMatchingRound();else nextStudy()});
   document.addEventListener('submit',e=>{
     if(e.target.id==='writeForm'){
       e.preventDefault();
       const val=clean($('#writeAnswer').value).toLocaleLowerCase('tr');
-      const w=session.current,mode=session.mode;
+      const w=session.current,mode=session.questionType||session.mode;
       const correct=mode==='en-tr'
         ?clean(w.meaning).toLocaleLowerCase('tr').split(/\n|★/).map(clean).filter(Boolean).some(x=>x===val||x.includes(val)||val.includes(x))
         :val===clean(w.english).toLocaleLowerCase('tr');
@@ -736,7 +843,19 @@ function setupEvents(){
     if(a>b)[a,b]=[b,a];
     $('#studySetupDialog').close();startStudy(mode,{start:a,end:b},selectedQuizStyle());
   });
-  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('#installBtn').hidden=false});
+  document.addEventListener('keydown',e=>{
+    if(e.key!=='Enter'||!$('#view-study').classList.contains('active')||!session)return;
+    const input=e.target.closest?.('#writeAnswer');
+    if(input){
+      e.preventDefault();
+      if(session.answered&&!$('#nextQuestion').hidden){$('#nextQuestion').click();return}
+      document.querySelector('#writeForm')?.requestSubmit();return;
+    }
+    if(session.answered&&!$('#nextQuestion').hidden){
+      e.preventDefault();$('#nextQuestion').click();
+    }
+  });
+    window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('#installBtn').hidden=false});
   $('#installBtn').addEventListener('click',async()=>{
     if(!deferredPrompt)return;
     deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('#installBtn').hidden=true;
@@ -745,14 +864,14 @@ function setupEvents(){
 async function init(){
   load();
   try{
-    const response=await fetch('words.json?v=3.3.0',{cache:'no-store'});
+    const response=await fetch('words.json?v=3.4.0',{cache:'no-store'});
     if(!response.ok)throw new Error('words.json');
     words=await response.json();
   }catch{
     document.body.innerHTML='<main><div class="panel"><h2>Veri yüklenemedi</h2><p>Bağlantıyı kontrol edip sayfayı yenileyin.</p></div></main>';return;
   }
   setupEvents();renderAll();renderWords(true);
-  if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js?v=3.3.0');
+  if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js?v=3.4.0');
   const hasSaved=!!localStorage.getItem(SESSION_KEY);
   if(hasSaved&&confirm('Kaydedilmiş bir quiz oturumun var. Devam etmek ister misin?'))restoreSavedSession();
   else if(profile.email==='guest@local')setTimeout(openProfile,600);

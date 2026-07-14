@@ -1,4 +1,4 @@
-WORDPILOT v3.3
+WORDPILOT v3.4
 
 GitHub:
 1. ZIP'i aç.
@@ -7,15 +7,14 @@ GitHub:
 4. Commit changes.
 5. 1–3 dakika sonra Ctrl+F5 ile yenile.
 
-Eklenenler:
-- İşaretsiz yerine Yeni etiketi
-- Eşleştirme modu
-- Eş anlamlı quiz
-- Zıt anlamlı quiz
-- Sesli / gizli mod
-- Her soruda otomatik sesli okuma seçeneği
-- Yanlış Yaptıklarım listesi ve özel tekrar modu
-- Doğru cevapları Öğreniyorum veya Ezberledim listesine otomatik ekleme
-- ABD ve İngiltere sesi seçimi
-- iPhone için uygun İngilizce sesi önceliklendirme
-- Kelime bilgi ekranında ayrı 🇺🇸 ve 🇬🇧 ses butonları
+Düzeltmeler:
+- Her oyun kartına basınca çalışma ayarları ve özel aralık açılır.
+- Yazma oyununda Enter kontrol eder; cevap sonrası Enter devam eder.
+- Telefonda klavye Enter tuşu da aynı şekilde çalışır.
+- Zaman yalnızca tam saniye gösterir.
+- Oyun içinde Ses Açık/Kapalı ve Gizli Açık/Kapalı düğmeleri vardır.
+- İpucu her basışta bir harf daha açar.
+- Her kelime için 3 yanlış hakkı vardır.
+- Üçüncü yanlışta cevap gösterilir; oyun bitmez.
+- Üç kez yanlış yapılan kelime 4 soru sonra tekrar gelir.
+- Aynı soru gereksiz şekilde arka arkaya gelmez.

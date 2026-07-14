@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.3.0">
+  <link rel="stylesheet" href="style.css?v=3.4.0">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.3</span>
+      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.4</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
     </div>
@@ -178,8 +178,13 @@
           <div id="studyContent"></div>
           <div id="studyActionBar" class="study-action-bar">
             <button id="previousQuestion" class="study-action" title="Önceki soru">← Önceki</button>
-            <button id="showHint" class="study-action" title="İpucu">💡 İpucu</button>
+            <button id="showHint" class="study-action" title="İpucu">💡 Harf Aç</button>
             <button id="showAnswer" class="study-action" title="Cevabı göster">👁 Cevap</button>
+          </div>
+          <div id="studyToggleBar" class="study-toggle-bar">
+            <button id="toggleAutoSpeak" class="study-toggle active" type="button">🔊 Ses Açık</button>
+            <button id="toggleHiddenMode" class="study-toggle" type="button">👁 Kelime Açık</button>
+            <span id="attemptText" class="attempt-text">3 hak</span>
           </div>
           <div id="studyFeedback" class="feedback"></div>
           <div id="studyWordInfo" class="study-word-info" hidden></div>
@@ -323,6 +328,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.3.0" defer></script>
+<script src="app.js?v=3.4.0" defer></script>
 </body>
 </html>
