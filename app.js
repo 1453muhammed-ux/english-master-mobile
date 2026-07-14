@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.5.0';
+const VERSION='3.5.1';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıyorum'};
 const MODE_LABEL={
@@ -10,7 +10,19 @@ const MODE_LABEL={
   synonym:'Eş Anlamlı Quiz',antonym:'Zıt Anlamlı Quiz',review:'Akıllı Tekrar',comprehensive:'Kapsamlı Quiz',listening:'Sesli / Gizli Mod',matching:'Eşleştirme','wrong-review':'Yanlışlar Tekrarı'
 };
 
+const FIREBASE_CONFIG={
+  apiKey:'AIzaSyAZW-p7wdUfvBh66um0ngCw86SYOKNrelY',
+  authDomain:'wordpilot-7a574.firebaseapp.com',
+  projectId:'wordpilot-7a574',
+  storageBucket:'wordpilot-7a574.firebasestorage.app',
+  messagingSenderId:'1024648950699',
+  appId:'1:1024648950699:web:c7d394327b153ccfe358ee',
+  measurementId:'G-QER57NNSES'
+};
+const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing';
+
 let words=[], profile=null, state=null, currentWord=null, listLimit=80, session=null, deferredPrompt=null;
+let fbAuth=null,fbDb=null,authUser=null,cloudReady=false,cloudSyncTimer=null,cloudSyncBusy=false,cloudSyncQueued=false,leaderboardFetch=null,cloudLeaderboard=null;
 const SESSION_KEY='wordpilot_active_session_v34';
 function selectedQuizStyle(){return document.querySelector('input[name="quizStyle"]:checked')?.value||'classic'}
 
@@ -51,6 +63,57 @@ function restoreSavedSession(){
 function defaultState(){
   return {statuses:{},history:{},selected:[],stats:{answers:0,correct:0,todayAnswers:0,todayCorrect:0,lastDay:'',streak:0,bestStreak:0,points:0},lastActive:new Date().toISOString()};
 }
+function ensureStateShape(input){
+  const base=defaultState(),out=input&&typeof input==='object'?input:base;
+  out.statuses=out.statuses&&typeof out.statuses==='object'?out.statuses:{};
+  out.history=out.history&&typeof out.history==='object'?out.history:{};
+  out.selected=Array.isArray(out.selected)?out.selected.map(Number).filter(Number.isFinite):[];
+  out.stats={...base.stats,...(out.stats&&typeof out.stats==='object'?out.stats:{})};
+  ['answers','correct','todayAnswers','todayCorrect','streak','bestStreak','points'].forEach(key=>{
+    out.stats[key]=Number.isFinite(Number(out.stats[key]))?Number(out.stats[key]):0;
+  });
+  if(!out.stats.lastDay)out.stats.lastDay='';
+  if(!out.lastActive)out.lastActive=new Date(0).toISOString();
+  return out;
+}
+function cloneData(value){
+  try{return JSON.parse(JSON.stringify(value))}catch{return value}
+}
+function hasProgress(value){
+  const s=ensureStateShape(cloneData(value)||defaultState());
+  return Object.keys(s.statuses).length>0||Object.keys(s.history).length>0||s.selected.length>0||Number(s.stats.answers)>0||Number(s.stats.points)>0;
+}
+function stateTime(value){
+  const time=Date.parse(value?.lastActive||'');return Number.isFinite(time)?time:0;
+}
+function mergeStates(remoteValue,localValue){
+  const remote=ensureStateShape(cloneData(remoteValue)||defaultState());
+  const local=ensureStateShape(cloneData(localValue)||defaultState());
+  const remoteHas=hasProgress(remote),localHas=hasProgress(local);
+  if(remoteHas&&!localHas)return remote;
+  if(localHas&&!remoteHas)return local;
+  if(!remoteHas&&!localHas)return stateTime(remote)>=stateTime(local)?remote:local;
+  const newer=stateTime(local)>=stateTime(remote)?local:remote;
+  const older=newer===local?remote:local;
+  const merged=ensureStateShape(cloneData(newer));
+  merged.statuses=cloneData(newer.statuses)||{};
+  merged.selected=[...(new Set((newer.selected||[]).map(Number)))].sort((a,b)=>a-b);
+  merged.history={...(cloneData(older.history)||{})};
+  Object.entries(newer.history||{}).forEach(([id,item])=>{
+    const old=merged.history[id];
+    const itemTime=Date.parse(item?.last||'')||0,oldTime=Date.parse(old?.last||'')||0;
+    if(!old||itemTime>=oldTime)merged.history[id]=cloneData(item);
+  });
+  const ns=newer.stats||{},os=older.stats||{};
+  merged.stats={...ns};
+  ['answers','correct','points','streak','bestStreak'].forEach(key=>merged.stats[key]=Math.max(Number(ns[key])||0,Number(os[key])||0));
+  if(ns.lastDay===os.lastDay){
+    merged.stats.todayAnswers=Math.max(Number(ns.todayAnswers)||0,Number(os.todayAnswers)||0);
+    merged.stats.todayCorrect=Math.max(Number(ns.todayCorrect)||0,Number(os.todayCorrect)||0);
+  }
+  merged.lastActive=new Date(Math.max(stateTime(remote),stateTime(local),Date.now())).toISOString();
+  return ensureStateShape(merged);
+}
 function esc(v=''){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function clean(v=''){return String(v).replace(/[★☆✦✧●○]/g,'').replace(/\s+/g,' ').trim()}
 function firstMeaning(w){return clean((w?.meaning||'').split('\n')[0])}
@@ -58,16 +121,19 @@ function displayClean(v=''){return String(v).replace(/[★☆✦✧]/g,'').repla
 function cefr(w){return (w?.cefr||'').match(/[ABC][12]/)?.[0]||'—'}
 function todayKey(){return new Date().toISOString().slice(0,10)}
 function profileKey(){return `${STORE}:${(profile?.email||'guest@local').toLowerCase()}`}
+function readLocalState(email){
+  if(!email)return null;
+  try{
+    const raw=JSON.parse(localStorage.getItem(`${STORE}:${String(email).toLowerCase()}`));
+    return raw?ensureStateShape(raw):null;
+  }catch{return null}
+}
 function load(){
   try{profile=JSON.parse(localStorage.getItem(`${STORE}:profile`))}catch{}
   if(!profile)profile={name:'Öğrenci',email:'guest@local',goal:20,voiceAccent:'en-US'};
   if(!profile.voiceAccent)profile.voiceAccent='en-US';
-  try{state=JSON.parse(localStorage.getItem(profileKey()))||defaultState()}catch{state=defaultState()}
-  if(!state.stats)state.stats=defaultState().stats;
-  if(!state.history)state.history={};
-  if(!state.statuses)state.statuses={};
-  if(!Array.isArray(state.selected))state.selected=[];
-  if(!Number.isFinite(Number(state.stats.points)))state.stats.points=(state.stats.correct||0)*100;
+  if(!profile.goal)profile.goal=20;
+  try{state=ensureStateShape(JSON.parse(localStorage.getItem(profileKey()))||defaultState())}catch{state=defaultState()}
   normalizeDay();
 }
 function updateLeaderboardEntry(){
@@ -79,11 +145,186 @@ function updateLeaderboardEntry(){
   board=board.sort((a,b)=>(b.points||0)-(a.points||0)||String(a.name).localeCompare(String(b.name),'tr')).slice(0,50);
   localStorage.setItem(LEADERBOARD_KEY,JSON.stringify(board));
 }
-function save(){
+function save(options={}){
+  state=ensureStateShape(state);
   state.lastActive=new Date().toISOString();
   localStorage.setItem(`${STORE}:profile`,JSON.stringify(profile));
   localStorage.setItem(profileKey(),JSON.stringify(state));
   updateLeaderboardEntry();
+  if(options.cloud!==false)scheduleCloudSync();
+}
+function setSyncStatus(text,type=''){
+  const el=$('#syncStatus');if(!el)return;
+  el.textContent=text;el.dataset.state=type;
+}
+function updateAuthUI(){
+  const signed=!!authUser;
+  if($('#authSignedOut'))$('#authSignedOut').hidden=signed;
+  if($('#authSignedIn'))$('#authSignedIn').hidden=!signed;
+  if($('#authUserName'))$('#authUserName').textContent=authUser?.displayName||profile?.name||'Google hesabı bağlı';
+  if($('#authUserEmail'))$('#authUserEmail').textContent=authUser?.email||'';
+  if($('#profileEmail'))$('#profileEmail').value=signed?(authUser?.email||''):(profile?.email==='guest@local'?'':profile?.email||'');
+  if($('#cloudNoteText'))$('#cloudNoteText').innerHTML=signed
+    ?'<b>Google senkronizasyonu açık</b><br>İlerleme ve puanlar bu hesapla cihazlar arasında eşitlenir.'
+    :'<b>Google senkronizasyonu kapalı</b><br>Giriş yapana kadar ilerleme yalnızca bu cihazda saklanır.';
+  if(!signed)setSyncStatus(window.firebase?'Google ile giriş bekleniyor':'Çevrimdışı kullanım açık','idle');
+}
+function scheduleCloudSync(delay=900){
+  if(!authUser||!fbDb||!cloudReady)return;
+  clearTimeout(cloudSyncTimer);
+  setSyncStatus('Değişiklikler kaydediliyor…','syncing');
+  cloudSyncTimer=setTimeout(syncCloudNow,delay);
+}
+async function syncCloudNow(){
+  if(!authUser||!fbDb||!cloudReady)return;
+  if(cloudSyncBusy){cloudSyncQueued=true;return}
+  cloudSyncBusy=true;cloudSyncQueued=false;
+  clearTimeout(cloudSyncTimer);
+  try{
+    const publicName=profile?.name||authUser.displayName||'Öğrenci';
+    const userPayload={
+      profile:{name:publicName,email:authUser.email||'',goal:Number(profile?.goal||20),voiceAccent:profile?.voiceAccent||'en-US',photoURL:authUser.photoURL||''},
+      state:cloneData(state),clientUpdatedAt:state.lastActive,
+      updatedAt:window.firebase.firestore.FieldValue.serverTimestamp()
+    };
+    const leaderboardPayload={uid:authUser.uid,name:publicName,points:Math.max(0,Math.round(state?.stats?.points||0)),photoURL:authUser.photoURL||'',updatedAt:window.firebase.firestore.FieldValue.serverTimestamp()};
+    await Promise.all([
+      fbDb.collection('users').doc(authUser.uid).set(userPayload,{merge:true}),
+      fbDb.collection('leaderboard').doc(authUser.uid).set(leaderboardPayload,{merge:true})
+    ]);
+    setSyncStatus('Senkronize edildi ✓','ok');
+    cloudLeaderboard=null;
+    if($('#view-progress')?.classList.contains('active'))refreshCloudLeaderboard(true);
+  }catch(error){
+    console.error('Cloud sync error',error);setSyncStatus('İnternet gelince yeniden eşitlenecek','error');
+  }finally{
+    cloudSyncBusy=false;
+    if(cloudSyncQueued){cloudSyncQueued=false;scheduleCloudSync(250)}
+  }
+}
+async function handleAuthState(user){
+  authUser=user||null;cloudLeaderboard=null;
+  if(!user){cloudReady=false;updateAuthUI();renderAll();return}
+  const email=(user.email||'').toLowerCase();
+  const previousEmail=(profile?.email||'guest@local').toLowerCase();
+  const currentCandidate=(previousEmail==='guest@local'||previousEmail===email)?cloneData(state):null;
+  const emailCandidate=readLocalState(email);
+  const localCandidate=currentCandidate&&emailCandidate?mergeStates(currentCandidate,emailCandidate):(currentCandidate||emailCandidate||defaultState());
+  setSyncStatus('Buluttaki ilerleme alınıyor…','syncing');
+  let remoteData=null;
+  try{
+    const snap=await fbDb.collection('users').doc(user.uid).get();
+    remoteData=snap.exists?snap.data():null;
+  }catch(error){console.error('Cloud load error',error)}
+  state=mergeStates(remoteData?.state,localCandidate);
+  const remoteProfile=remoteData?.profile||{};
+  const localName=profile?.name&&profile.name!=='Öğrenci'?profile.name:'';
+  profile={
+    name:remoteProfile.name||localName||user.displayName||'Öğrenci',
+    email:email||'guest@local',
+    goal:Number(remoteProfile.goal||profile?.goal||20),
+    voiceAccent:remoteProfile.voiceAccent||profile?.voiceAccent||'en-US',
+    uid:user.uid,photoURL:user.photoURL||remoteProfile.photoURL||''
+  };
+  normalizeDay();
+  localStorage.setItem(`${STORE}:profile`,JSON.stringify(profile));
+  localStorage.setItem(profileKey(),JSON.stringify(state));
+  updateLeaderboardEntry();
+  cloudReady=true;updateAuthUI();renderAll();
+  await syncCloudNow();
+}
+function loadExternalScript(src){
+  return new Promise((resolve,reject)=>{
+    const existing=document.querySelector(`script[src="${src}"]`);
+    if(existing){if(existing.dataset.loaded==='1')resolve();else{existing.addEventListener('load',resolve,{once:true});existing.addEventListener('error',reject,{once:true})}return}
+    const script=document.createElement('script');script.src=src;script.async=true;
+    script.addEventListener('load',()=>{script.dataset.loaded='1';resolve()},{once:true});script.addEventListener('error',reject,{once:true});
+    document.head.appendChild(script);
+  });
+}
+async function loadFirebaseSdk(){
+  if(window.firebase?.auth&&window.firebase?.firestore)return true;
+  const base='https://www.gstatic.com/firebasejs/12.16.0/';
+  try{
+    await loadExternalScript(`${base}firebase-app-compat.js`);
+    await loadExternalScript(`${base}firebase-auth-compat.js`);
+    await loadExternalScript(`${base}firebase-firestore-compat.js`);
+    return !!window.firebase;
+  }catch(error){console.error('Firebase SDK load error',error);return false}
+}
+async function initFirebase(){
+  setSyncStatus('Google bağlantısı hazırlanıyor…','syncing');
+  if(!await loadFirebaseSdk()){updateAuthUI();setSyncStatus('Çevrimdışı kullanım açık','idle');return false}
+  try{
+    if(!window.firebase.apps.length)window.firebase.initializeApp(FIREBASE_CONFIG);
+    fbAuth=window.firebase.auth();fbDb=window.firebase.firestore();
+    await fbAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL);
+    fbAuth.onAuthStateChanged(user=>handleAuthState(user).catch(error=>{console.error(error);setSyncStatus('Senkronizasyon başlatılamadı','error')}));
+    fbAuth.getRedirectResult().catch(error=>{if(error?.code!=='auth/no-auth-event')console.error('Redirect sign-in',error)});
+    return true;
+  }catch(error){console.error('Firebase init error',error);updateAuthUI();return false}
+}
+async function signInWithGoogle(){
+  if(!fbAuth||!window.firebase){toast('Google bağlantısı yüklenemedi. İnterneti kontrol et.');return}
+  const button=$('#googleSignInBtn');if(button)button.disabled=true;
+  try{
+    const provider=new window.firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({prompt:'select_account'});
+    await fbAuth.signInWithPopup(provider);
+  }catch(error){
+    const redirectCodes=['auth/popup-blocked','auth/operation-not-supported-in-this-environment','auth/web-storage-unsupported'];
+    if(redirectCodes.includes(error?.code)){
+      const provider=new window.firebase.auth.GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});
+      await fbAuth.signInWithRedirect(provider);return;
+    }
+    if(error?.code!=='auth/popup-closed-by-user'){console.error(error);toast('Google girişi tamamlanamadı. Tekrar dene.')}
+  }finally{if(button)button.disabled=false}
+}
+async function signOutGoogle(){
+  if(!fbAuth)return;
+  clearTimeout(cloudSyncTimer);
+  try{await syncCloudNow();await fbAuth.signOut()}catch(error){console.error(error)}
+  authUser=null;cloudReady=false;cloudLeaderboard=null;
+  const goal=Number(profile?.goal||20),voiceAccent=profile?.voiceAccent||'en-US';
+  profile={name:'Öğrenci',email:'guest@local',goal,voiceAccent};
+  state=readLocalState('guest@local')||defaultState();normalizeDay();save({cloud:false});
+  updateAuthUI();renderAll();toast('Google hesabından çıkış yapıldı.');
+}
+function renderLeaderboardRows(board,currentKey){
+  const list=$('#leaderboardList');if(!list)return;
+  list.innerHTML=(board||[]).slice(0,20).map((x,i)=>{
+    const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&x.email===currentKey);
+    return `<div class="leaderboard-row ${isCurrent?'current':''}"><span class="rank">${i+1}</span><span class="leader-avatar">${esc((x.name||'Ö')[0].toUpperCase())}</span><div><b>${esc(x.name||'Öğrenci')}</b><small>${isCurrent?'Sen':'Pilot'}</small></div><strong>${Math.round(x.points||0)} puan</strong></div>`;
+  }).join('')||'<p class="muted">Henüz puan kaydı yok.</p>';
+}
+async function refreshCloudLeaderboard(force=false){
+  if(!authUser||!fbDb)return;
+  if(cloudLeaderboard&&!force){renderLeaderboardRows(cloudLeaderboard,authUser.uid);return}
+  if(leaderboardFetch)return leaderboardFetch;
+  leaderboardFetch=(async()=>{
+    try{
+      const snap=await fbDb.collection('leaderboard').orderBy('points','desc').limit(20).get();
+      cloudLeaderboard=snap.docs.map(doc=>({uid:doc.id,...doc.data()}));
+      if($('#view-progress')?.classList.contains('active'))renderLeaderboardRows(cloudLeaderboard,authUser.uid);
+    }catch(error){
+      console.error('Leaderboard error',error);
+      if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Sıralama şu an yüklenemedi.</p>';
+    }finally{leaderboardFetch=null}
+  })();
+  return leaderboardFetch;
+}
+function renderLeaderboard(){
+  const scope=$('#leaderboardScope');
+  if(authUser&&fbDb){
+    if(scope)scope.textContent='Tüm Google kullanıcıları';
+    if(cloudLeaderboard)renderLeaderboardRows(cloudLeaderboard,authUser.uid);
+    else if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Puan listesi yükleniyor…</p>';
+    refreshCloudLeaderboard();return;
+  }
+  if(scope)scope.textContent='Bu cihazdaki profiller';
+  let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}
+  updateLeaderboardEntry();try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}
+  renderLeaderboardRows(board,(profile?.email||'guest@local').toLowerCase());
 }
 function normalizeDay(){
   const d=todayKey(),st=state.stats;
@@ -310,10 +551,7 @@ function renderProgress(){
   const levels=['A1','A2','B1','B2','C1','C2'];
   const vals=levels.map(l=>words.filter(w=>cefr(w)===l&&statusOf(w.id)).length),max=Math.max(1,...vals);
   $('#levelDistribution').innerHTML=levels.map((l,i)=>`<div class="level-row"><b>${l}</b><div class="level-track"><div class="level-fill" style="width:${vals[i]/max*100}%"></div></div><span>${vals[i]}</span></div>`).join('');
-  let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}
-  updateLeaderboardEntry();try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}
-  const current=(profile?.email||'guest@local').toLowerCase();
-  $('#leaderboardList').innerHTML=board.slice(0,20).map((x,i)=>`<div class="leaderboard-row ${x.email===current?'current':''}"><span class="rank">${i+1}</span><span class="leader-avatar">${esc((x.name||'Ö')[0].toUpperCase())}</span><div><b>${esc(x.name||'Öğrenci')}</b><small>${x.email===current?'Sen':'Pilot'}</small></div><strong>${Math.round(x.points||0)} puan</strong></div>`).join('')||'<p class="muted">Henüz puan kaydı yok.</p>';
+  renderLeaderboard();
 }
 function renderAll(){
   renderDashboard();
@@ -764,10 +1002,10 @@ function openStudySetup(mode='smart',source=null){
 function selectedRangeType(){return document.querySelector('input[name="rangeType"]:checked')?.value||'quick'}
 function openProfile(){
   $('#profileName').value=profile.name||'';
-  $('#profileEmail').value=profile.email==='guest@local'?'':profile.email;
   $('#dailyGoal').value=String(profile.goal||20);$('#voiceAccent').value=profile.voiceAccent||'en-US';
-  $('#profileTitle').textContent=profile.email==='guest@local'?'Profilini oluştur':profile.name;
-  $('#profileAvatar').textContent=(profile.name||'M')[0].toUpperCase();
+  $('#profileTitle').textContent=authUser?(profile.name||authUser.displayName||'Profil'):profile.email==='guest@local'?'Profilini oluştur':profile.name;
+  $('#profileAvatar').textContent=(profile.name||authUser?.displayName||'M')[0].toUpperCase();
+  updateAuthUI();
   $('#profileDialog').showModal();
 }
 function openCollection(type){
@@ -784,10 +1022,12 @@ function openCollection(type){
 
 function isStandalone(){return window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true}
 function installInstructions(){
-  const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua),android=/Android/.test(ua);
-  if(ios)return '<ol><li>Safari alt menüsündeki <b>Paylaş</b> simgesine dokun.</li><li><b>Ana Ekrana Ekle</b> seçeneğini seç.</li><li>Sağ üstten <b>Ekle</b> de.</li></ol>';
-  if(android)return '<ol><li>Chrome menüsünü <b>⋮</b> aç.</li><li><b>Uygulamayı yükle</b> veya <b>Ana ekrana ekle</b> seçeneğine dokun.</li><li><b>Yükle</b> ile tamamla.</li></ol>';
-  return '<ol><li>Tarayıcı menüsünü aç.</li><li><b>Uygulamayı yükle</b> veya <b>Ana ekrana ekle</b> seçeneğini seç.</li></ol>';
+  const ua=navigator.userAgent||'',ios=/iPad|iPhone|iPod/.test(ua),android=/Android/.test(ua),chromeIOS=/CriOS/.test(ua),chrome=/Chrome|CriOS/.test(ua);
+  if(ios&&chromeIOS)return '<p><b>Chrome’dan doğrudan ekleyebilirsin.</b> Safari’ye geçmen gerekmez.</p><ol><li>Adres çubuğunun yanındaki <b>Paylaş</b> simgesine dokun.</li><li><b>Ana Ekrana Ekle</b> seçeneğini seç.</li><li>Adı WordPilot olarak bırakıp <b>Ekle</b> de.</li></ol><p class="install-alt"><b>Safari kullanıyorsan:</b> Paylaş → Ana Ekrana Ekle → Ekle.</p>';
+  if(ios)return '<p><b>Safari’den ekleme</b></p><ol><li>Alt veya üst menüdeki <b>Paylaş</b> simgesine dokun.</li><li><b>Ana Ekrana Ekle</b> seçeneğini seç.</li><li>Sağ üstten <b>Ekle</b> de.</li></ol><p class="install-alt"><b>Chrome’da da:</b> Paylaş → Ana Ekrana Ekle → Ekle.</p>';
+  if(android&&chrome)return '<ol><li>Chrome menüsünü <b>⋮</b> aç.</li><li><b>Uygulamayı yükle</b> veya <b>Ana ekrana ekle</b> seçeneğine dokun.</li><li><b>Yükle</b> ile tamamla.</li></ol>';
+  if(android)return '<ol><li>Tarayıcı menüsünü aç.</li><li><b>Ana ekrana ekle</b> veya <b>Uygulamayı yükle</b> seçeneğine dokun.</li><li>Onaylayarak tamamla.</li></ol>';
+  return '<ol><li>Tarayıcı adres çubuğundaki yükleme simgesine veya menüye tıkla.</li><li><b>WordPilot’u yükle</b> ya da <b>Ana ekrana ekle</b> seçeneğini seç.</li></ol>';
 }
 async function handleInstallRequest(){
   if(isStandalone()){toast('WordPilot zaten uygulama olarak açık.');return}
@@ -893,6 +1133,9 @@ function setupEvents(){
   $('#studySelectedBtn').addEventListener('click',()=>openStudySetup('smart','selected'));
   $('#installAppBtn').addEventListener('click',handleInstallRequest);
   $('#offlineBtn').addEventListener('click',downloadOfflineMode);
+  $('#googleSignInBtn').addEventListener('click',signInWithGoogle);
+  $('#googleSignOutBtn').addEventListener('click',signOutGoogle);
+  window.addEventListener('online',()=>{if(authUser){syncCloudNow();refreshCloudLeaderboard(true)}});
   document.addEventListener('submit',e=>{
     if(e.target.id==='writeForm'){
       e.preventDefault();
@@ -905,15 +1148,19 @@ function setupEvents(){
     }
     if(e.target.id==='profileForm'){
       e.preventDefault();
-      const oldState=state;
-      profile={name:$('#profileName').value.trim()||'Öğrenci',email:($('#profileEmail').value.trim()||'guest@local').toLowerCase(),goal:Number($('#dailyGoal').value||20),voiceAccent:$('#voiceAccent').value||'en-US'};
-      try{state=JSON.parse(localStorage.getItem(profileKey()))||oldState}catch{state=oldState}
-      save();$('#profileDialog').close();renderAll();toast('Profil kaydedildi');
+      profile={
+        ...profile,
+        name:$('#profileName').value.trim()||authUser?.displayName||'Öğrenci',
+        email:(authUser?.email||profile?.email||'guest@local').toLowerCase(),
+        goal:Number($('#dailyGoal').value||20),voiceAccent:$('#voiceAccent').value||'en-US',
+        uid:authUser?.uid||profile?.uid||'',photoURL:authUser?.photoURL||profile?.photoURL||''
+      };
+      save();updateAuthUI();$('#profileDialog').close();renderAll();toast(authUser?'Profil kaydedildi ve eşitleniyor':'Profil bu cihaza kaydedildi');
     }
   });
   $('#resetData').addEventListener('click',()=>{
     if(confirm('Bu profildeki tüm ilerleme silinsin mi?')){
-      state=defaultState();save();renderAll();$('#profileDialog').close();toast('İlerleme sıfırlandı');
+      state=defaultState();save();if(authUser)syncCloudNow();renderAll();$('#profileDialog').close();toast('İlerleme sıfırlandı');
     }
   });
   $('#setupMode').addEventListener('change',()=>{if($('#setupMode').value==='listening'){$('#hiddenModeToggle').checked=true;$('#autoSpeakToggle').checked=true}});
@@ -957,9 +1204,10 @@ async function init(){
   }
   setupEvents();renderAll();renderWords(true);
   if('serviceWorker'in navigator)navigator.serviceWorker.register(`sw.js?v=${VERSION}`);
+  initFirebase();
   $('#installBtn').hidden=isStandalone();updateSelectedControls();
   const hasSaved=!!localStorage.getItem(SESSION_KEY);
   if(hasSaved&&confirm('Kaydedilmiş bir quiz oturumun var. Devam etmek ister misin?'))restoreSavedSession();
-  else if(profile.email==='guest@local')setTimeout(openProfile,600);
+  else if(profile.email==='guest@local')setTimeout(()=>{if(!authUser&&!$('#profileDialog').open)openProfile()},1200);
 }
 init();

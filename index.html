@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.5.0">
+  <link rel="stylesheet" href="style.css?v=3.5.1">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,9 +22,9 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
-      <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
+      <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
   </header>
 
@@ -203,7 +203,7 @@
         <article class="panel"><h3>Performans</h3><div class="report-stat"><span>Toplam cevap</span><b id="rAnswers">0</b></div><div class="report-stat"><span>Doğru cevap</span><b id="rCorrect">0</b></div><div class="report-stat"><span>Başarı oranı</span><b id="rAccuracy">—</b></div><div class="report-stat"><span>En uzun seri</span><b id="rBestStreak">0 gün</b></div></article>
         <article class="panel full"><h3>Seviye dağılımı</h3><div id="levelDistribution" class="level-dist"></div></article>
         <article class="panel full leaderboard-panel">
-          <div class="leaderboard-head"><div><p class="eyebrow">PUAN LİSTESİ</p><h3>Pilot sıralaması</h3></div><small>Bu cihazdaki profiller</small></div>
+          <div class="leaderboard-head"><div><p class="eyebrow">PUAN LİSTESİ</p><h3>Pilot sıralaması</h3></div><small id="leaderboardScope">Google hesapları</small></div>
           <div id="leaderboardList" class="leaderboard-list"></div>
         </article>
       </div>
@@ -335,8 +335,22 @@
 
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
-  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PILOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">İlerlemen bu kullanıcı altında saklanır.</p></div></div>
-  <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" required placeholder="ornek@email.com"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
+  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen telefon ve bilgisayarda eşitlenir.</p></div></div>
+
+  <section class="auth-section">
+    <div id="authSignedOut" class="auth-card">
+      <span class="google-badge">G</span>
+      <div><b>Google ile giriş yap</b><small>Aynı e-posta ile tüm cihazlarda aynı profil açılır.</small></div>
+      <button id="googleSignInBtn" class="primary" type="button">Giriş yap</button>
+    </div>
+    <div id="authSignedIn" class="auth-card signed-in" hidden>
+      <span class="google-badge ok">✓</span>
+      <div><b id="authUserName">Google hesabı bağlı</b><small id="authUserEmail"></small><em id="syncStatus">Senkronizasyon hazırlanıyor…</em></div>
+      <button id="googleSignOutBtn" class="secondary" type="button">Çıkış</button>
+    </div>
+  </section>
+
+  <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" readonly placeholder="Google ile giriş yaptığında otomatik gelir"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
   <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
   <button class="primary wide" type="submit">Profili kaydet</button></form>
   <section class="settings-tools">
@@ -348,23 +362,15 @@
     <p id="offlineStatus" class="settings-note">Kelime verileri indirildiğinde internet olmadan da çalışır.</p>
   </section>
   <section class="pdf-downloads">
-    <div class="settings-title"><p class="eyebrow">PDF ÇALIŞMA DOSYALARI</p><h3>Telefon veya bilgisayara indir</h3></div>
+    <div class="settings-title"><p class="eyebrow">PDF ÇALIŞMA DOSYALARI</p><h3>Google Drive üzerinden indir</h3></div>
     <div class="download-list">
-      <a href="pdfler/1-1000.pdf" download>1-1000 Kelime <span>PDF ↓</span></a>
-      <a href="pdfler/1001-2000.pdf" download>1001-2000 Kelime <span>PDF ↓</span></a>
-      <a href="pdfler/2001-3000.pdf" download>2001-3000 Kelime <span>PDF ↓</span></a>
-      <a href="pdfler/3001-4000.pdf" download>3001-4000 Kelime <span>PDF ↓</span></a>
-      <a href="pdfler/4001-5000.pdf" download>4001-5000 Kelime <span>PDF ↓</span></a>
-      <a href="pdfler/5001-6000-KALIPLAR.pdf" download>5001-6000 Kalıplar <span>PDF ↓</span></a>
-      <a href="pdfler/6000-tum.pdf" download>6000 Tüm Liste <span>PDF ↓</span></a>
-      <a href="pdfler/ING-BOS.pdf" download>İngilizce Boş Çalışma Sayfası <span>PDF ↓</span></a>
-      <a href="pdfler/TR-BOS.pdf" download>Türkçe Boş Çalışma Sayfası <span>PDF ↓</span></a>
+      <a class="drive-folder-link" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer">Tüm PDF dosyalarını aç <span>DRIVE ↗</span></a>
     </div>
+    <p class="pdf-file-summary">1–1000, 1001–2000, 2001–3000, 3001–4000, 4001–5000, 5001–6000 Kalıplar, 6000 Tüm, İngilizce Boş ve Türkçe Boş.</p>
   </section>
-  <div class="cloud-note"><span>☁</span><p><b>Yerel profil</b><br>İlerleme ve puan sıralaması bu cihazda saklanır.</p></div>
+  <div class="cloud-note"><span>☁</span><p id="cloudNoteText"><b>Google senkronizasyonu</b><br>Giriş yapınca ilerleme ve puanlar cihazlar arasında eşitlenir.</p></div>
   <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
 </dialog>
-
 
 <dialog id="installHelpDialog" class="modal install-help-modal">
   <button class="sheet-close" data-close="installHelpDialog">×</button>
@@ -376,6 +382,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.5.0" defer></script>
+<script src="app.js?v=3.5.1" defer></script>
 </body>
 </html>

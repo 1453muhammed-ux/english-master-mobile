@@ -1,14 +1,15 @@
-WORDPILOT v3.5
+WORDPILOT v3.5.1
 
 GitHub Pages yükleme:
-1. ZIP dosyasını açın.
-2. İçindeki tüm dosya ve klasörleri mevcut GitHub depo köküne yükleyin.
+1. ZIP dosyasını bilgisayarda açın.
+2. İçindeki tüm dosyaları mevcut GitHub depo köküne yükleyin.
 3. Aynı adlı dosyaların üzerine yazın.
-4. GitHub Pages güncellendikten sonra tarayıcı önbelleğini yenileyin.
+4. ZIP dosyasının kendisini GitHub’a yüklemeyin.
 
-Önemli:
-- words.json değiştirilmemiştir.
-- Eski kullanıcı ilerleme anahtarı korunmuştur.
-- PDF dosyaları pdfler klasöründedir.
-- Puan sıralaması statik GitHub Pages yapısı nedeniyle bu cihazdaki profilleri gösterir.
-- Ortak, tüm kullanıcıları kapsayan internet sıralaması için ayrı bir sunucu/veritabanı gerekir.
+Bu sürümde:
+- Firebase Google girişi ve telefon–bilgisayar ilerleme senkronizasyonu eklendi.
+- Ortak puan sıralaması Firebase üzerinden çalışır.
+- PDF dosyaları ZIP içinde değildir; Google Drive klasörüne yönlendirilir.
+- Sağ üst profil düğmesi çalışır.
+- iPhone/iPad Safari ve Chrome ana ekrana ekleme yönergeleri güncellendi.
+- words.json ve eski yerel ilerleme anahtarı korunmuştur.
