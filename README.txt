@@ -1,22 +1,31 @@
-ENGLISH MASTER PROFESSIONAL v2.2
+WORDPILOT v3.0 — TASARIM SİSTEMİ VE ÇALIŞAN PROTOTİP
 
-GitHub yükleme:
-1. Bu klasördeki TÜM dosyaları repository ana dizinine yükleyin.
-2. Aynı isimli dosyaların üzerine yazılmasına izin verin.
-3. Commit changes düğmesine basın.
-4. 1-3 dakika bekleyin.
+Bu paket, mevcut GitHub Pages sitesinin üzerine doğrudan yüklenebilir.
 
-v2.2 yenilikleri:
-- Telefonda 'Çalışma Modları / Bugün ne çalışalım?' alanı artık ana sayfada görünür.
-- Alt menüdeki Çalış düğmesi çalışma ayarları penceresini açar.
-- Kullanıcı 1-50 gibi başlangıç ve bitiş aralığını kendisi girebilir.
-- Hazır 1-50, 51-100, 1-100 ve 1-500 seçenekleri eklendi.
-- Doğru cevapta yaklaşık 1 saniye sonra otomatik ilerler.
-- Yanlış cevapta bilgi okumak için Sonraki soru düğmesi kalır.
-- Cevaptan sonra kelime bilgisi, telaffuz, anlam ve örnek görünür.
-- Eski telefon önbelleğini yenilemek için service worker v2.2 güncellendi.
+Yükleme:
+1. ZIP'i açın.
+2. İçindeki bütün dosyaları GitHub repository ana dizinine yükleyin.
+3. Aynı isimli dosyaların üzerine yazılmasına izin verin.
+4. Commit changes düğmesine basın.
+5. 1–3 dakika bekleyin.
+6. iPhone'da Safari'den sayfayı yenileyin.
 
-iPhone ana ekran uygulamasında eski görünüm kalırsa:
-- Uygulamayı tamamen kapatıp yeniden açın.
-- Safari'de sayfayı bir kez yenileyin.
-- Gerekirse ana ekrandaki eski simgeyi silip Safari'den yeniden Ana Ekrana Ekle yapın.
+v3.0 içerikleri:
+- WordPilot marka kimliği
+- Yeni ana ekran ve Continue Learning alanı
+- WordPilot Daily ve günlük uçuş planı
+- Modern mobil ve iPad düzeni
+- Yeni renk, kart, buton, rozet ve tipografi sistemi
+- Kelime kütüphanesi
+- Akıllı Quiz
+- Kelime Kartları
+- Yaz EN→TR
+- Yaz TR→EN
+- Özel aralık
+- Öğren / Ezber / Zor
+- İlerleme raporu
+- Çevrimdışı PWA desteği
+
+Not:
+- Kullanıcı verileri hâlâ cihazda saklanır.
+- Firebase kullanıcı hesabı ve cihazlar arası senkronizasyon v3.1 sonrası bağlanacaktır.

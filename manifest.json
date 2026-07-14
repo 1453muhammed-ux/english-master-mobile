@@ -1,13 +1,11 @@
 {
-  "name": "English Master Professional",
-  "short_name": "English Master",
-  "description": "6000 kelimelik kişisel İngilizce öğrenme ve akıllı tekrar platformu",
+  "name": "WordPilot — Powered by English Master",
+  "short_name": "WordPilot",
   "start_url": "./",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#f4f7fb",
-  "theme_color": "#071a33",
-  "orientation": "portrait-primary",
+  "background_color": "#F5F7FB",
+  "theme_color": "#0B1020",
+  "description": "Kişisel İngilizce kelime öğrenme ve akıllı tekrar platformu.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -17,8 +15,7 @@
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
