@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.5.3">
+  <link rel="stylesheet" href="style.css?v=3.6">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.3</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -68,6 +68,18 @@
         <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
       </div>
 
+      <button class="league-launch-card" data-nav="league" type="button">
+        <span class="league-launch-icon">🏆</span>
+        <span><b>WordPilot Ligi</b><small>Kim kaç puan topladı? Sıralamayı gör.</small></span>
+        <em>Lig →</em>
+      </button>
+
+      <button class="daily-challenge-card" data-collection="daily20" type="button">
+        <span class="daily-challenge-icon">20</span>
+        <span><b>Bugünün 20 Kelimesi</b><small>Her gün yenilenen ortak kelime uçuşu.</small></span>
+        <em>Başla →</em>
+      </button>
+
 
       <section class="collections-section">
         <div class="collections-head">
@@ -105,6 +117,18 @@
           <button class="collection-card mint" data-collection="memorized">
             <span class="collection-art">★</span>
             <div><b>Ezberlediklerim</b><small>Tamamladığın kelimeler</small></div>
+          </button>
+          <button class="collection-card gold" data-collection="favorite">
+            <span class="collection-art">⭐</span>
+            <div><b>Favorilerim</b><small>Yıldızladığın kelimeler</small></div>
+          </button>
+          <button class="collection-card flame" data-collection="veryhard">
+            <span class="collection-art">🔥</span>
+            <div><b>Çok Zorlar</b><small>Özel tekrar listen</small></div>
+          </button>
+          <button class="collection-card slate" data-collection="notmemorized">
+            <span class="collection-art">○</span>
+            <div><b>Ezberlenmeyenler</b><small>Henüz tamamlanmayanlar</small></div>
           </button>
         </div>
       </section>
@@ -144,8 +168,9 @@
           <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
           <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
           <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
+          <button class="home-tool-card sync" data-action="open-profile" type="button"><span>☁</span><div><b>Hesabı senkronize et</b><small>Google hesabı ve profil ayarları</small></div><em>→</em></button>
         </div>
-        <p id="offlineStatus" class="settings-note">Yaklaşık 4,3 MB uygulama ve kelime verisi tarayıcının çevrimdışı hafızasına kaydedilir; İndirilenler klasörüne dosya düşmez.</p>
+        <p id="offlineStatus" class="settings-note">Yaklaşık 4,3 MB: ana sayfa, oyun dosyaları, simgeler ve 6000 kelimelik words.json tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
     </section>
 
@@ -161,7 +186,7 @@
         <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Kelime, Türkçe anlam veya örnek ara…"></label>
         <select id="groupFilter"><option value="">Tüm gruplar</option><option value="core5000">İlk 5000 Kelime</option><option>1-1000</option><option>1001-2000</option><option>2001-3000</option><option>3001-4000</option><option>4001-5000</option><option>5001-6000 Kalıplar</option></select>
         <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="A1-A2">A1–A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="B1-B2">B1–B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
-        <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="wrong">Yanlış Yaptıklarım</option><option value="unset">Yeni / İşaretsiz</option></select>
+        <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="wrong">Yanlış Yaptıklarım</option><option value="favorite">Favorilerim</option><option value="veryhard">Çok Zorlar</option><option value="notmemorized">Ezberlenmeyenler</option><option value="ignored">Tekrar gösterme</option><option value="unset">Yeni / İşaretsiz</option></select>
       </div>
       <div id="wordList" class="word-list"></div>
       <button id="loadMore" class="secondary wide">Daha fazla göster</button>
@@ -177,6 +202,7 @@
               <div class="study-scoreline">
                 <span id="studyHearts" class="study-hearts" hidden>♥♥♥</span>
                 <span id="studyScore">0 puan</span>
+                <span id="studyCombo" class="study-combo" hidden>🔥 0 seri</span>
                 <span id="studyTimer">—</span>
                 <b id="studyCounter">1 / 20</b>
               </div>
@@ -212,16 +238,49 @@
     </section>
 
     <section id="view-progress" class="view">
-      <div class="section-title"><div><p class="eyebrow">FLIGHT LOG</p><h1>İlerleme raporu</h1><p class="muted">Çalışma alışkanlıkların ve kelime durumların.</p></div></div>
+      <div class="section-title"><div><p class="eyebrow">FLIGHT LOG</p><h1>İlerleme raporu</h1><p class="muted">Bugün, bu hafta, bu ay ve toplam çalışma kayıtların.</p></div></div>
+      <div class="period-summary-grid">
+        <article class="period-card"><small>BUGÜN</small><strong id="pTodayPoints">0</strong><span>puan · <b id="pTodayAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>BU HAFTA</small><strong id="pWeekPoints">0</strong><span>puan · <b id="pWeekAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>BU AY</small><strong id="pMonthPoints">0</strong><span>puan · <b id="pMonthAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>TOPLAM</small><strong id="pTotalPoints">0</strong><span>puan · <b id="pSessions">0</b> oturum</span></article>
+      </div>
       <div class="report-grid">
         <article class="panel report-main"><h3>Genel hakimiyet</h3><div class="donut" id="masteryDonut"><div><strong id="masteryPercent">0%</strong><span>işaretlendi</span></div></div><div class="legend"><span><i class="l1"></i>Öğreniyorum <b id="rLearn">0</b></span><span><i class="l2"></i>Ezberledim <b id="rMem">0</b></span><span><i class="l3"></i>Zorlanıyorum <b id="rHard">0</b></span></div></article>
         <article class="panel"><h3>Performans</h3><div class="report-stat"><span>Toplam cevap</span><b id="rAnswers">0</b></div><div class="report-stat"><span>Doğru cevap</span><b id="rCorrect">0</b></div><div class="report-stat"><span>Başarı oranı</span><b id="rAccuracy">—</b></div><div class="report-stat"><span>En uzun seri</span><b id="rBestStreak">0 gün</b></div></article>
+        <article class="panel"><h3>Kişisel listeler</h3><div class="report-stat"><span>⭐ Favoriler</span><b id="rFavorites">0</b></div><div class="report-stat"><span>🔥 Çok zorlar</span><b id="rVeryHard">0</b></div><div class="report-stat"><span>× Yanlış listesi</span><b id="rWrong">0</b></div><div class="report-stat"><span>🚫 Gösterilmeyen</span><b id="rIgnored">0</b></div></article>
+        <article class="panel"><h3>Son 7 gün</h3><div id="weeklyActivity" class="weekly-activity"></div></article>
+        <article class="panel full"><h3>Rozetler</h3><div id="badgeGrid" class="badge-grid"></div></article>
         <article class="panel full"><h3>Seviye dağılımı</h3><div id="levelDistribution" class="level-dist"></div></article>
-        <article class="panel full leaderboard-panel">
+      </div>
+    </section>
+
+    <section id="view-league" class="view">
+      <div class="section-title league-page-title">
+        <div><p class="eyebrow">WORDPILOT LİGİ</p><h1>Lig sıralaması</h1><p class="muted">Google hesabıyla giriş yapan öğrencilerin toplam puanları.</p></div>
+      </div>
+      <div class="league-page-wrap">
+        <article class="panel leaderboard-panel league-page-panel">
           <div class="leaderboard-head"><div><p class="eyebrow">WORDPILOT LİGİ</p><h3>Kim kaç puan topladı?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
           <div class="league-hero">
             <div class="league-cup">🏆</div>
-            <div><b>Kelime Pilotları Ligi</b><small>Toplam puana göre sıralama</small></div>
+            <div><b>Kelime Pilotları Ligi</b><small id="leaguePeriodText">Toplam puana göre sıralama</small></div>
+          </div>
+          <div class="league-period-tabs" role="tablist" aria-label="Lig dönemi">
+            <button type="button" data-league-period="daily">Bugün</button>
+            <button type="button" data-league-period="weekly">Hafta</button>
+            <button type="button" data-league-period="monthly">Ay</button>
+            <button type="button" data-league-period="all" class="active">Toplam</button>
+          </div>
+          <div class="league-audience-tabs" role="tablist" aria-label="Lig grubu">
+            <button type="button" data-league-audience="world" class="active">🌍 Dünya</button>
+            <button type="button" data-league-audience="friends">👥 Arkadaşlar</button>
+          </div>
+          <div id="friendPanel" class="friend-panel" hidden>
+            <div class="friend-code-box"><span>Arkadaş kodun</span><code id="myFriendCode">Giriş gerekli</code><button id="copyFriendCode" type="button">Kopyala</button></div>
+            <form id="friendAddForm" class="friend-add-form"><input id="friendCodeInput" maxlength="12" autocomplete="off" placeholder="Arkadaş kodunu yaz"><button class="primary" type="submit">Ekle</button></form>
+            <div id="friendCodeList" class="friend-code-list"></div>
+            <p class="settings-note">Arkadaşın profilindeki kodu eklediğinde puanı arkadaş liginde görünür.</p>
           </div>
           <div class="league-stats">
             <div><strong id="leagueUserPoints">0</strong><small>PUANIN</small></div>
@@ -240,6 +299,7 @@
     <button data-nav="dashboard" class="active"><span>⌂</span><small>Ana Sayfa</small></button>
     <button data-nav="library"><span>▦</span><small>Kelimeler</small></button>
     <button data-action="open-study-setup" class="study-main"><span>✦</span><small>Çalış</small></button>
+    <button data-nav="league"><span>🏆</span><small>Lig</small></button>
     <button data-nav="progress"><span>◔</span><small>İlerleme</small></button>
     <button data-action="open-profile"><span>○</span><small>Profil</small></button>
   </nav>
@@ -252,6 +312,7 @@
     <div class="word-voice-actions"><button id="wordSpeakUS" class="speak-big" title="Amerikan İngilizcesi">🇺🇸</button><button id="wordSpeakUK" class="speak-big" title="İngiliz İngilizcesi">🇬🇧</button></div>
   </div>
   <div class="status-buttons"><button data-word-status="learn">Öğreniyorum</button><button data-word-status="memorized">Ezberledim</button><button data-word-status="hard">Zorlanıyorum</button></div>
+  <div class="word-flag-buttons"><button data-word-flag="favorite">⭐ Favori</button><button data-word-flag="veryHard">🔥 Çok zor</button><button data-word-flag="ignored">🚫 Tekrar gösterme</button></div>
   <div id="wordDetails" class="detail-sections"></div>
 </dialog>
 
@@ -299,6 +360,10 @@
         <option value="memorized">Ezberledim işaretliler</option>
         <option value="hard">Zorlandım işaretliler</option>
         <option value="wrong">Yanlış yaptıklarım</option>
+        <option value="favorite">Favorilerim</option>
+        <option value="veryhard">Çok zor işaretliler</option>
+        <option value="notmemorized">Ezberlenmeyenler</option>
+        <option value="daily20">Bugünün 20 kelimesi</option>
         <option value="selected">Listede seçtiklerim</option>
       </select>
     </label>
@@ -380,6 +445,17 @@
     </div>
   </section>
 
+  <div class="profile-stat-grid">
+    <div><strong id="profilePoints">0</strong><small>PUAN</small></div>
+    <div><strong id="profileMem">0</strong><small>EZBER</small></div>
+    <div><strong id="profileLearn">0</strong><small>ÖĞREN</small></div>
+    <div><strong id="profileHard">0</strong><small>ZOR</small></div>
+    <div><strong id="profileWrong">0</strong><small>YANLIŞ</small></div>
+    <div><strong id="profileStreak">0</strong><small>SERİ</small></div>
+    <div><strong id="profileAccuracy">—</strong><small>DOĞRULUK</small></div>
+    <div><strong id="profileSessions">0</strong><small>OTURUM</small></div>
+  </div>
+
   <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" readonly placeholder="Google ile giriş yaptığında otomatik gelir"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
   <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
   <button class="primary wide" type="submit">Profili kaydet</button></form>
@@ -397,6 +473,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.5.3" defer></script>
+<script src="app.js?v=3.6" defer></script>
 </body>
 </html>

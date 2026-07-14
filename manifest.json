@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "6000 kelimelik çevrimdışı İngilizce çalışma, Google hesap senkronizasyonu, akıllı quiz ve puan sistemi.",
+  "description": "6000 kelimelik çevrimdışı İngilizce çalışma, Google hesap senkronizasyonu, dönemsel lig, kişisel listeler ve akıllı puan sistemi.",
   "icons": [
     {
       "src": "icon-192.png",

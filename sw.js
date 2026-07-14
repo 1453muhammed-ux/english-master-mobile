@@ -1,6 +1,7 @@
-const CACHE='wordpilot-v3.5.3';
-const CORE=['./','index.html','style.css?v=3.5.3','app.js?v=3.5.3','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
-const OFFLINE=[...CORE,'words.json?v=3.5.3'];
+const CACHE='wordpilot-v3.6';
+const CORE=['./','index.html','style.css?v=3.6','app.js?v=3.6','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=3.6'];
+const APPROX_BYTES=4500000;
 
 self.addEventListener('install',event=>{
   self.skipWaiting();
@@ -21,7 +22,7 @@ self.addEventListener('message',event=>{
     try{
       const cache=await caches.open(CACHE);
       await cache.addAll(OFFLINE);
-      event.ports?.[0]?.postMessage({ok:true});
+      event.ports?.[0]?.postMessage({ok:true,files:OFFLINE.length,bytes:APPROX_BYTES});
     }catch(error){
       event.ports?.[0]?.postMessage({ok:false,error:String(error)});
     }

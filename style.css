@@ -80,7 +80,7 @@ h2,h3,p{margin-top:0}.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.35
 .feedback{min-height:28px;margin-top:15px;font-weight:900}.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}
 .study-word-info{text-align:left;background:#F7F8FC;border:1px solid var(--line);border-radius:18px;padding:17px;margin-top:12px}.study-word-info h4{font-size:11px;letter-spacing:1px;color:var(--primary)}.study-word-info b{font-size:21px}.info-pron,.info-example{color:var(--muted);margin-top:6px}.info-meaning{margin-top:8px;line-height:1.5}.info-example{padding-top:11px;border-top:1px solid var(--line);white-space:pre-line}
 .report-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.report-grid .full{grid-column:1/-1}.report-main{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}.donut{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--primary) 0%,#E9EDF5 0)}.donut>div{width:128px;height:128px;border-radius:50%;background:white;display:grid;place-items:center;align-content:center}.donut strong{font-size:31px}.donut span{color:var(--muted);font-size:12px}.legend{display:grid;gap:12px}.legend span{display:flex;gap:9px;align-items:center}.legend b{margin-left:auto}.legend i{width:10px;height:10px;border-radius:50%}.l1{background:var(--blue)}.l2{background:var(--green)}.l3{background:var(--red)}.report-stat{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line)}.level-dist{display:grid;gap:10px}
-.bottom-nav{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(620px,calc(100% - 24px));height:70px;background:rgba(11,16,32,.94);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:7px;display:grid;grid-template-columns:repeat(5,1fr);z-index:30;box-shadow:0 22px 55px rgba(11,16,32,.28)}
+.bottom-nav{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(620px,calc(100% - 24px));height:70px;background:rgba(11,16,32,.94);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:7px;display:grid;grid-template-columns:repeat(6,1fr);z-index:30;box-shadow:0 22px 55px rgba(11,16,32,.28)}
 .bottom-nav button{border:0;background:transparent;color:#8F9AB0;border-radius:15px;display:grid;place-items:center;align-content:center;gap:3px}.bottom-nav button span{font-size:20px}.bottom-nav button small{font-size:10px;font-weight:800}.bottom-nav button.active{background:rgba(255,255,255,.11);color:white}.bottom-nav .study-main{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;transform:translateY(-13px);box-shadow:0 12px 28px rgba(108,92,231,.36)}
 dialog{border:0;padding:0;background:white;color:var(--ink);box-shadow:0 30px 90px rgba(11,16,32,.30)}dialog::backdrop{background:rgba(11,16,32,.56);backdrop-filter:blur(5px)}
 .modal,.sheet{width:min(560px,calc(100% - 28px));border-radius:26px;padding:25px}.sheet{width:min(660px,calc(100% - 28px))}.sheet-close{position:absolute;right:14px;top:14px;width:36px;height:36px;border:0;border-radius:11px;background:#F1F3F8;font-size:22px}
@@ -360,7 +360,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .leaderboard-row{grid-template-columns:29px 36px 1fr auto;padding:9px 8px;gap:7px}.leader-avatar{width:34px;height:34px}.leaderboard-row strong{font-size:11px}
 }
 
-/* WordPilot v3.5.3 — giriş, misafir ve ana sayfa araçları */
+/* WordPilot v3.5.4 — giriş, misafir ve ana sayfa araçları */
 .auth-section{margin:4px 0 18px}
 .auth-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;background:linear-gradient(135deg,#F7F8FF,#F8FBFF);border:1px solid #DDE3F0;border-radius:17px;padding:13px}
 .auth-card.signed-in{background:linear-gradient(135deg,#EFFAF5,#F4FBFF);border-color:#CBE8DB}
@@ -382,7 +382,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 }
 
 
-/* v3.5.3 ana sayfa araçları ve misafir modu */
+/* v3.5.4 ana sayfa araçları ve misafir modu */
 .guest-banner{margin:16px 0 20px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;background:#FFF8E8;border:1px solid #F0D99A;border-radius:16px;padding:12px 14px}
 .guest-banner[hidden]{display:none!important}.guest-banner>span{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#FFE5A8;color:#815C00;font-weight:1000}.guest-banner p{margin:0;font-size:12px;line-height:1.45;color:#6B5A2B}.guest-banner .text-link{white-space:nowrap}
 .home-tools{margin:18px 0 24px;padding:20px}.home-tools-head h2{margin:0 0 14px;font-size:22px}.home-tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -393,7 +393,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .auth-card-signed-out{grid-template-columns:auto 1fr}.auth-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}.auth-actions button{width:100%}.guest-warning{grid-column:1/-1;margin:0;background:#FFF8E8;border:1px solid #F0D99A;border-radius:11px;padding:9px 10px;font-size:11px!important;line-height:1.45;color:#6B5A2B}
 @media(max-width:760px){.home-tool-grid{grid-template-columns:1fr}.home-tools{padding:15px}.guest-banner{grid-template-columns:auto 1fr}.guest-banner .text-link{grid-column:1/-1;width:100%;text-align:center}.auth-actions{grid-template-columns:1fr}}
 
-/* WordPilot v3.5.3 — ortak lig görünümü */
+/* WordPilot v3.5.4 — ortak lig görünümü */
 .leaderboard-panel{overflow:hidden;background:linear-gradient(180deg,#FFFFFF 0%,#FBFAFF 100%)}
 .leaderboard-head{margin-bottom:15px}.leaderboard-head h3{font-size:21px}.leaderboard-head>small{background:#F0EDFF;color:#6245C5;padding:6px 9px;border-radius:999px;font-size:10px}
 .league-hero{display:flex;align-items:center;justify-content:center;gap:14px;text-align:left;border:1px solid #ECE6C7;background:radial-gradient(circle at 50% 10%,#FFF9D9 0,#FFFDF3 42%,#FAFAFF 100%);border-radius:20px;padding:18px;margin-bottom:12px}
@@ -420,3 +420,50 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 }
 .auth-out-status{display:block!important;margin-top:5px!important;font-style:normal;font-size:10px!important;font-weight:850;color:#7A8498!important}
 .auth-out-status[data-state="syncing"]{color:#6B4EC1!important}.auth-out-status[data-state="error"]{color:#C14D58!important}.auth-out-status[data-state="ok"]{color:#20845F!important}
+
+
+/* WordPilot v3.5.4 — bağımsız Lig sayfası */
+.league-launch-card{width:100%;margin:0 0 22px;border:1px solid #E6DDAF;background:linear-gradient(100deg,#FFFDF4,#F8F6FF);border-radius:19px;padding:15px 17px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;text-align:left;color:var(--ink);box-shadow:var(--shadow-soft);cursor:pointer}
+.league-launch-card:hover{transform:translateY(-1px);border-color:#D8C66C}.league-launch-icon{width:46px;height:46px;border-radius:15px;background:#FFF4C9;display:grid;place-items:center;font-size:24px}.league-launch-card b,.league-launch-card small{display:block}.league-launch-card b{font-size:16px}.league-launch-card small{color:var(--muted);font-size:12px;margin-top:3px}.league-launch-card em{font-style:normal;font-weight:900;color:#6547C7;white-space:nowrap}
+.league-page-wrap{max-width:900px;margin:0 auto}.league-page-panel{width:100%}.league-page-title{max-width:900px;margin-left:auto;margin-right:auto}
+@media(max-width:620px){.bottom-nav button span{font-size:17px}.bottom-nav button small{font-size:8px}.bottom-nav{padding:6px 4px}.league-launch-card{padding:13px 12px;gap:10px}.league-launch-icon{width:40px;height:40px}.league-launch-card em{font-size:12px}}
+
+/* WordPilot v3.6 — kalıcı profil, lig dönemleri ve kişisel listeler */
+.daily-challenge-card{width:100%;margin:-10px 0 22px;border:1px solid #CDE6DD;background:linear-gradient(100deg,#F2FFF9,#F7F5FF);border-radius:19px;padding:15px 17px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;text-align:left;color:var(--ink);box-shadow:var(--shadow-soft);cursor:pointer}
+.daily-challenge-card:hover{transform:translateY(-1px);border-color:#89C9B1}.daily-challenge-icon{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#29B985,#6C5CE7);color:white;display:grid;place-items:center;font-weight:1000;font-size:17px}.daily-challenge-card b,.daily-challenge-card small{display:block}.daily-challenge-card b{font-size:16px}.daily-challenge-card small{color:var(--muted);font-size:12px;margin-top:3px}.daily-challenge-card em{font-style:normal;font-weight:900;color:#247B5E;white-space:nowrap}
+.collection-card.gold .collection-art{background:#FFF3BD;color:#9A7000}.collection-card.flame .collection-art{background:#FFE6DE;color:#D6502F}.collection-card.slate .collection-art{background:#EAF0F7;color:#5C6B7F}
+.home-tool-card.sync>span{color:#3A75C4;background:#ECF5FF}.avatar img,.profile-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}.avatar{overflow:hidden}
+.study-combo{display:inline-flex;align-items:center;border-radius:999px;background:#FFF3E4;color:#B35A13;padding:4px 7px;font-size:9px;font-weight:950;white-space:nowrap}
+
+/* Kelime satırı: üç durum + üç hızlı kişisel işaret */
+.word-row{grid-template-columns:88px minmax(180px,1.05fr) minmax(150px,1.25fr) minmax(230px,auto) auto auto!important}
+.word-flag-toggles{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.quick-flag{width:34px;height:34px;padding:0;border-radius:10px;border:1px solid #DDE2EC;background:#F8FAFD;color:#7A8397;display:grid;place-items:center;font-size:15px;filter:grayscale(.75);opacity:.75}
+.quick-flag.active{filter:none;opacity:1;transform:translateY(-1px)}.quick-flag.active.favorite{background:#FFF8D9;border-color:#E9D37B}.quick-flag.active.veryHard{background:#FFF0E9;border-color:#F3B39C}.quick-flag.active.ignored{background:#EEF1F5;border-color:#B8C0CC}
+.word-row.ignored-word{opacity:.62;background:#F5F6F8}.word-row.ignored-word .word-main b{text-decoration:line-through;text-decoration-thickness:1px}
+.word-flag-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:9px 0 16px}.word-flag-buttons button{border:1px solid var(--line);background:#F8FAFD;border-radius:12px;padding:10px 6px;font-size:11px;font-weight:900;color:#68738A}.word-flag-buttons button.active{border-color:#9E91EF;background:#F1EEFF;color:#503CAD}
+
+/* İlerleme dönemleri, grafik ve rozetler */
+.period-summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.period-card{background:linear-gradient(145deg,#FFFFFF,#F7F7FD);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow-soft)}.period-card small,.period-card strong,.period-card span{display:block}.period-card>small{font-size:9px;letter-spacing:.8px;color:var(--primary);font-weight:950}.period-card strong{font-size:26px;margin:7px 0 2px}.period-card span{color:var(--muted);font-size:11px}.period-card span b{color:var(--ink)}
+.weekly-activity{height:180px;display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:7px;padding-top:15px}.weekly-activity>div{height:100%;display:grid;grid-template-rows:1fr auto auto;justify-items:center;align-items:end;gap:5px}.weekly-activity span{width:min(28px,70%);min-height:5px;border-radius:9px 9px 4px 4px;background:linear-gradient(180deg,var(--primary-2),var(--primary))}.weekly-activity b{font-size:10px}.weekly-activity small{font-size:9px;color:var(--muted);font-weight:800}
+.badge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.badge-card{border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center;background:#F9FAFD}.badge-card span,.badge-card b,.badge-card small{display:block}.badge-card span{font-size:25px}.badge-card b{font-size:12px;margin:7px 0 3px}.badge-card small{font-size:9px;color:var(--muted);line-height:1.35}.badge-card.earned{background:linear-gradient(145deg,#FFFDF3,#F3F0FF);border-color:#E6DCA4}.badge-card.locked{filter:grayscale(1);opacity:.55}
+
+/* Lig dönem seçimi */
+.league-period-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:5px;border-radius:15px;background:#F0F2F7;margin:0 0 14px}.league-period-tabs button{border:0;border-radius:11px;background:transparent;color:#747F94;padding:9px 6px;font-size:10px;font-weight:950}.league-period-tabs button.active{background:white;color:#5D45C4;box-shadow:0 3px 12px rgba(41,35,84,.09)}
+
+/* Profil özeti */
+.profile-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:0 0 17px}.profile-stat-grid>div{border:1px solid var(--line);border-radius:13px;padding:9px 4px;text-align:center;background:#FAFBFD}.profile-stat-grid strong,.profile-stat-grid small{display:block}.profile-stat-grid strong{font-size:17px}.profile-stat-grid small{font-size:8px;color:var(--muted);font-weight:950;margin-top:3px;letter-spacing:.3px}.profile-avatar{overflow:hidden}
+
+@media(max-width:1000px){
+  .word-row{grid-template-columns:72px 1fr auto!important}.word-id-wrap{grid-column:1;grid-row:1/5}.word-main{grid-column:2;grid-row:1}.word-meaning{grid-column:2;grid-row:2}.word-status-toggles{grid-column:2;grid-row:3}.word-flag-toggles{grid-column:2;grid-row:4}.word-actions{grid-column:3;grid-row:1/5}
+  .badge-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){.period-summary-grid{grid-template-columns:1fr 1fr}.badge-grid{grid-template-columns:1fr 1fr}.profile-stat-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:620px){
+  .daily-challenge-card{padding:13px 12px;gap:10px}.daily-challenge-icon{width:40px;height:40px}.daily-challenge-card em{font-size:12px}
+  .word-row{grid-template-columns:60px minmax(0,1fr) auto!important}.word-id-wrap{grid-column:1;grid-row:1/3}.word-main{grid-column:2;grid-row:1}.word-meaning{grid-column:2;grid-row:2}.word-status-toggles{grid-column:1/-1;grid-row:3}.word-flag-toggles{grid-column:1/-1;grid-row:4;justify-content:center}.word-actions{grid-column:3;grid-row:1/3}.quick-flag{width:40px;height:32px}
+  .period-summary-grid{gap:8px}.period-card{padding:12px}.period-card strong{font-size:22px}.weekly-activity{height:150px}.badge-grid{gap:7px}.badge-card{padding:11px 7px}.profile-stat-grid{grid-template-columns:repeat(4,1fr);gap:5px}.profile-stat-grid strong{font-size:15px}.profile-stat-grid small{font-size:7px}.league-period-tabs button{font-size:9px;padding:8px 3px}
+}
+.league-audience-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:-4px 0 12px}.league-audience-tabs button{border:1px solid var(--line);border-radius:12px;background:#FAFBFD;color:#6F798D;padding:9px;font-size:10px;font-weight:950}.league-audience-tabs button.active{background:#EEEAFE;border-color:#B9AEF8;color:#5841BE}
+.friend-panel{border:1px solid #DDD7F2;background:#FAF9FF;border-radius:16px;padding:12px;margin:0 0 14px}.friend-panel[hidden]{display:none!important}.friend-code-box{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px}.friend-code-box span{font-size:10px;color:var(--muted);font-weight:900}.friend-code-box code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:1000;color:#4F3BAE;letter-spacing:.8px;background:white;border:1px solid var(--line);border-radius:9px;padding:8px;text-align:center}.friend-code-box button{border:0;border-radius:9px;background:#6C5CE7;color:white;padding:8px 10px;font-size:10px;font-weight:900}.friend-add-form{display:grid;grid-template-columns:1fr auto;gap:7px;margin:10px 0}.friend-add-form input{min-width:0;border:1px solid var(--line);border-radius:11px;padding:10px 11px;text-transform:uppercase;font-weight:900}.friend-add-form button{padding:10px 14px}.friend-code-list{display:flex;gap:6px;flex-wrap:wrap}.friend-code-list>span{display:grid;grid-template-columns:auto auto;column-gap:6px;position:relative;border:1px solid var(--line);background:white;border-radius:11px;padding:7px 28px 7px 9px}.friend-code-list b,.friend-code-list small{display:block}.friend-code-list b{font-size:10px}.friend-code-list small{font-size:8px;color:var(--muted)}.friend-code-list button{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:20px;height:20px;border:0;border-radius:7px;background:#F0F2F6;color:#8A5260;font-weight:1000}
+@media(max-width:620px){.friend-code-box{grid-template-columns:1fr auto}.friend-code-box span{grid-column:1/-1}.friend-code-box code{text-align:left}.friend-add-form{grid-template-columns:1fr}.friend-add-form button{width:100%}}
