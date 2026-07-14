@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.1.0">
+  <link rel="stylesheet" href="style.css?v=3.2.0">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.1</span>
+      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.2</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
     </div>
@@ -144,21 +144,38 @@
     <section id="view-study" class="view">
       <div class="study-shell">
         <div class="study-header">
-          <button id="exitStudy" class="icon-btn">←</button>
+          <button id="exitStudy" class="icon-btn" title="Çık">←</button>
           <div class="study-progress">
-            <div><span id="studyModeName">Akıllı Quiz</span><b id="studyCounter">1 / 20</b></div>
+            <div class="study-progress-top">
+              <span id="studyModeName">Akıllı Quiz</span>
+              <div class="study-scoreline">
+                <span id="studyHearts" class="study-hearts" hidden>♥♥♥</span>
+                <span id="studyScore">0 puan</span>
+                <span id="studyTimer">—</span>
+                <b id="studyCounter">1 / 20</b>
+              </div>
+            </div>
             <progress id="studyProgress" max="20" value="1"></progress>
+            <div id="speedBar" class="speed-bar" hidden><i></i></div>
           </div>
-          <div class="study-tools"><button id="studySpeak" class="icon-btn" title="Dinle">🔊</button><button id="studyInfo" class="icon-btn info-btn" title="Kelime bilgisi">ℹ️</button></div>
+          <div class="study-tools">
+            <button id="studySpeak" class="icon-btn" title="Dinle">🔊</button>
+            <button id="studyInfo" class="icon-btn info-btn" title="Kelime bilgisi">ℹ️</button>
+          </div>
         </div>
         <article id="studyCard" class="study-card">
           <span id="studyBadge" class="chip">SORU</span>
           <h2 id="studyQuestion">Hazırlanıyor…</h2>
           <p id="studyPron" class="pron"></p>
           <div id="studyContent"></div>
+          <div id="studyActionBar" class="study-action-bar">
+            <button id="previousQuestion" class="study-action" title="Önceki soru">← Önceki</button>
+            <button id="showHint" class="study-action" title="İpucu">💡 İpucu</button>
+            <button id="showAnswer" class="study-action" title="Cevabı göster">👁 Cevap</button>
+          </div>
           <div id="studyFeedback" class="feedback"></div>
           <div id="studyWordInfo" class="study-word-info" hidden></div>
-          <button id="nextQuestion" class="primary wide" hidden>Sonraki soru</button>
+          <button id="nextQuestion" class="primary wide continue-question" hidden>Devam Et →</button>
         </article>
       </div>
     </section>
@@ -199,6 +216,26 @@
     <div><p class="eyebrow">ÇALIŞMA PLANI</p><h2>Bugün ne çalışalım?</h2><p>Modunu ve kelime aralığını kendin belirle.</p></div>
   </div>
   <form id="studySetupForm">
+    <div class="quiz-style-section">
+      <label class="setup-label">Quiz biçimi</label>
+      <div class="quiz-style-grid">
+        <label class="quiz-style-card active">
+          <input type="radio" name="quizStyle" value="classic" checked>
+          <span class="quiz-style-icon purple">✓</span>
+          <span><b>Klasik</b><small>Zaman baskısı yok, kendi hızında ilerle.</small></span>
+        </label>
+        <label class="quiz-style-card">
+          <input type="radio" name="quizStyle" value="speed">
+          <span class="quiz-style-icon orange">⏱</span>
+          <span><b>Hız</b><small>15 saniye, hızlı cevap daha çok puan.</small></span>
+        </label>
+        <label class="quiz-style-card">
+          <input type="radio" name="quizStyle" value="comprehensive">
+          <span class="quiz-style-icon blue">▤</span>
+          <span><b>Kapsamlı</b><small>Çoktan seçmeli, yazma, eş ve zıt anlam karışık.</small></span>
+        </label>
+      </div>
+    </div>
     <label>Çalışma modu
       <select id="setupMode">
         <option value="smart">Akıllı Quiz</option>
@@ -235,6 +272,20 @@
   </form>
 </dialog>
 
+
+<dialog id="exitStudyDialog" class="modal exit-study-modal">
+  <button class="sheet-close" data-close="exitStudyDialog">×</button>
+  <div class="exit-study-icon">✈</div>
+  <p class="eyebrow">OTURUMDAN ÇIKIŞ</p>
+  <h2>İlerlemen kaydedilsin mi?</h2>
+  <p class="muted">Kaydedersen daha sonra aynı sorudan devam edebilirsin.</p>
+  <div class="exit-study-actions">
+    <button id="saveAndExit" class="primary wide">Kaydet ve çık</button>
+    <button id="exitWithoutSave" class="secondary wide">Kaydetmeden çık</button>
+    <button id="cancelExit" class="text-link wide">Çalışmaya devam et</button>
+  </div>
+</dialog>
+
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
   <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PILOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">İlerlemen bu kullanıcı altında saklanır.</p></div></div>
@@ -244,6 +295,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.1.0" defer></script>
+<script src="app.js?v=3.2.0" defer></script>
 </body>
 </html>

@@ -1,27 +1,22 @@
-WORDPILOT v3.1
+WORDPILOT v3.2
 
-GitHub yükleme:
-1. ZIP dosyasını aç.
-2. İçindeki tüm dosyaları mevcut repository ana dizinine yükle.
-3. Aynı isimli dosyaların üzerine yazılmasına izin ver.
-4. Commit changes yap.
-5. 1–3 dakika bekle.
-6. Safari/Chrome sayfasını yenile.
+GitHub:
+1. ZIP'i aç.
+2. İçindeki tüm dosyaları repository ana dizinine yükle.
+3. Aynı isimli dosyaların üzerine yaz.
+4. Commit changes.
+5. 1-3 dakika sonra Ctrl+F5 ile yenile.
 
-Bu sürüm:
-- Kelime listesinde ayrı 🔊 ses ve ℹ️ bilgi butonları
-- Mobil uyumlu büyük quiz seçenek kartları
-- Doğru cevapta otomatik ilerleme
-- Yanlış kelimeyi 4 soru sonra tekrar getirme
-- Eş anlamlı quiz
-- Zıt anlamlı quiz
-- Özel kelime aralığı
-- Ana sayfada kelime koleksiyonları
-- İlk 5000, 500 kalıp, A1-A2, B1-B2, zor ve ezber listeleri
-- XP göstergesi
-- Önceki v3.0 HTML/JS uyumsuzlukları giderildi
-
-Eski görünüm kalırsa:
-- Sayfayı Ctrl+F5 ile yenile.
-- iPhone ana ekran uygulamasını tamamen kapatıp yeniden aç.
-- Gerekirse Safari'de siteyi yenileyip ana ekrana tekrar ekle.
+Yenilikler:
+- Klasik / Hız / Kapsamlı quiz modu
+- Hız modunda 15 saniye, 3 can ve zamana bağlı puan
+- Önceki soru
+- İpucu
+- Cevabı göster
+- Ses ve bilgi butonları
+- Cevap sonrası manuel Devam Et
+- Quizden çıkarken kaydetme seçeneği
+- Kaydedilen oturuma sonradan devam
+- Kelime ve cevaplarda ★ / ☆ işaretlerini gizleme
+- Doğru kelime aynı oturumda tekrar edilmez
+- Yanlış kelime 4 soru sonra geri gelir
