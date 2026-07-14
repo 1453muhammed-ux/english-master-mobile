@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.0.0">
+  <link rel="stylesheet" href="style.css?v=3.1.0">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span class="version">v3.0</span>
+      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
     </div>
@@ -63,6 +63,43 @@
         <button class="kpi streak" data-nav="progress"><span>🔥</span><div><strong><span id="streak">0</span> gün</strong><small>Çalışma serisi</small></div></button>
       </div>
 
+
+      <section class="collections-section">
+        <div class="collections-head">
+          <div>
+            <p class="eyebrow">KELİME KOLEKSİYONLARI</p>
+            <h2>Hazır listelerle çalış</h2>
+          </div>
+          <button class="text-link" data-nav="library">Tümünü gör →</button>
+        </div>
+        <div class="collection-grid">
+          <button class="collection-card violet" data-collection="core5000">
+            <span class="collection-art">✓</span>
+            <div><b>İlk 5000 Kelime</b><small>Temel kelime havuzu</small></div>
+          </button>
+          <button class="collection-card rose" data-collection="phrases">
+            <span class="collection-art">⌁</span>
+            <div><b>500 İngilizce Kalıp</b><small>Phrasal verbs ve ifadeler</small></div>
+          </button>
+          <button class="collection-card amber" data-collection="beginner">
+            <span class="collection-art">A</span>
+            <div><b>A1–A2 Başlangıç</b><small>Temelden sağlam ilerle</small></div>
+          </button>
+          <button class="collection-card sky" data-collection="intermediate">
+            <span class="collection-art">B</span>
+            <div><b>B1–B2 Gelişim</b><small>Orta ve ileri seviye</small></div>
+          </button>
+          <button class="collection-card coral" data-collection="hard">
+            <span class="collection-art">!</span>
+            <div><b>Zorlandıklarım</b><small>Kişisel tekrar listen</small></div>
+          </button>
+          <button class="collection-card mint" data-collection="memorized">
+            <span class="collection-art">★</span>
+            <div><b>Ezberlediklerim</b><small>Tamamladığın kelimeler</small></div>
+          </button>
+        </div>
+      </section>
+
       <div class="dashboard-grid">
         <article class="panel today-plan">
           <div class="panel-head"><div><p class="eyebrow">BUGÜN NE ÇALIŞALIM?</p><h3>Tek dokunuşla başla</h3></div></div>
@@ -96,8 +133,8 @@
       </div>
       <div class="filters panel">
         <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Kelime, Türkçe anlam veya örnek ara…"></label>
-        <select id="groupFilter"><option value="">Tüm gruplar</option><option>1-1000</option><option>1001-2000</option><option>2001-3000</option><option>3001-4000</option><option>4001-5000</option><option>5001-6000 Kalıplar</option></select>
-        <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
+        <select id="groupFilter"><option value="">Tüm gruplar</option><option value="core5000">İlk 5000 Kelime</option><option>1-1000</option><option>1001-2000</option><option>2001-3000</option><option>3001-4000</option><option>4001-5000</option><option>5001-6000 Kalıplar</option></select>
+        <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="A1-A2">A1–A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="B1-B2">B1–B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
         <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="unset">İşaretsiz</option></select>
       </div>
       <div id="wordList" class="word-list"></div>
@@ -112,7 +149,7 @@
             <div><span id="studyModeName">Akıllı Quiz</span><b id="studyCounter">1 / 20</b></div>
             <progress id="studyProgress" max="20" value="1"></progress>
           </div>
-          <button id="studySpeak" class="icon-btn">🔊</button>
+          <div class="study-tools"><button id="studySpeak" class="icon-btn" title="Dinle">🔊</button><button id="studyInfo" class="icon-btn info-btn" title="Kelime bilgisi">ℹ️</button></div>
         </div>
         <article id="studyCard" class="study-card">
           <span id="studyBadge" class="chip">SORU</span>
@@ -167,7 +204,7 @@
         <option value="smart">Akıllı Quiz</option>
         <option value="flash">Kelime Kartları</option>
         <option value="en-tr">Yaz EN → TR</option>
-        <option value="tr-en">Yaz TR → EN</option>
+        <option value="tr-en">Yaz TR → EN</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option>
         <option value="review">Zor ve tekrar bekleyenler</option>
       </select>
     </label>
@@ -207,6 +244,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.0.0" defer></script>
+<script src="app.js?v=3.1.0" defer></script>
 </body>
 </html>

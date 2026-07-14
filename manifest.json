@@ -1,11 +1,11 @@
 {
-  "name": "WordPilot — Powered by English Master",
+  "name": "WordPilot — English Learning",
   "short_name": "WordPilot",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "Kişisel İngilizce kelime öğrenme ve akıllı tekrar platformu.",
+  "description": "Akıllı tekrar, kelime kartları, eş/zıt anlam ve kişisel kelime koleksiyonları.",
   "icons": [
     {
       "src": "icon-192.png",

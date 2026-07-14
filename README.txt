@@ -1,31 +1,27 @@
-WORDPILOT v3.0 — TASARIM SİSTEMİ VE ÇALIŞAN PROTOTİP
+WORDPILOT v3.1
 
-Bu paket, mevcut GitHub Pages sitesinin üzerine doğrudan yüklenebilir.
+GitHub yükleme:
+1. ZIP dosyasını aç.
+2. İçindeki tüm dosyaları mevcut repository ana dizinine yükle.
+3. Aynı isimli dosyaların üzerine yazılmasına izin ver.
+4. Commit changes yap.
+5. 1–3 dakika bekle.
+6. Safari/Chrome sayfasını yenile.
 
-Yükleme:
-1. ZIP'i açın.
-2. İçindeki bütün dosyaları GitHub repository ana dizinine yükleyin.
-3. Aynı isimli dosyaların üzerine yazılmasına izin verin.
-4. Commit changes düğmesine basın.
-5. 1–3 dakika bekleyin.
-6. iPhone'da Safari'den sayfayı yenileyin.
+Bu sürüm:
+- Kelime listesinde ayrı 🔊 ses ve ℹ️ bilgi butonları
+- Mobil uyumlu büyük quiz seçenek kartları
+- Doğru cevapta otomatik ilerleme
+- Yanlış kelimeyi 4 soru sonra tekrar getirme
+- Eş anlamlı quiz
+- Zıt anlamlı quiz
+- Özel kelime aralığı
+- Ana sayfada kelime koleksiyonları
+- İlk 5000, 500 kalıp, A1-A2, B1-B2, zor ve ezber listeleri
+- XP göstergesi
+- Önceki v3.0 HTML/JS uyumsuzlukları giderildi
 
-v3.0 içerikleri:
-- WordPilot marka kimliği
-- Yeni ana ekran ve Continue Learning alanı
-- WordPilot Daily ve günlük uçuş planı
-- Modern mobil ve iPad düzeni
-- Yeni renk, kart, buton, rozet ve tipografi sistemi
-- Kelime kütüphanesi
-- Akıllı Quiz
-- Kelime Kartları
-- Yaz EN→TR
-- Yaz TR→EN
-- Özel aralık
-- Öğren / Ezber / Zor
-- İlerleme raporu
-- Çevrimdışı PWA desteği
-
-Not:
-- Kullanıcı verileri hâlâ cihazda saklanır.
-- Firebase kullanıcı hesabı ve cihazlar arası senkronizasyon v3.1 sonrası bağlanacaktır.
+Eski görünüm kalırsa:
+- Sayfayı Ctrl+F5 ile yenile.
+- iPhone ana ekran uygulamasını tamamen kapatıp yeniden aç.
+- Gerekirse Safari'de siteyi yenileyip ana ekrana tekrar ekle.

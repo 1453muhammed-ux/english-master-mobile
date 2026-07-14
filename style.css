@@ -115,3 +115,78 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .range-choice{grid-template-columns:1fr}.setup-range-fields{grid-template-columns:1fr 1fr}.range-presets{grid-template-columns:1fr 1fr}
   .report-main{grid-template-columns:1fr;justify-items:center}.donut{width:160px;height:160px}
 }
+
+
+/* WordPilot v3.1 */
+.xp-pill{font-size:11px;font-weight:900;color:#8A5A00;background:#FFF2C7;border:1px solid #F5D978;padding:7px 10px;border-radius:999px}
+.collections-section{margin:22px 0}
+.collections-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:14px}
+.collections-head h2{margin:0;font-size:26px;letter-spacing:-.7px}
+.text-link{border:0;background:none;color:var(--primary);font-weight:900}
+.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.collection-card{border:0;border-radius:22px;min-height:154px;padding:19px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;text-align:left;position:relative;overflow:hidden;box-shadow:var(--shadow-soft);transition:.2s transform,.2s box-shadow}
+.collection-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.collection-card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-45px;top:-35px;background:rgba(255,255,255,.35)}
+.collection-card.violet{background:linear-gradient(145deg,#E8E8FF,#CECFFF)}
+.collection-card.rose{background:linear-gradient(145deg,#F9E5F1,#EDC5DB)}
+.collection-card.amber{background:linear-gradient(145deg,#FFF1DF,#F5D3AF)}
+.collection-card.sky{background:linear-gradient(145deg,#E1F1FF,#BEDDFA)}
+.collection-card.coral{background:linear-gradient(145deg,#FFE8E5,#FFC8C3)}
+.collection-card.mint{background:linear-gradient(145deg,#E4FAF1,#BDEAD6)}
+.collection-art{width:54px;height:54px;border-radius:17px;background:rgba(255,255,255,.72);display:grid;place-items:center;font-size:24px;font-weight:1000;color:#3E3A7A;box-shadow:0 12px 24px rgba(30,35,70,.10);position:relative;z-index:1}
+.collection-card div{position:relative;z-index:1}.collection-card b,.collection-card small{display:block}.collection-card b{font-size:17px;margin-bottom:5px}.collection-card small{font-size:12px;color:#626B7C}
+
+.word-list{gap:12px}
+.word-row{grid-template-columns:56px minmax(190px,1.1fr) minmax(180px,1.45fr) auto auto!important;padding:17px 18px!important;cursor:default}
+.word-main b{font-size:18px}.word-main small{display:block;margin-top:5px;color:var(--muted)}
+.word-level-badge{display:inline-flex;margin-left:7px;padding:3px 7px;border-radius:999px;background:#EEEAFE;color:#5A4BC7;font-size:10px;font-weight:900}
+.word-actions{display:flex;gap:8px}
+.word-action{width:40px;height:40px;border-radius:13px;border:1px solid var(--line);background:white;display:grid;place-items:center;font-size:17px;box-shadow:0 7px 16px rgba(22,34,72,.07)}
+.word-action:hover{border-color:#BFB6FF;background:#F4F1FF}
+.word-status{white-space:nowrap}
+.study-tools{display:flex;gap:8px}
+.study-header{grid-template-columns:auto 1fr auto!important}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:28px}
+.choice{min-height:74px;border:2px solid #E5E9F2!important;background:#FBFCFF!important;border-radius:18px!important;padding:17px 18px!important;text-align:left;font-size:16px;font-weight:800;color:var(--ink);box-shadow:0 8px 20px rgba(22,34,72,.06);transition:.18s transform,.18s border-color,.18s background}
+.choice:hover{transform:translateY(-2px);border-color:#BEB5FF!important;background:#F6F3FF!important}
+.choice.correct{border-color:#61D3A4!important;background:#E9FAF2!important;color:#187A56}
+.choice.wrong{border-color:#FF9199!important;background:#FFF0F1!important;color:#B93745}
+.study-card{overflow:hidden}
+.study-card .chip{margin-bottom:2px}
+.study-card h2{max-width:670px;margin-left:auto;margin-right:auto}
+.info-btn{font-size:18px}
+.answer-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:28px}
+.answer-input input{min-height:56px;border:2px solid var(--line);border-radius:16px;padding:0 16px;font-size:17px;outline:none}
+.answer-input input:focus{border-color:#9A8EFF;box-shadow:0 0 0 4px rgba(108,92,231,.11)}
+.flash-card-inner{background:linear-gradient(145deg,#F9FAFE,#F1F3FB);border:1px solid var(--line);border-radius:22px;padding:28px 20px;margin-top:24px}
+.flash-reveal{display:grid;gap:12px}
+.flash-meaning{font-size:21px;line-height:1.55;white-space:pre-line}
+.flash-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:20px}
+.flash-actions button{border:1px solid var(--line);background:white;border-radius:13px;padding:12px;font-weight:900}
+.flip-button{border:0;border-radius:14px;padding:14px 20px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:white;font-weight:900}
+.mode-hint{color:var(--muted);font-size:13px;margin-top:8px}
+.quiz-relation{display:inline-flex;gap:7px;align-items:center;padding:7px 11px;border-radius:999px;background:#F0EDFF;color:#594AC7;font-size:11px;font-weight:900;margin-bottom:4px}
+
+@media(max-width:900px){
+  .collection-grid{grid-template-columns:repeat(2,1fr)}
+  .word-row{grid-template-columns:45px 1fr auto!important}
+  .word-meaning{grid-column:2/3}
+  .word-status{grid-column:2/3}
+  .word-actions{grid-column:3;grid-row:1/4;flex-direction:column}
+}
+@media(max-width:620px){
+  .collections-head h2{font-size:22px}
+  .collection-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .collection-card{min-height:142px;padding:15px;border-radius:18px}
+  .collection-art{width:45px;height:45px;border-radius:14px}
+  .collection-card b{font-size:14px}.collection-card small{font-size:10px;line-height:1.3}
+  .choice-grid{grid-template-columns:1fr;gap:10px}
+  .choice{min-height:62px;border-radius:16px!important}
+  .study-header{gap:8px}.study-tools{gap:5px}.study-tools .icon-btn{width:39px;height:39px}
+  .word-row{grid-template-columns:36px 1fr auto!important;padding:13px!important}
+  .word-main b{font-size:16px}.word-main small{font-size:11px}
+  .word-meaning{font-size:13px}
+  .word-actions{gap:6px}.word-action{width:37px;height:37px}
+  .answer-input{grid-template-columns:1fr}.answer-input button{width:100%}
+  .flash-actions{grid-template-columns:1fr}
+}
