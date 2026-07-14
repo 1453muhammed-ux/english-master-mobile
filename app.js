@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.6';
+const VERSION='3.6.1';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
 const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
@@ -221,6 +221,12 @@ function esc(v=''){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt
 function clean(v=''){return String(v).replace(/[★☆✦✧●○]/g,'').replace(/\s+/g,' ').trim()}
 function firstMeaning(w){return clean((w?.meaning||'').split('\n')[0])}
 function displayClean(v=''){return String(v).replace(/[★☆✦✧]/g,'').replace(/\s+\n/g,'\n').replace(/\n\s+/g,'\n').trim()}
+function ratedLinesHtml(v=''){
+  return String(v).split(/\n+/).map(line=>line.trim()).filter(Boolean).map(line=>{
+    const match=line.match(/^(.*?)(?:\s+([★☆]{1,5}))?$/),text=(match?.[1]||line).trim(),stars=match?.[2]||'';
+    return `<span class="rated-line"><span>${esc(text)}</span>${stars?`<span class="usage-stars" title="Kullanım sıklığı" aria-label="Kullanım sıklığı ${stars}">${stars}</span>`:''}</span>`;
+  }).join('');
+}
 function cefr(w){return (w?.cefr||'').match(/[ABC][12]/)?.[0]||'—'}
 function dateKey(date=new Date()){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`}
 function todayKey(){return dateKey(new Date())}
@@ -707,7 +713,7 @@ function renderWords(reset=false){
     return `<article class="word-row ${isSelected?'selected-word':''} ${flagOf(w.id,'ignored')?'ignored-word':''}">
       <div class="word-id-wrap"><button type="button" class="word-select ${isSelected?'active':''}" data-select-word="${w.id}" title="Çalışma için seç">${isSelected?'✓':'+'}</button><span class="word-id">#${w.id}</span></div>
       <div class="word-main"><b>${esc(w.english)} <span class="word-level-badge">${cefr(w)}</span></b><small>${esc(w.pronunciation||'Okunuş bilgisi yok')}</small></div>
-      <div class="word-meaning">${esc(firstMeaning(w))}${isWrong?'<small class="wrong-note">Yanlış listesinde</small>':''}</div>
+      <div class="word-meaning word-meaning-list rated-lines">${ratedLinesHtml(w.meaning||'')}${isWrong?'<small class="wrong-note">Yanlış listesinde</small>':''}</div>
       <div class="word-status-toggles">${statusButton('learn','Öğren')}${statusButton('memorized','Ezber')}${statusButton('hard','Zor')}</div>
       <div class="word-flag-toggles">${flagButton('favorite','⭐','Favori')}${flagButton('veryHard','🔥','Çok zor')}${flagButton('ignored','🚫','Tekrar gösterme')}</div>
       <div class="word-actions"><button class="word-action" data-speak="${esc(w.english)}" title="Dinle">🔊</button><button class="word-action" data-info="${w.id}" title="Bilgi">ℹ️</button></div>
@@ -727,7 +733,8 @@ function openWord(id){
     ['KELİME AİLESİ',currentWord.family],['KALIPLAR',currentWord.phrase],
     ['COLLOCATIONS',currentWord.collocations],['NOTLAR',currentWord.notes]
   ].filter(x=>x[1]&&clean(x[1]).toLocaleLowerCase('tr')!=='yok');
-  $('#wordDetails').innerHTML=sections.map(([h,p])=>`<div class="detail-block"><h4>${h}</h4><p>${esc(displayClean(p))}</p></div>`).join('');
+  const ratedHeaders=new Set(['ANLAMLAR','EŞ ANLAMLILAR','ZIT ANLAMLILAR']);
+  $('#wordDetails').innerHTML=sections.map(([h,p])=>`<div class="detail-block"><h4>${h}</h4><p class="${ratedHeaders.has(h)?'rated-lines':''}">${ratedHeaders.has(h)?ratedLinesHtml(p):esc(displayClean(p))}</p></div>`).join('');
   refreshWordStatus();
   $('#wordDialog').showModal();
 }
@@ -809,7 +816,14 @@ function startStudy(mode='smart',range=null,quizStyle=null,source='all',useAll=f
   let actualMode=mode;
   if(style==='comprehensive'&&!['matching','listening','wrong-review'].includes(mode))actualMode='comprehensive';
   const pool=makePool(actualMode==='comprehensive'?'smart':actualMode,range,source);
-  if(!pool.length){toast(source==='selected'?'Önce listeden kelime seç.':'Bu seçimde çalışılabilir kelime bulunamadı.');return}
+  if(!pool.length){
+    let message=source==='selected'?'Önce listeden kelime seç.':'Bu seçimde çalışılabilir kelime bulunamadı.';
+    if(source==='all'||source==='notmemorized'){
+      const scope=words.filter(w=>(!range||(w.id>=range.start&&w.id<=range.end))&&!flagOf(w.id,'ignored'));
+      if(scope.length&&scope.every(w=>statusOf(w.id)==='memorized'))message='Bu bölümdeki tüm kelimeleri ezberlediğin için çalışılacak kelime yok. Tebrikler! 🎉';
+    }
+    toast(message);return;
+  }
   const requested=useAll?pool.length:(range?pool.length:20),total=useAll?requested:Math.min(requested,200);
   session={
     mode:actualMode,baseMode:mode,quizStyle:style,pool:pool.slice(0,total),queue:[],done:new Set(),
@@ -1023,7 +1037,7 @@ function revealStudyInfo(){
   info.hidden=false;
   info.innerHTML=`<h4>KELİME BİLGİSİ</h4><b>${esc(w.english)}</b>
     <div class="info-pron">${esc(w.pronunciation||'')}</div>
-    <div class="info-meaning">${esc(displayClean(w.meaning||''))}</div>
+    <div class="info-meaning rated-lines">${ratedLinesHtml(w.meaning||'')}</div>
     ${w.example?`<div class="info-example">${esc(displayClean(w.example))}${w.translation?`\n${esc(displayClean(w.translation))}`:''}</div>`:''}`;
 }
 

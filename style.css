@@ -428,7 +428,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .league-page-wrap{max-width:900px;margin:0 auto}.league-page-panel{width:100%}.league-page-title{max-width:900px;margin-left:auto;margin-right:auto}
 @media(max-width:620px){.bottom-nav button span{font-size:17px}.bottom-nav button small{font-size:8px}.bottom-nav{padding:6px 4px}.league-launch-card{padding:13px 12px;gap:10px}.league-launch-icon{width:40px;height:40px}.league-launch-card em{font-size:12px}}
 
-/* WordPilot v3.6 — kalıcı profil, lig dönemleri ve kişisel listeler */
+/* WordPilot v3.6.1 — kelime anlamları ve kullanım yıldızları */
 .daily-challenge-card{width:100%;margin:-10px 0 22px;border:1px solid #CDE6DD;background:linear-gradient(100deg,#F2FFF9,#F7F5FF);border-radius:19px;padding:15px 17px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;text-align:left;color:var(--ink);box-shadow:var(--shadow-soft);cursor:pointer}
 .daily-challenge-card:hover{transform:translateY(-1px);border-color:#89C9B1}.daily-challenge-icon{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#29B985,#6C5CE7);color:white;display:grid;place-items:center;font-weight:1000;font-size:17px}.daily-challenge-card b,.daily-challenge-card small{display:block}.daily-challenge-card b{font-size:16px}.daily-challenge-card small{color:var(--muted);font-size:12px;margin-top:3px}.daily-challenge-card em{font-style:normal;font-weight:900;color:#247B5E;white-space:nowrap}
 .collection-card.gold .collection-art{background:#FFF3BD;color:#9A7000}.collection-card.flame .collection-art{background:#FFE6DE;color:#D6502F}.collection-card.slate .collection-art{background:#EAF0F7;color:#5C6B7F}
@@ -467,3 +467,14 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .league-audience-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:-4px 0 12px}.league-audience-tabs button{border:1px solid var(--line);border-radius:12px;background:#FAFBFD;color:#6F798D;padding:9px;font-size:10px;font-weight:950}.league-audience-tabs button.active{background:#EEEAFE;border-color:#B9AEF8;color:#5841BE}
 .friend-panel{border:1px solid #DDD7F2;background:#FAF9FF;border-radius:16px;padding:12px;margin:0 0 14px}.friend-panel[hidden]{display:none!important}.friend-code-box{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px}.friend-code-box span{font-size:10px;color:var(--muted);font-weight:900}.friend-code-box code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:1000;color:#4F3BAE;letter-spacing:.8px;background:white;border:1px solid var(--line);border-radius:9px;padding:8px;text-align:center}.friend-code-box button{border:0;border-radius:9px;background:#6C5CE7;color:white;padding:8px 10px;font-size:10px;font-weight:900}.friend-add-form{display:grid;grid-template-columns:1fr auto;gap:7px;margin:10px 0}.friend-add-form input{min-width:0;border:1px solid var(--line);border-radius:11px;padding:10px 11px;text-transform:uppercase;font-weight:900}.friend-add-form button{padding:10px 14px}.friend-code-list{display:flex;gap:6px;flex-wrap:wrap}.friend-code-list>span{display:grid;grid-template-columns:auto auto;column-gap:6px;position:relative;border:1px solid var(--line);background:white;border-radius:11px;padding:7px 28px 7px 9px}.friend-code-list b,.friend-code-list small{display:block}.friend-code-list b{font-size:10px}.friend-code-list small{font-size:8px;color:var(--muted)}.friend-code-list button{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:20px;height:20px;border:0;border-radius:7px;background:#F0F2F6;color:#8A5260;font-weight:1000}
 @media(max-width:620px){.friend-code-box{grid-template-columns:1fr auto}.friend-code-box span{grid-column:1/-1}.friend-code-box code{text-align:left}.friend-add-form{grid-template-columns:1fr}.friend-add-form button{width:100%}}
+
+/* v3.6.1 — çoklu anlamlar ve kullanım sıklığı yıldızları */
+.rated-lines{display:grid;gap:5px}
+.rated-line{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+.usage-stars{color:#E9A323;font-weight:900;letter-spacing:.35px;white-space:nowrap;line-height:1.35}
+.word-meaning-list{line-height:1.35}
+.word-meaning-list .rated-line{font-size:13px}
+.word-meaning-list .wrong-note{margin-top:3px}
+.detail-block .rated-lines{white-space:normal}
+.info-meaning.rated-lines{white-space:normal}
+@media(max-width:560px){.rated-line{gap:6px}.usage-stars{font-size:11px}.word-meaning-list .rated-line{font-size:12px}}

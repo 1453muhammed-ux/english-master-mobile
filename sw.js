@@ -1,6 +1,6 @@
-const CACHE='wordpilot-v3.6';
-const CORE=['./','index.html','style.css?v=3.6','app.js?v=3.6','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
-const OFFLINE=[...CORE,'words.json?v=3.6'];
+const CACHE='wordpilot-v3.6.1';
+const CORE=['./','index.html','style.css?v=3.6.1','app.js?v=3.6.1','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=3.6.1'];
 const APPROX_BYTES=4500000;
 
 self.addEventListener('install',event=>{

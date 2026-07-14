@@ -1,4 +1,4 @@
-WORDPILOT v3.6
+WORDPILOT v3.6.1
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -20,3 +20,9 @@ Bu sürümde:
 - Günlük/haftalık/aylık rapor, son 7 gün grafiği ve rozetler eklenmiştir.
 - Çevrimdışı paket ana sayfa, oyun dosyaları, simgeler ve words.json verisini tarayıcı önbelleğine kaydeder.
 - PDF dosyaları ZIP içinde değildir; ana sayfadaki Google Drive bağlantısından açılır.
+
+
+v3.6.1 düzeltmeleri:
+- Kelime kütüphanesinde tek anlam yerine bütün Türkçe anlamlar satır satır gösterilir.
+- Kelime bilgi penceresinde anlam, eş anlam ve zıt anlam kullanım yıldızları Excel dosyasındaki biçimiyle görünür.
+- Bir aralıkta bütün kelimeler ezberlendiyse genel hata yerine bunu açıklayan tebrik mesajı gösterilir.
