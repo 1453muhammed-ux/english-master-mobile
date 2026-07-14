@@ -1,4 +1,4 @@
-WORDPILOT v3.5.2
+WORDPILOT v3.5.3
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -7,14 +7,10 @@ GitHub Pages yükleme:
 4. ZIP dosyasının kendisini GitHub’a yüklemeyin.
 
 Bu sürümde:
-- Firebase Google girişi ve telefon–bilgisayar ilerleme senkronizasyonu eklendi.
-- Ortak puan sıralaması Firebase üzerinden çalışır.
-- PDF dosyaları ZIP içinde değildir; Google Drive klasörüne yönlendirilir.
-- Sağ üst profil düğmesi çalışır.
-- iPhone/iPad Safari ve Chrome ana ekrana ekleme yönergeleri güncellendi.
+- Google girişindeki kapanan açılır pencere kaldırıldı; tam sayfa Google giriş akışı kullanılır.
+- Google hesabıyla telefon–bilgisayar ilerleme ve puan senkronizasyonu korunur.
+- WordPilot Ligi yenilendi; kullanıcı adı, sırası ve puanı gösterilir.
+- PDF, ana ekrana ekleme ve çevrimdışı paket araçları ana sayfanın en altındadır.
+- Çevrimdışı paket siteyi ve 6000 kelimelik words.json verisini tarayıcı önbelleğine kaydeder; İndirilenler klasörüne dosya düşmez.
+- Misafir modu yalnızca kullanılan cihazda kayıt tutar.
 - words.json ve eski yerel ilerleme anahtarı korunmuştur.
-
-- Google girişinde kapanan pencere için yönlendirmeli yedek giriş eklendi.
-- Çıkış işlemi masaüstü ve telefonda beklemeden tamamlanacak şekilde düzeltildi.
-- PDF, ana ekrana ekleme ve çevrimdışı kullanım ana sayfaya taşındı.
-- Google hesabı olmayanlar için uyarılı Misafir modu eklendi.

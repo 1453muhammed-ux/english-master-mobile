@@ -360,7 +360,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .leaderboard-row{grid-template-columns:29px 36px 1fr auto;padding:9px 8px;gap:7px}.leader-avatar{width:34px;height:34px}.leaderboard-row strong{font-size:11px}
 }
 
-/* WordPilot v3.5.2 — giriş, misafir ve ana sayfa araçları */
+/* WordPilot v3.5.3 — giriş, misafir ve ana sayfa araçları */
 .auth-section{margin:4px 0 18px}
 .auth-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;background:linear-gradient(135deg,#F7F8FF,#F8FBFF);border:1px solid #DDE3F0;border-radius:17px;padding:13px}
 .auth-card.signed-in{background:linear-gradient(135deg,#EFFAF5,#F4FBFF);border-color:#CBE8DB}
@@ -382,7 +382,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 }
 
 
-/* v3.5.2 ana sayfa araçları ve misafir modu */
+/* v3.5.3 ana sayfa araçları ve misafir modu */
 .guest-banner{margin:16px 0 20px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:11px;background:#FFF8E8;border:1px solid #F0D99A;border-radius:16px;padding:12px 14px}
 .guest-banner[hidden]{display:none!important}.guest-banner>span{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:#FFE5A8;color:#815C00;font-weight:1000}.guest-banner p{margin:0;font-size:12px;line-height:1.45;color:#6B5A2B}.guest-banner .text-link{white-space:nowrap}
 .home-tools{margin:18px 0 24px;padding:20px}.home-tools-head h2{margin:0 0 14px;font-size:22px}.home-tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -392,3 +392,31 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .home-tool-card.drive>span{color:#356AC3;background:#EEF5FF}.home-tool-card.install>span{color:#6C4FD3;background:#F2EFFF}.home-tool-card.offline>span{color:#20845F;background:#EAF8F1}
 .auth-card-signed-out{grid-template-columns:auto 1fr}.auth-actions{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}.auth-actions button{width:100%}.guest-warning{grid-column:1/-1;margin:0;background:#FFF8E8;border:1px solid #F0D99A;border-radius:11px;padding:9px 10px;font-size:11px!important;line-height:1.45;color:#6B5A2B}
 @media(max-width:760px){.home-tool-grid{grid-template-columns:1fr}.home-tools{padding:15px}.guest-banner{grid-template-columns:auto 1fr}.guest-banner .text-link{grid-column:1/-1;width:100%;text-align:center}.auth-actions{grid-template-columns:1fr}}
+
+/* WordPilot v3.5.3 — ortak lig görünümü */
+.leaderboard-panel{overflow:hidden;background:linear-gradient(180deg,#FFFFFF 0%,#FBFAFF 100%)}
+.leaderboard-head{margin-bottom:15px}.leaderboard-head h3{font-size:21px}.leaderboard-head>small{background:#F0EDFF;color:#6245C5;padding:6px 9px;border-radius:999px;font-size:10px}
+.league-hero{display:flex;align-items:center;justify-content:center;gap:14px;text-align:left;border:1px solid #ECE6C7;background:radial-gradient(circle at 50% 10%,#FFF9D9 0,#FFFDF3 42%,#FAFAFF 100%);border-radius:20px;padding:18px;margin-bottom:12px}
+.league-cup{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:#FFF6CB;font-size:36px;box-shadow:inset 0 0 0 1px #F1E4A3}
+.league-hero b,.league-hero small{display:block}.league-hero b{font-size:19px}.league-hero small{color:var(--muted);margin-top:4px;font-size:11px}
+.league-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 14px}
+.league-stats>div{border:1px solid var(--line);background:#FFFFFF;border-radius:16px;padding:13px 8px;text-align:center}
+.league-stats strong,.league-stats small{display:block}.league-stats strong{font-size:21px}.league-stats small{font-size:9px;color:var(--muted);font-weight:900;margin-top:4px;letter-spacing:.4px}
+.league-login-note{margin:0 0 13px;padding:10px 12px;border:1px solid #F0D99A;background:#FFF8E8;color:#6B5A2B;border-radius:12px;font-size:11px;line-height:1.45}
+.leaderboard-title{display:flex;align-items:center;gap:8px;margin:13px 2px 9px;color:#473277;font-size:11px;letter-spacing:.7px}.leaderboard-title span{width:4px;height:16px;border-radius:9px;background:#6C4FD3}
+.leaderboard-list{gap:9px}
+.leaderboard-row{grid-template-columns:42px 46px minmax(0,1fr) auto;min-height:66px;padding:10px 14px;border-radius:17px;background:#FFFFFF;box-shadow:0 4px 16px rgba(35,31,70,.035)}
+.leaderboard-row.top-rank{border-color:#E8DFC0;background:linear-gradient(90deg,#FFFDF6,#FFFFFF)}
+.leaderboard-row.current{border-color:#8E79EE;background:linear-gradient(90deg,#F1EDFF,#FBFAFF);box-shadow:0 5px 18px rgba(108,79,211,.10)}
+.leaderboard-row .rank{font-size:15px;color:#7B8498}.leaderboard-row.top-rank .rank{font-size:21px}
+.leader-avatar{width:42px;height:42px;border-radius:50%;overflow:hidden}.leader-avatar.has-photo{background:#EEF1F7}.leader-avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.leaderboard-row b{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.leaderboard-row>div{min-width:0}.leaderboard-row>strong{text-align:right;font-size:15px;color:#16172A}.leaderboard-row>strong small{font-size:8px;letter-spacing:.5px;margin-top:2px}
+
+@media(max-width:620px){
+  .leaderboard-head{align-items:center}.leaderboard-head h3{font-size:18px}.leaderboard-head>small{max-width:130px;text-align:center}
+  .league-hero{padding:14px}.league-cup{width:56px;height:56px;font-size:29px}.league-hero b{font-size:16px}
+  .league-stats{gap:6px}.league-stats>div{padding:11px 4px}.league-stats strong{font-size:18px}
+  .leaderboard-row{grid-template-columns:34px 39px minmax(0,1fr) auto;padding:9px 9px;gap:8px;min-height:59px}.leader-avatar{width:37px;height:37px}.leaderboard-row>strong{font-size:12px}.leaderboard-row b{font-size:12px}.leaderboard-row.top-rank .rank{font-size:18px}
+}
+.auth-out-status{display:block!important;margin-top:5px!important;font-style:normal;font-size:10px!important;font-weight:850;color:#7A8498!important}
+.auth-out-status[data-state="syncing"]{color:#6B4EC1!important}.auth-out-status[data-state="error"]{color:#C14D58!important}.auth-out-status[data-state="ok"]{color:#20845F!important}

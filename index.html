@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.5.2">
+  <link rel="stylesheet" href="style.css?v=3.5.3">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.2</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5.3</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -67,16 +67,6 @@
         <span>!</span><p><b>Misafir modundasın.</b> İlerlemen Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
         <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
       </div>
-
-      <section class="home-tools panel">
-        <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Dosyalar ve uygulama</h2></div></div>
-        <div class="home-tool-grid">
-          <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
-          <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
-          <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı kullanım</b><small>Kelime verilerini bu cihaza indir</small></div><em>→</em></button>
-        </div>
-        <p id="offlineStatus" class="settings-note">Kelime verileri indirildiğinde internet olmadan da çalışır.</p>
-      </section>
 
 
       <section class="collections-section">
@@ -147,6 +137,16 @@
           </div>
         </article>
       </div>
+
+      <section class="home-tools panel">
+        <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Dosyalar ve uygulama</h2></div></div>
+        <div class="home-tool-grid">
+          <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
+          <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
+          <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
+        </div>
+        <p id="offlineStatus" class="settings-note">Yaklaşık 4,3 MB uygulama ve kelime verisi tarayıcının çevrimdışı hafızasına kaydedilir; İndirilenler klasörüne dosya düşmez.</p>
+      </section>
     </section>
 
     <section id="view-library" class="view">
@@ -218,7 +218,18 @@
         <article class="panel"><h3>Performans</h3><div class="report-stat"><span>Toplam cevap</span><b id="rAnswers">0</b></div><div class="report-stat"><span>Doğru cevap</span><b id="rCorrect">0</b></div><div class="report-stat"><span>Başarı oranı</span><b id="rAccuracy">—</b></div><div class="report-stat"><span>En uzun seri</span><b id="rBestStreak">0 gün</b></div></article>
         <article class="panel full"><h3>Seviye dağılımı</h3><div id="levelDistribution" class="level-dist"></div></article>
         <article class="panel full leaderboard-panel">
-          <div class="leaderboard-head"><div><p class="eyebrow">PUAN LİSTESİ</p><h3>Pilot sıralaması</h3></div><small id="leaderboardScope">Google hesapları</small></div>
+          <div class="leaderboard-head"><div><p class="eyebrow">WORDPILOT LİGİ</p><h3>Kim kaç puan topladı?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
+          <div class="league-hero">
+            <div class="league-cup">🏆</div>
+            <div><b>Kelime Pilotları Ligi</b><small>Toplam puana göre sıralama</small></div>
+          </div>
+          <div class="league-stats">
+            <div><strong id="leagueUserPoints">0</strong><small>PUANIN</small></div>
+            <div><strong id="leagueUserRank">—</strong><small>SIRALAMAN</small></div>
+            <div><strong id="leagueUserCount">0</strong><small>KATILIMCI</small></div>
+          </div>
+          <p id="leagueLoginNote" class="league-login-note" hidden>Ortak ligde görünmek için Google hesabınla giriş yap. Misafir puanı yalnızca bu cihazda kalır.</p>
+          <div class="leaderboard-title"><span></span><b>SIRALAMA</b></div>
           <div id="leaderboardList" class="leaderboard-list"></div>
         </article>
       </div>
@@ -350,14 +361,14 @@
 
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
-  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen telefon ve bilgisayarda eşitlenir.</p></div></div>
+  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen, puanın ve lig sıran telefon ile bilgisayarda eşitlenir.</p></div></div>
 
   <section class="auth-section">
     <div id="authSignedOut" class="auth-card auth-card-signed-out">
       <span class="google-badge">G</span>
-      <div><b>Google ile giriş yap</b><small>Aynı e-posta ile telefon ve bilgisayarda aynı profil açılır.</small></div>
+      <div><b>Google ile giriş yap</b><small>Aynı e-posta ile telefon ve bilgisayarda aynı profil açılır.</small><em id="authSignedOutStatus" class="auth-out-status">Google girişinde açılır pencere kullanılmaz.</em></div>
       <div class="auth-actions">
-        <button id="googleSignInBtn" class="primary" type="button">Google ile giriş</button>
+        <button id="googleSignInBtn" class="primary" type="button">Google hesabıyla giriş</button>
         <button id="guestContinueBtn" class="secondary" type="button">Misafir devam et</button>
       </div>
       <p class="guest-warning">Misafir modunda ilerleme Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
@@ -386,6 +397,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.5.2" defer></script>
+<script src="app.js?v=3.5.3" defer></script>
 </body>
 </html>

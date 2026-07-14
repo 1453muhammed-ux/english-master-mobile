@@ -2,10 +2,10 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.5.2';
+const VERSION='3.5.3';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
-const AUTH_REDIRECT_KEY=`${STORE}:auth_redirect_pending`;
+const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
 const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıyorum'};
 const MODE_LABEL={
   smart:'Akıllı Quiz',flash:'Kelime Kartları','en-tr':'Yaz EN → TR','tr-en':'Yaz TR → EN',
@@ -156,8 +156,9 @@ function save(options={}){
   if(options.cloud!==false)scheduleCloudSync();
 }
 function setSyncStatus(text,type=''){
-  const el=$('#syncStatus');if(!el)return;
-  el.textContent=text;el.dataset.state=type;
+  ['#syncStatus','#authSignedOutStatus'].forEach(selector=>{
+    const el=$(selector);if(!el)return;el.textContent=text;el.dataset.state=type;
+  });
 }
 function updateAuthUI(){
   const signed=!!authUser;
@@ -255,27 +256,74 @@ async function loadFirebaseSdk(){
     return !!window.firebase;
   }catch(error){console.error('Firebase SDK load error',error);return false}
 }
-function googleProvider(){
-  const provider=new window.firebase.auth.GoogleAuthProvider();
-  provider.addScope('email');
-  provider.setCustomParameters({prompt:'select_account'});
-  return provider;
+function authRestError(error){
+  const raw=String(error?.message||error?.code||'').replace(/^Firebase:\s*/i,'');
+  if(/OPERATION_NOT_ALLOWED|CONFIGURATION_NOT_FOUND/i.test(raw))return 'Firebase Authentication içinde Google sağlayıcısı etkin değil.';
+  if(/UNAUTHORIZED_DOMAIN|INVALID_CONTINUE_URI|INVALID_ORIGIN/i.test(raw))return 'GitHub site adresi Firebase yetkili alanlarında bulunmuyor.';
+  if(/NETWORK|Failed to fetch|Load failed/i.test(raw))return 'İnternet bağlantısı nedeniyle Google girişi başlatılamadı.';
+  if(/USER_CANCELLED|access_denied/i.test(raw))return 'Google girişi iptal edildi.';
+  if(/INVALID_IDP_RESPONSE|INVALID_CREDENTIAL|MISSING_OR_INVALID_NONCE/i.test(raw))return 'Google hesabı doğrulanamadı. Tekrar giriş yap.';
+  return raw&&raw.length<160?`Google girişi tamamlanamadı: ${raw}`:'Google girişi tamamlanamadı. Tekrar dene.';
 }
-function authErrorMessage(error){
-  const code=error?.code||'';
-  if(code==='auth/unauthorized-domain')return 'Bu site adresi Firebase yetkili alanlarında bulunmuyor.';
-  if(code==='auth/network-request-failed')return 'İnternet bağlantısı nedeniyle Google girişi tamamlanamadı.';
-  if(code==='auth/web-storage-unsupported')return 'Tarayıcı çerez veya depolama iznini engelliyor.';
-  return 'Google girişi tamamlanamadı. Tekrar dene.';
+async function authRestPost(method,body){
+  const response=await fetch(`https://identitytoolkit.googleapis.com/v1/${method}?key=${encodeURIComponent(FIREBASE_CONFIG.apiKey)}`,{
+    method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)
+  });
+  let data={};try{data=await response.json()}catch{}
+  if(!response.ok){
+    const error=new Error(data?.error?.message||`HTTP_${response.status}`);
+    error.code=data?.error?.status||data?.error?.message||'';throw error;
+  }
+  return data;
 }
-function shouldUseRedirect(){
-  const ua=navigator.userAgent||'';
-  return isStandalone()||/Android|iPhone|iPad|iPod|Safari/i.test(ua)&&!/Chrome|Chromium|Edg/i.test(ua);
+function authReturnUrl(){
+  const url=new URL(location.href);url.search='';url.hash='';return url.href;
 }
-async function startGoogleRedirect(){
-  sessionStorage.setItem(AUTH_REDIRECT_KEY,'1');
-  toast('Google giriş sayfasına yönlendiriliyorsun…');
-  await fbAuth.signInWithRedirect(googleProvider());
+function authCallbackPresent(){
+  const query=`${location.search}&${location.hash}`;
+  return /(?:^|[?&#])(code|state|error|error_description|oauth_token|authuser|scope|id_token)=/i.test(query);
+}
+function authContext(){
+  if(globalThis.crypto?.randomUUID)return crypto.randomUUID();
+  return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+async function startGoogleFullPageSignIn(){
+  const continueUri=authReturnUrl(),context=authContext();
+  setSyncStatus('Google giriş sayfası açılıyor…','syncing');
+  const result=await authRestPost('accounts:createAuthUri',{
+    providerId:'google.com',continueUri,authFlowType:'CODE_FLOW',oauthScope:'email profile',
+    context,customParameter:{prompt:'select_account'}
+  });
+  if(!result?.authUri||!result?.sessionId)throw new Error('Google giriş adresi oluşturulamadı');
+  localStorage.setItem(AUTH_FLOW_KEY,JSON.stringify({sessionId:result.sessionId,continueUri,context,startedAt:Date.now()}));
+  location.assign(result.authUri);
+}
+async function finishGoogleFullPageSignIn(){
+  let flow=null;try{flow=JSON.parse(localStorage.getItem(AUTH_FLOW_KEY)||'null')}catch{}
+  if(!flow)return false;
+  if(Date.now()-Number(flow.startedAt||0)>20*60*1000){localStorage.removeItem(AUTH_FLOW_KEY);return false}
+  if(!authCallbackPresent())return false;
+  setSyncStatus('Google hesabı doğrulanıyor…','syncing');
+  try{
+    const result=await authRestPost('accounts:signInWithIdp',{
+      requestUri:location.href,sessionId:flow.sessionId,returnSecureToken:true,returnIdpCredential:true
+    });
+    if(result?.errorMessage)throw new Error(result.errorMessage);
+    const googleIdToken=result?.oauthIdToken||null;
+    const googleAccessToken=result?.oauthAccessToken||null;
+    if(!googleIdToken&&!googleAccessToken)throw new Error('Google kimlik bilgisi alınamadı');
+    const credential=window.firebase.auth.GoogleAuthProvider.credential(googleIdToken,googleAccessToken);
+    await fbAuth.signInWithCredential(credential);
+    localStorage.removeItem(AUTH_FLOW_KEY);
+    history.replaceState({},document.title,flow.continueUri||authReturnUrl());
+    toast('Google hesabıyla giriş yapıldı.');
+    return true;
+  }catch(error){
+    console.error('Full-page Google sign-in',error);
+    localStorage.removeItem(AUTH_FLOW_KEY);
+    history.replaceState({},document.title,flow.continueUri||authReturnUrl());
+    const message=authRestError(error);setSyncStatus(message,'error');toast(message);return false;
+  }
 }
 async function initFirebase(){
   setSyncStatus('Google bağlantısı hazırlanıyor…','syncing');
@@ -286,30 +334,21 @@ async function initFirebase(){
     fbAuth.useDeviceLanguage();
     await fbAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL);
     fbAuth.onAuthStateChanged(user=>handleAuthState(user).catch(error=>{console.error(error);setSyncStatus('Senkronizasyon başlatılamadı','error')}));
-    try{
-      const redirectResult=await fbAuth.getRedirectResult();
-      if(redirectResult?.user)sessionStorage.removeItem(AUTH_REDIRECT_KEY);
-    }catch(error){
-      sessionStorage.removeItem(AUTH_REDIRECT_KEY);
-      console.error('Redirect sign-in',error);toast(authErrorMessage(error));
-    }
+    await finishGoogleFullPageSignIn();
     return true;
-  }catch(error){console.error('Firebase init error',error);updateAuthUI();return false}
+  }catch(error){console.error('Firebase init error',error);updateAuthUI();setSyncStatus(authRestError(error),'error');return false}
 }
 async function signInWithGoogle(){
   if(authBusy)return;
   if(!fbAuth||!window.firebase){toast('Google bağlantısı yüklenemedi. İnterneti kontrol et.');return}
-  const button=$('#googleSignInBtn'),original=button?.textContent||'Giriş yap';
-  authBusy=true;if(button){button.disabled=true;button.textContent='Açılıyor…'}
-  try{
-    if(shouldUseRedirect()){await startGoogleRedirect();return}
-    await fbAuth.signInWithPopup(googleProvider());
-  }catch(error){
-    const fallbackCodes=['auth/popup-blocked','auth/popup-closed-by-user','auth/cancelled-popup-request','auth/operation-not-supported-in-this-environment','auth/web-storage-unsupported'];
-    if(fallbackCodes.includes(error?.code)){
-      try{await startGoogleRedirect();return}catch(redirectError){console.error('Google redirect error',redirectError);toast(authErrorMessage(redirectError))}
-    }else{console.error('Google sign-in error',error);toast(authErrorMessage(error))}
-  }finally{authBusy=false;if(button){button.disabled=false;button.textContent=original}}
+  const button=$('#googleSignInBtn'),original=button?.textContent||'Google hesabıyla giriş';
+  authBusy=true;if(button){button.disabled=true;button.textContent='Google’a gidiliyor…'}
+  try{await startGoogleFullPageSignIn()}
+  catch(error){
+    console.error('Google sign-in start',error);
+    const message=authRestError(error);setSyncStatus(message,'error');toast(message);
+    authBusy=false;if(button){button.disabled=false;button.textContent=original}
+  }
 }
 function switchToGuestMode({closeDialog=true,announce=true}={}){
   authUser=null;cloudReady=false;cloudLeaderboard=null;
@@ -323,23 +362,44 @@ function switchToGuestMode({closeDialog=true,announce=true}={}){
   if(announce)toast('Misafir modundasın. İlerleme yalnızca bu cihazda tutulur.');
 }
 async function signOutGoogle(){
-  if(authBusy||!fbAuth)return;
+  if(authBusy)return;
   const button=$('#googleSignOutBtn'),original=button?.textContent||'Çıkış';
   authBusy=true;clearTimeout(cloudSyncTimer);
   if(button){button.disabled=true;button.textContent='Çıkılıyor…'}
   try{
-    await Promise.race([syncCloudNow(),new Promise(resolve=>setTimeout(resolve,1200))]);
-    await Promise.race([fbAuth.signOut(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('signout-timeout')),6000))]);
+    if(authUser)await Promise.race([syncCloudNow(),new Promise(resolve=>setTimeout(resolve,1000))]);
+    if(fbAuth)await Promise.race([fbAuth.signOut(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('signout-timeout')),5000))]);
+    localStorage.removeItem(AUTH_FLOW_KEY);
     switchToGuestMode({closeDialog:true,announce:false});
     toast('Google hesabından çıkış yapıldı.');
-  }catch(error){console.error('Sign-out error',error);toast('Çıkış tamamlanamadı. Sayfayı yenileyip tekrar dene.')}
-  finally{authBusy=false;if(button){button.disabled=false;button.textContent=original}}
+  }catch(error){
+    console.error('Sign-out error',error);
+    localStorage.removeItem(AUTH_FLOW_KEY);
+    switchToGuestMode({closeDialog:true,announce:false});
+    toast('Hesap bu cihazdan çıkarıldı.');
+  }finally{authBusy=false;if(button){button.disabled=false;button.textContent=original}}
+}
+function renderLeagueSummary(board,currentKey){
+  const rows=board||[];
+  const index=rows.findIndex(x=>(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()));
+  const current=index>=0?rows[index]:null;
+  if($('#leagueUserPoints'))$('#leagueUserPoints').textContent=Math.round(current?.points??state?.stats?.points??0);
+  if($('#leagueUserRank'))$('#leagueUserRank').textContent=index>=0?`#${index+1}`:'—';
+  if($('#leagueUserCount'))$('#leagueUserCount').textContent=rows.length;
+  if($('#leagueLoginNote'))$('#leagueLoginNote').hidden=!!authUser;
+}
+function leaderAvatar(x){
+  if(x?.photoURL)return `<span class="leader-avatar has-photo"><img src="${esc(x.photoURL)}" alt="" referrerpolicy="no-referrer"></span>`;
+  return `<span class="leader-avatar">${esc((x?.name||'Ö')[0].toUpperCase())}</span>`;
 }
 function renderLeaderboardRows(board,currentKey){
   const list=$('#leaderboardList');if(!list)return;
-  list.innerHTML=(board||[]).slice(0,20).map((x,i)=>{
-    const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&x.email===currentKey);
-    return `<div class="leaderboard-row ${isCurrent?'current':''}"><span class="rank">${i+1}</span><span class="leader-avatar">${esc((x.name||'Ö')[0].toUpperCase())}</span><div><b>${esc(x.name||'Öğrenci')}</b><small>${isCurrent?'Sen':'Pilot'}</small></div><strong>${Math.round(x.points||0)} puan</strong></div>`;
+  const rows=(board||[]).slice(0,100);
+  renderLeagueSummary(rows,currentKey);
+  list.innerHTML=rows.map((x,i)=>{
+    const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase());
+    const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
+    return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${isCurrent?'Sen':'WordPilot öğrencisi'}</small></div><strong>${Math.round(x.points||0)}<small>PUAN</small></strong></div>`;
   }).join('')||'<p class="muted">Henüz puan kaydı yok.</p>';
 }
 async function refreshCloudLeaderboard(force=false){
@@ -348,9 +408,9 @@ async function refreshCloudLeaderboard(force=false){
   if(leaderboardFetch)return leaderboardFetch;
   leaderboardFetch=(async()=>{
     try{
-      const snap=await fbDb.collection('leaderboard').orderBy('points','desc').limit(20).get();
+      const snap=await fbDb.collection('leaderboard').orderBy('points','desc').limit(100).get();
       cloudLeaderboard=snap.docs.map(doc=>({uid:doc.id,...doc.data()}));
-      if($('#view-progress')?.classList.contains('active'))renderLeaderboardRows(cloudLeaderboard,authUser.uid);
+      renderLeaderboardRows(cloudLeaderboard,authUser.uid);
     }catch(error){
       console.error('Leaderboard error',error);
       if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Sıralama şu an yüklenemedi.</p>';
@@ -363,7 +423,7 @@ function renderLeaderboard(){
   if(authUser&&fbDb){
     if(scope)scope.textContent='Tüm Google kullanıcıları';
     if(cloudLeaderboard)renderLeaderboardRows(cloudLeaderboard,authUser.uid);
-    else if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Puan listesi yükleniyor…</p>';
+    else if($('#leaderboardList')){$('#leaderboardList').innerHTML='<p class="muted">Puan listesi yükleniyor…</p>';renderLeagueSummary([],authUser.uid)}
     refreshCloudLeaderboard();return;
   }
   if(scope)scope.textContent='Bu cihazdaki profiller';
@@ -1082,7 +1142,7 @@ async function handleInstallRequest(){
 async function downloadOfflineMode(){
   const btn=$('#offlineBtn'),status=$('#offlineStatus');
   if(!('serviceWorker'in navigator)){status.textContent='Bu tarayıcı çevrimdışı uygulama özelliğini desteklemiyor.';return}
-  btn.disabled=true;status.textContent='Kelime verileri indiriliyor…';
+  btn.disabled=true;status.textContent='Yaklaşık 4,3 MB: site dosyaları ve 6000 kelime tarayıcıya kaydediliyor…';
   try{
     const reg=await navigator.serviceWorker.ready;
     const worker=reg.active||reg.waiting||reg.installing;
@@ -1092,7 +1152,7 @@ async function downloadOfflineMode(){
       channel.port1.onmessage=e=>{clearTimeout(timer);e.data?.ok?resolve(e.data):reject(new Error(e.data?.error||'cache'))};
       worker.postMessage({type:'CACHE_OFFLINE'},[channel.port2]);
     });
-    status.textContent='Çevrimdışı mod hazır ✓ İnternet olmadan da çalışabilirsin.';toast('Çevrimdışı mod indirildi.');
+    status.textContent='Hazır ✓ Site ve 6000 kelime tarayıcının çevrimdışı hafızasına kaydedildi. İndirilenler klasörüne dosya düşmez.';toast('Çevrimdışı paket hazır.');
   }catch{status.textContent='İndirme tamamlanamadı. İnterneti kontrol edip tekrar dene.'}
   finally{btn.disabled=false}
 }
