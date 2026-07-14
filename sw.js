@@ -1,17 +1,53 @@
-const CACHE='wordpilot-v3.4.0';
-const CORE=['./','index.html','style.css?v=3.4.0','app.js?v=3.4.0','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
-self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)))});
-self.addEventListener('activate',e=>{e.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim()})())});
-self.addEventListener('fetch',e=>{
-  if(e.request.method!=='GET')return;
-  const u=new URL(e.request.url);
-  if(e.request.mode==='navigate'||u.pathname.endsWith('/index.html')||u.pathname.endsWith('/app.js')||u.pathname.endsWith('/style.css')){
-    e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(CACHE).then(cache=>cache.put(e.request,c));return r}).catch(()=>caches.match(e.request)));
+const CACHE='wordpilot-v3.5.0';
+const CORE=['./','index.html','style.css?v=3.5.0','app.js?v=3.5.0','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=3.5.0'];
+
+self.addEventListener('install',event=>{
+  self.skipWaiting();
+  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)));
+});
+
+self.addEventListener('activate',event=>{
+  event.waitUntil((async()=>{
+    const keys=await caches.keys();
+    await Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)));
+    await self.clients.claim();
+  })());
+});
+
+self.addEventListener('message',event=>{
+  if(event.data?.type!=='CACHE_OFFLINE')return;
+  event.waitUntil((async()=>{
+    try{
+      const cache=await caches.open(CACHE);
+      await cache.addAll(OFFLINE);
+      event.ports?.[0]?.postMessage({ok:true});
+    }catch(error){
+      event.ports?.[0]?.postMessage({ok:false,error:String(error)});
+    }
+  })());
+});
+
+self.addEventListener('fetch',event=>{
+  if(event.request.method!=='GET')return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin)return;
+
+  if(event.request.mode==='navigate'){
+    event.respondWith(fetch(event.request).then(response=>{
+      const copy=response.clone();caches.open(CACHE).then(cache=>cache.put('./',copy));return response;
+    }).catch(()=>caches.match('./').then(hit=>hit||caches.match('index.html'))));
     return;
   }
-  if(u.pathname.endsWith('words.json')){
-    e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(CACHE).then(cache=>cache.put(e.request,c));return r}).catch(()=>caches.match(e.request)));
+
+  if(/\/(app\.js|style\.css|words\.json)$/.test(url.pathname)){
+    event.respondWith(fetch(event.request).then(response=>{
+      const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));return response;
+    }).catch(()=>caches.match(event.request).then(hit=>hit||caches.match(url.pathname.split('/').pop()))));
     return;
   }
-  e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request)));
+
+  event.respondWith(caches.match(event.request).then(hit=>hit||fetch(event.request).then(response=>{
+    const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));return response;
+  })));
 });

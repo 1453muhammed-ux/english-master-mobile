@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.4.0">
+  <link rel="stylesheet" href="style.css?v=3.5.0">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 XP</span><span class="version">v3.4</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.5</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" aria-label="Profil">M</button>
     </div>
@@ -137,7 +137,10 @@
     <section id="view-library" class="view">
       <div class="section-title">
         <div><p class="eyebrow">WORD LIBRARY</p><h1>Kelime kütüphanesi</h1><p class="muted"><span id="resultCount">0</span> kayıt gösteriliyor</p></div>
-        <button class="primary desktop-only" data-action="open-study-setup">Bu listeden çalış</button>
+        <div class="library-study-actions">
+          <button id="studySelectedBtn" class="secondary" type="button" hidden>Seçilenlere çalış (<span id="selectedCount">0</span>)</button>
+          <button class="primary desktop-only" data-action="open-study-setup">Bu listeden çalış</button>
+        </div>
       </div>
       <div class="filters panel">
         <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Kelime, Türkçe anlam veya örnek ara…"></label>
@@ -187,8 +190,8 @@
             <span id="attemptText" class="attempt-text">3 hak</span>
           </div>
           <div id="studyFeedback" class="feedback"></div>
+          <button id="nextQuestion" class="primary wide continue-question" hidden>İleri →</button>
           <div id="studyWordInfo" class="study-word-info" hidden></div>
-          <button id="nextQuestion" class="primary wide continue-question" hidden>Devam Et →</button>
         </article>
       </div>
     </section>
@@ -199,6 +202,10 @@
         <article class="panel report-main"><h3>Genel hakimiyet</h3><div class="donut" id="masteryDonut"><div><strong id="masteryPercent">0%</strong><span>işaretlendi</span></div></div><div class="legend"><span><i class="l1"></i>Öğreniyorum <b id="rLearn">0</b></span><span><i class="l2"></i>Ezberledim <b id="rMem">0</b></span><span><i class="l3"></i>Zorlanıyorum <b id="rHard">0</b></span></div></article>
         <article class="panel"><h3>Performans</h3><div class="report-stat"><span>Toplam cevap</span><b id="rAnswers">0</b></div><div class="report-stat"><span>Doğru cevap</span><b id="rCorrect">0</b></div><div class="report-stat"><span>Başarı oranı</span><b id="rAccuracy">—</b></div><div class="report-stat"><span>En uzun seri</span><b id="rBestStreak">0 gün</b></div></article>
         <article class="panel full"><h3>Seviye dağılımı</h3><div id="levelDistribution" class="level-dist"></div></article>
+        <article class="panel full leaderboard-panel">
+          <div class="leaderboard-head"><div><p class="eyebrow">PUAN LİSTESİ</p><h3>Pilot sıralaması</h3></div><small>Bu cihazdaki profiller</small></div>
+          <div id="leaderboardList" class="leaderboard-list"></div>
+        </article>
       </div>
     </section>
   </main>
@@ -259,26 +266,35 @@
       </select>
     </label>
 
-    <div class="range-choice">
+    <label>Kelime kaynağı
+      <select id="setupSource">
+        <option value="all">Genel kelime havuzu</option>
+        <option value="learn">Öğreniyorum işaretliler</option>
+        <option value="memorized">Ezberledim işaretliler</option>
+        <option value="hard">Zorlandım işaretliler</option>
+        <option value="wrong">Yanlış yaptıklarım</option>
+        <option value="selected">Listede seçtiklerim</option>
+      </select>
+    </label>
+
+    <div class="range-choice three-options">
       <label class="radio-card">
         <input type="radio" name="rangeType" value="quick" checked>
-        <span><b>Hızlı çalışma</b><small>20 kelimelik akıllı oturum</small></span>
+        <span><b>Hızlı</b><small>20 kelimelik oturum</small></span>
       </label>
       <label class="radio-card">
         <input type="radio" name="rangeType" value="custom">
-        <span><b>Özel kelime aralığı</b><small>Başlangıç ve bitişi kendin gir</small></span>
+        <span><b>Özel aralık</b><small>Başlangıç ve bitiş gir</small></span>
+      </label>
+      <label class="radio-card">
+        <input type="radio" name="rangeType" value="all">
+        <span><b>Tümü</b><small>Seçilen kaynağın tamamı</small></span>
       </label>
     </div>
 
     <div id="setupRangeFields" class="setup-range-fields" hidden>
       <label>Başlangıç<input id="setupStart" type="number" min="1" max="6000" value="1" inputmode="numeric"></label>
       <label>Bitiş<input id="setupEnd" type="number" min="1" max="6000" value="50" inputmode="numeric"></label>
-      <div class="range-presets">
-        <button type="button" data-range-preset="1,50">1–50</button>
-        <button type="button" data-range-preset="51,100">51–100</button>
-        <button type="button" data-range-preset="101,200">101–200</button>
-        <button type="button" data-range-preset="1,500">1–500</button>
-      </div>
     </div>
 
 
@@ -323,11 +339,43 @@
   <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" required placeholder="ornek@email.com"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
   <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
   <button class="primary wide" type="submit">Profili kaydet</button></form>
-  <div class="cloud-note"><span>☁</span><p><b>Bulut senkronizasyonuna hazır</b><br>Şu an veriler bu cihazda saklanır. Kullanıcı hesabı altyapısı sonraki sürümde bağlanacak.</p></div>
+  <section class="settings-tools">
+    <div class="settings-title"><p class="eyebrow">UYGULAMA AYARLARI</p><h3>Telefon ve çevrimdışı kullanım</h3></div>
+    <div class="settings-action-grid">
+      <button id="installAppBtn" class="secondary wide" type="button">▣ Ana ekrana ekle</button>
+      <button id="offlineBtn" class="secondary wide" type="button">↓ Çevrimdışı modu indir</button>
+    </div>
+    <p id="offlineStatus" class="settings-note">Kelime verileri indirildiğinde internet olmadan da çalışır.</p>
+  </section>
+  <section class="pdf-downloads">
+    <div class="settings-title"><p class="eyebrow">PDF ÇALIŞMA DOSYALARI</p><h3>Telefon veya bilgisayara indir</h3></div>
+    <div class="download-list">
+      <a href="pdfler/1-1000.pdf" download>1-1000 Kelime <span>PDF ↓</span></a>
+      <a href="pdfler/1001-2000.pdf" download>1001-2000 Kelime <span>PDF ↓</span></a>
+      <a href="pdfler/2001-3000.pdf" download>2001-3000 Kelime <span>PDF ↓</span></a>
+      <a href="pdfler/3001-4000.pdf" download>3001-4000 Kelime <span>PDF ↓</span></a>
+      <a href="pdfler/4001-5000.pdf" download>4001-5000 Kelime <span>PDF ↓</span></a>
+      <a href="pdfler/5001-6000-KALIPLAR.pdf" download>5001-6000 Kalıplar <span>PDF ↓</span></a>
+      <a href="pdfler/6000-tum.pdf" download>6000 Tüm Liste <span>PDF ↓</span></a>
+      <a href="pdfler/ING-BOS.pdf" download>İngilizce Boş Çalışma Sayfası <span>PDF ↓</span></a>
+      <a href="pdfler/TR-BOS.pdf" download>Türkçe Boş Çalışma Sayfası <span>PDF ↓</span></a>
+    </div>
+  </section>
+  <div class="cloud-note"><span>☁</span><p><b>Yerel profil</b><br>İlerleme ve puan sıralaması bu cihazda saklanır.</p></div>
   <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
 </dialog>
 
+
+<dialog id="installHelpDialog" class="modal install-help-modal">
+  <button class="sheet-close" data-close="installHelpDialog">×</button>
+  <div class="install-help-icon">▣</div>
+  <p class="eyebrow">ANA EKRANA EKLE</p>
+  <h2>WordPilot uygulama gibi açılsın</h2>
+  <div id="installHelpText" class="install-steps"></div>
+  <button class="primary wide" data-close="installHelpDialog" type="button">Tamam</button>
+</dialog>
+
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.4.0" defer></script>
+<script src="app.js?v=3.5.0" defer></script>
 </body>
 </html>

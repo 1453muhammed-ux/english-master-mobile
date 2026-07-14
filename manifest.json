@@ -1,21 +1,25 @@
 {
+  "id": "./",
   "name": "WordPilot — English Learning",
   "short_name": "WordPilot",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "Özel aralık, Enter kontrolü, oyun içi ses/gizli mod, harf harf ipucu ve kelime başına üç deneme.",
+  "description": "6000 kelimelik çevrimdışı İngilizce çalışma, akıllı quiz, kişisel işaretleme ve puan sistemi.",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
