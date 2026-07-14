@@ -1,4 +1,4 @@
-WORDPILOT v3.6.1
+WORDPILOT v3.6.2
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -26,3 +26,10 @@ v3.6.1 düzeltmeleri:
 - Kelime kütüphanesinde tek anlam yerine bütün Türkçe anlamlar satır satır gösterilir.
 - Kelime bilgi penceresinde anlam, eş anlam ve zıt anlam kullanım yıldızları Excel dosyasındaki biçimiyle görünür.
 - Bir aralıkta bütün kelimeler ezberlendiyse genel hata yerine bunu açıklayan tebrik mesajı gösterilir.
+
+
+v3.6.2 düzeltmeleri ve tasarım güncellemesi:
+- Lig dünya sıralaması Firestore gerçek zamanlı dinleyiciyle güncellenir; kullanıcının kendi puanı beklemeden görünür.
+- Google hesabı bağlı kullanıcılar artık Misafir yerine Google profil adıyla; ad yoksa e-posta kullanıcı adıyla gösterilir.
+- Ana sayfaya masaüstü üst menüsü, 6000 kelime/çalışma modu bilgi şeridi, Günün Kelimesi, Nasıl Çalışır, WordPilot avantajları ve profesyonel alt bilgi eklendi.
+- Mevcut words.json, localStorage anahtarı ve Firebase kullanıcı verileri korunmuştur.

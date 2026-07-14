@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.6.1">
+  <link rel="stylesheet" href="style.css?v=3.6.2">
   <title>WordPilot · Powered by English Master</title>
 </head>
 <body>
@@ -21,8 +21,15 @@
       <span class="brandmark"><span>W</span></span>
       <span class="brandcopy"><b>WordPilot</b><small>Powered by English Master</small></span>
     </button>
+    <nav class="desktop-top-nav" aria-label="WordPilot bölümleri">
+      <button data-nav="dashboard" class="active">Ana Sayfa</button>
+      <button data-nav="library">Kelimeler</button>
+      <button data-action="open-study-setup">Çalış</button>
+      <button data-nav="league">Lig</button>
+      <button data-nav="progress">İlerleme</button>
+    </nav>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6.1</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6.2</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -42,7 +49,7 @@
       <section class="continue-card">
         <div class="continue-copy">
           <span class="chip">BUGÜNKÜ UÇUŞ PLANI</span>
-          <h2>Hazır olduğunda kaldığın yerden devam et.</h2>
+          <h2>6000 kelimeyi kendi hızında, kalıcı öğren.</h2>
           <p id="heroMessage">Akıllı tekrarların, yeni kelimelerin ve zorlandığın kayıtlar hazır.</p>
           <div class="hero-actions">
             <button class="primary xl" data-action="open-study-setup">▶ Devam Et</button>
@@ -56,12 +63,34 @@
         </div>
       </section>
 
+      <div class="platform-proof" aria-label="WordPilot özellikleri">
+        <div><strong>6000</strong><span>kelime ve kalıp</span></div>
+        <div><strong>8</strong><span>çalışma modu</span></div>
+        <div><strong>☁</strong><span>cihazlar arası senkron</span></div>
+        <div><strong>↓</strong><span>çevrimdışı çalışma</span></div>
+      </div>
+
       <div class="kpi-grid">
         <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
         <button class="kpi memorized" data-filter-status="memorized"><span>E</span><div><strong id="countMem">0</strong><small>Ezberledim</small></div></button>
         <button class="kpi hard" data-filter-status="hard"><span>Z</span><div><strong id="countHard">0</strong><small>Zorlanıyorum</small></div></button>
         <button class="kpi streak" data-nav="progress"><span>🔥</span><div><strong><span id="streak">0</span> gün</strong><small>Çalışma serisi</small></div></button>
       </div>
+
+      <section class="daily-word-showcase">
+        <div class="daily-word-copy">
+          <p class="eyebrow">GÜNÜN KELİMESİ</p>
+          <div class="daily-word-title-row"><h2 id="dailyWordEnglish">word</h2><span id="dailyWordLevel" class="daily-word-level">—</span></div>
+          <p id="dailyWordPron" class="daily-word-pron"></p>
+          <p id="dailyWordMeaning" class="daily-word-meaning">Her gün yeni bir kelime keşfet.</p>
+          <blockquote id="dailyWordExample"></blockquote>
+          <div class="daily-word-actions">
+            <button id="dailyWordSpeak" class="secondary" type="button" data-speak="word">🔊 Dinle</button>
+            <button id="dailyWordInfo" class="primary" type="button" data-info="1">Kelimeyi incele</button>
+          </div>
+        </div>
+        <div class="daily-word-art" aria-hidden="true"><span>W</span><i>daily</i></div>
+      </section>
 
       <div id="guestBanner" class="guest-banner" hidden>
         <span>!</span><p><b>Misafir modundasın.</b> İlerlemen Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
@@ -162,6 +191,25 @@
         </article>
       </div>
 
+      <section class="how-section">
+        <div class="section-kicker">
+          <p class="eyebrow">NASIL ÇALIŞIR?</p>
+          <h2>Üç adımda günlük kelime rutini</h2>
+          <p>Yoğun menüler arasında kaybolmadan, ihtiyacın olan çalışmayı seç ve ilerlemeni takip et.</p>
+        </div>
+        <div class="how-grid">
+          <article><span>1</span><div><b>Listeni seç</b><p>Seviye, durum, yanlışlar, favoriler veya özel numara aralığı.</p></div></article>
+          <article><span>2</span><div><b>Modunu başlat</b><p>Quiz, kart, yazma, dinleme, eşleştirme, eş ya da zıt anlam.</p></div></article>
+          <article><span>3</span><div><b>Kalıcılaştır</b><p>Zor kelimeler tekrar gelir; puanın, serin ve lig sıran güncellenir.</p></div></article>
+        </div>
+      </section>
+
+      <section class="why-section">
+        <div class="why-card"><span>◎</span><b>Bağlamlı öğrenme</b><p>Çoklu anlam, örnek cümle, kullanım yıldızları ve kelime ilişkileri tek yerde.</p></div>
+        <div class="why-card"><span>↻</span><b>Akıllı tekrar</b><p>Yanlış ve zorlandığın kelimeler kişisel tekrar kuyruğuna alınır.</p></div>
+        <div class="why-card"><span>🏆</span><b>Gerçek zamanlı motivasyon</b><p>Puanın ve lig sıran çalışırken güncellenir; cihazların aynı hesapta birleşir.</p></div>
+      </section>
+
       <section class="home-tools panel">
         <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Dosyalar ve uygulama</h2></div></div>
         <div class="home-tool-grid">
@@ -172,6 +220,21 @@
         </div>
         <p id="offlineStatus" class="settings-note">Yaklaşık 4,3 MB: ana sayfa, oyun dosyaları, simgeler ve 6000 kelimelik words.json tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
+
+      <footer class="site-footer">
+        <div class="footer-brand">
+          <span class="brandmark"><span>W</span></span>
+          <div><b>WordPilot</b><p>6000 kelimelik kişisel İngilizce öğrenme ve akıllı tekrar platformu.</p></div>
+        </div>
+        <div class="footer-links">
+          <button data-nav="library">Kelime kütüphanesi</button>
+          <button data-action="open-study-setup">Çalışmaya başla</button>
+          <button data-nav="league">WordPilot Ligi</button>
+          <button data-nav="progress">İlerleme</button>
+          <a href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer">PDF dosyaları ↗</a>
+        </div>
+        <div class="footer-meta"><span>© 2026 WordPilot · Powered by English Master</span><span>Google girişli veriler Firebase’de, misafir verileri yalnızca cihazda tutulur.</span></div>
+      </footer>
     </section>
 
     <section id="view-library" class="view">
@@ -473,6 +536,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.6.1" defer></script>
+<script src="app.js?v=3.6.2" defer></script>
 </body>
 </html>
