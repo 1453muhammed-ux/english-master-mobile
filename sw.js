@@ -1,6 +1,6 @@
-const CACHE='wordpilot-v3.6.3';
-const CORE=['./','index.html','style.css?v=3.6.3','app.js?v=3.6.3','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
-const OFFLINE=[...CORE,'words.json?v=3.6.3'];
+const CACHE='wordpilot-v3.6.4';
+const CORE=['./','index.html','style.css?v=3.6.4','app.js?v=3.6.4','manifest.json','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=3.6.4'];
 const APPROX_BYTES=4500000;
 
 self.addEventListener('install',event=>{
@@ -17,6 +17,7 @@ self.addEventListener('activate',event=>{
 });
 
 self.addEventListener('message',event=>{
+  if(event.data?.type==='SKIP_WAITING'){self.skipWaiting();return}
   if(event.data?.type!=='CACHE_OFFLINE')return;
   event.waitUntil((async()=>{
     try{
@@ -35,14 +36,14 @@ self.addEventListener('fetch',event=>{
   if(url.origin!==self.location.origin)return;
 
   if(event.request.mode==='navigate'){
-    event.respondWith(fetch(event.request).then(response=>{
+    event.respondWith(fetch(event.request,{cache:'no-store'}).then(response=>{
       const copy=response.clone();caches.open(CACHE).then(cache=>cache.put('./',copy));return response;
     }).catch(()=>caches.match('./').then(hit=>hit||caches.match('index.html'))));
     return;
   }
 
   if(/\/(app\.js|style\.css|words\.json)$/.test(url.pathname)){
-    event.respondWith(fetch(event.request).then(response=>{
+    event.respondWith(fetch(event.request,{cache:'no-store'}).then(response=>{
       const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy));return response;
     }).catch(()=>caches.match(event.request).then(hit=>hit||caches.match(url.pathname.split('/').pop()))));
     return;

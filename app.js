@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.6.3';
+const VERSION='3.6.4';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
 const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
@@ -303,6 +303,16 @@ function setSyncStatus(text,type=''){
     const el=$(selector);if(!el)return;el.textContent=text;el.dataset.state=type;
   });
 }
+function cloudErrorMessage(error,area='Senkronizasyon'){
+  const code=String(error?.code||'').replace(/^firestore\//,'');
+  const raw=String(error?.message||'').replace(/^FirebaseError:\s*/i,'');
+  if(code==='permission-denied')return `${area}: Firebase erişim izni reddedildi.`;
+  if(code==='unauthenticated')return `${area}: Google oturumu yenilenmeli.`;
+  if(code==='unavailable'||/network|failed to fetch|load failed/i.test(raw))return `${area}: internet bağlantısı bekleniyor.`;
+  if(code==='resource-exhausted')return `${area}: Firebase kotası doldu.`;
+  if(code==='invalid-argument'||/unsupported field value|undefined/i.test(raw))return `${area}: kaydedilen veride geçersiz alan var.`;
+  return `${area} hatası${code?` (${code})`:''}.`;
+}
 function updateAuthUI(){
   const signed=!!authUser;
   if($('#authSignedOut'))$('#authSignedOut').hidden=signed;
@@ -345,7 +355,7 @@ async function pushLeaderboardNow(){
     updateLeaderboardCacheWithOwn();
     if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(mergeOwnLeaderboardRow(cloudLeaderboardCache[`${leaderboardAudience}:${leaderboardPeriod}`]||[]),authUser.uid);
     setLeagueSyncStatus('Puan güncel ✓','ok');
-  }catch(error){console.error('Leaderboard write error',error);setLeagueSyncStatus('İnternet gelince güncellenecek','error')}
+  }catch(error){console.error('Leaderboard write error',error);setLeagueSyncStatus(cloudErrorMessage(error,'Lig'),'error')}
   finally{leaderboardWriteBusy=false;if(leaderboardWriteQueued){leaderboardWriteQueued=false;scheduleLeaderboardWrite(120)}}
 }
 async function syncCloudNow(){
@@ -368,7 +378,7 @@ async function syncCloudNow(){
     setLeagueSyncStatus('Puan güncel ✓','ok');
     updateLeaderboardCacheWithOwn();
     if($('#view-league')?.classList.contains('active'))renderLeaderboard();
-  }catch(error){console.error('Cloud sync error',error);setSyncStatus('İnternet gelince yeniden eşitlenecek','error')}
+  }catch(error){console.error('Cloud sync error',error);setSyncStatus(cloudErrorMessage(error),'error')}
   finally{cloudSyncBusy=false;if(cloudSyncQueued){cloudSyncQueued=false;scheduleCloudSync(250)}}
 }
 async function handleAuthState(user){
@@ -742,8 +752,9 @@ function renderDashboard(){
   normalizeDay();
   const c=counts(),st=state.stats,goal=Number(profile.goal||20);
   const pct=Math.min(100,Math.round((st.todayAnswers||0)/goal*100));
-  $('#helloName').textContent=profile.name||'Öğrenci';
-  const avatar=$('#profileBtn');if(profile.photoURL)avatar.innerHTML=`<img src="${esc(profile.photoURL)}" alt="" referrerpolicy="no-referrer">`;else avatar.textContent=(profile.name||'M')[0].toUpperCase();
+  const dashboardName=authUser?accountDisplayName(profile?.name,authUser):(profile.name||'Öğrenci');
+  $('#helloName').textContent=dashboardName;
+  const avatar=$('#profileBtn');if(profile.photoURL)avatar.innerHTML=`<img src="${esc(profile.photoURL)}" alt="" referrerpolicy="no-referrer">`;else avatar.textContent=(dashboardName||'M')[0].toUpperCase();
   $('#todayText').textContent=new Intl.DateTimeFormat('tr-TR',{weekday:'long',day:'numeric',month:'long'}).format(new Date());
   $('#countLearn').textContent=c.learn;
   $('#countMem').textContent=c.memorized;
@@ -1260,8 +1271,10 @@ function renderProfileStats(){
   const values={profilePoints:Math.round(st.points||0),profileMem:c.memorized,profileLearn:c.learn,profileHard:c.hard,profileWrong:c.wrong,profileStreak:computeStreak(),profileAccuracy:acc,profileSessions:st.sessions||0};Object.entries(values).forEach(([id,value])=>{if($('#'+id))$('#'+id).textContent=value});
 }
 function openProfile(){
-  $('#profileName').value=profile.name||'';$('#dailyGoal').value=String(profile.goal||20);$('#voiceAccent').value=profile.voiceAccent||'en-US';$('#profileTitle').textContent=authUser?(profile.name||authUser.displayName||'Profil'):profile.email==='guest@local'?'Profilini oluştur':profile.name;
-  const avatar=$('#profileAvatar');if(profile.photoURL)avatar.innerHTML=`<img src="${esc(profile.photoURL)}" alt="" referrerpolicy="no-referrer">`;else avatar.textContent=(profile.name||authUser?.displayName||'M')[0].toUpperCase();renderProfileStats();updateAuthUI();$('#profileDialog').showModal();
+  const displayName=authUser?accountDisplayName(profile?.name,authUser):(profile?.name||'Misafir');
+  if(authUser&&placeholderName(profile?.name))profile.name=displayName;
+  $('#profileName').value=displayName;$('#dailyGoal').value=String(profile.goal||20);$('#voiceAccent').value=profile.voiceAccent||'en-US';$('#profileTitle').textContent=authUser?displayName:profile.email==='guest@local'?'Profilini oluştur':displayName;
+  const avatar=$('#profileAvatar');if(profile.photoURL)avatar.innerHTML=`<img src="${esc(profile.photoURL)}" alt="" referrerpolicy="no-referrer">`;else avatar.textContent=(displayName||'M')[0].toUpperCase();renderProfileStats();updateAuthUI();$('#profileDialog').showModal();
 }
 function openCollection(type){
   if(type==='daily20'){openStudySetup('smart','daily20');return}nav('library');$('#searchInput').value='';$('#groupFilter').value='';$('#levelFilter').value='';$('#statusFilter').value='';
@@ -1450,8 +1463,29 @@ function setupEvents(){
     }
   });
   window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('#installBtn').hidden=false});
+  window.addEventListener('online',()=>{if(authUser){setSyncStatus('Bağlantı geri geldi, eşitleniyor…','syncing');scheduleCloudSync(0);scheduleLeaderboardWrite(0)}});
+  window.addEventListener('offline',()=>{if(authUser)setSyncStatus('Çevrimdışısın; değişiklikler cihazda korunuyor.','idle')});
   $('#installBtn').addEventListener('click',handleInstallRequest);
 }
+async function registerServiceWorker(){
+  if(!('serviceWorker'in navigator))return;
+  try{
+    const reloadKey=`wordpilot_sw_reload_${VERSION}`;
+    let reloading=false;
+    navigator.serviceWorker.addEventListener('controllerchange',()=>{
+      if(reloading||sessionStorage.getItem(reloadKey))return;
+      reloading=true;sessionStorage.setItem(reloadKey,'1');location.reload();
+    });
+    const reg=await navigator.serviceWorker.register(`sw.js?v=${VERSION}`,{updateViaCache:'none'});
+    await reg.update().catch(()=>{});
+    if(reg.waiting)reg.waiting.postMessage({type:'SKIP_WAITING'});
+    reg.addEventListener('updatefound',()=>{
+      const worker=reg.installing;if(!worker)return;
+      worker.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller)worker.postMessage({type:'SKIP_WAITING'})});
+    });
+  }catch(error){console.error('Service worker update error',error)}
+}
+
 async function init(){
   load();
   try{
@@ -1462,7 +1496,7 @@ async function init(){
     document.body.innerHTML='<main><div class="panel"><h2>Veri yüklenemedi</h2><p>Bağlantıyı kontrol edip sayfayı yenileyin.</p></div></main>';return;
   }
   setupEvents();renderAll();renderWords(true);
-  if('serviceWorker'in navigator)navigator.serviceWorker.register(`sw.js?v=${VERSION}`);
+  registerServiceWorker();
   initFirebase();
   $('#installBtn').hidden=isStandalone();updateSelectedControls();
   const hasSaved=!!localStorage.getItem(SESSION_KEY);

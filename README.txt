@@ -1,4 +1,4 @@
-WORDPILOT v3.6.3
+WORDPILOT v3.6.4
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -33,3 +33,11 @@ v3.6.3 düzeltmeleri ve tasarım güncellemesi:
 - Google hesabı bağlı kullanıcılar artık Misafir yerine Google profil adıyla; ad yoksa e-posta kullanıcı adıyla gösterilir.
 - Ana sayfaya masaüstü üst menüsü, 6000 kelime/çalışma modu bilgi şeridi, Günün Kelimesi, Nasıl Çalışır, WordPilot avantajları ve profesyonel alt bilgi eklendi.
 - Mevcut words.json, localStorage anahtarı ve Firebase kullanıcı verileri korunmuştur.
+
+
+v3.6.4 düzeltmeleri:
+- Masaüstü tarayıcılarda eski sürümün önbellekten kalmasını önlemek için HTML, CSS, JavaScript ve Service Worker sürüm adresleri eşitlendi.
+- Yeni Service Worker beklemeden etkinleşir ve eski WordPilot önbelleklerini temizler.
+- Google hesabı bağlıyken profil başlığında Misafir yerine Google adı gösterilir.
+- Firebase hataları artık yanlışlıkla yalnızca internet hatası olarak gösterilmez; izin, oturum, kota ve veri hataları ayrılır.
+- İnternet geri geldiğinde ilerleme ve lig puanı otomatik yeniden eşitlenir.
