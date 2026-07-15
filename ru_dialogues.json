@@ -1,0 +1,557 @@
+[
+  {
+    "id": "intro",
+    "order": 1,
+    "title": "Tanışma",
+    "topic": "Selamlaşma ve tanışma",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Здравствуйте! Как вас зовут?",
+        "stress": "Здра́вствуйте! Как вас зову́т?",
+        "reading": "Zdravstvuyte! Kak vas zovut?",
+        "tr": "Merhaba! Adınız nedir?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Меня зовут Анна. А вас?",
+        "stress": "Меня́ зову́т А́нна. А вас?",
+        "reading": "Menya zovut Anna. A vas?",
+        "tr": "Benim adım Anna. Ya sizin?"
+      },
+      {
+        "speaker": "A",
+        "ru": "Я Мехмет. Очень приятно.",
+        "stress": "Я Мехме́т. О́чень прия́тно.",
+        "reading": "Ya Mehmet. Oçen priyatno.",
+        "tr": "Ben Mehmet. Memnun oldum."
+      },
+      {
+        "speaker": "B",
+        "ru": "Мне тоже приятно.",
+        "stress": "Мне то́же прия́тно.",
+        "reading": "Mne toje priyatno.",
+        "tr": "Ben de memnun oldum."
+      }
+    ]
+  },
+  {
+    "id": "cafe",
+    "order": 2,
+    "title": "Kafede sipariş",
+    "topic": "Yiyecek ve içecek",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Garson",
+        "ru": "Добрый день. Что будете заказывать?",
+        "stress": "До́брый день. Что бу́дете зака́зывать?",
+        "reading": "Dobrıy den. Çto budete zakazıvat?",
+        "tr": "İyi günler. Ne sipariş edersiniz?"
+      },
+      {
+        "speaker": "Müşteri",
+        "ru": "Мне, пожалуйста, кофе и салат.",
+        "stress": "Мне, пожа́луйста, ко́фе и сала́т.",
+        "reading": "Mne, pojaluysta, kofe i salat.",
+        "tr": "Bana lütfen kahve ve salata."
+      },
+      {
+        "speaker": "Garson",
+        "ru": "С сахаром или без сахара?",
+        "stress": "С са́харом и́ли без са́хара?",
+        "reading": "S saharom ili bez sahara?",
+        "tr": "Şekerli mi şekersiz mi?"
+      },
+      {
+        "speaker": "Müşteri",
+        "ru": "Без сахара, спасибо.",
+        "stress": "Без са́хара, спаси́бо.",
+        "reading": "Bez sahara, spasibo.",
+        "tr": "Şekersiz, teşekkürler."
+      }
+    ]
+  },
+  {
+    "id": "market",
+    "order": 3,
+    "title": "Markette",
+    "topic": "Alışveriş",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Скажите, где молоко?",
+        "stress": "Скажи́те, где молоко́?",
+        "reading": "Skajite, gde moloko?",
+        "tr": "Söyler misiniz, süt nerede?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Молоко в холодильнике справа.",
+        "stress": "Молоко́ в холоди́льнике спра́ва.",
+        "reading": "Moloko v holodilnike sprava.",
+        "tr": "Süt sağdaki buzdolabında."
+      },
+      {
+        "speaker": "A",
+        "ru": "А хлеб свежий?",
+        "stress": "А хлеб све́жий?",
+        "reading": "A hleb svejiy?",
+        "tr": "Peki ekmek taze mi?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Да, сегодня утром привезли.",
+        "stress": "Да, сего́дня у́тром привезли́.",
+        "reading": "Da, segodnya utrom privezli.",
+        "tr": "Evet, bugün sabah getirdiler."
+      }
+    ]
+  },
+  {
+    "id": "directions",
+    "order": 4,
+    "title": "Yol tarifi",
+    "topic": "Şehir, ulaşım ve yönler",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Извините, где ближайшее метро?",
+        "stress": "Извини́те, где ближа́йшее метро́?",
+        "reading": "İzvinite, gde blijayşee metro?",
+        "tr": "Affedersiniz, en yakın metro nerede?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Идите прямо, потом направо.",
+        "stress": "Иди́те пря́мо, пото́м напра́во.",
+        "reading": "İdite pryamo, potom napravo.",
+        "tr": "Düz gidin, sonra sağa dönün."
+      },
+      {
+        "speaker": "A",
+        "ru": "Это далеко?",
+        "stress": "Э́то далеко́?",
+        "reading": "Eto daleko?",
+        "tr": "Uzak mı?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Нет, пять минут пешком.",
+        "stress": "Нет, пять мину́т пешко́м.",
+        "reading": "Net, pyat minut peşkom.",
+        "tr": "Hayır, yürüyerek beş dakika."
+      }
+    ]
+  },
+  {
+    "id": "taxi",
+    "order": 5,
+    "title": "Taksi",
+    "topic": "Şehir, ulaşım ve yönler",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Yolcu",
+        "ru": "Здравствуйте. Мне нужно в аэропорт.",
+        "stress": "Здра́вствуйте. Мне ну́жно в аэропо́рт.",
+        "reading": "Zdravstvuyte. Mne nujno v aeroport.",
+        "tr": "Merhaba. Havaalanına gitmem gerekiyor."
+      },
+      {
+        "speaker": "Şoför",
+        "ru": "Хорошо. Какой терминал?",
+        "stress": "Хорошо́. Како́й термина́л?",
+        "reading": "Horoşo. Kakoy terminal?",
+        "tr": "Tamam. Hangi terminal?"
+      },
+      {
+        "speaker": "Yolcu",
+        "ru": "Второй терминал, пожалуйста.",
+        "stress": "Второ́й термина́л, пожа́луйста.",
+        "reading": "Vtoroy terminal, pojaluysta.",
+        "tr": "İkinci terminal, lütfen."
+      },
+      {
+        "speaker": "Şoför",
+        "ru": "Поездка займёт около тридцати минут.",
+        "stress": "Пое́здка займёт о́коло три́дцати мину́т.",
+        "reading": "Poezdka zaymyot okolo tridtsati minut.",
+        "tr": "Yolculuk yaklaşık otuz dakika sürecek."
+      }
+    ]
+  },
+  {
+    "id": "doctor",
+    "order": 6,
+    "title": "Doktorda",
+    "topic": "Sağlık ve vücut",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Doktor",
+        "ru": "Что у вас болит?",
+        "stress": "Что у вас боли́т?",
+        "reading": "Çto u vas bolit?",
+        "tr": "Nereniz ağrıyor?"
+      },
+      {
+        "speaker": "Hasta",
+        "ru": "У меня болит горло и голова.",
+        "stress": "У меня́ боли́т го́рло и голова́.",
+        "reading": "U menya bolit gorlo i golova.",
+        "tr": "Boğazım ve başım ağrıyor."
+      },
+      {
+        "speaker": "Doktor",
+        "ru": "У вас есть температура?",
+        "stress": "У вас есть температу́ра?",
+        "reading": "U vas yest temperatura?",
+        "tr": "Ateşiniz var mı?"
+      },
+      {
+        "speaker": "Hasta",
+        "ru": "Да, тридцать восемь.",
+        "stress": "Да, три́дцать во́семь.",
+        "reading": "Da, tridtsat vosem.",
+        "tr": "Evet, otuz sekiz."
+      }
+    ]
+  },
+  {
+    "id": "pharmacy",
+    "order": 7,
+    "title": "Eczanede",
+    "topic": "Sağlık ve vücut",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Müşteri",
+        "ru": "Мне нужно лекарство от кашля.",
+        "stress": "Мне ну́жно лека́рство от ка́шля.",
+        "reading": "Mne nujno lekarstvo ot kaşlya.",
+        "tr": "Öksürük için ilaç gerekiyor."
+      },
+      {
+        "speaker": "Eczacı",
+        "ru": "У вас сухой кашель?",
+        "stress": "У вас сухо́й ка́шель?",
+        "reading": "U vas suhoy kaşel?",
+        "tr": "Kuru öksürüğünüz mü var?"
+      },
+      {
+        "speaker": "Müşteri",
+        "ru": "Да, особенно ночью.",
+        "stress": "Да, осо́бенно но́чью.",
+        "reading": "Da, osobenno noçyu.",
+        "tr": "Evet, özellikle geceleri."
+      },
+      {
+        "speaker": "Eczacı",
+        "ru": "Принимайте этот сироп два раза в день.",
+        "stress": "Принима́йте э́тот сиро́п два ра́за в день.",
+        "reading": "Prinimayte etot sirop dva raza v den.",
+        "tr": "Bu şurubu günde iki kez kullanın."
+      }
+    ]
+  },
+  {
+    "id": "hotel",
+    "order": 8,
+    "title": "Otelde",
+    "topic": "Şehir, ulaşım ve yönler",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Misafir",
+        "ru": "У меня забронирован номер.",
+        "stress": "У меня́ заброни́рован но́мер.",
+        "reading": "U menya zabronirovan nomer.",
+        "tr": "Rezervasyonum var."
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "На какое имя?",
+        "stress": "На како́е и́мя?",
+        "reading": "Na kakoe imya?",
+        "tr": "Hangi isim adına?"
+      },
+      {
+        "speaker": "Misafir",
+        "ru": "На имя Аслан.",
+        "stress": "На и́мя Асла́н.",
+        "reading": "Na imya Aslan.",
+        "tr": "Aslan adına."
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "Ваш номер на третьем этаже.",
+        "stress": "Ваш но́мер на тре́тьем этаже́.",
+        "reading": "Vaş nomer na tretyem etaje.",
+        "tr": "Odanız üçüncü katta."
+      }
+    ]
+  },
+  {
+    "id": "work",
+    "order": 9,
+    "title": "İş yerinde",
+    "topic": "İş ve okul",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Во сколько начинается встреча?",
+        "stress": "Во ско́лько начина́ется встре́ча?",
+        "reading": "Vo skolko naçinaetsya vstreça?",
+        "tr": "Toplantı saat kaçta başlıyor?"
+      },
+      {
+        "speaker": "B",
+        "ru": "В десять часов.",
+        "stress": "В де́сять часо́в.",
+        "reading": "V desyat çasov.",
+        "tr": "Saat onda."
+      },
+      {
+        "speaker": "A",
+        "ru": "Нужно подготовить отчёт?",
+        "stress": "Ну́жно подгото́вить отчёт?",
+        "reading": "Nujno podgotovit otçyot?",
+        "tr": "Rapor hazırlamak gerekiyor mu?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Да, отправьте его до вечера.",
+        "stress": "Да, отпра́вьте его́ до ве́чера.",
+        "reading": "Da, otpravte yego do veçera.",
+        "tr": "Evet, akşama kadar gönderin."
+      }
+    ]
+  },
+  {
+    "id": "school",
+    "order": 10,
+    "title": "Derste",
+    "topic": "İş ve okul",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Öğrenci",
+        "ru": "Я не понимаю это правило.",
+        "stress": "Я не понима́ю э́то пра́вило.",
+        "reading": "Ya ne ponimayu eto pravilo.",
+        "tr": "Bu kuralı anlamıyorum."
+      },
+      {
+        "speaker": "Öğretmen",
+        "ru": "Какую часть повторить?",
+        "stress": "Каку́ю часть повтори́ть?",
+        "reading": "Kakuyu çast povtorit?",
+        "tr": "Hangi bölümü tekrar edeyim?"
+      },
+      {
+        "speaker": "Öğrenci",
+        "ru": "Пожалуйста, объясните пример.",
+        "stress": "Пожа́луйста, объясни́те приме́р.",
+        "reading": "Pojaluysta, obyasnite primer.",
+        "tr": "Lütfen örneği açıklayın."
+      },
+      {
+        "speaker": "Öğretmen",
+        "ru": "Хорошо, давайте посмотрим вместе.",
+        "stress": "Хорошо́, дава́йте посмо́трим вме́сте.",
+        "reading": "Horoşo, davayte posmotrim vmeste.",
+        "tr": "Tamam, birlikte bakalım."
+      }
+    ]
+  },
+  {
+    "id": "phone",
+    "order": 11,
+    "title": "Telefonda",
+    "topic": "Selamlaşma ve tanışma",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Алло, ты можешь говорить?",
+        "stress": "Алло́, ты мо́жешь говори́ть?",
+        "reading": "Allo, tı mojeş govorit?",
+        "tr": "Alo, konuşabilir misin?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Сейчас я занят.",
+        "stress": "Сейча́с я за́нят.",
+        "reading": "Seyças ya zanyat.",
+        "tr": "Şu anda meşgulüm."
+      },
+      {
+        "speaker": "A",
+        "ru": "Когда тебе перезвонить?",
+        "stress": "Когда́ тебе́ перезвони́ть?",
+        "reading": "Kogda tebe perezvonit?",
+        "tr": "Seni ne zaman tekrar arayayım?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Позвони после шести.",
+        "stress": "Позвони́ по́сле шести́.",
+        "reading": "Pozvoni posle şesti.",
+        "tr": "Altıdan sonra ara."
+      }
+    ]
+  },
+  {
+    "id": "appointment",
+    "order": 12,
+    "title": "Randevu",
+    "topic": "Sayılar, günler, aylar ve saat",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Вы свободны в пятницу?",
+        "stress": "Вы свобо́дны в пя́тницу?",
+        "reading": "Vı svobodnı v pyatnitsu?",
+        "tr": "Cuma günü müsait misiniz?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Да, после трёх часов.",
+        "stress": "Да, по́сле трёх часо́в.",
+        "reading": "Da, posle tryoh çasov.",
+        "tr": "Evet, saat üçten sonra."
+      },
+      {
+        "speaker": "A",
+        "ru": "Давайте встретимся в четыре.",
+        "stress": "Дава́йте встре́тимся в четы́ре.",
+        "reading": "Davayte vstretimsya v çetıre.",
+        "tr": "Saat dörtte buluşalım."
+      },
+      {
+        "speaker": "B",
+        "ru": "Хорошо, договорились.",
+        "stress": "Хорошо́, договори́лись.",
+        "reading": "Horoşo, dogovorilis.",
+        "tr": "Tamam, anlaştık."
+      }
+    ]
+  },
+  {
+    "id": "clothes",
+    "order": 13,
+    "title": "Kıyafet alışverişi",
+    "topic": "Alışveriş",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Müşteri",
+        "ru": "Можно примерить эту рубашку?",
+        "stress": "Мо́жно приме́рить э́ту руба́шку?",
+        "reading": "Mojno primerit etu rubaşku?",
+        "tr": "Bu gömleği deneyebilir miyim?"
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "Конечно. Какой размер вам нужен?",
+        "stress": "Коне́чно. Како́й разме́р вам ну́жен?",
+        "reading": "Koneçno. Kakoy razmer vam nujen?",
+        "tr": "Elbette. Hangi beden gerekiyor?"
+      },
+      {
+        "speaker": "Müşteri",
+        "ru": "Сорок второй размер.",
+        "stress": "Со́рок второ́й разме́р.",
+        "reading": "Sorok vtoroy razmer.",
+        "tr": "Kırk iki beden."
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "Примерочная находится слева.",
+        "stress": "Приме́рочная нахо́дится сле́ва.",
+        "reading": "Primeroçnaya nahoditsya sleva.",
+        "tr": "Deneme kabini solda."
+      }
+    ]
+  },
+  {
+    "id": "station",
+    "order": 14,
+    "title": "Tren istasyonunda",
+    "topic": "Şehir, ulaşım ve yönler",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "Yolcu",
+        "ru": "Один билет до Самарканда, пожалуйста.",
+        "stress": "Оди́н биле́т до Самарка́нда, пожа́луйста.",
+        "reading": "Odin bilet do Samarkanda, pojaluysta.",
+        "tr": "Semerkant’a bir bilet, lütfen."
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "На сегодня или на завтра?",
+        "stress": "На сего́дня и́ли на за́втра?",
+        "reading": "Na segodnya ili na zavtra?",
+        "tr": "Bugün için mi yarın için mi?"
+      },
+      {
+        "speaker": "Yolcu",
+        "ru": "На завтра утром.",
+        "stress": "На за́втра у́тром.",
+        "reading": "Na zavtra utrom.",
+        "tr": "Yarın sabah için."
+      },
+      {
+        "speaker": "Görevli",
+        "ru": "Поезд отправляется в восемь десять.",
+        "stress": "По́езд отправля́ется в во́семь де́сять.",
+        "reading": "Poezd otpravlyaetsya v vosem desyat.",
+        "tr": "Tren sekizi on geçe kalkıyor."
+      }
+    ]
+  },
+  {
+    "id": "weather",
+    "order": 15,
+    "title": "Hava ve plan",
+    "topic": "Sayılar, günler, aylar ve saat",
+    "level": "A1-A2",
+    "lines": [
+      {
+        "speaker": "A",
+        "ru": "Какая сегодня погода?",
+        "stress": "Кака́я сего́дня пого́да?",
+        "reading": "Kakaya segodnya pogoda?",
+        "tr": "Bugün hava nasıl?"
+      },
+      {
+        "speaker": "B",
+        "ru": "Тепло, но вечером будет дождь.",
+        "stress": "Тепло́, но ве́чером бу́дет дождь.",
+        "reading": "Teplo, no veçerom budet dojd.",
+        "tr": "Hava sıcak, ama akşam yağmur olacak."
+      },
+      {
+        "speaker": "A",
+        "ru": "Тогда возьмём зонт.",
+        "stress": "Тогда́ возьмём зонт.",
+        "reading": "Togda vozmyom zont.",
+        "tr": "O zaman şemsiye alalım."
+      },
+      {
+        "speaker": "B",
+        "ru": "Хорошая идея.",
+        "stress": "Хоро́шая иде́я.",
+        "reading": "Horoşaya ideya.",
+        "tr": "İyi fikir."
+      }
+    ]
+  }
+]

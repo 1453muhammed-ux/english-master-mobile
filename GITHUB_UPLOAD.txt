@@ -1,7 +1,8 @@
-WordPilot v4.1.1 temiz GitHub paketi
+WORDPILOT v4.2.0 GITHUB YÜKLEME
 
-Bu pakette sürümlü kopya dosyalar yoktur. index.html yalnızca app.js, style.css ve sw.js kullanır.
-GitHub'da dosyaları depo köküne yükleyin ve aynı adlı dosyaları Replace/Commit ile değiştirin.
-Eski app-*.js, style-*.css, sw-*.js ve index(1).html dosyaları kullanılmaz; silinebilir.
-Firebase dağıtımı: firebase deploy --only hosting --project wordpilot-7a574
-Kontrol adresi: https://wordpilot-7a574.web.app/?wpbuild=4.1.1
+1. ZIP'i çıkarın.
+2. İçindeki tüm dosya ve klasörleri GitHub ana dizinine sürükleyin.
+3. Commit changes düğmesine basın.
+4. Firebase Hosting iş akışı otomatik çalışır.
+
+Kontrol: https://wordpilot-7a574.web.app/?wpbuild=4.2.0

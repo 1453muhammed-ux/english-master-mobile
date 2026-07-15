@@ -1,21 +1,41 @@
-WORDPILOT v4.1.0 VALIDATION
+WORDPILOT v4.2.0 VALIDATION REPORT
 
-[OK] app.js JavaScript syntax
-[OK] app-4.1.0.js JavaScript syntax
-[OK] sw.js JavaScript syntax
-[OK] sw-4.1.0.js JavaScript syntax
-[OK] words.json JSON
-[OK] ru_words.json JSON: 500 unique sequential IDs
-[OK] ru_alphabet.json JSON: 33 unique letters
-[OK] uz_words.json JSON
-[OK] manifest.json JSON
-[OK] firebase.json JSON
-[OK] Her Rusça kayıtta zorunlu 13 alan
-[OK] Her Rusça kayıtta vurgu işareti veya vurgulu ё
-[OK] Ocak-Aralık aylarının tamamı
-[OK] İlk 137 Rusça ID/kelime eşleşmesi korunuyor
-[OK] words.json v4.0 ile birebir aynı SHA-256
-[OK] uz_words.json v4.0 ile birebir aynı SHA-256
-[OK] Tarayıcı temel akış testi: kurs değiştirme, 500 kayıt, 10 konu, 33 harf, alfabe oyunu ekranı, cümle sıralama ekranı
+PASS | app.js JavaScript sözdizimi
+PASS | sw.js JavaScript sözdizimi
+PASS | words.json JSON
+PASS | ru_words.json JSON
+PASS | uz_words.json JSON
+PASS | ru_alphabet.json JSON
+PASS | ru_grammar.json JSON
+PASS | ru_dialogues.json JSON
+PASS | manifest.json JSON
+PASS | firebase.json JSON
+PASS | Rusça kayıt sayısı | 1000
+PASS | İlk 500 kayıt korundu
+PASS | Rusça ID sırası
+PASS | Rusça benzersiz kayıt
+PASS | Rusça alan bütünlüğü
+PASS | Kiril harf sayısı | 33
+PASS | Dil bilgisi modülü | 9
+PASS | Dil bilgisi soru sayısı | 27
+PASS | Diyalog sayısı | 15
+PASS | Diyalog satır alanları
+PASS | HTML tekil ID
+PASS | HTML view-russian-path
+PASS | HTML grammarModuleGrid
+PASS | HTML dialogueGrid
+PASS | HTML pathLessonPanel
+PASS | HTML orderingModeCard
+PASS | Dosya mevcut: index.html
+PASS | Dosya mevcut: app.js
+PASS | Dosya mevcut: style.css
+PASS | Dosya mevcut: sw.js
+PASS | Dosya mevcut: firebase.json
+PASS | Dosya mevcut: .firebaserc
+PASS | Dosya mevcut: .github/workflows/firebase-hosting-live.yml
+PASS | Dosya mevcut: ru_grammar.json
+PASS | Dosya mevcut: ru_dialogues.json
+PASS | v4.2.0 sürüm işareti
+PASS | Eski 4.1.1 işareti
 
-Tarayıcı testinde Firebase dış kaynağı bilerek engellenen yerel test ortamında yüklenmedi; uygulamanın Firebase yapılandırması değiştirilmemiştir.
+Sonuç: 37/37 kontrol başarılı.

@@ -10,7 +10,12 @@
       "style-*.css",
       "sw-*.js",
       "index(*).html",
-      "update-*.html"
+      "update-*.html",
+      "V4_*_RELEASE_NOTES.txt",
+      "VALIDATION_REPORT.txt",
+      "GITHUB_UPLOAD.txt",
+      "README.txt",
+      "WORDPILOT_DESIGN_SYSTEM.txt"
     ],
     "headers": [
       {

@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=4.1.1">
+  <link rel="stylesheet" href="style.css?v=4.2.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='4.1.1',KEY='wordpilot_asset_build';
+    const BUILD='4.2.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.1.1</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.2.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -73,15 +73,15 @@
         </div>
         <div class="course-selector-grid">
           <button class="course-card active" data-course="en" type="button"><span class="course-flag">🇬🇧</span><div><b>English</b><small>Türkçe anlatımlı · 6000 kelime ve kalıp</small></div><em>Aktif</em></button>
-          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · A1 başlangıç</small></div><em>Seç</em></button>
+          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · 1000 A1–A2 kayıt</small></div><em>Seç</em></button>
           <button class="course-card" data-course="uz" type="button"><span class="course-flag">🇺🇿</span><div><b>O‘zbekcha</b><small>Türkçe anlatımlı · A1 başlangıç</small></div><em>Seç</em></button>
         </div>
       </section>
 
       <section id="russianTools" class="russian-tools-section" hidden>
         <div class="russian-tools-head">
-          <div><p class="eyebrow">РУССКИЙ A1 · v4.1</p><h2>Rusça öğrenme merkezi</h2><p>500 kontrollü kayıt, vurgulu Kiril yazımı ve konu bazlı çalışma.</p></div>
-          <button class="primary" type="button" data-nav="academy">Kiril Alfabesi Akademisi →</button>
+          <div><p class="eyebrow">РУССКИЙ A1–A2 · v4.2</p><h2>Rusça öğrenme merkezi</h2><p>1000 kontrollü kelime ve ifade, dil bilgisi yolu, diyaloglar ve konu bazlı çalışma.</p></div>
+          <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
         </div>
         <div id="russianTopicGrid" class="russian-topic-grid"></div>
       </section>
@@ -227,7 +227,7 @@
             <button class="mode-card" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
-            <button id="orderingModeCard" class="mode-card" data-start="ordering" hidden><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Rusça kelimeleri doğru sıraya koy</small></div><em>Başla</em></button>
+            <button id="orderingModeCard" class="mode-card" data-start="ordering"><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
           </div>
@@ -309,6 +309,31 @@
       <section id="academyGamePanel" class="academy-game-panel panel" hidden></section>
       <div class="academy-list-head"><div><p class="eyebrow">ALFABE KARTLARI</p><h2>33 harfin tamamı</h2></div><button id="academyShuffle" class="soft" type="button">Kartları karıştır</button></div>
       <div id="alphabetGrid" class="alphabet-grid"></div>
+    </section>
+
+
+    <section id="view-russian-path" class="view russian-path-view">
+      <div class="section-title path-title">
+        <div><p class="eyebrow">РУССКИЙ · A1–A2 YOLU</p><h1>Rusça Dil Bilgisi ve Diyaloglar</h1><p class="muted">Dokuz aşamalı dil bilgisi yolu ve 15 günlük konuşma senaryosu.</p></div>
+        <button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button>
+      </div>
+      <section class="path-overview panel">
+        <div><span class="path-orb">RU</span><div><h2>Kelimeyi cümleye dönüştür.</h2><p>Kuralları kısa derslerle öğren, örnekleri dinle ve günlük diyaloglarla kullan.</p></div></div>
+        <div class="path-progress-stats"><span><b id="grammarDoneCount">0 / 9</b> dil bilgisi</span><span><b id="dialogueDoneCount">0 / 15</b> diyalog</span></div>
+      </section>
+      <div class="path-tabs" role="tablist" aria-label="Rusça öğrenme yolu">
+        <button type="button" class="active" data-path-tab="grammar">Dil Bilgisi Yolu</button>
+        <button type="button" data-path-tab="dialogues">Günlük Diyaloglar</button>
+      </div>
+      <section id="pathGrammarSection" class="path-section active">
+        <div class="path-section-head"><div><p class="eyebrow">9 AŞAMALI YOL</p><h2>A1’den A2’ye temel dil bilgisi</h2></div><span>Her modülde kısa anlatım + 3 soru</span></div>
+        <div id="grammarModuleGrid" class="grammar-module-grid"></div>
+      </section>
+      <section id="pathDialoguesSection" class="path-section">
+        <div class="path-section-head"><div><p class="eyebrow">GÜNLÜK KONUŞMA</p><h2>15 gerçek yaşam diyaloğu</h2></div><span>Satır satır dinle ve Türkçesini gör</span></div>
+        <div id="dialogueGrid" class="dialogue-grid"></div>
+      </section>
+      <section id="pathLessonPanel" class="path-lesson-panel panel" hidden></section>
     </section>
 
     <section id="view-library" class="view">
@@ -611,6 +636,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=4.1.1" defer></script>
+<script src="app.js?v=4.2.0" defer></script>
 </body>
 </html>
