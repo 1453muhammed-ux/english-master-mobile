@@ -2,8 +2,8 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='4.1.0';
-const SW_FILE='sw-4.1.0.js';
+const VERSION='4.1.1';
+const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
 const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
