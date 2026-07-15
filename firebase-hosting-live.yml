@@ -1,0 +1,64 @@
+name: WordPilot Firebase Live
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: wordpilot-firebase-live
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  validate_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu al
+        uses: actions/checkout@v4
+
+      - name: Node.js hazırla
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: WordPilot v4.2 dosyalarını kontrol et
+        shell: bash
+        run: |
+          set -e
+          test -f index.html
+          test -f app.js
+          test -f style.css
+          test -f sw.js
+          test -f firebase.json
+          test -f words.json
+          test -f ru_words.json
+          test -f ru_alphabet.json
+          test -f ru_grammar.json
+          test -f ru_dialogues.json
+          test -f uz_words.json
+          node --check app.js
+          node --check sw.js
+          node - <<'NODE'
+          const fs = require('fs');
+          const html = fs.readFileSync('index.html', 'utf8');
+          if (!html.includes('v4.2.0')) throw new Error('index.html v4.2.0 değil');
+          const files = ['words.json','ru_words.json','ru_alphabet.json','ru_grammar.json','ru_dialogues.json','uz_words.json'];
+          for (const file of files) JSON.parse(fs.readFileSync(file, 'utf8'));
+          const ru = JSON.parse(fs.readFileSync('ru_words.json', 'utf8'));
+          if (!Array.isArray(ru) || ru.length !== 1000) throw new Error(`Rusça kayıt sayısı 1000 değil: ${ru.length}`);
+          console.log('WordPilot v4.2 doğrulaması başarılı. Rusça kayıt:', ru.length);
+          NODE
+
+      - name: Firebase Hosting canlı siteye yükle
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_WORDPILOT_7A574 }}
+          channelId: live
+          projectId: wordpilot-7a574
