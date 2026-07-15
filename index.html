@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style-4.0.0.css?v=4.0.0">
+  <link rel="stylesheet" href="style-4.1.0.css?v=4.1.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='4.0.0',KEY='wordpilot_asset_build';
+    const BUILD='4.1.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -78,6 +78,14 @@
         </div>
       </section>
 
+      <section id="russianTools" class="russian-tools-section" hidden>
+        <div class="russian-tools-head">
+          <div><p class="eyebrow">РУССКИЙ A1 · v4.1</p><h2>Rusça öğrenme merkezi</h2><p>500 kontrollü kayıt, vurgulu Kiril yazımı ve konu bazlı çalışma.</p></div>
+          <button class="primary" type="button" data-nav="academy">Kiril Alfabesi Akademisi →</button>
+        </div>
+        <div id="russianTopicGrid" class="russian-topic-grid"></div>
+      </section>
+
       <section class="continue-card">
         <div class="continue-copy">
           <span class="chip">BUGÜNKÜ UÇUŞ PLANI</span>
@@ -97,7 +105,7 @@
 
       <div class="platform-proof" aria-label="WordPilot özellikleri">
         <div><strong id="proofWordCount">6000</strong><span id="proofWordLabel">kelime ve kalıp</span></div>
-        <div><strong>11</strong><span>çalışma modu</span></div>
+        <div><strong id="proofModeCount">11</strong><span>çalışma modu</span></div>
         <div><strong>☁</strong><span>cihazlar arası senkron</span></div>
         <div><strong>↓</strong><span>çevrimdışı çalışma</span></div>
       </div>
@@ -219,6 +227,7 @@
             <button class="mode-card" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
+            <button id="orderingModeCard" class="mode-card" data-start="ordering" hidden><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Rusça kelimeleri doğru sıraya koy</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
           </div>
@@ -265,7 +274,7 @@
           <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
           <button class="home-tool-card sync" data-action="open-profile" type="button"><span>☁</span><div><b>Hesabı senkronize et</b><small>Google hesabı ve profil ayarları</small></div><em>→</em></button>
         </div>
-        <p id="offlineStatus" class="settings-note">Yaklaşık 4,6 MB: ana sayfa, oyun dosyaları, simgeler ve English / Русский / O‘zbekcha kurs verileri tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
+        <p id="offlineStatus" class="settings-note">Yaklaşık 5,4 MB: ana sayfa, oyun dosyaları, Kiril Akademisi, simgeler ve English / Русский / O‘zbekcha kurs verileri tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
 
       <footer class="site-footer">
@@ -282,6 +291,24 @@
         </div>
         <div class="footer-meta"><span>© 2026 WordPilot · Powered by English Master</span><span>Google girişli veriler Firebase’de, misafir verileri yalnızca cihazda tutulur.</span></div>
       </footer>
+    </section>
+
+    <section id="view-academy" class="view academy-view">
+      <div class="section-title academy-title">
+        <div><p class="eyebrow">КИРИЛЛИЦА · 33 HARF</p><h1>Kiril Alfabesi Akademisi</h1><p class="muted">Büyük/küçük biçim, ses, Türkçe açıklama ve yanıltıcı harfler.</p></div>
+        <button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button>
+      </div>
+      <section class="academy-hero panel">
+        <div><span class="academy-hero-letter">Я я</span><div><h2>Önce harfi tanı, sonra kelimeyi oku.</h2><p>Harf kartlarını dinle; dinle-seç ve eşleştirme oyunlarıyla pekiştir.</p></div></div>
+        <div class="academy-stats"><span><b id="academyAnswers">0</b> cevap</span><span><b id="academyAccuracy">—</b> doğruluk</span></div>
+      </section>
+      <div class="academy-game-launchers">
+        <button type="button" data-academy-game="listen"><span>🔊</span><div><b>Harfi dinle ve seç</b><small>Rusça sesi doğru harfle eşleştir</small></div></button>
+        <button type="button" data-academy-game="match"><span>↔</span><div><b>Kiril → okunuş eşleştir</b><small>Altı harflik hızlı eşleştirme turu</small></div></button>
+      </div>
+      <section id="academyGamePanel" class="academy-game-panel panel" hidden></section>
+      <div class="academy-list-head"><div><p class="eyebrow">ALFABE KARTLARI</p><h2>33 harfin tamamı</h2></div><button id="academyShuffle" class="soft" type="button">Kartları karıştır</button></div>
+      <div id="alphabetGrid" class="alphabet-grid"></div>
     </section>
 
     <section id="view-library" class="view">
@@ -459,7 +486,7 @@
         <option value="smart">Akıllı Quiz</option>
         <option value="flash">Kelime Kartları</option>
         <option value="en-tr">Yaz EN → TR</option>
-        <option value="tr-en">Yaz TR → EN</option><option value="listening">Sesli / Gizli Mod</option><option value="cloze">Boşluk Doldurma</option><option value="sentence">Cümle Tamamlama</option><option value="dictation">Dinlediğini Yaz</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
+        <option value="tr-en">Yaz TR → EN</option><option value="ordering">Cümle Sıralama</option><option value="listening">Sesli / Gizli Mod</option><option value="cloze">Boşluk Doldurma</option><option value="sentence">Cümle Tamamlama</option><option value="dictation">Dinlediğini Yaz</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
         <option value="review">Zor ve tekrar bekleyenler</option>
       </select>
     </label>
@@ -584,6 +611,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app-4.0.0.js?v=4.0.0" defer></script>
+<script src="app-4.1.0.js?v=4.1.0" defer></script>
 </body>
 </html>
