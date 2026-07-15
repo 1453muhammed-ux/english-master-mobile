@@ -15,7 +15,9 @@
       "VALIDATION_REPORT.txt",
       "GITHUB_UPLOAD.txt",
       "README.txt",
-      "WORDPILOT_DESIGN_SYSTEM.txt"
+      "WORDPILOT_DESIGN_SYSTEM.txt",
+      "YUKLEME_ADIMLARI.txt",
+      "V4_3_RELEASE_NOTES.txt"
     ],
     "headers": [
       {

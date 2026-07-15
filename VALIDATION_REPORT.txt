@@ -1,41 +1,37 @@
-WORDPILOT v4.2.0 VALIDATION REPORT
+WORDPILOT v4.3.0 — DOĞRULAMA RAPORU
 
-PASS | app.js JavaScript sözdizimi
-PASS | sw.js JavaScript sözdizimi
-PASS | words.json JSON
-PASS | ru_words.json JSON
-PASS | uz_words.json JSON
-PASS | ru_alphabet.json JSON
-PASS | ru_grammar.json JSON
-PASS | ru_dialogues.json JSON
-PASS | manifest.json JSON
-PASS | firebase.json JSON
-PASS | Rusça kayıt sayısı | 1000
-PASS | İlk 500 kayıt korundu
-PASS | Rusça ID sırası
-PASS | Rusça benzersiz kayıt
-PASS | Rusça alan bütünlüğü
-PASS | Kiril harf sayısı | 33
-PASS | Dil bilgisi modülü | 9
-PASS | Dil bilgisi soru sayısı | 27
-PASS | Diyalog sayısı | 15
-PASS | Diyalog satır alanları
-PASS | HTML tekil ID
-PASS | HTML view-russian-path
-PASS | HTML grammarModuleGrid
-PASS | HTML dialogueGrid
-PASS | HTML pathLessonPanel
-PASS | HTML orderingModeCard
-PASS | Dosya mevcut: index.html
-PASS | Dosya mevcut: app.js
-PASS | Dosya mevcut: style.css
-PASS | Dosya mevcut: sw.js
-PASS | Dosya mevcut: firebase.json
-PASS | Dosya mevcut: .firebaserc
-PASS | Dosya mevcut: .github/workflows/firebase-hosting-live.yml
-PASS | Dosya mevcut: ru_grammar.json
-PASS | Dosya mevcut: ru_dialogues.json
-PASS | v4.2.0 sürüm işareti
-PASS | Eski 4.1.1 işareti
+Sürüm: 4.3.0
+Temel: WordPilot v4.2.0
 
-Sonuç: 37/37 kontrol başarılı.
+VERİ KONTROLLERİ
+- İngilizce: 5488 kayıt
+- Rusça: 1000 kayıt
+- Rusça benzersiz ID: 1000
+- Rusça benzersiz kelime: 1000
+- Kiril alfabesi: 33 harf
+- Rusça dil bilgisi: 9 modül
+- Rusça diyalog: 15 paket
+- Özbekçe: 137 kayıt
+
+MİMARİ
+- app.js: 341 satır (v4.2’de yaklaşık 2045 satırdı)
+- Modül sayısı: 7
+- Firebase/Google giriş, çalışma motoru, kurs motoru, Rusça yol ve v4.3 özellikleri ayrı dosyalara bölündü.
+- Eski localStorage anahtarı korunur: wordpilot_v34
+- Rusça yol ilerleme anahtarı korunur: ru_path_v42
+
+SÖZDİZİMİ
+- Tüm JavaScript dosyaları node --check kontrolünden geçti.
+- Tüm modüller birleşik olarak da sözdizimi kontrolünden geçti.
+- Simüle edilmiş tarayıcı çalışma testinde English 5488 ve Русский 1000 kayıt yüklendi.
+- Kiril 33, gramer 9, diyalog 15 ve heceleme oyunu çalışma testinden geçti.
+
+YENİLİKLER
+- Hızlı Quiz
+- Kiril kelime heceleme oyunu
+- Konu bazlı gerçek ilerleme yüzdeleri
+- Gramer/diyalog toplam yol ilerlemesi
+- Kurs bazlı performans kartları
+- Güçlü/zayıf konu analizi
+- 16 rozetli başarı sistemi
+- Güncellenmiş çevrimdışı önbellek: wordpilot-v4.3.0
