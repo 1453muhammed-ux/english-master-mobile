@@ -1,4 +1,4 @@
-WORDPILOT v3.6.5
+WORDPILOT v3.6.6
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -50,3 +50,9 @@ v3.6.5 düzeltmeleri:
 - Google hesabı bağlıyken profil başlığı ve ad alanı anında Google adıyla güncellenir.
 - Eski Service Worker/önbellek yalnızca bir kez temizlenir; localStorage ve ilerleme kayıtları silinmez.
 - reset-cache.html, masaüstünde eski sürüm kalırsa ilerlemeyi silmeden uygulama önbelleğini yeniler.
+
+
+v3.6.6 düzeltmeleri:
+- Chrome'da eski app.js/style.css dosyasının kalmaması için sürümlü yeni dosya adları kullanılır.
+- Firebase ilerleme verisi Firestore'a güvenli JSON metni olarak yazılır.
+- update-366.html eski Service Worker ve Cache Storage kayıtlarını ilerlemeyi silmeden temizler.
