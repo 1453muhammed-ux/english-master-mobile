@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.6.2';
+const VERSION='3.6.3';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
 const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
@@ -25,7 +25,7 @@ const FIREBASE_CONFIG={
 const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing';
 
 let words=[], profile=null, state=null, currentWord=null, listLimit=80, session=null, deferredPrompt=null;
-let fbAuth=null,fbDb=null,authUser=null,cloudReady=false,cloudSyncTimer=null,cloudSyncBusy=false,cloudSyncQueued=false,leaderboardFetch=null,cloudLeaderboardCache={},leaderboardPeriod='all',leaderboardAudience='world',authBusy=false,leaderboardUnsubscribe=null,leaderboardRealtimeKey='';
+let fbAuth=null,fbDb=null,authUser=null,cloudReady=false,cloudSyncTimer=null,cloudSyncBusy=false,cloudSyncQueued=false,leaderboardFetch=null,cloudLeaderboardCache={},leaderboardPeriod='all',leaderboardAudience='world',authBusy=false,leaderboardUnsubscribe=null,leaderboardRealtimeKey='',leaderboardWriteTimer=null,leaderboardWriteBusy=false,leaderboardWriteQueued=false;
 const SESSION_KEY='wordpilot_active_session_v34';
 function selectedQuizStyle(){return document.querySelector('input[name="quizStyle"]:checked')?.value||'classic'}
 
@@ -322,6 +322,32 @@ function scheduleCloudSync(delay=180){
   setSyncStatus('Değişiklikler kaydediliyor…','syncing');
   cloudSyncTimer=setTimeout(syncCloudNow,delay);
 }
+function setLeagueSyncStatus(text,type=''){
+  const el=$('#leagueSyncStatus');if(!el)return;el.textContent=text;el.dataset.state=type;
+}
+function leaderboardCloudPayload(){
+  if(!authUser)return null;
+  const publicName=accountDisplayName(profile?.name,authUser),scores=leaderboardScores(),c=counts();
+  return {uid:authUser.uid,name:publicName,friendCode:ownFriendCode(authUser.uid),...scores,photoURL:authUser.photoURL||profile?.photoURL||'',streak:computeStreak(),memorized:c.memorized,learn:c.learn,hard:c.hard,wrong:c.wrong,favorite:c.favorite,answers:Number(state?.stats?.answers)||0,accuracy:state?.stats?.answers?Math.round(state.stats.correct/state.stats.answers*100):0,clientUpdatedAt:new Date().toISOString(),updatedAt:window.firebase.firestore.FieldValue.serverTimestamp()};
+}
+function scheduleLeaderboardWrite(delay=80){
+  if(!authUser||!fbDb||!cloudReady)return;
+  clearTimeout(leaderboardWriteTimer);setLeagueSyncStatus('Puan eşitleniyor…','syncing');
+  leaderboardWriteTimer=setTimeout(pushLeaderboardNow,delay);
+}
+async function pushLeaderboardNow(){
+  if(!authUser||!fbDb||!cloudReady)return;
+  if(leaderboardWriteBusy){leaderboardWriteQueued=true;return}
+  leaderboardWriteBusy=true;leaderboardWriteQueued=false;clearTimeout(leaderboardWriteTimer);
+  const payload=leaderboardCloudPayload();if(!payload){leaderboardWriteBusy=false;return}
+  try{
+    await fbDb.collection('leaderboard').doc(authUser.uid).set(payload,{merge:true});
+    updateLeaderboardCacheWithOwn();
+    if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(mergeOwnLeaderboardRow(cloudLeaderboardCache[`${leaderboardAudience}:${leaderboardPeriod}`]||[]),authUser.uid);
+    setLeagueSyncStatus('Puan güncel ✓','ok');
+  }catch(error){console.error('Leaderboard write error',error);setLeagueSyncStatus('İnternet gelince güncellenecek','error')}
+  finally{leaderboardWriteBusy=false;if(leaderboardWriteQueued){leaderboardWriteQueued=false;scheduleLeaderboardWrite(120)}}
+}
 async function syncCloudNow(){
   if(!authUser||!fbDb||!cloudReady)return;
   if(cloudSyncBusy){cloudSyncQueued=true;return}
@@ -333,12 +359,13 @@ async function syncCloudNow(){
       state:packState(state),clientUpdatedAt:state.lastActive,
       updatedAt:window.firebase.firestore.FieldValue.serverTimestamp()
     };
-    const leaderboardPayload={uid:authUser.uid,name:publicName,friendCode:ownFriendCode(authUser.uid),...scores,photoURL:authUser.photoURL||'',streak:computeStreak(),memorized:c.memorized,learn:c.learn,hard:c.hard,wrong:c.wrong,favorite:c.favorite,answers:Number(state.stats.answers)||0,accuracy:state.stats.answers?Math.round(state.stats.correct/state.stats.answers*100):0,updatedAt:window.firebase.firestore.FieldValue.serverTimestamp()};
+    const leaderboardPayload=leaderboardCloudPayload();
     await Promise.all([
       fbDb.collection('users').doc(authUser.uid).set(userPayload,{merge:true}),
       fbDb.collection('leaderboard').doc(authUser.uid).set(leaderboardPayload,{merge:true})
     ]);
     setSyncStatus('Senkronize edildi ✓','ok');
+    setLeagueSyncStatus('Puan güncel ✓','ok');
     updateLeaderboardCacheWithOwn();
     if($('#view-league')?.classList.contains('active'))renderLeaderboard();
   }catch(error){console.error('Cloud sync error',error);setSyncStatus('İnternet gelince yeniden eşitlenecek','error')}
@@ -564,10 +591,12 @@ async function refreshCloudLeaderboard(force=false){
     if(!force&&leaderboardUnsubscribe&&leaderboardRealtimeKey===cacheKey)return;
     stopLeaderboardRealtime();leaderboardRealtimeKey=cacheKey;
     const query=fbDb.collection('leaderboard').orderBy(leagueField(),'desc').limit(100);
-    leaderboardUnsubscribe=query.onSnapshot(snap=>{
+    leaderboardUnsubscribe=query.onSnapshot({includeMetadataChanges:true},snap=>{
       const rows=mergeOwnLeaderboardRow(snap.docs.map(doc=>({uid:doc.id,...doc.data()})));
-      cloudLeaderboardCache[cacheKey]=rows;if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(rows,authUser.uid);
-    },error=>{console.error('Leaderboard realtime error',error);if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Sıralama şu an yüklenemedi.</p>'});
+      cloudLeaderboardCache[cacheKey]=rows;
+      setLeagueSyncStatus(snap.metadata.hasPendingWrites?'Puan eşitleniyor…':snap.metadata.fromCache?'Çevrimdışı liste':'Canlı güncel ✓',snap.metadata.hasPendingWrites?'syncing':snap.metadata.fromCache?'idle':'ok');
+      if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(rows,authUser.uid);
+    },error=>{console.error('Leaderboard realtime error',error);setLeagueSyncStatus('Lig bağlantısı kurulamadı','error');if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Sıralama şu an yüklenemedi.</p>'});
     return;
   }
   stopLeaderboardRealtime();
@@ -631,7 +660,7 @@ function setStatusValue(id,value){
   if(value)state.statuses[key]=value;else delete state.statuses[key];
 }
 function setStatus(id,status){
-  const value=statusOf(id)===status?'':status;setStatusValue(id,value);save();renderAll();refreshWordStatus();
+  const value=statusOf(id)===status?'':status;setStatusValue(id,value);save();scheduleLeaderboardWrite(80);renderAll();refreshWordStatus();
   toast(value?`${STATUS_LABEL[status]} olarak kaydedildi`:'İşaret kaldırıldı');
 }
 function setFlagValue(id,flag,value){
@@ -639,7 +668,7 @@ function setFlagValue(id,flag,value){
   if(value)state.flags[flag][key]=true;else delete state.flags[flag][key];
 }
 function setFlag(id,flag){
-  const value=!flagOf(id,flag);setFlagValue(id,flag,value);save();renderAll();refreshWordStatus();
+  const value=!flagOf(id,flag);setFlagValue(id,flag,value);save();scheduleLeaderboardWrite(80);renderAll();refreshWordStatus();
   toast(value?`${FLAG_LABEL[flag]} işaretlendi`:`${FLAG_LABEL[flag]} işareti kaldırıldı`);
 }
 function selectedIds(){return new Set((state.selected||[]).map(Number))}
@@ -654,7 +683,7 @@ function updateSelectedControls(){
 function adjustPoints(delta){
   const amount=Math.round(Number(delta)||0),bucket=ensureDayBucket();
   if(session)session.score=Math.max(0,Math.round((session.score||0)+amount));
-  state.stats.points=Math.max(0,Math.round((state.stats.points||0)+amount));bucket.points=Math.max(0,Math.round((bucket.points||0)+amount));save();updateLeaderboardCacheWithOwn();if($('#view-league')?.classList.contains('active'))renderLeaderboard();
+  state.stats.points=Math.max(0,Math.round((state.stats.points||0)+amount));bucket.points=Math.max(0,Math.round((bucket.points||0)+amount));save();updateLeaderboardCacheWithOwn();scheduleLeaderboardWrite(40);if($('#view-league')?.classList.contains('active'))renderLeaderboard();
 }
 function responseScore(){
   const elapsed=Math.max(0,(Date.now()-(session?.questionStartedAt||Date.now()))/1000),rate=session?.quizStyle==='speed'?5.4:3.2,floor=session?.quizStyle==='speed'?20:25;
@@ -700,7 +729,10 @@ function nav(name){
   window.scrollTo({top:0,behavior:'smooth'});
   if(name==='library')renderWords(true);
   if(name==='progress')renderProgress();
-  if(name==='league'){renderLeaderboard();if(authUser)syncCloudNow()}else stopLeaderboardRealtime();
+  if(name==='league'){
+    renderLeaderboard();
+    if(authUser){scheduleLeaderboardWrite(0);refreshCloudLeaderboard(true)}
+  }else stopLeaderboardRealtime();
 }
 function dailyWordOfDay(){
   const pool=words.filter(w=>Number(w.id)<=5000);if(!pool.length)return null;
@@ -1357,8 +1389,9 @@ function setupEvents(){
   $('#offlineBtn').addEventListener('click',downloadOfflineMode);
   $('#googleSignInBtn').addEventListener('click',signInWithGoogle);
   $('#googleSignOutBtn').addEventListener('click',signOutGoogle);
+  $('#refreshLeagueBtn')?.addEventListener('click',()=>{if(!authUser){renderLeaderboard();return}setLeagueSyncStatus('Yenileniyor…','syncing');scheduleLeaderboardWrite(0);refreshCloudLeaderboard(true)});
   $('#guestContinueBtn').addEventListener('click',()=>switchToGuestMode());
-  window.addEventListener('online',()=>{if(authUser){syncCloudNow();refreshCloudLeaderboard(true)}});
+  window.addEventListener('online',()=>{if(authUser){syncCloudNow();pushLeaderboardNow();refreshCloudLeaderboard(true)}});
   document.addEventListener('submit',e=>{
     if(e.target.id==='friendAddForm'){
       e.preventDefault();if(!authUser){toast('Arkadaş eklemek için Google hesabıyla giriş yap.');return}const input=$('#friendCodeInput');if(setFriendCode(input.value,true))input.value='';return;
