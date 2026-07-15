@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot — kişisel İngilizce kelime öğrenme ve akıllı tekrar platformu.">
+  <meta name="description" content="WordPilot — İngilizce, Rusça ve Özbekçe öğrenme, günlük görevler ve akıllı tekrar platformu.">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style-3.6.6.css?v=3.6.6">
+  <link rel="stylesheet" href="style-4.0.0.css?v=4.0.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='3.6.6',KEY='wordpilot_asset_build';
+    const BUILD='4.0.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6.6</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -65,11 +65,24 @@
         <button class="secondary desktop-only" data-action="open-profile">Profili yönet</button>
       </div>
 
+
+      <section class="course-selector-section" aria-labelledby="courseSelectorTitle">
+        <div class="course-selector-head">
+          <div><p class="eyebrow">KURSUNU SEÇ</p><h2 id="courseSelectorTitle">Bugün hangi dili öğrenmek istiyorsun?</h2></div>
+          <span id="activeCourseSummary" class="course-summary">English · 6000 kelime</span>
+        </div>
+        <div class="course-selector-grid">
+          <button class="course-card active" data-course="en" type="button"><span class="course-flag">🇬🇧</span><div><b>English</b><small>Türkçe anlatımlı · 6000 kelime ve kalıp</small></div><em>Aktif</em></button>
+          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · A1 başlangıç</small></div><em>Seç</em></button>
+          <button class="course-card" data-course="uz" type="button"><span class="course-flag">🇺🇿</span><div><b>O‘zbekcha</b><small>Türkçe anlatımlı · A1 başlangıç</small></div><em>Seç</em></button>
+        </div>
+      </section>
+
       <section class="continue-card">
         <div class="continue-copy">
           <span class="chip">BUGÜNKÜ UÇUŞ PLANI</span>
-          <h2>6000 kelimeyi kendi hızında, kalıcı öğren.</h2>
-          <p id="heroMessage">Akıllı tekrarların, yeni kelimelerin ve zorlandığın kayıtlar hazır.</p>
+          <h2>Seçtiğin dili kendi hızında, kalıcı öğren.</h2>
+          <p id="heroMessage">Akıllı tekrarların, günlük görevlerin ve zorlandığın kayıtlar hazır.</p>
           <div class="hero-actions">
             <button class="primary xl" data-action="open-study-setup">▶ Devam Et</button>
             <button class="soft" data-start="review">Zorlandıklarım</button>
@@ -83,11 +96,23 @@
       </section>
 
       <div class="platform-proof" aria-label="WordPilot özellikleri">
-        <div><strong>6000</strong><span>kelime ve kalıp</span></div>
-        <div><strong>8</strong><span>çalışma modu</span></div>
+        <div><strong id="proofWordCount">6000</strong><span id="proofWordLabel">kelime ve kalıp</span></div>
+        <div><strong>11</strong><span>çalışma modu</span></div>
         <div><strong>☁</strong><span>cihazlar arası senkron</span></div>
         <div><strong>↓</strong><span>çevrimdışı çalışma</span></div>
       </div>
+
+
+      <section class="xp-task-section">
+        <article class="xp-level-card">
+          <div class="xp-level-icon">⚡</div>
+          <div class="xp-level-copy"><p class="eyebrow">XP SİSTEMİ</p><h3>Seviye <span id="xpLevel">1</span></h3><p><b id="globalXpText">0 XP</b> · sonraki seviyeye <span id="xpToNext">500 XP</span></p><div class="xp-level-track"><i id="xpLevelFill"></i></div></div>
+        </article>
+        <article class="daily-tasks-card">
+          <div class="daily-tasks-head"><div><p class="eyebrow">GÜNLÜK GÖREVLER</p><h3>Bugünün görevleri</h3></div><span id="dailyTaskDone">0 / 4</span></div>
+          <div id="dailyTaskList" class="daily-task-list"></div>
+        </article>
+      </section>
 
       <div class="kpi-grid">
         <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
@@ -118,7 +143,7 @@
 
       <button class="league-launch-card" data-nav="league" type="button">
         <span class="league-launch-icon">🏆</span>
-        <span><b>WordPilot Ligi</b><small>Kim kaç puan topladı? Sıralamayı gör.</small></span>
+        <span><b>WordPilot Ligi</b><small>Kim kaç XP topladı? Sıralamayı gör.</small></span>
         <em>Lig →</em>
       </button>
 
@@ -190,6 +215,9 @@
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="cloze"><span class="mode-icon violet">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
@@ -219,14 +247,14 @@
         <div class="how-grid">
           <article><span>1</span><div><b>Listeni seç</b><p>Seviye, durum, yanlışlar, favoriler veya özel numara aralığı.</p></div></article>
           <article><span>2</span><div><b>Modunu başlat</b><p>Quiz, kart, yazma, dinleme, eşleştirme, eş ya da zıt anlam.</p></div></article>
-          <article><span>3</span><div><b>Kalıcılaştır</b><p>Zor kelimeler tekrar gelir; puanın, serin ve lig sıran güncellenir.</p></div></article>
+          <article><span>3</span><div><b>Kalıcılaştır</b><p>Zor kelimeler tekrar gelir; XP’in, serin ve lig sıran güncellenir.</p></div></article>
         </div>
       </section>
 
       <section class="why-section">
         <div class="why-card"><span>◎</span><b>Bağlamlı öğrenme</b><p>Çoklu anlam, örnek cümle, kullanım yıldızları ve kelime ilişkileri tek yerde.</p></div>
         <div class="why-card"><span>↻</span><b>Akıllı tekrar</b><p>Yanlış ve zorlandığın kelimeler kişisel tekrar kuyruğuna alınır.</p></div>
-        <div class="why-card"><span>🏆</span><b>Gerçek zamanlı motivasyon</b><p>Puanın ve lig sıran çalışırken güncellenir; cihazların aynı hesapta birleşir.</p></div>
+        <div class="why-card"><span>🏆</span><b>Gerçek zamanlı motivasyon</b><p>XP’in ve lig sıran çalışırken güncellenir; cihazların aynı hesapta birleşir.</p></div>
       </section>
 
       <section class="home-tools panel">
@@ -237,13 +265,13 @@
           <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
           <button class="home-tool-card sync" data-action="open-profile" type="button"><span>☁</span><div><b>Hesabı senkronize et</b><small>Google hesabı ve profil ayarları</small></div><em>→</em></button>
         </div>
-        <p id="offlineStatus" class="settings-note">Yaklaşık 4,3 MB: ana sayfa, oyun dosyaları, simgeler ve 6000 kelimelik words.json tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
+        <p id="offlineStatus" class="settings-note">Yaklaşık 4,6 MB: ana sayfa, oyun dosyaları, simgeler ve English / Русский / O‘zbekcha kurs verileri tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
 
       <footer class="site-footer">
         <div class="footer-brand">
           <span class="brandmark"><span>W</span></span>
-          <div><b>WordPilot</b><p>6000 kelimelik kişisel İngilizce öğrenme ve akıllı tekrar platformu.</p></div>
+          <div><b>WordPilot</b><p>English, Русский ve O‘zbekcha için Türkçe anlatımlı akıllı öğrenme platformu.</p></div>
         </div>
         <div class="footer-links">
           <button data-nav="library">Kelime kütüphanesi</button>
@@ -258,7 +286,7 @@
 
     <section id="view-library" class="view">
       <div class="section-title">
-        <div><p class="eyebrow">WORD LIBRARY</p><h1>Kelime kütüphanesi</h1><p class="muted"><span id="resultCount">0</span> kayıt gösteriliyor</p></div>
+        <div><p class="eyebrow">WORD LIBRARY</p><h1><span id="libraryCourseName">English</span> kelime kütüphanesi</h1><p class="muted"><span id="resultCount">0</span> kayıt gösteriliyor</p></div>
         <div class="library-study-actions">
           <button id="studySelectedBtn" class="secondary" type="button" hidden>Seçilenlere çalış (<span id="selectedCount">0</span>)</button>
           <button class="primary desktop-only" data-action="open-study-setup">Bu listeden çalış</button>
@@ -283,7 +311,7 @@
               <span id="studyModeName">Akıllı Quiz</span>
               <div class="study-scoreline">
                 <span id="studyHearts" class="study-hearts" hidden>♥♥♥</span>
-                <span id="studyScore">0 puan</span>
+                <span id="studyScore">0 XP</span>
                 <span id="studyCombo" class="study-combo" hidden>🔥 0 seri</span>
                 <span id="studyTimer">—</span>
                 <b id="studyCounter">1 / 20</b>
@@ -322,10 +350,10 @@
     <section id="view-progress" class="view">
       <div class="section-title"><div><p class="eyebrow">FLIGHT LOG</p><h1>İlerleme raporu</h1><p class="muted">Bugün, bu hafta, bu ay ve toplam çalışma kayıtların.</p></div></div>
       <div class="period-summary-grid">
-        <article class="period-card"><small>BUGÜN</small><strong id="pTodayPoints">0</strong><span>puan · <b id="pTodayAnswers">0</b> cevap</span></article>
-        <article class="period-card"><small>BU HAFTA</small><strong id="pWeekPoints">0</strong><span>puan · <b id="pWeekAnswers">0</b> cevap</span></article>
-        <article class="period-card"><small>BU AY</small><strong id="pMonthPoints">0</strong><span>puan · <b id="pMonthAnswers">0</b> cevap</span></article>
-        <article class="period-card"><small>TOPLAM</small><strong id="pTotalPoints">0</strong><span>puan · <b id="pSessions">0</b> oturum</span></article>
+        <article class="period-card"><small>BUGÜN</small><strong id="pTodayPoints">0</strong><span>XP · <b id="pTodayAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>BU HAFTA</small><strong id="pWeekPoints">0</strong><span>XP · <b id="pWeekAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>BU AY</small><strong id="pMonthPoints">0</strong><span>XP · <b id="pMonthAnswers">0</b> cevap</span></article>
+        <article class="period-card"><small>TOPLAM</small><strong id="pTotalPoints">0</strong><span>XP · <b id="pSessions">0</b> oturum</span></article>
       </div>
       <div class="report-grid">
         <article class="panel report-main"><h3>Genel hakimiyet</h3><div class="donut" id="masteryDonut"><div><strong id="masteryPercent">0%</strong><span>işaretlendi</span></div></div><div class="legend"><span><i class="l1"></i>Öğreniyorum <b id="rLearn">0</b></span><span><i class="l2"></i>Ezberledim <b id="rMem">0</b></span><span><i class="l3"></i>Zorlanıyorum <b id="rHard">0</b></span></div></article>
@@ -339,14 +367,14 @@
 
     <section id="view-league" class="view">
       <div class="section-title league-page-title">
-        <div><p class="eyebrow">WORDPILOT LİGİ</p><h1>Lig sıralaması</h1><p class="muted">Google hesabıyla giriş yapan öğrencilerin toplam puanları.</p></div>
+        <div><p class="eyebrow">WORDPILOT LİGİ</p><h1>Lig sıralaması</h1><p class="muted">Google hesabıyla giriş yapan öğrencilerin toplam XP değerleri.</p></div>
       </div>
       <div class="league-page-wrap">
         <article class="panel leaderboard-panel league-page-panel">
-          <div class="leaderboard-head"><div><p class="eyebrow">WORDPILOT LİGİ</p><h3>Kim kaç puan topladı?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
+          <div class="leaderboard-head"><div><p class="eyebrow">WORDPILOT LİGİ</p><h3>Kim kaç XP topladı?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
           <div class="league-hero">
             <div class="league-cup">🏆</div>
-            <div><b>Kelime Pilotları Ligi</b><small id="leaguePeriodText">Toplam puana göre sıralama</small></div>
+            <div><b>Kelime Pilotları Ligi</b><small id="leaguePeriodText">Toplam XP’ye göre sıralama</small></div>
           </div>
           <div class="league-period-tabs" role="tablist" aria-label="Lig dönemi">
             <button type="button" data-league-period="daily">Bugün</button>
@@ -362,14 +390,14 @@
             <div class="friend-code-box"><span>Arkadaş kodun</span><code id="myFriendCode">Giriş gerekli</code><button id="copyFriendCode" type="button">Kopyala</button></div>
             <form id="friendAddForm" class="friend-add-form"><input id="friendCodeInput" maxlength="12" autocomplete="off" placeholder="Arkadaş kodunu yaz"><button class="primary" type="submit">Ekle</button></form>
             <div id="friendCodeList" class="friend-code-list"></div>
-            <p class="settings-note">Arkadaşın profilindeki kodu eklediğinde puanı arkadaş liginde görünür.</p>
+            <p class="settings-note">Arkadaşın profilindeki kodu eklediğinde XP’i arkadaş liginde görünür.</p>
           </div>
           <div class="league-stats">
-            <div><strong id="leagueUserPoints">0</strong><small>PUANIN</small></div>
+            <div><strong id="leagueUserPoints">0</strong><small>XP’İN</small></div>
             <div><strong id="leagueUserRank">—</strong><small>SIRALAMAN</small></div>
             <div><strong id="leagueUserCount">0</strong><small>KATILIMCI</small></div>
           </div>
-          <p id="leagueLoginNote" class="league-login-note" hidden>Ortak ligde görünmek için Google hesabınla giriş yap. Misafir puanı yalnızca bu cihazda kalır.</p>
+          <p id="leagueLoginNote" class="league-login-note" hidden>Ortak ligde görünmek için Google hesabınla giriş yap. Misafir XP’i yalnızca bu cihazda kalır.</p>
           <div class="leaderboard-live-row"><span class="live-dot"></span><small id="leagueSyncStatus">Canlı liste hazırlanıyor…</small><button id="refreshLeagueBtn" type="button">Yenile</button></div>
           <div class="leaderboard-title"><span></span><b>SIRALAMA</b></div>
           <div id="leaderboardList" class="leaderboard-list"></div>
@@ -392,7 +420,7 @@
   <button class="sheet-close" data-close="wordDialog">×</button>
   <div class="word-title">
     <div><span id="wordLevel" class="chip"></span><h2 id="wordEnglish"></h2><p id="wordPron"></p></div>
-    <div class="word-voice-actions"><button id="wordSpeakUS" class="speak-big" title="Amerikan İngilizcesi">🇺🇸</button><button id="wordSpeakUK" class="speak-big" title="İngiliz İngilizcesi">🇬🇧</button></div>
+    <div class="word-voice-actions"><button id="wordSpeakUS" class="speak-big" title="Birinci ses">🔊</button><button id="wordSpeakUK" class="speak-big" title="İkinci ses">🔉</button></div>
   </div>
   <div class="status-buttons"><button data-word-status="learn">Öğreniyorum</button><button data-word-status="memorized">Ezberledim</button><button data-word-status="hard">Zorlanıyorum</button></div>
   <div class="word-flag-buttons"><button data-word-flag="favorite">⭐ Favori</button><button data-word-flag="veryHard">🔥 Çok zor</button><button data-word-flag="ignored">🚫 Tekrar gösterme</button></div>
@@ -417,7 +445,7 @@
         <label class="quiz-style-card">
           <input type="radio" name="quizStyle" value="speed">
           <span class="quiz-style-icon orange">⏱</span>
-          <span><b>Hız</b><small>15 saniye, hızlı cevap daha çok puan.</small></span>
+          <span><b>Hız</b><small>15 saniye, hızlı cevap daha çok XP.</small></span>
         </label>
         <label class="quiz-style-card">
           <input type="radio" name="quizStyle" value="comprehensive">
@@ -431,7 +459,7 @@
         <option value="smart">Akıllı Quiz</option>
         <option value="flash">Kelime Kartları</option>
         <option value="en-tr">Yaz EN → TR</option>
-        <option value="tr-en">Yaz TR → EN</option><option value="listening">Sesli / Gizli Mod</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
+        <option value="tr-en">Yaz TR → EN</option><option value="listening">Sesli / Gizli Mod</option><option value="cloze">Boşluk Doldurma</option><option value="sentence">Cümle Tamamlama</option><option value="dictation">Dinlediğini Yaz</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
         <option value="review">Zor ve tekrar bekleyenler</option>
       </select>
     </label>
@@ -475,7 +503,7 @@
     <div class="study-preferences">
       <label class="toggle-row">
         <input id="autoSpeakToggle" type="checkbox" checked>
-        <span><b>Otomatik sesli okuma</b><small>Her yeni soruda İngilizce kelimeyi okur.</small></span>
+        <span><b>Otomatik sesli okuma</b><small>Her yeni soruda hedef dildeki kelimeyi okur.</small></span>
       </label>
       <label class="toggle-row">
         <input id="hiddenModeToggle" type="checkbox">
@@ -509,7 +537,7 @@
 
 <dialog id="profileDialog" class="modal">
   <button class="sheet-close" data-close="profileDialog">×</button>
-  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen, puanın ve lig sıran telefon ile bilgisayarda eşitlenir.</p></div></div>
+  <div class="profile-head"><div class="profile-avatar" id="profileAvatar">M</div><div><p class="eyebrow">PİLOT PROFİLİ</p><h2 id="profileTitle">Profilini oluştur</h2><p class="muted">Google hesabınla giriş yaptığında ilerlemen, XP’in ve lig sıran telefon ile bilgisayarda eşitlenir.</p></div></div>
 
   <section class="auth-section">
     <div id="authSignedOut" class="auth-card auth-card-signed-out">
@@ -529,7 +557,7 @@
   </section>
 
   <div class="profile-stat-grid">
-    <div><strong id="profilePoints">0</strong><small>PUAN</small></div>
+    <div><strong id="profilePoints">0</strong><small>XP</small></div>
     <div><strong id="profileMem">0</strong><small>EZBER</small></div>
     <div><strong id="profileLearn">0</strong><small>ÖĞREN</small></div>
     <div><strong id="profileHard">0</strong><small>ZOR</small></div>
@@ -540,9 +568,9 @@
   </div>
 
   <form id="profileForm"><label>Adın<input id="profileName" required maxlength="30" placeholder="Örn. Muhammed"></label><label>E-posta<input id="profileEmail" type="email" readonly placeholder="Google ile giriş yaptığında otomatik gelir"></label><label>Günlük hedef<select id="dailyGoal"><option value="10">10 soru</option><option value="20" selected>20 soru</option><option value="30">30 soru</option><option value="50">50 soru</option></select></label>
-  <label>Varsayılan İngilizce sesi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
+  <label>İngilizce ses tercihi<select id="voiceAccent"><option value="en-US">🇺🇸 Amerikan İngilizcesi</option><option value="en-GB">🇬🇧 İngiliz İngilizcesi</option></select></label>
   <button class="primary wide" type="submit">Profili kaydet</button></form>
-  <div class="cloud-note"><span>☁</span><p id="cloudNoteText"><b>Google senkronizasyonu</b><br>Giriş yapınca ilerleme ve puanlar cihazlar arasında eşitlenir.</p></div>
+  <div class="cloud-note"><span>☁</span><p id="cloudNoteText"><b>Google senkronizasyonu</b><br>Giriş yapınca ilerleme ve XP değerleri cihazlar arasında eşitlenir.</p></div>
   <button id="resetData" class="danger-link">Bu profildeki ilerlemeyi sıfırla</button>
 </dialog>
 
@@ -556,6 +584,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app-3.6.6.js?v=3.6.6" defer></script>
+<script src="app-4.0.0.js?v=4.0.0" defer></script>
 </body>
 </html>

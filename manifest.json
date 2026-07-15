@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot — English Learning",
+  "name": "WordPilot — English, Русский, O‘zbekcha",
   "short_name": "WordPilot",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "6000 kelimelik İngilizce çalışma, gerçek zamanlı lig, Google hesap senkronizasyonu, Günün Kelimesi, kişisel listeler ve çevrimdışı kullanım.",
+  "description": "Türkçe anlatımlı İngilizce, Rusça ve Özbekçe kursları; XP, günlük görevler, lig, dikte, boşluk doldurma ve çevrimdışı kullanım.",
   "icons": [
     {
       "src": "icon-192.png",

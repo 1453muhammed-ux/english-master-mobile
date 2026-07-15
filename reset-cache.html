@@ -8,6 +8,6 @@
     if('serviceWorker'in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.map(r=>r.unregister()))}
     if('caches'in window){const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('wordpilot-')).map(k=>caches.delete(k)))}
   }catch(e){console.error(e)}
-  location.replace('./?wpbuild=3.6.6&t='+Date.now());
+  location.replace('./?wpbuild=4.0.0&t='+Date.now());
 })();
 </script></body></html>
