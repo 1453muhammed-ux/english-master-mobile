@@ -1,4 +1,4 @@
-WORDPILOT v3.6.4
+WORDPILOT v3.6.5
 
 GitHub Pages yükleme:
 1. ZIP dosyasını bilgisayarda açın.
@@ -41,3 +41,12 @@ v3.6.4 düzeltmeleri:
 - Google hesabı bağlıyken profil başlığında Misafir yerine Google adı gösterilir.
 - Firebase hataları artık yanlışlıkla yalnızca internet hatası olarak gösterilmez; izin, oturum, kota ve veri hataları ayrılır.
 - İnternet geri geldiğinde ilerleme ve lig puanı otomatik yeniden eşitlenir.
+
+
+v3.6.5 düzeltmeleri:
+- Firestore'un kabul etmediği iç içe dizi kayıt yapısı kaldırıldı; kelime durumları ve geçmiş nesne dizileriyle güvenli biçimde eşitlenir.
+- Eski v2 bulut kayıtları okunmaya devam eder; yeni kayıtlar v3 biçiminde yazılır.
+- Firestore tanımsız alanları güvenli biçimde atlar.
+- Google hesabı bağlıyken profil başlığı ve ad alanı anında Google adıyla güncellenir.
+- Eski Service Worker/önbellek yalnızca bir kez temizlenir; localStorage ve ilerleme kayıtları silinmez.
+- reset-cache.html, masaüstünde eski sürüm kalırsa ilerlemeyi silmeden uygulama önbelleğini yeniler.

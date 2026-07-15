@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='3.6.4';
+const VERSION='3.6.5';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
 const AUTH_FLOW_KEY=`${STORE}:google_auth_flow`;
@@ -155,25 +155,41 @@ function stateTime(value){
 }
 function packState(value){
   const st=ensureStateShape(cloneData(value)||defaultState());
-  const packChanges=map=>Object.entries(map||{}).map(([id,rec])=>[Number(id),rec?.value??'',Number(rec?.at)||0]);
+  // Firestore doğrudan iç içe dizileri (array içinde array) kabul etmez.
+  // Bu nedenle değişiklik kayıtları v3 biçiminde nesne dizileri olarak saklanır.
+  const packChanges=map=>Object.entries(map||{}).map(([id,rec])=>({
+    id:Number(id),value:rec?.value??'',at:Number(rec?.at)||0
+  }));
   return {
-    v:2,
+    v:3,
     statusChanges:packChanges(st.statusUpdated),
     flagChanges:{favorite:packChanges(st.flagUpdated.favorite),veryHard:packChanges(st.flagUpdated.veryHard),ignored:packChanges(st.flagUpdated.ignored)},
     selectionChanges:packChanges(st.selectionUpdated),
-    friendChanges:Object.entries(st.friendUpdated||{}).map(([code,rec])=>[code,!!rec?.value,Number(rec?.at)||0]),
-    history:Object.entries(st.history).map(([id,h])=>[Number(id),Number(h?.right)||0,Number(h?.wrong)||0,Number(h?.level)||0,Date.parse(h?.last||'')||0,h?.needsReview?1:0]),
-    stats:cloneData(st.stats),lastActive:st.lastActive
+    friendChanges:Object.entries(st.friendUpdated||{}).map(([code,rec])=>({code,value:!!rec?.value,at:Number(rec?.at)||0})),
+    history:Object.entries(st.history).map(([id,h])=>({
+      id:Number(id),right:Number(h?.right)||0,wrong:Number(h?.wrong)||0,level:Number(h?.level)||0,
+      last:Date.parse(h?.last||'')||0,needsReview:!!h?.needsReview
+    })),
+    stats:cloneData(st.stats),lastActive:String(st.lastActive||new Date().toISOString())
   };
 }
 function unpackState(value){
-  if(!value||value.v!==2)return value;
-  const out=defaultState();
-  (value.statusChanges||[]).forEach(([id,val,at])=>out.statusUpdated[id]={value:String(val||''),at:Number(at)||0});
-  ['favorite','veryHard','ignored'].forEach(flag=>(value.flagChanges?.[flag]||[]).forEach(([id,val,at])=>out.flagUpdated[flag][id]={value:!!val,at:Number(at)||0}));
-  (value.selectionChanges||[]).forEach(([id,val,at])=>out.selectionUpdated[id]={value:!!val,at:Number(at)||0});
-  (value.friendChanges||[]).forEach(([code,val,at])=>out.friendUpdated[String(code||'').toUpperCase()]={value:!!val,at:Number(at)||0});
-  (value.history||[]).forEach(([id,right,wrong,level,last,needs])=>out.history[id]={right:Number(right)||0,wrong:Number(wrong)||0,level:Number(level)||0,last:last?new Date(Number(last)).toISOString():null,needsReview:!!needs});
+  if(!value||![2,3].includes(Number(value.v)))return value;
+  const out=defaultState(),v=Number(value.v);
+  if(v===2){
+    // Önceki paket biçimiyle kaydedilmiş boş/eski kayıtlarla geriye uyumluluk.
+    (value.statusChanges||[]).forEach(([id,val,at])=>out.statusUpdated[id]={value:String(val||''),at:Number(at)||0});
+    ['favorite','veryHard','ignored'].forEach(flag=>(value.flagChanges?.[flag]||[]).forEach(([id,val,at])=>out.flagUpdated[flag][id]={value:!!val,at:Number(at)||0}));
+    (value.selectionChanges||[]).forEach(([id,val,at])=>out.selectionUpdated[id]={value:!!val,at:Number(at)||0});
+    (value.friendChanges||[]).forEach(([code,val,at])=>out.friendUpdated[String(code||'').toUpperCase()]={value:!!val,at:Number(at)||0});
+    (value.history||[]).forEach(([id,right,wrong,level,last,needs])=>out.history[id]={right:Number(right)||0,wrong:Number(wrong)||0,level:Number(level)||0,last:last?new Date(Number(last)).toISOString():null,needsReview:!!needs});
+  }else{
+    (value.statusChanges||[]).forEach(rec=>out.statusUpdated[rec?.id]={value:String(rec?.value||''),at:Number(rec?.at)||0});
+    ['favorite','veryHard','ignored'].forEach(flag=>(value.flagChanges?.[flag]||[]).forEach(rec=>out.flagUpdated[flag][rec?.id]={value:!!rec?.value,at:Number(rec?.at)||0}));
+    (value.selectionChanges||[]).forEach(rec=>out.selectionUpdated[rec?.id]={value:!!rec?.value,at:Number(rec?.at)||0});
+    (value.friendChanges||[]).forEach(rec=>out.friendUpdated[String(rec?.code||'').toUpperCase()]={value:!!rec?.value,at:Number(rec?.at)||0});
+    (value.history||[]).forEach(rec=>out.history[rec?.id]={right:Number(rec?.right)||0,wrong:Number(rec?.wrong)||0,level:Number(rec?.level)||0,last:rec?.last?new Date(Number(rec.last)).toISOString():null,needsReview:!!rec?.needsReview});
+  }
   out.stats=value.stats||out.stats;out.lastActive=value.lastActive||out.lastActive;
   return ensureStateShape(out);
 }
@@ -317,8 +333,12 @@ function updateAuthUI(){
   const signed=!!authUser;
   if($('#authSignedOut'))$('#authSignedOut').hidden=signed;
   if($('#authSignedIn'))$('#authSignedIn').hidden=!signed;
-  if($('#authUserName'))$('#authUserName').textContent=accountDisplayName();
+  const visibleName=signed?accountDisplayName(profile?.name,authUser):(profile?.name||'Misafir');
+  if(signed&&placeholderName(profile?.name))profile.name=visibleName;
+  if($('#authUserName'))$('#authUserName').textContent=visibleName;
   if($('#authUserEmail'))$('#authUserEmail').textContent=authUser?.email||'';
+  if($('#profileTitle')&&signed)$('#profileTitle').textContent=visibleName;
+  if($('#profileName')&&signed&&placeholderName($('#profileName').value))$('#profileName').value=visibleName;
   if($('#profileEmail'))$('#profileEmail').value=signed?(authUser?.email||''):(profile?.email==='guest@local'?'':profile?.email||'');
   if($('#guestBanner'))$('#guestBanner').hidden=signed;
   if($('#cloudNoteText'))$('#cloudNoteText').innerHTML=signed
@@ -497,6 +517,8 @@ async function initFirebase(){
   try{
     if(!window.firebase.apps.length)window.firebase.initializeApp(FIREBASE_CONFIG);
     fbAuth=window.firebase.auth();fbDb=window.firebase.firestore();
+    // Eski yerel kayıtlardaki tanımsız alanlar senkronizasyonu durdurmasın.
+    try{fbDb.settings({ignoreUndefinedProperties:true})}catch(error){console.warn('Firestore settings',error)}
     fbAuth.useDeviceLanguage();
     await fbAuth.setPersistence(window.firebase.auth.Auth.Persistence.LOCAL);
     fbAuth.onAuthStateChanged(user=>handleAuthState(user).catch(error=>{console.error(error);setSyncStatus('Senkronizasyon başlatılamadı','error')}));

@@ -11,8 +11,24 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=3.6.4">
+  <link rel="stylesheet" href="style.css?v=3.6.5">
   <title>WordPilot · Powered by English Master</title>
+  <script>
+  // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
+  // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
+  (()=>{
+    const BUILD='3.6.5',KEY='wordpilot_asset_build';
+    if(localStorage.getItem(KEY)===BUILD)return;
+    localStorage.setItem(KEY,BUILD);
+    Promise.all([
+      'serviceWorker'in navigator?navigator.serviceWorker.getRegistrations().then(items=>Promise.all(items.map(item=>item.unregister()))):Promise.resolve(),
+      'caches'in window?caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('wordpilot-')).map(key=>caches.delete(key)))):Promise.resolve()
+    ]).finally(()=>{
+      const url=new URL(location.href);
+      if(url.searchParams.get('wpbuild')!==BUILD){url.searchParams.set('wpbuild',BUILD);location.replace(url.href)}
+    });
+  })();
+  </script>
 </head>
 <body>
 <div id="app">
@@ -29,7 +45,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6.4</span>
+      <span id="xpText" class="xp-pill">0 puan</span><span class="version">v3.6.5</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -537,6 +553,6 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=3.6.4" defer></script>
+<script src="app.js?v=3.6.5" defer></script>
 </body>
 </html>
