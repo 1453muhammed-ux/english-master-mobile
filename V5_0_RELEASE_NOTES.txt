@@ -1,6 +1,0 @@
-WordPilot v5.1.3
-- Öğrenme Merkezi ve seçili çalışma bölümü günlük uçuş planının üstüne taşındı.
-- Günlük uçuş planı masaüstü ve mobilde daha kompakt hale getirildi.
-- Favori işaretleme günlük görevi kaldırıldı; yerine 1 hikâye bölümü tamamlama görevi eklendi.
-- Hikâye görevi doğrudan Hikâyeler sayfasını açar.
-- App Check entegrasyonu korunmuştur; Enforce metrik kontrolünden sonra açılmalıdır.
