@@ -790,7 +790,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .wp65-ai-checks{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.wp65-ai-head-tools button{white-space:nowrap}@media(max-width:620px){.wp65-ai-head-tools{width:100%;display:grid;grid-template-columns:1fr 1fr}.wp65-ai-head-tools label{grid-column:1/-1}.wp65-ai-head-tools button{width:100%}.wp65-ai-checks{align-items:flex-start;flex-direction:column;gap:7px}}
 
 
-/* WordPilot v6.5.1 — Learning Center visual refinement */
+/* WordPilot v6.5.2 — Learning Center visual refinement */
 .learning-hub-promoted{
   position:relative;
   overflow:hidden;
@@ -873,4 +873,166 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:620px){
   .learning-hub-promoted:after{border-radius:22px 22px 0 0}
   .learning-hub-tabs button.active:before{left:9px;right:9px;bottom:5px;height:2px}
+}
+
+/* WordPilot v6.5.2 — compact premium Learning Center */
+.learning-hub-promoted{
+  padding:18px 18px 16px!important;
+  margin:18px 0 12px!important;
+  border-radius:24px!important;
+  background:#fff!important;
+  border:1px solid #e6e9f2!important;
+  box-shadow:0 12px 30px rgba(34,45,92,.065)!important;
+  overflow:hidden;
+}
+.learning-hub-promoted:after{
+  height:3px!important;
+  background:linear-gradient(90deg,#6c5ce7 0%,#8d80ef 52%,#62b8db 100%)!important;
+}
+.learning-hub-promoted .learning-hub-head{
+  display:block!important;
+  margin:0 0 12px!important;
+}
+.learning-hub-promoted .learning-hub-head h2{
+  margin:2px 0 4px!important;
+  font-size:clamp(23px,2.8vw,30px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.7px!important;
+}
+.learning-hub-promoted .learning-hub-head p:last-child{
+  margin:0!important;
+  font-size:13px!important;
+  line-height:1.42!important;
+  color:#7a8296!important;
+}
+.learning-hub-promoted .learning-hub-version{display:none!important}
+.learning-hub-tabs{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:6px!important;
+  margin:0!important;
+  padding:5px!important;
+  border-radius:17px!important;
+  background:#f5f6fa!important;
+  overflow:visible!important;
+}
+.learning-hub-promoted .learning-hub-tabs button,
+.learning-hub-tabs button{
+  min-width:0!important;
+  min-height:62px!important;
+  padding:9px 8px 8px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:3px!important;
+  text-align:center!important;
+  border:1px solid transparent!important;
+  border-radius:13px!important;
+  background:transparent!important;
+  color:#697187!important;
+  box-shadow:none!important;
+  transform:none!important;
+  white-space:nowrap!important;
+}
+.learning-hub-tabs button>span{
+  display:block!important;
+  grid-row:auto!important;
+  font-size:20px!important;
+  line-height:1!important;
+  opacity:.86!important;
+}
+.learning-hub-tabs button>b{
+  display:block!important;
+  font-size:12px!important;
+  line-height:1.1!important;
+  color:inherit!important;
+}
+.learning-hub-tabs button>small{
+  display:none!important;
+}
+.learning-hub-promoted .learning-hub-tabs button:hover,
+.learning-hub-tabs button:hover{
+  background:#fff!important;
+  color:#554ab8!important;
+  border-color:#e4e0ff!important;
+  box-shadow:0 5px 14px rgba(55,46,120,.07)!important;
+  transform:none!important;
+}
+.learning-hub-promoted .learning-hub-tabs button.active,
+.learning-hub-tabs button.active,
+.academy-tab-highlight,
+.academy-tab-highlight.active{
+  color:#574bc3!important;
+  background:#fff!important;
+  border-color:#ded9ff!important;
+  box-shadow:0 5px 16px rgba(68,57,152,.10)!important;
+}
+.learning-hub-promoted .learning-hub-tabs button.active:before,
+.learning-hub-tabs button.active:before{
+  left:18px!important;
+  right:18px!important;
+  bottom:4px!important;
+  height:2px!important;
+  background:#6c5ce7!important;
+}
+.wp65-hub-summary{
+  margin:9px 2px 0!important;
+  padding:0!important;
+  min-height:18px!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:#697187!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+}
+@media(max-width:900px){
+  .learning-hub-tabs{
+    display:flex!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x proximity!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .learning-hub-tabs::-webkit-scrollbar{display:none!important}
+  .learning-hub-tabs button{
+    flex:0 0 118px!important;
+    scroll-snap-align:start!important;
+  }
+}
+@media(max-width:620px){
+  .learning-hub-promoted{
+    padding:15px 13px 13px!important;
+    margin:15px 0 10px!important;
+    border-radius:22px!important;
+  }
+  .learning-hub-promoted .learning-hub-head{margin-bottom:10px!important}
+  .learning-hub-promoted .learning-hub-head h2{font-size:25px!important}
+  .learning-hub-promoted .learning-hub-head p:last-child{
+    font-size:12px!important;
+    max-width:92%!important;
+  }
+  .learning-hub-tabs{
+    margin:0 -2px!important;
+    padding:4px!important;
+    gap:4px!important;
+    border-radius:15px!important;
+  }
+  .learning-hub-tabs button{
+    flex-basis:106px!important;
+    min-height:58px!important;
+    padding:8px 7px!important;
+    border-radius:12px!important;
+  }
+  .learning-hub-tabs button>span{font-size:19px!important}
+  .learning-hub-tabs button>b{font-size:11px!important}
+  .wp65-hub-summary{
+    margin-top:8px!important;
+    font-size:11px!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
 }

@@ -1,0 +1,10 @@
+WORDPILOT v6.5.2 — COMPACT LEARNING CENTER
+
+- Öğrenme Merkezi kompakt kategori şeridine dönüştürüldü.
+- Mobilde kartların üst üste binme hissi kaldırıldı.
+- Seçili kategori yalnızca mor yazı/ikon, ince çerçeve ve alt çizgiyle belirtilir.
+- Kalıcı dolu mor aktif kart görünümü kaldırıldı.
+- Öğrenme Merkezi içindeki tekrar eden sürüm rozeti gizlendi.
+- Mobil kategori şeridi yatay kaydırmalı ve dokunmatik uyumlu yapıldı.
+- İçerik alanı daha yukarı taşındı ve bölüm yüksekliği azaltıldı.
+- Firebase, App Check, Reader, AI, ligler ve kullanıcı ilerlemeleri korundu.

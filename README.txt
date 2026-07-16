@@ -1,6 +1,6 @@
-WORDPILOT v6.5.1 — PROFESSIONAL EXPERIENCE
+WORDPILOT v6.5.2 — PROFESSIONAL EXPERIENCE
 
-Canlı proje: https://wordpilot-7a574.web.app/?wpbuild=6.5.1
+Canlı proje: https://wordpilot-7a574.web.app/?wpbuild=6.5.2
 
 Öne çıkanlar:
 - Sesli konuşma partneri ve yazılı cevap düzeltme

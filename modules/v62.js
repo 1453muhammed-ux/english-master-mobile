@@ -1,5 +1,5 @@
-/* WordPilot v6.5.1 — SM-2 learning engine, personal daily plan and course-tabbed leagues. */
-const WP62_VERSION='6.5.1';
+/* WordPilot v6.5.2 — SM-2 learning engine, personal daily plan and course-tabbed leagues. */
+const WP62_VERSION='6.5.2';
 const WP62_STORE_KEY='wordpilot_v62';
 const WP62_LEAGUE_KEY=`${STORE}:league_course`;
 let wp62LeagueCourse=COURSES[localStorage.getItem(WP62_LEAGUE_KEY)]?localStorage.getItem(WP62_LEAGUE_KEY):activeCourse;

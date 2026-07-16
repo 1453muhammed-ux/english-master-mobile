@@ -1,5 +1,5 @@
-/* WordPilot v6.5.1 — professional navigation, voice conversation, mobile microphone resilience and UI consistency. */
-const WP65_VERSION='6.5.1';
+/* WordPilot v6.5.2 — professional navigation, voice conversation, mobile microphone resilience and UI consistency. */
+const WP65_VERSION='6.5.2';
 let wp65AiRecognition=null,wp65AiRecording=null,wp65AiStream=null,wp65AiChunks=[],wp65AiListening=false;
 
 function wp65FlagMarkup(course,size='normal'){
@@ -16,7 +16,7 @@ function wp65ApplyFlags(){
 }
 function wp65PolishHub(){
   const tabs=document.querySelector('.learning-hub-tabs');if(!tabs)return;
-  const map={academy:['🎓','Akademi','A1–C2 ders yolu'],games:['🎯','Pratik','Quiz ve oyunlar'],speak:['🎙','Konuşma','Telaffuz ve AI'],stories:['📚','Reader','Hikâye ve okuma'],progress:['📈','İlerleme','Analiz ve lig'],collections:['•••','Daha Fazla','Araçlar ve koleksiyonlar']};
+  const map={academy:['🎓','Akademi','Ders yolu'],games:['🎯','Pratik','Quiz'],speak:['🎙','Konuşma','AI'],stories:['📚','Reader','Okuma'],progress:['📈','İlerleme','Analiz'],collections:['•••','Daha Fazla','Araçlar']};
   ['academy','games','speak','stories','progress','collections'].forEach(id=>{const btn=tabs.querySelector(`[data-dashboard-tab="${id}"]`);if(!btn)return;const m=map[id];btn.innerHTML=`<span>${m[0]}</span><b>${m[1]}</b><small>${m[2]}</small>`;tabs.appendChild(btn)});
   let summary=$('#wp65HubSummary');if(!summary){tabs.insertAdjacentHTML('afterend','<div id="wp65HubSummary" class="wp65-hub-summary"></div>');summary=$('#wp65HubSummary')}
   wp65UpdateHubSummary();
@@ -165,6 +165,6 @@ function setupV65Events(){
   v5StartPronunciation=wp65StartPronunciation;
   document.addEventListener('click',e=>{if(e.target.closest('#wp65AiMic')){wp65StartAiVoice();return}if(e.target.closest('#wp65AiStopSpeech')){speechSynthesis?.cancel();$('#wp65AiMicStatus').textContent='Ses durduruldu';return}if(e.target.closest('#wp65MicDiagnostic')){wp65MicDiagnostic();return}const speakBtn=e.target.closest('[data-wp65-speak-reply]');if(speakBtn){speak(speakBtn.dataset.wp65SpeakReply,v5VoiceLang());return}});
   document.addEventListener('change',e=>{const prefs=v5Ensure().preferences;if(e.target.id==='wp65AiLevel')prefs.aiLevel=e.target.value;else if(e.target.id==='wp65AiAutoSpeak')prefs.aiAutoSpeak=e.target.checked;else if(e.target.id==='wp65AiAutoSend')prefs.aiAutoSend=e.target.checked;else return;v5Save()});
-  document.addEventListener('click',e=>{const tab=e.target.closest('[data-dashboard-tab]');if(tab)setTimeout(wp65UpdateHubSummary,0)});
+  document.addEventListener('click',e=>{const tab=e.target.closest('[data-dashboard-tab]');if(tab){setTimeout(()=>{wp65UpdateHubSummary();if(window.innerWidth<=900)tab.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'})},0)}});
 }
 function wp65AfterInit(){wp65UpdateCounts();wp65PolishHub();wp65ApplyFlags();renderAiCoach();}

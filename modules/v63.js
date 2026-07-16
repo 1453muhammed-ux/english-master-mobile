@@ -1,5 +1,5 @@
-/* WordPilot v6.5.1 — source-driven content expansion, Verb Lab and Vocabulary Atlas. */
-const WP63_VERSION='6.5.1';
+/* WordPilot v6.5.2 — source-driven content expansion, Verb Lab and Vocabulary Atlas. */
+const WP63_VERSION='6.5.2';
 let wp63Verbs=null,wp63Atlas=null,wp63Exam=null,wp63VerbLevel='all',wp63VerbQuery='',wp63VocabTopic='all',wp63VocabQuery='';
 async function wp63Load(){
   if(!wp63Verbs){const r=await fetch(`ru_verb_lab.json?v=${VERSION}`,{cache:'no-store'});if(!r.ok)throw new Error('ru_verb_lab.json');wp63Verbs=await r.json()}

@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=6.5.1">
+  <link rel="stylesheet" href="style.css?v=6.5.2">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='6.5.1',KEY='wordpilot_asset_build';
+    const BUILD='6.5.2',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.5.1</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.5.2</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -81,7 +81,7 @@
       <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v6.5.1</span>
+          <span class="learning-hub-version">v6.5.2</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
           <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="academy"><span>🎓</span> Akademi <em>A1–C2</em></button>
@@ -816,25 +816,25 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=6.5.1" defer></script>
-<script src="app.js?v=6.5.1" defer></script>
-<script src="modules/firebase-sync.js?v=6.5.1" defer></script>
-<script src="modules/learning-engine.js?v=6.5.1" defer></script>
-<script src="modules/ui-events.js?v=6.5.1" defer></script>
-<script src="modules/course-engine.js?v=6.5.1" defer></script>
-<script src="modules/russian-path.js?v=6.5.1" defer></script>
-<script src="modules/v43.js?v=6.5.1" defer></script>
-<script src="modules/v431.js?v=6.5.1" defer></script>
-<script src="modules/v50.js?v=6.5.1" defer></script>
-<script src="modules/v510.js?v=6.5.1" defer></script>
-<script src="modules/v511.js?v=6.5.1" defer></script>
-<script src="modules/v512.js?v=6.5.1" defer></script>
-<script src="modules/v60.js?v=6.5.1" defer></script>
-<script src="modules/v61.js?v=6.5.1" defer></script>
-<script src="modules/v62.js?v=6.5.1" defer></script>
-<script src="modules/v63.js?v=6.5.1" defer></script>
-<script src="modules/v64.js?v=6.5.1" defer></script>
-<script src="modules/v65.js?v=6.5.1" defer></script>
-<script src="modules/bootstrap.js?v=6.5.1" defer></script>
+<script src="security-config.js?v=6.5.2" defer></script>
+<script src="app.js?v=6.5.2" defer></script>
+<script src="modules/firebase-sync.js?v=6.5.2" defer></script>
+<script src="modules/learning-engine.js?v=6.5.2" defer></script>
+<script src="modules/ui-events.js?v=6.5.2" defer></script>
+<script src="modules/course-engine.js?v=6.5.2" defer></script>
+<script src="modules/russian-path.js?v=6.5.2" defer></script>
+<script src="modules/v43.js?v=6.5.2" defer></script>
+<script src="modules/v431.js?v=6.5.2" defer></script>
+<script src="modules/v50.js?v=6.5.2" defer></script>
+<script src="modules/v510.js?v=6.5.2" defer></script>
+<script src="modules/v511.js?v=6.5.2" defer></script>
+<script src="modules/v512.js?v=6.5.2" defer></script>
+<script src="modules/v60.js?v=6.5.2" defer></script>
+<script src="modules/v61.js?v=6.5.2" defer></script>
+<script src="modules/v62.js?v=6.5.2" defer></script>
+<script src="modules/v63.js?v=6.5.2" defer></script>
+<script src="modules/v64.js?v=6.5.2" defer></script>
+<script src="modules/v65.js?v=6.5.2" defer></script>
+<script src="modules/bootstrap.js?v=6.5.2" defer></script>
 </body>
 </html>

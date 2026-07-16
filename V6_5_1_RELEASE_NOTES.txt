@@ -1,4 +1,4 @@
-WORDPILOT v6.5.1 — LEARNING CENTER VISUAL FIX
+WORDPILOT v6.5.2 — LEARNING CENTER VISUAL FIX
 
 - Öğrenme Merkezi beyaz ve nötr profesyonel kart yapısına geçirildi.
 - Akademi kartındaki kalıcı mor dolgu kaldırıldı.
