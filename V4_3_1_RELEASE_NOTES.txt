@@ -1,9 +1,0 @@
-WORDPILOT v4.3.1 — DÜZELTME SÜRÜMÜ
-
-• Boşluk Doldurma, Cümle Tamamlama ve Cümle Sıralama kartlarına ayrı görsel temalar eklendi.
-• English, Русский ve O‘zbekcha XP değerleri ayrı gösteriliyor ve ayrı kaydediliyor.
-• Genel XP yalnızca profil ve WordPilot Ligi için üç kursun toplamı olarak korunuyor.
-• Her dil kartında kurs XP, bugünkü XP, doğruluk ve kapsama ilerlemesi gösteriliyor.
-• Aktif kurs seviye kartı artık yalnızca seçili dilin XP’sini kullanıyor.
-• Firebase çoklu kurs kayıtları ve eski wordpilot_v34 ilerleme anahtarı korunuyor.
-• v4.3 modüler JavaScript yapısı korunarak yeni düzeltmeler modules/v431.js içinde toplandı.
