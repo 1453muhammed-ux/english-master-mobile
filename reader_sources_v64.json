@@ -1,0 +1,53 @@
+{
+  "version": "6.4.0",
+  "policy": "No copyrighted graded-reader text is copied. All 60 new texts are original WordPilot educational content.",
+  "inspiration": [
+    {
+      "name": "Project Gutenberg",
+      "use": "public-domain reading catalogue and plain-text publishing model",
+      "contentCopied": false
+    },
+    {
+      "name": "Wikisource",
+      "use": "multilingual public-domain source discovery model",
+      "contentCopied": false
+    },
+    {
+      "name": "Uploaded graded readers",
+      "use": "level progression, text-length and exercise structure only",
+      "contentCopied": false
+    }
+  ],
+  "counts": {
+    "existing": 42,
+    "newEnglish": 30,
+    "newRussian": 30,
+    "total": 102
+  },
+  "targets": {
+    "A1": [
+      320,
+      500
+    ],
+    "A2": [
+      540,
+      800
+    ],
+    "B1": [
+      820,
+      1200
+    ],
+    "B2": [
+      1220,
+      1800
+    ],
+    "C1": [
+      1820,
+      2500
+    ],
+    "C2": [
+      2520,
+      4000
+    ]
+  }
+}

@@ -1,5 +1,5 @@
-/* WordPilot v6.3.1 — Flight Path learning journey, sequential lesson unlocking and roadmap. */
-const WP61_VERSION='6.3.1';
+/* WordPilot v6.4.0 — Flight Path learning journey, sequential lesson unlocking and roadmap. */
+const WP61_VERSION='6.4.0';
 const WP61_LEVELS=['A1','A2','B1','B2','C1','C2'];
 const WP61_ROADMAP=[
   ['🇺🇿','O‘zbekçe Akademi','A1–C2 konu anlatımı ve özgün okumalar','yakında'],

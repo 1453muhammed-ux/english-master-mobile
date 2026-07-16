@@ -1,0 +1,13 @@
+WORDPILOT v6.4.0 VALIDATION
+
+- JavaScript syntax: passed (app, service worker, all modules, Functions)
+- JSON parse: passed
+- Total readings: 102
+- Existing readings preserved: 42
+- New English readings: 30
+- New Russian readings: 30
+- A1-C2 distribution: 5 per level per language
+- Word-count ranges: passed for all 60 new readings
+- Questions: 5 per new reading
+- Reader module reference: passed
+- Existing Firebase/App Check/localStorage keys: preserved

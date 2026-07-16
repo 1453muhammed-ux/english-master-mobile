@@ -7,9 +7,11 @@ setupV60Events();
 setupV61Events();
 setupV62Events();
 setupV63Events();
+setupV64Events();
 initV40().then(()=>{
   if(typeof wp62AfterInit==='function')wp62AfterInit();
   if(typeof wp63AfterInit==='function')wp63AfterInit();
+  if(typeof wp64AfterInit==='function')wp64AfterInit();
 }).catch(error=>{
   console.error('WordPilot başlangıç hatası',error);
   const box=document.querySelector('#toast');

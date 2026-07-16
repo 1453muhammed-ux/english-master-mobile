@@ -1,4 +1,4 @@
-WordPilot v6.3.1 — Kaynak Tabanlı İçerik Genişlemesi
+WordPilot v6.4.0 — Kaynak Tabanlı İçerik Genişlemesi
 
 - 165 dosyalık 8 kaynak paketin öğretim yapısı incelendi.
 - Telifli metin ve testler kopyalanmadan özgün WordPilot içeriğine dönüştürüldü.

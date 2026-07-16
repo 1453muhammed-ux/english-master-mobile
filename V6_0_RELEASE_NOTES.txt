@@ -1,0 +1,10 @@
+WORDPILOT V6.1.0 — AKADEMİ A1–C2
+
+- English ve Русский için A1, A2, B1, B2, C1 ve C2 yolları
+- Toplam 72 özgün konu anlatımı (36 English + 36 Russian)
+- Her derste Türkçe açıklama, kurallar, hedef dil örnekleri, ses ve mini test
+- 12 seviye sınavı (her dilde 6)
+- 24 yeni özgün derecelendirilmiş okuma; mevcut 18 hikâyeyle toplam 42 hikâye/okuma
+- Akademi ilerlemesi mevcut wordpilot_v34 kullanıcı kaydında korunur
+- Firebase, App Check, Google giriş, lig, XP ve PWA altyapısı korunur
+- Kaynak kitapların metinleri kopyalanmamıştır; yalnız pedagojik sıralama ve kapsam doğrulaması için kullanılmıştır.

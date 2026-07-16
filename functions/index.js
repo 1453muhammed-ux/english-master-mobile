@@ -62,5 +62,5 @@ exports.getContentPack=onCall({region:REGION,enforceAppCheck:true,cors:true,maxI
   const db=getFirestore();await enforceContentRate(db,request.auth.uid);
   const all=readContent(key),offset=Math.max(0,Math.floor(Number(data.offset)||0)),limit=Math.max(1,Math.min(500,Math.floor(Number(data.limit)||250)));
   const base=kind==='exam'?all.tasks:kind==='source'?all.packs:all;const filtered=kind==='stories'?base.filter(x=>!data.course||x.course===course):base;
-  return {version:'6.3.1',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
+  return {version:'6.4.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
 });
