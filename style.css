@@ -609,7 +609,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:980px){.v5-feature-grid{grid-template-columns:1fr 1fr}.voice-lab-grid,.ai-coach-layout,.story-layout{grid-template-columns:1fr}.ai-scenarios>div:first-of-type{grid-template-columns:1fr 1fr}.story-library{max-height:none}.v5-stat-cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.v5-hub{padding:19px}.v5-hub-head{display:block}.v5-version-pill{display:inline-block;margin-top:10px}.v5-feature-grid{grid-template-columns:1fr}.v5-feature-card{min-height:92px}.voice-lab-grid{gap:12px}.voice-target-panel h2{font-size:38px}.ai-scenarios>div:first-of-type{grid-template-columns:1fr}.ai-chat-panel{min-height:600px}.ai-message{max-width:94%}.ai-chat-form{grid-template-columns:1fr}.story-reader-head{display:block}.story-reader-head>div:last-child{justify-content:flex-start}.story-lines p{font-size:16px}.adaptive-hero{align-items:flex-start;flex-direction:column}.adaptive-hero button{width:100%}.adaptive-metrics{grid-template-columns:1fr 1fr}.adaptive-word-list{grid-template-columns:1fr}.v5-stat-cards{grid-template-columns:1fr 1fr}.v5-chart-grid{grid-template-columns:1fr}.v5-mode-chart>div{grid-template-columns:100px 1fr 25px}.v5-sync-matrix{grid-template-columns:1fr}.pronunciation-history article{grid-template-columns:auto 1fr}.pronunciation-history time{display:none}}
 
-/* WordPilot v5.1.2 — compact professional dashboard */
+/* WordPilot v5.1.3 — compact professional dashboard */
 .learning-hub{margin:22px 0 12px;padding:22px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#0d1427,#232451);color:#fff;box-shadow:0 22px 48px rgba(13,20,39,.18);scroll-margin-top:84px}
 .learning-hub-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.learning-hub-head h2{margin:2px 0 7px;font-size:clamp(25px,4vw,37px);letter-spacing:-1px}.learning-hub-head p:last-child{margin:0;color:#bdc5d8;line-height:1.5}.learning-hub-version{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;font-size:11px;font-weight:900;white-space:nowrap}
 .learning-hub-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:19px}.learning-hub-tabs button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#dbe1ee;border-radius:15px;padding:12px 9px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:7px;transition:.18s}.learning-hub-tabs button:hover{background:rgba(255,255,255,.12)}.learning-hub-tabs button.active{background:#fff;color:#27224f;border-color:#fff;box-shadow:0 9px 22px rgba(0,0,0,.16)}
@@ -627,7 +627,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .dashboard-tab-panel .v5-feature-card{color:var(--ink);background:#fff;border-color:var(--line);box-shadow:var(--shadow-soft);backdrop-filter:none}.dashboard-tab-panel .v5-feature-card:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}.dashboard-tab-panel .v5-feature-card small{color:var(--muted)}.dashboard-tab-panel .v5-feature-card em{color:var(--primary)}.dashboard-tab-panel .v5-feature-card.voice{background:linear-gradient(145deg,#fff,#fff0f4)}.dashboard-tab-panel .v5-feature-card.tts{background:linear-gradient(145deg,#fff,#edf7ff)}.dashboard-tab-panel .v5-feature-card.ai{background:linear-gradient(145deg,#fff,#f1edff)}.dashboard-tab-panel .v5-feature-card.stories{background:linear-gradient(145deg,#fff,#edf7ff)}.dashboard-tab-panel .v5-feature-card.adaptive{background:linear-gradient(145deg,#fff,#ecfaf4)}
 
 
-/* WordPilot v5.1.2 — professional mobile and learning-center polish */
+/* WordPilot v5.1.3 — professional mobile and learning-center polish */
 .story-translation[hidden]{display:none!important}
 .story-reader-head [data-story-speak-all].is-speaking{background:#fff0f1;border-color:#f1b7be;color:#b93647;box-shadow:0 8px 18px rgba(240,92,103,.13)}
 .learning-hub-promoted{margin:20px 0 14px;padding:24px;background:linear-gradient(135deg,#171b38 0%,#29255d 55%,#31569a 100%);border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 55px rgba(30,32,78,.22);color:#fff;overflow:hidden;position:relative}
@@ -650,7 +650,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 }
 
 
-/* WordPilot v5.1.2 — learning-first hierarchy and compact daily flight plan */
+/* WordPilot v5.1.3 — learning-first hierarchy and compact daily flight plan */
 .continue-card{padding:21px 23px;grid-template-columns:minmax(0,1.45fr) minmax(235px,.55fr);gap:19px;border-radius:23px;box-shadow:0 18px 42px rgba(11,16,32,.18)}
 .continue-card:after{width:210px;height:210px;right:-72px;top:-88px}
 .continue-copy h2{font-size:clamp(24px,3.1vw,35px);letter-spacing:-.9px;margin:8px 0 6px;line-height:1.12}
@@ -661,3 +661,55 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 .daily-task.actionable{cursor:pointer;transition:.18s}.daily-task.actionable:hover{border-color:#c8c2ff;background:#f6f4ff;transform:translateY(-1px)}.daily-task.actionable>em{font-style:normal;color:#6557d9;font-weight:1000;font-size:18px}.daily-task.actionable:focus{outline:3px solid rgba(108,92,231,.18);outline-offset:2px}
 @media(max-width:800px){.continue-card{grid-template-columns:1fr;padding:17px 16px;gap:12px}.continue-copy h2{font-size:25px}.continue-card .hero-actions{display:flex}.continue-card .hero-actions button{width:auto;flex:1}.flight-card{max-width:none}.flight-track{margin:13px 0 9px}}
 @media(max-width:480px){.continue-card{padding:15px 13px;border-radius:20px}.continue-copy h2{font-size:22px}.continue-copy p{font-size:12px}.continue-card .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.continue-card .hero-actions button{width:100%;padding:10px 8px}.flight-card{padding:11px 12px}.flight-top span,.flight-meta{font-size:10px}}
+
+
+/* WordPilot v5.1.3 — visible lesson icons and compact daily word */
+.mode-card.lesson-theme .lesson-symbol{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  min-width:44px;
+  height:44px;
+  border-radius:14px;
+  color:#fff!important;
+  opacity:1!important;
+  visibility:visible!important;
+  text-decoration:none!important;
+  font-weight:1000;
+  line-height:1;
+  filter:none!important;
+}
+.mode-card.cloze-theme .lesson-symbol{background:linear-gradient(135deg,#7b61ff,#6046df);font-size:24px!important}
+.mode-card.sentence-theme .lesson-symbol{background:linear-gradient(135deg,#42a5e8,#277fc6);font-size:21px!important}
+.mode-card.ordering-theme .lesson-symbol{background:linear-gradient(135deg,#4bbca7,#29917f);font-size:11px!important}
+
+.daily-word-showcase{
+  min-height:0!important;
+  grid-template-columns:minmax(0,1.55fr) minmax(190px,.45fr)!important;
+  border-radius:24px!important;
+}
+.daily-word-copy{padding:24px 28px!important}
+.daily-word-title-row h2{font-size:clamp(34px,4.2vw,48px)!important;line-height:1!important;margin:8px 0 0!important}
+.daily-word-pron{margin:10px 0 5px!important}
+.daily-word-meaning{margin:4px 0 8px!important;font-size:18px!important}
+.daily-word-copy blockquote{margin:10px 0 14px!important;padding-left:14px!important;font-size:14px!important}
+.daily-word-actions{margin-top:10px!important}
+.daily-word-actions button{min-height:42px!important;padding:10px 15px!important}
+.daily-word-art{min-height:230px!important}
+.daily-word-art span{font-size:64px!important}
+.daily-word-art i{margin-top:8px!important}
+@media(max-width:800px){
+  .daily-word-showcase{grid-template-columns:1fr!important}
+  .daily-word-copy{padding:20px 18px!important}
+  .daily-word-art{display:none!important}
+  .daily-word-title-row h2{font-size:38px!important}
+  .daily-word-copy blockquote{margin-bottom:11px!important}
+}
+@media(max-width:480px){
+  .mode-card.lesson-theme .lesson-symbol{width:42px;min-width:42px;height:42px}
+  .daily-word-copy{padding:17px 15px!important}
+  .daily-word-title-row h2{font-size:34px!important}
+  .daily-word-meaning{font-size:16px!important}
+  .daily-word-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+}

@@ -1,5 +1,5 @@
-/* WordPilot v5.1.2 — professional dashboard navigation and mobile history. */
-const WP510_VERSION='5.1.2';
+/* WordPilot v5.1.3 — professional dashboard navigation and mobile history. */
+const WP510_VERSION='5.1.3';
 const WP510_TAB_KEY=`${STORE}:dashboard_tab`;
 const WP510_GUEST_PROMPT_KEY=`${STORE}:guest_signin_prompt_20`;
 let wp510DashboardTab=localStorage.getItem(WP510_TAB_KEY)||'games';

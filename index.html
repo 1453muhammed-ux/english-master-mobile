@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=5.1.2">
+  <link rel="stylesheet" href="style.css?v=5.1.3">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='5.1.2',KEY='wordpilot_asset_build';
+    const BUILD='5.1.3',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.2</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.3</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -81,7 +81,7 @@
       <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v5.1.2</span>
+          <span class="learning-hub-version">v5.1.3</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
           <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="games"><span>🎮</span> Oyunlar</button>
@@ -103,8 +103,8 @@
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
-            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol">_</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
-            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol">…</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol" aria-hidden="true">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol" aria-hidden="true">🧩</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
             <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon teal lesson-symbol">1·2·3</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
@@ -779,19 +779,19 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=5.1.2" defer></script>
-<script src="app.js?v=5.1.2" defer></script>
-<script src="modules/firebase-sync.js?v=5.1.2" defer></script>
-<script src="modules/learning-engine.js?v=5.1.2" defer></script>
-<script src="modules/ui-events.js?v=5.1.2" defer></script>
-<script src="modules/course-engine.js?v=5.1.2" defer></script>
-<script src="modules/russian-path.js?v=5.1.2" defer></script>
-<script src="modules/v43.js?v=5.1.2" defer></script>
-<script src="modules/v431.js?v=5.1.2" defer></script>
-<script src="modules/v50.js?v=5.1.2" defer></script>
-<script src="modules/v510.js?v=5.1.2" defer></script>
-<script src="modules/v511.js?v=5.1.2" defer></script>
-<script src="modules/v512.js?v=5.1.2" defer></script>
-<script src="modules/bootstrap.js?v=5.1.2" defer></script>
+<script src="security-config.js?v=5.1.3" defer></script>
+<script src="app.js?v=5.1.3" defer></script>
+<script src="modules/firebase-sync.js?v=5.1.3" defer></script>
+<script src="modules/learning-engine.js?v=5.1.3" defer></script>
+<script src="modules/ui-events.js?v=5.1.3" defer></script>
+<script src="modules/course-engine.js?v=5.1.3" defer></script>
+<script src="modules/russian-path.js?v=5.1.3" defer></script>
+<script src="modules/v43.js?v=5.1.3" defer></script>
+<script src="modules/v431.js?v=5.1.3" defer></script>
+<script src="modules/v50.js?v=5.1.3" defer></script>
+<script src="modules/v510.js?v=5.1.3" defer></script>
+<script src="modules/v511.js?v=5.1.3" defer></script>
+<script src="modules/v512.js?v=5.1.3" defer></script>
+<script src="modules/bootstrap.js?v=5.1.3" defer></script>
 </body>
 </html>

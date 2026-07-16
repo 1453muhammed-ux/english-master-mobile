@@ -1,6 +1,6 @@
-const CACHE='wordpilot-v5.1.2';
-const CORE=['./','index.html','style.css?v=5.1.2','security-config.js?v=5.1.2','app.js?v=5.1.2','modules/firebase-sync.js?v=5.1.2','modules/learning-engine.js?v=5.1.2','modules/ui-events.js?v=5.1.2','modules/course-engine.js?v=5.1.2','modules/russian-path.js?v=5.1.2','modules/v43.js?v=5.1.2','modules/v431.js?v=5.1.2','modules/v50.js?v=5.1.2','modules/v510.js?v=5.1.2','modules/v511.js?v=5.1.2','modules/v512.js?v=5.1.2','modules/bootstrap.js?v=5.1.2','manifest.json','stories.json?v=5.1.2','icon-192.png','icon-512.png','apple-touch-icon.png'];
-const OFFLINE=[...CORE,'words.json?v=5.1.2','ru_words.json?v=5.1.2','ru_alphabet.json?v=5.1.2','ru_grammar.json?v=5.1.2','ru_dialogues.json?v=5.1.2','uz_words.json?v=5.1.2'];
+const CACHE='wordpilot-v5.1.3';
+const CORE=['./','index.html','style.css?v=5.1.3','security-config.js?v=5.1.3','app.js?v=5.1.3','modules/firebase-sync.js?v=5.1.3','modules/learning-engine.js?v=5.1.3','modules/ui-events.js?v=5.1.3','modules/course-engine.js?v=5.1.3','modules/russian-path.js?v=5.1.3','modules/v43.js?v=5.1.3','modules/v431.js?v=5.1.3','modules/v50.js?v=5.1.3','modules/v510.js?v=5.1.3','modules/v511.js?v=5.1.3','modules/v512.js?v=5.1.3','modules/bootstrap.js?v=5.1.3','manifest.json','stories.json?v=5.1.3','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=5.1.3','ru_words.json?v=5.1.3','ru_alphabet.json?v=5.1.3','ru_grammar.json?v=5.1.3','ru_dialogues.json?v=5.1.3','uz_words.json?v=5.1.3'];
 const APPROX_BYTES=6200000;
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)))});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)));await self.clients.claim()})())});
