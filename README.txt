@@ -1,15 +1,11 @@
-WORDPILOT v4.3.0
+WordPilot v4.3.1
 
-Canlı proje:
-- https://wordpilot-7a574.web.app
-- https://wordpilot-7a574.web.app/?wpbuild=4.3.0
+GitHub ve Firebase Hosting için doğrudan yüklenebilir düzeltme paketidir.
 
 Ana yenilikler:
-- app.js modüler mimariye ayrıldı (çekirdek + 7 modül).
-- Kiril Akademisine “Kelimeyi hecele” oyunu eklendi.
-- Rusça konu kartlarında gerçek ilerleme yüzdesi gösterilir.
-- Rusça gramer/diyalog yoluna toplam ilerleme çubuğu eklendi.
-- Tek dokunuşla Hızlı Quiz eklendi.
-- Kurs bazlı performans, güçlü/zayıf konu analizi ve akıllı öneriler eklendi.
-- 16 rozetli gelişmiş başarı sistemi eklendi.
-- Google giriş, Firebase senkronizasyonu, lig, XP ve eski ilerleme anahtarı korunur.
+- Üç cümle oyununa ayrı görsel tema
+- English, Русский ve O‘zbekcha için ayrı XP ve doğruluk özeti
+- Toplam XP yalnızca lig ve genel profil için korunur
+- Modüler JavaScript yapısı korunur; v4.3.1 kodu modules/v431.js içindedir
+
+Canlı test: https://wordpilot-7a574.web.app/?wpbuild=4.3.1

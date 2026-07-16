@@ -1,37 +1,29 @@
-WORDPILOT v4.3.0 — DOĞRULAMA RAPORU
+WORDPILOT v4.3.1 VALIDATION REPORT
 
-Sürüm: 4.3.0
-Temel: WordPilot v4.2.0
+Sürüm: 4.3.1
+Temel: WordPilot v4.3.0
 
-VERİ KONTROLLERİ
-- İngilizce: 5488 kayıt
-- Rusça: 1000 kayıt
-- Rusça benzersiz ID: 1000
-- Rusça benzersiz kelime: 1000
-- Kiril alfabesi: 33 harf
-- Rusça dil bilgisi: 9 modül
-- Rusça diyalog: 15 paket
-- Özbekçe: 137 kayıt
+DOSYA VE VERİ KONTROLLERİ
+- app.js: 341 satır; modüler yapı korunuyor.
+- modules/v431.js: 56 satır; dil bazlı XP ve tema düzeltmeleri burada.
+- English words.json: 5488 kayıt.
+- Russian ru_words.json: 1000 kayıt.
+- Uzbek uz_words.json: 137 kayıt.
+- Kiril alfabesi: 33 harf.
+- Rusça gramer: 9 modül.
+- Rusça diyalog: 15 paket.
 
-MİMARİ
-- app.js: 341 satır (v4.2’de yaklaşık 2045 satırdı)
-- Modül sayısı: 7
-- Firebase/Google giriş, çalışma motoru, kurs motoru, Rusça yol ve v4.3 özellikleri ayrı dosyalara bölündü.
-- Eski localStorage anahtarı korunur: wordpilot_v34
-- Rusça yol ilerleme anahtarı korunur: ru_path_v42
+TESTLER
+- app.js, sw.js ve tüm modules/*.js için Node.js sözdizimi kontrolü: başarılı.
+- Tüm JSON dosyalarının ayrıştırılması: başarılı.
+- HTML benzersiz ID kontrolü: başarılı (208 ID, tekrar yok).
+- HTML içindeki yerel script ve stil dosyalarının varlık kontrolü: başarılı.
+- Service Worker v4.3.1 önbelleği ve modules/v431.js kaydı: başarılı.
+- Dil bazlı XP çalışma zamanı simülasyonu: başarılı.
+- GitHub ZIP bütünlük kontrolü: başarılı.
 
-SÖZDİZİMİ
-- Tüm JavaScript dosyaları node --check kontrolünden geçti.
-- Tüm modüller birleşik olarak da sözdizimi kontrolünden geçti.
-- Simüle edilmiş tarayıcı çalışma testinde English 5488 ve Русский 1000 kayıt yüklendi.
-- Kiril 33, gramer 9, diyalog 15 ve heceleme oyunu çalışma testinden geçti.
-
-YENİLİKLER
-- Hızlı Quiz
-- Kiril kelime heceleme oyunu
-- Konu bazlı gerçek ilerleme yüzdeleri
-- Gramer/diyalog toplam yol ilerlemesi
-- Kurs bazlı performans kartları
-- Güçlü/zayıf konu analizi
-- 16 rozetli başarı sistemi
-- Güncellenmiş çevrimdışı önbellek: wordpilot-v4.3.0
+KORUNANLAR
+- STORE anahtarı wordpilot_v34 değişmedi.
+- English/Russian/Uzbek kurs durumları ayrı tutuluyor.
+- Genel lig XP üç kursun toplamı olarak korunuyor.
+- Google giriş, Firebase senkronizasyonu, lig, profil ve çevrimdışı dosyalar korunuyor.

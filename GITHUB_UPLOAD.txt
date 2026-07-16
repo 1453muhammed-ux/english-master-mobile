@@ -1,23 +1,13 @@
-WORDPILOT v4.3.0 — GITHUB YÜKLEME ADIMLARI
+WORDPILOT v4.3.1 GITHUB YÜKLEME
 
-1) ZIP dosyasına sağ tıklayın ve “Tümünü ayıkla” deyin.
-2) Açılan WordPilot_v4.3.0_GitHub_Ready klasörünün İÇİNE girin.
-3) GitHub deposunu açın:
-   https://github.com/1453muhammed-ux/english-master-mobile
-4) Code sayfasında “Add file” → “Upload files” seçin.
-5) Bilgisayardaki klasörün içindeki TÜM dosya ve klasörleri yükleme alanına sürükleyin.
-   Önemli: modules klasörü mutlaka yüklenmelidir.
-   .github klasörü zaten depoda doğru yerdeyse silmeyin; pakette de doğru konumdadır.
-6) Sayfanın altındaki “Commit changes” düğmesine basın.
-7) GitHub’da Actions sekmesini açın.
-8) “Deploy WordPilot to Firebase Hosting” çalışmasının yeşil tik olmasını bekleyin (genellikle 1 dakika).
-9) Şu adresten kontrol edin:
-   https://wordpilot-7a574.web.app/?wpbuild=4.3.0
-10) Telefonda eski sürüm görünürse bir kez şu adresi açın:
-   https://wordpilot-7a574.web.app/reset-cache.html
-   Sonra 4.3.0 bağlantısını yeniden açın.
+1. WordPilot_v4.3.1_GitHub_Ready.zip dosyasını bilgisayarınızda çıkartın.
+2. GitHub deposunu açın: https://github.com/1453muhammed-ux/english-master-mobile
+3. Add file > Upload files seçin.
+4. Çıkartılan klasörün İÇİNDEKİ tüm dosyaları ve modules klasörünü yükleme alanına sürükleyin.
+5. .github/workflows/firebase-hosting-live.yml dosyasını silmeyin. Pakette bulunan .github klasörü görünmese bile depodaki mevcut workflow korunmalıdır.
+6. Commit changes düğmesine basın.
+7. Actions > Deploy WordPilot to Firebase Hosting işleminin yeşil tik almasını bekleyin.
+8. Şu bağlantıyı açın: https://wordpilot-7a574.web.app/?wpbuild=4.3.1
+9. Eski sürüm görünürse bir kez https://wordpilot-7a574.web.app/reset-cache.html açın ve ardından 4.3.1 bağlantısına dönün.
 
-SİLİNMEMESİ GEREKENLER:
-- GitHub Secret: FIREBASE_SERVICE_ACCOUNT_WORDPILOT_7A574
-- .github/workflows/firebase-hosting-live.yml
-- words.json, ru_words.json, uz_words.json
+ÖNEMLİ: modules/v431.js mutlaka GitHub'a yüklenmelidir.

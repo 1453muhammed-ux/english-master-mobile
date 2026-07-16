@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=4.3.0">
+  <link rel="stylesheet" href="style.css?v=4.3.1">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='4.3.0',KEY='wordpilot_asset_build';
+    const BUILD='4.3.1',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.3.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.3.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -112,14 +112,28 @@
 
 
       <section class="xp-task-section">
-        <article class="xp-level-card">
-          <div class="xp-level-icon">⚡</div>
-          <div class="xp-level-copy"><p class="eyebrow">XP SİSTEMİ</p><h3>Seviye <span id="xpLevel">1</span></h3><p><b id="globalXpText">0 XP</b> · sonraki seviyeye <span id="xpToNext">500 XP</span></p><div class="xp-level-track"><i id="xpLevelFill"></i></div></div>
+        <article class="xp-level-card course-xp-level-card">
+          <div class="xp-level-icon" id="activeCourseXpIcon">EN</div>
+          <div class="xp-level-copy">
+            <p class="eyebrow" id="activeCourseXpLabel">ENGLISH KURS XP</p>
+            <h3><span id="activeCourseXpName">English</span> · Seviye <span id="xpLevel">1</span></h3>
+            <p><b id="activeCourseXpText">0 XP</b> · sonraki seviyeye <span id="xpToNext">500 XP</span></p>
+            <div class="xp-level-track"><i id="xpLevelFill"></i></div>
+            <p class="global-xp-note">🏆 Genel lig XP: <b id="globalXpText">0 XP</b></p>
+          </div>
         </article>
         <article class="daily-tasks-card">
           <div class="daily-tasks-head"><div><p class="eyebrow">GÜNLÜK GÖREVLER</p><h3>Bugünün görevleri</h3></div><span id="dailyTaskDone">0 / 4</span></div>
           <div id="dailyTaskList" class="daily-task-list"></div>
         </article>
+      </section>
+
+      <section class="language-xp-section" aria-labelledby="languageXpTitle">
+        <div class="language-xp-head">
+          <div><p class="eyebrow">DİL BAZLI PUANLAMA</p><h2 id="languageXpTitle">Her kursun puanı ayrı</h2></div>
+          <span>Genel XP yalnızca lig için birleşir</span>
+        </div>
+        <div id="languageXpGrid" class="language-xp-grid"></div>
       </section>
 
       <div class="kpi-grid">
@@ -224,11 +238,11 @@
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="cloze"><span class="mode-icon violet">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><span class="mode-card-art" aria-hidden="true"><i>I</i><b>___</b><i>home</i></span><em>Başla</em></button>
+            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><span class="mode-card-art sentence-art" aria-hidden="true"><i>Я</i><b>иду…</b><i>→</i></span><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
-            <button id="orderingModeCard" class="mode-card" data-start="ordering"><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
+            <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><span class="mode-card-art ordering-art" aria-hidden="true"><i>go</i><i>I</i><i>home</i></span><em>Başla</em></button>
             <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
           </div>
@@ -406,7 +420,7 @@
     </section>
 
     <section id="view-progress" class="view">
-      <div class="section-title"><div><p class="eyebrow">FLIGHT LOG</p><h1>İlerleme raporu</h1><p class="muted">Bugün, bu hafta, bu ay ve toplam çalışma kayıtların.</p></div></div>
+      <div class="section-title"><div><p class="eyebrow">FLIGHT LOG</p><h1>İlerleme raporu</h1><p class="muted">Aktif kursun ayrıntıları ve English, Русский, O‘zbekcha puanlarının ayrı özeti.</p></div><span id="progressCourseBadge" class="progress-course-badge">English</span></div>
       <div class="period-summary-grid">
         <article class="period-card"><small>BUGÜN</small><strong id="pTodayPoints">0</strong><span>XP · <b id="pTodayAnswers">0</b> cevap</span></article>
         <article class="period-card"><small>BU HAFTA</small><strong id="pWeekPoints">0</strong><span>XP · <b id="pWeekAnswers">0</b> cevap</span></article>
@@ -617,7 +631,7 @@
   </section>
 
   <div class="profile-stat-grid">
-    <div><strong id="profilePoints">0</strong><small>XP</small></div>
+    <div><strong id="profilePoints">0</strong><small>GENEL XP</small></div>
     <div><strong id="profileMem">0</strong><small>EZBER</small></div>
     <div><strong id="profileLearn">0</strong><small>ÖĞREN</small></div>
     <div><strong id="profileHard">0</strong><small>ZOR</small></div>
@@ -644,13 +658,14 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=4.3.0" defer></script>
-<script src="modules/firebase-sync.js?v=4.3.0" defer></script>
-<script src="modules/learning-engine.js?v=4.3.0" defer></script>
-<script src="modules/ui-events.js?v=4.3.0" defer></script>
-<script src="modules/course-engine.js?v=4.3.0" defer></script>
-<script src="modules/russian-path.js?v=4.3.0" defer></script>
-<script src="modules/v43.js?v=4.3.0" defer></script>
-<script src="modules/bootstrap.js?v=4.3.0" defer></script>
+<script src="app.js?v=4.3.1" defer></script>
+<script src="modules/firebase-sync.js?v=4.3.1" defer></script>
+<script src="modules/learning-engine.js?v=4.3.1" defer></script>
+<script src="modules/ui-events.js?v=4.3.1" defer></script>
+<script src="modules/course-engine.js?v=4.3.1" defer></script>
+<script src="modules/russian-path.js?v=4.3.1" defer></script>
+<script src="modules/v43.js?v=4.3.1" defer></script>
+<script src="modules/v431.js?v=4.3.1" defer></script>
+<script src="modules/bootstrap.js?v=4.3.1" defer></script>
 </body>
 </html>
