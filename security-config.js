@@ -3,6 +3,7 @@
 window.WORDPILOT_SECURITY={
   appCheckSiteKey:'6LdZYFYtAAAAAJYAiOkE3B-NXan7RhaPcKZZGmZA',
   aiEnabled:false,
+  voiceTranscriptionEnabled:false,
   protectedContentEnabled:false,
   aiRegion:'us-central1'
 };

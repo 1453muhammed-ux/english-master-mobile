@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot v6.4 Reader",
+  "name": "WordPilot v6.5 Professional Experience",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=6.4.0",
+  "start_url": "./?wpbuild=6.5.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v6.4 Reader: 102 İngilizce, Rusça ve Özbekçe okuma; A1–C2 derecelendirilmiş kütüphane, dokunmatik sözlük, cümle çevirisi, TTS, okuma ilerlemesi, hikâye testi ve SM-2 hikâye kelime listesi.",
+  "description": "WordPilot v6.5: sesli konuşma partneri, yazılı yanıt düzeltme, mobil mikrofon iyileştirmeleri, profesyonel öğrenme merkezi, Reader 2.0 ve A1–C2 Akademi.",
   "icons": [
     {
       "src": "icon-192.png",

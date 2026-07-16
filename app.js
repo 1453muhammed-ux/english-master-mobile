@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='6.4.0';
+const VERSION='6.5.0';
 const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
@@ -11,7 +11,7 @@ const STATUS_LABEL={learn:'Öğreniyorum',memorized:'Ezberledim',hard:'Zorlanıy
 const FLAG_LABEL={favorite:'Favori',veryHard:'Çok zor',ignored:'Tekrar gösterme'};
 const MODE_LABEL={
   smart:'Akıllı Quiz',flash:'Kelime Kartları','en-tr':'Yaz EN → TR','tr-en':'Yaz TR → EN',
-  synonym:'Eş Anlamlı Quiz',antonym:'Zıt Anlamlı Quiz',review:'Akıllı Tekrar',comprehensive:'Kapsamlı Quiz',listening:'Sesli / Gizli Mod',matching:'Eşleştirme','wrong-review':'Yanlışlar Tekrarı',cloze:'Boşluk Doldurma',sentence:'Cümle Tamamlama',dictation:'Dinlediğini Yaz',ordering:'Cümle Sıralama'
+  synonym:'Eş Anlamlı Quiz',antonym:'Zıt Anlamlı Quiz',review:'Akıllı Tekrar',comprehensive:'Kapsamlı Quiz',listening:'Çoktan Seçmeli',matching:'Eşleştirme','wrong-review':'Yanlışlar Tekrarı',cloze:'Boşluk Doldurma',sentence:'Cümle Tamamlama',dictation:'Dinlediğini Yaz',ordering:'Cümle Sıralama'
 };
 
 const FIREBASE_CONFIG={

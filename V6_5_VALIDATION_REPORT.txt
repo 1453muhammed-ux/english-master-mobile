@@ -1,0 +1,18 @@
+WORDPILOT v6.5.0 — DOĞRULAMA RAPORU
+
+SONUÇ: BAŞARILI
+
+- JavaScript sözdizimi: 22 / 22 dosya geçti.
+- JSON bütünlüğü: 26 / 26 dosya geçti.
+- HTML kimlik kontrolü: 291 benzersiz ID, tekrar yok.
+- Yerel dosya bağlantıları: eksik referans yok.
+- Sürüm tutarlılığı: index, app, service worker ve modüller v6.5.0.
+- İngilizce kayıt: 5488.
+- Rusça kayıt: 1120.
+- Özbekçe kayıt: 137.
+- Hikâye ve okuma: 102.
+- Service Worker önbelleği: wordpilot-v6.5.0.
+- Özel API anahtarı taraması: ön yüz ve paket içinde özel OpenAI anahtarı yok.
+- AI sesli giriş, cevap düzeltme, seçim sıfırlama, mobil mikrofon tanılama ve bayrak tutarlılığı işaretleri doğrulandı.
+
+Not: Gelişmiş bulut AI ve bulut ses transkripsiyonu functions klasöründe hazırdır; Firebase Functions dağıtımı ve sunucu secret kurulumu olmadan yerel pratik modu kullanılır.

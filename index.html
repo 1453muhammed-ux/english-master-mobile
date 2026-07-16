@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=6.4.0">
+  <link rel="stylesheet" href="style.css?v=6.5.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='6.4.0',KEY='wordpilot_asset_build';
+    const BUILD='6.5.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.4.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.5.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -81,7 +81,7 @@
       <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v6.4.0</span>
+          <span class="learning-hub-version">v6.5.0</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
           <button class="active academy-tab-highlight" type="button" role="tab" aria-selected="true" data-dashboard-tab="academy"><span>🎓</span> Akademi <em>A1–C2</em></button>
@@ -111,7 +111,7 @@
             <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve işaretle</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Çoktan Seçmeli</b><small>Sesi dinle ve doğru anlamı seç</small></div><em>Başla</em></button>
             <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol" aria-hidden="true">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
             <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol" aria-hidden="true">🧩</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
@@ -442,7 +442,7 @@
           <label>Ses<select id="v5VoiceSelect"></select></label>
           <label>Konuşma hızı <output id="v5RateOutput">0.85×</output><input id="v5Rate" type="range" min="0.55" max="1.25" step="0.05" value="0.85"></label>
           <div class="tts-test-row"><button id="v5TestVoice" class="primary" type="button">Sesi test et</button><button id="v5StopVoice" class="secondary" type="button">Durdur</button></div>
-          <div class="voice-support-note"><span>ℹ</span><p id="voiceSupportNote">Sesler cihaz ve tarayıcıya göre değişebilir. Özbekçe ses bulunmazsa en yakın Türkçe ses kullanılır.</p></div>
+          <div class="voice-support-note"><span>ℹ</span><p id="voiceSupportNote">Sesler cihaz ve tarayıcıya göre değişebilir. Özbekçe ses bulunmazsa en yakın Türkçe ses kullanılır.</p></div><div class="wp65-mic-diagnostic"><div><b>Mobil mikrofon kontrolü</b><small id="wp65MicDiagnosticText">İzin ve tarayıcı desteği kontrol edilmedi.</small></div><button id="wp65MicDiagnostic" class="soft" type="button">Kontrol et</button></div>
           <div class="pronunciation-course-score"><span>Kurs telaffuz puanı</span><strong id="pronunciationCourseScore">—</strong><small id="pronunciationAttemptCount">0 deneme</small></div>
         </article>
       </div>
@@ -453,7 +453,7 @@
       <div class="section-title"><div><p class="eyebrow">WORDPILOT AI COACH</p><h1>Konuşma partneri</h1><p class="muted">Aktif kursunda A1–A2 seviyesinde konuş; düzeltmeleri Türkçe gör.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
       <div class="ai-coach-layout">
         <aside class="panel ai-scenarios"><p class="eyebrow">SENARYO SEÇ</p><div id="aiScenarioList"></div><div id="aiBackendStatus" class="ai-backend-status"></div></aside>
-        <section class="panel ai-chat-panel"><div class="ai-chat-head"><div><span id="aiCourseFlag">🇬🇧</span><div><b id="aiScenarioTitle">Tanışma</b><small id="aiScenarioHint">Kısa ve doğal cevaplar ver</small></div></div><button id="aiResetChat" class="soft" type="button">Sıfırla</button></div><div id="aiChatMessages" class="ai-chat-messages"></div><form id="aiChatForm" class="ai-chat-form"><textarea id="aiChatInput" maxlength="600" rows="2" placeholder="Mesajını yaz…" required></textarea><button class="primary" type="submit">Gönder</button></form><p class="ai-privacy-note">Gerçek AI modu güvenli Firebase Function üzerinden çalışır; API anahtarı tarayıcıya konmaz.</p></section>
+        <section class="panel ai-chat-panel"><div class="ai-chat-head"><div><span id="aiCourseFlag">🇬🇧</span><div><b id="aiScenarioTitle">Tanışma</b><small id="aiScenarioHint">Kısa ve doğal cevaplar ver</small></div></div><div class="wp65-ai-head-tools"><label>Seviye<select id="wp65AiLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></label><button id="wp65AiStopSpeech" class="soft" type="button" title="Konuşmayı durdur">■ Sesi durdur</button><button id="aiResetChat" class="soft" type="button">Sıfırla</button></div></div><div id="aiChatMessages" class="ai-chat-messages"></div><form id="aiChatForm" class="ai-chat-form"><div class="wp65-ai-compose"><textarea id="aiChatInput" maxlength="600" rows="2" placeholder="Mesajını yaz veya mikrofonla söyle…" required></textarea><button id="wp65AiMic" class="wp65-ai-mic" type="button" aria-label="Mikrofonla cevap ver">🎙</button><button class="primary" type="submit">Gönder</button></div><div class="wp65-ai-options"><div class="wp65-ai-checks"><label><input id="wp65AiAutoSpeak" type="checkbox" checked> Cevabı seslendir</label><label><input id="wp65AiAutoSend" type="checkbox" checked> Konuşunca gönder</label></div><span id="wp65AiMicStatus">Mikrofon hazır</span></div></form><p class="ai-privacy-note">Ses tanıma önce cihazda denenir. Güvenli bulut AI etkinse düzeltme ve öneriler sunucu üzerinden gelir; özel anahtar tarayıcıya konmaz.</p></section>
       </div>
     </section>
 
@@ -691,7 +691,7 @@
         <option value="smart">Akıllı Quiz</option>
         <option value="flash">Kelime Kartları</option>
         <option value="en-tr">Yaz EN → TR</option>
-        <option value="tr-en">Yaz TR → EN</option><option value="ordering">Cümle Sıralama</option><option value="listening">Sesli / Gizli Mod</option><option value="cloze">Boşluk Doldurma</option><option value="sentence">Cümle Tamamlama</option><option value="dictation">Dinlediğini Yaz</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
+        <option value="tr-en">Yaz TR → EN</option><option value="ordering">Cümle Sıralama</option><option value="listening">Çoktan Seçmeli</option><option value="cloze">Boşluk Doldurma</option><option value="sentence">Cümle Tamamlama</option><option value="dictation">Dinlediğini Yaz</option><option value="matching">Eşleştirme</option><option value="synonym">Eş Anlamlı Quiz</option><option value="antonym">Zıt Anlamlı Quiz</option><option value="wrong-review">Yanlış Yaptıklarımı Tekrarla</option>
         <option value="review">Zor ve tekrar bekleyenler</option>
       </select>
     </label>
@@ -816,24 +816,25 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=6.4.0" defer></script>
-<script src="app.js?v=6.4.0" defer></script>
-<script src="modules/firebase-sync.js?v=6.4.0" defer></script>
-<script src="modules/learning-engine.js?v=6.4.0" defer></script>
-<script src="modules/ui-events.js?v=6.4.0" defer></script>
-<script src="modules/course-engine.js?v=6.4.0" defer></script>
-<script src="modules/russian-path.js?v=6.4.0" defer></script>
-<script src="modules/v43.js?v=6.4.0" defer></script>
-<script src="modules/v431.js?v=6.4.0" defer></script>
-<script src="modules/v50.js?v=6.4.0" defer></script>
-<script src="modules/v510.js?v=6.4.0" defer></script>
-<script src="modules/v511.js?v=6.4.0" defer></script>
-<script src="modules/v512.js?v=6.4.0" defer></script>
-<script src="modules/v60.js?v=6.4.0" defer></script>
-<script src="modules/v61.js?v=6.4.0" defer></script>
-<script src="modules/v62.js?v=6.4.0" defer></script>
-<script src="modules/v63.js?v=6.4.0" defer></script>
-<script src="modules/v64.js?v=6.4.0" defer></script>
-<script src="modules/bootstrap.js?v=6.4.0" defer></script>
+<script src="security-config.js?v=6.5.0" defer></script>
+<script src="app.js?v=6.5.0" defer></script>
+<script src="modules/firebase-sync.js?v=6.5.0" defer></script>
+<script src="modules/learning-engine.js?v=6.5.0" defer></script>
+<script src="modules/ui-events.js?v=6.5.0" defer></script>
+<script src="modules/course-engine.js?v=6.5.0" defer></script>
+<script src="modules/russian-path.js?v=6.5.0" defer></script>
+<script src="modules/v43.js?v=6.5.0" defer></script>
+<script src="modules/v431.js?v=6.5.0" defer></script>
+<script src="modules/v50.js?v=6.5.0" defer></script>
+<script src="modules/v510.js?v=6.5.0" defer></script>
+<script src="modules/v511.js?v=6.5.0" defer></script>
+<script src="modules/v512.js?v=6.5.0" defer></script>
+<script src="modules/v60.js?v=6.5.0" defer></script>
+<script src="modules/v61.js?v=6.5.0" defer></script>
+<script src="modules/v62.js?v=6.5.0" defer></script>
+<script src="modules/v63.js?v=6.5.0" defer></script>
+<script src="modules/v64.js?v=6.5.0" defer></script>
+<script src="modules/v65.js?v=6.5.0" defer></script>
+<script src="modules/bootstrap.js?v=6.5.0" defer></script>
 </body>
 </html>

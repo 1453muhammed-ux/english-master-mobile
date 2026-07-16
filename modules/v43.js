@@ -4,7 +4,7 @@ const V43_BADGE_LEDGER='wp43_badges';
 let academySpellingPoolCache=[];
 
 COURSES.en.actualCount=5488;
-COURSES.ru.actualCount=1000;
+COURSES.ru.actualCount=1120;
 COURSES.uz.actualCount=137;
 
 function v43ModeStats(){

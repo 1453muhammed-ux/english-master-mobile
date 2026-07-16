@@ -1,25 +1,14 @@
-WordPilot v6.4.0 — Source-Driven Content Expansion
+WORDPILOT v6.5.0 — PROFESSIONAL EXPERIENCE
 
-CONTENT
-- English + Russian Academy: 102 total original lessons
-- Academy graded readings: 48
-- Russian controlled words and expressions: 1120 (120 new in V6.3)
-- Russian Verb Lab: 36 aspect, motion, reflexive and government models
-- Source Atlas: 8 uploaded archives / 165 source files mapped to original WordPilot outputs
+Canlı proje: https://wordpilot-7a574.web.app/?wpbuild=6.5.0
 
-NEW UI
-- Russian Verb Lab
-- Russian Vocabulary Atlas
-- Source Atlas
-- Source Workshop practice inside new Academy lessons
-- Updated Academy resource cards and content counts
+Öne çıkanlar:
+- Sesli konuşma partneri ve yazılı cevap düzeltme
+- Mobil mikrofon tanılama ve izin ön kontrolü
+- Çoktan seçmeli, boşluk doldurma ve cümle oyunlarında seçim sıfırlama
+- English / Русский / O‘zbekcha için tutarlı bayraklar ve ayrı ilerleme
+- Rusça 1120 kayıt, Reader 2.0, A1–C2 Akademi, SM-2 ve App Check
 
-PRESERVED
-- wordpilot_v34 progress key
-- Firebase / Google login / App Check
-- Separate course XP and leagues
-- V6.2 SM-2 learning history
-- Existing IDs 1-1000 in ru_words.json
+Hosting dosyaları GitHub ana dizinine yüklenir. Mevcut .github/workflows/firebase-hosting-live.yml korunmalıdır.
 
-COPYRIGHT POLICY
-Source texts and exercises were not copied. Only pedagogical sequence, topic coverage and exercise patterns were used to create original WordPilot material.
+Gelişmiş bulut AI ve bulut ses transkripsiyonu isteğe bağlıdır. functions klasörü bu altyapıyı içerir; özel API anahtarları ön yüz dosyalarına yazılmaz.

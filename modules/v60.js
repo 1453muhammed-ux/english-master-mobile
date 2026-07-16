@@ -1,5 +1,5 @@
-/* WordPilot v6.4.0 — A1–C2 Academy, level assessments and graded readings. */
-const WP60_VERSION='6.4.0';
+/* WordPilot v6.5.0 — A1–C2 Academy, level assessments and graded readings. */
+const WP60_VERSION='6.5.0';
 const WP60_PROGRESS_KEY='v6_academy_progress';
 let wp60Data=null,wp60Course=activeCourse==='ru'?'ru':'en',wp60Level='A1',wp60Lesson=null,wp60QuizIndex=0,wp60QuizCorrect=0,wp60Reading=null,wp60ReadingTranslations=true;
 function wp60Progress(){if(!state)return {lessons:{},tests:{},readings:{}};state.stats.taskClaims=state.stats.taskClaims||{};return state.stats.taskClaims[WP60_PROGRESS_KEY]||(state.stats.taskClaims[WP60_PROGRESS_KEY]={lessons:{},tests:{},readings:{}})}
