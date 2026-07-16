@@ -1,7 +1,7 @@
 {
-  "version": "6.3.0",
-  "title": "WordPilot V6.3 Expanded Academy",
-  "sourcePolicy": "Yüklenen gramer, kelime, fiil, test ve derecelendirilmiş okuma kaynaklarının öğretim yapısı incelendi; tüm WordPilot dersleri, örnekleri, alıştırmaları ve okumaları özgün oluşturuldu.",
+  "version": "6.1.0",
+  "title": "WordPilot V6.1 A1–C2 Flight Path Academy",
+  "sourcePolicy": "Yüklenen kitaplar yalnız öğretim sırası ve kapsam doğrulaması için incelendi. Tüm açıklamalar, örnekler, sorular ve okumalar WordPilot için özgün hazırlanmıştır.",
   "levels": {
     "A1": {
       "tr": "Başlangıç",
@@ -531,7 +531,7 @@
       "id": "en-a2-01",
       "course": "en",
       "level": "A2",
-      "order": 9,
+      "order": 7,
       "levelOrder": 1,
       "title": "Geçmiş zaman",
       "summary": "Düzenli ve düzensiz fiillerle bitmiş olaylar.",
@@ -610,7 +610,7 @@
       "id": "en-a2-02",
       "course": "en",
       "level": "A2",
-      "order": 10,
+      "order": 8,
       "levelOrder": 2,
       "title": "Sayılabilen ve sayılamayan isimler",
       "summary": "some/any, much/many, a few/a little.",
@@ -689,7 +689,7 @@
       "id": "en-a2-03",
       "course": "en",
       "level": "A2",
-      "order": 11,
+      "order": 9,
       "levelOrder": 3,
       "title": "Karşılaştırma ve üstünlük",
       "summary": "-er/more ve -est/most yapıları.",
@@ -768,7 +768,7 @@
       "id": "en-a2-04",
       "course": "en",
       "level": "A2",
-      "order": 12,
+      "order": 10,
       "levelOrder": 4,
       "title": "Gelecek planları ve tahmin",
       "summary": "be going to, present continuous ve will.",
@@ -847,7 +847,7 @@
       "id": "en-a2-05",
       "course": "en",
       "level": "A2",
-      "order": 13,
+      "order": 11,
       "levelOrder": 5,
       "title": "Present perfect başlangıcı",
       "summary": "Deneyim, sonuç ve devam eden zaman.",
@@ -926,7 +926,7 @@
       "id": "en-a2-06",
       "course": "en",
       "level": "A2",
-      "order": 14,
+      "order": 12,
       "levelOrder": 6,
       "title": "Zorunluluk, tavsiye ve amaç",
       "summary": "must, have to, should; to + fiil.",
@@ -1005,7 +1005,7 @@
       "id": "en-b1-01",
       "course": "en",
       "level": "B1",
-      "order": 17,
+      "order": 13,
       "levelOrder": 1,
       "title": "Zamanların birlikte kullanımı",
       "summary": "present, past ve future zamanlarını bağlama göre seçme.",
@@ -1084,7 +1084,7 @@
       "id": "en-b1-02",
       "course": "en",
       "level": "B1",
-      "order": 18,
+      "order": 14,
       "levelOrder": 2,
       "title": "Present perfect ve past simple",
       "summary": "Deneyim/sonuç ile bitmiş geçmişi ayırma.",
@@ -1163,7 +1163,7 @@
       "id": "en-b1-03",
       "course": "en",
       "level": "B1",
-      "order": 19,
+      "order": 15,
       "levelOrder": 3,
       "title": "Koşul cümleleri",
       "summary": "zero, first ve second conditional.",
@@ -1242,7 +1242,7 @@
       "id": "en-b1-04",
       "course": "en",
       "level": "B1",
-      "order": 20,
+      "order": 16,
       "levelOrder": 4,
       "title": "Edilgen yapı",
       "summary": "Eylemi yapan değil sonuç önemli olduğunda passive.",
@@ -1321,7 +1321,7 @@
       "id": "en-b1-05",
       "course": "en",
       "level": "B1",
-      "order": 21,
+      "order": 17,
       "levelOrder": 5,
       "title": "Dolaylı anlatıma giriş",
       "summary": "Birinin sözünü zaman ve kişi uyumuyla aktarma.",
@@ -1400,7 +1400,7 @@
       "id": "en-b1-06",
       "course": "en",
       "level": "B1",
-      "order": 22,
+      "order": 18,
       "levelOrder": 6,
       "title": "İlgi cümleleri ve bağlayıcılar",
       "summary": "who, which, that; although, however, therefore.",
@@ -1479,7 +1479,7 @@
       "id": "en-b2-01",
       "course": "en",
       "level": "B2",
-      "order": 25,
+      "order": 19,
       "levelOrder": 1,
       "title": "Anlatı zamanları",
       "summary": "past simple, continuous, perfect ve perfect continuous.",
@@ -1558,7 +1558,7 @@
       "id": "en-b2-02",
       "course": "en",
       "level": "B2",
-      "order": 26,
+      "order": 20,
       "levelOrder": 2,
       "title": "İleri koşullar ve wish",
       "summary": "third conditional, mixed conditionals, wish/if only.",
@@ -1637,7 +1637,7 @@
       "id": "en-b2-03",
       "course": "en",
       "level": "B2",
-      "order": 27,
+      "order": 21,
       "levelOrder": 3,
       "title": "Causative ve gelişmiş edilgen",
       "summary": "have/get something done ve reporting passive.",
@@ -1716,7 +1716,7 @@
       "id": "en-b2-04",
       "course": "en",
       "level": "B2",
-      "order": 28,
+      "order": 22,
       "levelOrder": 4,
       "title": "Modal perfect yapılar",
       "summary": "must have, might have, should have, cannot have.",
@@ -1795,7 +1795,7 @@
       "id": "en-b2-05",
       "course": "en",
       "level": "B2",
-      "order": 29,
+      "order": 23,
       "levelOrder": 5,
       "title": "Participle clauses",
       "summary": "-ing, -ed ve having + participle ile cümle kısaltma.",
@@ -1874,7 +1874,7 @@
       "id": "en-b2-06",
       "course": "en",
       "level": "B2",
-      "order": 30,
+      "order": 24,
       "levelOrder": 6,
       "title": "Vurgu, devrik yapı ve cleft",
       "summary": "rarely, not only, it was…that, what…is.",
@@ -1953,7 +1953,7 @@
       "id": "en-c1-01",
       "course": "en",
       "level": "C1",
-      "order": 33,
+      "order": 25,
       "levelOrder": 1,
       "title": "Zaman ve görünüş nüansı",
       "summary": "Süreç, geçicilik, tekrar ve konuşmacı tutumunu zamanlarla yansıtma.",
@@ -2032,7 +2032,7 @@
       "id": "en-c1-02",
       "course": "en",
       "level": "C1",
-      "order": 34,
+      "order": 26,
       "levelOrder": 2,
       "title": "Subjunctive ve resmî öneri",
       "summary": "mandative subjunctive, were-subjunctive ve formel kalıplar.",
@@ -2111,7 +2111,7 @@
       "id": "en-c1-03",
       "course": "en",
       "level": "C1",
-      "order": 35,
+      "order": 27,
       "levelOrder": 3,
       "title": "Nominalization ve akademik yoğunluk",
       "summary": "Fiil ve sıfatları isim yapısına dönüştürme.",
@@ -2190,7 +2190,7 @@
       "id": "en-c1-04",
       "course": "en",
       "level": "C1",
-      "order": 36,
+      "order": 28,
       "levelOrder": 4,
       "title": "Hedging ve ihtiyatlı iddia",
       "summary": "may, appear to, tend to, arguably, relatively.",
@@ -2269,7 +2269,7 @@
       "id": "en-c1-05",
       "course": "en",
       "level": "C1",
-      "order": 37,
+      "order": 29,
       "levelOrder": 5,
       "title": "Gelişmiş bağlama ve gönderim",
       "summary": "reference, substitution, ellipsis ve discourse markers.",
@@ -2348,7 +2348,7 @@
       "id": "en-c1-06",
       "course": "en",
       "level": "C1",
-      "order": 38,
+      "order": 30,
       "levelOrder": 6,
       "title": "Üslup ve kayıt kontrolü",
       "summary": "Resmî, nötr ve gündelik anlatım arasında bilinçli seçim.",
@@ -2427,7 +2427,7 @@
       "id": "en-c2-01",
       "course": "en",
       "level": "C2",
-      "order": 41,
+      "order": 31,
       "levelOrder": 1,
       "title": "İnce anlam ve yakın sözcükler",
       "summary": "Near-synonyms, çağrışım, collocation ve semantik prosodi.",
@@ -2506,7 +2506,7 @@
       "id": "en-c2-02",
       "course": "en",
       "level": "C2",
-      "order": 42,
+      "order": 32,
       "levelOrder": 2,
       "title": "Bilgi yapısı ve odak",
       "summary": "Theme-rheme, fronting, end-focus ve given/new information.",
@@ -2585,7 +2585,7 @@
       "id": "en-c2-03",
       "course": "en",
       "level": "C2",
-      "order": 43,
+      "order": 33,
       "levelOrder": 3,
       "title": "Retorik ve ikna",
       "summary": "Concession, counterargument, parallelism ve rhetorical framing.",
@@ -2664,7 +2664,7 @@
       "id": "en-c2-04",
       "course": "en",
       "level": "C2",
-      "order": 44,
+      "order": 34,
       "levelOrder": 4,
       "title": "Karmaşık cümle mimarisi",
       "summary": "Embedded clauses, apposition, parenthesis ve punctuation.",
@@ -2743,7 +2743,7 @@
       "id": "en-c2-05",
       "course": "en",
       "level": "C2",
-      "order": 45,
+      "order": 35,
       "levelOrder": 5,
       "title": "Tür ve ses ustalığı",
       "summary": "Akademik makale, rapor, eleştiri, anlatı ve konuşmada farklı sesler.",
@@ -2822,7 +2822,7 @@
       "id": "en-c2-06",
       "course": "en",
       "level": "C2",
-      "order": 46,
+      "order": 36,
       "levelOrder": 6,
       "title": "Editörlük ve hassasiyet",
       "summary": "Belirsizlik, gereksiz tekrar, mantık ve ton hatalarını düzeltme.",
@@ -3393,7 +3393,7 @@
       "id": "ru-a2-01",
       "course": "ru",
       "level": "A2",
-      "order": 10,
+      "order": 7,
       "levelOrder": 1,
       "title": "İlgi hâli: sahiplik ve yokluk",
       "summary": "родительный падеж; у меня, нет, miktar ve -dan anlamı.",
@@ -3475,7 +3475,7 @@
       "id": "ru-a2-02",
       "course": "ru",
       "level": "A2",
-      "order": 11,
+      "order": 8,
       "levelOrder": 2,
       "title": "Yönelme hâli",
       "summary": "кому? чему?; yaş, duygu ve alıcı.",
@@ -3557,7 +3557,7 @@
       "id": "ru-a2-03",
       "course": "ru",
       "level": "A2",
-      "order": 12,
+      "order": 9,
       "levelOrder": 3,
       "title": "Araç hâli",
       "summary": "кем? чем?; birlikte, araç ve meslek.",
@@ -3639,7 +3639,7 @@
       "id": "ru-a2-04",
       "course": "ru",
       "level": "A2",
-      "order": 13,
+      "order": 10,
       "levelOrder": 4,
       "title": "Fiil görünüşüne giriş",
       "summary": "несовершенный ve совершенный вид.",
@@ -3721,7 +3721,7 @@
       "id": "ru-a2-05",
       "course": "ru",
       "level": "A2",
-      "order": 14,
+      "order": 11,
       "levelOrder": 5,
       "title": "Dönüşlü fiiller ve karşılıklılık",
       "summary": "-ся/-сь ile günlük ve karşılıklı eylemler.",
@@ -3803,7 +3803,7 @@
       "id": "ru-a2-06",
       "course": "ru",
       "level": "A2",
-      "order": 15,
+      "order": 12,
       "levelOrder": 6,
       "title": "Hareket fiilleri ve zaman",
       "summary": "идти/ходить, ехать/ездить; saat ve yol tarifi.",
@@ -3885,7 +3885,7 @@
       "id": "ru-b1-01",
       "course": "ru",
       "level": "B1",
-      "order": 19,
+      "order": 13,
       "levelOrder": 1,
       "title": "Hâl sistemi bütünlüğü",
       "summary": "Altı hâli işlev, edat ve fiil yönetimiyle birlikte seçme.",
@@ -3967,7 +3967,7 @@
       "id": "ru-b1-02",
       "course": "ru",
       "level": "B1",
-      "order": 20,
+      "order": 14,
       "levelOrder": 2,
       "title": "Görünüş ve zaman seçimi",
       "summary": "Süreç, sınır, tekrar, sonuç ve ardışıklık.",
@@ -4049,7 +4049,7 @@
       "id": "ru-b1-03",
       "course": "ru",
       "level": "B1",
-      "order": 21,
+      "order": 15,
       "levelOrder": 3,
       "title": "Önekli hareket fiilleri",
       "summary": "при-, у-, в-, вы-, пере-, до-, под- ile yön ve sınır.",
@@ -4131,7 +4131,7 @@
       "id": "ru-b1-04",
       "course": "ru",
       "level": "B1",
-      "order": 22,
+      "order": 16,
       "levelOrder": 4,
       "title": "Koşul ve varsayım",
       "summary": "бы ile gerçek dışı, nazik ve olası durumlar.",
@@ -4213,7 +4213,7 @@
       "id": "ru-b1-05",
       "course": "ru",
       "level": "B1",
-      "order": 23,
+      "order": 17,
       "levelOrder": 5,
       "title": "Belirsiz özne ve edilgen",
       "summary": "-ся edilgeni, kısa sıfat-fiil ve belirsiz kişili cümle.",
@@ -4295,7 +4295,7 @@
       "id": "ru-b1-06",
       "course": "ru",
       "level": "B1",
-      "order": 24,
+      "order": 18,
       "levelOrder": 6,
       "title": "Bağlı cümle ve dolaylı anlatım",
       "summary": "что, чтобы, когда, потому что ve dolaylı soru.",
@@ -4377,7 +4377,7 @@
       "id": "ru-b2-01",
       "course": "ru",
       "level": "B2",
-      "order": 28,
+      "order": 19,
       "levelOrder": 1,
       "title": "Görünüş nüansları",
       "summary": "Tek sefer, girişim, iptal, alışkanlık ve beklenen sonuç.",
@@ -4459,7 +4459,7 @@
       "id": "ru-b2-02",
       "course": "ru",
       "level": "B2",
-      "order": 29,
+      "order": 20,
       "levelOrder": 2,
       "title": "Öneklerin anlamsal ağı",
       "summary": "Fiil önekleriyle yön, yoğunluk, başlangıç ve yeniden yapma.",
@@ -4541,7 +4541,7 @@
       "id": "ru-b2-03",
       "course": "ru",
       "level": "B2",
-      "order": 30,
+      "order": 21,
       "levelOrder": 3,
       "title": "Sıfat-fiiller",
       "summary": "Etken/edilgen, şimdiki/geçmiş sıfat-fiiller.",
@@ -4623,7 +4623,7 @@
       "id": "ru-b2-04",
       "course": "ru",
       "level": "B2",
-      "order": 31,
+      "order": 22,
       "levelOrder": 4,
       "title": "Zarf-fiiller",
       "summary": "Aynı öznenin eşzamanlı veya önceki eylemi.",
@@ -4705,7 +4705,7 @@
       "id": "ru-b2-05",
       "course": "ru",
       "level": "B2",
-      "order": 32,
+      "order": 23,
       "levelOrder": 5,
       "title": "Sözcük dizimi ve bilgi odağı",
       "summary": "Esnek sıra, tema–rema ve tonlama.",
@@ -4787,7 +4787,7 @@
       "id": "ru-b2-06",
       "course": "ru",
       "level": "B2",
-      "order": 33,
+      "order": 24,
       "levelOrder": 6,
       "title": "Parçacıklar ve konuşmacı tutumu",
       "summary": "же, ведь, даже, только, именно, разве, ли.",
@@ -4869,7 +4869,7 @@
       "id": "ru-c1-01",
       "course": "ru",
       "level": "C1",
-      "order": 37,
+      "order": 25,
       "levelOrder": 1,
       "title": "Fiil yönetimi ve hâl seçimi",
       "summary": "Soyut fiillerin istediği hâl ve edat kalıpları.",
@@ -4951,7 +4951,7 @@
       "id": "ru-c1-02",
       "course": "ru",
       "level": "C1",
-      "order": 38,
+      "order": 26,
       "levelOrder": 2,
       "title": "Akademik isimleştirme",
       "summary": "Fiil temelli düşünceyi isim ve edat yapısına dönüştürme.",
@@ -5033,7 +5033,7 @@
       "id": "ru-c1-03",
       "course": "ru",
       "level": "C1",
-      "order": 39,
+      "order": 27,
       "levelOrder": 3,
       "title": "Karmaşık neden, amaç ve taviz",
       "summary": "поскольку, вследствие того что, несмотря на то что, с тем чтобы.",
@@ -5115,7 +5115,7 @@
       "id": "ru-c1-04",
       "course": "ru",
       "level": "C1",
-      "order": 40,
+      "order": 28,
       "levelOrder": 4,
       "title": "Alıntılama ve kaynak dili",
       "summary": "по мнению, согласно, как отмечает, данные свидетельствуют.",
@@ -5197,7 +5197,7 @@
       "id": "ru-c1-05",
       "course": "ru",
       "level": "C1",
-      "order": 41,
+      "order": 29,
       "levelOrder": 5,
       "title": "Deyim, eşdizim ve mecaz",
       "summary": "Doğal sözcük birlikleri ve bağlamsal anlam.",
@@ -5279,7 +5279,7 @@
       "id": "ru-c1-06",
       "course": "ru",
       "level": "C1",
-      "order": 42,
+      "order": 30,
       "levelOrder": 6,
       "title": "Resmî ve gündelik kayıt",
       "summary": "Aynı amacı farklı nezaket ve resmiyetle ifade etme.",
@@ -5361,7 +5361,7 @@
       "id": "ru-c2-01",
       "course": "ru",
       "level": "C2",
-      "order": 46,
+      "order": 31,
       "levelOrder": 1,
       "title": "Görünüş ve söylem stratejisi",
       "summary": "Görünüş seçiminin beklenti, nezaket ve anlatı odağına etkisi.",
@@ -5443,7 +5443,7 @@
       "id": "ru-c2-02",
       "course": "ru",
       "level": "C2",
-      "order": 47,
+      "order": 32,
       "levelOrder": 2,
       "title": "Söz dizimsel stilizasyon",
       "summary": "Parçalama, bağlayıcısızlık, ters sıra ve ritim.",
@@ -5525,7 +5525,7 @@
       "id": "ru-c2-03",
       "course": "ru",
       "level": "C2",
-      "order": 48,
+      "order": 33,
       "levelOrder": 3,
       "title": "İnce parçacık ve tonlama farkları",
       "summary": "то, -ка, мол, дескать, уж, ведь, же ile pragmatik anlam.",
@@ -5607,7 +5607,7 @@
       "id": "ru-c2-04",
       "course": "ru",
       "level": "C2",
-      "order": 49,
+      "order": 34,
       "levelOrder": 4,
       "title": "Kelime yapımı ve anlam üretimi",
       "summary": "Önek, sonek, kök ailesi ve çağrışım.",
@@ -5689,7 +5689,7 @@
       "id": "ru-c2-05",
       "course": "ru",
       "level": "C2",
-      "order": 50,
+      "order": 35,
       "levelOrder": 5,
       "title": "Metinlerarası gönderim ve retorik",
       "summary": "Alıntı, ima, ironi ve kültürel çağrışımı okuma.",
@@ -5771,7 +5771,7 @@
       "id": "ru-c2-06",
       "course": "ru",
       "level": "C2",
-      "order": 51,
+      "order": 36,
       "levelOrder": 6,
       "title": "Editörlük ve norm",
       "summary": "Anlam, bağdaşıklık, yönetim, noktalama ve üslup düzeltme.",
@@ -5848,2820 +5848,6 @@
           "explanation": "İleri düzenleme dil bilgisi hatasından çok belirsizliği ve kayıt uyumsuzluğunu hedefler."
         }
       ]
-    },
-    {
-      "id": "en-a1-07-question-forms",
-      "course": "en",
-      "level": "A1",
-      "title": "Soru kalıpları ve kısa cevaplar",
-      "summary": "be, do ve soru sözcükleriyle temel bilgi soruları kurma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Soru kalıpları ve kısa cevaplar yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "be, do ve soru sözcükleriyle temel bilgi soruları kurma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "be sorularında yardımcı fiil öznenin önüne geçer.",
-            "Geniş zamanda çoğu fiille do/does kullanılır.",
-            "Kısa cevapta ana fiil değil yardımcı fiil tekrarlanır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Where are you from?",
-          "translation": "Nerelisin?"
-        },
-        {
-          "target": "Does she work here?",
-          "translation": "O burada çalışıyor mu?"
-        },
-        {
-          "target": "Yes, she does.",
-          "translation": "Evet, çalışıyor."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "“He is ready.” cümlesini soruya çevir.",
-          "answer": "Is he ready?",
-          "hint": "be fiilini başa al."
-        },
-        {
-          "prompt": "Kısa cevap ver: Do they live here?",
-          "answer": "Yes, they do.",
-          "hint": "do yardımcı fiilini kullan."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Soru kalıpları ve kısa cevaplar",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Soru kalıpları ve kısa cevaplar."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Where are you from?",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Where are you from?"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "be sorularında yardımcı fiil öznenin önüne geçer.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "be sorularında yardımcı fiil öznenin önüne geçer."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 7
-    },
-    {
-      "id": "en-a1-08-object-pronouns",
-      "course": "en",
-      "level": "A1",
-      "title": "Nesne zamirleri ve sahiplik",
-      "summary": "me, him, her, us, them ile my/mine ayrımını bağlam içinde kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Nesne zamirleri ve sahiplik yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "me, him, her, us, them ile my/mine ayrımını bağlam içinde kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Nesne zamiri fiilden veya edattan sonra gelir.",
-            "Possessive adjective isimden önce gelir: my book.",
-            "Possessive pronoun tek başına kullanılır: mine."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Please call me.",
-          "translation": "Lütfen beni ara."
-        },
-        {
-          "target": "This is her bag.",
-          "translation": "Bu onun çantası."
-        },
-        {
-          "target": "The red bag is mine.",
-          "translation": "Kırmızı çanta benimki."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Boşluğu doldur: Please help ___. (I)",
-          "answer": "me",
-          "hint": "Fiilden sonra nesne zamiri gerekir."
-        },
-        {
-          "prompt": "“Bu kitap benimki.” cümlesini yaz.",
-          "answer": "This book is mine.",
-          "hint": "mine tek başına kullanılır."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Nesne zamirleri ve sahiplik",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Nesne zamirleri ve sahiplik."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Please call me.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Please call me."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Nesne zamiri fiilden veya edattan sonra gelir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Nesne zamiri fiilden veya edattan sonra gelir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 8
-    },
-    {
-      "id": "en-a2-07-past-continuous",
-      "course": "en",
-      "level": "A2",
-      "title": "Past continuous ve zaman bağlaçları",
-      "summary": "Geçmişte devam eden eylemi, onu kesen olayla birlikte anlatma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Past continuous ve zaman bağlaçları yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Geçmişte devam eden eylemi, onu kesen olayla birlikte anlatma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "was/were + verb-ing kullanılır.",
-            "Kısa olay çoğunlukla past simple ile gelir.",
-            "while devam eden eylemi, when kısa olayı bağlar."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "I was cooking when the phone rang.",
-          "translation": "Telefon çaldığında yemek yapıyordum."
-        },
-        {
-          "target": "While we were walking, it started to rain.",
-          "translation": "Biz yürürken yağmur yağmaya başladı."
-        },
-        {
-          "target": "They were not sleeping.",
-          "translation": "Onlar uyumuyordu."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Birleştir: I studied. The lights went out.",
-          "answer": "I was studying when the lights went out.",
-          "hint": "Devam eden eylemi past continuous yap."
-        },
-        {
-          "prompt": "Boşluğu doldur: While she ___, I called. (drive)",
-          "answer": "was driving",
-          "hint": "while sonrası devam eden eylem."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Past continuous ve zaman bağlaçları",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Past continuous ve zaman bağlaçları."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "I was cooking when the phone rang.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "I was cooking when the phone rang."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "was/were + verb-ing kullanılır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "was/were + verb-ing kullanılır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 15
-    },
-    {
-      "id": "en-a2-08-infinitive-gerund",
-      "course": "en",
-      "level": "A2",
-      "title": "Infinitive ve gerund kalıpları",
-      "summary": "want to do, enjoy doing ve amaç bildiren to yapısını ayırt etme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Infinitive ve gerund kalıpları yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "want to do, enjoy doing ve amaç bildiren to yapısını ayırt etme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "want/need/plan sonrası to-infinitive yaygındır.",
-            "enjoy/finish/avoid sonrası -ing kullanılır.",
-            "Amaç belirtmek için to + fiil kullanılır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "I want to learn Russian.",
-          "translation": "Rusça öğrenmek istiyorum."
-        },
-        {
-          "target": "She enjoys reading.",
-          "translation": "O okumaktan hoşlanır."
-        },
-        {
-          "target": "I went out to buy bread.",
-          "translation": "Ekmek almak için dışarı çıktım."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Boşluğu doldur: We enjoy ___. (travel)",
-          "answer": "travelling",
-          "hint": "enjoy sonrası -ing."
-        },
-        {
-          "prompt": "Amaç cümlesi kur: I opened the app / practise.",
-          "answer": "I opened the app to practise.",
-          "hint": "Amaç için to kullan."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Infinitive ve gerund kalıpları",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Infinitive ve gerund kalıpları."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "I want to learn Russian.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "I want to learn Russian."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "want/need/plan sonrası to-infinitive yaygındır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "want/need/plan sonrası to-infinitive yaygındır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 16
-    },
-    {
-      "id": "en-b1-07-deduction-modals",
-      "course": "en",
-      "level": "B1",
-      "title": "Çıkarım bildiren modal fiiller",
-      "summary": "must, might, may ve can’t ile eldeki kanıta göre tahmin yapma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Çıkarım bildiren modal fiiller yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "must, might, may ve can’t ile eldeki kanıta göre tahmin yapma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "must güçlü olumlu çıkarım bildirir.",
-            "might/may olasılık bildirir.",
-            "can’t güçlü olumsuz çıkarım bildirir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "She must be tired.",
-          "translation": "O çok yorgun olmalı."
-        },
-        {
-          "target": "They might know the answer.",
-          "translation": "Cevabı biliyor olabilirler."
-        },
-        {
-          "target": "This can’t be correct.",
-          "translation": "Bu doğru olamaz."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Kanıta göre yaz: The lights are off; they are probably asleep.",
-          "answer": "They must be asleep.",
-          "hint": "Güçlü çıkarım için must."
-        },
-        {
-          "prompt": "Olumsuz güçlü çıkarım kur.",
-          "answer": "It can’t be true.",
-          "hint": "can’t + yalın fiil."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Çıkarım bildiren modal fiiller",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Çıkarım bildiren modal fiiller."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "She must be tired.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "She must be tired."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "must güçlü olumlu çıkarım bildirir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "must güçlü olumlu çıkarım bildirir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 23
-    },
-    {
-      "id": "en-b1-08-phrasal-verbs",
-      "course": "en",
-      "level": "B1",
-      "title": "Phrasal verbs bağlam atölyesi",
-      "summary": "Günlük phrasal verbleri anlam, nesne konumu ve bağlamla öğrenme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Phrasal verbs bağlam atölyesi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Günlük phrasal verbleri anlam, nesne konumu ve bağlamla öğrenme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Bazı phrasal verbler ayrılabilir: turn it off.",
-            "Zamir ayrılabilir yapıda iki parçanın arasına gelir.",
-            "Anlamı parçaların tek tek anlamından farklı olabilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Please turn the light off.",
-          "translation": "Lütfen ışığı kapat."
-        },
-        {
-          "target": "I ran into an old friend.",
-          "translation": "Eski bir arkadaşıma rastladım."
-        },
-        {
-          "target": "We need to find out the truth.",
-          "translation": "Gerçeği öğrenmemiz gerekiyor."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Zamiri doğru yerleştir: turn off / it",
-          "answer": "turn it off",
-          "hint": "Zamir iki parçanın arasına gelir."
-        },
-        {
-          "prompt": "“Gerçeği öğrenmek” için phrasal verb kullan.",
-          "answer": "find out the truth",
-          "hint": "find out = öğrenmek/ortaya çıkarmak."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Phrasal verbs bağlam atölyesi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Phrasal verbs bağlam atölyesi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Please turn the light off.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Please turn the light off."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Bazı phrasal verbler ayrılabilir: turn it off.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Bazı phrasal verbler ayrılabilir: turn it off."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 24
-    },
-    {
-      "id": "en-b2-07-reporting-verbs",
-      "course": "en",
-      "level": "B2",
-      "title": "Reporting verbs ve tamamlayıcı yapılar",
-      "summary": "admit doing, advise someone to do ve suggest that kalıplarını kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Reporting verbs ve tamamlayıcı yapılar yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "admit doing, advise someone to do ve suggest that kalıplarını kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Her reporting verb aynı tamamlayıcıyı almaz.",
-            "advise + object + to-infinitive kullanılır.",
-            "suggest sonrası -ing veya that-clause gelebilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "He admitted making a mistake.",
-          "translation": "Hata yaptığını kabul etti."
-        },
-        {
-          "target": "She advised me to wait.",
-          "translation": "Bana beklememi tavsiye etti."
-        },
-        {
-          "target": "They suggested that we leave early.",
-          "translation": "Erken ayrılmamızı önerdiler."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Dönüştür: “Wait,” she said to me.",
-          "answer": "She advised me to wait.",
-          "hint": "advise + object + to."
-        },
-        {
-          "prompt": "Boşluğu doldur: He admitted ___. (lie)",
-          "answer": "lying",
-          "hint": "admit sonrası -ing."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Reporting verbs ve tamamlayıcı yapılar",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Reporting verbs ve tamamlayıcı yapılar."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "He admitted making a mistake.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "He admitted making a mistake."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Her reporting verb aynı tamamlayıcıyı almaz.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Her reporting verb aynı tamamlayıcıyı almaz."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 31
-    },
-    {
-      "id": "en-b2-08-collocation-word-formation",
-      "course": "en",
-      "level": "B2",
-      "title": "Eşdizim ve kelime yapımı",
-      "summary": "Doğal sözcük birliktelikleriyle kök, ön ek ve son ekleri birlikte kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Eşdizim ve kelime yapımı yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Doğal sözcük birliktelikleriyle kök, ön ek ve son ekleri birlikte kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Kelime seçimi yalnızca gramer değil eşdizimle de belirlenir.",
-            "Ön ek çoğu zaman anlamı, son ek sözcük türünü değiştirir.",
-            "Yeni sözcüğü örnek cümleyle birlikte kaydetmek gerekir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "We reached a conclusion.",
-          "translation": "Bir sonuca ulaştık."
-        },
-        {
-          "target": "The decision was unavoidable.",
-          "translation": "Karar kaçınılmazdı."
-        },
-        {
-          "target": "Her explanation was highly effective.",
-          "translation": "Açıklaması oldukça etkiliydi."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Doğal eşdizimi seç: make/reach a conclusion.",
-          "answer": "reach a conclusion",
-          "hint": "İngilizcede doğal kalıp budur."
-        },
-        {
-          "prompt": "happy kelimesinden isim yap.",
-          "answer": "happiness",
-          "hint": "-ness isim yapar."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Eşdizim ve kelime yapımı",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Eşdizim ve kelime yapımı."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "We reached a conclusion.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "We reached a conclusion."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Kelime seçimi yalnızca gramer değil eşdizimle de belirlenir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Kelime seçimi yalnızca gramer değil eşdizimle de belirlenir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 32
-    },
-    {
-      "id": "en-c1-07-discourse-stance",
-      "course": "en",
-      "level": "C1",
-      "title": "Söylem belirteçleri ve akademik tutum",
-      "summary": "however, admittedly, notably ve stance kalıplarıyla metin akışını yönetme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Söylem belirteçleri ve akademik tutum yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "however, admittedly, notably ve stance kalıplarıyla metin akışını yönetme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Bağlayıcı yalnızca anlam değil metindeki işlevi de gösterir.",
-            "Hedging iddiayı kanıta uygun ölçüde sınırlar.",
-            "Aynı bağlayıcıyı aşırı tekrar etmek metni zayıflatır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Admittedly, the sample is small.",
-          "translation": "Kabul etmek gerekir ki örneklem küçüktür."
-        },
-        {
-          "target": "Nevertheless, the pattern is consistent.",
-          "translation": "Buna rağmen örüntü tutarlıdır."
-        },
-        {
-          "target": "The findings appear to support the claim.",
-          "translation": "Bulgular iddiayı destekliyor görünmektedir."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "İddiayı daha ihtiyatlı yap: The method proves the theory.",
-          "answer": "The method appears to support the theory.",
-          "hint": "prove yerine appear to support."
-        },
-        {
-          "prompt": "Taviz bağlayıcısı ekle.",
-          "answer": "Admittedly, the evidence is limited.",
-          "hint": "admittedly taviz bildirir."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Söylem belirteçleri ve akademik tutum",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Söylem belirteçleri ve akademik tutum."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Admittedly, the sample is small.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Admittedly, the sample is small."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Bağlayıcı yalnızca anlam değil metindeki işlevi de gösterir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Bağlayıcı yalnızca anlam değil metindeki işlevi de gösterir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 39
-    },
-    {
-      "id": "en-c1-08-mixed-conditionals",
-      "course": "en",
-      "level": "C1",
-      "title": "Karma koşullar ve geçmiş-sonuç ilişkisi",
-      "summary": "Geçmişteki bir durumun bugünkü sonucunu veya tersini ifade etme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Karma koşullar ve geçmiş-sonuç ilişkisi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Geçmişteki bir durumun bugünkü sonucunu veya tersini ifade etme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Past perfect koşul + would present result geçmişten bugüne etki kurar.",
-            "Past simple koşul + would have geçmiş sonuç bugünkü durumdan geçmişe bakar.",
-            "Zaman ilişkisini anlamdan seçmek gerekir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "If I had accepted the offer, I would live abroad now.",
-          "translation": "Teklifi kabul etseydim şimdi yurt dışında yaşıyor olurdum."
-        },
-        {
-          "target": "If she were more careful, she would not have lost the file.",
-          "translation": "Daha dikkatli biri olsaydı dosyayı kaybetmezdi."
-        },
-        {
-          "target": "Had we known, we would have acted differently.",
-          "translation": "Bilseydik farklı davranırdık."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Geçmiş kararın bugünkü sonucunu yaz.",
-          "answer": "If I had studied medicine, I would be a doctor now.",
-          "hint": "past perfect + would be."
-        },
-        {
-          "prompt": "Devrik koşul kur.",
-          "answer": "Had I known, I would have called.",
-          "hint": "if kaldırılır, had başa gelir."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Karma koşullar ve geçmiş-sonuç ilişkisi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Karma koşullar ve geçmiş-sonuç ilişkisi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "If I had accepted the offer, I would live abroad now.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "If I had accepted the offer, I would live abroad now."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Past perfect koşul + would present result geçmişten bugüne etki kurar.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Past perfect koşul + would present result geçmişten bugüne etki kurar."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 40
-    },
-    {
-      "id": "en-c2-07-pragmatic-implication",
-      "course": "en",
-      "level": "C2",
-      "title": "İma, ironi ve pragmatik anlam",
-      "summary": "Söylenen ile kastedilen arasındaki farkı ton, bağlam ve ortak bilgiyle çözümleme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "İma, ironi ve pragmatik anlam yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Söylenen ile kastedilen arasındaki farkı ton, bağlam ve ortak bilgiyle çözümleme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Pragmatik anlam sözcüklerin sözlük anlamını aşabilir.",
-            "İroni çoğu zaman bağlamdaki açık çelişkiye dayanır.",
-            "Yanıtın uygunluğu konuşmacı ilişkisine ve kayıt düzeyine bağlıdır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "That was a brilliant idea—now everything is broken.",
-          "translation": "Ne harika fikirdi—şimdi her şey bozuldu."
-        },
-        {
-          "target": "You might want to reconsider that point.",
-          "translation": "O noktayı yeniden düşünmek isteyebilirsin."
-        },
-        {
-          "target": "It is not entirely impossible.",
-          "translation": "Tamamen imkânsız sayılmaz."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "İroniyi açıkla: “Perfect timing,” he said after the train left.",
-          "answer": "The words are positive, but the context shows criticism.",
-          "hint": "Bağlam olumlu sözü tersine çevirir."
-        },
-        {
-          "prompt": "Daha diplomatik yaz: You are wrong.",
-          "answer": "You may want to reconsider that conclusion.",
-          "hint": "Doğrudan yargıyı yumuşat."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "İma, ironi ve pragmatik anlam",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: İma, ironi ve pragmatik anlam."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "That was a brilliant idea—now everything is broken.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "That was a brilliant idea—now everything is broken."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Pragmatik anlam sözcüklerin sözlük anlamını aşabilir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Pragmatik anlam sözcüklerin sözlük anlamını aşabilir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 47
-    },
-    {
-      "id": "en-c2-08-editing-mastery",
-      "course": "en",
-      "level": "C2",
-      "title": "Tutarlılık, özlülük ve editörlük",
-      "summary": "Uzun metinde tekrar, belirsiz gönderim ve gereksiz yoğunluğu sistematik biçimde düzeltme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Tutarlılık, özlülük ve editörlük yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Uzun metinde tekrar, belirsiz gönderim ve gereksiz yoğunluğu sistematik biçimde düzeltme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Her cümlenin paragraf işlevi belirgin olmalıdır.",
-            "Belirsiz this/it gönderimleri açık isimlerle değiştirilmelidir.",
-            "Özlülük anlam kaybı değil gereksiz yükün azaltılmasıdır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "The study, which was conducted in 2024, included 80 participants.",
-          "translation": "2024’te yürütülen çalışma 80 katılımcı içeriyordu."
-        },
-        {
-          "target": "This limitation affects the interpretation of the results.",
-          "translation": "Bu sınırlılık sonuçların yorumunu etkiler."
-        },
-        {
-          "target": "The revised paragraph is shorter but more precise.",
-          "translation": "Düzeltilmiş paragraf daha kısa fakat daha kesindir."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Cümleyi kısalt: Due to the fact that the data were incomplete...",
-          "answer": "Because the data were incomplete...",
-          "hint": "due to the fact that → because."
-        },
-        {
-          "prompt": "Belirsiz gönderimi düzelt: This shows a problem.",
-          "answer": "The sampling imbalance shows a problem.",
-          "hint": "this yerine açık isim kullan."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Tutarlılık, özlülük ve editörlük",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Tutarlılık, özlülük ve editörlük."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "The study, which was conducted in 2024, included 80 participants.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "The study, which was conducted in 2024, included 80 participants."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Her cümlenin paragraf işlevi belirgin olmalıdır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Her cümlenin paragraf işlevi belirgin olmalıdır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 48
-    },
-    {
-      "id": "ru-a1-07-stress-reduction",
-      "course": "ru",
-      "level": "A1",
-      "title": "Vurgu ve ünlü indirgenmesi",
-      "summary": "Rusçada vurgusuz о/а ve е/я seslerinin değişimini dinleme ve okuma ile tanıma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Vurgu ve ünlü indirgenmesi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Rusçada vurgusuz о/а ve е/я seslerinin değişimini dinleme ve okuma ile tanıma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Vurgu kelimenin anlamını ve anlaşılmasını etkiler.",
-            "Vurgusuz о çoğu konumda a benzeri duyulur.",
-            "Yazım korunur; telaffuz değişebilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "молоко́",
-          "translation": "süt",
-          "reading": "malako"
-        },
-        {
-          "target": "хорошо́",
-          "translation": "iyi",
-          "reading": "haraşo"
-        },
-        {
-          "target": "сего́дня",
-          "translation": "bugün",
-          "reading": "sivodnya"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Vurguyu göster: молоко",
-          "answer": "молоко́",
-          "hint": "Son hece vurguludur."
-        },
-        {
-          "prompt": "хорошо́ kelimesini Türkçe okunuşa yaklaştır.",
-          "answer": "haraşo",
-          "hint": "Vurgusuz о sesleri a’ya yaklaşır."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Vurgu ve ünlü indirgenmesi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Vurgu ve ünlü indirgenmesi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "молоко́",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "молоко́"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Vurgu kelimenin anlamını ve anlaşılmasını etkiler.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Vurgu kelimenin anlamını ve anlaşılmasını etkiler."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 7
-    },
-    {
-      "id": "ru-a1-08-questions-negation",
-      "course": "ru",
-      "level": "A1",
-      "title": "Soru sözcükleri ve olumsuzluk",
-      "summary": "кто, что, где, когда, почему ile soru; не ve нет ile olumsuzluk kurma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Soru sözcükleri ve olumsuzluk yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "кто, что, где, когда, почему ile soru; не ve нет ile olumsuzluk kurma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "не fiil veya yüklemden önce gelir.",
-            "нет yokluk bildirir ve çoğu zaman ilgi hâli ister.",
-            "Soru sözcüğü bilgi istenen öğenin yerini alır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Где вы живёте?",
-          "translation": "Nerede yaşıyorsunuz?",
-          "reading": "Gde vı jivyote?"
-        },
-        {
-          "target": "Я не понимаю.",
-          "translation": "Anlamıyorum.",
-          "reading": "Ya ne panimayu."
-        },
-        {
-          "target": "У меня нет времени.",
-          "translation": "Vaktim yok.",
-          "reading": "U menya net vremeni."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Olumsuz yap: Я понимаю.",
-          "answer": "Я не понимаю.",
-          "hint": "не fiilden önce."
-        },
-        {
-          "prompt": "“Neden?” hangi soru sözcüğüdür?",
-          "answer": "Почему?",
-          "hint": "paçemu"
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Soru sözcükleri ve olumsuzluk",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Soru sözcükleri ve olumsuzluk."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Где вы живёте?",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Где вы живёте?"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "не fiil veya yüklemden önce gelir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "не fiil veya yüklemden önce gelir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 8
-    },
-    {
-      "id": "ru-a1-09-time-numerals",
-      "course": "ru",
-      "level": "A1",
-      "title": "Saat, tarih ve temel sayı yapıları",
-      "summary": "Saat sorma, tarih söyleme ve yaş bildirme kalıplarını doğru hâllerle kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Saat, tarih ve temel sayı yapıları yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Saat sorma, tarih söyleme ve yaş bildirme kalıplarını doğru hâllerle kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Saat için Который час? sorusu kullanılır.",
-            "Yaş bildirirken мне + sayı + лет/года/год kullanılır.",
-            "Tarih ifadelerinde sıra sayıları ve ayın ilgi hâli görülür."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Кото́рый час?",
-          "translation": "Saat kaç?",
-          "reading": "Katorıy ças?"
-        },
-        {
-          "target": "Мне три́дцать лет.",
-          "translation": "Otuz yaşındayım.",
-          "reading": "Mne tritsat let."
-        },
-        {
-          "target": "Сего́дня пя́тое мая.",
-          "translation": "Bugün 5 Mayıs.",
-          "reading": "Sivodnya pyataye maya."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "“25 yaşındayım” de.",
-          "answer": "Мне двадцать пять лет.",
-          "hint": "мне + sayı + лет."
-        },
-        {
-          "prompt": "Saat sorusunu yaz.",
-          "answer": "Который час?",
-          "hint": "Sabit kalıp."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Saat, tarih ve temel sayı yapıları",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Saat, tarih ve temel sayı yapıları."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Кото́рый час?",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Кото́рый час?"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Saat için Который час? sorusu kullanılır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Saat için Который час? sorusu kullanılır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 9
-    },
-    {
-      "id": "ru-a2-07-genitive-quantity",
-      "course": "ru",
-      "level": "A2",
-      "title": "Miktar ve ilgi hâlinin çoğulu",
-      "summary": "много, мало, несколько ve sayılardan sonra isim biçimini seçme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Miktar ve ilgi hâlinin çoğulu yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "много, мало, несколько ve sayılardan sonra isim biçimini seçme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "много/мало sonrası çoğul ilgi hâli kullanılır.",
-            "2–4 sonrası tekil ilgi, 5 ve üzeri sonrası çoğul ilgi gelir.",
-            "Bazı çoğul ilgi biçimleri düzensizdir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "мно́го кни́г",
-          "translation": "çok kitap",
-          "reading": "mnoga knig"
-        },
-        {
-          "target": "три студе́нта",
-          "translation": "üç öğrenci",
-          "reading": "tri studenta"
-        },
-        {
-          "target": "пять челове́к",
-          "translation": "beş kişi",
-          "reading": "pyat çelavek"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Boşluğu doldur: много ___ (книга)",
-          "answer": "книг",
-          "hint": "Çoğul ilgi hâli."
-        },
-        {
-          "prompt": "“Üç öğrenci” yaz.",
-          "answer": "три студента",
-          "hint": "2–4 sonrası tekil ilgi."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Miktar ve ilgi hâlinin çoğulu",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Miktar ve ilgi hâlinin çoğulu."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "мно́го кни́г",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "мно́го кни́г"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "много/мало sonrası çoğul ilgi hâli kullanılır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "много/мало sonrası çoğul ilgi hâli kullanılır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 16
-    },
-    {
-      "id": "ru-a2-08-imperative",
-      "course": "ru",
-      "level": "A2",
-      "title": "Emir ve nazik rica biçimleri",
-      "summary": "Tekil/çoğul emir ile пожалуйста ve давайте kalıplarını kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Emir ve nazik rica biçimleri yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Tekil/çoğul emir ile пожалуйста ve давайте kalıplarını kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Tekil emir çoğu zaman -й/-и ile, çoğul -йте/-ите ile kurulur.",
-            "пожалуйста ricayı yumuşatır.",
-            "давайте + infinitive ortak öneri bildirir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Откро́йте окно́, пожа́луйста.",
-          "translation": "Lütfen pencereyi açın.",
-          "reading": "Atkroyte akno pajalusta."
-        },
-        {
-          "target": "Подожди́ мину́ту.",
-          "translation": "Bir dakika bekle.",
-          "reading": "Padajdi minutu."
-        },
-        {
-          "target": "Дава́йте начнём.",
-          "translation": "Haydi başlayalım.",
-          "reading": "Davayte naçnyom."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Nazik rica yap: открыть окно",
-          "answer": "Откройте окно, пожалуйста.",
-          "hint": "Çoğul/resmî emir + пожалуйста."
-        },
-        {
-          "prompt": "Ortak öneri kur: начать",
-          "answer": "Давайте начнём.",
-          "hint": "давайте + çekimli çoğul."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Emir ve nazik rica biçimleri",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Emir ve nazik rica biçimleri."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Откро́йте окно́, пожа́луйста.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Откро́йте окно́, пожа́луйста."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Tekil emir çoğu zaman -й/-и ile, çoğul -йте/-ите ile kurulur.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Tekil emir çoğu zaman -й/-и ile, çoğul -йте/-ите ile kurulur."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 17
-    },
-    {
-      "id": "ru-a2-09-aspect-daily",
-      "course": "ru",
-      "level": "A2",
-      "title": "Günlük işlerde fiil görünüşü",
-      "summary": "Süreç/tekrar için bitmemiş, tamamlanmış sonuç için bitmiş görünüş seçme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Günlük işlerde fiil görünüşü yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Süreç/tekrar için bitmemiş, tamamlanmış sonuç için bitmiş görünüş seçme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Bitmemiş görünüş süreç, alışkanlık veya tekrarı vurgular.",
-            "Bitmiş görünüş tek seferlik tamamlanmış sonucu vurgular.",
-            "Gelecek zaman yapısı görünüşe göre değişir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Я чита́л кни́гу два часа́.",
-          "translation": "İki saat kitap okuyordum/okudum.",
-          "reading": "Ya çital knigu dva çasa."
-        },
-        {
-          "target": "Я прочита́л кни́гу.",
-          "translation": "Kitabı bitirdim.",
-          "reading": "Ya praçital knigu."
-        },
-        {
-          "target": "Я бу́ду чита́ть ве́чером.",
-          "translation": "Akşam okuyacağım.",
-          "reading": "Ya budu çitat veçeram."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Sonucu vurgula: читать книгу",
-          "answer": "прочитать книгу",
-          "hint": "Bitmiş görünüş."
-        },
-        {
-          "prompt": "Süreç gelecek zaman yap.",
-          "answer": "Я буду читать.",
-          "hint": "быть + infinitive."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Günlük işlerde fiil görünüşü",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Günlük işlerde fiil görünüşü."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Я чита́л кни́гу два часа́.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Я чита́л кни́гу два часа́."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Bitmemiş görünüş süreç, alışkanlık veya tekrarı vurgular.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Bitmemiş görünüş süreç, alışkanlık veya tekrarı vurgular."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 18
-    },
-    {
-      "id": "ru-b1-07-reflexive-system",
-      "course": "ru",
-      "level": "B1",
-      "title": "Dönüşlü fiillerin anlam sistemi",
-      "summary": "-ся biçiminin dönüşlülük, karşılıklılık, edilgenlik ve durum anlamlarını ayırt etme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Dönüşlü fiillerin anlam sistemi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "-ся biçiminin dönüşlülük, karşılıklılık, edilgenlik ve durum anlamlarını ayırt etme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "-ся her zaman “kendi” anlamı vermez.",
-            "Bazı fiiller yalnız dönüşlü biçimde kullanılır.",
-            "Karşılıklı eylem bağlamdan veya друг друга ile anlaşılır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Мы встре́тились у метро́.",
-          "translation": "Metroda buluştuk.",
-          "reading": "Mı vstretilis u metro."
-        },
-        {
-          "target": "Дверь открыва́ется легко́.",
-          "translation": "Kapı kolay açılıyor.",
-          "reading": "Dver atkrıvayetsya legko."
-        },
-        {
-          "target": "Она интересу́ется исто́рией.",
-          "translation": "O tarihle ilgileniyor.",
-          "reading": "Ana interesuyetsya istoriyey."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "“İlgilenmek” fiilini kullan.",
-          "answer": "интересоваться",
-          "hint": "Yalnız dönüşlü kullanılan fiil."
-        },
-        {
-          "prompt": "Karşılıklı eylem kur: встретить",
-          "answer": "Мы встретились.",
-          "hint": "-ся karşılıklılık verir."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Dönüşlü fiillerin anlam sistemi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Dönüşlü fiillerin anlam sistemi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Мы встре́тились у метро́.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Мы встре́тились у метро́."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "-ся her zaman “kendi” anlamı vermez.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "-ся her zaman “kendi” anlamı vermez."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 25
-    },
-    {
-      "id": "ru-b1-08-motion-contrast",
-      "course": "ru",
-      "level": "B1",
-      "title": "Tek yönlü ve çok yönlü hareket",
-      "summary": "идти/ходить, ехать/ездить çiftlerinde şu anki yön ile alışkanlığı ayırt etme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Tek yönlü ve çok yönlü hareket yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "идти/ходить, ехать/ездить çiftlerinde şu anki yön ile alışkanlığı ayırt etme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Tek yönlü fiil şu an tek bir yöndeki hareketi bildirir.",
-            "Çok yönlü fiil alışkanlık, tekrar veya gidiş-dönüşü bildirir.",
-            "Taşıtlı ve yaya çiftleri ayrı seçilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Я иду́ в университе́т.",
-          "translation": "Üniversiteye yürüyorum.",
-          "reading": "Ya idu v universitet."
-        },
-        {
-          "target": "Я хожу́ туда́ ка́ждый день.",
-          "translation": "Oraya her gün giderim.",
-          "reading": "Ya haju tuda kajdıy den."
-        },
-        {
-          "target": "Мы е́дем на авто́бусе.",
-          "translation": "Otobüsle gidiyoruz.",
-          "reading": "Mı yedem na avtobuse."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Alışkanlık: her gün işe yürürüm.",
-          "answer": "Я хожу на работу каждый день.",
-          "hint": "ходить kullan."
-        },
-        {
-          "prompt": "Şu an araçla gidiyoruz.",
-          "answer": "Мы едем.",
-          "hint": "ехать tek yönlü."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Tek yönlü ve çok yönlü hareket",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Tek yönlü ve çok yönlü hareket."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Я иду́ в университе́т.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Я иду́ в университе́т."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Tek yönlü fiil şu an tek bir yöndeki hareketi bildirir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Tek yönlü fiil şu an tek bir yöndeki hareketi bildirir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 26
-    },
-    {
-      "id": "ru-b1-09-verb-government",
-      "course": "ru",
-      "level": "B1",
-      "title": "Fiil yönetimi ve hâl seçimi",
-      "summary": "помогать кому, интересоваться чем ve ждать кого/чего gibi yönetim kalıpları.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Fiil yönetimi ve hâl seçimi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "помогать кому, интересоваться чем ve ждать кого/чего gibi yönetim kalıpları. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Fiilin istediği hâl sözcükle birlikte öğrenilmelidir.",
-            "Türkçe karşılık Rusçadaki hâli doğrudan tahmin ettirmez.",
-            "Sözlükte fiil + soru biçimiyle not almak yararlıdır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "помога́ть дру́гу",
-          "translation": "arkadaşa yardım etmek",
-          "reading": "pamagat drugu"
-        },
-        {
-          "target": "интересова́ться нау́кой",
-          "translation": "bilimle ilgilenmek",
-          "reading": "interesavatsya naukoy"
-        },
-        {
-          "target": "ждать авто́буса",
-          "translation": "otobüsü beklemek",
-          "reading": "jdat avtobusa"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Boşluğu doğru hâle getir: помогать (друг)",
-          "answer": "помогать другу",
-          "hint": "Yönelme hâli."
-        },
-        {
-          "prompt": "интересоваться hangi hâli ister?",
-          "answer": "Araç hâli",
-          "hint": "кем? чем?"
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Fiil yönetimi ve hâl seçimi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Fiil yönetimi ve hâl seçimi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "помога́ть дру́гу",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "помога́ть дру́гу"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Fiilin istediği hâl sözcükle birlikte öğrenilmelidir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Fiilin istediği hâl sözcükle birlikte öğrenilmelidir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 27
-    },
-    {
-      "id": "ru-b2-07-participles",
-      "course": "ru",
-      "level": "B2",
-      "title": "Sıfat-fiiller: etkin ve edilgen yapılar",
-      "summary": "Eylemi isim nitelemesine dönüştüren present/past participle biçimlerini anlama.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Sıfat-fiiller: etkin ve edilgen yapılar yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Eylemi isim nitelemesine dönüştüren present/past participle biçimlerini anlama. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Etkin sıfat-fiil eylemi yapan ismi niteler.",
-            "Edilgen sıfat-fiil eylemden etkilenen ismi niteler.",
-            "Kısa edilgen biçim yüklem olarak sık kullanılır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "студе́нт, чита́ющий статью́",
-          "translation": "makale okuyan öğrenci",
-          "reading": "student çitayuşiy statyu"
-        },
-        {
-          "target": "кни́га, напи́санная авто́ром",
-          "translation": "yazar tarafından yazılmış kitap",
-          "reading": "kniga napisannaya avtoram"
-        },
-        {
-          "target": "Рабо́та зако́нчена.",
-          "translation": "Çalışma tamamlandı.",
-          "reading": "Rabota zakonçena."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "“okuyan öğrenci” yaz.",
-          "answer": "читающий студент",
-          "hint": "Etkin şimdiki sıfat-fiil."
-        },
-        {
-          "prompt": "Kısa edilgen biçim kur: работа / закончить",
-          "answer": "Работа закончена.",
-          "hint": "Kısa edilgen yüklem."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Sıfat-fiiller: etkin ve edilgen yapılar",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Sıfat-fiiller: etkin ve edilgen yapılar."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "студе́нт, чита́ющий статью́",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "студе́нт, чита́ющий статью́"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Etkin sıfat-fiil eylemi yapan ismi niteler.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Etkin sıfat-fiil eylemi yapan ismi niteler."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 34
-    },
-    {
-      "id": "ru-b2-08-gerunds",
-      "course": "ru",
-      "level": "B2",
-      "title": "Zarf-fiiller ve eşzamanlılık",
-      "summary": "-я/-а ve -в biçimleriyle ana eyleme eşlik eden veya önce gerçekleşen eylemi kurma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Zarf-fiiller ve eşzamanlılık yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "-я/-а ve -в biçimleriyle ana eyleme eşlik eden veya önce gerçekleşen eylemi kurma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Bitmemiş görünüş zarf-fiili çoğunlukla eşzamanlılık bildirir.",
-            "Bitmiş görünüş zarf-fiili önce tamamlanan eylemi bildirir.",
-            "İki eylemin öznesi aynı olmalıdır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Чита́я текст, она́ де́лала заме́тки.",
-          "translation": "Metni okurken not alıyordu.",
-          "reading": "Çitaya tekst ana delala zametki."
-        },
-        {
-          "target": "Зако́нчив рабо́ту, он ушёл.",
-          "translation": "İşi bitirince ayrıldı.",
-          "reading": "Zakonçiv rabotu on uşyol."
-        },
-        {
-          "target": "Улыба́ясь, ребёнок вошёл.",
-          "translation": "Çocuk gülümseyerek içeri girdi.",
-          "reading": "Ulıbayas rebyonak vaşyol."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Birleştir: Он закончил работу. Он ушёл.",
-          "answer": "Закончив работу, он ушёл.",
-          "hint": "Önce tamamlanan eylem."
-        },
-        {
-          "prompt": "Özne kuralını söyle.",
-          "answer": "Ana fiil ve zarf-fiilin öznesi aynı olmalıdır.",
-          "hint": "Temel güvenlik kuralı."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Zarf-fiiller ve eşzamanlılık",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Zarf-fiiller ve eşzamanlılık."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Чита́я текст, она́ де́лала заме́тки.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Чита́я текст, она́ де́лала заме́тки."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Bitmemiş görünüş zarf-fiili çoğunlukla eşzamanlılık bildirir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Bitmemiş görünüş zarf-fiili çoğunlukla eşzamanlılık bildirir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 35
-    },
-    {
-      "id": "ru-b2-09-word-formation",
-      "course": "ru",
-      "level": "B2",
-      "title": "Önek, son ek ve sözcük ailesi",
-      "summary": "Rusça köklerden fiil, isim ve sıfat üretimini anlam ağıyla birlikte çözümleme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Önek, son ek ve sözcük ailesi yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Rusça köklerden fiil, isim ve sıfat üretimini anlam ağıyla birlikte çözümleme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Önek fiilin yönünü, sonucunu veya başlangıcını değiştirebilir.",
-            "Son ek sözcük türünü ve değerlendirme tonunu değiştirebilir.",
-            "Sözcük ailesi bağlam içinde birlikte öğrenilmelidir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "писа́ть → переписа́ть → перепи́ска",
-          "translation": "yazmak → yeniden yazmak → yazışma",
-          "reading": "pisat perepisat perepiska"
-        },
-        {
-          "target": "учи́ть → учи́тель → учени́к",
-          "translation": "öğretmek → öğretmen → öğrenci",
-          "reading": "uçit uçitel uçenik"
-        },
-        {
-          "target": "нау́ка → нау́чный",
-          "translation": "bilim → bilimsel",
-          "reading": "nauka nauçnıy"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "наука kelimesinden sıfat yap.",
-          "answer": "научный",
-          "hint": "-н- sıfat yapımında görülür."
-        },
-        {
-          "prompt": "переписать öneki ne katar?",
-          "answer": "Yeniden/baştan yazma anlamı.",
-          "hint": "пере- tekrar/geçiş anlamı."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Önek, son ek ve sözcük ailesi",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Önek, son ek ve sözcük ailesi."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "писа́ть → переписа́ть → перепи́ска",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "писа́ть → переписа́ть → перепи́ска"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Önek fiilin yönünü, sonucunu veya başlangıcını değiştirebilir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Önek fiilin yönünü, sonucunu veya başlangıcını değiştirebilir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 36
-    },
-    {
-      "id": "ru-c1-07-case-government",
-      "course": "ru",
-      "level": "C1",
-      "title": "İleri düzey yönetim ve hâl alternasyonu",
-      "summary": "Resmî ve akademik dilde fiil, isim ve sıfat yönetimini sistematik seçme.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "İleri düzey yönetim ve hâl alternasyonu yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Resmî ve akademik dilde fiil, isim ve sıfat yönetimini sistematik seçme. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Yönetim kalıbı sözcük türü değişse de farklılaşabilir.",
-            "Bazı yapılarda edat seçimi anlam nüansı yaratır.",
-            "Normatif kullanım ile konuşma kullanımını ayırmak gerekir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "вли́ять на результа́т",
-          "translation": "sonucu etkilemek",
-          "reading": "vliyat na rezultat"
-        },
-        {
-          "target": "соответствова́ть тре́бованиям",
-          "translation": "gerekliliklere uymak",
-          "reading": "saotvetstvavat trebavaniyam"
-        },
-        {
-          "target": "осно́ванный на да́нных",
-          "translation": "verilere dayalı",
-          "reading": "asnovannıy na dannıh"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Boşluğu doldur: соответствовать ___ (требования)",
-          "answer": "требованиям",
-          "hint": "Yönelme çoğul."
-        },
-        {
-          "prompt": "основанный hangi edatla kullanılır?",
-          "answer": "на + bulunma",
-          "hint": "основанный на данных."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "İleri düzey yönetim ve hâl alternasyonu",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: İleri düzey yönetim ve hâl alternasyonu."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "вли́ять на результа́т",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "вли́ять на результа́т"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Yönetim kalıbı sözcük türü değişse de farklılaşabilir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Yönetim kalıbı sözcük türü değişse de farklılaşabilir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 43
-    },
-    {
-      "id": "ru-c1-08-academic-nominalization",
-      "course": "ru",
-      "level": "C1",
-      "title": "Akademik isimleştirme ve yoğunluk",
-      "summary": "Fiil merkezli cümleyi isim merkezli akademik yapıya dönüştürme ve aşırı yoğunluktan kaçınma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Akademik isimleştirme ve yoğunluk yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Fiil merkezli cümleyi isim merkezli akademik yapıya dönüştürme ve aşırı yoğunluktan kaçınma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "İsimleştirme metne resmiyet ve kavramsal yoğunluk katar.",
-            "Aşırı isim zinciri okunabilirliği azaltabilir.",
-            "Eyleyen önemliyse fiil yapısı daha açık olabilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "анализи́ровать да́нные → ана́лиз да́нных",
-          "translation": "verileri analiz etmek → veri analizi",
-          "reading": "analizirovat dannıye analiz dannıh"
-        },
-        {
-          "target": "оцени́ть результа́т → оце́нка результа́та",
-          "translation": "sonucu değerlendirmek → sonucun değerlendirilmesi",
-          "reading": "atsenit rezultat atsenka rezultata"
-        },
-        {
-          "target": "провести́ иссле́дование",
-          "translation": "araştırma yürütmek",
-          "reading": "pravesti issledavaniye"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "İsimleştir: анализировать данные",
-          "answer": "анализ данных",
-          "hint": "Fiilden isim yapısı."
-        },
-        {
-          "prompt": "Aşırı isim zincirinde ne yapılır?",
-          "answer": "Gerekirse fiil cümlesine dönülür.",
-          "hint": "Okunabilirlik önceliklidir."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Akademik isimleştirme ve yoğunluk",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Akademik isimleştirme ve yoğunluk."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "анализи́ровать да́нные → ана́лиз да́нных",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "анализи́ровать да́нные → ана́лиз да́нных"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "İsimleştirme metne resmiyet ve kavramsal yoğunluk katar.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "İsimleştirme metne resmiyet ve kavramsal yoğunluk katar."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 44
-    },
-    {
-      "id": "ru-c1-09-discourse-particles",
-      "course": "ru",
-      "level": "C1",
-      "title": "Söylem parçacıkları ve konuşmacı tutumu",
-      "summary": "ведь, же, всё-таки, именно, якобы ile vurgu, beklenti ve mesafe kurma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Söylem parçacıkları ve konuşmacı tutumu yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "ведь, же, всё-таки, именно, якобы ile vurgu, beklenti ve mesafe kurma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Parçacığın anlamı çoğu zaman tonlama ve bağlama bağlıdır.",
-            "же karşıtlık veya hatırlatma vurgusu yapabilir.",
-            "якобы aktarılan bilgiye mesafe koyabilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Он ведь предупрежда́л нас.",
-          "translation": "O bizi uyarmıştı ya.",
-          "reading": "On ved preduprejdal nas."
-        },
-        {
-          "target": "Она́ всё-таки пришла́.",
-          "translation": "O sonunda/yine de geldi.",
-          "reading": "Ana vsyo-taki prišla."
-        },
-        {
-          "target": "Это и́менно тот приме́р.",
-          "translation": "Bu tam olarak o örnektir.",
-          "reading": "Eta imenno tot primer."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "“Tam olarak” vurgusu için parçacık seç.",
-          "answer": "именно",
-          "hint": "Odak vurgusu."
-        },
-        {
-          "prompt": "Aktarılan iddiaya mesafe koy.",
-          "answer": "якобы",
-          "hint": "“sözde/iddiasına göre” nüansı."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Söylem parçacıkları ve konuşmacı tutumu",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Söylem parçacıkları ve konuşmacı tutumu."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Он ведь предупрежда́л нас.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Он ведь предупрежда́л нас."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Parçacığın anlamı çoğu zaman tonlama ve bağlama bağlıdır.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Parçacığın anlamı çoğu zaman tonlama ve bağlama bağlıdır."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 45
-    },
-    {
-      "id": "ru-c2-07-aspect-narrative",
-      "course": "ru",
-      "level": "C2",
-      "title": "Anlatıda görünüş ve bakış açısı",
-      "summary": "Olay zinciri, arka plan, tekrar ve beklenen sonuçta görünüş seçiminin söylem etkisi.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Anlatıda görünüş ve bakış açısı yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Olay zinciri, arka plan, tekrar ve beklenen sonuçta görünüş seçiminin söylem etkisi. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Bitmiş görünüş olay zincirini ilerletir.",
-            "Bitmemiş görünüş arka plan, süreç veya tekrar kurar.",
-            "Olumsuzluk ve modalite görünüş tercihini etkileyebilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Он откры́л дверь и вошёл.",
-          "translation": "Kapıyı açtı ve içeri girdi.",
-          "reading": "On atkrıl dver i vaşyol."
-        },
-        {
-          "target": "Он до́лго открыва́л дверь.",
-          "translation": "Kapıyı uzun süre açmaya uğraştı/açıyordu.",
-          "reading": "On dolga atkrıval dver."
-        },
-        {
-          "target": "Я не успе́л прочита́ть статью́.",
-          "translation": "Makaleyi okumayı bitiremedim.",
-          "reading": "Ya ne uspel praçitat statyu."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Olay zinciri için görünüş seç.",
-          "answer": "Bitmiş görünüş",
-          "hint": "Olayı ileri taşır."
-        },
-        {
-          "prompt": "Uzun süreci vurgula.",
-          "answer": "Bitmemiş görünüş",
-          "hint": "Süreç odağı."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Anlatıda görünüş ve bakış açısı",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Anlatıda görünüş ve bakış açısı."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Он откры́л дверь и вошёл.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Он откры́л дверь и вошёл."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Bitmiş görünüş olay zincirini ilerletir.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Bitmiş görünüş olay zincirini ilerletir."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 7,
-      "order": 52
-    },
-    {
-      "id": "ru-c2-08-syntax-variation",
-      "course": "ru",
-      "level": "C2",
-      "title": "Sözdizimsel varyasyon ve bilgi yapısı",
-      "summary": "Rusçada esnek sözcük dizimini tema, odak, karşıtlık ve ritim için kullanma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Sözdizimsel varyasyon ve bilgi yapısı yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Rusçada esnek sözcük dizimini tema, odak, karşıtlık ve ritim için kullanma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Nötr dizilim ile işaretli dizilim aynı pragmatik etkiyi vermez.",
-            "Yeni bilgi çoğu zaman cümle sonuna yaklaşır.",
-            "Öne alma karşıtlık veya çerçeveleme yaratabilir."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "Эту кни́гу я уже́ чита́л.",
-          "translation": "Bu kitabı ben daha önce okudum.",
-          "reading": "Etu knigu ya uje çital."
-        },
-        {
-          "target": "Вчера́ прие́хал наш профе́ссор.",
-          "translation": "Dün profesörümüz geldi.",
-          "reading": "Vçera priyahal naş professor."
-        },
-        {
-          "target": "И́менно э́того мы и жда́ли.",
-          "translation": "Tam da bunu bekliyorduk.",
-          "reading": "Imenna etava mı i jdali."
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Nesneyi karşıtlıkla öne al.",
-          "answer": "Эту книгу я уже читал.",
-          "hint": "Nesne başa alınır."
-        },
-        {
-          "prompt": "Yeni bilgi çoğu zaman nereye gelir?",
-          "answer": "Cümle sonuna",
-          "hint": "Rusça bilgi yapısında yaygın eğilim."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Sözdizimsel varyasyon ve bilgi yapısı",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Sözdizimsel varyasyon ve bilgi yapısı."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "Эту кни́гу я уже́ чита́л.",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "Эту кни́гу я уже́ чита́л."
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Nötr dizilim ile işaretli dizilim aynı pragmatik etkiyi vermez.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Nötr dizilim ile işaretli dizilim aynı pragmatik etkiyi vermez."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 8,
-      "order": 53
-    },
-    {
-      "id": "ru-c2-09-idiom-register",
-      "course": "ru",
-      "level": "C2",
-      "title": "Deyim, kayıt ve üslup dönüşümü",
-      "summary": "Aynı düşünceyi gündelik, nötr ve resmî kayıtta doğal biçimde yeniden kurma.",
-      "estimatedMinutes": 14,
-      "objectives": [
-        "Deyim, kayıt ve üslup dönüşümü yapısını anlamak",
-        "Örnekleri bağlam içinde yorumlamak",
-        "Yapıyı kontrollü üretimde kullanmak"
-      ],
-      "sections": [
-        {
-          "title": "Konu anlatımı",
-          "body": "Aynı düşünceyi gündelik, nötr ve resmî kayıtta doğal biçimde yeniden kurma. Yapıyı biçim, anlam ve kullanım bağlamıyla birlikte öğren."
-        },
-        {
-          "title": "Temel kurallar",
-          "bullets": [
-            "Deyim doğrudan kelime kelime çevrilmez.",
-            "Resmî dilde kalıp ve isimleştirme artabilir.",
-            "Konuşma dilindeki parçacıklar ilişki ve tutum taşır."
-          ]
-        },
-        {
-          "title": "Kaynak atölyesi yöntemi",
-          "body": "Önce örneği sesli oku, ardından aynı kalıbı kişi, zaman veya bağlam değiştirerek yeniden kur. Son aşamada cevabı görmeden kısa üretim yap."
-        }
-      ],
-      "examples": [
-        {
-          "target": "ру́ки не дохо́дят",
-          "translation": "fırsat bulamamak",
-          "reading": "ruki ne dahodyat"
-        },
-        {
-          "target": "приня́ть ме́ры",
-          "translation": "önlem almak",
-          "reading": "prinyat merı"
-        },
-        {
-          "target": "внести́ предложе́ние",
-          "translation": "öneri sunmak",
-          "reading": "vnesti predlojeniye"
-        }
-      ],
-      "practice": [
-        {
-          "prompt": "Resmî karşılık seç: что-то сделать с проблемой",
-          "answer": "принять меры",
-          "hint": "Resmî/nötr kalıp."
-        },
-        {
-          "prompt": "руки не доходят ne demektir?",
-          "answer": "Bir işi yapmaya fırsat bulamamak",
-          "hint": "Deyimsel anlam."
-        }
-      ],
-      "quiz": [
-        {
-          "q": "Bu dersin ana odağı hangisidir?",
-          "options": [
-            "Deyim, kayıt ve üslup dönüşümü",
-            "Yalnızca kelime ezberi",
-            "Rastgele telaffuz çalışması"
-          ],
-          "answer": 0,
-          "explanation": "Dersin odağı: Deyim, kayıt ve üslup dönüşümü."
-        },
-        {
-          "q": "Aşağıdaki örneklerden hangisi bu derste doğrudan incelenir?",
-          "options": [
-            "ру́ки не дохо́дят",
-            "This example belongs to another lesson.",
-            "Это пример из другой темы."
-          ],
-          "answer": 0,
-          "explanation": "ру́ки не дохо́дят"
-        },
-        {
-          "q": "Bu konuyla ilgili doğru açıklama hangisidir?",
-          "options": [
-            "Deyim doğrudan kelime kelime çevrilmez.",
-            "Sözcük sırası ve bağlamın hiçbir önemi yoktur.",
-            "Yapı yalnızca tek bir ezber cümlesinde kullanılabilir."
-          ],
-          "answer": 0,
-          "explanation": "Deyim doğrudan kelime kelime çevrilmez."
-        }
-      ],
-      "sourcePack": "v63-expanded",
-      "levelOrder": 9,
-      "order": 54
     }
   ],
   "readings": [
@@ -9864,1256 +7050,6 @@
           "answer": 0
         }
       ]
-    },
-    {
-      "id": "en-a1-v63-library-card",
-      "course": "en",
-      "level": "A1",
-      "title": "The Library Card",
-      "topic": "Daily life",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Nora visits the town library after work.",
-          "translation": "Nora işten sonra kasaba kütüphanesini ziyaret eder."
-        },
-        {
-          "text": "She wants a card because she enjoys short stories.",
-          "translation": "Kısa hikâyelerden hoşlandığı için bir kart ister."
-        },
-        {
-          "text": "The librarian asks for her name and address.",
-          "translation": "Kütüphaneci adını ve adresini sorar."
-        },
-        {
-          "text": "Nora chooses an easy book and a travel magazine.",
-          "translation": "Nora kolay bir kitap ve gezi dergisi seçer."
-        },
-        {
-          "text": "She plans to read for twenty minutes every evening.",
-          "translation": "Her akşam yirmi dakika okumayı planlar."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Why does Nora want a card?",
-          "options": [
-            "To borrow books",
-            "To buy coffee",
-            "To use a bus"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "What does she choose?",
-          "options": [
-            "A dictionary only",
-            "A book and a magazine",
-            "Two newspapers"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "en-a2-v63-missed-train",
-      "course": "en",
-      "level": "A2",
-      "title": "The Missed Train",
-      "topic": "Travel",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Leo was walking to the station when his phone rang.",
-          "translation": "Telefonu çaldığında Leo istasyona yürüyordu."
-        },
-        {
-          "text": "He stopped to answer it and lost several minutes.",
-          "translation": "Cevap vermek için durdu ve birkaç dakika kaybetti."
-        },
-        {
-          "text": "When he reached the platform, the train had already left.",
-          "translation": "Perona ulaştığında tren çoktan ayrılmıştı."
-        },
-        {
-          "text": "Instead of getting angry, he checked the next departure.",
-          "translation": "Kızmak yerine bir sonraki kalkışı kontrol etti."
-        },
-        {
-          "text": "He used the extra time to review his vocabulary.",
-          "translation": "Fazladan zamanı kelime tekrarına ayırdı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Why was Leo late?",
-          "options": [
-            "He answered a call",
-            "He forgot the station",
-            "The bus broke down"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "What did he do while waiting?",
-          "options": [
-            "He slept",
-            "He reviewed vocabulary",
-            "He went home"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "en-b1-v63-community-garden",
-      "course": "en",
-      "level": "B1",
-      "title": "The Community Garden",
-      "topic": "Community",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "A group of neighbours turned an empty area into a small garden.",
-          "translation": "Bir grup komşu boş bir alanı küçük bir bahçeye dönüştürdü."
-        },
-        {
-          "text": "At first, they disagreed about what to plant.",
-          "translation": "Başlangıçta ne ekecekleri konusunda anlaşamadılar."
-        },
-        {
-          "text": "They finally divided the space into vegetable beds and a quiet sitting area.",
-          "translation": "Sonunda alanı sebze tarhları ve sessiz bir oturma alanına böldüler."
-        },
-        {
-          "text": "Local children now visit the garden to learn how food grows.",
-          "translation": "Yerel çocuklar artık yiyeceklerin nasıl yetiştiğini öğrenmek için bahçeyi ziyaret ediyor."
-        },
-        {
-          "text": "The project has made the neighbourhood cleaner and more connected.",
-          "translation": "Proje mahalleyi daha temiz ve daha bağlı hâle getirdi."
-        }
-      ],
-      "questions": [
-        {
-          "q": "What was the area before?",
-          "options": [
-            "A school",
-            "An empty place",
-            "A market"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "What changed in the neighbourhood?",
-          "options": [
-            "It became cleaner and more connected",
-            "It became quieter only",
-            "People moved away"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "en-b2-v63-remote-team",
-      "course": "en",
-      "level": "B2",
-      "title": "A Team Across Time Zones",
-      "topic": "Work",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "The design team works from four different countries.",
-          "translation": "Tasarım ekibi dört farklı ülkeden çalışıyor."
-        },
-        {
-          "text": "Because their working hours overlap only briefly, meetings must be carefully planned.",
-          "translation": "Çalışma saatleri yalnızca kısa süre örtüştüğü için toplantılar dikkatle planlanmalıdır."
-        },
-        {
-          "text": "They record decisions in a shared document so that nobody depends on memory alone.",
-          "translation": "Kimsenin yalnızca hafızaya bağlı kalmaması için kararları ortak bir belgeye kaydederler."
-        },
-        {
-          "text": "When a deadline is at risk, the project manager explains the problem early rather than hiding it.",
-          "translation": "Bir teslim tarihi risk altındaysa proje yöneticisi sorunu gizlemek yerine erken açıklar."
-        },
-        {
-          "text": "This transparent routine has reduced confusion and improved trust.",
-          "translation": "Bu şeffaf rutin karışıklığı azaltmış ve güveni artırmıştır."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Why are meetings carefully planned?",
-          "options": [
-            "The team dislikes meetings",
-            "Working hours overlap briefly",
-            "The manager travels"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "What improved trust?",
-          "options": [
-            "Transparent communication",
-            "More deadlines",
-            "Fewer documents"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "en-c1-v63-research-claim",
-      "course": "en",
-      "level": "C1",
-      "title": "A Careful Research Claim",
-      "topic": "Academic skills",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "A researcher noticed a strong relationship between sleep duration and test performance.",
-          "translation": "Bir araştırmacı uyku süresi ile test performansı arasında güçlü bir ilişki fark etti."
-        },
-        {
-          "text": "However, the data came from a small observational sample.",
-          "translation": "Ancak veriler küçük bir gözlemsel örneklemden geliyordu."
-        },
-        {
-          "text": "She therefore avoided claiming that additional sleep directly caused higher scores.",
-          "translation": "Bu nedenle daha fazla uykunun doğrudan daha yüksek puana neden olduğunu iddia etmekten kaçındı."
-        },
-        {
-          "text": "Instead, she described the finding as a pattern that required controlled investigation.",
-          "translation": "Bunun yerine bulguyu kontrollü araştırma gerektiren bir örüntü olarak tanımladı."
-        },
-        {
-          "text": "Her cautious wording made the report more credible, not less confident.",
-          "translation": "İhtiyatlı ifadesi raporu daha az kendinden emin değil, daha güvenilir yaptı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Why did she avoid a causal claim?",
-          "options": [
-            "The sample was observational and small",
-            "The scores were identical",
-            "She had no data"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "What did cautious wording improve?",
-          "options": [
-            "Length",
-            "Credibility",
-            "Sample size"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "en-c2-v63-meaning-between-lines",
-      "course": "en",
-      "level": "C2",
-      "title": "Meaning Between the Lines",
-      "topic": "Pragmatics",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "During a difficult meeting, one manager described the proposal as “ambitious.”",
-          "translation": "Zor bir toplantı sırasında bir yönetici öneriyi “iddialı” olarak tanımladı."
-        },
-        {
-          "text": "The word itself was positive, yet the pause before it suggested hesitation.",
-          "translation": "Kelimenin kendisi olumluydu fakat öncesindeki duraklama tereddüt gösteriyordu."
-        },
-        {
-          "text": "Colleagues understood that he doubted the schedule rather than the overall idea.",
-          "translation": "Meslektaşları onun genel fikirden değil takvimden şüphe ettiğini anladı."
-        },
-        {
-          "text": "A literal transcript would not fully capture that meaning.",
-          "translation": "Kelimesi kelimesine bir döküm bu anlamı tam olarak yakalayamazdı."
-        },
-        {
-          "text": "The exchange shows how timing, tone, and shared knowledge shape interpretation.",
-          "translation": "Bu konuşma zamanlama, ton ve ortak bilginin yorumu nasıl şekillendirdiğini gösterir."
-        }
-      ],
-      "questions": [
-        {
-          "q": "What created the implied doubt?",
-          "options": [
-            "The pause and context",
-            "The word alone",
-            "A written note"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "What cannot a literal transcript fully capture?",
-          "options": [
-            "The meeting date",
-            "Pragmatic meaning",
-            "The proposal title"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a1-v63-new-neighbour",
-      "course": "ru",
-      "level": "A1",
-      "title": "Новый сосед",
-      "topic": "Günlük yaşam",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "В на́шем до́ме но́вый сосе́д.",
-          "translation": "Bizim binada yeni bir komşu var."
-        },
-        {
-          "text": "Его́ зову́т Алексе́й.",
-          "translation": "Onun adı Aleksey."
-        },
-        {
-          "text": "Он рабо́тает в шко́ле и лю́бит му́зыку.",
-          "translation": "O okulda çalışıyor ve müziği seviyor."
-        },
-        {
-          "text": "В суббо́ту мы пьём чай вме́сте.",
-          "translation": "Cumartesi birlikte çay içiyoruz."
-        },
-        {
-          "text": "Алексе́й расска́зывает о своём го́роде.",
-          "translation": "Aleksey kendi şehrini anlatıyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Где работает Алексей?",
-          "options": [
-            "В школе",
-            "В банке",
-            "В магазине"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Что они пьют?",
-          "options": [
-            "Кофе",
-            "Чай",
-            "Сок"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a1-v63-small-market",
-      "course": "ru",
-      "level": "A1",
-      "title": "Маленький рынок",
-      "topic": "Alışveriş",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "У́тром Лена́ идёт на ры́нок.",
-          "translation": "Sabah Lena pazara gidiyor."
-        },
-        {
-          "text": "Она́ покупа́ет хле́б, я́блоки и сыр.",
-          "translation": "Ekmek, elma ve peynir alıyor."
-        },
-        {
-          "text": "Продаве́ц улыба́ется и говори́т: «До́брое у́тро!»",
-          "translation": "Satıcı gülümsüyor ve “Günaydın!” diyor."
-        },
-        {
-          "text": "Лена́ пла́тит ка́ртой.",
-          "translation": "Lena kartla ödüyor."
-        },
-        {
-          "text": "Пото́м она́ идёт домо́й.",
-          "translation": "Sonra eve gidiyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что покупает Лена?",
-          "options": [
-            "Хлеб, яблоки и сыр",
-            "Только воду",
-            "Книгу"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Как она платит?",
-          "options": [
-            "Наличными",
-            "Картой",
-            "Не платит"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a1-v63-evening-plan",
-      "course": "ru",
-      "level": "A1",
-      "title": "План на вечер",
-      "topic": "Zaman ve plan",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Сего́дня пя́тница.",
-          "translation": "Bugün cuma."
-        },
-        {
-          "text": "По́сле рабо́ты Олег хо́чет отдыха́ть.",
-          "translation": "İşten sonra Oleg dinlenmek istiyor."
-        },
-        {
-          "text": "В семь часо́в он смотрит фильм.",
-          "translation": "Saat yedide film izliyor."
-        },
-        {
-          "text": "Пото́м он звони́т сестре́.",
-          "translation": "Sonra kız kardeşini arıyor."
-        },
-        {
-          "text": "Он ложи́тся спать ра́но.",
-          "translation": "Erken yatıyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Какой сегодня день?",
-          "options": [
-            "Понедельник",
-            "Пятница",
-            "Воскресенье"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Кому звонит Олег?",
-          "options": [
-            "Сестре",
-            "Другу",
-            "Врачу"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a2-v63-hotel-problem",
-      "course": "ru",
-      "level": "A2",
-      "title": "Проблема в гостинице",
-      "topic": "Seyahat",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Ма́рия заброни́ровала но́мер на три но́чи.",
-          "translation": "Maria üç gecelik oda ayırttı."
-        },
-        {
-          "text": "Когда́ она́ прие́хала, в но́мере не рабо́тал кондиционе́р.",
-          "translation": "Geldiğinde odadaki klima çalışmıyordu."
-        },
-        {
-          "text": "Она́ споко́йно объясни́ла пробле́му администра́тору.",
-          "translation": "Sorunu resepsiyon görevlisine sakin biçimde açıkladı."
-        },
-        {
-          "text": "Администра́тор предложи́л друго́й но́мер.",
-          "translation": "Görevli başka bir oda önerdi."
-        },
-        {
-          "text": "Че́рез деся́ть мину́т всё бы́ло гото́во.",
-          "translation": "On dakika sonra her şey hazırdı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что не работало?",
-          "options": [
-            "Телевизор",
-            "Кондиционер",
-            "Лифт"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Что предложил администратор?",
-          "options": [
-            "Другой номер",
-            "Возврат домой",
-            "Бесплатный билет"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a2-v63-language-exchange",
-      "course": "ru",
-      "level": "A2",
-      "title": "Языковой обмен",
-      "topic": "Dil öğrenme",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Тиму́р изуча́ет ру́сский язы́к, а А́нна — туре́цкий.",
-          "translation": "Timur Rusça, Anna ise Türkçe öğreniyor."
-        },
-        {
-          "text": "Они́ встреча́ются два ра́за в неде́лю.",
-          "translation": "Haftada iki kez buluşuyorlar."
-        },
-        {
-          "text": "Пе́рвые три́дцать мину́т они́ говоря́т по-ру́сски.",
-          "translation": "İlk otuz dakika Rusça konuşuyorlar."
-        },
-        {
-          "text": "Пото́м перехо́дят на туре́цкий.",
-          "translation": "Sonra Türkçeye geçiyorlar."
-        },
-        {
-          "text": "Они́ исправля́ют оши́бки друг дру́га, но де́лают э́то ве́жливо.",
-          "translation": "Birbirlerinin hatalarını nazikçe düzeltiyorlar."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Как часто они встречаются?",
-          "options": [
-            "Каждый день",
-            "Два раза в неделю",
-            "Раз в месяц"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Как они исправляют ошибки?",
-          "options": [
-            "Грубо",
-            "Молча",
-            "Вежливо"
-          ],
-          "answer": 2
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-a2-v63-healthy-week",
-      "course": "ru",
-      "level": "A2",
-      "title": "Здоровая неделя",
-      "topic": "Sağlık",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "На э́той неде́ле И́ра реши́ла бо́льше дви́гаться.",
-          "translation": "Bu hafta İra daha çok hareket etmeye karar verdi."
-        },
-        {
-          "text": "Она́ хо́дит пешко́м на рабо́ту и де́лает коро́ткие переры́вы.",
-          "translation": "İşe yürüyerek gidiyor ve kısa molalar veriyor."
-        },
-        {
-          "text": "Ве́чером она́ гото́вит о́вощи и ра́но выключа́ет телефо́н.",
-          "translation": "Akşam sebze hazırlıyor ve telefonu erken kapatıyor."
-        },
-        {
-          "text": "Че́рез не́сколько дней она́ лу́чше спит.",
-          "translation": "Birkaç gün sonra daha iyi uyuyor."
-        },
-        {
-          "text": "И́ра понима́ет, что ма́ленькие привы́чки ва́жны.",
-          "translation": "İra küçük alışkanlıkların önemli olduğunu anlıyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Как Ира идёт на работу?",
-          "options": [
-            "На машине",
-            "Пешком",
-            "На такси"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Что стало лучше?",
-          "options": [
-            "Сон",
-            "Работа",
-            "Погода"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b1-v63-lost-document",
-      "course": "ru",
-      "level": "B1",
-      "title": "Потерянный документ",
-      "topic": "İş",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Пе́ред ва́жной встре́чей Серге́й не смог найти́ после́днюю ве́рсию отчёта.",
-          "translation": "Önemli toplantıdan önce Sergey raporun son sürümünü bulamadı."
-        },
-        {
-          "text": "Снача́ла он поду́мал, что фа́йл был удалён.",
-          "translation": "Önce dosyanın silindiğini düşündü."
-        },
-        {
-          "text": "Пото́м колле́га напо́мнила ему́ о па́пке с резе́рвными ко́пиями.",
-          "translation": "Sonra bir meslektaşı ona yedek kopya klasörünü hatırlattı."
-        },
-        {
-          "text": "Докуме́нт нашли́, но Серге́й измени́л пра́вила хране́ния фа́йлов.",
-          "translation": "Belge bulundu fakat Sergey dosya saklama kurallarını değiştirdi."
-        },
-        {
-          "text": "Тепе́рь ка́ждая ве́рсия име́ет да́ту и я́сное назва́ние.",
-          "translation": "Artık her sürümde tarih ve açık bir ad var."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Где нашли документ?",
-          "options": [
-            "В резервной папке",
-            "На бумаге",
-            "В телефоне"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Что изменил Сергей?",
-          "options": [
-            "Расписание",
-            "Правила хранения файлов",
-            "Название компании"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b1-v63-city-project",
-      "course": "ru",
-      "level": "B1",
-      "title": "Городской проект",
-      "topic": "Toplum",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Жи́тели ра́йона давно́ проси́ли сде́лать безопа́сный пешехо́дный перехо́д.",
-          "translation": "Mahalle sakinleri uzun zamandır güvenli bir yaya geçidi istiyordu."
-        },
-        {
-          "text": "Они́ собра́ли по́дписи и пода́ли заявле́ние в администра́цию.",
-          "translation": "İmza topladılar ve yönetime başvuru yaptılar."
-        },
-        {
-          "text": "Специали́сты изучи́ли движе́ние и предложи́ли но́вую схе́му.",
-          "translation": "Uzmanlar trafiği inceledi ve yeni bir plan önerdi."
-        },
-        {
-          "text": "Рабо́ты заня́ли две неде́ли.",
-          "translation": "Çalışmalar iki hafta sürdü."
-        },
-        {
-          "text": "Тепе́рь де́ти и пожилы́е лю́ди перехо́дят доро́гу споко́йнее.",
-          "translation": "Artık çocuklar ve yaşlılar yolu daha güvenli geçiyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что собрали жители?",
-          "options": [
-            "Деньги",
-            "Подписи",
-            "Книги"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Кому стало безопаснее?",
-          "options": [
-            "Только водителям",
-            "Детям и пожилым людям",
-            "Туристам"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b1-v63-two-routes",
-      "course": "ru",
-      "level": "B1",
-      "title": "Два маршрута",
-      "topic": "Hareket fiilleri",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Обы́чно На́стя е́здит на рабо́ту на метро́.",
-          "translation": "Nastya işe genellikle metroyla gider."
-        },
-        {
-          "text": "Но сего́дня она́ идёт пешко́м, потому́ что пого́да прекра́сная.",
-          "translation": "Ama bugün hava harika olduğu için yürüyor."
-        },
-        {
-          "text": "По доро́ге она́ заходи́т в но́вую пека́рню.",
-          "translation": "Yolda yeni bir fırına uğruyor."
-        },
-        {
-          "text": "Обра́тно она́ реша́ет пое́хать на авто́бусе.",
-          "translation": "Dönüşte otobüse binmeye karar veriyor."
-        },
-        {
-          "text": "За оди́н день она́ испо́льзует три ра́зных маршру́та.",
-          "translation": "Bir günde üç farklı rota kullanıyor."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Как Настя обычно ездит?",
-          "options": [
-            "На метро",
-            "Пешком",
-            "На велосипеде"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Куда она заходит?",
-          "options": [
-            "В аптеку",
-            "В пекарню",
-            "В банк"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b2-v63-museum-debate",
-      "course": "ru",
-      "level": "B2",
-      "title": "Спор в музее",
-      "topic": "Kültür",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "По́сле вы́ставки два дру́га по-ра́зному оцени́ли одну́ карти́ну.",
-          "translation": "Sergiden sonra iki arkadaş aynı tabloyu farklı değerlendirdi."
-        },
-        {
-          "text": "Оди́н счита́л, что ху́дожник критику́ет совреме́нное о́бщество.",
-          "translation": "Biri sanatçının çağdaş toplumu eleştirdiğini düşündü."
-        },
-        {
-          "text": "Друго́й ви́дел в рабо́те ли́чную исто́рию о па́мяти.",
-          "translation": "Diğeri eserde hafıza üzerine kişisel bir hikâye görüyordu."
-        },
-        {
-          "text": "Вме́сто того́ что́бы дока́зывать свою́ право́ту, они́ сравни́ли дета́ли.",
-          "translation": "Kendi haklılıklarını kanıtlamak yerine ayrıntıları karşılaştırdılar."
-        },
-        {
-          "text": "Разгово́р показа́л, что произведе́ние мо́жет допуска́ть не́сколько интерпрета́ций.",
-          "translation": "Konuşma bir eserin birden fazla yoruma izin verebileceğini gösterdi."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Почему друзья спорили?",
-          "options": [
-            "О цене билета",
-            "Об интерпретации картины",
-            "О времени музея"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Что они сделали вместо спора о правоте?",
-          "options": [
-            "Сравнили детали",
-            "Ушли",
-            "Позвали художника"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b2-v63-remote-research",
-      "course": "ru",
-      "level": "B2",
-      "title": "Исследование на расстоянии",
-      "topic": "Bilim",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Междунаро́дная гру́ппа собира́ла да́нные в трёх страна́х.",
-          "translation": "Uluslararası ekip üç ülkede veri topladı."
-        },
-        {
-          "text": "Что́бы результа́ты бы́ли сопостави́мы, все испо́льзовали еди́ный протоко́л.",
-          "translation": "Sonuçların karşılaştırılabilir olması için herkes ortak bir protokol kullandı."
-        },
-        {
-          "text": "Ка́ждую неде́лю уча́стники обсужда́ли пробле́мы по видеосвя́зи.",
-          "translation": "Katılımcılar her hafta sorunları görüntülü görüşmede tartıştı."
-        },
-        {
-          "text": "Когда́ появи́лось расхожде́ние, кома́нда прове́рила исхо́дные фа́йлы.",
-          "translation": "Bir uyumsuzluk ortaya çıktığında ekip ham dosyaları kontrol etti."
-        },
-        {
-          "text": "Э́то позволи́ло найти́ техни́ческую оши́бку до публика́ции.",
-          "translation": "Bu, teknik hatanın yayından önce bulunmasını sağladı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Почему использовали единый протокол?",
-          "options": [
-            "Для сопоставимости",
-            "Для рекламы",
-            "Для перевода"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Когда нашли ошибку?",
-          "options": [
-            "После публикации",
-            "До публикации",
-            "Через год"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-b2-v63-news-check",
-      "course": "ru",
-      "level": "B2",
-      "title": "Проверка новости",
-      "topic": "Medya",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "В социа́льной се́ти бы́стро распространи́лась сенсацио́нная но́вость.",
-          "translation": "Sosyal ağda sansasyonel bir haber hızla yayıldı."
-        },
-        {
-          "text": "Али́на не ста́ла де́литься е́ю сра́зу.",
-          "translation": "Alina haberi hemen paylaşmadı."
-        },
-        {
-          "text": "Она́ нашла́ пе́рвичный исто́чник и сравни́ла да́ту публика́ции.",
-          "translation": "Birincil kaynağı buldu ve yayın tarihini karşılaştırdı."
-        },
-        {
-          "text": "Оказа́лось, что ста́рая информа́ция была́ представлена́ как но́вая.",
-          "translation": "Eski bilginin yeniymiş gibi sunulduğu ortaya çıktı."
-        },
-        {
-          "text": "Али́на написа́ла коро́ткое объясне́ние и дала́ ссы́лку на исто́чник.",
-          "translation": "Alina kısa bir açıklama yazdı ve kaynağa bağlantı verdi."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Почему Алина не поделилась новостью сразу?",
-          "options": [
-            "Она проверяла факты",
-            "У неё не было телефона",
-            "Новость была длинной"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "В чём была проблема?",
-          "options": [
-            "Не было автора",
-            "Старая информация выдавалась за новую",
-            "Текст был на другом языке"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c1-v63-method-choice",
-      "course": "ru",
-      "level": "C1",
-      "title": "Выбор метода",
-      "topic": "Akademik",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Иссле́дователи хоте́ли понять, как меня́ется поведе́ние люде́й в но́вой сре́де.",
-          "translation": "Araştırmacılar insanların yeni bir ortamda davranışının nasıl değiştiğini anlamak istedi."
-        },
-        {
-          "text": "Оди́н опро́с не мог раскры́ть все причи́ны.",
-          "translation": "Tek bir anket bütün nedenleri ortaya çıkaramazdı."
-        },
-        {
-          "text": "Поэ́тому кома́нда объедини́ла коли́чественные да́нные с интервью́.",
-          "translation": "Bu nedenle ekip nicel verileri görüşmelerle birleştirdi."
-        },
-        {
-          "text": "Тако́й ди́зайн потре́бовал бо́льше вре́мени, но дал бо́лее по́лную карти́ну.",
-          "translation": "Bu tasarım daha fazla zaman gerektirdi fakat daha eksiksiz bir tablo sundu."
-        },
-        {
-          "text": "В отчёте а́вторы отде́льно описа́ли ограниче́ния ка́ждого ме́тода.",
-          "translation": "Yazarlar raporda her yöntemin sınırlılıklarını ayrı ayrı açıkladı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Почему одного опроса было недостаточно?",
-          "options": [
-            "Он не раскрывал все причины",
-            "Он был слишком дешёвым",
-            "Он был на бумаге"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Что авторы описали отдельно?",
-          "options": [
-            "Биографии",
-            "Ограничения методов",
-            "Погоду"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c1-v63-careful-conclusion",
-      "course": "ru",
-      "level": "C1",
-      "title": "Осторожный вывод",
-      "topic": "Akademik dil",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "В пе́рвой ве́рсии статьи́ а́втор написа́л, что но́вая програ́мма «доказа́ла» свою́ эффекти́вность.",
-          "translation": "Makalenin ilk sürümünde yazar yeni programın etkinliğini “kanıtladığını” yazdı."
-        },
-        {
-          "text": "Реце́нзент заме́тил, что вы́борка была́ небольшо́й и неслуча́йной.",
-          "translation": "Hakem örneklemin küçük ve rastlantısal olmadığını belirtti."
-        },
-        {
-          "text": "По́сле дорабо́тки фо́рмулировка стала́ осторо́жнее.",
-          "translation": "Düzeltmeden sonra ifade daha ihtiyatlı oldu."
-        },
-        {
-          "text": "Тепе́рь результа́ты «указыва́ли на возмо́жный эффе́кт».",
-          "translation": "Artık sonuçlar “olası bir etkiye işaret ediyordu”."
-        },
-        {
-          "text": "Э́то измене́ние повы́сило то́чность нау́чного утвержде́ния.",
-          "translation": "Bu değişiklik bilimsel iddianın doğruluğunu artırdı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что было проблемой выборки?",
-          "options": [
-            "Она была маленькой и неслучайной",
-            "Она была международной",
-            "Она была слишком старой"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Как изменилась формулировка?",
-          "options": [
-            "Стала осторожнее",
-            "Стала эмоциональнее",
-            "Стала короче без смысла"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c1-v63-translation-choice",
-      "course": "ru",
-      "level": "C1",
-      "title": "Выбор переводчика",
-      "topic": "Çeviri",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Перево́дчик рабо́тал с те́кстом, в кото́ром бы́ло мно́го культу́рных намёков.",
-          "translation": "Çevirmen çok sayıda kültürel gönderme içeren bir metin üzerinde çalışıyordu."
-        },
-        {
-          "text": "Буква́льный перево́д сохраня́л слова́, но теря́л иро́нию.",
-          "translation": "Kelimesi kelimesine çeviri sözcükleri koruyor fakat ironiyi kaybediyordu."
-        },
-        {
-          "text": "Перево́дчик реши́л замени́ть оди́н о́браз бо́лее поня́тным эквивале́нтом.",
-          "translation": "Çevirmen bir imgeyi daha anlaşılır bir eşdeğerle değiştirmeye karar verdi."
-        },
-        {
-          "text": "В примеча́нии он объясни́л свой вы́бор.",
-          "translation": "Dipnotta seçimini açıkladı."
-        },
-        {
-          "text": "Так читатель получил и смысл, и информацию о культурном контексте.",
-          "translation": "Böylece okur hem anlamı hem kültürel bağlam bilgisini aldı."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что терял буквальный перевод?",
-          "options": [
-            "Иронию",
-            "Все слова",
-            "Имя автора"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Где переводчик объяснил выбор?",
-          "options": [
-            "В примечании",
-            "В заголовке",
-            "В рекламе"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c2-v63-silent-disagreement",
-      "course": "ru",
-      "level": "C2",
-      "title": "Несказанное несогласие",
-      "topic": "Pragmatik",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "На заседа́нии руково́дитель спроси́л, гото́в ли прое́кт к за́пуску.",
-          "translation": "Toplantıda yönetici projenin başlatılmaya hazır olup olmadığını sordu."
-        },
-        {
-          "text": "Оди́н специали́ст отве́тил: «В це́лом, план дово́льно сме́лый».",
-          "translation": "Bir uzman “Genel olarak plan oldukça cesur” diye yanıtladı."
-        },
-        {
-          "text": "Форма́льно он не сказа́л «нет», но па́уза и сло́во «сме́лый» вы́разили сомне́ние.",
-          "translation": "Resmen “hayır” demedi fakat duraklama ve “cesur” sözcüğü şüpheyi ifade etti."
-        },
-        {
-          "text": "Оста́льные поня́ли, что сро́ки ну́жно пересмотре́ть.",
-          "translation": "Diğerleri takvimin gözden geçirilmesi gerektiğini anladı."
-        },
-        {
-          "text": "Смысл возник не только из слов, но и из общей ситуации.",
-          "translation": "Anlam yalnızca sözcüklerden değil ortak durumdan doğdu."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Сказал ли специалист прямое «нет»?",
-          "options": [
-            "Да",
-            "Нет",
-            "Он ушёл"
-          ],
-          "answer": 1
-        },
-        {
-          "q": "Что выразило сомнение?",
-          "options": [
-            "Пауза и слово «смелый»",
-            "Название проекта",
-            "Время заседания"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c2-v63-editor-decision",
-      "course": "ru",
-      "level": "C2",
-      "title": "Решение редактора",
-      "topic": "Editörlük",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Редактор получил текст с точными данными, но сложной структурой.",
-          "translation": "Editör doğru verilere sahip fakat karmaşık yapılı bir metin aldı."
-        },
-        {
-          "text": "Почти каждое предложение содержало несколько существительных, образованных от глаголов.",
-          "translation": "Neredeyse her cümle fiillerden türemiş birkaç isim içeriyordu."
-        },
-        {
-          "text": "Редактор сохранил необходимые термины, но часть конструкций вернул к активным глаголам.",
-          "translation": "Editör gerekli terimleri korudu fakat bazı yapıları etkin fiillere çevirdi."
-        },
-        {
-          "text": "Он также уточнил, к чему относились местоимения «это» и «данный».",
-          "translation": "Ayrıca “bu” ve “söz konusu” zamirlerinin neye gönderimde bulunduğunu netleştirdi."
-        },
-        {
-          "text": "После правки аргумент стал легче проследить, не потеряв научной точности.",
-          "translation": "Düzeltmeden sonra bilimsel kesinlik kaybolmadan argüman daha kolay izlenir oldu."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Что было сложным в тексте?",
-          "options": [
-            "Структура",
-            "Данные",
-            "Тема"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Что сделал редактор с частью конструкций?",
-          "options": [
-            "Удалил весь текст",
-            "Вернул к активным глаголам",
-            "Перевёл на другой язык"
-          ],
-          "answer": 1
-        }
-      ],
-      "sourcePack": "v63-original"
-    },
-    {
-      "id": "ru-c2-v63-aspect-memory",
-      "course": "ru",
-      "level": "C2",
-      "title": "Вид и память",
-      "topic": "Anlatı",
-      "estimatedMinutes": 5,
-      "lines": [
-        {
-          "text": "Писа́тель опи́сывал де́тство не как це́пь завершённых собы́тий, а как повторя́ющийся ритм.",
-          "translation": "Yazar çocukluğu tamamlanmış olaylar zinciri olarak değil tekrarlanan bir ritim olarak anlatıyordu."
-        },
-        {
-          "text": "Поэ́тому в фо́новых эпизо́дах он ча́сто испо́льзовал несоверше́нный вид.",
-          "translation": "Bu nedenle arka plan sahnelerinde sık sık bitmemiş görünüş kullandı."
-        },
-        {
-          "text": "Когда́ же происхо́дил переломный моме́нт, появля́лись глаго́лы соверше́нного ви́да.",
-          "translation": "Dönüm noktası olduğunda bitmiş görünüş fiilleri ortaya çıkıyordu."
-        },
-        {
-          "text": "Чита́тель чу́вствовал, как привы́чный мир внеза́пно изменя́ется.",
-          "translation": "Okur alışılmış dünyanın aniden nasıl değiştiğini hissediyordu."
-        },
-        {
-          "text": "Граммати́ческий вы́бор станови́лся ча́стью худо́жественного смысла.",
-          "translation": "Dilbilgisel seçim sanatsal anlamın bir parçası hâline geliyordu."
-        }
-      ],
-      "questions": [
-        {
-          "q": "Какой вид использовался для фона?",
-          "options": [
-            "Несовершенный",
-            "Только совершенный",
-            "Никакой"
-          ],
-          "answer": 0
-        },
-        {
-          "q": "Когда появлялся совершенный вид?",
-          "options": [
-            "В переломный момент",
-            "В каждом описании",
-            "Только в заголовке"
-          ],
-          "answer": 0
-        }
-      ],
-      "sourcePack": "v63-original"
     }
-  ],
-  "sourcePacks": {
-    "grammar": {
-      "files": 28,
-      "use": "A1-C2 yapı sırası, hâller, görünüş, sözdizimi ve kullanım sorunları"
-    },
-    "vocabulary": {
-      "files": 20,
-      "use": "Tematik kelime alanları, sözcük yapımı ve eşdizim"
-    },
-    "verbs": {
-      "files": 18,
-      "use": "Çekim, görünüş, hareket ve dönüşlü fiil laboratuvarı"
-    },
-    "readers": {
-      "files": 29,
-      "use": "Derecelendirilmiş metin uzunluğu ve anlama soru türleri"
-    },
-    "tests": {
-      "files": 18,
-      "use": "Seviye kontrolü ve alıştırma çeşitliliği"
-    },
-    "englishElementary": {
-      "files": 35,
-      "use": "A1-A2 English ünite, dil bilgisi ve beceri ilerlemesi"
-    }
-  }
+  ]
 }
