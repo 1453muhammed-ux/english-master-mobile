@@ -1,0 +1,800 @@
+{
+  "project": "WordPilot V6 Source Library",
+  "created_utc": "2026-07-16T11:16:10.155772+00:00",
+  "base_version": "WordPilot v5.1.3",
+  "source_policy": "Use only for curriculum analysis, topic sequencing, difficulty calibration, and creation of original WordPilot content. Do not publish or redistribute copyrighted source files or copy long passages/tests.",
+  "archives": [
+    {
+      "archive": "English File 5th elementary.zip",
+      "size_bytes": 289240177,
+      "size_mb": 275.84,
+      "sha256": "33b6f20af01a54ab37cf55e047f81b00d3f19d059b8f83fc49bf5f9de2d1d493",
+      "file_count": 34,
+      "uncompressed_mb": 276.9,
+      "extensions": {
+        ".pdf": 4,
+        ".zip": 30
+      },
+      "files": [
+        {
+          "path": "English File 5th elementary/SB.pdf",
+          "size_mb": 96.56
+        },
+        {
+          "path": "English File 5th elementary/TB_unlocked.pdf",
+          "size_mb": 3.41
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_end-of-course_test_a_b.zip",
+          "size_mb": 4.77
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_entry_test.zip",
+          "size_mb": 0.36
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_10_test_a_b.zip",
+          "size_mb": 5.35
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_11_test_a_b.zip",
+          "size_mb": 5.44
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_12_test_a_b.zip",
+          "size_mb": 5.29
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_1_test_a_b.zip",
+          "size_mb": 4.97
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_2_test_a_b.zip",
+          "size_mb": 3.72
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_3_test_a_b.zip",
+          "size_mb": 4.83
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_4_test_a_b.zip",
+          "size_mb": 3.61
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_5_test_a_b.zip",
+          "size_mb": 5.08
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_6_test_a_b.zip",
+          "size_mb": 4.72
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_7_test_a_b.zip",
+          "size_mb": 4.99
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_8_test_a_b.zip",
+          "size_mb": 5.08
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_file_9_test_a_b.zip",
+          "size_mb": 5.2
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_progress_test_1_6_a_b.zip",
+          "size_mb": 4.98
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_progress_test_7_12_a_b.zip",
+          "size_mb": 4.67
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_1.zip",
+          "size_mb": 0.4
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_10.zip",
+          "size_mb": 0.37
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_11.zip",
+          "size_mb": 0.37
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_12.zip",
+          "size_mb": 0.35
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_2.zip",
+          "size_mb": 0.4
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_3.zip",
+          "size_mb": 0.41
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_4.zip",
+          "size_mb": 0.38
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_5.zip",
+          "size_mb": 0.4
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_6.zip",
+          "size_mb": 0.39
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_7.zip",
+          "size_mb": 0.41
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_8.zip",
+          "size_mb": 0.39
+        },
+        {
+          "path": "English File 5th elementary/Tests/ef5e_elem_quick_test_9.zip",
+          "size_mb": 0.4
+        },
+        {
+          "path": "English File 5th elementary/Tests/english_file_fifth_edition_elementary_all_file_tests.zip",
+          "size_mb": 58.29
+        },
+        {
+          "path": "English File 5th elementary/Tests/english_file_fifth_edition_elementary_all_quick_tests.zip",
+          "size_mb": 4.68
+        },
+        {
+          "path": "English File 5th elementary/Tests/english_file_fifth_edition_tests_how_to_guide_elementary.pdf",
+          "size_mb": 0.05
+        },
+        {
+          "path": "English File 5th elementary/WB.pdf",
+          "size_mb": 36.18
+        }
+      ]
+    },
+    {
+      "archive": "03 Grammar(1).zip",
+      "size_bytes": 404979506,
+      "size_mb": 386.22,
+      "sha256": "bc1763fe40b9264c8dcfa7d5c7b5d272f6eee0aae18f8106a27e6fa3d2099d5b",
+      "file_count": 27,
+      "uncompressed_mb": 386.21,
+      "extensions": {
+        ".djvu": 4,
+        ".pdf": 23
+      },
+      "files": [
+        {
+          "path": "03 Grammar/02.A Living Russian Grammar Beginner-Intermediate.pdf",
+          "size_mb": 7.6
+        },
+        {
+          "path": "03 Grammar/02.A living Russian grammar part 2 Intermediate II.pdf",
+          "size_mb": 8.13
+        },
+        {
+          "path": "03 Grammar/02.A living Russian grammar part 3 Advanced.pdf",
+          "size_mb": 6.52
+        },
+        {
+          "path": "03 Grammar/03.Russian Grammar Workbook Рабочая тетрадь по русской грамматике.djvu",
+          "size_mb": 3.6
+        },
+        {
+          "path": "03 Grammar/04.Teach yourself Russian Grammar.djvu",
+          "size_mb": 2.57
+        },
+        {
+          "path": "03 Grammar/05.Russian Grammar in Literary Contexts.pdf",
+          "size_mb": 25.64
+        },
+        {
+          "path": "03 Grammar/06.El Ruso Gramatica Practica.pdf",
+          "size_mb": 47.87
+        },
+        {
+          "path": "03 Grammar/07.Russian Grammar (Schaum's Outlines).pdf",
+          "size_mb": 2.93
+        },
+        {
+          "path": "03 Grammar/08.Intermediate Russian a Grammar and Workbook.pdf",
+          "size_mb": 0.76
+        },
+        {
+          "path": "03 Grammar/11.Трудные случаи русской грамматики - Problems of Russian Grammar an Exercise Collection.pdf",
+          "size_mb": 3.3
+        },
+        {
+          "path": "03 Grammar/12.По-русски - без ошибок! Пособие по грамматике русского языка для иностранных учащихся.pdf",
+          "size_mb": 13.25
+        },
+        {
+          "path": "03 Grammar/13.Практическая грамматика для иностранных студентов.pdf",
+          "size_mb": 1.36
+        },
+        {
+          "path": "03 Grammar/14.Essential Russian Grammar.pdf",
+          "size_mb": 3.21
+        },
+        {
+          "path": "03 Grammar/15.The Oxford Russian Grammar and Verbs.pdf",
+          "size_mb": 14.38
+        },
+        {
+          "path": "03 Grammar/16.Русский язык в грамматических таблицах.pdf",
+          "size_mb": 7.56
+        },
+        {
+          "path": "03 Grammar/17.Грамматика русского языка в иллюстрациях.djvu",
+          "size_mb": 24.1
+        },
+        {
+          "path": "03 Grammar/18.Spravochnik po russkoy grammatike.djvu",
+          "size_mb": 5.04
+        },
+        {
+          "path": "03 Grammar/21.Modern Russian Grammar A Practical Guide.pdf",
+          "size_mb": 24.21
+        },
+        {
+          "path": "03 Grammar/22..Using Russian A Guide to Contemporary Usage.pdf",
+          "size_mb": 3.69
+        },
+        {
+          "path": "03 Grammar/23.The Case Book for Russian.pdf",
+          "size_mb": 14.27
+        },
+        {
+          "path": "03 Grammar/24.What case What preposition Verbal and nominal government - Какой падеж Какой предлог Глагольное и именное управление.pdf",
+          "size_mb": 7.93
+        },
+        {
+          "path": "03 Grammar/25.Падежи! Ах падежи! Сборник упражнений по глагольному управлению.pdf",
+          "size_mb": 10.09
+        },
+        {
+          "path": "03 Grammar/26.Русские падежи.pdf",
+          "size_mb": 10.6
+        },
+        {
+          "path": "03 Grammar/27.Русский язык как иностранный. Рабочая тетрадь I сертификационный уровень.pdf",
+          "size_mb": 91.49
+        },
+        {
+          "path": "03 Grammar/28.Русский язык как иностранный Синтаксис простого и сложного предложения.pdf",
+          "size_mb": 20.78
+        },
+        {
+          "path": "03 Grammar/30.Справочник по русскому языку. Практическая стилистика.pdf",
+          "size_mb": 20.46
+        },
+        {
+          "path": "03 Grammar/34.Русский язык первые результаты. Тестовый практикум по русскому языку повседневного общения.pdf",
+          "size_mb": 4.86
+        }
+      ]
+    },
+    {
+      "archive": "04.Russian Vocabulary(1).zip",
+      "size_bytes": 255136231,
+      "size_mb": 243.32,
+      "sha256": "338c37b81378e4ca462151f3a1f986ce7667536b0e05a69de6472fe04ef1470f",
+      "file_count": 20,
+      "uncompressed_mb": 392.25,
+      "extensions": {
+        ".djvu": 1,
+        ".pdf": 19
+      },
+      "files": [
+        {
+          "path": "04.Russian Vocabulary/01.Using Russian Vocabulary.pdf",
+          "size_mb": 2.83
+        },
+        {
+          "path": "04.Russian Vocabulary/02.Лексика русского языка сборник упражнений.pdf",
+          "size_mb": 27.29
+        },
+        {
+          "path": "04.Russian Vocabulary/03.Лексические трудности при изучении русского языка.pdf",
+          "size_mb": 5.89
+        },
+        {
+          "path": "04.Russian Vocabulary/04.Лексика русского языка как иностранного и ее преподавание.pdf",
+          "size_mb": 3.98
+        },
+        {
+          "path": "04.Russian Vocabulary/05.Прогулки по русской лексике - Walks through the Russian Vocabulary.pdf",
+          "size_mb": 11.88
+        },
+        {
+          "path": "04.Russian Vocabulary/06.Уроки по русскому словообразованию для иностранных учащихся.pdf",
+          "size_mb": 2.78
+        },
+        {
+          "path": "04.Russian Vocabulary/07.Учебно-справочное пособие по лексике русского языка - Трудные случаи употребления семантически близких слов.pdf",
+          "size_mb": 11.92
+        },
+        {
+          "path": "04.Russian Vocabulary/08.Roots of the Russian Language.pdf",
+          "size_mb": 71.86
+        },
+        {
+          "path": "04.Russian Vocabulary/09.Newspaper Russian A Vocabulary of Administrative and Commercial Idiom.pdf",
+          "size_mb": 5.59
+        },
+        {
+          "path": "04.Russian Vocabulary/10.VocabuLearn Russian Level 1.pdf",
+          "size_mb": 43.73
+        },
+        {
+          "path": "04.Russian Vocabulary/10.VocabuLearn Russian Level 2.pdf",
+          "size_mb": 44.21
+        },
+        {
+          "path": "04.Russian Vocabulary/10.VocabuLearn Russian Level 3.pdf",
+          "size_mb": 58.15
+        },
+        {
+          "path": "04.Russian Vocabulary/11.Когда не помогают словари 1 Практикум по лексике современного русского языка.pdf",
+          "size_mb": 8.4
+        },
+        {
+          "path": "04.Russian Vocabulary/12.Когда не помогают словари 2 Практикум по лексике современного русского языка.pdf",
+          "size_mb": 6.91
+        },
+        {
+          "path": "04.Russian Vocabulary/13.Когда не помогают словари 3 Практикум по лексике современного русского языка.pdf",
+          "size_mb": 8.16
+        },
+        {
+          "path": "04.Russian Vocabulary/14.Английские слова, которые мы знаем из русского.djvu",
+          "size_mb": 3.13
+        },
+        {
+          "path": "04.Russian Vocabulary/15.Лексика и словообразование учебное пособие.pdf",
+          "size_mb": 3.26
+        },
+        {
+          "path": "04.Russian Vocabulary/16.MT Russian Vocabulary Course.pdf",
+          "size_mb": 0.44
+        },
+        {
+          "path": "04.Russian Vocabulary/17.От корня - к слову.pdf",
+          "size_mb": 33.02
+        },
+        {
+          "path": "04.Russian Vocabulary/18.Учебные задания по лексике. Для краткосрочных курсов русского языка.pdf",
+          "size_mb": 38.81
+        }
+      ]
+    },
+    {
+      "archive": "05.Russian Verbs(1).zip",
+      "size_bytes": 210729339,
+      "size_mb": 200.97,
+      "sha256": "6bab6fb65fd07100ceab8f70f0b73ca987000e7612de108c31da15e4728dd36a",
+      "file_count": 18,
+      "uncompressed_mb": 212.51,
+      "extensions": {
+        ".djvu": 1,
+        ".pdf": 17
+      },
+      "files": [
+        {
+          "path": "05.Russian Verbs/01.The Big Silver Book of Russian Verbs -555 Fully Conjugated Verbs.pdf",
+          "size_mb": 2.48
+        },
+        {
+          "path": "05.Russian Verbs/02.Русские глаголы. Формы и контекстное употребление.pdf",
+          "size_mb": 20.51
+        },
+        {
+          "path": "05.Russian Verbs/03.Знаю и люблю русские глаголы.pdf",
+          "size_mb": 2.38
+        },
+        {
+          "path": "05.Russian Verbs/04.Употребление видов глагола в русском языке Use of Verbal Aspect in Russian.pdf",
+          "size_mb": 4.57
+        },
+        {
+          "path": "05.Russian Verbs/05.300 глаголов совершенного и несовершенного вида в речевых ситуациях.pdf",
+          "size_mb": 2.32
+        },
+        {
+          "path": "05.Russian Verbs/06.Изучаем виды глагола.pdf",
+          "size_mb": 2.75
+        },
+        {
+          "path": "05.Russian Verbs/07.Russian Verbs of Motion.pdf",
+          "size_mb": 2.62
+        },
+        {
+          "path": "05.Russian Verbs/08.Русские глаголы движения с приставками.pdf",
+          "size_mb": 0.8
+        },
+        {
+          "path": "05.Russian Verbs/09.Vozvratnye Glagoly v Russkom Yazyke (Reflexive Verbs in Russian).pdf",
+          "size_mb": 10.8
+        },
+        {
+          "path": "05.Russian Verbs/10.Англо-русский тематический словарь фразовых глаголов.djvu",
+          "size_mb": 15.97
+        },
+        {
+          "path": "05.Russian Verbs/11.Виды глагола в русской речи пособие по русскому языку как иностранному.pdf",
+          "size_mb": 12.13
+        },
+        {
+          "path": "05.Russian Verbs/12.Изучаем глаголы движения.pdf",
+          "size_mb": 0.57
+        },
+        {
+          "path": "05.Russian Verbs/13.Справочник-тренинг по русским глаголам движения.pdf",
+          "size_mb": 0.84
+        },
+        {
+          "path": "05.Russian Verbs/14.Los Verbos de Movimiento en Ruso.pdf",
+          "size_mb": 58.61
+        },
+        {
+          "path": "05.Russian Verbs/15.Guia del Verbo Ruso.pdf",
+          "size_mb": 14.0
+        },
+        {
+          "path": "05.Russian Verbs/16.Conjugacion del Verbo Ruso.pdf",
+          "size_mb": 55.48
+        },
+        {
+          "path": "05.Russian Verbs/17.Виды русского глагола значение и употребление.pdf",
+          "size_mb": 3.56
+        },
+        {
+          "path": "05.Russian Verbs/18.Приходите! Прилетайте! Приезжайте! - Come by foot! Come by road! Come by air!.pdf",
+          "size_mb": 2.1
+        }
+      ]
+    },
+    {
+      "archive": "06.Graded Readers for Learners(1).zip",
+      "size_bytes": 337382956,
+      "size_mb": 321.75,
+      "sha256": "2b5a18212e745e21c12bb7eac32c3dd9cfe762b716a07468cdf37eca20d89f28",
+      "file_count": 29,
+      "uncompressed_mb": 331.39,
+      "extensions": {
+        ".djvu": 2,
+        ".pdf": 27
+      },
+      "files": [
+        {
+          "path": "06.Graded Readers for Learners/01.Начинаем читать по-русски!.pdf",
+          "size_mb": 4.21
+        },
+        {
+          "path": "06.Graded Readers for Learners/02.Шкатулочка пособие по чтению для иностранцев, начинающих изучать русский язык (элементарный уровень).pdf",
+          "size_mb": 5.9
+        },
+        {
+          "path": "06.Graded Readers for Learners/03.Шкатулка пособие по чтению для иностранцев, начинающих изучать русский язык.pdf",
+          "size_mb": 8.45
+        },
+        {
+          "path": "06.Graded Readers for Learners/04.Приключения иностранцев в России Рассказы для чтения и обсуждения.pdf",
+          "size_mb": 6.57
+        },
+        {
+          "path": "06.Graded Readers for Learners/05.Непропавшие сюжеты пособие по чтению для иностранцев, изучающих русский язык.pdf",
+          "size_mb": 9.81
+        },
+        {
+          "path": "06.Graded Readers for Learners/06.Синяя звезда Рассказы и сказки русских и зарубежных писателей с заданиями и упражнениями.pdf",
+          "size_mb": 5.34
+        },
+        {
+          "path": "06.Graded Readers for Learners/07.Удивительные истории. 116 текстов для чтения, изучения и развлечения.pdf",
+          "size_mb": 13.69
+        },
+        {
+          "path": "06.Graded Readers for Learners/08.Читая сказки....pdf",
+          "size_mb": 6.96
+        },
+        {
+          "path": "06.Graded Readers for Learners/09.Россия день сегодняшний. Тексты и упражнения.pdf",
+          "size_mb": 12.79
+        },
+        {
+          "path": "06.Graded Readers for Learners/10.Россия экономика и общество. Тексты и упражнения.pdf",
+          "size_mb": 7.73
+        },
+        {
+          "path": "06.Graded Readers for Learners/11.Beginner's Russian Reader.pdf",
+          "size_mb": 5.94
+        },
+        {
+          "path": "06.Graded Readers for Learners/12.Short Stories By Soviet Writers Parallel Texts.pdf",
+          "size_mb": 10.68
+        },
+        {
+          "path": "06.Graded Readers for Learners/13.An Advanced Russian Tabloid Reader.pdf",
+          "size_mb": 5.44
+        },
+        {
+          "path": "06.Graded Readers for Learners/14.Chekhov's Humorous Short Stories Russian Reader with Explanatory Notes and Vocabulary.pdf",
+          "size_mb": 106.7
+        },
+        {
+          "path": "06.Graded Readers for Learners/15.Seryozha a Russian Reader with Explanatory Notes and Vocabulary.pdf",
+          "size_mb": 15.88
+        },
+        {
+          "path": "06.Graded Readers for Learners/16.Домашнее чтение Учебное пособие.pdf",
+          "size_mb": 12.81
+        },
+        {
+          "path": "06.Graded Readers for Learners/17.От Пушкина до Бродского Антология русской поэзии XIX—XX веков.pdf",
+          "size_mb": 5.1
+        },
+        {
+          "path": "06.Graded Readers for Learners/18.Русский без границ Part 3 Literature.pdf",
+          "size_mb": 33.0
+        },
+        {
+          "path": "06.Graded Readers for Learners/19.50 русских текстов. Книга для чтения на русском языке для иностранцев.pdf",
+          "size_mb": 6.33
+        },
+        {
+          "path": "06.Graded Readers for Learners/20.Я читаю по-русски - I Read Russian.pdf",
+          "size_mb": 3.91
+        },
+        {
+          "path": "06.Graded Readers for Learners/21.Россия день за днем - Russia Day by Day.pdf",
+          "size_mb": 9.94
+        },
+        {
+          "path": "06.Graded Readers for Learners/22.Лермонтов М.Ю. - Тамань (Лёгкое чтение).pdf",
+          "size_mb": 2.14
+        },
+        {
+          "path": "06.Graded Readers for Learners/23.Читаем о России по-русски.pdf",
+          "size_mb": 5.87
+        },
+        {
+          "path": "06.Graded Readers for Learners/24.Читаем и всё понимаем.pdf",
+          "size_mb": 4.67
+        },
+        {
+          "path": "06.Graded Readers for Learners/25.Чехов.pdf",
+          "size_mb": 3.52
+        },
+        {
+          "path": "06.Graded Readers for Learners/26.А.С. Пушкин.pdf",
+          "size_mb": 1.05
+        },
+        {
+          "path": "06.Graded Readers for Learners/27.Читаем тексты по литературе. Учебное пособие.pdf",
+          "size_mb": 3.1
+        },
+        {
+          "path": "06.Graded Readers for Learners/28.Берегись автомобиля!.djvu",
+          "size_mb": 2.0
+        },
+        {
+          "path": "06.Graded Readers for Learners/29.Along The Fairy-Tale Path -  По сказочной дорожке. Выпуск 1.djvu",
+          "size_mb": 11.86
+        }
+      ]
+    },
+    {
+      "archive": "33(1).zip",
+      "size_bytes": 41842910,
+      "size_mb": 39.9,
+      "sha256": "cfeebeb53dbfdd629c4e8c79e537cff876bc492c66f28b80d936066ab76e32a2",
+      "file_count": 7,
+      "uncompressed_mb": 39.9,
+      "extensions": {
+        ".pdf": 7
+      },
+      "files": [
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/78.Тесты, тесты, тесты... (1-ый серт. уровень) Tests, Tests, Tests… I level.pdf",
+          "size_mb": 3.4
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/78.Тесты, тесты, тесты... (2-ой серт. уровень) Tests, Tests, Tests… II level.pdf",
+          "size_mb": 3.06
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/78.Тесты, тесты, тесты... (3-ий серт. уровень) Tests, Tests, Tests… III level.pdf",
+          "size_mb": 3.42
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/79.Learning and Training Tests in Russian as a Foreign Language Part 1 Grammar & Lexicon.pdf",
+          "size_mb": 6.22
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/79.Learning and Training Tests in Russian as a Foreign Language Part 3  Writing.pdf",
+          "size_mb": 8.21
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/80.Training Tests of Russian as a foreign language II certification level.pdf",
+          "size_mb": 8.14
+        },
+        {
+          "path": "33.Learning and Training Tests in Russian as a Foreign Language/80.Training Tests of Russian as a foreign language III certification level.pdf",
+          "size_mb": 7.45
+        }
+      ]
+    },
+    {
+      "archive": "35-46.zip",
+      "size_bytes": 175758561,
+      "size_mb": 167.62,
+      "sha256": "318f0d78f0cf6ca02e0dbd78bbdb763a97588a03b1fa2efaafb7a1c1b4bebb9f",
+      "file_count": 11,
+      "uncompressed_mb": 174.62,
+      "extensions": {
+        ".djvu": 1,
+        ".pdf": 10
+      },
+      "files": [
+        {
+          "path": "35.53 модели русской грамматики. Базовый курс.pdf",
+          "size_mb": 31.22
+        },
+        {
+          "path": "36.Basic Russian A Grammar and Workbook.pdf",
+          "size_mb": 2.73
+        },
+        {
+          "path": "37.Teach Yourself Beginner's Russian Grammar.pdf",
+          "size_mb": 10.06
+        },
+        {
+          "path": "38.Русские падежи. Сборник упражнений.pdf",
+          "size_mb": 4.94
+        },
+        {
+          "path": "39.Русские падежи конструкции в упражнениях. Рабочая тетрадь.pdf",
+          "size_mb": 4.98
+        },
+        {
+          "path": "40.Цикловой контроль сборник контрольных работ по русскому языку.pdf",
+          "size_mb": 3.19
+        },
+        {
+          "path": "41.Чистая грамматика - Pure Grammar.pdf",
+          "size_mb": 18.2
+        },
+        {
+          "path": "42.Практикум по русской грамматике. Часть 2. Синтаксис простого и сложного предложения.pdf",
+          "size_mb": 11.08
+        },
+        {
+          "path": "43.Синтаксис сложноподчинённого предложения.pdf",
+          "size_mb": 81.97
+        },
+        {
+          "path": "45.Русская грамматика в анекдотах.pdf",
+          "size_mb": 1.33
+        },
+        {
+          "path": "46.Русский язык в картинках.djvu",
+          "size_mb": 4.91
+        }
+      ]
+    },
+    {
+      "archive": "pdfler.zip",
+      "size_bytes": 120224550,
+      "size_mb": 114.66,
+      "sha256": "8667646b428d9dc4371ec0ccfd40b968dc1362051235a48a0541064061175124",
+      "file_count": 19,
+      "uncompressed_mb": 126.66,
+      "extensions": {
+        ".docx": 1,
+        ".pdf": 18
+      },
+      "files": [
+        {
+          "path": "osobennosti-perevoda.pdf",
+          "size_mb": 0.27
+        },
+        {
+          "path": "Russian for Dummies.pdf",
+          "size_mb": 7.78
+        },
+        {
+          "path": "Russian.Calligraphy.pdf",
+          "size_mb": 8.87
+        },
+        {
+          "path": "rusya.pdf",
+          "size_mb": 0.18
+        },
+        {
+          "path": "The_Cambridge_Introduction_to_Russian_Poetry_.pdf",
+          "size_mb": 1.58
+        },
+        {
+          "path": "хили-выли.pdf",
+          "size_mb": 8.29
+        },
+        {
+          "path": "(Thinking_Translation_)Edna_Andrews,_Elena_Maksimova-Russian_Translation__Theory_and_Practice_-Routledge(2009).pdf",
+          "size_mb": 3.38
+        },
+        {
+          "path": "[Charles_Moser]_The_Cambridge_History_of_Russian_L(BookZa.org).pdf",
+          "size_mb": 34.62
+        },
+        {
+          "path": "[Joseph_Frank]_Between_Religion_and_Rationality_E(BookZa.org).pdf",
+          "size_mb": 0.93
+        },
+        {
+          "path": "[Neil_Cornwell]_Routledge_Companion_to_Russian_Lit(BookZa.org).pdf",
+          "size_mb": 1.1
+        },
+        {
+          "path": "[Raymond_Cooke]_Velimir_Khlebnikov_A_Critical_Stu(BookZa.org).pdf",
+          "size_mb": 5.25
+        },
+        {
+          "path": "[Thomas_Seifrid]_Andrei_Platonov_Uncertainties_of(BookZa.org).pdf",
+          "size_mb": 5.3
+        },
+        {
+          "path": "__Soviet_Communal_Living__An_Oral_History.pdf",
+          "size_mb": 3.18
+        },
+        {
+          "path": "__The_Oxford_Russian_grammar_and_verbs.pdf",
+          "size_mb": 14.38
+        },
+        {
+          "path": "05.Прогулки по русской лексике - Walks through the Russian Vocabulary.pdf",
+          "size_mb": 11.88
+        },
+        {
+          "path": "Cambridge.University.Press.The.Cambridge.Introduction.to.Russian.Literature.Jul.2008.pdf",
+          "size_mb": 1.94
+        },
+        {
+          "path": "EDATLAR.docx",
+          "size_mb": 0.1
+        },
+        {
+          "path": "minsk.pdf",
+          "size_mb": 8.87
+        },
+        {
+          "path": "Okuma Kitabı Kısım1.pdf",
+          "size_mb": 8.76
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "archive_count": 8,
+    "compressed_mb": 1750.27,
+    "source_file_count": 165,
+    "uncompressed_mb": 1940.44
+  },
+  "v6_scope": {
+    "english": [
+      "12-unit A1 course route inspired by analyzed curriculum structure",
+      "original grammar/vocabulary/pronunciation drills",
+      "original micro-stories and review tests"
+    ],
+    "russian": [
+      "controlled A1-A2 vocabulary expansion",
+      "graded grammar route",
+      "verb/aspect/motion modules",
+      "original dialogues and graded micro-stories",
+      "TORFL-style original assessment blueprints"
+    ],
+    "uzbek": "deferred until dedicated sources are uploaded"
+  }
+}
