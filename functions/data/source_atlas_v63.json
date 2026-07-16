@@ -1,0 +1,120 @@
+{
+  "version": "6.3.0",
+  "title": "WordPilot Kaynak Atlası",
+  "policy": "Kaynakların metinleri ve testleri kopyalanmadı. Ünite sırası, konu kapsamı, alıştırma türleri ve seviye yapısı incelenerek özgün içerik üretildi.",
+  "packs": [
+    {
+      "id": "english",
+      "icon": "🇬🇧",
+      "title": "English A1–A2 Ders ve Test Paketi",
+      "files": 34,
+      "focus": [
+        "12 ünite",
+        "Temel gramer",
+        "Dört beceri",
+        "Ünite ve ilerleme testleri"
+      ],
+      "output": "12 yeni English atölye dersi ve 6 özgün okuma"
+    },
+    {
+      "id": "grammar",
+      "icon": "🧩",
+      "title": "Rusça Gramer Korpusu",
+      "files": 27,
+      "focus": [
+        "Hâl sistemi",
+        "Fiil görünüşü",
+        "Sözdizimi",
+        "İleri kullanım"
+      ],
+      "output": "18 yeni Rusça akademi atölyesi"
+    },
+    {
+      "id": "vocabulary",
+      "icon": "🧠",
+      "title": "Tematik Rusça Kelime Korpusu",
+      "files": 20,
+      "focus": [
+        "18 tema",
+        "Eşdizim",
+        "Sözcük yapımı",
+        "Akademik dil"
+      ],
+      "output": "120 yeni kontrollü kelime ve ifade"
+    },
+    {
+      "id": "verbs",
+      "icon": "⚙️",
+      "title": "Rusça Fiil Korpusu",
+      "files": 18,
+      "focus": [
+        "Görünüş çiftleri",
+        "Hareket fiilleri",
+        "Dönüşlü fiiller",
+        "Fiil yönetimi"
+      ],
+      "output": "36 özgün fiil modeli"
+    },
+    {
+      "id": "readers",
+      "icon": "📚",
+      "title": "Derecelendirilmiş Okuma Korpusu",
+      "files": 29,
+      "focus": [
+        "A1–C2 metin uzunluğu",
+        "Bağlamlı kelime",
+        "Anlama soruları",
+        "Okuma stratejisi"
+      ],
+      "output": "18 yeni Rusça özgün okuma"
+    },
+    {
+      "id": "cert-tests",
+      "icon": "✅",
+      "title": "Rusça Sertifika Testleri Paketi",
+      "files": 7,
+      "focus": [
+        "Gramer ve söz varlığı",
+        "Okuma",
+        "Yazma",
+        "Sertifika seviyeleri"
+      ],
+      "output": "A1–C2 sertifika laboratuvarının beceri çerçevesi"
+    },
+    {
+      "id": "workbooks",
+      "icon": "✍️",
+      "title": "Gramer ve Çalışma Kitapları Paketi",
+      "files": 11,
+      "focus": [
+        "53 temel model",
+        "Hâl alıştırmaları",
+        "Basit ve birleşik cümle",
+        "Görsel/bağlamlı çalışma"
+      ],
+      "output": "Kaynak Atölyesi üretim, dönüşüm ve hata düzeltme görevleri"
+    },
+    {
+      "id": "supplementary",
+      "icon": "🏛️",
+      "title": "Okuma, Edebiyat, Çeviri ve Yazı Kaynakları",
+      "files": 19,
+      "focus": [
+        "Rusça yazı",
+        "Çeviri stratejisi",
+        "Edebî okuma",
+        "İleri kayıt ve üslup"
+      ],
+      "output": "C1–C2 okuma, üslup ve akademik yazma kazanımları"
+    }
+  ],
+  "counts": {
+    "lessons": 102,
+    "readings": 48,
+    "russianWords": 1120,
+    "verbModels": 36,
+    "examTasks": 36,
+    "sourceFiles": 165,
+    "sourcePacks": 8
+  }
+}

@@ -1,0 +1,12 @@
+WordPilot v6.3.0 — Kaynak Tabanlı İçerik Genişlemesi
+
+- 165 dosyalık 8 kaynak paketin öğretim yapısı incelendi.
+- Telifli metin ve testler kopyalanmadan özgün WordPilot içeriğine dönüştürüldü.
+- Akademi: 72 → 102 ders.
+- Akademi okumaları: 24 → 48.
+- Rusça kayıt: 1.000 → 1.120.
+- 36 özgün fiil görünüşü / hareket / yönetim modeli.
+- 36 özgün A1–C2 sertifika görevi.
+- Tematik Kelime Atlası ve 8 paketlik Kaynak Atlası.
+- Yeni derslerde kontrollü üretim atölyeleri.
+- Firebase, App Check, lig, XP, SM-2 ve mevcut ilerleme anahtarları korundu.

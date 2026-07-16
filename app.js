@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='6.0.0';
+const VERSION='6.3.0';
 const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
@@ -27,7 +27,7 @@ const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam
 
 const COURSES={
   en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'words.json',voice:'en-US',voiceAlt:'en-GB',displayCount:5488,countLabel:'5488 kelime ve kalıp + A1–C2 Akademi',targetLabel:'İNGİLİZCE',starter:false},
-  ru:{id:'ru',name:'Русский',short:'RU',flag:'🇷🇺',file:'ru_words.json',voice:'ru-RU',voiceAlt:'ru-RU',displayCount:1000,countLabel:'1000 kontrollü kelime + A1–C2 Akademi',targetLabel:'RUSÇA',starter:true},
+  ru:{id:'ru',name:'Русский',short:'RU',flag:'🇷🇺',file:'ru_words.json',voice:'ru-RU',voiceAlt:'ru-RU',displayCount:1120,countLabel:'1120 kontrollü kelime ve ifade + A1–C2 Akademi',targetLabel:'RUSÇA',starter:true},
   uz:{id:'uz',name:'O‘zbekcha',short:'UZ',flag:'🇺🇿',file:'uz_words.json',voice:'uz-UZ',voiceAlt:'uz-UZ',displayCount:137,countLabel:'137 A1 kelime ve ifade',targetLabel:'ÖZBEKÇE',starter:true}
 };
 const COURSE_IDS=['en','ru','uz'];

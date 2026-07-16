@@ -1,8 +1,3 @@
-WORDPILOT v6.0.0 — APP CHECK DURUMU
+WORDPILOT v6.3.0 — APP CHECK DURUMU
 
-- reCAPTCHA Enterprise istemci entegrasyonu aktiftir.
-- App Check istemci tokenı telefon ve bilgisayarda test edilmelidir.
-- Enforcement henüz açılmamalıdır.
-- Önce Firebase App Check metriklerinde doğrulanmış istekler görülmelidir.
-- Ardından Firestore için enforcement aşamalı olarak açılabilir.
-- Hosting üzerindeki statik JSON dosyalarını App Check tek başına gizlemez; içerik koruması için Cloud Functions/Storage geçişi ayrıca yapılmalıdır.
+Firebase App Check / reCAPTCHA Enterprise entegrasyonu korunmuştur. Cloud Firestore enforcement kullanıcı tarafından etkinleştirilmiştir. Yeni statik içerik laboratuvarları mevcut doğrulanmış uygulama üzerinden çalışır.

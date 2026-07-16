@@ -36,7 +36,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const CONTENT_FILES={
   'course:en':'words.json','course:ru':'ru_words.json','course:uz':'uz_words.json',
-  'stories:all':'stories.json','academy:all':'curriculum_v6.json','ru:alphabet':'ru_alphabet.json','ru:grammar':'ru_grammar.json','ru:dialogues':'ru_dialogues.json'
+  'stories:all':'stories.json','academy:all':'curriculum_v6.json','ru:alphabet':'ru_alphabet.json','ru:grammar':'ru_grammar.json','ru:dialogues':'ru_dialogues.json','ru:verbs':'ru_verb_lab.json','source:atlas':'source_atlas_v63.json','ru:exam':'ru_exam_lab.json'
 };
 const contentCache=new Map();
 function readContent(key){
@@ -58,9 +58,9 @@ async function enforceContentRate(db,uid){
 exports.getContentPack=onCall({region:REGION,enforceAppCheck:true,cors:true,maxInstances:20,timeoutSeconds:30},async request=>{
   if(!request.auth)throw new HttpsError('unauthenticated','Google sign-in is required.');
   const data=request.data||{},kind=clean(data.kind,30)||'course',course=['en','ru','uz'].includes(data.course)?data.course:'en';
-  const key=kind==='course'?`course:${course}`:kind==='stories'?'stories:all':kind==='academy'?'academy:all':kind==='alphabet'?'ru:alphabet':kind==='grammar'?'ru:grammar':kind==='dialogues'?'ru:dialogues':'';
+  const key=kind==='course'?`course:${course}`:kind==='stories'?'stories:all':kind==='academy'?'academy:all':kind==='alphabet'?'ru:alphabet':kind==='grammar'?'ru:grammar':kind==='dialogues'?'ru:dialogues':kind==='verbs'?'ru:verbs':kind==='exam'?'ru:exam':kind==='source'?'source:atlas':'';
   const db=getFirestore();await enforceContentRate(db,request.auth.uid);
   const all=readContent(key),offset=Math.max(0,Math.floor(Number(data.offset)||0)),limit=Math.max(1,Math.min(500,Math.floor(Number(data.limit)||250)));
-  const filtered=kind==='stories'?all.filter(x=>!data.course||x.course===course):all;
-  return {version:'6.0.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
+  const base=kind==='exam'?all.tasks:kind==='source'?all.packs:all;const filtered=kind==='stories'?base.filter(x=>!data.course||x.course===course):base;
+  return {version:'6.3.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
 });

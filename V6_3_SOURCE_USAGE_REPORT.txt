@@ -1,0 +1,13 @@
+WordPilot v6.3.0 — Source Usage Report
+
+The uploaded archive collection contained 165 files across 8 packages:
+1. English A1–A2 course/test package: 34 files
+2. Russian grammar corpus: 27 files
+3. Russian vocabulary corpus: 20 files
+4. Russian verb corpus: 18 files
+5. Graded-reader corpus: 29 files
+6. Russian certification-test package: 7 files
+7. Grammar/workbook package: 11 files
+8. Reading, literature, translation and writing package: 19 files
+
+The public WordPilot package contains original derived learning content, not the uploaded source files. The visible Source Atlas explains how each package informed unit sequencing, topic coverage, task variety and level progression.

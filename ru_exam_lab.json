@@ -1,0 +1,631 @@
+{
+  "version": "6.3.0",
+  "title": "Rusça Sertifika Laboratuvarı",
+  "description": "Yüklenen test ve çalışma kitabı paketlerinin beceri dağılımından esinlenerek hazırlanmış 36 özgün A1–C2 görev. Kaynak sorular kopyalanmamıştır.",
+  "tasks": [
+    {
+      "id": "cert-a1-01",
+      "level": "A1",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Günlük kelime seçimi",
+      "type": "choice",
+      "prompt": "Я покупа́ю хлеб в ___.",
+      "options": [
+        "шко́ле",
+        "апте́ке",
+        "магазине",
+        "па́рке"
+      ],
+      "answer": "магазине",
+      "explanation": "Ekmek satın alma bağlamında магазин kullanılır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a1-02",
+      "level": "A1",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Temel hâl seçimi",
+      "type": "choice",
+      "prompt": "Я живу́ ___ Ташке́нте.",
+      "options": [
+        "на",
+        "в",
+        "из",
+        "к"
+      ],
+      "answer": "в",
+      "explanation": "Şehirde bulunma için в + bulunma hâli kullanılır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a1-03",
+      "level": "A1",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "Kısa ilanı anlama",
+      "type": "choice",
+      "prompt": "Кафе́ откры́то с восьми́ до десяти́. Кафе́ ne zaman kapanır?",
+      "options": [
+        "08.00",
+        "10.00",
+        "18.00",
+        "20.00"
+      ],
+      "answer": "10.00",
+      "explanation": "до десяти = saat ona kadar.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a1-04",
+      "level": "A1",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Tanışma kalıbı",
+      "type": "choice",
+      "prompt": "Birinin adını kibarca sormak için hangisi uygundur?",
+      "options": [
+        "Где вы?",
+        "Как вас зову́т?",
+        "Что э́то?",
+        "Кто там?"
+      ],
+      "answer": "Как вас зову́т?",
+      "explanation": "Bu kalıp “Adınız nedir?” anlamındadır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a1-05",
+      "level": "A1",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Olumsuz cümle kur",
+      "type": "production",
+      "prompt": "Я понимаю́. cümlesini olumsuz yap.",
+      "options": [],
+      "answer": "Я не понимаю́.",
+      "explanation": "не yüklemin önüne gelir.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a1-06",
+      "level": "A1",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Kendini tanıt",
+      "type": "production",
+      "prompt": "Adın, yaşadığın şehir ve konuştuğun diller hakkında 3 kısa Rusça cümle yaz.",
+      "options": [],
+      "answer": "Меня́ зову́т … . Я живу́ в … . Я говорю́ по-туре́цки и немно́го по-ру́сски.",
+      "explanation": "Kısa, doğru ve anlaşılır cümleler yeterlidir.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-01",
+      "level": "A2",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Seyahat eşdizimi",
+      "type": "choice",
+      "prompt": "Мы ___ биле́ты зара́нее.",
+      "options": [
+        "покупа́ем",
+        "слу́шаем",
+        "рису́ем",
+        "закрыва́ем"
+      ],
+      "answer": "покупа́ем",
+      "explanation": "билет покупать doğal eşdizimidir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-02",
+      "level": "A2",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Geçmiş zaman uyumu",
+      "type": "choice",
+      "prompt": "Вчера́ А́нна ___ до́ма.",
+      "options": [
+        "был",
+        "была́",
+        "бы́ли",
+        "бу́дет"
+      ],
+      "answer": "была́",
+      "explanation": "Dişil özneyle geçmiş zaman -ла biçimi kullanılır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-03",
+      "level": "A2",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "Mesajdan ayrıntı bul",
+      "type": "choice",
+      "prompt": "По́езд отправля́ется в 18:40, но поса́дка начина́ется за три́дцать мину́т. Посадка ne zaman başlar?",
+      "options": [
+        "18:10",
+        "18:30",
+        "18:40",
+        "19:10"
+      ],
+      "answer": "18:10",
+      "explanation": "18:40’tan 30 dakika önce 18:10’dur.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-04",
+      "level": "A2",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Kibar rica",
+      "type": "choice",
+      "prompt": "Pencerenin kapatılmasını kibarca istemek için:",
+      "options": [
+        "Закро́й окно́!",
+        "Вы закры́ли окно́.",
+        "Не могли́ бы вы закры́ть окно́?",
+        "Окно́ закры́то."
+      ],
+      "answer": "Не могли́ бы вы закры́ть окно́?",
+      "explanation": "Не могли бы вы… kibar rica yapısıdır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-05",
+      "level": "A2",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Gelecek zaman kur",
+      "type": "production",
+      "prompt": "Завтра / мы / обсуждать / проект sözcükleriyle cümle kur.",
+      "options": [],
+      "answer": "За́втра мы бу́дем обсужда́ть прое́кт.",
+      "explanation": "Bitmemiş fiilin analitik geleceği быть + mastardır.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-a2-06",
+      "level": "A2",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Geçen hafta sonu",
+      "type": "production",
+      "prompt": "Geçen hafta sonu ne yaptığını 5–6 cümleyle anlat.",
+      "options": [],
+      "answer": "В суббо́ту я … . По́том мы … . В воскресе́нье я … .",
+      "explanation": "Geçmiş zamanda cinsiyet ve çoğul uyumunu kontrol et.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-01",
+      "level": "B1",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Soyut kelime seçimi",
+      "type": "choice",
+      "prompt": "Э́тот курс даёт возмо́жность ___ навы́ки.",
+      "options": [
+        "развива́ть",
+        "теря́ть",
+        "лома́ть",
+        "закрыва́ть"
+      ],
+      "answer": "развива́ть",
+      "explanation": "развивать навыки = becerileri geliştirmek.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-02",
+      "level": "B1",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Görünüş seçimi",
+      "type": "choice",
+      "prompt": "Когда́ я ___ статью́, я отправлю́ её преподава́телю.",
+      "options": [
+        "писа́л",
+        "бу́ду писа́ть",
+        "напишу́",
+        "пишу́"
+      ],
+      "answer": "напишу́",
+      "explanation": "Tamamlanma sonucu gerektiği için bitmiş görünüş kullanılır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-03",
+      "level": "B1",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "Neden-sonuç çıkarımı",
+      "type": "choice",
+      "prompt": "Из-за си́льного сне́га аэропо́рт вре́менно закры́ли. Birçok sefer neden ertelendi?",
+      "options": [
+        "Personel azdı",
+        "Yoğun kar vardı",
+        "Bilet kalmadı",
+        "Uçaklar küçüktü"
+      ],
+      "answer": "Yoğun kar vardı",
+      "explanation": "из-за сильного снега doğrudan nedeni verir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-04",
+      "level": "B1",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Görüş belirtme",
+      "type": "choice",
+      "prompt": "Dengeli bir görüşe giriş için:",
+      "options": [
+        "Ясно, что все ошиба́ются.",
+        "По-мо́ему, у э́того реше́ния есть и плю́сы, и ми́нусы.",
+        "Никаки́х вопро́сов!",
+        "Э́то невозмо́жно обсужда́ть."
+      ],
+      "answer": "По-мо́ему, у э́того реше́ния есть и плю́сы, и ми́нусы.",
+      "explanation": "B1 düzeyinde gerekçeli ve dengeli görüş bildirir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-05",
+      "level": "B1",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Dolaylı anlatım",
+      "type": "production",
+      "prompt": "Олег сказал: «Я верну́сь за́втра». cümlesini dolaylı anlatıma çevir.",
+      "options": [],
+      "answer": "Оле́г сказа́л, что вернётся на сле́дующий день.",
+      "explanation": "что bağlacı ve zaman ifadesi bağlama göre değiştirilir.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b1-06",
+      "level": "B1",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Sorun ve çözüm",
+      "type": "production",
+      "prompt": "Şehrindeki bir ulaşım sorununu ve iki çözüm önerisini 100–120 kelimeyle yaz.",
+      "options": [],
+      "answer": "В на́шем го́роде существует проблема … . Во-пе́рвых, мо́жно … . Кро́ме того́, сле́дует … .",
+      "explanation": "Giriş, iki öneri ve kısa sonuç kullan.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-01",
+      "level": "B2",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Resmî eşdizim",
+      "type": "choice",
+      "prompt": "Коми́ссия приняла́ ___ по улучше́нию систе́мы.",
+      "options": [
+        "впечатле́ние",
+        "ме́ры",
+        "слу́чай",
+        "па́мять"
+      ],
+      "answer": "ме́ры",
+      "explanation": "принимать меры = önlem almak.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-02",
+      "level": "B2",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Ortaç yapısı",
+      "type": "choice",
+      "prompt": "Araştırmacılar tarafından hazırlanan rapor ifadesi hangisi?",
+      "options": [
+        "отчёт, гото́вящий иссле́дователей",
+        "отчёт, подгото́вленный иссле́дователями",
+        "отчёт, гото́вые иссле́дователи",
+        "отчёт, подгото́вив иссле́дователей"
+      ],
+      "answer": "отчёт, подгото́вленный иссле́дователями",
+      "explanation": "Edilgen geçmiş ortaç ve araç hâli gerekir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-03",
+      "level": "B2",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "Yazar tutumunu belirle",
+      "type": "choice",
+      "prompt": "Автор признаёт преиму́щества цифровиза́ции, одна́ко предупрежда́ет о риске неравного доступа. Yazarın tutumu?",
+      "options": [
+        "Tamamen karşı",
+        "Koşulsuz destekliyor",
+        "Dengeli ve eleştirel",
+        "Konuyla ilgisiz"
+      ],
+      "answer": "Dengeli ve eleştirel",
+      "explanation": "Avantajı kabul edip riski vurgulaması dengeli eleştirel tutumdur.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-04",
+      "level": "B2",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Toplantıda itiraz",
+      "type": "choice",
+      "prompt": "Profesyonel ve yumuşak itiraz hangisi?",
+      "options": [
+        "Вы непра́вы.",
+        "Позво́льте не согласи́ться: да́нные пока́ не подтвержда́ют э́тот вы́вод.",
+        "Э́то глу́пость.",
+        "Я не слу́шаю."
+      ],
+      "answer": "Позво́льте не согласи́ться: да́нные пока́ не подтвержда́ют э́тот вы́вод.",
+      "explanation": "İtirazı kanıtla ve yumuşatıcı kalıpla sunar.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-05",
+      "level": "B2",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Zarf-fiille birleştir",
+      "type": "production",
+      "prompt": "Она́ изучи́ла да́нные. По́сле э́того она́ измени́ла вы́вод.",
+      "options": [],
+      "answer": "Изучи́в да́нные, она́ измени́ла вы́вод.",
+      "explanation": "Önce tamamlanan eylem bitmiş zarf-fiille verilir.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-b2-06",
+      "level": "B2",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Tartışma yazısı",
+      "type": "production",
+      "prompt": "Uzaktan eğitimin yarar ve sınırlılıklarını 180–220 kelimeyle tartış.",
+      "options": [],
+      "answer": "С одно́й стороны́, … . С друго́й стороны́, … . Таки́м о́бразом, … .",
+      "explanation": "İki tarafı kanıt ve örneklerle değerlendir.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-01",
+      "level": "C1",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Akademik eşdizim",
+      "type": "choice",
+      "prompt": "Полученные результаты ___ исходную гипотезу.",
+      "options": [
+        "оказывают музыку",
+        "подтверждают",
+        "закрывают окно",
+        "ходят"
+      ],
+      "answer": "подтверждают",
+      "explanation": "подтверждать гипотезу akademik bir eşdizimdir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-02",
+      "level": "C1",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Yönetim ve hâl",
+      "type": "choice",
+      "prompt": "Новые данные соответствуют ___ международного стандарта.",
+      "options": [
+        "требования",
+        "требованиям",
+        "требованиями",
+        "о требованиях"
+      ],
+      "answer": "требованиям",
+      "explanation": "соответствовать + yönelme hâli kullanılır.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-03",
+      "level": "C1",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "Örtük varsayım",
+      "type": "choice",
+      "prompt": "Автор пишет, что метод «эффективен лишь при наличии стабильной инфраструктуры». Örtük varsayım nedir?",
+      "options": [
+        "Yöntem her yerde eşit çalışır",
+        "Altyapı sonuçları etkiler",
+        "Yöntem ucuzdur",
+        "Altyapı gereksizdir"
+      ],
+      "answer": "Altyapı sonuçları etkiler",
+      "explanation": "“Yalnızca … varsa” ifadesi altyapıyı ön koşul yapar.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-04",
+      "level": "C1",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Akademik ihtiyat",
+      "type": "choice",
+      "prompt": "Kanıtın sınırlı olduğunu ihtiyatla söyleyen ifade:",
+      "options": [
+        "Это абсолютно доказано.",
+        "По всей видимости, результаты указывают на тенденцию, однако выборка ограничена.",
+        "Все знают ответ.",
+        "Другого объяснения нет."
+      ],
+      "answer": "По всей видимости, результаты указывают на тенденцию, однако выборка ограничена.",
+      "explanation": "Epistemik ihtiyat ve sınırlılık birlikte verilir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-05",
+      "level": "C1",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Akademik isimleştirme",
+      "type": "production",
+      "prompt": "Мы проанализировали данные и оценили результаты. cümlesini isimleştir.",
+      "options": [],
+      "answer": "Бы́ли проведены ана́лиз да́нных и оце́нка результа́тов.",
+      "explanation": "Fiiller akademik isimlere dönüştürülür.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c1-06",
+      "level": "C1",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Eleştirel özet",
+      "type": "production",
+      "prompt": "Kısa bir araştırma bulgusunu amaç–yöntem–sonuç–sınırlılık sırasıyla 250 kelime civarında özetle.",
+      "options": [],
+      "answer": "Целью исследования являлось … . Для анализа использовался … . Результаты показывают … . Ограничением является … .",
+      "explanation": "Kaynak iddiasını abartmadan, kayıt tutarlı biçimde yaz.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-01",
+      "level": "C2",
+      "skill": "lexicon",
+      "skillLabel": "Kelime ve Eşdizim",
+      "title": "Üslup ve nüans",
+      "type": "choice",
+      "prompt": "“Автор лишь вскользь касается проблемы” ifadesi ne anlatır?",
+      "options": [
+        "Sorunu ayrıntılı çözer",
+        "Soruna kısaca değinir",
+        "Sorunu reddeder",
+        "Sorunu yanlış çevirir"
+      ],
+      "answer": "Soruna kısaca değinir",
+      "explanation": "вскользь коснуться = yüzeysel/kısaca değinmek.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-02",
+      "level": "C2",
+      "skill": "grammar",
+      "skillLabel": "Gramer",
+      "title": "Bilgi yapısı",
+      "type": "choice",
+      "prompt": "Эту гипотезу исследователи отвергли лишь после второго эксперимента. Başta nesne kullanılmasının işlevi?",
+      "options": [
+        "Zaman belirtmek",
+        "Karşıtlık ve konu odağı kurmak",
+        "Çoğul yapmak",
+        "Edilgenlik kurmak"
+      ],
+      "answer": "Karşıtlık ve konu odağı kurmak",
+      "explanation": "Serbest söz dizimi bilgi yapısını ve karşıt odağı değiştirir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-03",
+      "level": "C2",
+      "skill": "reading",
+      "skillLabel": "Okuma",
+      "title": "İroniyi çözümleme",
+      "type": "choice",
+      "prompt": "Рецензент называет явно противоречивое объяснение «удивительно стройным». Bu kullanımın amacı?",
+      "options": [
+        "Gerçek övgü",
+        "İronik eleştiri",
+        "Tarafsız tanım",
+        "Zaman belirtme"
+      ],
+      "answer": "İronik eleştiri",
+      "explanation": "Bağlamdaki çelişki, olumlu ifadenin ironik kullanıldığını gösterir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-04",
+      "level": "C2",
+      "skill": "function",
+      "skillLabel": "İletişim",
+      "title": "Kayıt dönüşümü",
+      "type": "choice",
+      "prompt": "Gündelik “Они опять всё переделали” ifadesinin resmî karşılığı:",
+      "options": [
+        "Они снова всё сделали.",
+        "Была проведена повторная переработка всех материалов.",
+        "Они молодцы.",
+        "Материалы гуляют."
+      ],
+      "answer": "Была проведена повторная переработка всех материалов.",
+      "explanation": "Resmî kayıtta öznesiz/edilgen ve isimleştirilmiş yapı tercih edilebilir.",
+      "estimatedMinutes": 2,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-05",
+      "level": "C2",
+      "skill": "transformation",
+      "skillLabel": "Dönüştürme",
+      "title": "Yoğun cümleyi sadeleştir",
+      "type": "production",
+      "prompt": "Осуществление реализации программы потребовало проведения дополнительной оценки.",
+      "options": [],
+      "answer": "Реализация программы потребовала дополнительной оценки.",
+      "explanation": "Gereksiz isim zincirleri azaltılarak anlam korunur.",
+      "estimatedMinutes": 5,
+      "sourcePack": "v63-certification-original"
+    },
+    {
+      "id": "cert-c2-06",
+      "level": "C2",
+      "skill": "writing",
+      "skillLabel": "Yazma",
+      "title": "Üslup karşılaştırması",
+      "type": "production",
+      "prompt": "Aynı olayı önce akademik, sonra gazetecilik üslubuyla iki kısa metin hâlinde yaz ve seçimlerini açıkla.",
+      "options": [],
+      "answer": "Akademik metin kanıt ve ihtiyat; gazetecilik metni canlılık ve okur yönelimi taşımalıdır.",
+      "explanation": "Sözdizimi, kelime seçimi, ton ve bilgi yoğunluğunu karşılaştır.",
+      "estimatedMinutes": 12,
+      "sourcePack": "v63-certification-original"
+    }
+  ]
+}
