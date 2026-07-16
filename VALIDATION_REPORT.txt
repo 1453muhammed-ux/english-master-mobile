@@ -1,15 +1,29 @@
-WordPilot v5.1.3 validation
-- Story TTS start/stop control added
-- Story translation toggle fixed
-- Learning Center promoted and visually strengthened
-- Mobile safe-area top padding added
-- App Check registration preserved
-- Existing course progress/localStorage keys preserved
+WordPilot v6.0.0 Validation Report
 
+Content
+- English academy lessons: 36 (A1-C2, six lessons per level)
+- Russian academy lessons: 36 (A1-C2, six lessons per level)
+- Level assessments: 12
+- New graded readings: 24
+- Total story/reading library: 42
+- Existing English records: 5488
+- Existing Russian records: 1000
+- Existing Uzbek records: 137
 
-V5.1.3 VALIDATION
-- JavaScript syntax: PASS
-- JSON parsing: PASS
-- Version references: 5.1.3
-- Lesson icons: PASS
-- Compact daily word styles: PASS
+Compatibility
+- Existing localStorage key preserved: wordpilot_v34
+- Firebase configuration preserved
+- Firebase App Check configuration preserved
+- Google sign-in, course leagues, XP and PWA modules preserved
+- Existing word IDs and course data files preserved
+
+Copyright policy
+- Uploaded books are not included in this ZIP.
+- Their sequence and coverage were reviewed only as pedagogical references.
+- Published lesson explanations, examples, questions and readings are original WordPilot content.
+
+Automated checks
+- JSON parsing: required
+- JavaScript syntax: required
+- Duplicate HTML IDs: none
+- Required V6 files: curriculum_v6.json and modules/v60.js

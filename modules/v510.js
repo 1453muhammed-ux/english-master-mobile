@@ -1,14 +1,14 @@
-/* WordPilot v5.1.3 — professional dashboard navigation and mobile history. */
-const WP510_VERSION='5.1.3';
+/* WordPilot v6.0.0 — professional dashboard navigation and mobile history. */
+const WP510_VERSION='6.0.0';
 const WP510_TAB_KEY=`${STORE}:dashboard_tab`;
 const WP510_GUEST_PROMPT_KEY=`${STORE}:guest_signin_prompt_20`;
-let wp510DashboardTab=localStorage.getItem(WP510_TAB_KEY)||'games';
+let wp510DashboardTab=localStorage.getItem(WP510_TAB_KEY)||'academy';
 let wp510MeaningHidden=localStorage.getItem(`${STORE}:pronunciation_tr_hidden`)==='1';
 let wp510NavBase=null;
 let wp510HistoryPop=false;
 
 function wp510CurrentView(){return document.querySelector('.view.active')?.id?.replace(/^view-/,'')||'dashboard'}
-function wp510ValidTab(tab){return ['games','speak','stories','collections','progress'].includes(tab)?tab:'games'}
+function wp510ValidTab(tab){return ['academy','games','speak','stories','collections','progress'].includes(tab)?tab:'academy'}
 function wp510SetDashboardTab(tab,{scroll=false,save=true}={}){
   tab=wp510ValidTab(tab);wp510DashboardTab=tab;
   document.querySelectorAll('[data-dashboard-tab]').forEach(btn=>{

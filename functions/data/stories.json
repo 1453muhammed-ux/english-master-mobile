@@ -880,5 +880,1205 @@
         "answer": 0
       }
     ]
+  },
+  {
+    "id": "en-a1-morning",
+    "course": "en",
+    "title": "The Quiet Morning",
+    "level": "A1",
+    "topic": "Günlük yaşam",
+    "lines": [
+      {
+        "text": "Eda wakes up before her alarm.",
+        "translation": "Eda alarmından önce uyanır."
+      },
+      {
+        "text": "The street is quiet, and the sky is light blue.",
+        "translation": "Sokak sessizdir ve gökyüzü açık mavidir."
+      },
+      {
+        "text": "She makes tea and opens her notebook.",
+        "translation": "Çay yapar ve defterini açar."
+      },
+      {
+        "text": "Today she learns five new words.",
+        "translation": "Bugün beş yeni kelime öğrenir."
+      },
+      {
+        "text": "She says every word aloud twice.",
+        "translation": "Her kelimeyi iki kez sesli söyler."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does Eda make?",
+        "options": [
+          "Tea",
+          "Soup",
+          "Coffee"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How many words does she learn?",
+        "options": [
+          "Five",
+          "Ten",
+          "Two"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-a1-cafe",
+    "course": "en",
+    "title": "A Small Café",
+    "level": "A1",
+    "topic": "Şehir",
+    "lines": [
+      {
+        "text": "There is a small café near Ali’s office.",
+        "translation": "Ali’nin ofisinin yakınında küçük bir kafe vardır."
+      },
+      {
+        "text": "It has four tables and a long window.",
+        "translation": "Dört masası ve uzun bir penceresi vardır."
+      },
+      {
+        "text": "Ali orders a sandwich and water.",
+        "translation": "Ali bir sandviç ve su sipariş eder."
+      },
+      {
+        "text": "The waiter is friendly and speaks slowly.",
+        "translation": "Garson arkadaş canlısıdır ve yavaş konuşur."
+      },
+      {
+        "text": "Ali understands every question.",
+        "translation": "Ali her soruyu anlar."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where is the café?",
+        "options": [
+          "Near the office",
+          "At the airport",
+          "In a school"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What does Ali drink?",
+        "options": [
+          "Water",
+          "Juice",
+          "Tea"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-a2-weekend",
+    "course": "en",
+    "title": "A Changed Weekend",
+    "level": "A2",
+    "topic": "Planlar",
+    "lines": [
+      {
+        "text": "Leyla planned to visit a museum on Saturday.",
+        "translation": "Leyla cumartesi günü bir müzeyi ziyaret etmeyi planladı."
+      },
+      {
+        "text": "In the morning, heavy rain started.",
+        "translation": "Sabah şiddetli yağmur başladı."
+      },
+      {
+        "text": "She called her friend and suggested a film at home.",
+        "translation": "Arkadaşını aradı ve evde film izlemeyi önerdi."
+      },
+      {
+        "text": "They made popcorn and watched an old comedy.",
+        "translation": "Patlamış mısır yaptılar ve eski bir komedi izlediler."
+      },
+      {
+        "text": "The day was different from the plan, but it was still enjoyable.",
+        "translation": "Gün plandan farklıydı ama yine de keyifliydi."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why did the plan change?",
+        "options": [
+          "Because of rain",
+          "Because the museum closed forever",
+          "Because Leyla worked"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did they watch?",
+        "options": [
+          "A comedy",
+          "A documentary",
+          "A match"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-a2-lost-card",
+    "course": "en",
+    "title": "The Lost Card",
+    "level": "A2",
+    "topic": "Günlük sorunlar",
+    "lines": [
+      {
+        "text": "Murat could not find his travel card after lunch.",
+        "translation": "Murat öğle yemeğinden sonra ulaşım kartını bulamadı."
+      },
+      {
+        "text": "He checked his bag, his jacket, and the café table.",
+        "translation": "Çantasını, ceketini ve kafe masasını kontrol etti."
+      },
+      {
+        "text": "A woman at the next table had found it under a chair.",
+        "translation": "Yan masadaki bir kadın kartı sandalyenin altında bulmuştu."
+      },
+      {
+        "text": "She gave it back and refused a reward.",
+        "translation": "Kartı geri verdi ve ödülü kabul etmedi."
+      },
+      {
+        "text": "Murat thanked her and put the card in a safer pocket.",
+        "translation": "Murat ona teşekkür etti ve kartı daha güvenli bir cebe koydu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where was the card?",
+        "options": [
+          "Under a chair",
+          "At home",
+          "On the bus"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did Murat do next?",
+        "options": [
+          "Used a safer pocket",
+          "Bought another bag",
+          "Left the café"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-b1-garden",
+    "course": "en",
+    "title": "The Roof Garden",
+    "level": "B1",
+    "topic": "Çevre",
+    "lines": [
+      {
+        "text": "The residents of a crowded apartment building wanted a shared green space.",
+        "translation": "Kalabalık bir apartmanın sakinleri ortak bir yeşil alan istiyordu."
+      },
+      {
+        "text": "They transformed an unused roof into a small garden.",
+        "translation": "Kullanılmayan çatıyı küçük bir bahçeye dönüştürdüler."
+      },
+      {
+        "text": "At first, some people doubted that the plants would survive the summer heat.",
+        "translation": "Başta bazı insanlar bitkilerin yaz sıcağında yaşayacağından şüphe etti."
+      },
+      {
+        "text": "However, the group installed a simple watering system and chose local plants.",
+        "translation": "Ancak grup basit bir sulama sistemi kurdu ve yerel bitkileri seçti."
+      },
+      {
+        "text": "Within a year, the garden became a place for conversation, study, and quiet rest.",
+        "translation": "Bir yıl içinde bahçe sohbet, çalışma ve sessiz dinlenme alanı oldu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What was the roof used for before?",
+        "options": [
+          "It was unused",
+          "It was a restaurant",
+          "It was a car park"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why did the plants survive?",
+        "options": [
+          "A watering system and local plants",
+          "Constant rain",
+          "Artificial flowers"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-b1-remote",
+    "course": "en",
+    "title": "A Better Work Routine",
+    "level": "B1",
+    "topic": "Çalışma hayatı",
+    "lines": [
+      {
+        "text": "When Deniz began working from home, she enjoyed the freedom but struggled with time.",
+        "translation": "Deniz evden çalışmaya başladığında özgürlüğün tadını çıkardı fakat zamanı yönetmekte zorlandı."
+      },
+      {
+        "text": "She often answered messages late at night and skipped proper breaks.",
+        "translation": "Sık sık gece geç saatte mesajlara cevap veriyor ve düzenli molaları atlıyordu."
+      },
+      {
+        "text": "After several tiring weeks, she created clear working hours and a short walking routine.",
+        "translation": "Birkaç yorucu haftadan sonra net çalışma saatleri ve kısa bir yürüyüş rutini oluşturdu."
+      },
+      {
+        "text": "Her productivity improved because she could focus without feeling permanently available.",
+        "translation": "Sürekli ulaşılabilir hissetmeden odaklanabildiği için verimliliği arttı."
+      },
+      {
+        "text": "The change was simple, but it made work feel sustainable.",
+        "translation": "Değişiklik basitti fakat çalışmayı sürdürülebilir hâle getirdi."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What problem did Deniz have?",
+        "options": [
+          "Unclear work boundaries",
+          "No internet",
+          "A long commute"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What helped her?",
+        "options": [
+          "Clear hours and walking",
+          "Working all night",
+          "More messages"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-b2-attention",
+    "course": "en",
+    "title": "The Cost of Constant Attention",
+    "level": "B2",
+    "topic": "Dijital yaşam",
+    "lines": [
+      {
+        "text": "Digital tools promise efficiency, yet many of them compete for the same limited resource: attention.",
+        "translation": "Dijital araçlar verimlilik vaat eder, ancak çoğu aynı sınırlı kaynak için yarışır: dikkat."
+      },
+      {
+        "text": "A notification may take only a second to read, but returning to a complex task can take much longer.",
+        "translation": "Bir bildirimi okumak yalnızca bir saniye sürebilir, fakat karmaşık bir göreve dönmek çok daha uzun sürebilir."
+      },
+      {
+        "text": "Some teams therefore create periods in which messages are paused and focused work is protected.",
+        "translation": "Bu nedenle bazı ekipler mesajların durdurulduğu ve odaklı çalışmanın korunduğu zaman dilimleri oluşturur."
+      },
+      {
+        "text": "This approach does not reject communication; it gives communication a deliberate place.",
+        "translation": "Bu yaklaşım iletişimi reddetmez; iletişime bilinçli bir yer verir."
+      },
+      {
+        "text": "The real challenge is not using technology less, but using it with clearer intentions.",
+        "translation": "Asıl zorluk teknolojiyi daha az kullanmak değil, daha net niyetlerle kullanmaktır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What is described as limited?",
+        "options": [
+          "Attention",
+          "Technology",
+          "Communication"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What do some teams protect?",
+        "options": [
+          "Focused work periods",
+          "Every notification",
+          "Long meetings"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-b2-transport",
+    "course": "en",
+    "title": "A City Without One Perfect Answer",
+    "level": "B2",
+    "topic": "Şehir politikası",
+    "lines": [
+      {
+        "text": "A city council proposed reducing car traffic in the historic centre.",
+        "translation": "Bir belediye meclisi tarihî merkezde araç trafiğini azaltmayı önerdi."
+      },
+      {
+        "text": "Supporters argued that cleaner air and safer streets would benefit everyone.",
+        "translation": "Destekleyenler daha temiz hava ve daha güvenli sokakların herkese fayda sağlayacağını savundu."
+      },
+      {
+        "text": "Shop owners worried that customers might choose easier locations outside the centre.",
+        "translation": "Dükkân sahipleri müşterilerin merkez dışındaki daha kolay konumları seçebileceğinden endişe etti."
+      },
+      {
+        "text": "The final plan combined restricted traffic with frequent buses and short-term delivery access.",
+        "translation": "Son plan sınırlı trafiği sık otobüs seferleri ve kısa süreli teslimat erişimiyle birleştirdi."
+      },
+      {
+        "text": "Its success would depend not on a single rule, but on whether the alternatives actually worked.",
+        "translation": "Başarısı tek bir kurala değil, alternatiflerin gerçekten işe yarayıp yaramadığına bağlı olacaktı."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What worried shop owners?",
+        "options": [
+          "Losing customers",
+          "Cleaner air",
+          "More buses"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What would determine success?",
+        "options": [
+          "Working alternatives",
+          "One strict rule alone",
+          "More parking in the centre"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-c1-identity",
+    "course": "en",
+    "title": "Language and Belonging",
+    "level": "C1",
+    "topic": "Dil ve toplum",
+    "lines": [
+      {
+        "text": "A language is more than a system for transferring information; it is also a record of shared habits and memories.",
+        "translation": "Bir dil bilgi aktarma sisteminden fazlasıdır; aynı zamanda ortak alışkanlıkların ve anıların kaydıdır."
+      },
+      {
+        "text": "People who move between languages often notice that different parts of their personality become easier to express in different contexts.",
+        "translation": "Diller arasında geçiş yapan insanlar, kişiliklerinin farklı yönlerinin farklı bağlamlarda daha kolay ifade edildiğini sıkça fark eder."
+      },
+      {
+        "text": "This does not mean that identity is divided into separate pieces.",
+        "translation": "Bu, kimliğin ayrı parçalara bölündüğü anlamına gelmez."
+      },
+      {
+        "text": "Rather, each language offers a slightly different set of social expectations, metaphors, and emotional distances.",
+        "translation": "Aksine her dil biraz farklı toplumsal beklentiler, mecazlar ve duygusal mesafeler sunar."
+      },
+      {
+        "text": "Learning another language can therefore be understood as learning another way of positioning oneself in relation to others.",
+        "translation": "Bu nedenle başka bir dil öğrenmek, kişinin kendisini başkalarına göre konumlandırmasının başka bir yolunu öğrenmek olarak anlaşılabilir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does each language offer?",
+        "options": [
+          "Different social and emotional resources",
+          "A completely separate identity",
+          "Only new grammar rules"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How is language learning framed?",
+        "options": [
+          "A new way of relating to others",
+          "Forgetting one’s first language",
+          "Memorizing isolated lists"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-c1-automation",
+    "course": "en",
+    "title": "Responsible Automation",
+    "level": "C1",
+    "topic": "Teknoloji etiği",
+    "lines": [
+      {
+        "text": "Automating a decision can make a process faster, but speed does not guarantee fairness.",
+        "translation": "Bir kararı otomatikleştirmek süreci hızlandırabilir, ancak hız adaleti garanti etmez."
+      },
+      {
+        "text": "A system learns from previous examples, and those examples may reflect unequal conditions.",
+        "translation": "Bir sistem önceki örneklerden öğrenir ve bu örnekler eşitsiz koşulları yansıtabilir."
+      },
+      {
+        "text": "Responsible design therefore requires more than technical accuracy: it requires clear accountability and meaningful human review.",
+        "translation": "Bu nedenle sorumlu tasarım teknik doğruluktan fazlasını gerektirir: açık hesap verebilirlik ve anlamlı insan denetimi gerekir."
+      },
+      {
+        "text": "Users should know when an automated system has influenced an important outcome and how that outcome can be challenged.",
+        "translation": "Kullanıcılar otomatik bir sistemin önemli bir sonucu ne zaman etkilediğini ve bu sonuca nasıl itiraz edilebileceğini bilmelidir."
+      },
+      {
+        "text": "The goal is not to remove human judgment, but to make both human and machine decisions more transparent.",
+        "translation": "Amaç insan yargısını ortadan kaldırmak değil, hem insan hem makine kararlarını daha şeffaf kılmaktır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why can data be problematic?",
+        "options": [
+          "It may reflect unequal conditions",
+          "It is always too small",
+          "It cannot be stored"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What is the stated goal?",
+        "options": [
+          "Greater transparency",
+          "No human review",
+          "Maximum speed only"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-c2-memory",
+    "course": "en",
+    "title": "The Architecture of Memory",
+    "level": "C2",
+    "topic": "Zihin ve anlatı",
+    "lines": [
+      {
+        "text": "Memory is often imagined as an archive from which intact records can be retrieved.",
+        "translation": "Bellek çoğu zaman bozulmamış kayıtların çıkarılabildiği bir arşiv olarak düşünülür."
+      },
+      {
+        "text": "In practice, remembering is closer to reconstruction: fragments are selected, connected, and interpreted in the present.",
+        "translation": "Uygulamada hatırlama yeniden kurmaya daha yakındır: parçalar seçilir, bağlanır ve şimdiki zamanda yorumlanır."
+      },
+      {
+        "text": "This explains why a memory may feel emotionally exact while remaining factually incomplete.",
+        "translation": "Bu, bir anının olgusal olarak eksik kalırken duygusal açıdan neden tamamen doğru hissedilebildiğini açıklar."
+      },
+      {
+        "text": "Narratives give experience coherence, but coherence can hide uncertainty and contradiction.",
+        "translation": "Anlatılar deneyime bütünlük verir, fakat bütünlük belirsizliği ve çelişkiyi gizleyebilir."
+      },
+      {
+        "text": "A mature account of the past therefore preserves not only what is remembered, but also what cannot be confidently known.",
+        "translation": "Bu nedenle geçmişin olgun bir anlatımı yalnız hatırlananı değil, güvenle bilinemeyeni de korur."
+      }
+    ],
+    "questions": [
+      {
+        "q": "How is remembering described?",
+        "options": [
+          "As reconstruction",
+          "As perfect retrieval",
+          "As deliberate invention"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What can coherence hide?",
+        "options": [
+          "Uncertainty and contradiction",
+          "All emotion",
+          "Every fact"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "en-c2-evidence",
+    "course": "en",
+    "title": "Speaking Precisely About Evidence",
+    "level": "C2",
+    "topic": "Akademik düşünme",
+    "lines": [
+      {
+        "text": "Strong reasoning depends not merely on having evidence, but on describing what that evidence can legitimately support.",
+        "translation": "Güçlü akıl yürütme yalnızca kanıta sahip olmaya değil, kanıtın meşru olarak neyi destekleyebileceğini açıklamaya bağlıdır."
+      },
+      {
+        "text": "A correlation may justify further investigation without establishing a causal mechanism.",
+        "translation": "Bir korelasyon nedensel bir mekanizma kurmadan daha fazla araştırmayı haklı çıkarabilir."
+      },
+      {
+        "text": "An absence of observed harm is not automatically evidence that harm is impossible.",
+        "translation": "Gözlenen zararın yokluğu, zararın imkânsız olduğunun otomatik kanıtı değildir."
+      },
+      {
+        "text": "Precise language protects an argument from becoming stronger than its foundations.",
+        "translation": "Kesin dil, bir argümanı temellerinden daha güçlü hâle gelmekten korur."
+      },
+      {
+        "text": "Intellectual confidence is most credible when it includes an accurate map of its own limits.",
+        "translation": "En güvenilir entelektüel güven, kendi sınırlarının doğru bir haritasını içerendir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What can correlation justify?",
+        "options": [
+          "Further investigation",
+          "Automatic proof of cause",
+          "No further work"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why is precise language useful?",
+        "options": [
+          "It keeps claims proportional to evidence",
+          "It makes every claim certain",
+          "It removes all limitations"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-a1-morning",
+    "course": "ru",
+    "title": "Ти́хое у́тро",
+    "level": "A1",
+    "topic": "Günlük yaşam",
+    "lines": [
+      {
+        "text": "А́нна встаёт в семь часо́в.",
+        "translation": "Anna saat yedide kalkar."
+      },
+      {
+        "text": "Она́ открыва́ет окно́ и де́лает чай.",
+        "translation": "Pencereyi açar ve çay yapar."
+      },
+      {
+        "text": "На столе́ лежи́т но́вая тетра́дь.",
+        "translation": "Masanın üzerinde yeni bir defter vardır."
+      },
+      {
+        "text": "А́нна пи́шет пять ру́сских слов.",
+        "translation": "Anna beş Rusça kelime yazar."
+      },
+      {
+        "text": "Пото́м она́ чита́ет их вслух.",
+        "translation": "Sonra onları sesli okur."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Во ско́лько А́нна встаёт?",
+        "options": [
+          "В семь",
+          "В пять",
+          "В де́вять"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что она́ де́лает?",
+        "options": [
+          "Чай",
+          "Суп",
+          "Ко́фе"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-a1-shop",
+    "course": "ru",
+    "title": "В ма́леньком магази́не",
+    "level": "A1",
+    "topic": "Alışveriş",
+    "lines": [
+      {
+        "text": "Ря́дом с до́мом есть ма́ленький магази́н.",
+        "translation": "Evin yanında küçük bir dükkân vardır."
+      },
+      {
+        "text": "Мехме́т покупа́ет хлеб, молоко́ и я́блоки.",
+        "translation": "Mehmet ekmek, süt ve elma alır."
+      },
+      {
+        "text": "Продаве́ц говори́т ме́дленно.",
+        "translation": "Satıcı yavaş konuşur."
+      },
+      {
+        "text": "Мехме́т всё понима́ет и плати́т ка́ртой.",
+        "translation": "Mehmet her şeyi anlar ve kartla öder."
+      },
+      {
+        "text": "Он возвраща́ется домо́й дово́льный.",
+        "translation": "Memnun bir şekilde eve döner."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Что покупа́ет Мехме́т?",
+        "options": [
+          "Хлеб, молоко́ и я́блоки",
+          "Кни́гу",
+          "Оде́жду"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Как он пла́тит?",
+        "options": [
+          "Ка́ртой",
+          "Нали́чными",
+          "Не пла́тит"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-a2-plan",
+    "course": "ru",
+    "title": "План измени́лся",
+    "level": "A2",
+    "topic": "Planlar",
+    "lines": [
+      {
+        "text": "В суббо́ту О́льга хоте́ла пойти́ в музе́й.",
+        "translation": "Olga cumartesi müzeye gitmek istiyordu."
+      },
+      {
+        "text": "У́тром нача́лся си́льный дождь.",
+        "translation": "Sabah şiddetli yağmur başladı."
+      },
+      {
+        "text": "Она́ позвони́ла дру́гу и предложи́ла посмотре́ть фильм до́ма.",
+        "translation": "Arkadaşını aradı ve evde film izlemeyi önerdi."
+      },
+      {
+        "text": "Они́ пригото́вили попко́рн и выбра́ли коме́дию.",
+        "translation": "Patlamış mısır hazırladılar ve bir komedi seçtiler."
+      },
+      {
+        "text": "День прошёл не по пла́ну, но о́чень хорошо́.",
+        "translation": "Gün plana göre geçmedi ama çok iyi geçti."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Почему́ план измени́лся?",
+        "options": [
+          "Из-за дождя́",
+          "Из-за рабо́ты",
+          "Из-за по́езда"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что они́ смотре́ли?",
+        "options": [
+          "Коме́дию",
+          "Но́вости",
+          "Футбо́л"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-a2-card",
+    "course": "ru",
+    "title": "Потеря́нная ка́рта",
+    "level": "A2",
+    "topic": "Günlük sorunlar",
+    "lines": [
+      {
+        "text": "По́сле обе́да Аза́мат не нашёл тра́нспортную ка́рту.",
+        "translation": "Azamat öğle yemeğinden sonra ulaşım kartını bulamadı."
+      },
+      {
+        "text": "Он прове́рил су́мку, ку́ртку и стол в кафе́.",
+        "translation": "Çantasını, ceketini ve kafedeki masayı kontrol etti."
+      },
+      {
+        "text": "Же́нщина за сосе́дним столо́м нашла́ ка́рту под сту́лом.",
+        "translation": "Yan masadaki kadın kartı sandalyenin altında buldu."
+      },
+      {
+        "text": "Она́ верну́ла её и не взяла́ награ́ду.",
+        "translation": "Kartı geri verdi ve ödül almadı."
+      },
+      {
+        "text": "Аза́мат положи́л ка́рту в закры́тый карма́н.",
+        "translation": "Azamat kartı kapalı bir cebe koydu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Где была́ ка́рта?",
+        "options": [
+          "Под сту́лом",
+          "До́ма",
+          "В авто́бусе"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Куда́ Аза́мат положи́л ка́рту?",
+        "options": [
+          "В закры́тый карма́н",
+          "На стол",
+          "В кни́гу"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-b1-garden",
+    "course": "ru",
+    "title": "Сад на кры́ше",
+    "level": "B1",
+    "topic": "Çevre",
+    "lines": [
+      {
+        "text": "Жи́тели большо́го до́ма хоте́ли созда́ть о́бщее зелёное ме́сто.",
+        "translation": "Büyük bir apartmanın sakinleri ortak yeşil bir alan oluşturmak istedi."
+      },
+      {
+        "text": "Они́ преврати́ли пусту́ю кры́шу в ма́ленький сад.",
+        "translation": "Boş çatıyı küçük bir bahçeye dönüştürdüler."
+      },
+      {
+        "text": "Снача́ла сосе́ди сомнева́лись, что расте́ния переживу́т жа́ркое ле́то.",
+        "translation": "Başta komşular bitkilerin sıcak yazı atlatacağından şüphe etti."
+      },
+      {
+        "text": "Гру́ппа установи́ла просто́й поли́в и вы́брала ме́стные расте́ния.",
+        "translation": "Grup basit bir sulama sistemi kurdu ve yerel bitkileri seçti."
+      },
+      {
+        "text": "Че́рез год сад стал ме́стом для обще́ния и о́тдыха.",
+        "translation": "Bir yıl sonra bahçe sohbet ve dinlenme alanı oldu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Что бы́ло на кры́ше ра́ньше?",
+        "options": [
+          "Пусто́е ме́сто",
+          "Рестора́н",
+          "Па́рковка"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что помогло́ расте́ниям?",
+        "options": [
+          "Поли́в и ме́стные ви́ды",
+          "Снег",
+          "Иску́сственные цветы́"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-b1-routine",
+    "course": "ru",
+    "title": "Но́вый режи́м рабо́ты",
+    "level": "B1",
+    "topic": "Çalışma hayatı",
+    "lines": [
+      {
+        "text": "Когда́ Ди́на начала́ рабо́тать из до́ма, ей понра́вилась свобо́да.",
+        "translation": "Dina evden çalışmaya başladığında özgürlüğü sevdi."
+      },
+      {
+        "text": "Но она́ ча́сто отвеча́ла на сообще́ния по́здно но́чью и забыва́ла де́лать переры́вы.",
+        "translation": "Fakat sık sık gece geç saatte mesajlara cevap veriyor ve mola vermeyi unutuyordu."
+      },
+      {
+        "text": "По́сле неско́льких тяжёлых неде́ль она́ установи́ла чёткие рабо́чие часы́.",
+        "translation": "Birkaç zor haftadan sonra net çalışma saatleri belirledi."
+      },
+      {
+        "text": "Она́ та́кже ста́ла гуля́ть в середи́не дня.",
+        "translation": "Ayrıca gün ortasında yürüyüş yapmaya başladı."
+      },
+      {
+        "text": "Но́вый режи́м помог ей лу́чше сосредото́читься и ме́ньше устава́ть.",
+        "translation": "Yeni düzen daha iyi odaklanmasına ve daha az yorulmasına yardım etti."
+      }
+    ],
+    "questions": [
+      {
+        "q": "В чём была́ пробле́ма?",
+        "options": [
+          "Не бы́ло грани́ц рабо́ты",
+          "Не бы́ло интерне́та",
+          "Был да́льний путь"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что помогло́ Ди́не?",
+        "options": [
+          "Чёткие часы́ и прогу́лка",
+          "Рабо́та всю ночь",
+          "Бо́льше сообще́ний"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-b2-attention",
+    "course": "ru",
+    "title": "Цена́ постоя́нного внима́ния",
+    "level": "B2",
+    "topic": "Dijital yaşam",
+    "lines": [
+      {
+        "text": "Цифровы́е инструме́нты обеща́ют эффекти́вность, но мно́гие из них борю́тся за оди́н ограни́ченный ресу́рс — внима́ние.",
+        "translation": "Dijital araçlar verimlilik vaat eder, fakat çoğu tek bir sınırlı kaynak için mücadele eder: dikkat."
+      },
+      {
+        "text": "Уведомле́ние чита́ется за секу́нду, одна́ко возвраще́ние к сло́жной зада́че занима́ет гора́здо бо́льше вре́мени.",
+        "translation": "Bir bildirim bir saniyede okunur; ancak karmaşık bir göreve dönmek çok daha uzun sürer."
+      },
+      {
+        "text": "Поэ́тому не́которые кома́нды создаю́т пери́оды без сообще́ний.",
+        "translation": "Bu nedenle bazı ekipler mesajların olmadığı dönemler oluşturur."
+      },
+      {
+        "text": "Тако́й подхо́д не отменя́ет обще́ние, а отво́дит ему осо́бое вре́мя.",
+        "translation": "Bu yaklaşım iletişimi ortadan kaldırmaz, ona özel bir zaman ayırır."
+      },
+      {
+        "text": "Гла́вная зада́ча — не ре́же испо́льзовать техноло́гии, а де́лать э́то осо́знанно.",
+        "translation": "Ana görev teknolojiyi daha seyrek kullanmak değil, bilinçli kullanmaktır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Како́й ресу́рс ограни́чен?",
+        "options": [
+          "Внима́ние",
+          "Техноло́гия",
+          "Обще́ние"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что создаю́т кома́нды?",
+        "options": [
+          "Пери́оды без сообще́ний",
+          "Бо́льше совеща́ний",
+          "Но́вые уведомле́ния"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-b2-city",
+    "course": "ru",
+    "title": "Го́род без идеа́льного отве́та",
+    "level": "B2",
+    "topic": "Şehir politikası",
+    "lines": [
+      {
+        "text": "Городско́й сове́т предложи́л ограни́чить автомоби́льное движе́ние в истори́ческом це́нтре.",
+        "translation": "Belediye meclisi tarihî merkezde araç trafiğini sınırlamayı önerdi."
+      },
+      {
+        "text": "Сто́ронники говори́ли, что чи́стый во́здух и безопа́сные у́лицы поле́зны всем.",
+        "translation": "Destekleyenler temiz hava ve güvenli sokakların herkese faydalı olduğunu söyledi."
+      },
+      {
+        "text": "Владе́льцы магази́нов боя́лись потеря́ть покупа́телей.",
+        "translation": "Dükkân sahipleri müşteri kaybetmekten korktu."
+      },
+      {
+        "text": "Ито́говый план объедини́л ограниче́ния, ча́стые авто́бусы и вре́менный до́ступ для доста́вки.",
+        "translation": "Son plan sınırlamaları, sık otobüsleri ve teslimat için geçici erişimi birleştirdi."
+      },
+      {
+        "text": "Успе́х зависе́л от того́, бу́дут ли альтернати́вы реа́льно рабо́тать.",
+        "translation": "Başarı alternatiflerin gerçekten işe yarayıp yaramayacağına bağlıydı."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Чего́ боя́лись владе́льцы магази́нов?",
+        "options": [
+          "Потеря́ть покупа́телей",
+          "Чи́стого во́здуха",
+          "Но́вых авто́бусов"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "От чего́ зависе́л успе́х?",
+        "options": [
+          "От рабо́ты альтернати́в",
+          "От одного́ запре́та",
+          "От но́вых па́рковок"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-c1-identity",
+    "course": "ru",
+    "title": "Язы́к и принадле́жность",
+    "level": "C1",
+    "topic": "Dil ve toplum",
+    "lines": [
+      {
+        "text": "Язы́к — э́то не то́лько систе́ма переда́чи информа́ции, но и па́мять об о́бщих привы́чках и о́пыте.",
+        "translation": "Dil yalnız bilgi aktarma sistemi değil, ortak alışkanlıkların ve deneyimin belleğidir."
+      },
+      {
+        "text": "Лю́ди, кото́рые живу́т ме́жду не́сколькими языка́ми, ча́сто замеча́ют, что ра́зные сто́роны ли́чности ле́гче выража́ются в ра́зных ситуа́циях.",
+        "translation": "Birden fazla dil arasında yaşayan insanlar, kişiliklerinin farklı yönlerinin farklı durumlarda daha kolay ifade edildiğini sıkça fark eder."
+      },
+      {
+        "text": "Э́то не означа́ет, что ли́чность разделена́ на отде́льные ча́сти.",
+        "translation": "Bu, kişiliğin ayrı parçalara bölündüğü anlamına gelmez."
+      },
+      {
+        "text": "Ка́ждый язы́к предлага́ет свой набо́р мета́фор, социа́льных ожида́ний и эмоциона́льных дистанций.",
+        "translation": "Her dil kendi mecaz, toplumsal beklenti ve duygusal mesafe kümesini sunar."
+      },
+      {
+        "text": "Поэ́тому изуче́ние языка́ меня́ет и спо́соб, кото́рым челове́к стро́ит отноше́ния с други́ми.",
+        "translation": "Bu nedenle dil öğrenmek kişinin başkalarıyla ilişki kurma biçimini de değiştirir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Что предлага́ет ка́ждый язы́к?",
+        "options": [
+          "Свои́ мета́форы и ожида́ния",
+          "Отде́льную ли́чность",
+          "То́лько пра́вила"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что мо́жет меня́ть изуче́ние языка́?",
+        "options": [
+          "Спо́соб стро́ить отноше́ния",
+          "Ро́ст челове́ка",
+          "Про́шлое"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-c1-automation",
+    "course": "ru",
+    "title": "Отве́тственная автоматиза́ция",
+    "level": "C1",
+    "topic": "Teknoloji etiği",
+    "lines": [
+      {
+        "text": "Автоматиза́ция реше́ний мо́жет ускори́ть проце́сс, но ско́рость не гаранти́рует справедли́вость.",
+        "translation": "Kararların otomatikleştirilmesi süreci hızlandırabilir, fakat hız adaleti garanti etmez."
+      },
+      {
+        "text": "Систе́ма учи́тся на про́шлых приме́рах, кото́рые иногда́ отража́ют нера́вные усло́вия.",
+        "translation": "Sistem geçmiş örneklerden öğrenir ve bu örnekler bazen eşitsiz koşulları yansıtır."
+      },
+      {
+        "text": "Поэ́тому отве́тственный диза́йн тре́бует не то́лько то́чности, но и я́сной отве́тственности.",
+        "translation": "Bu nedenle sorumlu tasarım yalnız doğruluk değil, açık hesap verebilirlik de gerektirir."
+      },
+      {
+        "text": "По́льзователь до́лжен зна́ть, когда́ алгоритм повлия́л на ва́жный результа́т и как его́ мо́жно оспо́рить.",
+        "translation": "Kullanıcı algoritmanın önemli bir sonucu ne zaman etkilediğini ve bu sonuca nasıl itiraz edilebileceğini bilmelidir."
+      },
+      {
+        "text": "Цель состои́т не в устране́нии челове́ческого сужде́ния, а в повыше́нии прозра́чности.",
+        "translation": "Amaç insan yargısını ortadan kaldırmak değil, şeffaflığı artırmaktır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Почему́ про́шлые приме́ры мо́гут быть пробле́мой?",
+        "options": [
+          "Они́ отража́ют нера́вные усло́вия",
+          "Они́ всегда́ коро́ткие",
+          "Их нельзя́ храни́ть"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Какова́ цель?",
+        "options": [
+          "Прозра́чность",
+          "Отсу́тствие контро́ля",
+          "То́лько ско́рость"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-c2-memory",
+    "course": "ru",
+    "title": "Архитекту́ра па́мяти",
+    "level": "C2",
+    "topic": "Zihin ve anlatı",
+    "lines": [
+      {
+        "text": "Па́мять ча́сто представля́ют как архи́в, из кото́рого мо́жно извлечь неизме́нные за́писи.",
+        "translation": "Bellek çoğu zaman değişmez kayıtların çıkarılabildiği bir arşiv olarak düşünülür."
+      },
+      {
+        "text": "На пра́ктике воспомина́ние бо́льше похо́же на реконстру́кцию: фрагме́нты выбира́ются, свя́зываются и истолко́вываются в настоя́щем.",
+        "translation": "Uygulamada hatırlama yeniden kurmaya daha çok benzer: parçalar seçilir, bağlanır ve şimdiki zamanda yorumlanır."
+      },
+      {
+        "text": "И́менно поэ́тому воспомина́ние мо́жет быть эмоциона́льно то́чным и факти́чески непо́лным.",
+        "translation": "Bu nedenle bir anı duygusal açıdan kesin, olgusal açıdan eksik olabilir."
+      },
+      {
+        "text": "Расска́з придаёт о́пыту свя́зность, но одновре́менно мо́жет скрыва́ть неопределённость и противоре́чия.",
+        "translation": "Anlatı deneyime bütünlük verir, fakat belirsizliği ve çelişkileri de gizleyebilir."
+      },
+      {
+        "text": "Зре́лое отноше́ние к про́шлому сохраня́ет не то́лько воспомина́ния, но и грани́цы уве́ренного зна́ния.",
+        "translation": "Geçmişe olgun yaklaşım yalnız anıları değil, güvenilir bilginin sınırlarını da korur."
+      }
+    ],
+    "questions": [
+      {
+        "q": "На что похо́же воспомина́ние?",
+        "options": [
+          "На реконстру́кцию",
+          "На идеа́льное копи́рование",
+          "На случа́йную вы́думку"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Что мо́жет скрыва́ть свя́зный расска́з?",
+        "options": [
+          "Неопределённость",
+          "Все эмо́ции",
+          "Все фа́кты"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
+  },
+  {
+    "id": "ru-c2-evidence",
+    "course": "ru",
+    "title": "То́чный язы́к доказа́тельств",
+    "level": "C2",
+    "topic": "Akademik düşünme",
+    "lines": [
+      {
+        "text": "Си́льное рассужде́ние зави́сит не то́лько от нали́чия да́нных, но и от то́чного описа́ния того́, что э́ти да́нные де́йствительно подтвержда́ют.",
+        "translation": "Güçlü akıl yürütme yalnız verinin varlığına değil, verinin gerçekte neyi desteklediğinin kesin açıklanmasına bağlıdır."
+      },
+      {
+        "text": "Корреля́ция мо́жет обоснова́ть да́льнейшее иссле́дование, не дока́зывая причи́нный механи́зм.",
+        "translation": "Korelasyon nedensel mekanizmayı kanıtlamadan daha ileri araştırmayı gerekçelendirebilir."
+      },
+      {
+        "text": "Отсу́тствие наблюда́емого вре́да не явля́ется автомати́ческим доказа́тельством его́ невозмо́жности.",
+        "translation": "Gözlenen zararın yokluğu, zararın imkânsızlığının otomatik kanıtı değildir."
+      },
+      {
+        "text": "То́чный язы́к не позволя́ет аргуме́нту стать сильне́е, чем его́ основа́ния.",
+        "translation": "Kesin dil argümanın temellerinden daha güçlü hâle gelmesini engeller."
+      },
+      {
+        "text": "Наибо́лее убеди́тельная уве́ренность включа́ет че́стное понима́ние со́бственных грани́ц.",
+        "translation": "En ikna edici güven, kendi sınırlarının dürüstçe anlaşılmasını içerir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Что мо́жет обоснова́ть корреля́ция?",
+        "options": [
+          "Да́льнейшее иссле́дование",
+          "Автомати́ческую причи́ну",
+          "Отка́з от ана́лиза"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Заче́м ну́жен то́чный язы́к?",
+        "options": [
+          "Что́бы соразме́рить вы́воды с да́нными",
+          "Что́бы всё сде́лать несомне́нным",
+          "Что́бы скры́ть ограниче́ния"
+        ],
+        "answer": 0
+      }
+    ],
+    "v6": true
   }
 ]

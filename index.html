@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=5.1.3">
+  <link rel="stylesheet" href="style.css?v=6.0.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='5.1.3',KEY='wordpilot_asset_build';
+    const BUILD='6.0.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.3</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.0.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -72,8 +72,8 @@
           <span id="activeCourseSummary" class="course-summary">English · 6000 kelime</span>
         </div>
         <div class="course-selector-grid">
-          <button class="course-card active" data-course="en" type="button"><span class="course-flag">🇬🇧</span><div><b>English</b><small>Türkçe anlatımlı · 6000 kelime ve kalıp</small></div><em>Aktif</em></button>
-          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · 1000 A1–A2 kayıt</small></div><em>Seç</em></button>
+          <button class="course-card active" data-course="en" type="button"><span class="course-flag">🇬🇧</span><div><b>English</b><small>Türkçe anlatımlı · 5488 kayıt + A1–C2 Akademi</small></div><em>Aktif</em></button>
+          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · 1000 kayıt + A1–C2 Akademi</small></div><em>Seç</em></button>
           <button class="course-card" data-course="uz" type="button"><span class="course-flag">🇺🇿</span><div><b>O‘zbekcha</b><small>Türkçe anlatımlı · A1 başlangıç</small></div><em>Seç</em></button>
         </div>
       </section>
@@ -81,10 +81,11 @@
       <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v5.1.3</span>
+          <span class="learning-hub-version">v6.0.0</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
-          <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="games"><span>🎮</span> Oyunlar</button>
+          <button class="active academy-tab-highlight" type="button" role="tab" aria-selected="true" data-dashboard-tab="academy"><span>🎓</span> Akademi <em>A1–C2</em></button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="games"><span>🎮</span> Oyunlar</button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="speak"><span>🎙</span> Dinle &amp; Konuş</button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="stories"><span>📚</span> Hikâyeler</button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="collections"><span>🗂</span> Koleksiyonlar</button>
@@ -92,7 +93,15 @@
         </div>
       </section>
 
-      <section class="dashboard-tab-panel active" data-dashboard-panel="games">
+      <section class="dashboard-tab-panel active" data-dashboard-panel="academy">
+        <div class="academy-dashboard-hero">
+          <div><p class="eyebrow">WORDPILOT AKADEMİ</p><h2>A1’den C2’ye yapılandırılmış dil yolu</h2><p>Özgün konu anlatımı, hedef dil örnekleri, mini testler, seviye sınavları ve derecelendirilmiş okumalar.</p><div class="academy-dashboard-badges"><span>72 kapsamlı ders</span><span>24 yeni okuma</span><span>12 seviye sınavı</span></div></div>
+          <button class="academy-launch" type="button" data-nav="academy"><b>Akademiyi aç</b><small>Aktif kursunla devam et →</small></button>
+        </div>
+        <div id="academyDashboardProgress" class="academy-dashboard-progress"></div>
+      </section>
+
+      <section class="dashboard-tab-panel" data-dashboard-panel="games" hidden>
         <div class="dashboard-grid">
         <article class="panel today-plan">
           <div class="panel-head"><div><p class="eyebrow">BUGÜN NE ÇALIŞALIM?</p><h3>Tek dokunuşla başla</h3></div></div>
@@ -226,7 +235,7 @@
       <section id="russianTools" class="russian-tools-section" hidden>
         <div class="russian-tools-head">
           <div><p class="eyebrow">РУССКИЙ A1–A2 · v4.3</p><h2>Rusça öğrenme merkezi</h2><p>1000 kontrollü kelime ve ifade, dil bilgisi yolu, diyaloglar ve konu bazlı çalışma.</p></div>
-          <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
+          <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="kiril-academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
         </div>
         <div id="russianTopicGrid" class="russian-topic-grid"></div>
       </section>
@@ -370,7 +379,7 @@
       </footer>
     </section>
 
-    <section id="view-academy" class="view academy-view">
+    <section id="view-kiril-academy" class="view academy-view">
       <div class="section-title academy-title">
         <div><p class="eyebrow">КИРИЛЛИЦА · 33 HARF</p><h1>Kiril Alfabesi Akademisi</h1><p class="muted">Büyük/küçük biçim, ses, Türkçe açıklama ve yanıltıcı harfler.</p></div>
         <button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button>
@@ -458,6 +467,34 @@
       <section class="panel adaptive-hero"><div><span>🎯</span><div><h2 id="adaptiveTitle">Bugünkü plan hazırlanıyor</h2><p id="adaptiveSummary">Kurs verilerin analiz ediliyor.</p></div></div><button id="startAdaptivePlan" class="primary" type="button">Planı başlat</button></section>
       <div id="adaptiveMetrics" class="adaptive-metrics"></div>
       <section class="panel"><div class="panel-head"><h3>Önerilen kayıtlar</h3><span id="adaptiveCount">0 kayıt</span></div><div id="adaptiveWordList" class="adaptive-word-list"></div></section>
+    </section>
+
+
+    <section id="view-academy" class="view academy-view">
+      <div class="section-title academy-title-row"><div><p class="eyebrow">WORDPILOT AKADEMİ · A1–C2</p><h1 id="academyCourseTitle">English Akademi</h1><p class="muted">Seviyeni seç, konu anlatımını tamamla ve bölüm sınavıyla ilerle.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <section class="academy-level-hero panel">
+        <div class="academy-course-switch"><button type="button" data-academy-course="en">🇬🇧 English</button><button type="button" data-academy-course="ru">🇷🇺 Русский</button><button type="button" data-academy-course="uz">🇺🇿 O‘zbekcha <small>yakında</small></button></div>
+        <div id="academyLevelTabs" class="academy-level-tabs"></div>
+        <div class="academy-overall"><div><span>Akademi ilerlemesi</span><b id="academyOverallText">0 / 36 ders</b></div><progress id="academyOverallProgress" max="36" value="0"></progress></div>
+      </section>
+      <div class="academy-layout">
+        <aside class="panel academy-sidebar">
+          <div id="academyLevelSummary"></div>
+          <button id="academyLevelTestBtn" class="primary wide" type="button">Seviye sınavını başlat</button>
+          <button id="academyReadingsBtn" class="secondary wide" type="button">Bu seviyenin okumaları</button>
+          <div class="academy-source-note"><span>✓</span><p><b>Özgün WordPilot içeriği</b><br>Kaynak kitapların öğretim yapısı incelendi; metin ve sorular kopyalanmadı.</p></div>
+        </aside>
+        <main class="academy-main">
+          <div class="academy-main-head"><div><p class="eyebrow" id="academyLevelEyebrow">A1 · BAŞLANGIÇ</p><h2 id="academyLevelTitle">Temel iletişim yolu</h2></div><span id="academyLevelProgressText">0 / 6 tamamlandı</span></div>
+          <div id="academyLessonGrid" class="academy-lesson-grid"></div>
+          <article id="academyLessonPanel" class="panel academy-lesson-panel" hidden></article>
+        </main>
+      </div>
+    </section>
+
+    <section id="view-academy-readings" class="view academy-view">
+      <div class="section-title"><div><p class="eyebrow">DERECELENDİRİLMİŞ OKUMA</p><h1 id="academyReadingTitle">A1 okumaları</h1><p class="muted">Metni dinle, Türkçe desteği aç/kapat ve soruları çöz.</p></div><button class="secondary" type="button" data-nav="academy">← Akademi</button></div>
+      <div class="academy-reading-layout"><aside id="academyReadingList" class="panel academy-reading-list"></aside><article id="academyReadingReader" class="panel academy-reading-reader"><div class="story-empty"><span>📖</span><h2>Bir okuma seç</h2><p>Her metin WordPilot için özgün hazırlanmıştır.</p></div></article></div>
     </section>
 
     <section id="view-library" class="view">
@@ -779,19 +816,20 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=5.1.3" defer></script>
-<script src="app.js?v=5.1.3" defer></script>
-<script src="modules/firebase-sync.js?v=5.1.3" defer></script>
-<script src="modules/learning-engine.js?v=5.1.3" defer></script>
-<script src="modules/ui-events.js?v=5.1.3" defer></script>
-<script src="modules/course-engine.js?v=5.1.3" defer></script>
-<script src="modules/russian-path.js?v=5.1.3" defer></script>
-<script src="modules/v43.js?v=5.1.3" defer></script>
-<script src="modules/v431.js?v=5.1.3" defer></script>
-<script src="modules/v50.js?v=5.1.3" defer></script>
-<script src="modules/v510.js?v=5.1.3" defer></script>
-<script src="modules/v511.js?v=5.1.3" defer></script>
-<script src="modules/v512.js?v=5.1.3" defer></script>
-<script src="modules/bootstrap.js?v=5.1.3" defer></script>
+<script src="security-config.js?v=6.0.0" defer></script>
+<script src="app.js?v=6.0.0" defer></script>
+<script src="modules/firebase-sync.js?v=6.0.0" defer></script>
+<script src="modules/learning-engine.js?v=6.0.0" defer></script>
+<script src="modules/ui-events.js?v=6.0.0" defer></script>
+<script src="modules/course-engine.js?v=6.0.0" defer></script>
+<script src="modules/russian-path.js?v=6.0.0" defer></script>
+<script src="modules/v43.js?v=6.0.0" defer></script>
+<script src="modules/v431.js?v=6.0.0" defer></script>
+<script src="modules/v50.js?v=6.0.0" defer></script>
+<script src="modules/v510.js?v=6.0.0" defer></script>
+<script src="modules/v511.js?v=6.0.0" defer></script>
+<script src="modules/v512.js?v=6.0.0" defer></script>
+<script src="modules/v60.js?v=6.0.0" defer></script>
+<script src="modules/bootstrap.js?v=6.0.0" defer></script>
 </body>
 </html>

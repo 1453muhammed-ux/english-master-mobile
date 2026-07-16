@@ -334,7 +334,7 @@ function handleAcademyMatch(btn){
 }
 
 const wp40Nav=nav;
-nav=function(name){wp40Nav(name);if(name==='academy'){loadRussianAlphabet().then(()=>renderAlphabetAcademy()).catch(()=>toast('Kiril alfabesi yüklenemedi.'))}};
+nav=function(name){wp40Nav(name);if(name==='kiril-academy'){loadRussianAlphabet().then(()=>renderAlphabetAcademy()).catch(()=>toast('Kiril alfabesi yüklenemedi.'))}};
 
 function setupV41Events(){
   document.addEventListener('click',e=>{

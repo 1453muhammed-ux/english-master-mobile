@@ -22,7 +22,8 @@
       "sw-*.js",
       "V5_0_RELEASE_NOTES.txt",
       "README.txt",
-      "WORDPILOT_DESIGN_SYSTEM.txt"
+      "WORDPILOT_DESIGN_SYSTEM.txt",
+      "**/*.txt"
     ],
     "headers": [
       {

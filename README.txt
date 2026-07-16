@@ -1,15 +1,1 @@
-WORDPILOT v5.1.3
-
-Profesyonel mobil UX ve navigasyon sürümü.
-
-YENİLİKLER
-- Ana sayfada Oyunlar, Dinle & Konuş, Hikâyeler, Koleksiyonlar ve İlerleme sekmeleri
-- Uzun mobil kaydırma azaltıldı
-- Telefon geri hareketi önceki bölüme ve kaydırma konumuna döner
-- Telaffuz bölümünde Türkçe anlamı gizle/göster
-- Eski lig XP kayıtlarında açıklayıcı etiket
-- Misafir kullanıcıya 20 cevaptan sonra Google giriş önerisi
-- Çalışma PDF kartı sayfanın en altındaki araçlara taşındı
-- Görünür sürüm etiketleri v5.1.3 olarak eşitlendi
-
-Canlı test: https://wordpilot-7a574.web.app/?wpbuild=5.1.3
+WordPilot v6.0.0 GitHub paketi. Ana dosyaları ve modules klasörünü depoya yükleyin. Mevcut .github/workflows/firebase-hosting-live.yml korunmuştur. Kontrol: https://wordpilot-7a574.web.app/?wpbuild=6.0.0
