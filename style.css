@@ -788,3 +788,89 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:620px){.learning-hub-promoted{padding:15px}.learning-hub-tabs{grid-template-columns:repeat(2,1fr);gap:7px}.learning-hub-tabs button{min-height:73px;padding:10px!important}.learning-hub-tabs button>span{font-size:21px}.learning-hub-tabs button>b{font-size:13px}.course-selector-section{padding:15px}.course-card{min-height:68px}.wp65-ai-head-tools{flex-direction:column;align-items:flex-end}.wp65-ai-compose{grid-template-columns:minmax(0,1fr) 44px}.wp65-ai-compose .primary{grid-column:1/-1;width:100%}.wp65-ai-mic{width:44px;height:44px}.wp65-ai-options{align-items:flex-start;flex-direction:column}.wp65-mic-diagnostic{align-items:flex-start;flex-direction:column}.wp65-mic-diagnostic button{width:100%}}
 
 .wp65-ai-checks{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.wp65-ai-head-tools button{white-space:nowrap}@media(max-width:620px){.wp65-ai-head-tools{width:100%;display:grid;grid-template-columns:1fr 1fr}.wp65-ai-head-tools label{grid-column:1/-1}.wp65-ai-head-tools button{width:100%}.wp65-ai-checks{align-items:flex-start;flex-direction:column;gap:7px}}
+
+
+/* WordPilot v6.5.1 — Learning Center visual refinement */
+.learning-hub-promoted{
+  position:relative;
+  overflow:hidden;
+  color:var(--ink);
+  background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%)!important;
+  border:1px solid #e2e6f0!important;
+  box-shadow:0 14px 38px rgba(35,45,85,.08)!important;
+}
+.learning-hub-promoted:after{
+  content:"";
+  position:absolute;
+  inset:0 auto auto 0;
+  width:100%;
+  height:4px;
+  border-radius:26px 26px 0 0;
+  background:linear-gradient(90deg,#6c5ce7,#8b7cf6,#58b4d9);
+  pointer-events:none;
+}
+.learning-hub-promoted .learning-hub-head{color:var(--ink)}
+.learning-hub-promoted .eyebrow{color:#6b5de0!important}
+.learning-hub-promoted .learning-hub-head h2{color:#10172a}
+.learning-hub-promoted .learning-hub-head p:last-child{color:#727a90!important}
+.learning-hub-promoted .learning-hub-version{
+  color:#6558cf!important;
+  background:#f3f1ff!important;
+  border-color:#e0dcff!important;
+}
+.learning-hub-promoted .learning-hub-tabs button,
+.learning-hub-tabs button{
+  position:relative;
+  color:#26304a!important;
+  background:#f7f8fc!important;
+  border:1px solid #e4e7ef!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  transform:none;
+}
+.learning-hub-promoted .learning-hub-tabs button:hover,
+.learning-hub-tabs button:hover{
+  color:#5046b5!important;
+  background:#f2f0ff!important;
+  border-color:#cbc5ff!important;
+  transform:translateY(-1px);
+  box-shadow:0 8px 20px rgba(83,72,176,.09)!important;
+}
+.learning-hub-promoted .learning-hub-tabs button.active,
+.learning-hub-tabs button.active,
+.academy-tab-highlight,
+.academy-tab-highlight.active{
+  color:#4d43ad!important;
+  background:linear-gradient(180deg,#f5f3ff 0%,#efedff 100%)!important;
+  border-color:#9d91f2!important;
+  box-shadow:0 0 0 3px rgba(108,92,231,.10),0 10px 22px rgba(70,59,158,.10)!important;
+}
+.learning-hub-promoted .learning-hub-tabs button.active:before,
+.learning-hub-tabs button.active:before{
+  content:"";
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:7px;
+  height:3px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#6c5ce7,#8f83f5);
+}
+.learning-hub-tabs button>span{filter:none!important}
+.learning-hub-tabs button>b{color:inherit!important}
+.learning-hub-tabs button>small{color:#747b90!important}
+.learning-hub-tabs button.active>small{color:#6b61bd!important;opacity:1!important}
+.academy-tab-highlight em{
+  color:#6357c8!important;
+  background:#e9e5ff!important;
+  box-shadow:none!important;
+}
+.wp65-hub-summary{
+  color:#535d74!important;
+  background:#f4f6fb!important;
+  border:1px solid #e7eaf2;
+}
+@media(max-width:620px){
+  .learning-hub-promoted:after{border-radius:22px 22px 0 0}
+  .learning-hub-tabs button.active:before{left:9px;right:9px;bottom:5px;height:2px}
+}
