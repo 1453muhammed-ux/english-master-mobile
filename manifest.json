@@ -2,12 +2,12 @@
   "id": "./",
   "name": "WordPilot — English, Русский, O‘zbekcha",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=6.1.0",
+  "start_url": "./?wpbuild=6.2.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v6: İngilizce ve Rusça için A1–C2 Akademi, 72 özgün konu anlatımı, 24 yeni derecelendirilmiş okuma, seviye sınavları, TTS, telaffuz, App Check ve çoklu cihaz senkronizasyonu.",
+  "description": "WordPilot v6.2: A1–C2 Akademi, SM-2 akıllı tekrar, kişisel günlük plan, dil sekmeli lig, TTS, telaffuz, App Check ve çoklu cihaz senkronizasyonu.",
   "icons": [
     {
       "src": "icon-192.png",

@@ -1,10 +1,13 @@
-WordPilot v6.1.0 Validation Report
-- JavaScript syntax: PASS
-- JSON parsing: PASS
-- V6.1 module linked: PASS
-- Bootstrap initialization: PASS
-- Service Worker offline list: PASS
-- Academy course progress isolation: PASS
-- Duplicate action IDs avoided: PASS
-- Existing STORE key wordpilot_v34: PRESERVED
-- Firebase/App Check files: PRESERVED
+WordPilot v6.2.0 Validation Report
+
+- JavaScript syntax: PASSED
+- JSON parsing: PASSED
+- Existing wordpilot_v34 state key: PRESERVED
+- Firebase/App Check configuration: PRESERVED
+- English records: 5488
+- Russian records: 1000
+- Uzbek records: 137
+- A1-C2 Academy curriculum: PRESERVED
+- New SM-2 engine: INCLUDED
+- Course-tabbed league: INCLUDED
+- Offline service worker cache version: wordpilot-v6.2.0

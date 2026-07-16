@@ -5,4 +5,5 @@ setupV511Events();
 setupV512Events();
 setupV60Events();
 setupV61Events();
+setupV62Events();
 initV40();

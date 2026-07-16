@@ -1,1 +1,4 @@
-WordPilot v6.1.0 GitHub paketi. Ana dosyaları ve modules klasörünü depoya yükleyin. Mevcut .github/workflows/firebase-hosting-live.yml korunmuştur. Kontrol: https://wordpilot-7a574.web.app/?wpbuild=6.1.0
+WordPilot v6.2.0
+GitHub/Firebase Hosting ana klasör paketidir.
+Mevcut wordpilot_v34 kullanıcı ilerleme anahtarı korunur.
+Yeni özellikler: SM-2 akıllı tekrar, kişisel günlük plan ve dil sekmeli lig.
