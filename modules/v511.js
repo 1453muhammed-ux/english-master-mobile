@@ -1,5 +1,5 @@
-/* WordPilot v6.1.0 — story controls, promoted learning hub and mobile safe-area polish. */
-const WP511_VERSION='6.1.0';
+/* WordPilot v6.3.1 — story controls, promoted learning hub and mobile safe-area polish. */
+const WP511_VERSION='6.3.1';
 function wp511PromoteLearningHub(){
   const anchor=document.querySelector('.course-selector-section'),hub=document.querySelector('.learning-hub');
   if(!anchor||!hub||hub.dataset.promoted==='1')return;

@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=6.1.0">
+  <link rel="stylesheet" href="style.css?v=6.3.1">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='6.1.0',KEY='wordpilot_asset_build';
+    const BUILD='6.3.1',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.1.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v6.3.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -69,11 +69,11 @@
       <section class="course-selector-section" aria-labelledby="courseSelectorTitle">
         <div class="course-selector-head">
           <div><p class="eyebrow">KURSUNU SEÇ</p><h2 id="courseSelectorTitle">Bugün hangi dili öğrenmek istiyorsun?</h2></div>
-          <span id="activeCourseSummary" class="course-summary">English · 6000 kelime</span>
+          <span id="activeCourseSummary" class="course-summary">English · 5488 kayıt</span>
         </div>
         <div class="course-selector-grid">
           <button class="course-card active" data-course="en" type="button"><span class="course-flag">🇬🇧</span><div><b>English</b><small>Türkçe anlatımlı · 5488 kayıt + A1–C2 Akademi</small></div><em>Aktif</em></button>
-          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · 1000 kayıt + A1–C2 Akademi</small></div><em>Seç</em></button>
+          <button class="course-card" data-course="ru" type="button"><span class="course-flag">🇷🇺</span><div><b>Русский</b><small>Türkçe anlatımlı · 1120 kayıt + A1–C2 Akademi</small></div><em>Seç</em></button>
           <button class="course-card" data-course="uz" type="button"><span class="course-flag">🇺🇿</span><div><b>O‘zbekcha</b><small>Türkçe anlatımlı · A1 başlangıç · Akademi yakında</small></div><em>Seç</em></button>
         </div>
       </section>
@@ -81,7 +81,7 @@
       <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v6.1.0</span>
+          <span class="learning-hub-version">v6.3.1</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
           <button class="active academy-tab-highlight" type="button" role="tab" aria-selected="true" data-dashboard-tab="academy"><span>🎓</span> Akademi <em>A1–C2</em></button>
@@ -95,7 +95,7 @@
 
       <section class="dashboard-tab-panel active" data-dashboard-panel="academy">
         <div class="academy-dashboard-hero">
-          <div><p class="eyebrow">WORDPILOT AKADEMİ</p><h2>A1’den C2’ye yapılandırılmış dil yolu</h2><p>Özgün konu anlatımı, hedef dil örnekleri, mini testler, seviye sınavları ve derecelendirilmiş okumalar.</p><div class="academy-dashboard-badges"><span>72 kapsamlı ders</span><span>Uçuş rotası</span><span>12 seviye sınavı</span></div></div>
+          <div><p class="eyebrow">WORDPILOT AKADEMİ</p><h2>A1’den C2’ye yapılandırılmış dil yolu</h2><p>Özgün konu anlatımı, hedef dil örnekleri, mini testler, seviye sınavları ve derecelendirilmiş okumalar.</p><div class="academy-dashboard-badges"><span>102 kapsamlı ders</span><span>Uçuş rotası</span><span>12 seviye sınavı · kaynak atölyeleri</span></div></div>
           <button class="academy-launch" type="button" data-nav="academy"><b>Akademiyi aç</b><small>Kaldığın rotadan devam et →</small></button>
         </div>
         <div id="academyDashboardProgress" class="academy-dashboard-progress"></div>
@@ -234,7 +234,7 @@
 
       <section id="russianTools" class="russian-tools-section" hidden>
         <div class="russian-tools-head">
-          <div><p class="eyebrow">РУССКИЙ A1–A2 · v4.3</p><h2>Rusça öğrenme merkezi</h2><p>1000 kontrollü kelime ve ifade, dil bilgisi yolu, diyaloglar ve konu bazlı çalışma.</p></div>
+          <div><p class="eyebrow">РУССКИЙ A1–C2 · v6.3</p><h2>Rusça öğrenme merkezi</h2><p>1120 kontrollü kelime ve ifade, A1–C2 Akademi, fiil ve sertifika laboratuvarları.</p></div>
           <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="kiril-academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
         </div>
         <div id="russianTopicGrid" class="russian-topic-grid"></div>
@@ -342,7 +342,7 @@
         <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Uygulama ve çalışma dosyaları</h2></div></div>
         <div class="home-tool-grid">
           <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
-          <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
+          <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve kurs içeriklerini tarayıcıya kaydet</small></div><em>→</em></button>
           <button class="home-tool-card sync" data-action="open-profile" type="button"><span>☁</span><div><b>Hesabı senkronize et</b><small>Google hesabı ve profil ayarları</small></div><em>→</em></button>
           <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
         </div>
@@ -816,21 +816,23 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=6.1.0" defer></script>
-<script src="app.js?v=6.1.0" defer></script>
-<script src="modules/firebase-sync.js?v=6.1.0" defer></script>
-<script src="modules/learning-engine.js?v=6.1.0" defer></script>
-<script src="modules/ui-events.js?v=6.1.0" defer></script>
-<script src="modules/course-engine.js?v=6.1.0" defer></script>
-<script src="modules/russian-path.js?v=6.1.0" defer></script>
-<script src="modules/v43.js?v=6.1.0" defer></script>
-<script src="modules/v431.js?v=6.1.0" defer></script>
-<script src="modules/v50.js?v=6.1.0" defer></script>
-<script src="modules/v510.js?v=6.1.0" defer></script>
-<script src="modules/v511.js?v=6.1.0" defer></script>
-<script src="modules/v512.js?v=6.1.0" defer></script>
-<script src="modules/v60.js?v=6.1.0" defer></script>
-<script src="modules/v61.js?v=6.1.0" defer></script>
-<script src="modules/bootstrap.js?v=6.1.0" defer></script>
+<script src="security-config.js?v=6.3.1" defer></script>
+<script src="app.js?v=6.3.1" defer></script>
+<script src="modules/firebase-sync.js?v=6.3.1" defer></script>
+<script src="modules/learning-engine.js?v=6.3.1" defer></script>
+<script src="modules/ui-events.js?v=6.3.1" defer></script>
+<script src="modules/course-engine.js?v=6.3.1" defer></script>
+<script src="modules/russian-path.js?v=6.3.1" defer></script>
+<script src="modules/v43.js?v=6.3.1" defer></script>
+<script src="modules/v431.js?v=6.3.1" defer></script>
+<script src="modules/v50.js?v=6.3.1" defer></script>
+<script src="modules/v510.js?v=6.3.1" defer></script>
+<script src="modules/v511.js?v=6.3.1" defer></script>
+<script src="modules/v512.js?v=6.3.1" defer></script>
+<script src="modules/v60.js?v=6.3.1" defer></script>
+<script src="modules/v61.js?v=6.3.1" defer></script>
+<script src="modules/v62.js?v=6.3.1" defer></script>
+<script src="modules/v63.js?v=6.3.1" defer></script>
+<script src="modules/bootstrap.js?v=6.3.1" defer></script>
 </body>
 </html>

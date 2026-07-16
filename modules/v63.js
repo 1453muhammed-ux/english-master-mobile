@@ -1,5 +1,5 @@
-/* WordPilot v6.3.0 — source-driven content expansion, Verb Lab and Vocabulary Atlas. */
-const WP63_VERSION='6.3.0';
+/* WordPilot v6.3.1 — source-driven content expansion, Verb Lab and Vocabulary Atlas. */
+const WP63_VERSION='6.3.1';
 let wp63Verbs=null,wp63Atlas=null,wp63Exam=null,wp63VerbLevel='all',wp63VerbQuery='',wp63VocabTopic='all',wp63VocabQuery='';
 async function wp63Load(){
   if(!wp63Verbs){const r=await fetch(`ru_verb_lab.json?v=${VERSION}`,{cache:'no-store'});if(!r.ok)throw new Error('ru_verb_lab.json');wp63Verbs=await r.json()}
@@ -30,10 +30,22 @@ function wp63CheckExam(answer){const x=wp63Exam?.tasks?.find(t=>t.id===wp63ExamA
 function wp63RevealExam(){const x=wp63Exam?.tasks?.find(t=>t.id===wp63ExamActive),f=document.querySelector('#wp63ExamFeedback');if(!x||!f)return;f.hidden=false;f.className='wp63-exam-feedback model';f.innerHTML=`<b>Örnek / ölçüt</b><p>${esc(x.answer)}</p><small>${esc(x.explanation)}</small><button class="primary wide" type="button" data-wp63-exam-selfdone>Çalışmayı tamamladım · +20 XP</button>`}
 function wp63EnhanceLesson(){const p=document.querySelector('#academyLessonPanel');if(!p||!wp60Lesson?.practice?.length||p.querySelector('.wp63-practice'))return;p.querySelector('#academyQuizBox')?.insertAdjacentHTML('beforebegin',`<section class="wp63-practice"><p class="eyebrow">KAYNAK ATÖLYESİ</p><h3>Kontrollü üretim</h3>${wp60Lesson.practice.map((x,i)=>`<details><summary>${i+1}. ${esc(x.prompt)}</summary>${x.hint?`<p>İpucu: ${esc(x.hint)}</p>`:''}<b>${esc(x.answer)}</b></details>`).join('')}</section>`)}
 function wp63UpdateRoadmap(){if(!Array.isArray(WP61_ROADMAP))return;WP61_ROADMAP.splice(0,WP61_ROADMAP.length,['📚','Kaynak tabanlı içerik genişlemesi','102 ders, 48 akademi okuması ve fiil laboratuvarı','aktif'],['🧠','SM-2 akıllı tekrar','Cevap kalitesine göre kişisel tekrar tarihleri','aktif'],['🏆','Dil sekmeli lig','English, Русский ve O‘zbekcha ligleri','aktif'],['🛡️','Sunucu doğrulamalı XP','Soru bileti, hız ve tekrar denetimi','sırada'],['🤝','Güvenli arkadaşlık','Karşılıklı onay, reddetme ve engelleme','yakında'],['🇺🇿','O‘zbekçe Akademi','Kaynak paketi eklendiğinde A1–C2','yakında'])}
-function setupV63Events(){wp63EnsureViews();wp63InjectAcademy();wp63UpdateRoadmap();wp63Load().then(()=>{wp63UpdateHero();wp63RenderSource();wp63RenderVerbList()}).catch(()=>toast('V6.3 kaynak laboratuvarı yüklenemedi.'));
+function setupV63Events(){wp63UpdateRoadmap();
  const oldNav=nav;nav=function(name){const r=oldNav(name);if(name==='verb-lab')wp63Load().then(()=>{wp63RenderVerbList();const first=wp63VerbRows()[0];if(first)wp63ShowVerb(first.id)});if(name==='vocab-atlas')wp63RenderVocab();if(name==='source-atlas')wp63Load().then(wp63RenderSource);if(name==='cert-lab')wp63Load().then(()=>{wp63RenderExamList();const first=wp63ExamRows()[0];if(first)wp63ShowExam(first.id)});return r};
  const oldShow=wp60ShowLesson;wp60ShowLesson=function(id){oldShow(id);setTimeout(wp63EnhanceLesson,0)};
  const oldDash=wp60RenderDashboard;wp60RenderDashboard=function(){oldDash();wp63UpdateHero()};
  document.addEventListener('click',e=>{const l=e.target.closest('[data-wp63-verb-level]');if(l){wp63VerbLevel=l.dataset.wp63VerbLevel;wp63RenderVerbList();return}const v=e.target.closest('[data-wp63-verb]');if(v){wp63ShowVerb(v.dataset.wp63Verb);return}const done=e.target.closest('[data-wp63-verb-done]');if(done){const id=done.dataset.wp63VerbDone;if(!wp63Progress().verbs[id]){wp63Progress().verbs[id]={at:Date.now()};const old=session;session=null;adjustPoints(15);session=old;wp63Save();toast('Fiil modeli tamamlandı: +15 XP')}wp63RenderVerbList();wp63ShowVerb(id);return}const ex=e.target.closest('[data-wp63-exam]');if(ex){wp63ShowExam(ex.dataset.wp63Exam);return}const opt=e.target.closest('[data-wp63-exam-option]');if(opt){wp63CheckExam(opt.dataset.wp63ExamOption);return}if(e.target.closest('[data-wp63-exam-reveal]')){wp63RevealExam();return}if(e.target.closest('[data-wp63-exam-selfdone]')){const x=wp63Exam?.tasks?.find(t=>t.id===wp63ExamActive);if(x)wp63CompleteExam(x,true);return}const sp=e.target.closest('[data-wp63-speak]');if(sp){speak(sp.dataset.wp63Speak,'ru-RU');return}});
  document.addEventListener('input',e=>{if(e.target.id==='wp63VerbSearch'){wp63VerbQuery=e.target.value;wp63RenderVerbList()}if(e.target.id==='wp63VocabSearch'){wp63VocabQuery=e.target.value;wp63RenderVocab()}});document.addEventListener('change',e=>{if(e.target.id==='wp63VocabTopic'){wp63VocabTopic=e.target.value;wp63RenderVocab()}if(e.target.id==='wp63ExamLevel'){wp63ExamLevel=e.target.value;wp63ExamActive='';wp63RenderExamList()}if(e.target.id==='wp63ExamSkill'){wp63ExamSkill=e.target.value;wp63ExamActive='';wp63RenderExamList()}});
+}
+
+function wp63AfterInit(){
+  if(!state)return;
+  wp63EnsureViews();
+  wp63InjectAcademy();
+  wp63Load().then(()=>{
+    wp63UpdateHero();
+    wp63RenderSource();
+    wp63RenderVerbList();
+    wp63InjectAcademy();
+  }).catch(error=>{console.error('V6.3 kaynak laboratuvarı yüklenemedi',error);toast('V6.3 kaynak laboratuvarı yüklenemedi.')});
 }

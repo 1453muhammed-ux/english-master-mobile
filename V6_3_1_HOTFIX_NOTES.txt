@@ -1,0 +1,11 @@
+WordPilot v6.3.1 Hotfix
+
+Düzeltilen kritik hata:
+- v6.2 ve v6.3 modülleri, initV40 kullanıcı durumu ve verileri yüklemeden önce ana ekranı çizmeye çalışıyordu.
+- Bu durum state=null çalışma zamanı hatasına yol açıyor; initV40 tamamlanmadığı için tüm tıklamalar çalışmıyor, hikâye sayısı 0 kalıyor ve kurs seçimi açılamıyordu.
+
+Çözüm:
+- SM-2, günlük görev ve lig çizimleri initV40 sonrasına taşındı.
+- V6.3 laboratuvar verileri ve görünümleri initV40 sonrasında yükleniyor.
+- Başlangıç zincirine hata yakalama eklendi.
+- v6.3 içerikleri korunmuştur: 1120 Rusça kayıt, 102 ders, 48 okuma, 36 fiil modeli ve 36 sertifika görevi.

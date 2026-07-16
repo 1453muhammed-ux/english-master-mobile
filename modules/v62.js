@@ -1,5 +1,5 @@
-/* WordPilot v6.2.0 — SM-2 learning engine, personal daily plan and course-tabbed leagues. */
-const WP62_VERSION='6.2.0';
+/* WordPilot v6.3.1 — SM-2 learning engine, personal daily plan and course-tabbed leagues. */
+const WP62_VERSION='6.3.1';
 const WP62_STORE_KEY='wordpilot_v62';
 const WP62_LEAGUE_KEY=`${STORE}:league_course`;
 let wp62LeagueCourse=COURSES[localStorage.getItem(WP62_LEAGUE_KEY)]?localStorage.getItem(WP62_LEAGUE_KEY):activeCourse;
@@ -152,5 +152,11 @@ function setupV62Events(){
     if(event.target.closest('[data-wp62-start-plan]')){startStudy('smart',null,'classic','adaptive',false);return}
     if(event.target.closest('[data-wp62-league-start]')){nav('dashboard');wp510SetDashboardTab('games',{scroll:true});return}
   });
-  wp62RenderLeagueTabs();wp62RenderCoach();wp62RenderDailyTasks();
+  // İlk çizim initV40 tamamlandıktan sonra yapılır. Burada state henüz null olabilir.
+}
+function wp62AfterInit(){
+  if(!state)return;
+  wp62RenderLeagueTabs();
+  wp62RenderCoach();
+  wp62RenderDailyTasks();
 }

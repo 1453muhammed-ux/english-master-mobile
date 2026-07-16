@@ -1,4 +1,4 @@
-WordPilot v6.3.0 — Source Usage Report
+WordPilot v6.3.1 — Source Usage Report
 
 The uploaded archive collection contained 165 files across 8 packages:
 1. English A1–A2 course/test package: 34 files
