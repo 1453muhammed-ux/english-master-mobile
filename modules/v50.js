@@ -217,7 +217,7 @@ updateCourseUI=function(){v5OldUpdateCourseUI();v5PronunciationWord=null;v5Story
 
 async function v5InitAppCheck(){
   if(!V5_SECURITY.appCheckSiteKey||!window.firebase)return false;
-  try{await loadExternalScript('https://www.gstatic.com/firebasejs/12.16.0/firebase-app-check-compat.js');window.firebase.appCheck().activate(V5_SECURITY.appCheckSiteKey,true);v5AppCheckReady=true;return true}catch(error){console.warn('App Check init',error);return false}
+  try{await loadExternalScript('https://www.gstatic.com/firebasejs/12.16.0/firebase-app-check-compat.js');window.firebase.appCheck().activate(new window.firebase.appCheck.ReCaptchaEnterpriseProvider(V5_SECURITY.appCheckSiteKey),true);v5AppCheckReady=true;return true}catch(error){console.warn('App Check init',error);return false}
 }
 function v5ContentGuard(){
   document.addEventListener('contextmenu',e=>{if(e.target.closest('.study-card,.story-reader,.word-row,.academy-view')){e.preventDefault();toast('Ders içeriğinde sağ tık kapalıdır.')}});

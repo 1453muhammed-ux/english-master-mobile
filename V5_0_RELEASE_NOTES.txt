@@ -1,4 +1,4 @@
-WORDPILOT v5.0.0 — SÜRÜM NOTLARI
+WORDPILOT v5.0.1 — SÜRÜM NOTLARI
 
 ARAYÜZ
 - Boşluk Doldurma, Cümle Tamamlama ve Cümle Sıralama kartlarındaki sağ taraf görselleri kaldırıldı.

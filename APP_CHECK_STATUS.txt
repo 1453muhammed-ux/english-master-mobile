@@ -1,0 +1,10 @@
+WORDPILOT APP CHECK STATUS
+
+Provider: reCAPTCHA Enterprise
+Site key configured: yes
+Token auto-refresh: enabled
+Client integration: enabled before Firebase Auth/Firestore initialization
+CSP reCAPTCHA domains: enabled
+
+IMPORTANT:
+Do not enable enforcement yet. First deploy v5.0.1, open the live site on phone and PC, and confirm Google login, Firestore sync, league and App Check status all work. Then monitor App Check metrics before enforcement.
