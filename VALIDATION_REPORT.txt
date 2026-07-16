@@ -1,25 +1,14 @@
-WORDPILOT v5.0.2 — DOĞRULAMA RAPORU
+WORDPILOT v5.1.0 — DOĞRULAMA RAPORU
 
-SÜRÜM
-- app.js VERSION: 5.0.2
-- index.html BUILD ve görünür sürüm: 5.0.2
-- Service Worker cache: wordpilot-v5.0.2
-- Manifest başlangıç adresi: ?wpbuild=5.0.2
-
-LİG DÜZELTMESİ
-- English, Русский ve O‘zbekcha ligleri aktif kursa göre ayrı puan kullanır.
-- coursePoints alanı bulunan yeni kayıtlarda gerçek kurs XP'si kullanılır.
-- coursePoints bulunmayan eski kullanıcılar, eski toplam XP alanıyla geçici olarak listelenir.
-- Dünya ligi sorgusu eski ve yeni kullanıcıları kapsayan genel dönem alanından yapılır.
-- Kurs + dönem + kitle önbellek anahtarları ayrıdır.
-
-APP CHECK
-- reCAPTCHA Enterprise site key tanımlı.
-- App Check, Auth ve Firestore oluşturulmadan önce başlatılır.
-- Otomatik token yenileme açık.
-- Enforcement henüz açılmamalıdır; canlı metrik doğrulaması beklenmelidir.
-
-TEKNİK KONTROLLER
-- app.js, security-config.js, sw.js, modules/*.js ve functions/index.js: Node sözdizimi başarılı.
-- Tüm JSON dosyaları: geçerli.
-- Eski/yeni lig puanı uyumluluk örnekleri: başarılı.
+- app.js VERSION: 5.1.0
+- index.html BUILD ve görünür sürüm: 5.1.0
+- Öğrenme Merkezi görünür sürümü: 5.1.0
+- Service Worker cache: wordpilot-v5.1.0
+- Manifest başlangıç adresi: ?wpbuild=5.1.0
+- Yeni UX modülü: modules/v510.js
+- JavaScript sözdizimi: başarılı
+- JSON dosyaları: başarılı
+- HTML id tekrar kontrolü: başarılı
+- Yerel script dosyaları: eksiksiz
+- Kullanıcı kayıt anahtarı ve mevcut kurs durumları: değiştirilmedi
+- App Check istemci entegrasyonu: korundu

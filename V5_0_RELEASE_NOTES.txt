@@ -1,44 +1,10 @@
-WORDPILOT v5.0.2 — SÜRÜM NOTLARI
+WORDPILOT v5.1.0 — PROFESYONEL UX
 
-ARAYÜZ
-- Boşluk Doldurma, Cümle Tamamlama ve Cümle Sıralama kartlarındaki sağ taraf görselleri kaldırıldı.
-- Üç oyun, sade sol simge ve birbirinden ayrılan yumuşak renk temalarıyla yeniden tasarlandı.
-- Alt bilgi: © 2026 WordPilot · Powered by English Master 2020
-
-DİL BAZLI LİGLER
-- English aktifken English ligi, Русский aktifken Rusça ligi, O‘zbekcha aktifken Özbekçe ligi gösterilir.
-- Günlük, haftalık, aylık ve toplam sıralamalar aktif kursun XP alanını kullanır.
-- Genel XP profil toplamı olarak korunur; kurs liglerine karışmaz.
-
-SES VE TELAFFUZ
-- Cihazın Speech Synthesis sesleriyle EN/RU/UZ TTS.
-- Ses seçimi, hız ayarı, normal ve yavaş dinleme.
-- Mikrofonlu telaffuz denemesi, metin eşleşme puanı ve dil bazlı geçmiş.
-
-OKUMA VE ÖĞRENME
-- 18 özgün A1–A2 hikâye: 6 English, 6 Русский, 6 O‘zbekcha.
-- Satır/tam metin seslendirme, Türkçe çeviri ve anlama soruları.
-- Yanlış, zor, eski ve tekrar zamanı gelmiş kayıtlara göre adaptif günlük çalışma planı.
-
-AI KONUŞMA PARTNERİ
-- Tanışma, kafe, seyahat, iş/okul ve sağlık senaryoları.
-- İnternet anahtarı gerektirmeyen yerel koç modu.
-- Firebase callable function + App Check + OpenAI Secret ile gerçek AI moduna hazır backend.
-
-SENKRONİZASYON VE İSTATİSTİK
-- Telaffuz, hikâye, AI geçmişi, adaptif çalışma ve ses tercihleri kurs durumuyla birlikte Firebase’e eşitlenir.
-- 14 günlük aktivite, oyun dağılımı, telaffuz gelişimi ve senkronizasyon durumu paneli.
-
-GÜVENLİK
-- Content Security Policy, X-Frame-Options, nosniff, Referrer-Policy, Permissions-Policy ve COOP başlıkları.
-- Firestore kullanıcı sahipliği kuralları ve AI kullanım hız sınırı.
-- Firebase App Check entegrasyonuna hazır security-config.js.
-- Ders alanlarında sağ tık ve toplu kopyalama caydırıcısı.
-- Not: Kullanıcının tarayıcısına gönderilen içerik teknik olarak tamamen saklanamaz; güçlü içerik koruması için backend’e taşıma gerekir.
-
-V5.0.2 LİG UYUMLULUK DÜZELTMESİ
-- Eski kullanıcıların yalnızca toplam XP içeren lig kayıtları yeniden listelenir.
-- Dil bazlı kurs XP kaydı bulunan kullanıcılar ilgili English, Русский veya O‘zbekcha puanıyla sıralanır.
-- Dil bazlı kayıt henüz yoksa eski toplam XP geçici uyumluluk değeri olarak kullanılır.
-- Kullanıcı yeni sürümde çalışıp senkronize olduğunda gerçek kurs XP alanlarına otomatik geçer.
-- Kurs, dönem ve arkadaş/dünya ligi önbellek anahtarları ayrıldı.
+1. Öğrenme Merkezi sekmeli yapıya geçirildi.
+2. Oyunlar, ses/konuşma, hikâyeler, koleksiyonlar ve ilerleme ayrı açılır bölümlerde gösterilir.
+3. Mobil geri hareketi önceki görünüm ve ana sayfadaki eski kaydırma konumunu geri getirir.
+4. Telaffuz Türkçe anlamı gizlenebilir.
+5. Eski lig puanlarının neden aynı göründüğü kullanıcıya açıklanır ve satırlar etiketlenir.
+6. Misafirler 20 cevap sonrasında ilerlemeyi korumak için Google girişine yönlendirilir.
+7. PDF ve uygulama araçları sayfanın altına taşındı.
+8. App Check istemci entegrasyonu korunmuştur; enforcement metrik kontrolünden sonra açılmalıdır.

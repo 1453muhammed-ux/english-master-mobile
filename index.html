@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=5.0.2">
+  <link rel="stylesheet" href="style.css?v=5.1.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='5.0.2',KEY='wordpilot_asset_build';
+    const BUILD='5.1.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.0.2</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -128,13 +128,7 @@
         </article>
       </section>
 
-      <section class="language-xp-section" aria-labelledby="languageXpTitle">
-        <div class="language-xp-head">
-          <div><p class="eyebrow">DİL BAZLI PUANLAMA</p><h2 id="languageXpTitle">Her kursun puanı ayrı</h2></div>
-          <span>Genel XP yalnızca lig için birleşir</span>
-        </div>
-        <div id="languageXpGrid" class="language-xp-grid"></div>
-      </section>
+      
 
       <div class="kpi-grid">
         <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
@@ -163,20 +157,85 @@
         <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
       </div>
 
-      <button class="league-launch-card" data-nav="league" type="button">
-        <span class="league-launch-icon">🏆</span>
-        <span><b>WordPilot Ligi</b><small>Kim kaç XP topladı? Sıralamayı gör.</small></span>
-        <em>Lig →</em>
-      </button>
+      
 
       <button class="daily-challenge-card" data-collection="daily20" type="button">
         <span class="daily-challenge-icon">20</span>
         <span><b>Bugünün 20 Kelimesi</b><small>Her gün yenilenen ortak kelime uçuşu.</small></span>
         <em>Başla →</em>
       </button>
+      <section class="learning-hub" aria-labelledby="learningHubTitle">
+        <div class="learning-hub-head">
+          <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
+          <span class="learning-hub-version">v5.1.0</span>
+        </div>
+        <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
+          <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="games"><span>🎮</span> Oyunlar</button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="speak"><span>🎙</span> Dinle &amp; Konuş</button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="stories"><span>📚</span> Hikâyeler</button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="collections"><span>🗂</span> Koleksiyonlar</button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="progress"><span>📈</span> İlerleme</button>
+        </div>
+      </section>
 
+      <section class="dashboard-tab-panel active" data-dashboard-panel="games">
+        <div class="dashboard-grid">
+        <article class="panel today-plan">
+          <div class="panel-head"><div><p class="eyebrow">BUGÜN NE ÇALIŞALIM?</p><h3>Tek dokunuşla başla</h3></div></div>
+          <div class="mode-grid">
+            <button class="mode-card featured" data-start="smart"><span class="mode-icon purple">✦</span><div><b>Akıllı Quiz</b><small>Doğru bildiklerini tekrar sormaz</small></div><em>Başla</em></button>
+            <button class="mode-card speed-feature" data-action="speed-challenge"><span class="mode-icon gold">⚡</span><div><b>Hızlı Quiz</b><small>Günün 20 kaydı · soru başına 15 saniye</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve işaretle</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol">_</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol">…</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
+            <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon teal lesson-symbol">1·2·3</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
+            <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
+          </div>
+          <button class="range-launch" data-action="open-study-setup">Özel kelime aralığı seç</button>
+        </article>
 
-      <section class="collections-section">
+        <article class="panel mentor-card">
+          <div class="mentor-orb">◎</div>
+          <p class="eyebrow">WORDPILOT MENTOR</p>
+          <h3>Bugünkü önerin</h3>
+          <p id="insightText">Çalışmaya başladığında güçlü ve zor kelimelerini analiz edeceğiz.</p>
+          <div class="mentor-stats">
+            <div><span>Doğruluk</span><b id="accuracyText">—</b></div>
+            <div><span>Toplam cevap</span><b id="answeredTotal">0</b></div>
+            <div><span>Tekrar bekliyor</span><b id="countReview">0</b></div>
+            <div><span>Güçlü konu</span><b id="mentorStrongTopic">—</b></div>
+            <div><span>Öncelikli konu</span><b id="mentorWeakTopic">—</b></div>
+            <div><span>Sonraki adım</span><b id="mentorNextAction">—</b></div>
+          </div>
+        </article>
+      </div>
+      </section>
+
+      <section class="dashboard-tab-panel" data-dashboard-panel="speak" hidden>
+        <div class="dashboard-panel-head"><div><p class="eyebrow">DİNLE &amp; KONUŞ</p><h2>Ses ve konuşma merkezi</h2><p>Aktif kursunda dinleme, telaffuz ve güvenli AI konuşma pratiği.</p></div></div>
+        <div class="v5-feature-grid compact-feature-grid">
+          <button class="v5-feature-card voice" type="button" data-v5-open="pronunciation"><span>🎙</span><div><b>Telaffuz Laboratuvarı</b><small>Dinle, kaydet ve dil bazlı puanını gör</small></div><em>Aç →</em></button>
+          <button class="v5-feature-card tts" type="button" data-v5-open="pronunciation"><span>🔊</span><div><b>Gerçek TTS Merkezi</b><small>Ses, hız ve yavaş dinleme ayarları</small></div><em>Ayarla →</em></button>
+          <button class="v5-feature-card ai" type="button" data-v5-open="ai"><span>✦</span><div><b>AI Konuşma Partneri</b><small>Günlük senaryolarda yazılı konuşma pratiği</small></div><em>Aç →</em></button>
+        </div>
+      </section>
+
+      <section class="dashboard-tab-panel" data-dashboard-panel="stories" hidden>
+        <div class="dashboard-panel-head"><div><p class="eyebrow">OKU &amp; PEKİŞTİR</p><h2>Hikâyeler ve kişisel plan</h2><p>Kısa metinlerle bağlam içinde öğren; tekrarlarını otomatik önceliklendir.</p></div></div>
+        <div class="v5-feature-grid compact-feature-grid two-up">
+          <button class="v5-feature-card stories" type="button" data-v5-open="stories"><span>📚</span><div><b>Hikâyeler</b><small>A1–A2 metin, çeviri, ses ve sorular</small></div><em>Oku →</em></button>
+          <button class="v5-feature-card adaptive" type="button" data-v5-open="adaptive"><span>🎯</span><div><b>Adaptif Günlük Plan</b><small>Yanlışlarına ve tekrar zamanına göre hazırlanır</small></div><em>Plan →</em></button>
+        </div>
+      </section>
+
+      <section class="dashboard-tab-panel" data-dashboard-panel="collections" hidden>
+        <section class="collections-section">
         <div class="collections-head">
           <div>
             <p class="eyebrow">KELİME KOLEKSİYONLARI</p>
@@ -227,45 +286,31 @@
           </button>
         </div>
       </section>
+      </section>
 
-      <div class="dashboard-grid">
-        <article class="panel today-plan">
-          <div class="panel-head"><div><p class="eyebrow">BUGÜN NE ÇALIŞALIM?</p><h3>Tek dokunuşla başla</h3></div></div>
-          <div class="mode-grid">
-            <button class="mode-card featured" data-start="smart"><span class="mode-icon purple">✦</span><div><b>Akıllı Quiz</b><small>Doğru bildiklerini tekrar sormaz</small></div><em>Başla</em></button>
-            <button class="mode-card speed-feature" data-action="speed-challenge"><span class="mode-icon gold">⚡</span><div><b>Hızlı Quiz</b><small>Günün 20 kaydı · soru başına 15 saniye</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="flash"><span class="mode-icon blue">▤</span><div><b>Kelime Kartları</b><small>Gör, dinle ve işaretle</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
-            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol">_</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
-            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol">…</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
-            <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon teal lesson-symbol">1·2·3</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
-            <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
-          </div>
-          <button class="range-launch" data-action="open-study-setup">Özel kelime aralığı seç</button>
-        </article>
+      <section class="dashboard-tab-panel" data-dashboard-panel="progress" hidden>
+        <div class="dashboard-panel-head"><div><p class="eyebrow">KURS İLERLEMESİ</p><h2>Puan, lig ve gelişim analizi</h2><p>Her dil ayrı değerlendirilir; genel profil XP’si üç kursun toplamıdır.</p></div></div>
+        <section class="language-xp-section compact-language-xp" aria-labelledby="languageXpTitle">
+        <div class="language-xp-head">
+          <div><p class="eyebrow">DİL BAZLI PUANLAMA</p><h2 id="languageXpTitle">Her kursun puanı ayrı</h2></div>
+          <span>Genel XP yalnızca lig için birleşir</span>
+        </div>
+        <div id="languageXpGrid" class="language-xp-grid"></div>
+      </section>
+        <div class="progress-action-grid">
+          <button class="league-launch-card" data-nav="league" type="button">
+        <span class="league-launch-icon">🏆</span>
+        <span><b>WordPilot Ligi</b><small>Kim kaç XP topladı? Sıralamayı gör.</small></span>
+        <em>Lig →</em>
+      </button>
+          <button class="progress-launch-card" data-nav="progress" type="button"><span>📊</span><div><b>Profesyonel istatistik paneli</b><small>Doğruluk, çalışma süresi, oyun ve telaffuz gelişimi</small></div><em>İncele →</em></button>
+        </div>
+        <p class="legacy-league-note"><b>Eski lig kayıtları:</b> Geçmişte dil ayrımı tutulmadığı için bazı kullanıcılar her dilde aynı “eski toplam XP” ile görünebilir. Kullanıcı yeni sürümde ilgili kursta çalıştıkça gerçek kurs XP’sine geçer.</p>
+      </section>
 
-        <article class="panel mentor-card">
-          <div class="mentor-orb">◎</div>
-          <p class="eyebrow">WORDPILOT MENTOR</p>
-          <h3>Bugünkü önerin</h3>
-          <p id="insightText">Çalışmaya başladığında güçlü ve zor kelimelerini analiz edeceğiz.</p>
-          <div class="mentor-stats">
-            <div><span>Doğruluk</span><b id="accuracyText">—</b></div>
-            <div><span>Toplam cevap</span><b id="answeredTotal">0</b></div>
-            <div><span>Tekrar bekliyor</span><b id="countReview">0</b></div>
-            <div><span>Güçlü konu</span><b id="mentorStrongTopic">—</b></div>
-            <div><span>Öncelikli konu</span><b id="mentorWeakTopic">—</b></div>
-            <div><span>Sonraki adım</span><b id="mentorNextAction">—</b></div>
-          </div>
-        </article>
-      </div>
-
-      <section class="how-section">
+      <details class="dashboard-info-details">
+        <summary><span>ℹ️</span><div><b>WordPilot nasıl çalışır?</b><small>Öğrenme sistemi ve motivasyon özelliklerini göster</small></div><em>+</em></summary>
+        <div class="dashboard-info-content"><section class="how-section">
         <div class="section-kicker">
           <p class="eyebrow">NASIL ÇALIŞIR?</p>
           <h2>Üç adımda günlük kelime rutini</h2>
@@ -276,39 +321,37 @@
           <article><span>2</span><div><b>Modunu başlat</b><p>Quiz, kart, yazma, dinleme, eşleştirme, eş ya da zıt anlam.</p></div></article>
           <article><span>3</span><div><b>Kalıcılaştır</b><p>Zor kelimeler tekrar gelir; XP’in, serin ve lig sıran güncellenir.</p></div></article>
         </div>
-      </section>
-
-      <section class="why-section">
+      </section><section class="why-section">
         <div class="why-card"><span>◎</span><b>Bağlamlı öğrenme</b><p>Çoklu anlam, örnek cümle, kullanım yıldızları ve kelime ilişkileri tek yerde.</p></div>
         <div class="why-card"><span>↻</span><b>Akıllı tekrar</b><p>Yanlış ve zorlandığın kelimeler kişisel tekrar kuyruğuna alınır.</p></div>
         <div class="why-card"><span>🏆</span><b>Gerçek zamanlı motivasyon</b><p>XP’in ve lig sıran çalışırken güncellenir; cihazların aynı hesapta birleşir.</p></div>
-      </section>
+      </section></div>
+      </details>
 
       <section class="home-tools panel">
-        <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Dosyalar ve uygulama</h2></div></div>
+        <div class="home-tools-head"><div><p class="eyebrow">WORDPILOT ARAÇLARI</p><h2>Uygulama ve çalışma dosyaları</h2></div></div>
         <div class="home-tool-grid">
-          <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
           <button id="installAppBtn" class="home-tool-card install" type="button"><span>▣</span><div><b>Ana ekrana ekle</b><small>WordPilot uygulama gibi açılsın</small></div><em>→</em></button>
           <button id="offlineBtn" class="home-tool-card offline" type="button"><span>↓</span><div><b>Çevrimdışı paket</b><small>Siteyi ve 6000 kelimeyi tarayıcıya kaydet</small></div><em>→</em></button>
           <button class="home-tool-card sync" data-action="open-profile" type="button"><span>☁</span><div><b>Hesabı senkronize et</b><small>Google hesabı ve profil ayarları</small></div><em>→</em></button>
+          <a class="home-tool-card drive" href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer"><span>PDF</span><div><b>Çalışma PDF’leri</b><small>Google Drive klasörünü aç</small></div><em>↗</em></a>
         </div>
         <p id="offlineStatus" class="settings-note">Yaklaşık 5,4 MB: ana sayfa, oyun dosyaları, Kiril Akademisi, simgeler ve English / Русский / O‘zbekcha kurs verileri tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
 
-      <section class="v5-hub" aria-labelledby="v5HubTitle">
-        <div class="v5-hub-head">
-          <div><p class="eyebrow">WORDPILOT 5 · AKILLI ÖĞRENME</p><h2 id="v5HubTitle">Dinle, konuş, oku ve sana özel ilerle</h2><p>Aktif kursun için TTS, telaffuz, hikâyeler, adaptif plan ve güvenli AI koçu.</p></div>
-          <span class="v5-version-pill">v5.0</span>
-        </div>
-        <div class="v5-feature-grid">
-          <button class="v5-feature-card voice" type="button" data-v5-open="pronunciation"><span>🎙</span><div><b>Telaffuz Laboratuvarı</b><small>Dinle, kaydet ve dil bazlı puanını gör</small></div><em>Aç →</em></button>
-          <button class="v5-feature-card ai" type="button" data-v5-open="ai"><span>✦</span><div><b>AI Konuşma Partneri</b><small>Günlük senaryolarda yazılı konuşma pratiği</small></div><em>Aç →</em></button>
-          <button class="v5-feature-card stories" type="button" data-v5-open="stories"><span>📚</span><div><b>Hikâyeler</b><small>A1–A2 metin, çeviri, ses ve sorular</small></div><em>Oku →</em></button>
-          <button class="v5-feature-card adaptive" type="button" data-v5-open="adaptive"><span>🎯</span><div><b>Adaptif Günlük Plan</b><small>Yanlışlarına ve tekrar zamanına göre hazırlanır</small></div><em>Plan →</em></button>
-          <button class="v5-feature-card stats" type="button" data-nav="progress"><span>📈</span><div><b>Profesyonel İstatistik</b><small>Kurs, oyun, konu ve telaffuz analizi</small></div><em>Gör →</em></button>
-          <button class="v5-feature-card tts" type="button" data-v5-open="pronunciation"><span>🔊</span><div><b>Gerçek TTS Merkezi</b><small>Ses, hız ve yavaş dinleme ayarları</small></div><em>Ayarla →</em></button>
-        </div>
-      </section>
+
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
 
       <footer class="site-footer">
         <div class="footer-brand">
@@ -380,7 +423,7 @@
           <h2 id="pronunciationTarget">Hello</h2>
           <p id="pronunciationTargetReading" class="pron"></p>
           <p id="pronunciationTargetMeaning" class="voice-target-meaning">Merhaba</p>
-          <div class="voice-target-actions"><button id="pronunciationListen" class="secondary" type="button">🔊 Normal dinle</button><button id="pronunciationListenSlow" class="secondary" type="button">🐢 Yavaş dinle</button></div>
+          <div class="voice-target-actions"><button id="pronunciationListen" class="secondary" type="button">🔊 Normal dinle</button><button id="pronunciationListenSlow" class="secondary" type="button">🐢 Yavaş dinle</button><button id="pronunciationToggleMeaning" class="soft" type="button" aria-pressed="false">Türkçeyi gizle</button></div>
           <button id="pronunciationRecord" class="mic-record-button" type="button"><span>🎙</span><b>Okumaya başla</b><small>Mikrofon izni istenir</small></button>
           <div id="pronunciationResult" class="pronunciation-result" hidden></div>
         </article>
@@ -571,6 +614,13 @@
   <div id="wordDetails" class="detail-sections"></div>
 </dialog>
 
+
+  <dialog id="guestProgressDialog" class="modal guest-progress-dialog">
+    <button class="sheet-close" data-close="guestProgressDialog" aria-label="Kapat">×</button>
+    <div class="profile-head"><div class="profile-avatar">☁</div><div><p class="eyebrow">İLERLEMENİ KORU</p><h2>20 çalışmayı tamamladın</h2><p class="muted">Misafir ilerlemesi yalnızca bu cihazda kalır. Google ile giriş yaparsan telefon ve bilgisayarda aynı yerden devam edersin.</p></div></div>
+    <button id="guestProgressSignIn" class="primary wide" type="button">Google ile giriş yap</button>
+    <button class="text-link wide" data-close="guestProgressDialog" type="button">Şimdilik misafir devam et</button>
+  </dialog>
 <dialog id="studySetupDialog" class="modal study-setup-modal">
   <button class="sheet-close" data-close="studySetupDialog">×</button>
   <div class="setup-head">
@@ -728,16 +778,17 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=5.0.2" defer></script>
-<script src="app.js?v=5.0.2" defer></script>
-<script src="modules/firebase-sync.js?v=5.0.2" defer></script>
-<script src="modules/learning-engine.js?v=5.0.2" defer></script>
-<script src="modules/ui-events.js?v=5.0.2" defer></script>
-<script src="modules/course-engine.js?v=5.0.2" defer></script>
-<script src="modules/russian-path.js?v=5.0.2" defer></script>
-<script src="modules/v43.js?v=5.0.2" defer></script>
-<script src="modules/v431.js?v=5.0.2" defer></script>
-<script src="modules/v50.js?v=5.0.2" defer></script>
-<script src="modules/bootstrap.js?v=5.0.2" defer></script>
+<script src="security-config.js?v=5.1.0" defer></script>
+<script src="app.js?v=5.1.0" defer></script>
+<script src="modules/firebase-sync.js?v=5.1.0" defer></script>
+<script src="modules/learning-engine.js?v=5.1.0" defer></script>
+<script src="modules/ui-events.js?v=5.1.0" defer></script>
+<script src="modules/course-engine.js?v=5.1.0" defer></script>
+<script src="modules/russian-path.js?v=5.1.0" defer></script>
+<script src="modules/v43.js?v=5.1.0" defer></script>
+<script src="modules/v431.js?v=5.1.0" defer></script>
+<script src="modules/v50.js?v=5.1.0" defer></script>
+<script src="modules/v510.js?v=5.1.0" defer></script>
+<script src="modules/bootstrap.js?v=5.1.0" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
-const CACHE='wordpilot-v5.0.2';
-const CORE=['./','index.html','style.css?v=5.0.2','security-config.js?v=5.0.2','app.js?v=5.0.2','modules/firebase-sync.js?v=5.0.2','modules/learning-engine.js?v=5.0.2','modules/ui-events.js?v=5.0.2','modules/course-engine.js?v=5.0.2','modules/russian-path.js?v=5.0.2','modules/v43.js?v=5.0.2','modules/v431.js?v=5.0.2','modules/v50.js?v=5.0.2','modules/bootstrap.js?v=5.0.2','manifest.json','stories.json?v=5.0.2','icon-192.png','icon-512.png','apple-touch-icon.png'];
-const OFFLINE=[...CORE,'words.json?v=5.0.2','ru_words.json?v=5.0.2','ru_alphabet.json?v=5.0.2','ru_grammar.json?v=5.0.2','ru_dialogues.json?v=5.0.2','uz_words.json?v=5.0.2'];
+const CACHE='wordpilot-v5.1.0';
+const CORE=['./','index.html','style.css?v=5.1.0','security-config.js?v=5.1.0','app.js?v=5.1.0','modules/firebase-sync.js?v=5.1.0','modules/learning-engine.js?v=5.1.0','modules/ui-events.js?v=5.1.0','modules/course-engine.js?v=5.1.0','modules/russian-path.js?v=5.1.0','modules/v43.js?v=5.1.0','modules/v431.js?v=5.1.0','modules/v50.js?v=5.1.0','modules/v510.js?v=5.1.0','modules/bootstrap.js?v=5.1.0','manifest.json','stories.json?v=5.1.0','icon-192.png','icon-512.png','apple-touch-icon.png'];
+const OFFLINE=[...CORE,'words.json?v=5.1.0','ru_words.json?v=5.1.0','ru_alphabet.json?v=5.1.0','ru_grammar.json?v=5.1.0','ru_dialogues.json?v=5.1.0','uz_words.json?v=5.1.0'];
 const APPROX_BYTES=6200000;
 self.addEventListener('install',event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)))});
 self.addEventListener('activate',event=>{event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)));await self.clients.claim()})())});

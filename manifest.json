@@ -2,12 +2,12 @@
   "id": "./",
   "name": "WordPilot — English, Русский, O‘zbekcha",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=5.0.2",
+  "start_url": "./?wpbuild=5.1.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v5.0: İngilizce, Rusça ve Özbekçe için TTS, telaffuz çalışması, hikâyeler, adaptif öğrenme, dil bazlı ligler, çoklu cihaz senkronizasyonu ve profesyonel istatistik.",
+  "description": "WordPilot v5.1: profesyonel mobil navigasyon, dil bazlı ligler, TTS, telaffuz, hikâyeler, adaptif öğrenme, çoklu cihaz senkronizasyonu ve gelişmiş istatistik.",
   "icons": [
     {
       "src": "icon-192.png",

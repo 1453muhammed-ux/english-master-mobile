@@ -1,10 +1,8 @@
-WORDPILOT APP CHECK STATUS
+WORDPILOT v5.1.0 — APP CHECK DURUMU
 
-Provider: reCAPTCHA Enterprise
-Site key configured: yes
-Token auto-refresh: enabled
-Client integration: enabled before Firebase Auth/Firestore initialization
-CSP reCAPTCHA domains: enabled
-
-IMPORTANT:
-App Check istemci entegrasyonu v5.0.2 içinde etkindir. Enforcement henüz açılmamalıdır. Önce v5.0.2 canlıya alınmalı; telefon ve bilgisayarda Google giriş, Firestore senkronizasyonu ve üç dil ligi test edilmelidir. Ardından Firebase App Check metriklerinde doğrulanmış istekler görülünce Firestore için enforcement açılabilir.
+- reCAPTCHA Enterprise istemci entegrasyonu aktiftir.
+- App Check istemci tokenı telefon ve bilgisayarda test edilmelidir.
+- Enforcement henüz açılmamalıdır.
+- Önce Firebase App Check metriklerinde doğrulanmış istekler görülmelidir.
+- Ardından Firestore için enforcement aşamalı olarak açılabilir.
+- Hosting üzerindeki statik JSON dosyalarını App Check tek başına gizlemez; içerik koruması için Cloud Functions/Storage geçişi ayrıca yapılmalıdır.
