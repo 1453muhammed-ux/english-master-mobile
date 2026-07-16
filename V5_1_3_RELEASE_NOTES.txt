@@ -1,6 +1,0 @@
-WORDPILOT v5.1.3
-
-- Cloud Firestore App Check enforcement is now compatible with the deployed App Check client.
-- Boşluk Doldurma ve Cümle Tamamlama kartlarının sol simgeleri görünür hale getirildi.
-- Günün Kelimesi bölümü masaüstü ve mobilde daha kompakt hale getirildi.
-- Mevcut kullanıcı ilerlemesi, Firebase senkronizasyonu, dil bazlı ligler ve çevrimdışı kullanım korundu.
