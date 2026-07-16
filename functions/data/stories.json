@@ -1,0 +1,884 @@
+[
+  {
+    "id": "en-01",
+    "course": "en",
+    "title": "A New Morning",
+    "level": "A1",
+    "topic": "Günlük yaşam",
+    "lines": [
+      {
+        "text": "Maya wakes up at seven o’clock.",
+        "translation": "Maya saat yedide uyanır."
+      },
+      {
+        "text": "She opens the window and drinks a glass of water.",
+        "translation": "Pencereyi açar ve bir bardak su içer."
+      },
+      {
+        "text": "Then she makes eggs and tea for breakfast.",
+        "translation": "Sonra kahvaltı için yumurta ve çay hazırlar."
+      },
+      {
+        "text": "At eight o’clock, she walks to the bus stop.",
+        "translation": "Saat sekizde otobüs durağına yürür."
+      },
+      {
+        "text": "Today is her first day at a new job.",
+        "translation": "Bugün yeni işindeki ilk günüdür."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What does Maya drink?",
+        "options": [
+          "Water",
+          "Coffee",
+          "Milk"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Where does she walk?",
+        "options": [
+          "To the station",
+          "To the bus stop",
+          "To school"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "en-02",
+    "course": "en",
+    "title": "At the Market",
+    "level": "A1",
+    "topic": "Alışveriş",
+    "lines": [
+      {
+        "text": "Tom needs tomatoes, bread, and cheese.",
+        "translation": "Tom’un domates, ekmek ve peynire ihtiyacı vardır."
+      },
+      {
+        "text": "He takes a small basket at the market.",
+        "translation": "Markette küçük bir sepet alır."
+      },
+      {
+        "text": "The tomatoes are fresh, but the cheese is expensive.",
+        "translation": "Domatesler tazedir, fakat peynir pahalıdır."
+      },
+      {
+        "text": "Tom buys bread and tomatoes.",
+        "translation": "Tom ekmek ve domates alır."
+      },
+      {
+        "text": "He decides to buy cheese next week.",
+        "translation": "Peyniri gelecek hafta almaya karar verir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What is expensive?",
+        "options": [
+          "Bread",
+          "Cheese",
+          "Tomatoes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does Tom buy?",
+        "options": [
+          "Bread and tomatoes",
+          "Cheese only",
+          "Milk and bread"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "en-03",
+    "course": "en",
+    "title": "A Rainy Afternoon",
+    "level": "A1",
+    "topic": "Hava ve ev",
+    "lines": [
+      {
+        "text": "It starts to rain after lunch.",
+        "translation": "Öğle yemeğinden sonra yağmur başlar."
+      },
+      {
+        "text": "Lina cannot go to the park.",
+        "translation": "Lina parka gidemez."
+      },
+      {
+        "text": "She sits by the window with her cat.",
+        "translation": "Kedisiyle pencerenin yanında oturur."
+      },
+      {
+        "text": "They listen to the rain and read a short book.",
+        "translation": "Yağmuru dinler ve kısa bir kitap okurlar."
+      },
+      {
+        "text": "The quiet afternoon makes Lina happy.",
+        "translation": "Sessiz öğleden sonra Lina’yı mutlu eder."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why can Lina not go to the park?",
+        "options": [
+          "It is cold",
+          "It is raining",
+          "She is tired"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Who sits with Lina?",
+        "options": [
+          "Her cat",
+          "Her friend",
+          "Her sister"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "en-04",
+    "course": "en",
+    "title": "The Lost Key",
+    "level": "A2",
+    "topic": "Problem çözme",
+    "lines": [
+      {
+        "text": "Daniel cannot find his apartment key.",
+        "translation": "Daniel dairesinin anahtarını bulamaz."
+      },
+      {
+        "text": "He checks his coat, his bag, and the kitchen table.",
+        "translation": "Montunu, çantasını ve mutfak masasını kontrol eder."
+      },
+      {
+        "text": "The key is not there.",
+        "translation": "Anahtar orada değildir."
+      },
+      {
+        "text": "His neighbor calls him and shows a key near the elevator.",
+        "translation": "Komşusu onu arar ve asansörün yanında bir anahtar gösterir."
+      },
+      {
+        "text": "Daniel thanks his neighbor and promises to be more careful.",
+        "translation": "Daniel komşusuna teşekkür eder ve daha dikkatli olacağına söz verir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where is the key?",
+        "options": [
+          "Near the elevator",
+          "In the coat",
+          "On the table"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Who finds it?",
+        "options": [
+          "Daniel",
+          "His neighbor",
+          "The manager"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "en-05",
+    "course": "en",
+    "title": "A Train to the Coast",
+    "level": "A2",
+    "topic": "Seyahat",
+    "lines": [
+      {
+        "text": "Sara buys a morning train ticket to the coast.",
+        "translation": "Sara sahile giden sabah treni için bilet alır."
+      },
+      {
+        "text": "She arrives at the station twenty minutes early.",
+        "translation": "İstasyona yirmi dakika erken gelir."
+      },
+      {
+        "text": "Her train leaves from platform six.",
+        "translation": "Treni altıncı perondan kalkar."
+      },
+      {
+        "text": "During the journey, she watches villages and green fields.",
+        "translation": "Yolculuk sırasında köyleri ve yeşil tarlaları izler."
+      },
+      {
+        "text": "By noon, she can smell the sea.",
+        "translation": "Öğlene doğru denizin kokusunu alabilir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Which platform does the train leave from?",
+        "options": [
+          "Four",
+          "Six",
+          "Ten"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does Sara watch?",
+        "options": [
+          "Mountains only",
+          "Villages and fields",
+          "City streets"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "en-06",
+    "course": "en",
+    "title": "The Helpful Message",
+    "level": "A2",
+    "topic": "İletişim",
+    "lines": [
+      {
+        "text": "Omar receives a message from a new colleague.",
+        "translation": "Omar yeni bir iş arkadaşından mesaj alır."
+      },
+      {
+        "text": "The colleague explains tomorrow’s meeting time and room.",
+        "translation": "İş arkadaşı yarının toplantı saatini ve odasını açıklar."
+      },
+      {
+        "text": "Omar writes the details in his calendar.",
+        "translation": "Omar ayrıntıları takvimine yazar."
+      },
+      {
+        "text": "He replies with a short thank-you message.",
+        "translation": "Kısa bir teşekkür mesajıyla cevap verir."
+      },
+      {
+        "text": "Now he feels prepared for the meeting.",
+        "translation": "Artık toplantıya hazır hisseder."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Where does Omar write the details?",
+        "options": [
+          "In his calendar",
+          "On the wall",
+          "In a book"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How does he feel?",
+        "options": [
+          "Prepared",
+          "Angry",
+          "Lost"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "ru-01",
+    "course": "ru",
+    "title": "Утро А́нны",
+    "level": "A1",
+    "topic": "Günlük yaşam",
+    "lines": [
+      {
+        "text": "А́нна встаёт в семь часо́в.",
+        "translation": "Anna saat yedide kalkar."
+      },
+      {
+        "text": "Она́ открыва́ет окно́ и пьёт во́ду.",
+        "translation": "Pencereyi açar ve su içer."
+      },
+      {
+        "text": "Пото́м она́ гото́вит за́втрак.",
+        "translation": "Sonra kahvaltı hazırlar."
+      },
+      {
+        "text": "В во́семь часо́в А́нна идёт на рабо́ту.",
+        "translation": "Saat sekizde Anna işe gider."
+      },
+      {
+        "text": "Сего́дня у неё ва́жная встре́ча.",
+        "translation": "Bugün önemli bir toplantısı vardır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Во ско́лько А́нна встаёт?",
+        "options": [
+          "В семь",
+          "В во́семь",
+          "В де́вять"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Куда́ она́ идёт?",
+        "options": [
+          "В шко́лу",
+          "На рабо́ту",
+          "В парк"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "ru-02",
+    "course": "ru",
+    "title": "В магази́не",
+    "level": "A1",
+    "topic": "Alışveriş",
+    "lines": [
+      {
+        "text": "Ива́н покупа́ет хлеб, молоко́ и я́блоки.",
+        "translation": "İvan ekmek, süt ve elma alır."
+      },
+      {
+        "text": "Он берёт ма́ленькую корзи́ну.",
+        "translation": "Küçük bir sepet alır."
+      },
+      {
+        "text": "Я́блоки дешёвые, а сыр дорого́й.",
+        "translation": "Elmalar ucuz, peynir ise pahalıdır."
+      },
+      {
+        "text": "Ива́н не покупа́ет сыр.",
+        "translation": "İvan peynir almaz."
+      },
+      {
+        "text": "Он пла́тит ка́ртой.",
+        "translation": "Kartla ödeme yapar."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Что дорого́е?",
+        "options": [
+          "Сыр",
+          "Хлеб",
+          "Я́блоки"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Как он пла́тит?",
+        "options": [
+          "Нали́чными",
+          "Ка́ртой",
+          "Не пла́тит"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "ru-03",
+    "course": "ru",
+    "title": "До́ждь",
+    "level": "A1",
+    "topic": "Hava ve ev",
+    "lines": [
+      {
+        "text": "По́сле обе́да начина́ется дождь.",
+        "translation": "Öğle yemeğinden sonra yağmur başlar."
+      },
+      {
+        "text": "Ма́ша не идёт в парк.",
+        "translation": "Maşa parka gitmez."
+      },
+      {
+        "text": "Она́ сиди́т у окна́ с ко́шкой.",
+        "translation": "Kedisiyle pencerenin yanında oturur."
+      },
+      {
+        "text": "Ма́ша чита́ет кни́гу и слу́шает дождь.",
+        "translation": "Maşa kitap okur ve yağmuru dinler."
+      },
+      {
+        "text": "До́ма тепло́ и ти́хо.",
+        "translation": "Ev sıcak ve sessizdir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Почему́ Ма́ша не идёт в парк?",
+        "options": [
+          "Идёт дождь",
+          "Она́ рабо́тает",
+          "Парк закры́т"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "С кем она́ сиди́т?",
+        "options": [
+          "С ко́шкой",
+          "С дру́гом",
+          "С сестро́й"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "ru-04",
+    "course": "ru",
+    "title": "Потеря́нный ключ",
+    "level": "A2",
+    "topic": "Problem çözme",
+    "lines": [
+      {
+        "text": "Дени́с не мо́жет найти́ ключ от кварти́ры.",
+        "translation": "Denis dairenin anahtarını bulamaz."
+      },
+      {
+        "text": "Он проверя́ет су́мку, ку́ртку и стол.",
+        "translation": "Çantasını, montunu ve masayı kontrol eder."
+      },
+      {
+        "text": "Ключа́ нигде́ нет.",
+        "translation": "Anahtar hiçbir yerde yoktur."
+      },
+      {
+        "text": "Сосе́д нахо́дит ключ о́коло ли́фта.",
+        "translation": "Komşusu anahtarı asansörün yanında bulur."
+      },
+      {
+        "text": "Дени́с благодари́т сосе́да.",
+        "translation": "Denis komşusuna teşekkür eder."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Где был ключ?",
+        "options": [
+          "О́коло ли́фта",
+          "На столе́",
+          "В су́мке"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Кто нашёл ключ?",
+        "options": [
+          "Дени́с",
+          "Сосе́д",
+          "Охра́нник"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "ru-05",
+    "course": "ru",
+    "title": "По́езд к мо́рю",
+    "level": "A2",
+    "topic": "Seyahat",
+    "lines": [
+      {
+        "text": "Ири́на покупа́ет биле́т на у́тренний по́езд.",
+        "translation": "İrina sabah treni için bilet alır."
+      },
+      {
+        "text": "Она́ приезжа́ет на вокза́л за два́дцать мину́т.",
+        "translation": "İstasyona yirmi dakika erken gelir."
+      },
+      {
+        "text": "По́езд отправля́ется с шесто́й платфо́рмы.",
+        "translation": "Tren altıncı perondan kalkar."
+      },
+      {
+        "text": "В пути́ Ири́на ви́дит поля́ и дере́вни.",
+        "translation": "Yolda tarlaları ve köyleri görür."
+      },
+      {
+        "text": "К по́лудню она́ уже́ у мо́ря.",
+        "translation": "Öğlene doğru denizdedir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "С како́й платфо́рмы отправля́ется по́езд?",
+        "options": [
+          "С четвёртой",
+          "С шесто́й",
+          "С деся́той"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Что Ири́на ви́дит в пути́?",
+        "options": [
+          "Поля́ и дере́вни",
+          "То́лько го́ры",
+          "У́лицы"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "ru-06",
+    "course": "ru",
+    "title": "Поле́зное сообще́ние",
+    "level": "A2",
+    "topic": "İletişim",
+    "lines": [
+      {
+        "text": "Оле́г получа́ет сообще́ние от колле́ги.",
+        "translation": "Oleg iş arkadaşından mesaj alır."
+      },
+      {
+        "text": "Колле́га пи́шет вре́мя и ме́сто встре́чи.",
+        "translation": "İş arkadaşı toplantının saatini ve yerini yazar."
+      },
+      {
+        "text": "Оле́г добавля́ет встре́чу в календа́рь.",
+        "translation": "Oleg toplantıyı takvime ekler."
+      },
+      {
+        "text": "Он отвеча́ет: «Спаси́бо, до за́втра».",
+        "translation": "“Teşekkürler, yarın görüşürüz” diye cevap verir."
+      },
+      {
+        "text": "Тепе́рь он гото́в к встре́че.",
+        "translation": "Artık toplantıya hazırdır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Куда́ Оле́г добавля́ет встре́чу?",
+        "options": [
+          "В календа́рь",
+          "В кни́гу",
+          "На стену́"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Он гото́в к встре́че?",
+        "options": [
+          "Да",
+          "Нет",
+          "Не зна́ет"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "uz-01",
+    "course": "uz",
+    "title": "Yangi tong",
+    "level": "A1",
+    "topic": "Günlük yaşam",
+    "lines": [
+      {
+        "text": "Dilnoza soat yettida uyg‘onadi.",
+        "translation": "Dilnoza saat yedide uyanır."
+      },
+      {
+        "text": "U derazani ochadi va suv ichadi.",
+        "translation": "Pencereyi açar ve su içer."
+      },
+      {
+        "text": "Keyin nonushta tayyorlaydi.",
+        "translation": "Sonra kahvaltı hazırlar."
+      },
+      {
+        "text": "Soat sakkizda ishga ketadi.",
+        "translation": "Saat sekizde işe gider."
+      },
+      {
+        "text": "Bugun uning muhim uchrashuvi bor.",
+        "translation": "Bugün önemli bir toplantısı vardır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Dilnoza qachon uyg‘onadi?",
+        "options": [
+          "Soat yettida",
+          "Soat sakkizda",
+          "Soat to‘qqizda"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "U qayerga ketadi?",
+        "options": [
+          "Maktabga",
+          "Ishga",
+          "Bozorga"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "uz-02",
+    "course": "uz",
+    "title": "Bozorda",
+    "level": "A1",
+    "topic": "Alışveriş",
+    "lines": [
+      {
+        "text": "Aziz non, sut va olma olmoqchi.",
+        "translation": "Aziz ekmek, süt ve elma almak ister."
+      },
+      {
+        "text": "U kichik savat oladi.",
+        "translation": "Küçük bir sepet alır."
+      },
+      {
+        "text": "Olma arzon, pishloq esa qimmat.",
+        "translation": "Elma ucuz, peynir ise pahalıdır."
+      },
+      {
+        "text": "Aziz pishloq olmaydi.",
+        "translation": "Aziz peynir almaz."
+      },
+      {
+        "text": "U karta bilan to‘laydi.",
+        "translation": "Kartla ödeme yapar."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Nima qimmat?",
+        "options": [
+          "Pishloq",
+          "Non",
+          "Olma"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Aziz qanday to‘laydi?",
+        "options": [
+          "Naqd",
+          "Karta bilan",
+          "To‘lamaydi"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "uz-03",
+    "course": "uz",
+    "title": "Yomg‘irli kun",
+    "level": "A1",
+    "topic": "Hava ve ev",
+    "lines": [
+      {
+        "text": "Tushlikdan keyin yomg‘ir boshlanadi.",
+        "translation": "Öğle yemeğinden sonra yağmur başlar."
+      },
+      {
+        "text": "Malika bog‘ga bormaydi.",
+        "translation": "Malika parka gitmez."
+      },
+      {
+        "text": "U mushugi bilan deraza yonida o‘tiradi.",
+        "translation": "Kedisiyle pencerenin yanında oturur."
+      },
+      {
+        "text": "Malika kitob o‘qiydi va yomg‘irni tinglaydi.",
+        "translation": "Malika kitap okur ve yağmuru dinler."
+      },
+      {
+        "text": "Uy issiq va tinch.",
+        "translation": "Ev sıcak ve sessizdir."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Nega Malika bog‘ga bormaydi?",
+        "options": [
+          "Yomg‘ir yog‘moqda",
+          "U ishlayapti",
+          "Bog‘ yopiq"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "U kim bilan o‘tiradi?",
+        "options": [
+          "Mushugi bilan",
+          "Do‘sti bilan",
+          "Singlisi bilan"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "uz-04",
+    "course": "uz",
+    "title": "Yo‘qolgan kalit",
+    "level": "A2",
+    "topic": "Problem çözme",
+    "lines": [
+      {
+        "text": "Javlon uy kalitini topa olmaydi.",
+        "translation": "Javlon evin anahtarını bulamaz."
+      },
+      {
+        "text": "U sumkasi, kurtkasi va stolni tekshiradi.",
+        "translation": "Çantasını, montunu ve masayı kontrol eder."
+      },
+      {
+        "text": "Kalit hech qayerda yo‘q.",
+        "translation": "Anahtar hiçbir yerde yoktur."
+      },
+      {
+        "text": "Qo‘shnisi kalitni lift yonidan topadi.",
+        "translation": "Komşusu anahtarı asansörün yanında bulur."
+      },
+      {
+        "text": "Javlon qo‘shnisiga rahmat aytadi.",
+        "translation": "Javlon komşusuna teşekkür eder."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Kalit qayerda edi?",
+        "options": [
+          "Lift yonida",
+          "Stolda",
+          "Sumkada"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Kalitni kim topdi?",
+        "options": [
+          "Javlon",
+          "Qo‘shnisi",
+          "Qo‘riqchi"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "uz-05",
+    "course": "uz",
+    "title": "Dengizga poyezd",
+    "level": "A2",
+    "topic": "Seyahat",
+    "lines": [
+      {
+        "text": "Sabina ertalabki poyezdga chipta oladi.",
+        "translation": "Sabina sabah treni için bilet alır."
+      },
+      {
+        "text": "U vokzalga yigirma daqiqa oldin keladi.",
+        "translation": "İstasyona yirmi dakika erken gelir."
+      },
+      {
+        "text": "Poyezd oltinchi platformadan jo‘naydi.",
+        "translation": "Tren altıncı perondan kalkar."
+      },
+      {
+        "text": "Yo‘lda Sabina dalalar va qishloqlarni ko‘radi.",
+        "translation": "Yolda tarlaları ve köyleri görür."
+      },
+      {
+        "text": "Tushga yaqin u dengizga yetib boradi.",
+        "translation": "Öğlene doğru denize ulaşır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Poyezd qaysi platformadan jo‘naydi?",
+        "options": [
+          "To‘rtinchi",
+          "Oltinchi",
+          "O‘ninchi"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Sabina yo‘lda nimani ko‘radi?",
+        "options": [
+          "Dalalar va qishloqlar",
+          "Faqat tog‘lar",
+          "Ko‘chalar"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "uz-06",
+    "course": "uz",
+    "title": "Foydali xabar",
+    "level": "A2",
+    "topic": "İletişim",
+    "lines": [
+      {
+        "text": "Olim yangi hamkasbidan xabar oladi.",
+        "translation": "Olim yeni iş arkadaşından mesaj alır."
+      },
+      {
+        "text": "Hamkasbi uchrashuv vaqti va xonasini yozadi.",
+        "translation": "İş arkadaşı toplantı saatini ve odasını yazar."
+      },
+      {
+        "text": "Olim ma’lumotni taqvimiga qo‘shadi.",
+        "translation": "Olim bilgiyi takvimine ekler."
+      },
+      {
+        "text": "U qisqa rahmat xabarini yuboradi.",
+        "translation": "Kısa bir teşekkür mesajı gönderir."
+      },
+      {
+        "text": "Endi u uchrashuvga tayyor.",
+        "translation": "Artık toplantıya hazırdır."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Olim ma’lumotni qayerga qo‘shadi?",
+        "options": [
+          "Taqvimiga",
+          "Devorga",
+          "Kitobga"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "U o‘zini qanday his qiladi?",
+        "options": [
+          "Tayyor",
+          "Jahldor",
+          "Adashgan"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

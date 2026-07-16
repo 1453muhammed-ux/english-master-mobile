@@ -1,0 +1,596 @@
+[
+  {
+    "id": "pronouns",
+    "order": 1,
+    "title": "Kişi zamirleri",
+    "level": "A1",
+    "icon": "Я",
+    "summary": "Я, ты, вы, он, она, мы ve они ile cümlenin öznesini kur.",
+    "rules": [
+      "я = ben; ты = sen; вы = siz veya resmî sen",
+      "он erkek, она kadın için “o” demektir",
+      "мы = biz, они = onlar"
+    ],
+    "examples": [
+      {
+        "ru": "Я студент.",
+        "stress": "Я студе́нт.",
+        "reading": "Ya student.",
+        "tr": "Ben öğrenciyim."
+      },
+      {
+        "ru": "Она врач.",
+        "stress": "Она́ врач.",
+        "reading": "Ana vraç.",
+        "tr": "O doktordur."
+      },
+      {
+        "ru": "Мы дома.",
+        "stress": "Мы до́ма.",
+        "reading": "Mı doma.",
+        "tr": "Biz evdeyiz."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "“Biz” hangi zamirdir?",
+        "options": [
+          "они",
+          "мы",
+          "вы",
+          "я"
+        ],
+        "answer": 1,
+        "explanation": "мы = biz"
+      },
+      {
+        "q": "Resmî olarak bir kişiye hitap ederken hangisi kullanılır?",
+        "options": [
+          "ты",
+          "он",
+          "вы",
+          "мы"
+        ],
+        "answer": 2,
+        "explanation": "вы hem çoğul “siz” hem de resmî tekil hitaptır."
+      },
+      {
+        "q": "“O (kadın)” hangisidir?",
+        "options": [
+          "она",
+          "он",
+          "они",
+          "я"
+        ],
+        "answer": 0,
+        "explanation": "она kadın için “o” demektir."
+      }
+    ]
+  },
+  {
+    "id": "gender",
+    "order": 2,
+    "title": "İsimlerin cinsiyeti",
+    "level": "A1",
+    "icon": "М/Ж",
+    "summary": "Rusça isimleri eril, dişil ve nötr olarak ayır.",
+    "rules": [
+      "Çoğu sessiz harfle biten isim erildir: стол",
+      "-а / -я ile bitenlerin çoğu dişildir: книга",
+      "-о / -е ile bitenlerin çoğu nötrdür: окно",
+      "-ь ile bitenlerde cinsiyet sözlükten öğrenilir: день, дверь"
+    ],
+    "examples": [
+      {
+        "ru": "новый стол",
+        "stress": "но́вый стол",
+        "reading": "novıy stol",
+        "tr": "yeni masa"
+      },
+      {
+        "ru": "новая книга",
+        "stress": "но́вая кни́га",
+        "reading": "novaya kniga",
+        "tr": "yeni kitap"
+      },
+      {
+        "ru": "новое окно",
+        "stress": "но́вое окно́",
+        "reading": "novaye akno",
+        "tr": "yeni pencere"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "“книга” hangi cinstir?",
+        "options": [
+          "eril",
+          "dişil",
+          "nötr"
+        ],
+        "answer": 1,
+        "explanation": "-а ile bittiği için dişildir."
+      },
+      {
+        "q": "“окно” hangi cinstir?",
+        "options": [
+          "nötr",
+          "eril",
+          "dişil"
+        ],
+        "answer": 0,
+        "explanation": "-о ile biten isimlerin çoğu nötrdür."
+      },
+      {
+        "q": "“стол” hangi cinstir?",
+        "options": [
+          "dişil",
+          "nötr",
+          "eril"
+        ],
+        "answer": 2,
+        "explanation": "Sessiz harfle bittiği için erildir."
+      }
+    ]
+  },
+  {
+    "id": "present_be",
+    "order": 3,
+    "title": "Şimdiki zamanda “olmak”",
+    "level": "A1",
+    "icon": "—",
+    "summary": "Rusçada şimdiki zamanda быть çoğu isim cümlesinde söylenmez.",
+    "rules": [
+      "“Ben öğrenciyim” = Я студент; есть kullanılmaz",
+      "Yer bildirirken тоже doğrudan yapı kurulur: Мы дома",
+      "есть daha çok “var / mevcut” anlamında kullanılır"
+    ],
+    "examples": [
+      {
+        "ru": "Я учитель.",
+        "stress": "Я учи́тель.",
+        "reading": "Ya uçitel.",
+        "tr": "Ben öğretmenim."
+      },
+      {
+        "ru": "Он дома.",
+        "stress": "Он до́ма.",
+        "reading": "On doma.",
+        "tr": "O evde."
+      },
+      {
+        "ru": "Здесь есть кафе.",
+        "stress": "Здесь есть кафе́.",
+        "reading": "Zdes yest kafe.",
+        "tr": "Burada bir kafe var."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "“Ben doktorum” cümlesi hangisidir?",
+        "options": [
+          "Я есть врач.",
+          "Я врач.",
+          "Я быть врач."
+        ],
+        "answer": 1,
+        "explanation": "Şimdiki zaman isim cümlesinde быть kullanılmaz."
+      },
+      {
+        "q": "“Burada eczane var” için doğru yapı hangisidir?",
+        "options": [
+          "Здесь есть аптека.",
+          "Здесь аптека быть.",
+          "Есть здесь быть аптека."
+        ],
+        "answer": 0,
+        "explanation": "есть burada “var” anlamındadır."
+      },
+      {
+        "q": "“Biz evdeyiz” hangisidir?",
+        "options": [
+          "Мы есть дома.",
+          "Мы дома.",
+          "Мы быть дом."
+        ],
+        "answer": 1,
+        "explanation": "Şimdiki zamanda olmak fiili düşer."
+      }
+    ]
+  },
+  {
+    "id": "present_verbs",
+    "order": 4,
+    "title": "Şimdiki zaman fiil çekimi",
+    "level": "A1",
+    "icon": "-ю",
+    "summary": "Fiil kökünü kişiye göre değiştir: я читаю, ты читаешь, они читают.",
+    "rules": [
+      "1. çekim yaygın sonları: -ю/-у, -ешь, -ет, -ем, -ете, -ют/-ут",
+      "2. çekim yaygın sonları: -ю/-у, -ишь, -ит, -им, -ите, -ят/-ат",
+      "Sözlük biçimi mastardır: читать, говорить"
+    ],
+    "examples": [
+      {
+        "ru": "Я читаю.",
+        "stress": "Я чита́ю.",
+        "reading": "Ya çitayu.",
+        "tr": "Okuyorum."
+      },
+      {
+        "ru": "Ты говоришь.",
+        "stress": "Ты говори́шь.",
+        "reading": "Tı gavariş.",
+        "tr": "Konuşuyorsun."
+      },
+      {
+        "ru": "Они работают.",
+        "stress": "Они́ рабо́тают.",
+        "reading": "Ani rabotayut.",
+        "tr": "Onlar çalışıyor."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "читать fiilinin “я” çekimi hangisidir?",
+        "options": [
+          "читаешь",
+          "читаю",
+          "читает"
+        ],
+        "answer": 1,
+        "explanation": "я читаю"
+      },
+      {
+        "q": "говорить fiilinin “ты” çekimi hangisidir?",
+        "options": [
+          "говоришь",
+          "говорим",
+          "говорят"
+        ],
+        "answer": 0,
+        "explanation": "ты говоришь"
+      },
+      {
+        "q": "работать fiilinin “они” çekimi hangisidir?",
+        "options": [
+          "работает",
+          "работаете",
+          "работают"
+        ],
+        "answer": 2,
+        "explanation": "они работают"
+      }
+    ]
+  },
+  {
+    "id": "plural",
+    "order": 5,
+    "title": "Çoğul yapma",
+    "level": "A1",
+    "icon": "Ы",
+    "summary": "İsimleri çoğul yapmak için en sık -ы, -и, -а ve -я sonlarını tanı.",
+    "rules": [
+      "Sessizle biten birçok isim -ы alır: стол → столы",
+      "г, к, х, ж, ч, ш, щ sonrasında -и gelir",
+      "Bazı nötr isimler -а/-я alır: окно → окна",
+      "Bazı çoğullar düzensizdir: человек → люди"
+    ],
+    "examples": [
+      {
+        "ru": "стол — столы",
+        "stress": "стол — столы́",
+        "reading": "stol — stolı",
+        "tr": "masa — masalar"
+      },
+      {
+        "ru": "книга — книги",
+        "stress": "кни́га — кни́ги",
+        "reading": "kniga — knigi",
+        "tr": "kitap — kitaplar"
+      },
+      {
+        "ru": "окно — окна",
+        "stress": "окно́ — о́кна",
+        "reading": "akno — okna",
+        "tr": "pencere — pencereler"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "книга kelimesinin çoğulu hangisidir?",
+        "options": [
+          "книгы",
+          "книги",
+          "книгаы"
+        ],
+        "answer": 1,
+        "explanation": "г harfinden sonra -и gelir."
+      },
+      {
+        "q": "стол kelimesinin çoğulu hangisidir?",
+        "options": [
+          "столы",
+          "столи",
+          "стола"
+        ],
+        "answer": 0,
+        "explanation": "стол → столы"
+      },
+      {
+        "q": "окно kelimesinin çoğulu hangisidir?",
+        "options": [
+          "окны",
+          "окни",
+          "окна"
+        ],
+        "answer": 2,
+        "explanation": "Bu nötr isim çoğulda окна olur."
+      }
+    ]
+  },
+  {
+    "id": "adjective_agreement",
+    "order": 6,
+    "title": "Sıfat–isim uyumu",
+    "level": "A1-A2",
+    "icon": "-ая",
+    "summary": "Sıfat sonunu ismin cinsiyetine ve sayısına göre değiştir.",
+    "rules": [
+      "Eril: новый дом",
+      "Dişil: новая машина",
+      "Nötr: новое место",
+      "Çoğul: новые книги"
+    ],
+    "examples": [
+      {
+        "ru": "большой город",
+        "stress": "большо́й го́род",
+        "reading": "balşoy gorad",
+        "tr": "büyük şehir"
+      },
+      {
+        "ru": "большая комната",
+        "stress": "больша́я ко́мната",
+        "reading": "balşaya komnata",
+        "tr": "büyük oda"
+      },
+      {
+        "ru": "большое окно",
+        "stress": "большо́е окно́",
+        "reading": "balşoye akno",
+        "tr": "büyük pencere"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "“yeni araba” hangisidir?",
+        "options": [
+          "новый машина",
+          "новая машина",
+          "новое машина"
+        ],
+        "answer": 1,
+        "explanation": "машина dişildir; новая kullanılır."
+      },
+      {
+        "q": "“yeni yer” hangisidir?",
+        "options": [
+          "новое место",
+          "новая место",
+          "новый место"
+        ],
+        "answer": 0,
+        "explanation": "место nötrdür; новое kullanılır."
+      },
+      {
+        "q": "“yeni kitaplar” hangisidir?",
+        "options": [
+          "новая книги",
+          "новые книги",
+          "новый книги"
+        ],
+        "answer": 1,
+        "explanation": "Çoğul sıfat biçimi новые olur."
+      }
+    ]
+  },
+  {
+    "id": "past",
+    "order": 7,
+    "title": "Geçmiş zaman",
+    "level": "A1-A2",
+    "icon": "-л",
+    "summary": "Geçmiş zamanda fiil cinsiyete ve çoğula göre -л, -ла, -ло, -ли alır.",
+    "rules": [
+      "Erkek özne: работал",
+      "Kadın özne: работала",
+      "Nötr: работало",
+      "Çoğul: работали"
+    ],
+    "examples": [
+      {
+        "ru": "Он работал вчера.",
+        "stress": "Он рабо́тал вчера́.",
+        "reading": "On rabotal vçera.",
+        "tr": "O dün çalıştı."
+      },
+      {
+        "ru": "Она читала книгу.",
+        "stress": "Она́ чита́ла кни́гу.",
+        "reading": "Ana çitala knigu.",
+        "tr": "O kitap okudu."
+      },
+      {
+        "ru": "Мы были дома.",
+        "stress": "Мы бы́ли до́ма.",
+        "reading": "Mı bıli doma.",
+        "tr": "Biz evdeydik."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Kadın konuşmacı “çalıştım” derken hangisini kullanır?",
+        "options": [
+          "Я работал.",
+          "Я работала.",
+          "Я работали."
+        ],
+        "answer": 1,
+        "explanation": "Kadın özne için -ла kullanılır."
+      },
+      {
+        "q": "“Onlar okudu” hangisidir?",
+        "options": [
+          "Они читали.",
+          "Они читал.",
+          "Они читала."
+        ],
+        "answer": 0,
+        "explanation": "Çoğul geçmiş zaman -ли alır."
+      },
+      {
+        "q": "Erkek özne için “geldi” hangisidir?",
+        "options": [
+          "пришла",
+          "пришли",
+          "пришёл"
+        ],
+        "answer": 2,
+        "explanation": "Eril tekil biçim пришёл olur."
+      }
+    ]
+  },
+  {
+    "id": "accusative",
+    "order": 8,
+    "title": "Belirtme hâli",
+    "level": "A2",
+    "icon": "В.п.",
+    "summary": "Doğrudan nesneyi belirtme hâliyle kur; canlı eril ve dişil isimlerde değişimi gör.",
+    "rules": [
+      "Cansız eril isim çoğu zaman değişmez: вижу стол",
+      "Dişil -а → -у; -я → -ю: читаю книгу",
+      "Canlı eril isimde -а/-я biçimi görülür: вижу брата",
+      "Nötr isim çoğu zaman değişmez: вижу окно"
+    ],
+    "examples": [
+      {
+        "ru": "Я читаю книгу.",
+        "stress": "Я чита́ю кни́гу.",
+        "reading": "Ya çitayu knigu.",
+        "tr": "Kitabı okuyorum."
+      },
+      {
+        "ru": "Я вижу брата.",
+        "stress": "Я ви́жу бра́та.",
+        "reading": "Ya viju brata.",
+        "tr": "Erkek kardeşimi görüyorum."
+      },
+      {
+        "ru": "Мы покупаем хлеб.",
+        "stress": "Мы покупа́ем хлеб.",
+        "reading": "Mı pakupayem hleb.",
+        "tr": "Ekmek satın alıyoruz."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "“Kitabı okuyorum” hangisidir?",
+        "options": [
+          "Я читаю книга.",
+          "Я читаю книгу.",
+          "Я читаю книгой."
+        ],
+        "answer": 1,
+        "explanation": "книга belirtme hâlinde книгу olur."
+      },
+      {
+        "q": "Cansız eril “стол” doğrudan nesne olduğunda çoğu kez ne olur?",
+        "options": [
+          "değişmez",
+          "-у alır",
+          "-ой alır"
+        ],
+        "answer": 0,
+        "explanation": "вижу стол"
+      },
+      {
+        "q": "“Kız kardeşimi görüyorum” hangisidir?",
+        "options": [
+          "Я вижу сестра.",
+          "Я вижу сестру.",
+          "Я вижу сестре."
+        ],
+        "answer": 1,
+        "explanation": "сестра → сестру"
+      }
+    ]
+  },
+  {
+    "id": "motion",
+    "order": 9,
+    "title": "Hareket fiillerine giriş",
+    "level": "A2",
+    "icon": "идти",
+    "summary": "Yürüyerek ve araçla tek yönlü hareketi ayır: идти ve ехать.",
+    "rules": [
+      "идти = şu anda yürüyerek bir yöne gitmek",
+      "ехать = şu anda araçla bir yöne gitmek",
+      "ходить / ездить = düzenli, tekrarlı veya farklı yönlerde hareket",
+      "Hedef sıklıkla в/на + belirtme hâliyle gelir"
+    ],
+    "examples": [
+      {
+        "ru": "Я иду в школу.",
+        "stress": "Я иду́ в шко́лу.",
+        "reading": "Ya idu v şkolu.",
+        "tr": "Okula yürüyorum."
+      },
+      {
+        "ru": "Мы едем в центр.",
+        "stress": "Мы е́дем в центр.",
+        "reading": "Mı yedem v tsentr.",
+        "tr": "Merkeze araçla gidiyoruz."
+      },
+      {
+        "ru": "Он часто ходит пешком.",
+        "stress": "Он ча́сто хо́дит пешко́м.",
+        "reading": "On çasta hodit peşkom.",
+        "tr": "O sık sık yürüyerek gider."
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Şu anda araçla gidiyorsan hangi fiil uygundur?",
+        "options": [
+          "ехать",
+          "идти",
+          "читать"
+        ],
+        "answer": 0,
+        "explanation": "ехать araçla tek yönlü hareketi anlatır."
+      },
+      {
+        "q": "Şu anda yürüyerek gidiyorsan hangisi kullanılır?",
+        "options": [
+          "ездить",
+          "идти",
+          "стоять"
+        ],
+        "answer": 1,
+        "explanation": "идти yürüyerek tek yönlü harekettir."
+      },
+      {
+        "q": "Düzenli olarak farklı yerlere araçla gitmek için hangisi uygundur?",
+        "options": [
+          "ехать",
+          "ездить",
+          "идти"
+        ],
+        "answer": 1,
+        "explanation": "ездить tekrarlı/çok yönlü araç hareketidir."
+      }
+    ]
+  }
+]

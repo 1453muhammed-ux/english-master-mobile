@@ -1,29 +1,41 @@
-WORDPILOT v4.3.1 VALIDATION REPORT
+WORDPILOT v5.0.0 — DOĞRULAMA RAPORU
 
-Sürüm: 4.3.1
-Temel: WordPilot v4.3.0
+TEMEL VE VERİ KORUMA
+- Temel paket: WordPilot v4.3.1
+- localStorage anahtarı değişmedi: wordpilot_v34
+- words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
+- ru_words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
+- uz_words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
 
-DOSYA VE VERİ KONTROLLERİ
-- app.js: 341 satır; modüler yapı korunuyor.
-- modules/v431.js: 56 satır; dil bazlı XP ve tema düzeltmeleri burada.
-- English words.json: 5488 kayıt.
-- Russian ru_words.json: 1000 kayıt.
-- Uzbek uz_words.json: 137 kayıt.
-- Kiril alfabesi: 33 harf.
-- Rusça gramer: 9 modül.
-- Rusça diyalog: 15 paket.
+İÇERİK SAYILARI
+- English kayıt: 5488
+- Русский kayıt: 1000
+- O‘zbekcha kayıt: 137
+- Hikâye: 18 (EN 6, RU 6, UZ 6)
+- Kiril harfi: 33
+- Rusça dil bilgisi modülü: 9
+- Rusça diyalog: 15
 
-TESTLER
-- app.js, sw.js ve tüm modules/*.js için Node.js sözdizimi kontrolü: başarılı.
-- Tüm JSON dosyalarının ayrıştırılması: başarılı.
-- HTML benzersiz ID kontrolü: başarılı (208 ID, tekrar yok).
-- HTML içindeki yerel script ve stil dosyalarının varlık kontrolü: başarılı.
-- Service Worker v4.3.1 önbelleği ve modules/v431.js kaydı: başarılı.
-- Dil bazlı XP çalışma zamanı simülasyonu: başarılı.
-- GitHub ZIP bütünlük kontrolü: başarılı.
+STATİK TEKNİK KONTROLLER
+- JavaScript sözdizimi: 13 / 13 başarılı
+- JSON ayrıştırma: 17 / 17 başarılı
+- HTML benzersiz ID kontrolü: 262 ID, tekrar yok
+- HTML yerel script/CSS dosya referansları: eksik dosya yok
+- Menü ve v5 özellik bağlantıları: bütün hedef view bölümleri mevcut
+- Firebase Hosting workflow: .github/workflows/firebase-hosting-live.yml mevcut
+- ZIP içine Functions, Firestore rules ve güvenlik kurulum belgesi dâhil
 
-KORUNANLAR
-- STORE anahtarı wordpilot_v34 değişmedi.
-- English/Russian/Uzbek kurs durumları ayrı tutuluyor.
-- Genel lig XP üç kursun toplamı olarak korunuyor.
-- Google giriş, Firebase senkronizasyonu, lig, profil ve çevrimdışı dosyalar korunuyor.
+V5 ÖZELLİK KONTROLÜ
+- Dil bazlı lig alanları: coursePoints.en / coursePoints.ru / coursePoints.uz
+- TTS: SpeechSynthesis + dil/ses/hız tercihi
+- Telaffuz: Web Speech Recognition + dil bazlı skor/geçmiş
+- Hikâyeler: metin, çeviri, TTS, soru ve tamamlama XP
+- Adaptif plan: yanlış, tekrar, son çalışma ve zorluk önceliği
+- Çoklu cihaz: v5 ilerlemesi kurs state içinde; ses tercihleri profil içinde
+- AI: yerel koç hemen hazır; güvenli Cloud Function şablonu paketli
+- Güvenlik: CSP başlıkları, App Check hazırlığı, Firestore kuralları, Function hız sınırı, kopyalama caydırıcısı
+
+SINIRLILIKLAR / ETKİNLEŞTİRME GEREKENLER
+- Bu ortamda tarayıcı arayüzü yerel HTTP erişimi yönetici tarafından engellendiği için görsel uçtan uca test yapılamadı; HTML/CSS/JS statik kontrolleri tamamlandı.
+- Gerçek AI modu yalnızca Firebase Functions, App Check ve OPENAI_API_KEY Secret dağıtıldıktan sonra açılır.
+- Statik Hosting’de bulunan JSON içerikleri F12/ağ panelinden mutlak olarak saklanamaz. Paket, App Check isteyen getContentPack backend şablonunu içerir; güçlü koruma için sonraki aşamada statik JSON’lar Hosting’den kaldırılarak bu katmana taşınmalıdır.

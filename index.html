@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=4.3.1">
+  <link rel="stylesheet" href="style.css?v=5.0.0">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='4.3.1',KEY='wordpilot_asset_build';
+    const BUILD='5.0.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v4.3.1</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.0.0</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -238,11 +238,11 @@
             <button class="mode-card" data-start="en-tr"><span class="mode-icon green">EN</span><div><b>Yaz EN → TR</b><small>Hatırlamayı güçlendir</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="tr-en"><span class="mode-icon orange">TR</span><div><b>Yaz TR → EN</b><small>Aktif üretim pratiği</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="listening"><span class="mode-icon indigo">🔊</span><div><b>Sesli / Gizli Mod</b><small>Kelimeyi görmeden dinle</small></div><em>Başla</em></button>
-            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet">▭</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><span class="mode-card-art" aria-hidden="true"><i>I</i><b>___</b><i>home</i></span><em>Başla</em></button>
-            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky">✎</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><span class="mode-card-art sentence-art" aria-hidden="true"><i>Я</i><b>иду…</b><i>→</i></span><em>Başla</em></button>
+            <button class="mode-card lesson-theme cloze-theme" data-start="cloze"><span class="mode-icon violet lesson-symbol">_</span><div><b>Boşluk Doldurma</b><small>Kelimeyi cümle içinde bul</small></div><em>Başla</em></button>
+            <button class="mode-card lesson-theme sentence-theme" data-start="sentence"><span class="mode-icon sky lesson-symbol">…</span><div><b>Cümle Tamamlama</b><small>Doğru cümle sonunu seç</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="dictation"><span class="mode-icon gold">🎧</span><div><b>Dinlediğini Yaz</b><small>Sesi dinle ve kelimeyi yaz</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="matching"><span class="mode-icon teal">↔</span><div><b>Eşleştirme</b><small>Kelime ve anlamları eşleştir</small></div><em>Başla</em></button>
-            <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon sky">⇄</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><span class="mode-card-art ordering-art" aria-hidden="true"><i>go</i><i>I</i><i>home</i></span><em>Başla</em></button>
+            <button id="orderingModeCard" class="mode-card lesson-theme ordering-theme" data-start="ordering"><span class="mode-icon teal lesson-symbol">1·2·3</span><div><b>Cümle Sıralama</b><small>Örnek cümleyi doğru sıraya koy</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="synonym"><span class="mode-icon pink">≈</span><div><b>Eş Anlamlı</b><small>Yakın anlamlı kelimeyi bul</small></div><em>Başla</em></button>
             <button class="mode-card" data-start="antonym"><span class="mode-icon red">≠</span><div><b>Zıt Anlamlı</b><small>Karşıt anlamlı kelimeyi bul</small></div><em>Başla</em></button>
           </div>
@@ -295,6 +295,21 @@
         <p id="offlineStatus" class="settings-note">Yaklaşık 5,4 MB: ana sayfa, oyun dosyaları, Kiril Akademisi, simgeler ve English / Русский / O‘zbekcha kurs verileri tarayıcı hafızasına kaydedilir. İndirilenler klasörüne dosya düşmez.</p>
       </section>
 
+      <section class="v5-hub" aria-labelledby="v5HubTitle">
+        <div class="v5-hub-head">
+          <div><p class="eyebrow">WORDPILOT 5 · AKILLI ÖĞRENME</p><h2 id="v5HubTitle">Dinle, konuş, oku ve sana özel ilerle</h2><p>Aktif kursun için TTS, telaffuz, hikâyeler, adaptif plan ve güvenli AI koçu.</p></div>
+          <span class="v5-version-pill">v5.0</span>
+        </div>
+        <div class="v5-feature-grid">
+          <button class="v5-feature-card voice" type="button" data-v5-open="pronunciation"><span>🎙</span><div><b>Telaffuz Laboratuvarı</b><small>Dinle, kaydet ve dil bazlı puanını gör</small></div><em>Aç →</em></button>
+          <button class="v5-feature-card ai" type="button" data-v5-open="ai"><span>✦</span><div><b>AI Konuşma Partneri</b><small>Günlük senaryolarda yazılı konuşma pratiği</small></div><em>Aç →</em></button>
+          <button class="v5-feature-card stories" type="button" data-v5-open="stories"><span>📚</span><div><b>Hikâyeler</b><small>A1–A2 metin, çeviri, ses ve sorular</small></div><em>Oku →</em></button>
+          <button class="v5-feature-card adaptive" type="button" data-v5-open="adaptive"><span>🎯</span><div><b>Adaptif Günlük Plan</b><small>Yanlışlarına ve tekrar zamanına göre hazırlanır</small></div><em>Plan →</em></button>
+          <button class="v5-feature-card stats" type="button" data-nav="progress"><span>📈</span><div><b>Profesyonel İstatistik</b><small>Kurs, oyun, konu ve telaffuz analizi</small></div><em>Gör →</em></button>
+          <button class="v5-feature-card tts" type="button" data-v5-open="pronunciation"><span>🔊</span><div><b>Gerçek TTS Merkezi</b><small>Ses, hız ve yavaş dinleme ayarları</small></div><em>Ayarla →</em></button>
+        </div>
+      </section>
+
       <footer class="site-footer">
         <div class="footer-brand">
           <span class="brandmark"><span>W</span></span>
@@ -307,7 +322,7 @@
           <button data-nav="progress">İlerleme</button>
           <a href="https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing" target="_blank" rel="noopener noreferrer">PDF dosyaları ↗</a>
         </div>
-        <div class="footer-meta"><span>© 2026 WordPilot · Powered by English Master</span><span>Google girişli veriler Firebase’de, misafir verileri yalnızca cihazda tutulur.</span></div>
+        <div class="footer-meta"><span>© 2026 WordPilot · Powered by English Master 2020</span><span>Google girişli veriler Firebase’de, misafir verileri yalnızca cihazda tutulur.</span></div>
       </footer>
     </section>
 
@@ -354,6 +369,51 @@
         <div id="dialogueGrid" class="dialogue-grid"></div>
       </section>
       <section id="pathLessonPanel" class="path-lesson-panel panel" hidden></section>
+    </section>
+
+    <section id="view-pronunciation" class="view v5-view">
+      <div class="section-title"><div><p class="eyebrow">WORDPILOT VOICE LAB</p><h1>Telaffuz ve TTS</h1><p class="muted">Tarayıcının doğal seslerini kullan; mikrofonla oku ve kursa özel puanını kaydet.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <div class="voice-lab-grid">
+        <article class="panel voice-target-panel">
+          <div class="voice-course-line"><span id="voiceCourseFlag">🇬🇧</span><div><small>AKTİF KURS</small><b id="voiceCourseName">English</b></div><button id="newPronunciationTarget" class="soft" type="button">Yeni hedef</button></div>
+          <span id="pronunciationTargetLevel" class="chip">A1</span>
+          <h2 id="pronunciationTarget">Hello</h2>
+          <p id="pronunciationTargetReading" class="pron"></p>
+          <p id="pronunciationTargetMeaning" class="voice-target-meaning">Merhaba</p>
+          <div class="voice-target-actions"><button id="pronunciationListen" class="secondary" type="button">🔊 Normal dinle</button><button id="pronunciationListenSlow" class="secondary" type="button">🐢 Yavaş dinle</button></div>
+          <button id="pronunciationRecord" class="mic-record-button" type="button"><span>🎙</span><b>Okumaya başla</b><small>Mikrofon izni istenir</small></button>
+          <div id="pronunciationResult" class="pronunciation-result" hidden></div>
+        </article>
+        <article class="panel tts-settings-panel">
+          <p class="eyebrow">TTS AYARLARI</p><h2>Ses merkezini ayarla</h2>
+          <label>Ses<select id="v5VoiceSelect"></select></label>
+          <label>Konuşma hızı <output id="v5RateOutput">0.85×</output><input id="v5Rate" type="range" min="0.55" max="1.25" step="0.05" value="0.85"></label>
+          <div class="tts-test-row"><button id="v5TestVoice" class="primary" type="button">Sesi test et</button><button id="v5StopVoice" class="secondary" type="button">Durdur</button></div>
+          <div class="voice-support-note"><span>ℹ</span><p id="voiceSupportNote">Sesler cihaz ve tarayıcıya göre değişebilir. Özbekçe ses bulunmazsa en yakın Türkçe ses kullanılır.</p></div>
+          <div class="pronunciation-course-score"><span>Kurs telaffuz puanı</span><strong id="pronunciationCourseScore">—</strong><small id="pronunciationAttemptCount">0 deneme</small></div>
+        </article>
+      </div>
+      <section class="panel pronunciation-history-panel"><div class="panel-head"><h3>Son telaffuz denemeleri</h3><span id="pronunciationPrivacy">Ses kaydı WordPilot tarafından saklanmaz.</span></div><div id="pronunciationHistory" class="pronunciation-history"></div></section>
+    </section>
+
+    <section id="view-ai" class="view v5-view">
+      <div class="section-title"><div><p class="eyebrow">WORDPILOT AI COACH</p><h1>Konuşma partneri</h1><p class="muted">Aktif kursunda A1–A2 seviyesinde konuş; düzeltmeleri Türkçe gör.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <div class="ai-coach-layout">
+        <aside class="panel ai-scenarios"><p class="eyebrow">SENARYO SEÇ</p><div id="aiScenarioList"></div><div id="aiBackendStatus" class="ai-backend-status"></div></aside>
+        <section class="panel ai-chat-panel"><div class="ai-chat-head"><div><span id="aiCourseFlag">🇬🇧</span><div><b id="aiScenarioTitle">Tanışma</b><small id="aiScenarioHint">Kısa ve doğal cevaplar ver</small></div></div><button id="aiResetChat" class="soft" type="button">Sıfırla</button></div><div id="aiChatMessages" class="ai-chat-messages"></div><form id="aiChatForm" class="ai-chat-form"><textarea id="aiChatInput" maxlength="600" rows="2" placeholder="Mesajını yaz…" required></textarea><button class="primary" type="submit">Gönder</button></form><p class="ai-privacy-note">Gerçek AI modu güvenli Firebase Function üzerinden çalışır; API anahtarı tarayıcıya konmaz.</p></section>
+      </div>
+    </section>
+
+    <section id="view-stories" class="view v5-view">
+      <div class="section-title"><div><p class="eyebrow">STORIES · A1–A2</p><h1>Hikâyeler ve okuma</h1><p class="muted">Satır satır çeviri, TTS ve metin sonu sorularıyla bağlam içinde öğren.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <div class="story-layout"><aside class="panel story-library"><div class="story-library-head"><b id="storyCourseTitle">English hikâyeleri</b><span id="storyProgressText">0 / 0 tamamlandı</span></div><div id="storyList"></div></aside><article id="storyReader" class="panel story-reader"><div class="story-empty"><span>📖</span><h2>Bir hikâye seç</h2><p>Metni dinleyebilir, çeviriyi açabilir ve soruları çözebilirsin.</p></div></article></div>
+    </section>
+
+    <section id="view-adaptive" class="view v5-view">
+      <div class="section-title"><div><p class="eyebrow">ADAPTIVE LEARNING</p><h1>Sana özel günlük plan</h1><p class="muted">Yanlışlar, tekrar zamanı, zorluk ve son çalışma tarihine göre otomatik hazırlanır.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <section class="panel adaptive-hero"><div><span>🎯</span><div><h2 id="adaptiveTitle">Bugünkü plan hazırlanıyor</h2><p id="adaptiveSummary">Kurs verilerin analiz ediliyor.</p></div></div><button id="startAdaptivePlan" class="primary" type="button">Planı başlat</button></section>
+      <div id="adaptiveMetrics" class="adaptive-metrics"></div>
+      <section class="panel"><div class="panel-head"><h3>Önerilen kayıtlar</h3><span id="adaptiveCount">0 kayıt</span></div><div id="adaptiveWordList" class="adaptive-word-list"></div></section>
     </section>
 
     <section id="view-library" class="view">
@@ -427,6 +487,16 @@
         <article class="period-card"><small>BU AY</small><strong id="pMonthPoints">0</strong><span>XP · <b id="pMonthAnswers">0</b> cevap</span></article>
         <article class="period-card"><small>TOPLAM</small><strong id="pTotalPoints">0</strong><span>XP · <b id="pSessions">0</b> oturum</span></article>
       </div>
+      <section class="v5-pro-stats panel">
+        <div class="v5-pro-head"><div><p class="eyebrow">PROFESYONEL PANEL</p><h2>Aktif kurs analizi</h2></div><span id="v5StatsCourse">English</span></div>
+        <div id="v5StatCards" class="v5-stat-cards"></div>
+        <div class="v5-chart-grid">
+          <article><div class="v5-chart-title"><b>14 günlük çalışma</b><small id="v5ActivityCaption">Cevap sayısı</small></div><div id="v5ActivityChart" class="v5-bar-chart"></div></article>
+          <article><div class="v5-chart-title"><b>Oyun başarısı</b><small>Doğruluk ve kullanım</small></div><div id="v5ModeChart" class="v5-mode-chart"></div></article>
+          <article><div class="v5-chart-title"><b>Telaffuz gelişimi</b><small>Son 10 deneme</small></div><div id="v5PronunciationChart" class="v5-pron-chart"></div></article>
+          <article><div class="v5-chart-title"><b>Cihaz senkronizasyonu</b><small>Bulut durumu</small></div><div id="v5SyncMatrix" class="v5-sync-matrix"></div></article>
+        </div>
+      </section>
       <div id="coursePerformanceGrid" class="course-performance-grid"></div>
       <div class="report-grid">
         <article class="panel report-main"><h3>Genel hakimiyet</h3><div class="donut" id="masteryDonut"><div><strong id="masteryPercent">0%</strong><span>işaretlendi</span></div></div><div class="legend"><span><i class="l1"></i>Öğreniyorum <b id="rLearn">0</b></span><span><i class="l2"></i>Ezberledim <b id="rMem">0</b></span><span><i class="l3"></i>Zorlanıyorum <b id="rHard">0</b></span></div></article>
@@ -441,11 +511,11 @@
 
     <section id="view-league" class="view">
       <div class="section-title league-page-title">
-        <div><p class="eyebrow">WORDPILOT LİGİ</p><h1>Lig sıralaması</h1><p class="muted">Google hesabıyla giriş yapan öğrencilerin toplam XP değerleri.</p></div>
+        <div><p class="eyebrow">WORDPILOT LİGİ</p><h1>Lig sıralaması</h1><p class="muted">Aktif kursun XP değerlerine göre ayrı sıralama.</p></div>
       </div>
       <div class="league-page-wrap">
         <article class="panel leaderboard-panel league-page-panel">
-          <div class="leaderboard-head"><div><p class="eyebrow">WORDPILOT LİGİ</p><h3>Kim kaç XP topladı?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
+          <div class="leaderboard-head"><div><p class="eyebrow" id="leagueCourseEyebrow">ENGLISH LİGİ</p><h3 id="leagueCourseTitle">Bu kursta kim önde?</h3></div><small id="leaderboardScope">Google hesapları</small></div>
           <div class="league-hero">
             <div class="league-cup">🏆</div>
             <div><b>Kelime Pilotları Ligi</b><small id="leaguePeriodText">Toplam XP’ye göre sıralama</small></div>
@@ -658,14 +728,16 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="app.js?v=4.3.1" defer></script>
-<script src="modules/firebase-sync.js?v=4.3.1" defer></script>
-<script src="modules/learning-engine.js?v=4.3.1" defer></script>
-<script src="modules/ui-events.js?v=4.3.1" defer></script>
-<script src="modules/course-engine.js?v=4.3.1" defer></script>
-<script src="modules/russian-path.js?v=4.3.1" defer></script>
-<script src="modules/v43.js?v=4.3.1" defer></script>
-<script src="modules/v431.js?v=4.3.1" defer></script>
-<script src="modules/bootstrap.js?v=4.3.1" defer></script>
+<script src="security-config.js?v=5.0.0" defer></script>
+<script src="app.js?v=5.0.0" defer></script>
+<script src="modules/firebase-sync.js?v=5.0.0" defer></script>
+<script src="modules/learning-engine.js?v=5.0.0" defer></script>
+<script src="modules/ui-events.js?v=5.0.0" defer></script>
+<script src="modules/course-engine.js?v=5.0.0" defer></script>
+<script src="modules/russian-path.js?v=5.0.0" defer></script>
+<script src="modules/v43.js?v=5.0.0" defer></script>
+<script src="modules/v431.js?v=5.0.0" defer></script>
+<script src="modules/v50.js?v=5.0.0" defer></script>
+<script src="modules/bootstrap.js?v=5.0.0" defer></script>
 </body>
 </html>

@@ -203,6 +203,7 @@ async function initFirebase(){
   if(!await loadFirebaseSdk()){updateAuthUI();setSyncStatus('Çevrimdışı kullanım açık','idle');return false}
   try{
     if(!window.firebase.apps.length)window.firebase.initializeApp(FIREBASE_CONFIG);
+    if(typeof v5InitAppCheck==='function')await v5InitAppCheck();
     fbAuth=window.firebase.auth();fbDb=window.firebase.firestore();
     // Eski yerel kayıtlardaki tanımsız alanlar senkronizasyonu durdurmasın.
     try{fbDb.settings({ignoreUndefinedProperties:true})}catch(error){console.warn('Firestore settings',error)}
@@ -227,9 +228,9 @@ async function signInWithGoogle(){
 }
 function switchToGuestMode({closeDialog=true,announce=true}={}){
   authUser=null;cloudReady=false;cloudLeaderboardCache={};stopLeaderboardRealtime();
-  const goal=Number(profile?.goal||20),voiceAccent=profile?.voiceAccent||'en-US';
+  const goal=Number(profile?.goal||20),voiceAccent=profile?.voiceAccent||'en-US',v5Voices=profile?.v5Voices||{},v5Rates=profile?.v5Rates||{};
   const guestState=readLocalState('guest@local')||defaultState();
-  profile={name:'Misafir',email:'guest@local',goal,voiceAccent};
+  profile={name:'Misafir',email:'guest@local',goal,voiceAccent,v5Voices,v5Rates};
   state=ensureStateShape(guestState);normalizeDay();save({cloud:false});
   localStorage.setItem(GUEST_ACK_KEY,'1');
   updateAuthUI();renderAll();
@@ -302,10 +303,10 @@ function leaderAvatar(x){
 }
 function renderLeaderboardRows(board,currentKey){
   const list=$('#leaderboardList');if(!list)return;const rows=(board||[]).slice().sort((a,b)=>leagueScore(b)-leagueScore(a)||String(a.name||'').localeCompare(String(b.name||''),'tr')).slice(0,100);renderLeagueSummary(rows,currentKey);
-  list.innerHTML=rows.map((x,i)=>{const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()),medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'',detail=isCurrent?'Sen':`E ${Number(x.memorized)||0} · Ö ${Number(x.learn)||0} · Z ${Number(x.hard)||0} · %${Number(x.accuracy)||0}`;return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>XP</small></strong></div>`}).join('')||'<p class="muted">Bu dönemde henüz puan kaydı yok.</p>';
+  list.innerHTML=rows.map((x,i)=>{const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()),medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'',detail=isCurrent?'Sen':`${COURSES[activeCourse].short} ligi · %${Number(x.coursePoints?.[activeCourse]?.accuracy??x.accuracy)||0} doğruluk`;return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>XP</small></strong></div>`}).join('')||'<p class="muted">Bu dönemde henüz puan kaydı yok.</p>';
 }
 async function refreshCloudLeaderboard(force=false){
-  if(!authUser||!fbDb)return;const cacheKey=`${leaderboardAudience}:${leaderboardPeriod}`;
+  if(!authUser||!fbDb)return;const cacheKey=`${activeCourse}:${leaderboardAudience}:${leaderboardPeriod}`;
   if(leaderboardAudience==='world'){
     if(!force&&leaderboardUnsubscribe&&leaderboardRealtimeKey===cacheKey)return;
     stopLeaderboardRealtime();leaderboardRealtimeKey=cacheKey;

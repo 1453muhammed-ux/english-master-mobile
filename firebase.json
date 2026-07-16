@@ -2,25 +2,58 @@
   "hosting": {
     "public": ".",
     "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      ".git/**",
       "app-*.js",
-      "style-*.css",
-      "sw-*.js",
-      "index(*).html",
+      "**/node_modules/**",
+      "SECURITY_SETUP.txt",
+      "VALIDATION_REPORT.txt",
       "update-*.html",
       "V4_*_RELEASE_NOTES.txt",
-      "VALIDATION_REPORT.txt",
+      "V4_3_1_RELEASE_NOTES.txt",
+      "**/.*",
       "GITHUB_UPLOAD.txt",
-      "README.txt",
-      "WORDPILOT_DESIGN_SYSTEM.txt",
+      "style-*.css",
+      "firestore.rules",
       "YUKLEME_ADIMLARI.txt",
+      ".git/**",
+      "index(*).html",
+      "functions/**",
+      "firebase.json",
       "V4_3_RELEASE_NOTES.txt",
-      "V4_3_1_RELEASE_NOTES.txt"
+      "sw-*.js",
+      "V5_0_RELEASE_NOTES.txt",
+      "README.txt",
+      "WORDPILOT_DESIGN_SYSTEM.txt"
     ],
     "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://*.cloudfunctions.net https://securetoken.googleapis.com https://identitytoolkit.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com https://accounts.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' https://accounts.google.com"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "camera=(), geolocation=(), microphone=(self), payment=(), usb=()"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin-allow-popups"
+          }
+        ]
+      },
       {
         "source": "/index.html",
         "headers": [
@@ -58,5 +91,12 @@
         ]
       }
     ]
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs22"
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   }
 }

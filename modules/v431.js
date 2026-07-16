@@ -1,4 +1,4 @@
-/* WordPilot v4.3.1 — language-specific XP and themed lesson cards.
+/* WordPilot v5.0.0 — language-specific XP and themed lesson cards.
    Course states stay separate; only the public league score is the sum of all courses. */
 function v431CourseMetrics(course){
   const meta=COURSES[course],states=courseStatesFor(),st=states[course]||defaultState();
