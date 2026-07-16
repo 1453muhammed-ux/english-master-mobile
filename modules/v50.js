@@ -185,7 +185,7 @@ function renderV5ProfessionalStats(){
 const v5OldUpdateLeaderboardEntry=updateLeaderboardEntry;
 updateLeaderboardEntry=function(){v5OldUpdateLeaderboardEntry();let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}const email=(profile?.email||'guest@local').toLowerCase(),row=board.find(x=>String(x.email||'').toLowerCase()===email);if(row){row.coursePoints=v431CoursePoints();row.activeCourse=activeCourse;localStorage.setItem(LEADERBOARD_KEY,JSON.stringify(board))}};
 
-function v5CoursePoint(row,period=leaderboardPeriod){const cp=row?.coursePoints?.[activeCourse]||{},field=period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points';return Math.max(0,Math.round(Number(cp[field])||0))}
+function v5CoursePoint(row,period=leaderboardPeriod){const field=period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points',hasCourse=!!(row?.coursePoints&&Object.prototype.hasOwnProperty.call(row.coursePoints,activeCourse));if(hasCourse)return Math.max(0,Math.round(Number(row.coursePoints[activeCourse]?.[field])||0));return Math.max(0,Math.round(Number(row?.[field])||0))}
 leagueScore=function(row,period=leaderboardPeriod){return v5CoursePoint(row,period)};
 leagueField=function(period=leaderboardPeriod){return `coursePoints.${activeCourse}.${period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points'}`};
 leagueLabel=function(period=leaderboardPeriod){const label=period==='daily'?'Bugünkü':period==='weekly'?'Bu haftaki':period==='monthly'?'Bu ayki':'Toplam';return `${COURSES[activeCourse].name} · ${label} XP’ye göre`};

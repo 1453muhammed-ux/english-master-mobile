@@ -1,4 +1,4 @@
-WORDPILOT v5.0.1 — SÜRÜM NOTLARI
+WORDPILOT v5.0.2 — SÜRÜM NOTLARI
 
 ARAYÜZ
 - Boşluk Doldurma, Cümle Tamamlama ve Cümle Sıralama kartlarındaki sağ taraf görselleri kaldırıldı.
@@ -35,3 +35,10 @@ GÜVENLİK
 - Firebase App Check entegrasyonuna hazır security-config.js.
 - Ders alanlarında sağ tık ve toplu kopyalama caydırıcısı.
 - Not: Kullanıcının tarayıcısına gönderilen içerik teknik olarak tamamen saklanamaz; güçlü içerik koruması için backend’e taşıma gerekir.
+
+V5.0.2 LİG UYUMLULUK DÜZELTMESİ
+- Eski kullanıcıların yalnızca toplam XP içeren lig kayıtları yeniden listelenir.
+- Dil bazlı kurs XP kaydı bulunan kullanıcılar ilgili English, Русский veya O‘zbekcha puanıyla sıralanır.
+- Dil bazlı kayıt henüz yoksa eski toplam XP geçici uyumluluk değeri olarak kullanılır.
+- Kullanıcı yeni sürümde çalışıp senkronize olduğunda gerçek kurs XP alanlarına otomatik geçer.
+- Kurs, dönem ve arkadaş/dünya ligi önbellek anahtarları ayrıldı.

@@ -1,4 +1,4 @@
-WORDPILOT v5.0.1
+WORDPILOT v5.0.2
 
 WordPilot; English, Русский ve O‘zbekcha kurslarını aynı uygulamada sunan, Firebase senkronizasyonlu ve çevrimdışı çalışabilen bir PWA dil öğrenme platformudur.
 
@@ -28,4 +28,8 @@ Tarayıcıya gönderilen statik HTML, JavaScript ve JSON dosyaları F12’den ta
 GERÇEK AI MODU
 Yerel koç hemen çalışır. Gerçek bulut AI modu; Firebase Blaze, Cloud Functions, App Check ve OPENAI_API_KEY Secret etkinleştirildikten sonra security-config.js içindeki aiEnabled değeri true yapılarak açılır. Gizli API anahtarı hiçbir zaman ön yüz dosyalarına yazılmamalıdır.
 
-Canlı test: https://wordpilot-7a574.web.app/?wpbuild=5.0.1
+Canlı test: https://wordpilot-7a574.web.app/?wpbuild=5.0.2
+
+LİG UYUMLULUĞU
+- Eski toplam XP kayıtları görünmeye devam eder.
+- Yeni kullanıcılar aktif kursun dil bazlı XP alanıyla sıralanır.

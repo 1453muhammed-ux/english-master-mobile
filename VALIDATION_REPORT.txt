@@ -1,41 +1,25 @@
-WORDPILOT v5.0.1 — DOĞRULAMA RAPORU
+WORDPILOT v5.0.2 — DOĞRULAMA RAPORU
 
-TEMEL VE VERİ KORUMA
-- Temel paket: WordPilot v4.3.1
-- localStorage anahtarı değişmedi: wordpilot_v34
-- words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
-- ru_words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
-- uz_words.json SHA-256 içeriği v4.3.1 ile aynı: EVET
+SÜRÜM
+- app.js VERSION: 5.0.2
+- index.html BUILD ve görünür sürüm: 5.0.2
+- Service Worker cache: wordpilot-v5.0.2
+- Manifest başlangıç adresi: ?wpbuild=5.0.2
 
-İÇERİK SAYILARI
-- English kayıt: 5488
-- Русский kayıt: 1000
-- O‘zbekcha kayıt: 137
-- Hikâye: 18 (EN 6, RU 6, UZ 6)
-- Kiril harfi: 33
-- Rusça dil bilgisi modülü: 9
-- Rusça diyalog: 15
+LİG DÜZELTMESİ
+- English, Русский ve O‘zbekcha ligleri aktif kursa göre ayrı puan kullanır.
+- coursePoints alanı bulunan yeni kayıtlarda gerçek kurs XP'si kullanılır.
+- coursePoints bulunmayan eski kullanıcılar, eski toplam XP alanıyla geçici olarak listelenir.
+- Dünya ligi sorgusu eski ve yeni kullanıcıları kapsayan genel dönem alanından yapılır.
+- Kurs + dönem + kitle önbellek anahtarları ayrıdır.
 
-STATİK TEKNİK KONTROLLER
-- JavaScript sözdizimi: 13 / 13 başarılı
-- JSON ayrıştırma: 17 / 17 başarılı
-- HTML benzersiz ID kontrolü: 262 ID, tekrar yok
-- HTML yerel script/CSS dosya referansları: eksik dosya yok
-- Menü ve v5 özellik bağlantıları: bütün hedef view bölümleri mevcut
-- Firebase Hosting workflow: .github/workflows/firebase-hosting-live.yml mevcut
-- ZIP içine Functions, Firestore rules ve güvenlik kurulum belgesi dâhil
+APP CHECK
+- reCAPTCHA Enterprise site key tanımlı.
+- App Check, Auth ve Firestore oluşturulmadan önce başlatılır.
+- Otomatik token yenileme açık.
+- Enforcement henüz açılmamalıdır; canlı metrik doğrulaması beklenmelidir.
 
-V5 ÖZELLİK KONTROLÜ
-- Dil bazlı lig alanları: coursePoints.en / coursePoints.ru / coursePoints.uz
-- TTS: SpeechSynthesis + dil/ses/hız tercihi
-- Telaffuz: Web Speech Recognition + dil bazlı skor/geçmiş
-- Hikâyeler: metin, çeviri, TTS, soru ve tamamlama XP
-- Adaptif plan: yanlış, tekrar, son çalışma ve zorluk önceliği
-- Çoklu cihaz: v5 ilerlemesi kurs state içinde; ses tercihleri profil içinde
-- AI: yerel koç hemen hazır; güvenli Cloud Function şablonu paketli
-- Güvenlik: CSP başlıkları, App Check hazırlığı, Firestore kuralları, Function hız sınırı, kopyalama caydırıcısı
-
-SINIRLILIKLAR / ETKİNLEŞTİRME GEREKENLER
-- Bu ortamda tarayıcı arayüzü yerel HTTP erişimi yönetici tarafından engellendiği için görsel uçtan uca test yapılamadı; HTML/CSS/JS statik kontrolleri tamamlandı.
-- Gerçek AI modu yalnızca Firebase Functions, App Check ve OPENAI_API_KEY Secret dağıtıldıktan sonra açılır.
-- Statik Hosting’de bulunan JSON içerikleri F12/ağ panelinden mutlak olarak saklanamaz. Paket, App Check isteyen getContentPack backend şablonunu içerir; güçlü koruma için sonraki aşamada statik JSON’lar Hosting’den kaldırılarak bu katmana taşınmalıdır.
+TEKNİK KONTROLLER
+- app.js, security-config.js, sw.js, modules/*.js ve functions/index.js: Node sözdizimi başarılı.
+- Tüm JSON dosyaları: geçerli.
+- Eski/yeni lig puanı uyumluluk örnekleri: başarılı.

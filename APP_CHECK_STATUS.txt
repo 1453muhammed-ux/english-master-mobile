@@ -7,4 +7,4 @@ Client integration: enabled before Firebase Auth/Firestore initialization
 CSP reCAPTCHA domains: enabled
 
 IMPORTANT:
-Do not enable enforcement yet. First deploy v5.0.1, open the live site on phone and PC, and confirm Google login, Firestore sync, league and App Check status all work. Then monitor App Check metrics before enforcement.
+App Check istemci entegrasyonu v5.0.2 içinde etkindir. Enforcement henüz açılmamalıdır. Önce v5.0.2 canlıya alınmalı; telefon ve bilgisayarda Google giriş, Firestore senkronizasyonu ve üç dil ligi test edilmelidir. Ardından Firebase App Check metriklerinde doğrulanmış istekler görülünce Firestore için enforcement açılabilir.

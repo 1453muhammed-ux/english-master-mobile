@@ -287,7 +287,8 @@ function updateLeaderboardCacheWithOwn(){
 function stopLeaderboardRealtime(){
   if(leaderboardUnsubscribe){try{leaderboardUnsubscribe()}catch{}leaderboardUnsubscribe=null}leaderboardRealtimeKey='';
 }
-function leagueField(period=leaderboardPeriod){return period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points'}
+function legacyLeagueField(period=leaderboardPeriod){return period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points'}
+function leagueField(period=leaderboardPeriod){return legacyLeagueField(period)}
 function leagueLabel(period=leaderboardPeriod){return period==='daily'?'Bugünkü XP’ye göre':period==='weekly'?'Bu haftaki XP’ye göre':period==='monthly'?'Bu ayki XP’ye göre':'Toplam XP’ye göre'}
 function leagueScore(row,period=leaderboardPeriod){return Math.max(0,Math.round(Number(row?.[leagueField(period)])||0))}
 function renderLeagueSummary(board,currentKey){
@@ -310,7 +311,7 @@ async function refreshCloudLeaderboard(force=false){
   if(leaderboardAudience==='world'){
     if(!force&&leaderboardUnsubscribe&&leaderboardRealtimeKey===cacheKey)return;
     stopLeaderboardRealtime();leaderboardRealtimeKey=cacheKey;
-    const query=fbDb.collection('leaderboard').orderBy(leagueField(),'desc').limit(100);
+    const query=fbDb.collection('leaderboard').orderBy(legacyLeagueField(),'desc').limit(250);
     leaderboardUnsubscribe=query.onSnapshot({includeMetadataChanges:true},snap=>{
       const rows=mergeOwnLeaderboardRow(snap.docs.map(doc=>({uid:doc.id,...doc.data()})));
       cloudLeaderboardCache[cacheKey]=rows;
@@ -331,7 +332,7 @@ async function refreshCloudLeaderboard(force=false){
 }
 
 function renderLeaderboard(){
-  const scope=$('#leaderboardScope'),cacheKey=`${leaderboardAudience}:${leaderboardPeriod}`;
+  const scope=$('#leaderboardScope'),cacheKey=`${activeCourse}:${leaderboardAudience}:${leaderboardPeriod}`;
   if(authUser&&fbDb){if(scope)scope.textContent=leaderboardAudience==='friends'?'Arkadaşların':'Tüm Google kullanıcıları';const cached=mergeOwnLeaderboardRow(cloudLeaderboardCache[cacheKey]||[]);if(cached.length)renderLeaderboardRows(cached,authUser.uid);else if($('#leaderboardList')){$('#leaderboardList').innerHTML='<p class="muted">XP listesi yükleniyor…</p>';renderLeagueSummary([currentLeaderboardRow()].filter(Boolean),authUser.uid)}refreshCloudLeaderboard();return}
   if(scope)scope.textContent=leaderboardAudience==='friends'?'Google girişi gerekli':'Bu cihazdaki profiller';let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}updateLeaderboardEntry();try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}if(leaderboardAudience==='friends')board=[];renderLeaderboardRows(board,(profile?.email||'guest@local').toLowerCase());
 }
