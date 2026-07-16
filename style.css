@@ -609,7 +609,7 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:980px){.v5-feature-grid{grid-template-columns:1fr 1fr}.voice-lab-grid,.ai-coach-layout,.story-layout{grid-template-columns:1fr}.ai-scenarios>div:first-of-type{grid-template-columns:1fr 1fr}.story-library{max-height:none}.v5-stat-cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){.v5-hub{padding:19px}.v5-hub-head{display:block}.v5-version-pill{display:inline-block;margin-top:10px}.v5-feature-grid{grid-template-columns:1fr}.v5-feature-card{min-height:92px}.voice-lab-grid{gap:12px}.voice-target-panel h2{font-size:38px}.ai-scenarios>div:first-of-type{grid-template-columns:1fr}.ai-chat-panel{min-height:600px}.ai-message{max-width:94%}.ai-chat-form{grid-template-columns:1fr}.story-reader-head{display:block}.story-reader-head>div:last-child{justify-content:flex-start}.story-lines p{font-size:16px}.adaptive-hero{align-items:flex-start;flex-direction:column}.adaptive-hero button{width:100%}.adaptive-metrics{grid-template-columns:1fr 1fr}.adaptive-word-list{grid-template-columns:1fr}.v5-stat-cards{grid-template-columns:1fr 1fr}.v5-chart-grid{grid-template-columns:1fr}.v5-mode-chart>div{grid-template-columns:100px 1fr 25px}.v5-sync-matrix{grid-template-columns:1fr}.pronunciation-history article{grid-template-columns:auto 1fr}.pronunciation-history time{display:none}}
 
-/* WordPilot v5.1.0 — compact professional dashboard */
+/* WordPilot v5.1.2 — compact professional dashboard */
 .learning-hub{margin:22px 0 12px;padding:22px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#0d1427,#232451);color:#fff;box-shadow:0 22px 48px rgba(13,20,39,.18);scroll-margin-top:84px}
 .learning-hub-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.learning-hub-head h2{margin:2px 0 7px;font-size:clamp(25px,4vw,37px);letter-spacing:-1px}.learning-hub-head p:last-child{margin:0;color:#bdc5d8;line-height:1.5}.learning-hub-version{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);padding:7px 11px;border-radius:999px;font-size:11px;font-weight:900;white-space:nowrap}
 .learning-hub-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:19px}.learning-hub-tabs button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#dbe1ee;border-radius:15px;padding:12px 9px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:7px;transition:.18s}.learning-hub-tabs button:hover{background:rgba(255,255,255,.12)}.learning-hub-tabs button.active{background:#fff;color:#27224f;border-color:#fff;box-shadow:0 9px 22px rgba(0,0,0,.16)}
@@ -625,3 +625,39 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:900px){.learning-hub-tabs{display:flex;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}.learning-hub-tabs::-webkit-scrollbar{display:none}.learning-hub-tabs button{min-width:max-content;padding:11px 14px}.compact-feature-grid,.compact-feature-grid.two-up{grid-template-columns:1fr 1fr}.progress-action-grid{grid-template-columns:1fr}}
 @media(max-width:620px){.learning-hub{margin:17px 0 10px;padding:17px 14px;border-radius:22px}.learning-hub-head{display:block}.learning-hub-version{display:inline-block;margin-top:9px}.learning-hub-tabs{margin-top:15px;margin-left:-4px;margin-right:-4px}.learning-hub-tabs button{font-size:12px}.dashboard-panel-head h2{font-size:23px}.compact-feature-grid,.compact-feature-grid.two-up{grid-template-columns:1fr}.dashboard-tab-panel .mentor-card{margin-top:0}.dashboard-info-content{padding:0 8px 8px}.dashboard-info-content .how-section{padding:20px 14px}.dashboard-info-details>summary{padding:14px}.progress-launch-card,.dashboard-tab-panel .league-launch-card{padding:13px 12px}.voice-target-actions{display:grid;grid-template-columns:1fr 1fr}.voice-target-actions .soft{grid-column:1/-1}.home-tools{margin-top:18px}.home-tool-card.drive{margin-top:4px}}
 .dashboard-tab-panel .v5-feature-card{color:var(--ink);background:#fff;border-color:var(--line);box-shadow:var(--shadow-soft);backdrop-filter:none}.dashboard-tab-panel .v5-feature-card:hover{background:#fff;box-shadow:var(--shadow);transform:translateY(-2px)}.dashboard-tab-panel .v5-feature-card small{color:var(--muted)}.dashboard-tab-panel .v5-feature-card em{color:var(--primary)}.dashboard-tab-panel .v5-feature-card.voice{background:linear-gradient(145deg,#fff,#fff0f4)}.dashboard-tab-panel .v5-feature-card.tts{background:linear-gradient(145deg,#fff,#edf7ff)}.dashboard-tab-panel .v5-feature-card.ai{background:linear-gradient(145deg,#fff,#f1edff)}.dashboard-tab-panel .v5-feature-card.stories{background:linear-gradient(145deg,#fff,#edf7ff)}.dashboard-tab-panel .v5-feature-card.adaptive{background:linear-gradient(145deg,#fff,#ecfaf4)}
+
+
+/* WordPilot v5.1.2 — professional mobile and learning-center polish */
+.story-translation[hidden]{display:none!important}
+.story-reader-head [data-story-speak-all].is-speaking{background:#fff0f1;border-color:#f1b7be;color:#b93647;box-shadow:0 8px 18px rgba(240,92,103,.13)}
+.learning-hub-promoted{margin:20px 0 14px;padding:24px;background:linear-gradient(135deg,#171b38 0%,#29255d 55%,#31569a 100%);border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 55px rgba(30,32,78,.22);color:#fff;overflow:hidden;position:relative}
+.learning-hub-promoted:after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;right:-90px;top:-120px;background:radial-gradient(circle,rgba(91,194,255,.42),transparent 68%);pointer-events:none}
+.learning-hub-promoted .learning-hub-head,.learning-hub-promoted .learning-hub-tabs{position:relative;z-index:1}
+.learning-hub-promoted .eyebrow{color:#b9c8ff}.learning-hub-promoted h2{font-size:30px;margin-bottom:7px}.learning-hub-promoted p{color:#d3d9eb}
+.learning-hub-promoted .learning-hub-version{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.18);color:#fff}
+.learning-hub-promoted .learning-hub-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:18px;overflow:visible}
+.learning-hub-promoted .learning-hub-tabs button{min-height:58px;justify-content:center;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);color:#e8ecff;font-size:13px;box-shadow:none}
+.learning-hub-promoted .learning-hub-tabs button span{font-size:19px}
+.learning-hub-promoted .learning-hub-tabs button.active{background:#fff;color:#5140ba;border-color:#fff;box-shadow:0 12px 28px rgba(8,12,34,.22)}
+@media(max-width:620px){
+  .topbar{height:auto!important;min-height:calc(68px + env(safe-area-inset-top));padding:max(10px,env(safe-area-inset-top)) 14px 8px!important;align-items:flex-end}
+  .learning-hub-promoted{margin:15px 0 11px;padding:18px 13px 14px;border-radius:23px}
+  .learning-hub-promoted h2{font-size:25px}.learning-hub-promoted .learning-hub-head p:last-child{font-size:13px;line-height:1.45}
+  .learning-hub-promoted .learning-hub-tabs{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:14px 0 0}
+  .learning-hub-promoted .learning-hub-tabs button{min-height:67px;padding:8px 5px;display:flex;flex-direction:column;gap:5px;white-space:normal;text-align:center;line-height:1.15;font-size:11px;border-radius:14px}
+  .learning-hub-promoted .learning-hub-tabs button span{font-size:21px}
+  .story-reader-head>div:last-child{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}.story-reader-head>div:last-child button{width:100%;min-height:44px}
+}
+
+
+/* WordPilot v5.1.2 — learning-first hierarchy and compact daily flight plan */
+.continue-card{padding:21px 23px;grid-template-columns:minmax(0,1.45fr) minmax(235px,.55fr);gap:19px;border-radius:23px;box-shadow:0 18px 42px rgba(11,16,32,.18)}
+.continue-card:after{width:210px;height:210px;right:-72px;top:-88px}
+.continue-copy h2{font-size:clamp(24px,3.1vw,35px);letter-spacing:-.9px;margin:8px 0 6px;line-height:1.12}
+.continue-copy p{font-size:13px;line-height:1.45;margin:0;max-width:700px}
+.continue-card .chip{padding:6px 9px;font-size:9px}
+.continue-card .hero-actions{margin-top:14px}.continue-card .hero-actions button{min-height:42px}.continue-card .primary.xl{padding:11px 17px;font-size:14px}
+.flight-card{padding:13px 14px;border-radius:16px}.flight-top b{font-size:19px}.flight-track{height:9px;margin:15px 0 10px}.plane{top:-20px;font-size:17px}.flight-meta{font-size:10px}
+.daily-task.actionable{cursor:pointer;transition:.18s}.daily-task.actionable:hover{border-color:#c8c2ff;background:#f6f4ff;transform:translateY(-1px)}.daily-task.actionable>em{font-style:normal;color:#6557d9;font-weight:1000;font-size:18px}.daily-task.actionable:focus{outline:3px solid rgba(108,92,231,.18);outline-offset:2px}
+@media(max-width:800px){.continue-card{grid-template-columns:1fr;padding:17px 16px;gap:12px}.continue-copy h2{font-size:25px}.continue-card .hero-actions{display:flex}.continue-card .hero-actions button{width:auto;flex:1}.flight-card{max-width:none}.flight-track{margin:13px 0 9px}}
+@media(max-width:480px){.continue-card{padding:15px 13px;border-radius:20px}.continue-copy h2{font-size:22px}.continue-copy p{font-size:12px}.continue-card .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.continue-card .hero-actions button{width:100%;padding:10px 8px}.flight-card{padding:11px 12px}.flight-top span,.flight-meta{font-size:10px}}

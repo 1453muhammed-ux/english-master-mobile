@@ -1,10 +1,6 @@
-WORDPILOT v5.1.0 — PROFESYONEL UX
-
-1. Öğrenme Merkezi sekmeli yapıya geçirildi.
-2. Oyunlar, ses/konuşma, hikâyeler, koleksiyonlar ve ilerleme ayrı açılır bölümlerde gösterilir.
-3. Mobil geri hareketi önceki görünüm ve ana sayfadaki eski kaydırma konumunu geri getirir.
-4. Telaffuz Türkçe anlamı gizlenebilir.
-5. Eski lig puanlarının neden aynı göründüğü kullanıcıya açıklanır ve satırlar etiketlenir.
-6. Misafirler 20 cevap sonrasında ilerlemeyi korumak için Google girişine yönlendirilir.
-7. PDF ve uygulama araçları sayfanın altına taşındı.
-8. App Check istemci entegrasyonu korunmuştur; enforcement metrik kontrolünden sonra açılmalıdır.
+WordPilot v5.1.2
+- Öğrenme Merkezi ve seçili çalışma bölümü günlük uçuş planının üstüne taşındı.
+- Günlük uçuş planı masaüstü ve mobilde daha kompakt hale getirildi.
+- Favori işaretleme günlük görevi kaldırıldı; yerine 1 hikâye bölümü tamamlama görevi eklendi.
+- Hikâye görevi doğrudan Hikâyeler sayfasını açar.
+- App Check entegrasyonu korunmuştur; Enforce metrik kontrolünden sonra açılmalıdır.

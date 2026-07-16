@@ -1,14 +1,7 @@
-WORDPILOT v5.1.0 — DOĞRULAMA RAPORU
-
-- app.js VERSION: 5.1.0
-- index.html BUILD ve görünür sürüm: 5.1.0
-- Öğrenme Merkezi görünür sürümü: 5.1.0
-- Service Worker cache: wordpilot-v5.1.0
-- Manifest başlangıç adresi: ?wpbuild=5.1.0
-- Yeni UX modülü: modules/v510.js
-- JavaScript sözdizimi: başarılı
-- JSON dosyaları: başarılı
-- HTML id tekrar kontrolü: başarılı
-- Yerel script dosyaları: eksiksiz
-- Kullanıcı kayıt anahtarı ve mevcut kurs durumları: değiştirilmedi
-- App Check istemci entegrasyonu: korundu
+WordPilot v5.1.2 validation
+- Story TTS start/stop control added
+- Story translation toggle fixed
+- Learning Center promoted and visually strengthened
+- Mobile safe-area top padding added
+- App Check registration preserved
+- Existing course progress/localStorage keys preserved

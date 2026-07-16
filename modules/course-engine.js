@@ -50,11 +50,13 @@ function updateLeaderboardEntry(){
   const index=board.findIndex(x=>x.email===email);if(index>=0)board[index]=entry;else board.push(entry);board=board.sort((a,b)=>(b.points||0)-(a.points||0)||String(a.name).localeCompare(String(b.name),'tr')).slice(0,100);localStorage.setItem(LEADERBOARD_KEY,JSON.stringify(board));
 }
 function taskDefinitions(){
-  const bucket=state.stats.days?.[todayKey()]||{},marked=Object.values(state.statusUpdated||{}).filter(rec=>dateKey(new Date(Number(rec?.at)||0))===todayKey()&&rec?.value).length;
+  const bucket=state.stats.days?.[todayKey()]||{};
+  const stories=state.stats?.v5?.stories||{};
+  const storyDoneToday=Object.values(stories).filter(item=>item?.completed&&item?.at&&dateKey(new Date(item.at))===todayKey()).length;
   return [
     {id:'answer10',icon:'✓',title:'10 soru çöz',value:Number(bucket.answers)||0,target:10,reward:50},
     {id:'correct8',icon:'🎯',title:'8 doğru cevap',value:Number(bucket.correct)||0,target:8,reward:50},
-    {id:'mark3',icon:'⭐',title:'3 kelimeyi işaretle',value:marked,target:3,reward:30},
+    {id:'story1',icon:'📖',title:'1 hikâye bölümü bitir',value:storyDoneToday,target:1,reward:40,action:'stories'},
     {id:'session1',icon:'✈',title:'1 oturum tamamla',value:Number(bucket.sessions)||0,target:1,reward:40}
   ];
 }
@@ -118,7 +120,7 @@ async function switchCourse(course){
 }
 function renderDailyTasks(){
   const list=$('#dailyTaskList');if(!list)return;const claims=state.stats.taskClaims?.[todayKey()]||{},tasks=taskDefinitions(),done=tasks.filter(t=>claims[t.id]).length;if($('#dailyTaskDone'))$('#dailyTaskDone').textContent=`${done} / ${tasks.length}`;
-  list.innerHTML=tasks.map(t=>{const complete=!!claims[t.id],pct=Math.min(100,Math.round(t.value/t.target*100));return `<div class="daily-task ${complete?'complete':''}"><span>${complete?'✓':t.icon}</span><div><b>${esc(t.title)}</b><small>${Math.min(t.value,t.target)} / ${t.target} · +${t.reward} XP</small><i style="width:${pct}%"></i></div></div>`}).join('');
+  list.innerHTML=tasks.map(t=>{const complete=!!claims[t.id],pct=Math.min(100,Math.round(t.value/t.target*100)),action=t.action?` data-v5-open="${esc(t.action)}" role="button" tabindex="0" title="Görevi aç"`:'';return `<div class="daily-task ${complete?'complete':''} ${t.action?'actionable':''}"${action}><span>${complete?'✓':t.icon}</span><div><b>${esc(t.title)}</b><small>${Math.min(t.value,t.target)} / ${t.target} · +${t.reward} XP</small><i style="width:${pct}%"></i></div>${t.action&&!complete?'<em>→</em>':''}</div>`}).join('');
 }
 function renderXp(){const total=leaderboardScores().points,level=Math.floor(total/500)+1,within=total%500;if($('#globalXpText'))$('#globalXpText').textContent=`${total} XP`;if($('#xpLevel'))$('#xpLevel').textContent=level;if($('#xpToNext'))$('#xpToNext').textContent=`${500-within} XP`;if($('#xpLevelFill'))$('#xpLevelFill').style.width=`${within/5}%`;if($('#xpText'))$('#xpText').textContent=`${total} XP`}
 function renderDashboard(){renderDashboardBase();updateCourseUI();renderXp();renderDailyTasks();const meta=COURSES[activeCourse];if($('#dailyWordSpeak'))$('#dailyWordSpeak').dataset.speak=$('#dailyWordEnglish')?.textContent||'';if($('#heroMessage')&&!state.stats.todayAnswers)$('#heroMessage').textContent=`${meta.name} kursunda ${reviewIds().length} tekrar ve ${words.length} kayıt seni bekliyor.`}

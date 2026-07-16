@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=5.1.0">
+  <link rel="stylesheet" href="style.css?v=5.1.2">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='5.1.0',KEY='wordpilot_asset_build';
+    const BUILD='5.1.2',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v5.1.2</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -78,96 +78,10 @@
         </div>
       </section>
 
-      <section id="russianTools" class="russian-tools-section" hidden>
-        <div class="russian-tools-head">
-          <div><p class="eyebrow">РУССКИЙ A1–A2 · v4.3</p><h2>Rusça öğrenme merkezi</h2><p>1000 kontrollü kelime ve ifade, dil bilgisi yolu, diyaloglar ve konu bazlı çalışma.</p></div>
-          <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
-        </div>
-        <div id="russianTopicGrid" class="russian-topic-grid"></div>
-      </section>
-
-      <section class="continue-card">
-        <div class="continue-copy">
-          <span class="chip">BUGÜNKÜ UÇUŞ PLANI</span>
-          <h2>Seçtiğin dili kendi hızında, kalıcı öğren.</h2>
-          <p id="heroMessage">Akıllı tekrarların, günlük görevlerin ve zorlandığın kayıtlar hazır.</p>
-          <div class="hero-actions">
-            <button class="primary xl" data-action="open-study-setup">▶ Devam Et</button>
-            <button class="soft" data-start="review">Zorlandıklarım</button>
-          </div>
-        </div>
-        <div class="flight-card">
-          <div class="flight-top"><span>Günlük hedef</span><b id="goalPercent">0%</b></div>
-          <div class="flight-track"><i id="flightTrackFill"></i><span class="plane">✈</span></div>
-          <div class="flight-meta"><span><b id="todayAnswered">0</b> tamamlandı</span><span><b id="dailyGoalText">20</b> hedef</span></div>
-        </div>
-      </section>
-
-      <div class="platform-proof" aria-label="WordPilot özellikleri">
-        <div><strong id="proofWordCount">6000</strong><span id="proofWordLabel">kelime ve kalıp</span></div>
-        <div><strong id="proofModeCount">11</strong><span>çalışma modu</span></div>
-        <div><strong>☁</strong><span>cihazlar arası senkron</span></div>
-        <div><strong>↓</strong><span>çevrimdışı çalışma</span></div>
-      </div>
-
-
-      <section class="xp-task-section">
-        <article class="xp-level-card course-xp-level-card">
-          <div class="xp-level-icon" id="activeCourseXpIcon">EN</div>
-          <div class="xp-level-copy">
-            <p class="eyebrow" id="activeCourseXpLabel">ENGLISH KURS XP</p>
-            <h3><span id="activeCourseXpName">English</span> · Seviye <span id="xpLevel">1</span></h3>
-            <p><b id="activeCourseXpText">0 XP</b> · sonraki seviyeye <span id="xpToNext">500 XP</span></p>
-            <div class="xp-level-track"><i id="xpLevelFill"></i></div>
-            <p class="global-xp-note">🏆 Genel lig XP: <b id="globalXpText">0 XP</b></p>
-          </div>
-        </article>
-        <article class="daily-tasks-card">
-          <div class="daily-tasks-head"><div><p class="eyebrow">GÜNLÜK GÖREVLER</p><h3>Bugünün görevleri</h3></div><span id="dailyTaskDone">0 / 4</span></div>
-          <div id="dailyTaskList" class="daily-task-list"></div>
-        </article>
-      </section>
-
-      
-
-      <div class="kpi-grid">
-        <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
-        <button class="kpi memorized" data-filter-status="memorized"><span>E</span><div><strong id="countMem">0</strong><small>Ezberledim</small></div></button>
-        <button class="kpi hard" data-filter-status="hard"><span>Z</span><div><strong id="countHard">0</strong><small>Zorlanıyorum</small></div></button>
-        <button class="kpi streak" data-nav="progress"><span>🔥</span><div><strong><span id="streak">0</span> gün</strong><small>Çalışma serisi</small></div></button>
-      </div>
-
-      <section class="daily-word-showcase">
-        <div class="daily-word-copy">
-          <p class="eyebrow">GÜNÜN KELİMESİ</p>
-          <div class="daily-word-title-row"><h2 id="dailyWordEnglish">word</h2><span id="dailyWordLevel" class="daily-word-level">—</span></div>
-          <p id="dailyWordPron" class="daily-word-pron"></p>
-          <p id="dailyWordMeaning" class="daily-word-meaning">Her gün yeni bir kelime keşfet.</p>
-          <blockquote id="dailyWordExample"></blockquote>
-          <div class="daily-word-actions">
-            <button id="dailyWordSpeak" class="secondary" type="button" data-speak="word">🔊 Dinle</button>
-            <button id="dailyWordInfo" class="primary" type="button" data-info="1">Kelimeyi incele</button>
-          </div>
-        </div>
-        <div class="daily-word-art" aria-hidden="true"><span>W</span><i>daily</i></div>
-      </section>
-
-      <div id="guestBanner" class="guest-banner" hidden>
-        <span>!</span><p><b>Misafir modundasın.</b> İlerlemen Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
-        <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
-      </div>
-
-      
-
-      <button class="daily-challenge-card" data-collection="daily20" type="button">
-        <span class="daily-challenge-icon">20</span>
-        <span><b>Bugünün 20 Kelimesi</b><small>Her gün yenilenen ortak kelime uçuşu.</small></span>
-        <em>Başla →</em>
-      </button>
-      <section class="learning-hub" aria-labelledby="learningHubTitle">
+      <section class="learning-hub learning-hub-promoted" data-promoted="1" aria-labelledby="learningHubTitle">
         <div class="learning-hub-head">
           <div><p class="eyebrow">ÖĞRENME MERKEZİ</p><h2 id="learningHubTitle">Ne çalışmak istersin?</h2><p>Bir bölüm seç; ana sayfada yalnızca ihtiyacın olan araçlar açılsın.</p></div>
-          <span class="learning-hub-version">v5.1.0</span>
+          <span class="learning-hub-version">v5.1.2</span>
         </div>
         <div class="learning-hub-tabs" role="tablist" aria-label="Öğrenme merkezi bölümleri">
           <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="games"><span>🎮</span> Oyunlar</button>
@@ -308,6 +222,93 @@
         <p class="legacy-league-note"><b>Eski lig kayıtları:</b> Geçmişte dil ayrımı tutulmadığı için bazı kullanıcılar her dilde aynı “eski toplam XP” ile görünebilir. Kullanıcı yeni sürümde ilgili kursta çalıştıkça gerçek kurs XP’sine geçer.</p>
       </section>
 
+
+      <section id="russianTools" class="russian-tools-section" hidden>
+        <div class="russian-tools-head">
+          <div><p class="eyebrow">РУССКИЙ A1–A2 · v4.3</p><h2>Rusça öğrenme merkezi</h2><p>1000 kontrollü kelime ve ifade, dil bilgisi yolu, diyaloglar ve konu bazlı çalışma.</p></div>
+          <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
+        </div>
+        <div id="russianTopicGrid" class="russian-topic-grid"></div>
+      </section>
+
+      <section class="continue-card">
+        <div class="continue-copy">
+          <span class="chip">BUGÜNKÜ UÇUŞ PLANI</span>
+          <h2>Seçtiğin dili kendi hızında, kalıcı öğren.</h2>
+          <p id="heroMessage">Akıllı tekrarların, günlük görevlerin ve zorlandığın kayıtlar hazır.</p>
+          <div class="hero-actions">
+            <button class="primary xl" data-action="open-study-setup">▶ Devam Et</button>
+            <button class="soft" data-start="review">Zorlandıklarım</button>
+          </div>
+        </div>
+        <div class="flight-card">
+          <div class="flight-top"><span>Günlük hedef</span><b id="goalPercent">0%</b></div>
+          <div class="flight-track"><i id="flightTrackFill"></i><span class="plane">✈</span></div>
+          <div class="flight-meta"><span><b id="todayAnswered">0</b> tamamlandı</span><span><b id="dailyGoalText">20</b> hedef</span></div>
+        </div>
+      </section>
+
+      <div class="platform-proof" aria-label="WordPilot özellikleri">
+        <div><strong id="proofWordCount">6000</strong><span id="proofWordLabel">kelime ve kalıp</span></div>
+        <div><strong id="proofModeCount">11</strong><span>çalışma modu</span></div>
+        <div><strong>☁</strong><span>cihazlar arası senkron</span></div>
+        <div><strong>↓</strong><span>çevrimdışı çalışma</span></div>
+      </div>
+
+
+      <section class="xp-task-section">
+        <article class="xp-level-card course-xp-level-card">
+          <div class="xp-level-icon" id="activeCourseXpIcon">EN</div>
+          <div class="xp-level-copy">
+            <p class="eyebrow" id="activeCourseXpLabel">ENGLISH KURS XP</p>
+            <h3><span id="activeCourseXpName">English</span> · Seviye <span id="xpLevel">1</span></h3>
+            <p><b id="activeCourseXpText">0 XP</b> · sonraki seviyeye <span id="xpToNext">500 XP</span></p>
+            <div class="xp-level-track"><i id="xpLevelFill"></i></div>
+            <p class="global-xp-note">🏆 Genel lig XP: <b id="globalXpText">0 XP</b></p>
+          </div>
+        </article>
+        <article class="daily-tasks-card">
+          <div class="daily-tasks-head"><div><p class="eyebrow">GÜNLÜK GÖREVLER</p><h3>Bugünün görevleri</h3></div><span id="dailyTaskDone">0 / 4</span></div>
+          <div id="dailyTaskList" class="daily-task-list"></div>
+        </article>
+      </section>
+
+      
+
+      <div class="kpi-grid">
+        <button class="kpi learn" data-filter-status="learn"><span>Ö</span><div><strong id="countLearn">0</strong><small>Öğreniyorum</small></div></button>
+        <button class="kpi memorized" data-filter-status="memorized"><span>E</span><div><strong id="countMem">0</strong><small>Ezberledim</small></div></button>
+        <button class="kpi hard" data-filter-status="hard"><span>Z</span><div><strong id="countHard">0</strong><small>Zorlanıyorum</small></div></button>
+        <button class="kpi streak" data-nav="progress"><span>🔥</span><div><strong><span id="streak">0</span> gün</strong><small>Çalışma serisi</small></div></button>
+      </div>
+
+      <section class="daily-word-showcase">
+        <div class="daily-word-copy">
+          <p class="eyebrow">GÜNÜN KELİMESİ</p>
+          <div class="daily-word-title-row"><h2 id="dailyWordEnglish">word</h2><span id="dailyWordLevel" class="daily-word-level">—</span></div>
+          <p id="dailyWordPron" class="daily-word-pron"></p>
+          <p id="dailyWordMeaning" class="daily-word-meaning">Her gün yeni bir kelime keşfet.</p>
+          <blockquote id="dailyWordExample"></blockquote>
+          <div class="daily-word-actions">
+            <button id="dailyWordSpeak" class="secondary" type="button" data-speak="word">🔊 Dinle</button>
+            <button id="dailyWordInfo" class="primary" type="button" data-info="1">Kelimeyi incele</button>
+          </div>
+        </div>
+        <div class="daily-word-art" aria-hidden="true"><span>W</span><i>daily</i></div>
+      </section>
+
+      <div id="guestBanner" class="guest-banner" hidden>
+        <span>!</span><p><b>Misafir modundasın.</b> İlerlemen Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.</p>
+        <button class="text-link" data-action="open-profile" type="button">Google ile giriş yap</button>
+      </div>
+
+      
+
+      <button class="daily-challenge-card" data-collection="daily20" type="button">
+        <span class="daily-challenge-icon">20</span>
+        <span><b>Bugünün 20 Kelimesi</b><small>Her gün yenilenen ortak kelime uçuşu.</small></span>
+        <em>Başla →</em>
+      </button>
       <details class="dashboard-info-details">
         <summary><span>ℹ️</span><div><b>WordPilot nasıl çalışır?</b><small>Öğrenme sistemi ve motivasyon özelliklerini göster</small></div><em>+</em></summary>
         <div class="dashboard-info-content"><section class="how-section">
@@ -778,17 +779,19 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=5.1.0" defer></script>
-<script src="app.js?v=5.1.0" defer></script>
-<script src="modules/firebase-sync.js?v=5.1.0" defer></script>
-<script src="modules/learning-engine.js?v=5.1.0" defer></script>
-<script src="modules/ui-events.js?v=5.1.0" defer></script>
-<script src="modules/course-engine.js?v=5.1.0" defer></script>
-<script src="modules/russian-path.js?v=5.1.0" defer></script>
-<script src="modules/v43.js?v=5.1.0" defer></script>
-<script src="modules/v431.js?v=5.1.0" defer></script>
-<script src="modules/v50.js?v=5.1.0" defer></script>
-<script src="modules/v510.js?v=5.1.0" defer></script>
-<script src="modules/bootstrap.js?v=5.1.0" defer></script>
+<script src="security-config.js?v=5.1.2" defer></script>
+<script src="app.js?v=5.1.2" defer></script>
+<script src="modules/firebase-sync.js?v=5.1.2" defer></script>
+<script src="modules/learning-engine.js?v=5.1.2" defer></script>
+<script src="modules/ui-events.js?v=5.1.2" defer></script>
+<script src="modules/course-engine.js?v=5.1.2" defer></script>
+<script src="modules/russian-path.js?v=5.1.2" defer></script>
+<script src="modules/v43.js?v=5.1.2" defer></script>
+<script src="modules/v431.js?v=5.1.2" defer></script>
+<script src="modules/v50.js?v=5.1.2" defer></script>
+<script src="modules/v510.js?v=5.1.2" defer></script>
+<script src="modules/v511.js?v=5.1.2" defer></script>
+<script src="modules/v512.js?v=5.1.2" defer></script>
+<script src="modules/bootstrap.js?v=5.1.2" defer></script>
 </body>
 </html>

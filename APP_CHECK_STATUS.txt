@@ -1,4 +1,4 @@
-WORDPILOT v5.1.0 — APP CHECK DURUMU
+WORDPILOT v5.1.2 — APP CHECK DURUMU
 
 - reCAPTCHA Enterprise istemci entegrasyonu aktiftir.
 - App Check istemci tokenı telefon ve bilgisayarda test edilmelidir.

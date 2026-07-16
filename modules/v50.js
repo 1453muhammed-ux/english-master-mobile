@@ -1,6 +1,6 @@
 /* WordPilot v5.0 — voice lab, stories, adaptive learning, language leagues and AI coach.
    Existing localStorage/Firebase course state keys remain unchanged. */
-const V5_VERSION='5.1.0';
+const V5_VERSION='5.1.2';
 const V5_STORY_FILE='stories.json';
 const V5_SECURITY=window.WORDPILOT_SECURITY||{};
 const V5_SCENARIOS={
@@ -10,7 +10,7 @@ const V5_SCENARIOS={
   work:{icon:'💼',title:'İş ve okul',hint:'Program ve görevlerden bahset'},
   health:{icon:'🩺',title:'Sağlık',hint:'Basit bir şikâyeti anlat'}
 };
-let v5Stories=[],v5Story=null,v5StoryAnswers={},v5PronunciationWord=null,v5Recognition=null,v5AiScenario='intro',v5AiBusy=false,v5AppCheckReady=false;
+let v5Stories=[],v5Story=null,v5StoryAnswers={},v5PronunciationWord=null,v5Recognition=null,v5AiScenario='intro',v5AiBusy=false,v5AppCheckReady=false,v5StoryUtterance=null,v5StorySpeaking=false,v5StoryShowTranslations=false;
 
 function v5Ensure(){
   state.stats=state.stats||{};
@@ -109,9 +109,29 @@ async function renderStoryLibrary(){
   $('#storyList').innerHTML=list.map(st=>{const done=!!v5Ensure().stories?.[st.id]?.completed;return `<button type="button" class="story-list-item ${v5Story?.id===st.id?'active':''} ${done?'done':''}" data-story-id="${esc(st.id)}"><span>${done?'✓':'📖'}</span><div><b>${esc(st.title)}</b><small>${esc(st.level)} · ${esc(st.topic)}</small></div><em>→</em></button>`}).join('');
   if(v5Story&&v5Story.course===activeCourse)renderStoryReader(v5Story);else $('#storyReader').innerHTML='<div class="story-empty"><span>📖</span><h2>Bir hikâye seç</h2><p>Metni dinleyebilir, çeviriyi açabilir ve soruları çözebilirsin.</p></div>';
 }
+function v5UpdateStoryAudioButton(){
+  const btn=document.querySelector('[data-story-speak-all]');if(!btn)return;
+  btn.textContent=v5StorySpeaking?'⏹ Durdur':'🔊 Tamamını dinle';
+  btn.classList.toggle('is-speaking',v5StorySpeaking);btn.setAttribute('aria-pressed',String(v5StorySpeaking));
+}
+function v5StopStoryAudio(){
+  if('speechSynthesis'in window)window.speechSynthesis.cancel();v5StoryUtterance=null;v5StorySpeaking=false;v5UpdateStoryAudioButton();
+}
+function v5SpeakWholeStory(){
+  if(!v5Story)return;if(v5StorySpeaking){v5StopStoryAudio();return}
+  const utterance=speak(v5Story.lines.map(x=>x.text).join(' '));if(!utterance)return;
+  v5StoryUtterance=utterance;v5StorySpeaking=true;v5UpdateStoryAudioButton();
+  const finish=()=>{if(v5StoryUtterance!==utterance)return;v5StoryUtterance=null;v5StorySpeaking=false;v5UpdateStoryAudioButton()};
+  utterance.onend=finish;utterance.onerror=finish;
+}
+function v5ApplyStoryTranslations(){
+  document.querySelectorAll('.story-translation').forEach(item=>{item.hidden=!v5StoryShowTranslations});
+  const btn=document.querySelector('[data-story-toggle-translation]');if(btn){btn.textContent=v5StoryShowTranslations?'Çevirileri kapat':'Çevirileri aç';btn.setAttribute('aria-pressed',String(v5StoryShowTranslations))}
+}
 function renderStoryReader(story){
-  v5Story=story;v5StoryAnswers={};const completed=!!v5Ensure().stories?.[story.id]?.completed;
-  $('#storyReader').innerHTML=`<div class="story-reader-head"><div><span class="chip">${esc(story.level)} · ${esc(story.topic)}</span><h2>${esc(story.title)}</h2></div><div><button class="secondary" type="button" data-story-speak-all>🔊 Tamamını dinle</button><button class="soft" type="button" data-story-toggle-translation>Çevirileri aç</button></div></div><div class="story-lines">${story.lines.map((line,i)=>`<article><button type="button" data-story-line-speak="${i}" aria-label="Satırı dinle">🔊</button><div><p>${esc(line.text)}</p><small class="story-translation" hidden>${esc(line.translation)}</small></div></article>`).join('')}</div><section class="story-questions"><h3>Metin soruları</h3>${story.questions.map((q,qi)=>`<article><b>${qi+1}. ${esc(q.q)}</b><div>${q.options.map((o,oi)=>`<button type="button" data-story-answer="${qi}:${oi}">${esc(o)}</button>`).join('')}</div></article>`).join('')}<button class="primary" type="button" data-story-check>Kontrol et</button><p id="storyFeedback">${completed?'Bu hikâyeyi daha önce tamamladın.':''}</p></section>`;
+  v5StopStoryAudio();v5Story=story;v5StoryAnswers={};v5StoryShowTranslations=false;const completed=!!v5Ensure().stories?.[story.id]?.completed;
+  $('#storyReader').innerHTML=`<div class="story-reader-head"><div><span class="chip">${esc(story.level)} · ${esc(story.topic)}</span><h2>${esc(story.title)}</h2></div><div><button class="secondary" type="button" data-story-speak-all aria-pressed="false">🔊 Tamamını dinle</button><button class="soft" type="button" data-story-toggle-translation aria-pressed="false">Çevirileri aç</button></div></div><div class="story-lines">${story.lines.map((line,i)=>`<article><button type="button" data-story-line-speak="${i}" aria-label="Satırı dinle">🔊</button><div><p>${esc(line.text)}</p><small class="story-translation" hidden>${esc(line.translation)}</small></div></article>`).join('')}</div><section class="story-questions"><h3>Metin soruları</h3>${story.questions.map((q,qi)=>`<article><b>${qi+1}. ${esc(q.q)}</b><div>${q.options.map((o,oi)=>`<button type="button" data-story-answer="${qi}:${oi}">${esc(o)}</button>`).join('')}</div></article>`).join('')}<button class="primary" type="button" data-story-check>Kontrol et</button><p id="storyFeedback">${completed?'Bu hikâyeyi daha önce tamamladın.':''}</p></section>`;
+  v5ApplyStoryTranslations();v5UpdateStoryAudioButton();
 }
 function v5CheckStory(){
   if(!v5Story)return;let correct=0;v5Story.questions.forEach((q,i)=>{if(Number(v5StoryAnswers[i])===Number(q.answer))correct++});const total=v5Story.questions.length,ok=correct===total;
@@ -233,9 +253,9 @@ function setupV50Events(){
     if(e.target.closest('#v5TestVoice')){speak(v5PronunciationWord?.english||words[0]?.english||COURSES[activeCourse].name);return}
     if(e.target.closest('#v5StopVoice')){speechSynthesis?.cancel();return}
     const storyBtn=e.target.closest('[data-story-id]');if(storyBtn){const all=await v5LoadStories();const st=all.find(x=>x.id===storyBtn.dataset.storyId);if(st)renderStoryReader(st);return}
-    const line=e.target.closest('[data-story-line-speak]');if(line&&v5Story){speak(v5Story.lines[Number(line.dataset.storyLineSpeak)]?.text);return}
-    if(e.target.closest('[data-story-speak-all]')&&v5Story){speak(v5Story.lines.map(x=>x.text).join(' '));return}
-    if(e.target.closest('[data-story-toggle-translation]')){$$('.story-translation').forEach(x=>x.hidden=!x.hidden);return}
+    const line=e.target.closest('[data-story-line-speak]');if(line&&v5Story){v5StopStoryAudio();speak(v5Story.lines[Number(line.dataset.storyLineSpeak)]?.text);return}
+    if(e.target.closest('[data-story-speak-all]')&&v5Story){v5SpeakWholeStory();return}
+    if(e.target.closest('[data-story-toggle-translation]')){v5StoryShowTranslations=!v5StoryShowTranslations;v5ApplyStoryTranslations();return}
     const ans=e.target.closest('[data-story-answer]');if(ans){const [q,o]=ans.dataset.storyAnswer.split(':').map(Number);v5StoryAnswers[q]=o;ans.parentElement.querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b===ans));return}
     if(e.target.closest('[data-story-check]')){v5CheckStory();return}
     const scenario=e.target.closest('[data-ai-scenario]');if(scenario){v5AiScenario=scenario.dataset.aiScenario;renderAiCoach();return}

@@ -1,4 +1,4 @@
-WORDPILOT v5.1.0
+WORDPILOT v5.1.2
 
 Profesyonel mobil UX ve navigasyon sürümü.
 
@@ -10,6 +10,6 @@ YENİLİKLER
 - Eski lig XP kayıtlarında açıklayıcı etiket
 - Misafir kullanıcıya 20 cevaptan sonra Google giriş önerisi
 - Çalışma PDF kartı sayfanın en altındaki araçlara taşındı
-- Görünür sürüm etiketleri v5.1.0 olarak eşitlendi
+- Görünür sürüm etiketleri v5.1.2 olarak eşitlendi
 
-Canlı test: https://wordpilot-7a574.web.app/?wpbuild=5.1.0
+Canlı test: https://wordpilot-7a574.web.app/?wpbuild=5.1.2
