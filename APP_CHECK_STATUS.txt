@@ -1,3 +1,0 @@
-WORDPILOT v6.3.1 — APP CHECK DURUMU
-
-Firebase App Check / reCAPTCHA Enterprise entegrasyonu korunmuştur. Cloud Firestore enforcement kullanıcı tarafından etkinleştirilmiştir. Yeni statik içerik laboratuvarları mevcut doğrulanmış uygulama üzerinden çalışır.
