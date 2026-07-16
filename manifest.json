@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "WordPilot v6.5 Professional Experience",
+  "name": "WordPilot 7",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=6.5.2",
+  "start_url": "./?wpbuild=7.0.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",

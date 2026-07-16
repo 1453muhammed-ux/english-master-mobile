@@ -1,0 +1,8 @@
+WordPilot v7.0.0 validation
+- Russian records: 1300
+- Uzbek records: 500
+- Existing Russian IDs 1-1120 preserved
+- Existing Uzbek IDs 1-137 preserved
+- JSON parse: passed
+- JavaScript syntax: run in build pipeline
+- App Check/Firebase configuration preserved
