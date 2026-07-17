@@ -4,8 +4,8 @@ const V43_BADGE_LEDGER='wp43_badges';
 let academySpellingPoolCache=[];
 
 COURSES.en.actualCount=5488;
-COURSES.ru.actualCount=1120;
-COURSES.uz.actualCount=137;
+COURSES.ru.actualCount=1300;
+COURSES.uz.actualCount=500;
 
 function v43ModeStats(){
   state.stats.modeAnswers=state.stats.modeAnswers&&typeof state.stats.modeAnswers==='object'?state.stats.modeAnswers:{};

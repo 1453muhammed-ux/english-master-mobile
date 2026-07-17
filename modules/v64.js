@@ -1,5 +1,5 @@
-/* WordPilot v6.5.2 — Reader 2.0: graded library, tap dictionary, sentence translation, guided TTS and story-word SM-2. */
-const WP64_VERSION='6.5.2';
+/* WordPilot v7.0.0 — Reader 2.0: graded library, tap dictionary, sentence translation, guided TTS and story-word SM-2. */
+const WP64_VERSION='7.0.0';
 const WP64_LEVELS=['A1','A2','B1','B2','C1','C2'];
 const WP64_LEVEL_XP={A1:30,A2:40,B1:55,B2:70,C1:90,C2:110};
 const wp64Ui={level:'all',genre:'all',query:'',showAllTranslations:false,activeLine:-1,speaking:false,paused:false,observer:null,dictMap:null,dictCourse:'',wordContext:null};

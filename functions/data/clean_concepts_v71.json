@@ -1,0 +1,3962 @@
+[
+  {
+    "concept_id": "wp_concept_000001",
+    "legacy_ids": {
+      "en": 1
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "hello",
+      "tr": "merhaba",
+      "ru": "привет",
+      "uz": "salom"
+    },
+    "examples": {
+      "en": "Today’s key expression is “hello”.",
+      "tr": "Bugünün anahtar ifadesi “merhaba”.",
+      "ru": "Ключевое выражение сегодня — «привет».",
+      "uz": "Bugungi asosiy ibora — “salom”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:c4fd30d542eebda7df58b4fa913ecf5feffbbaf51ea952b04d6d6e980f1bf94b"
+  },
+  {
+    "concept_id": "wp_concept_000002",
+    "legacy_ids": {
+      "en": 2
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "goodbye",
+      "tr": "hoşça kal",
+      "ru": "до свидания",
+      "uz": "xayr"
+    },
+    "examples": {
+      "en": "Today’s key expression is “goodbye”.",
+      "tr": "Bugünün anahtar ifadesi “hoşça kal”.",
+      "ru": "Ключевое выражение сегодня — «до свидания».",
+      "uz": "Bugungi asosiy ibora — “xayr”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3d19b18938550beb5abf49f56daec242ec714a64a1da034e16b6f9b5ee548e95"
+  },
+  {
+    "concept_id": "wp_concept_000003",
+    "legacy_ids": {
+      "en": 3
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "please",
+      "tr": "lütfen",
+      "ru": "пожалуйста",
+      "uz": "iltimos"
+    },
+    "examples": {
+      "en": "Today’s key expression is “please”.",
+      "tr": "Bugünün anahtar ifadesi “lütfen”.",
+      "ru": "Ключевое выражение сегодня — «пожалуйста».",
+      "uz": "Bugungi asosiy ibora — “iltimos”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2a7c771c1b2541b9a3812219072ac9dfc269b43752343e8bbffee236a88803e9"
+  },
+  {
+    "concept_id": "wp_concept_000004",
+    "legacy_ids": {
+      "en": 4
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "thanks",
+      "tr": "teşekkürler",
+      "ru": "спасибо",
+      "uz": "rahmat"
+    },
+    "examples": {
+      "en": "Today’s key expression is “thanks”.",
+      "tr": "Bugünün anahtar ifadesi “teşekkürler”.",
+      "ru": "Ключевое выражение сегодня — «спасибо».",
+      "uz": "Bugungi asosiy ibora — “rahmat”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:ab65fc3d1bd65b115f581a5f83e086effe232448005667c27e1a805b6631cb98"
+  },
+  {
+    "concept_id": "wp_concept_000005",
+    "legacy_ids": {
+      "en": 5
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "yes",
+      "tr": "evet",
+      "ru": "да",
+      "uz": "ha"
+    },
+    "examples": {
+      "en": "Today’s key expression is “yes”.",
+      "tr": "Bugünün anahtar ifadesi “evet”.",
+      "ru": "Ключевое выражение сегодня — «да».",
+      "uz": "Bugungi asosiy ibora — “ha”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:643c96f820397173b56c1872034fbb99be4ceb8f6d9d877fc19f45435618c033"
+  },
+  {
+    "concept_id": "wp_concept_000006",
+    "legacy_ids": {
+      "en": 6
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "no",
+      "tr": "hayır",
+      "ru": "нет",
+      "uz": "yo‘q"
+    },
+    "examples": {
+      "en": "Today’s key expression is “no”.",
+      "tr": "Bugünün anahtar ifadesi “hayır”.",
+      "ru": "Ключевое выражение сегодня — «нет».",
+      "uz": "Bugungi asosiy ibora — “yo‘q”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:643fc40d1de6b463caf5425fbcb766a0642fc18a05e33a257c48a63452ebc707"
+  },
+  {
+    "concept_id": "wp_concept_000007",
+    "legacy_ids": {
+      "en": 7
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "sorry",
+      "tr": "özür dilerim",
+      "ru": "извините",
+      "uz": "kechirasiz"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sorry”.",
+      "tr": "Bugünün anahtar ifadesi “özür dilerim”.",
+      "ru": "Ключевое выражение сегодня — «извините».",
+      "uz": "Bugungi asosiy ibora — “kechirasiz”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:1ae8b0b67b59c8d5773ce79b9be35d643f2629eced65fdb93e4ef0b38dce33d7"
+  },
+  {
+    "concept_id": "wp_concept_000008",
+    "legacy_ids": {
+      "en": 8
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "welcome",
+      "tr": "hoş geldiniz",
+      "ru": "добро пожаловать",
+      "uz": "xush kelibsiz"
+    },
+    "examples": {
+      "en": "Today’s key expression is “welcome”.",
+      "tr": "Bugünün anahtar ifadesi “hoş geldiniz”.",
+      "ru": "Ключевое выражение сегодня — «добро пожаловать».",
+      "uz": "Bugungi asosiy ibora — “xush kelibsiz”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:80dba240938ee9d9bc601980f06da3d710330c60b9f3921f44305f4c1e381fe4"
+  },
+  {
+    "concept_id": "wp_concept_000009",
+    "legacy_ids": {
+      "en": 9
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "good morning",
+      "tr": "günaydın",
+      "ru": "доброе утро",
+      "uz": "xayrli tong"
+    },
+    "examples": {
+      "en": "Today’s key expression is “good morning”.",
+      "tr": "Bugünün anahtar ifadesi “günaydın”.",
+      "ru": "Ключевое выражение сегодня — «доброе утро».",
+      "uz": "Bugungi asosiy ibora — “xayrli tong”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a029a677177551747953e9aa89510345aa5c225fb75555071e7034060e8fe853"
+  },
+  {
+    "concept_id": "wp_concept_000010",
+    "legacy_ids": {
+      "en": 10
+    },
+    "level": "A1",
+    "topic": "Greetings",
+    "part_of_speech": "expression",
+    "terms": {
+      "en": "good night",
+      "tr": "iyi geceler",
+      "ru": "спокойной ночи",
+      "uz": "xayrli tun"
+    },
+    "examples": {
+      "en": "Today’s key expression is “good night”.",
+      "tr": "Bugünün anahtar ifadesi “iyi geceler”.",
+      "ru": "Ключевое выражение сегодня — «спокойной ночи».",
+      "uz": "Bugungi asosiy ibora — “xayrli tun”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:cec17401ac62ece67c70194a378c3ffef862a67b581888b4b18bdd8a11aeff3b"
+  },
+  {
+    "concept_id": "wp_concept_000011",
+    "legacy_ids": {
+      "en": 11
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "person",
+      "tr": "insan",
+      "ru": "человек",
+      "uz": "odam"
+    },
+    "examples": {
+      "en": "Today’s key expression is “person”.",
+      "tr": "Bugünün anahtar ifadesi “insan”.",
+      "ru": "Ключевое выражение сегодня — «человек».",
+      "uz": "Bugungi asosiy ibora — “odam”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:ac2257bab69975b85926b6950326c29b74fbc56ab7ed79479ca5863f7a9d46aa"
+  },
+  {
+    "concept_id": "wp_concept_000012",
+    "legacy_ids": {
+      "en": 12
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "friend",
+      "tr": "arkadaş",
+      "ru": "друг",
+      "uz": "do‘st"
+    },
+    "examples": {
+      "en": "Today’s key expression is “friend”.",
+      "tr": "Bugünün anahtar ifadesi “arkadaş”.",
+      "ru": "Ключевое выражение сегодня — «друг».",
+      "uz": "Bugungi asosiy ibora — “do‘st”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a51e1a52caf9a29fd40ba310a9d607bb2b87d38b388da396a2a8dd2c0331271f"
+  },
+  {
+    "concept_id": "wp_concept_000013",
+    "legacy_ids": {
+      "en": 13
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "family",
+      "tr": "aile",
+      "ru": "семья",
+      "uz": "oila"
+    },
+    "examples": {
+      "en": "Today’s key expression is “family”.",
+      "tr": "Bugünün anahtar ifadesi “aile”.",
+      "ru": "Ключевое выражение сегодня — «семья».",
+      "uz": "Bugungi asosiy ibora — “oila”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:952534d7f69183d425e5067c036688b9116b2c0f105794214658049e0fa59f48"
+  },
+  {
+    "concept_id": "wp_concept_000014",
+    "legacy_ids": {
+      "en": 14
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "mother",
+      "tr": "anne",
+      "ru": "мама",
+      "uz": "ona"
+    },
+    "examples": {
+      "en": "Today’s key expression is “mother”.",
+      "tr": "Bugünün anahtar ifadesi “anne”.",
+      "ru": "Ключевое выражение сегодня — «мама».",
+      "uz": "Bugungi asosiy ibora — “ona”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2cd7333da57b2d22ac3eb5ce2c7ef6df8b60fad753cb31bc98df0423d7122aa7"
+  },
+  {
+    "concept_id": "wp_concept_000015",
+    "legacy_ids": {
+      "en": 15
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "father",
+      "tr": "baba",
+      "ru": "папа",
+      "uz": "ota"
+    },
+    "examples": {
+      "en": "Today’s key expression is “father”.",
+      "tr": "Bugünün anahtar ifadesi “baba”.",
+      "ru": "Ключевое выражение сегодня — «папа».",
+      "uz": "Bugungi asosiy ibora — “ota”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:c1e349173407fdcce70087cc07d18e84a489eb14289cbcd9c43bdf1c6315a373"
+  },
+  {
+    "concept_id": "wp_concept_000016",
+    "legacy_ids": {
+      "en": 16
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "sister",
+      "tr": "kız kardeş",
+      "ru": "сестра",
+      "uz": "singil"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sister”.",
+      "tr": "Bugünün anahtar ifadesi “kız kardeş”.",
+      "ru": "Ключевое выражение сегодня — «сестра».",
+      "uz": "Bugungi asosiy ibora — “singil”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:e618fd76ab6eb15b2aca6e7bb784eeeeb8dfeee9cd72eb0844b9bdd59e8a4402"
+  },
+  {
+    "concept_id": "wp_concept_000017",
+    "legacy_ids": {
+      "en": 17
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "brother",
+      "tr": "erkek kardeş",
+      "ru": "брат",
+      "uz": "aka"
+    },
+    "examples": {
+      "en": "Today’s key expression is “brother”.",
+      "tr": "Bugünün anahtar ifadesi “erkek kardeş”.",
+      "ru": "Ключевое выражение сегодня — «брат».",
+      "uz": "Bugungi asosiy ibora — “aka”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:11ede126eb61cc0e78334f4e4078c3b1beb98a96ad5ccdbd11e1c7d70d5e25ea"
+  },
+  {
+    "concept_id": "wp_concept_000018",
+    "legacy_ids": {
+      "en": 18
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "child",
+      "tr": "çocuk",
+      "ru": "ребёнок",
+      "uz": "bola"
+    },
+    "examples": {
+      "en": "Today’s key expression is “child”.",
+      "tr": "Bugünün anahtar ifadesi “çocuk”.",
+      "ru": "Ключевое выражение сегодня — «ребёнок».",
+      "uz": "Bugungi asosiy ibora — “bola”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:43dbb6a2463804ebb58558d7a161f6955464d33e52778af360119a2d3c1f0deb"
+  },
+  {
+    "concept_id": "wp_concept_000019",
+    "legacy_ids": {
+      "en": 19
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "teacher",
+      "tr": "öğretmen",
+      "ru": "учитель",
+      "uz": "o‘qituvchi"
+    },
+    "examples": {
+      "en": "Today’s key expression is “teacher”.",
+      "tr": "Bugünün anahtar ifadesi “öğretmen”.",
+      "ru": "Ключевое выражение сегодня — «учитель».",
+      "uz": "Bugungi asosiy ibora — “o‘qituvchi”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:1e6d25a8570ebd19b58f28ca30617c25d222300522da06e2079de585e1a442d7"
+  },
+  {
+    "concept_id": "wp_concept_000020",
+    "legacy_ids": {
+      "en": 20
+    },
+    "level": "A1",
+    "topic": "People and family",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "student",
+      "tr": "öğrenci",
+      "ru": "студент",
+      "uz": "talaba"
+    },
+    "examples": {
+      "en": "Today’s key expression is “student”.",
+      "tr": "Bugünün anahtar ifadesi “öğrenci”.",
+      "ru": "Ключевое выражение сегодня — «студент».",
+      "uz": "Bugungi asosiy ibora — “talaba”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:6a3b8024909714fb7dfabb2c3d94dd284985b0c1836122212ea434ab06970b06"
+  },
+  {
+    "concept_id": "wp_concept_000021",
+    "legacy_ids": {
+      "en": 21
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "one",
+      "tr": "bir",
+      "ru": "один",
+      "uz": "bir"
+    },
+    "examples": {
+      "en": "Today’s key expression is “one”.",
+      "tr": "Bugünün anahtar ifadesi “bir”.",
+      "ru": "Ключевое выражение сегодня — «один».",
+      "uz": "Bugungi asosiy ibora — “bir”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:b8a10a6e0d38fbc5f4c4ac2e0861174cfd6faa9d5bfd33cbad5598e18567331a"
+  },
+  {
+    "concept_id": "wp_concept_000022",
+    "legacy_ids": {
+      "en": 22
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "two",
+      "tr": "iki",
+      "ru": "два",
+      "uz": "ikki"
+    },
+    "examples": {
+      "en": "Today’s key expression is “two”.",
+      "tr": "Bugünün anahtar ifadesi “iki”.",
+      "ru": "Ключевое выражение сегодня — «два».",
+      "uz": "Bugungi asosiy ibora — “ikki”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:fe79d478348476201531af174b8323725f6777c3d591533f4f646582b07a9007"
+  },
+  {
+    "concept_id": "wp_concept_000023",
+    "legacy_ids": {
+      "en": 23
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "three",
+      "tr": "üç",
+      "ru": "три",
+      "uz": "uch"
+    },
+    "examples": {
+      "en": "Today’s key expression is “three”.",
+      "tr": "Bugünün anahtar ifadesi “üç”.",
+      "ru": "Ключевое выражение сегодня — «три».",
+      "uz": "Bugungi asosiy ibora — “uch”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:d4ff686c54efb03976da5d9ab74e34571e7961ade6578c3979f756351e68e91f"
+  },
+  {
+    "concept_id": "wp_concept_000024",
+    "legacy_ids": {
+      "en": 24
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "today",
+      "tr": "bugün",
+      "ru": "сегодня",
+      "uz": "bugun"
+    },
+    "examples": {
+      "en": "Today’s key expression is “today”.",
+      "tr": "Bugünün anahtar ifadesi “bugün”.",
+      "ru": "Ключевое выражение сегодня — «сегодня».",
+      "uz": "Bugungi asosiy ibora — “bugun”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:309431aa290c76813131ee627916c3ab487294a9147c0043e7b146c4d32f7a6e"
+  },
+  {
+    "concept_id": "wp_concept_000025",
+    "legacy_ids": {
+      "en": 25
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "tomorrow",
+      "tr": "yarın",
+      "ru": "завтра",
+      "uz": "ertaga"
+    },
+    "examples": {
+      "en": "Today’s key expression is “tomorrow”.",
+      "tr": "Bugünün anahtar ifadesi “yarın”.",
+      "ru": "Ключевое выражение сегодня — «завтра».",
+      "uz": "Bugungi asosiy ibora — “ertaga”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5ec2dc4647c81e3c75f6d8bb3abc141271ee80de25a29bf45be04e84fc69da10"
+  },
+  {
+    "concept_id": "wp_concept_000026",
+    "legacy_ids": {
+      "en": 26
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "yesterday",
+      "tr": "dün",
+      "ru": "вчера",
+      "uz": "kecha"
+    },
+    "examples": {
+      "en": "Today’s key expression is “yesterday”.",
+      "tr": "Bugünün anahtar ifadesi “dün”.",
+      "ru": "Ключевое выражение сегодня — «вчера».",
+      "uz": "Bugungi asosiy ibora — “kecha”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:8265f0199a0c41602cf633a0b2125c0c867c792d3b01450123be402747887203"
+  },
+  {
+    "concept_id": "wp_concept_000027",
+    "legacy_ids": {
+      "en": 27
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "morning",
+      "tr": "sabah",
+      "ru": "утро",
+      "uz": "tong"
+    },
+    "examples": {
+      "en": "Today’s key expression is “morning”.",
+      "tr": "Bugünün anahtar ifadesi “sabah”.",
+      "ru": "Ключевое выражение сегодня — «утро».",
+      "uz": "Bugungi asosiy ibora — “tong”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a8eb86db4adde2d54e514343e049efa5df6125a61a556d2d6a17b124144fe4ed"
+  },
+  {
+    "concept_id": "wp_concept_000028",
+    "legacy_ids": {
+      "en": 28
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "evening",
+      "tr": "akşam",
+      "ru": "вечер",
+      "uz": "kechqurun"
+    },
+    "examples": {
+      "en": "Today’s key expression is “evening”.",
+      "tr": "Bugünün anahtar ifadesi “akşam”.",
+      "ru": "Ключевое выражение сегодня — «вечер».",
+      "uz": "Bugungi asosiy ibora — “kechqurun”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:fa163b8f76678be32625db47136d69385ede9838f7908ecf417cc26adb79129e"
+  },
+  {
+    "concept_id": "wp_concept_000029",
+    "legacy_ids": {
+      "en": 29
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "week",
+      "tr": "hafta",
+      "ru": "неделя",
+      "uz": "hafta"
+    },
+    "examples": {
+      "en": "Today’s key expression is “week”.",
+      "tr": "Bugünün anahtar ifadesi “hafta”.",
+      "ru": "Ключевое выражение сегодня — «неделя».",
+      "uz": "Bugungi asosiy ibora — “hafta”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:ccf93232768bb57da7bdaa3246e3141b01690439fe51ef8d6a28a8470e54d69d"
+  },
+  {
+    "concept_id": "wp_concept_000030",
+    "legacy_ids": {
+      "en": 30
+    },
+    "level": "A1",
+    "topic": "Numbers and time",
+    "part_of_speech": "time / number",
+    "terms": {
+      "en": "year",
+      "tr": "yıl",
+      "ru": "год",
+      "uz": "yil"
+    },
+    "examples": {
+      "en": "Today’s key expression is “year”.",
+      "tr": "Bugünün anahtar ifadesi “yıl”.",
+      "ru": "Ключевое выражение сегодня — «год».",
+      "uz": "Bugungi asosiy ibora — “yil”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:fb1fe85f1e749e592e11a6211f5ee350114cb26f53d55d4b26612a216dda5615"
+  },
+  {
+    "concept_id": "wp_concept_000031",
+    "legacy_ids": {
+      "en": 31
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "house",
+      "tr": "ev",
+      "ru": "дом",
+      "uz": "uy"
+    },
+    "examples": {
+      "en": "Today’s key expression is “house”.",
+      "tr": "Bugünün anahtar ifadesi “ev”.",
+      "ru": "Ключевое выражение сегодня — «дом».",
+      "uz": "Bugungi asosiy ibora — “uy”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a212416a7bbda891d56832e4f9903a7872edb882685e1c16b5f67dd656570171"
+  },
+  {
+    "concept_id": "wp_concept_000032",
+    "legacy_ids": {
+      "en": 32
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "room",
+      "tr": "oda",
+      "ru": "комната",
+      "uz": "xona"
+    },
+    "examples": {
+      "en": "Today’s key expression is “room”.",
+      "tr": "Bugünün anahtar ifadesi “oda”.",
+      "ru": "Ключевое выражение сегодня — «комната».",
+      "uz": "Bugungi asosiy ibora — “xona”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:f9b2d8bfe595f80b1d21f14c3a1738fe89f086d6c1fff6131fdefc213e173bac"
+  },
+  {
+    "concept_id": "wp_concept_000033",
+    "legacy_ids": {
+      "en": 33
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "door",
+      "tr": "kapı",
+      "ru": "дверь",
+      "uz": "eshik"
+    },
+    "examples": {
+      "en": "Today’s key expression is “door”.",
+      "tr": "Bugünün anahtar ifadesi “kapı”.",
+      "ru": "Ключевое выражение сегодня — «дверь».",
+      "uz": "Bugungi asosiy ibora — “eshik”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:0df952e979246614456d5db91bb927df919d146220ee06ce735034ec65e08f3e"
+  },
+  {
+    "concept_id": "wp_concept_000034",
+    "legacy_ids": {
+      "en": 34
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "window",
+      "tr": "pencere",
+      "ru": "окно",
+      "uz": "deraza"
+    },
+    "examples": {
+      "en": "Today’s key expression is “window”.",
+      "tr": "Bugünün anahtar ifadesi “pencere”.",
+      "ru": "Ключевое выражение сегодня — «окно».",
+      "uz": "Bugungi asosiy ibora — “deraza”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:d0b2f972f9c370a1fffc06756cc595299a80944ea5220ad5b93ea56fb312c641"
+  },
+  {
+    "concept_id": "wp_concept_000035",
+    "legacy_ids": {
+      "en": 35
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "table",
+      "tr": "masa",
+      "ru": "стол",
+      "uz": "stol"
+    },
+    "examples": {
+      "en": "Today’s key expression is “table”.",
+      "tr": "Bugünün anahtar ifadesi “masa”.",
+      "ru": "Ключевое выражение сегодня — «стол».",
+      "uz": "Bugungi asosiy ibora — “stol”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5433c903bc645729975553f0dff36ebb58367fe4403657b899e5b9b8805d2cf9"
+  },
+  {
+    "concept_id": "wp_concept_000036",
+    "legacy_ids": {
+      "en": 36
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "chair",
+      "tr": "sandalye",
+      "ru": "стул",
+      "uz": "stul"
+    },
+    "examples": {
+      "en": "Today’s key expression is “chair”.",
+      "tr": "Bugünün anahtar ifadesi “sandalye”.",
+      "ru": "Ключевое выражение сегодня — «стул».",
+      "uz": "Bugungi asosiy ibora — “stul”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:323138ba1e83b954aef2bc740923ceff13a9988f0d308a7e40cec9e6bd9bfa8c"
+  },
+  {
+    "concept_id": "wp_concept_000037",
+    "legacy_ids": {
+      "en": 37
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "bed",
+      "tr": "yatak",
+      "ru": "кровать",
+      "uz": "karavot"
+    },
+    "examples": {
+      "en": "Today’s key expression is “bed”.",
+      "tr": "Bugünün anahtar ifadesi “yatak”.",
+      "ru": "Ключевое выражение сегодня — «кровать».",
+      "uz": "Bugungi asosiy ibora — “karavot”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5785578b66a2c4fdf8dc13b3e8b367da5aae3e3995e089af9da568b06d513d0f"
+  },
+  {
+    "concept_id": "wp_concept_000038",
+    "legacy_ids": {
+      "en": 38
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "kitchen",
+      "tr": "mutfak",
+      "ru": "кухня",
+      "uz": "oshxona"
+    },
+    "examples": {
+      "en": "Today’s key expression is “kitchen”.",
+      "tr": "Bugünün anahtar ifadesi “mutfak”.",
+      "ru": "Ключевое выражение сегодня — «кухня».",
+      "uz": "Bugungi asosiy ibora — “oshxona”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:6e81888c7090d892bc19e3af099ade1a729fea8378aa8500b21d6fdb49322ee6"
+  },
+  {
+    "concept_id": "wp_concept_000039",
+    "legacy_ids": {
+      "en": 39
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "bathroom",
+      "tr": "banyo",
+      "ru": "ванная",
+      "uz": "hammom"
+    },
+    "examples": {
+      "en": "Today’s key expression is “bathroom”.",
+      "tr": "Bugünün anahtar ifadesi “banyo”.",
+      "ru": "Ключевое выражение сегодня — «ванная».",
+      "uz": "Bugungi asosiy ibora — “hammom”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:79eefb831d1d6d64863b9caad2b44735ac2d05e1ab03a4c3ffd28e96f408a981"
+  },
+  {
+    "concept_id": "wp_concept_000040",
+    "legacy_ids": {
+      "en": 40
+    },
+    "level": "A1",
+    "topic": "Home",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "key",
+      "tr": "anahtar",
+      "ru": "ключ",
+      "uz": "kalit"
+    },
+    "examples": {
+      "en": "Today’s key expression is “key”.",
+      "tr": "Bugünün anahtar ifadesi “anahtar”.",
+      "ru": "Ключевое выражение сегодня — «ключ».",
+      "uz": "Bugungi asosiy ibora — “kalit”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5ff02b8ca22a6afee4c21d6dc75cc61d7f8efa12a068d0040fbe99a918a6285c"
+  },
+  {
+    "concept_id": "wp_concept_000041",
+    "legacy_ids": {
+      "en": 41
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "water",
+      "tr": "su",
+      "ru": "вода",
+      "uz": "suv"
+    },
+    "examples": {
+      "en": "Today’s key expression is “water”.",
+      "tr": "Bugünün anahtar ifadesi “su”.",
+      "ru": "Ключевое выражение сегодня — «вода».",
+      "uz": "Bugungi asosiy ibora — “suv”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2b08f16ac18f9673a0417c94acc609c12297694e7f180f75d86f86493684ed94"
+  },
+  {
+    "concept_id": "wp_concept_000042",
+    "legacy_ids": {
+      "en": 42
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "bread",
+      "tr": "ekmek",
+      "ru": "хлеб",
+      "uz": "non"
+    },
+    "examples": {
+      "en": "Today’s key expression is “bread”.",
+      "tr": "Bugünün anahtar ifadesi “ekmek”.",
+      "ru": "Ключевое выражение сегодня — «хлеб».",
+      "uz": "Bugungi asosiy ibora — “non”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:57dde1d2d51f6366af806f54b5004039e4e4f704058410bc98e41112d8996876"
+  },
+  {
+    "concept_id": "wp_concept_000043",
+    "legacy_ids": {
+      "en": 43
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "milk",
+      "tr": "süt",
+      "ru": "молоко",
+      "uz": "sut"
+    },
+    "examples": {
+      "en": "Today’s key expression is “milk”.",
+      "tr": "Bugünün anahtar ifadesi “süt”.",
+      "ru": "Ключевое выражение сегодня — «молоко».",
+      "uz": "Bugungi asosiy ibora — “sut”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:b02e8cb1e8b576cc7ff23cb5220977dab85bf37e76db428d640ec44d43926b18"
+  },
+  {
+    "concept_id": "wp_concept_000044",
+    "legacy_ids": {
+      "en": 44
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "tea",
+      "tr": "çay",
+      "ru": "чай",
+      "uz": "choy"
+    },
+    "examples": {
+      "en": "Today’s key expression is “tea”.",
+      "tr": "Bugünün anahtar ifadesi “çay”.",
+      "ru": "Ключевое выражение сегодня — «чай».",
+      "uz": "Bugungi asosiy ibora — “choy”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2ea20b0595cabe8333a9f7810108493417159858a8cd124c8a77832519303607"
+  },
+  {
+    "concept_id": "wp_concept_000045",
+    "legacy_ids": {
+      "en": 45
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "coffee",
+      "tr": "kahve",
+      "ru": "кофе",
+      "uz": "qahva"
+    },
+    "examples": {
+      "en": "Today’s key expression is “coffee”.",
+      "tr": "Bugünün anahtar ifadesi “kahve”.",
+      "ru": "Ключевое выражение сегодня — «кофе».",
+      "uz": "Bugungi asosiy ibora — “qahva”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:4a851893d932bcac6978c841146c1efc5e5a32adfedfeaffed5529a70c0c1a96"
+  },
+  {
+    "concept_id": "wp_concept_000046",
+    "legacy_ids": {
+      "en": 46
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "apple",
+      "tr": "elma",
+      "ru": "яблоко",
+      "uz": "olma"
+    },
+    "examples": {
+      "en": "Today’s key expression is “apple”.",
+      "tr": "Bugünün anahtar ifadesi “elma”.",
+      "ru": "Ключевое выражение сегодня — «яблоко».",
+      "uz": "Bugungi asosiy ibora — “olma”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:fd51d5557807437a2bbc6ed9a909c304cf45b33172ca932e22012735190d928d"
+  },
+  {
+    "concept_id": "wp_concept_000047",
+    "legacy_ids": {
+      "en": 47
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "rice",
+      "tr": "pirinç",
+      "ru": "рис",
+      "uz": "guruch"
+    },
+    "examples": {
+      "en": "Today’s key expression is “rice”.",
+      "tr": "Bugünün anahtar ifadesi “pirinç”.",
+      "ru": "Ключевое выражение сегодня — «рис».",
+      "uz": "Bugungi asosiy ibora — “guruch”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:80f5e88efeb6894d9573069b67f3216f1195851ddba30458ca7f9f64a7333526"
+  },
+  {
+    "concept_id": "wp_concept_000048",
+    "legacy_ids": {
+      "en": 48
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "soup",
+      "tr": "çorba",
+      "ru": "суп",
+      "uz": "sho‘rva"
+    },
+    "examples": {
+      "en": "Today’s key expression is “soup”.",
+      "tr": "Bugünün anahtar ifadesi “çorba”.",
+      "ru": "Ключевое выражение сегодня — «суп».",
+      "uz": "Bugungi asosiy ibora — “sho‘rva”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:280be2290d924e3c8ecd0eed5ad661051f307592cde5cdd5ab9617573089ec70"
+  },
+  {
+    "concept_id": "wp_concept_000049",
+    "legacy_ids": {
+      "en": 49
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "breakfast",
+      "tr": "kahvaltı",
+      "ru": "завтрак",
+      "uz": "nonushta"
+    },
+    "examples": {
+      "en": "Today’s key expression is “breakfast”.",
+      "tr": "Bugünün anahtar ifadesi “kahvaltı”.",
+      "ru": "Ключевое выражение сегодня — «завтрак».",
+      "uz": "Bugungi asosiy ibora — “nonushta”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:7c1cb18d825659d50091ca8c472fa7a89d16e97e3d2f2efcb652bb0eca4811be"
+  },
+  {
+    "concept_id": "wp_concept_000050",
+    "legacy_ids": {
+      "en": 50
+    },
+    "level": "A1",
+    "topic": "Food and drink",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "dinner",
+      "tr": "akşam yemeği",
+      "ru": "ужин",
+      "uz": "kechki ovqat"
+    },
+    "examples": {
+      "en": "Today’s key expression is “dinner”.",
+      "tr": "Bugünün anahtar ifadesi “akşam yemeği”.",
+      "ru": "Ключевое выражение сегодня — «ужин».",
+      "uz": "Bugungi asosiy ibora — “kechki ovqat”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3f56519daacd89065d814a46a14963a92279753f41e3a62706b055f98bfffde0"
+  },
+  {
+    "concept_id": "wp_concept_000051",
+    "legacy_ids": {
+      "en": 51
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "city",
+      "tr": "şehir",
+      "ru": "город",
+      "uz": "shahar"
+    },
+    "examples": {
+      "en": "Today’s key expression is “city”.",
+      "tr": "Bugünün anahtar ifadesi “şehir”.",
+      "ru": "Ключевое выражение сегодня — «город».",
+      "uz": "Bugungi asosiy ibora — “shahar”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:d22cc18ebcd6a3d6a78255219d1862e9e86f94c8036aa4657145c56e75e91721"
+  },
+  {
+    "concept_id": "wp_concept_000052",
+    "legacy_ids": {
+      "en": 52
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "street",
+      "tr": "sokak",
+      "ru": "улица",
+      "uz": "ko‘cha"
+    },
+    "examples": {
+      "en": "Today’s key expression is “street”.",
+      "tr": "Bugünün anahtar ifadesi “sokak”.",
+      "ru": "Ключевое выражение сегодня — «улица».",
+      "uz": "Bugungi asosiy ibora — “ko‘cha”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:b49b7ccf1a421ecc6138d354c04d0272c21f50fafe9218f2a938e93c565370a8"
+  },
+  {
+    "concept_id": "wp_concept_000053",
+    "legacy_ids": {
+      "en": 53
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "bus",
+      "tr": "otobüs",
+      "ru": "автобус",
+      "uz": "avtobus"
+    },
+    "examples": {
+      "en": "Today’s key expression is “bus”.",
+      "tr": "Bugünün anahtar ifadesi “otobüs”.",
+      "ru": "Ключевое выражение сегодня — «автобус».",
+      "uz": "Bugungi asosiy ibora — “avtobus”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:690fb280fd85cd85424a945d1ba3de9b5f0eafbdc093b692578ec11753ea1e94"
+  },
+  {
+    "concept_id": "wp_concept_000054",
+    "legacy_ids": {
+      "en": 54
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "train",
+      "tr": "tren",
+      "ru": "поезд",
+      "uz": "poyezd"
+    },
+    "examples": {
+      "en": "Today’s key expression is “train”.",
+      "tr": "Bugünün anahtar ifadesi “tren”.",
+      "ru": "Ключевое выражение сегодня — «поезд».",
+      "uz": "Bugungi asosiy ibora — “poyezd”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a31bc9ce5e186edb1ff95f208f83b1b2bdc8b4ece3e403d7c2ca34e995d28808"
+  },
+  {
+    "concept_id": "wp_concept_000055",
+    "legacy_ids": {
+      "en": 55
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "car",
+      "tr": "araba",
+      "ru": "машина",
+      "uz": "mashina"
+    },
+    "examples": {
+      "en": "Today’s key expression is “car”.",
+      "tr": "Bugünün anahtar ifadesi “araba”.",
+      "ru": "Ключевое выражение сегодня — «машина».",
+      "uz": "Bugungi asosiy ibora — “mashina”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:05a995337c6cf28323c1e08e3753e1158cb1fc5b280f693e55c8b6b49d697f38"
+  },
+  {
+    "concept_id": "wp_concept_000056",
+    "legacy_ids": {
+      "en": 56
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "airport",
+      "tr": "havalimanı",
+      "ru": "аэропорт",
+      "uz": "aeroport"
+    },
+    "examples": {
+      "en": "Today’s key expression is “airport”.",
+      "tr": "Bugünün anahtar ifadesi “havalimanı”.",
+      "ru": "Ключевое выражение сегодня — «аэропорт».",
+      "uz": "Bugungi asosiy ibora — “aeroport”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:8b9f3a627dd283a015546bbe2bb40844334b987c1bcde6a4e0ee62651ef6827d"
+  },
+  {
+    "concept_id": "wp_concept_000057",
+    "legacy_ids": {
+      "en": 57
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "ticket",
+      "tr": "bilet",
+      "ru": "билет",
+      "uz": "chipta"
+    },
+    "examples": {
+      "en": "Today’s key expression is “ticket”.",
+      "tr": "Bugünün anahtar ifadesi “bilet”.",
+      "ru": "Ключевое выражение сегодня — «билет».",
+      "uz": "Bugungi asosiy ibora — “chipta”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:cb2b654d8f6f3ada4dc2b8e276947e50159638bb5676245213a10a187f52446f"
+  },
+  {
+    "concept_id": "wp_concept_000058",
+    "legacy_ids": {
+      "en": 58
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "hotel",
+      "tr": "otel",
+      "ru": "отель",
+      "uz": "mehmonxona"
+    },
+    "examples": {
+      "en": "Today’s key expression is “hotel”.",
+      "tr": "Bugünün anahtar ifadesi “otel”.",
+      "ru": "Ключевое выражение сегодня — «отель».",
+      "uz": "Bugungi asosiy ibora — “mehmonxona”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2135738328a690b96f5720c7cc9bf85ebb193285565f8496d0581e2c47938225"
+  },
+  {
+    "concept_id": "wp_concept_000059",
+    "legacy_ids": {
+      "en": 59
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "left",
+      "tr": "sol",
+      "ru": "налево",
+      "uz": "chapga"
+    },
+    "examples": {
+      "en": "Today’s key expression is “left”.",
+      "tr": "Bugünün anahtar ifadesi “sol”.",
+      "ru": "Ключевое выражение сегодня — «налево».",
+      "uz": "Bugungi asosiy ibora — “chapga”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:83c08c2c19c47a445f74694e8cf9dc57e371cb839a291ee93b273c8c1a7c2ad2"
+  },
+  {
+    "concept_id": "wp_concept_000060",
+    "legacy_ids": {
+      "en": 60
+    },
+    "level": "A1",
+    "topic": "City and travel",
+    "part_of_speech": "travel word",
+    "terms": {
+      "en": "right",
+      "tr": "sağ",
+      "ru": "направо",
+      "uz": "o‘ngga"
+    },
+    "examples": {
+      "en": "Today’s key expression is “right”.",
+      "tr": "Bugünün anahtar ifadesi “sağ”.",
+      "ru": "Ключевое выражение сегодня — «направо».",
+      "uz": "Bugungi asosiy ibora — “o‘ngga”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:275d7de95d727b2e7392b34b731dc711a4a61d9d19c277dbb706f89a972185df"
+  },
+  {
+    "concept_id": "wp_concept_000061",
+    "legacy_ids": {
+      "en": 61
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "book",
+      "tr": "kitap",
+      "ru": "книга",
+      "uz": "kitob"
+    },
+    "examples": {
+      "en": "Today’s key expression is “book”.",
+      "tr": "Bugünün anahtar ifadesi “kitap”.",
+      "ru": "Ключевое выражение сегодня — «книга».",
+      "uz": "Bugungi asosiy ibora — “kitob”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:c84e899c8e2de7382f13835a45e1412fedec7441a6fb58883bbd2adc29eb1792"
+  },
+  {
+    "concept_id": "wp_concept_000062",
+    "legacy_ids": {
+      "en": 62
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "pen",
+      "tr": "kalem",
+      "ru": "ручка",
+      "uz": "ruchka"
+    },
+    "examples": {
+      "en": "Today’s key expression is “pen”.",
+      "tr": "Bugünün anahtar ifadesi “kalem”.",
+      "ru": "Ключевое выражение сегодня — «ручка».",
+      "uz": "Bugungi asosiy ibora — “ruchka”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:835271d4f1e418fd703195afa626de341f485c57237ea3b3b3f49e0ae648bb29"
+  },
+  {
+    "concept_id": "wp_concept_000063",
+    "legacy_ids": {
+      "en": 63
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "word",
+      "tr": "kelime",
+      "ru": "слово",
+      "uz": "so‘z"
+    },
+    "examples": {
+      "en": "Today’s key expression is “word”.",
+      "tr": "Bugünün anahtar ifadesi “kelime”.",
+      "ru": "Ключевое выражение сегодня — «слово».",
+      "uz": "Bugungi asosiy ibora — “so‘z”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5a0f0e85fd0eebff40fd44f1660f4fd7dea338f5e653ba81aa9e4314d12003c6"
+  },
+  {
+    "concept_id": "wp_concept_000064",
+    "legacy_ids": {
+      "en": 64
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "question",
+      "tr": "soru",
+      "ru": "вопрос",
+      "uz": "savol"
+    },
+    "examples": {
+      "en": "Today’s key expression is “question”.",
+      "tr": "Bugünün anahtar ifadesi “soru”.",
+      "ru": "Ключевое выражение сегодня — «вопрос».",
+      "uz": "Bugungi asosiy ibora — “savol”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:1709de42923c677f515fa2f98e07729c84f699c8121f67b92ac6cde08d00c5b2"
+  },
+  {
+    "concept_id": "wp_concept_000065",
+    "legacy_ids": {
+      "en": 65
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "answer",
+      "tr": "cevap",
+      "ru": "ответ",
+      "uz": "javob"
+    },
+    "examples": {
+      "en": "Today’s key expression is “answer”.",
+      "tr": "Bugünün anahtar ifadesi “cevap”.",
+      "ru": "Ключевое выражение сегодня — «ответ».",
+      "uz": "Bugungi asosiy ibora — “javob”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:eafd68f061dc4d82e26984945bd815876c3ea86faddb39c03b6140a3d33a7303"
+  },
+  {
+    "concept_id": "wp_concept_000066",
+    "legacy_ids": {
+      "en": 66
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "lesson",
+      "tr": "ders",
+      "ru": "урок",
+      "uz": "dars"
+    },
+    "examples": {
+      "en": "Today’s key expression is “lesson”.",
+      "tr": "Bugünün anahtar ifadesi “ders”.",
+      "ru": "Ключевое выражение сегодня — «урок».",
+      "uz": "Bugungi asosiy ibora — “dars”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:665cd8589ded98dad47ed4f4dce485ca517ac6c0a03bb37b85ee0eabdcc091dc"
+  },
+  {
+    "concept_id": "wp_concept_000067",
+    "legacy_ids": {
+      "en": 67
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "work",
+      "tr": "iş",
+      "ru": "работа",
+      "uz": "ish"
+    },
+    "examples": {
+      "en": "Today’s key expression is “work”.",
+      "tr": "Bugünün anahtar ifadesi “iş”.",
+      "ru": "Ключевое выражение сегодня — «работа».",
+      "uz": "Bugungi asosiy ibora — “ish”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:935656a428ca5a580b6137cd3e0ed4db1b9bf082736853f6e9cb414562d79252"
+  },
+  {
+    "concept_id": "wp_concept_000068",
+    "legacy_ids": {
+      "en": 68
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "office",
+      "tr": "ofis",
+      "ru": "офис",
+      "uz": "ofis"
+    },
+    "examples": {
+      "en": "Today’s key expression is “office”.",
+      "tr": "Bugünün anahtar ifadesi “ofis”.",
+      "ru": "Ключевое выражение сегодня — «офис».",
+      "uz": "Bugungi asosiy ibora — “ofis”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:0f8d2986a8778f9f22dccd4a6ead3f1570df7a5b7f60c451234e97220a00f777"
+  },
+  {
+    "concept_id": "wp_concept_000069",
+    "legacy_ids": {
+      "en": 69
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "meeting",
+      "tr": "toplantı",
+      "ru": "встреча",
+      "uz": "uchrashuv"
+    },
+    "examples": {
+      "en": "Today’s key expression is “meeting”.",
+      "tr": "Bugünün anahtar ifadesi “toplantı”.",
+      "ru": "Ключевое выражение сегодня — «встреча».",
+      "uz": "Bugungi asosiy ibora — “uchrashuv”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:8958bd4d7556629d14be032a123e83e59d22756c0ed50be63fd110cc7c5676c6"
+  },
+  {
+    "concept_id": "wp_concept_000070",
+    "legacy_ids": {
+      "en": 70
+    },
+    "level": "A1",
+    "topic": "Study and work",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "computer",
+      "tr": "bilgisayar",
+      "ru": "компьютер",
+      "uz": "kompyuter"
+    },
+    "examples": {
+      "en": "Today’s key expression is “computer”.",
+      "tr": "Bugünün anahtar ifadesi “bilgisayar”.",
+      "ru": "Ключевое выражение сегодня — «компьютер».",
+      "uz": "Bugungi asosiy ibora — “kompyuter”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:f6707b983fae0f71f35f587a5a0a7304e476c26bf8ae325eb58681c2a4db5eb8"
+  },
+  {
+    "concept_id": "wp_concept_000071",
+    "legacy_ids": {
+      "en": 71
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "be",
+      "tr": "olmak",
+      "ru": "быть",
+      "uz": "bo‘lmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “be”.",
+      "tr": "Bugünün anahtar ifadesi “olmak”.",
+      "ru": "Ключевое выражение сегодня — «быть».",
+      "uz": "Bugungi asosiy ibora — “bo‘lmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:538e9c07d831d092320691ec5db24b97ee9d0b3fa3795c8cbfccbf26b86c70d6"
+  },
+  {
+    "concept_id": "wp_concept_000072",
+    "legacy_ids": {
+      "en": 72
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "have",
+      "tr": "sahip olmak",
+      "ru": "иметь",
+      "uz": "ega bo‘lmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “have”.",
+      "tr": "Bugünün anahtar ifadesi “sahip olmak”.",
+      "ru": "Ключевое выражение сегодня — «иметь».",
+      "uz": "Bugungi asosiy ibora — “ega bo‘lmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:9801acfe1074b9b7f0e64481f917b7a3cce12264d1e3b1120170efa2e011331e"
+  },
+  {
+    "concept_id": "wp_concept_000073",
+    "legacy_ids": {
+      "en": 73
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "go",
+      "tr": "gitmek",
+      "ru": "идти",
+      "uz": "bormoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “go”.",
+      "tr": "Bugünün anahtar ifadesi “gitmek”.",
+      "ru": "Ключевое выражение сегодня — «идти».",
+      "uz": "Bugungi asosiy ibora — “bormoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3b30dcbfbdfd8482d895351a7841be7ab9ae0ed4b88f254d5d2d82aee44a9255"
+  },
+  {
+    "concept_id": "wp_concept_000074",
+    "legacy_ids": {
+      "en": 74
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "come",
+      "tr": "gelmek",
+      "ru": "приходить",
+      "uz": "kelmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “come”.",
+      "tr": "Bugünün anahtar ifadesi “gelmek”.",
+      "ru": "Ключевое выражение сегодня — «приходить».",
+      "uz": "Bugungi asosiy ibora — “kelmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a68ffa99f76eb560696de23cb666cb0639452d869e3ad69f7993fb2da94a2110"
+  },
+  {
+    "concept_id": "wp_concept_000075",
+    "legacy_ids": {
+      "en": 75
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "see",
+      "tr": "görmek",
+      "ru": "видеть",
+      "uz": "ko‘rmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “see”.",
+      "tr": "Bugünün anahtar ifadesi “görmek”.",
+      "ru": "Ключевое выражение сегодня — «видеть».",
+      "uz": "Bugungi asosiy ibora — “ko‘rmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:1d4d92d4c10c5d2ee6094e1733970b187a7c8a2e9a02d5dcbcbd2ba1bd8f206f"
+  },
+  {
+    "concept_id": "wp_concept_000076",
+    "legacy_ids": {
+      "en": 76
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "hear",
+      "tr": "duymak",
+      "ru": "слышать",
+      "uz": "eshitmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “hear”.",
+      "tr": "Bugünün anahtar ifadesi “duymak”.",
+      "ru": "Ключевое выражение сегодня — «слышать».",
+      "uz": "Bugungi asosiy ibora — “eshitmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2f41ad04bc4d0da4183ce3df6ba5d1bdd30be98b5cb6f8701f226e37d657126e"
+  },
+  {
+    "concept_id": "wp_concept_000077",
+    "legacy_ids": {
+      "en": 77
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "speak",
+      "tr": "konuşmak",
+      "ru": "говорить",
+      "uz": "gapirmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “speak”.",
+      "tr": "Bugünün anahtar ifadesi “konuşmak”.",
+      "ru": "Ключевое выражение сегодня — «говорить».",
+      "uz": "Bugungi asosiy ibora — “gapirmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:65dfd33cffb432927bd502408ac652934a12fae6c5ab6b240f20caa3c59e2cbc"
+  },
+  {
+    "concept_id": "wp_concept_000078",
+    "legacy_ids": {
+      "en": 78
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "read",
+      "tr": "okumak",
+      "ru": "читать",
+      "uz": "o‘qimoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “read”.",
+      "tr": "Bugünün anahtar ifadesi “okumak”.",
+      "ru": "Ключевое выражение сегодня — «читать».",
+      "uz": "Bugungi asosiy ibora — “o‘qimoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:31eaba5d10b754699aebd80483821f4115a4f3317b27d13d3e1e8dbfb5ee858b"
+  },
+  {
+    "concept_id": "wp_concept_000079",
+    "legacy_ids": {
+      "en": 79
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "write",
+      "tr": "yazmak",
+      "ru": "писать",
+      "uz": "yozmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “write”.",
+      "tr": "Bugünün anahtar ifadesi “yazmak”.",
+      "ru": "Ключевое выражение сегодня — «писать».",
+      "uz": "Bugungi asosiy ibora — “yozmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:e5cbaf0f0f866ebc8ee757d2960399123cd06c1701a45f1acf00543ca101e376"
+  },
+  {
+    "concept_id": "wp_concept_000080",
+    "legacy_ids": {
+      "en": 80
+    },
+    "level": "A1",
+    "topic": "Core verbs I",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "learn",
+      "tr": "öğrenmek",
+      "ru": "учить",
+      "uz": "o‘rganmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “learn”.",
+      "tr": "Bugünün anahtar ifadesi “öğrenmek”.",
+      "ru": "Ключевое выражение сегодня — «учить».",
+      "uz": "Bugungi asosiy ibora — “o‘rganmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:706e03fbd7bdd7ede4688a0e70fdc5500d5ca4f696509d4fe78ff9a4919172d1"
+  },
+  {
+    "concept_id": "wp_concept_000081",
+    "legacy_ids": {
+      "en": 81
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "eat",
+      "tr": "yemek",
+      "ru": "есть",
+      "uz": "yemoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “eat”.",
+      "tr": "Bugünün anahtar ifadesi “yemek”.",
+      "ru": "Ключевое выражение сегодня — «есть».",
+      "uz": "Bugungi asosiy ibora — “yemoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:7d5d0c885352305f2e18197407eca03e57cd4bc0d61859a878eb883761ee5e7f"
+  },
+  {
+    "concept_id": "wp_concept_000082",
+    "legacy_ids": {
+      "en": 82
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "drink",
+      "tr": "içmek",
+      "ru": "пить",
+      "uz": "ichmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “drink”.",
+      "tr": "Bugünün anahtar ifadesi “içmek”.",
+      "ru": "Ключевое выражение сегодня — «пить».",
+      "uz": "Bugungi asosiy ibora — “ichmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:8e5c5c6f9f0cef16ea6b312c00368903a76f3ac663abbb9ee0d8c9e844905ea2"
+  },
+  {
+    "concept_id": "wp_concept_000083",
+    "legacy_ids": {
+      "en": 83
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "sleep",
+      "tr": "uyumak",
+      "ru": "спать",
+      "uz": "uxlamoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sleep”.",
+      "tr": "Bugünün anahtar ifadesi “uyumak”.",
+      "ru": "Ключевое выражение сегодня — «спать».",
+      "uz": "Bugungi asosiy ibora — “uxlamoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:34078e87df36be63d3ef9fc0cc826eaf5d5534e84d46638bfea1a4946ce65baa"
+  },
+  {
+    "concept_id": "wp_concept_000084",
+    "legacy_ids": {
+      "en": 84
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "wake up",
+      "tr": "uyanmak",
+      "ru": "просыпаться",
+      "uz": "uyg‘onmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “wake up”.",
+      "tr": "Bugünün anahtar ifadesi “uyanmak”.",
+      "ru": "Ключевое выражение сегодня — «просыпаться».",
+      "uz": "Bugungi asosiy ibora — “uyg‘onmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:1286845ec5855bdeff838779cf533dae77b7a0f8592bad393460445b083c7654"
+  },
+  {
+    "concept_id": "wp_concept_000085",
+    "legacy_ids": {
+      "en": 85
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "sit",
+      "tr": "oturmak",
+      "ru": "сидеть",
+      "uz": "o‘tirmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sit”.",
+      "tr": "Bugünün anahtar ifadesi “oturmak”.",
+      "ru": "Ключевое выражение сегодня — «сидеть».",
+      "uz": "Bugungi asosiy ibora — “o‘tirmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:ad22a7d133886c7dd834fc717f49f92d9776bff58a3cb2521d115793499c3955"
+  },
+  {
+    "concept_id": "wp_concept_000086",
+    "legacy_ids": {
+      "en": 86
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "stand",
+      "tr": "ayakta durmak",
+      "ru": "стоять",
+      "uz": "turmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “stand”.",
+      "tr": "Bugünün anahtar ifadesi “ayakta durmak”.",
+      "ru": "Ключевое выражение сегодня — «стоять».",
+      "uz": "Bugungi asosiy ibora — “turmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5f8c1277d962edcd760bbb121527bffbac65990fb21baabb6dd0b3148c22ca31"
+  },
+  {
+    "concept_id": "wp_concept_000087",
+    "legacy_ids": {
+      "en": 87
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "open",
+      "tr": "açmak",
+      "ru": "открывать",
+      "uz": "ochmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “open”.",
+      "tr": "Bugünün anahtar ifadesi “açmak”.",
+      "ru": "Ключевое выражение сегодня — «открывать».",
+      "uz": "Bugungi asosiy ibora — “ochmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:dc4eb9cd40dd9827fcbea1ce9da5817ea7900753868cc74f18c5ba6bdb947f96"
+  },
+  {
+    "concept_id": "wp_concept_000088",
+    "legacy_ids": {
+      "en": 88
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "close",
+      "tr": "kapatmak",
+      "ru": "закрывать",
+      "uz": "yopmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “close”.",
+      "tr": "Bugünün anahtar ifadesi “kapatmak”.",
+      "ru": "Ключевое выражение сегодня — «закрывать».",
+      "uz": "Bugungi asosiy ibora — “yopmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:cb901b50d2085bf722db5c70c1bb7f026105e22d58e24ac180126a98682fa726"
+  },
+  {
+    "concept_id": "wp_concept_000089",
+    "legacy_ids": {
+      "en": 89
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "buy",
+      "tr": "satın almak",
+      "ru": "покупать",
+      "uz": "sotib olmoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “buy”.",
+      "tr": "Bugünün anahtar ifadesi “satın almak”.",
+      "ru": "Ключевое выражение сегодня — «покупать».",
+      "uz": "Bugungi asosiy ibora — “sotib olmoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:638efc3461c6840768ebbf152d60307751bc727373141f59d31854e600efe712"
+  },
+  {
+    "concept_id": "wp_concept_000090",
+    "legacy_ids": {
+      "en": 90
+    },
+    "level": "A1",
+    "topic": "Core verbs II",
+    "part_of_speech": "verb",
+    "terms": {
+      "en": "pay",
+      "tr": "ödemek",
+      "ru": "платить",
+      "uz": "to‘lamoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “pay”.",
+      "tr": "Bugünün anahtar ifadesi “ödemek”.",
+      "ru": "Ключевое выражение сегодня — «платить».",
+      "uz": "Bugungi asosiy ibora — “to‘lamoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:749442e65d892cbece643317b23d0ae2949708b3aaf8a509a372e24513629ef5"
+  },
+  {
+    "concept_id": "wp_concept_000091",
+    "legacy_ids": {
+      "en": 91
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "good",
+      "tr": "iyi",
+      "ru": "хороший",
+      "uz": "yaxshi"
+    },
+    "examples": {
+      "en": "Today’s key expression is “good”.",
+      "tr": "Bugünün anahtar ifadesi “iyi”.",
+      "ru": "Ключевое выражение сегодня — «хороший».",
+      "uz": "Bugungi asosiy ibora — “yaxshi”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:9385a00d6d7ec3d0027bc8187390e403152e7dd5fec92aed4239762bcc69d076"
+  },
+  {
+    "concept_id": "wp_concept_000092",
+    "legacy_ids": {
+      "en": 92
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "bad",
+      "tr": "kötü",
+      "ru": "плохой",
+      "uz": "yomon"
+    },
+    "examples": {
+      "en": "Today’s key expression is “bad”.",
+      "tr": "Bugünün anahtar ifadesi “kötü”.",
+      "ru": "Ключевое выражение сегодня — «плохой».",
+      "uz": "Bugungi asosiy ibora — “yomon”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:feeab242904586a051f6ef746f9abcbcbe97e5c7e14ecfe2d5e2a8c7ad49b090"
+  },
+  {
+    "concept_id": "wp_concept_000093",
+    "legacy_ids": {
+      "en": 93
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "big",
+      "tr": "büyük",
+      "ru": "большой",
+      "uz": "katta"
+    },
+    "examples": {
+      "en": "Today’s key expression is “big”.",
+      "tr": "Bugünün anahtar ifadesi “büyük”.",
+      "ru": "Ключевое выражение сегодня — «большой».",
+      "uz": "Bugungi asosiy ibora — “katta”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:2f51b1dd5f05e2d0cb41348bbd12659a74890de7c9f353c7d85720fa8ba7c099"
+  },
+  {
+    "concept_id": "wp_concept_000094",
+    "legacy_ids": {
+      "en": 94
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "small",
+      "tr": "küçük",
+      "ru": "маленький",
+      "uz": "kichik"
+    },
+    "examples": {
+      "en": "Today’s key expression is “small”.",
+      "tr": "Bugünün anahtar ifadesi “küçük”.",
+      "ru": "Ключевое выражение сегодня — «маленький».",
+      "uz": "Bugungi asosiy ibora — “kichik”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:591cc3bf9890ea980db37d3bd3694302968958ee7ada9f4473b93e9f3eb0b543"
+  },
+  {
+    "concept_id": "wp_concept_000095",
+    "legacy_ids": {
+      "en": 95
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "new",
+      "tr": "yeni",
+      "ru": "новый",
+      "uz": "yangi"
+    },
+    "examples": {
+      "en": "Today’s key expression is “new”.",
+      "tr": "Bugünün anahtar ifadesi “yeni”.",
+      "ru": "Ключевое выражение сегодня — «новый».",
+      "uz": "Bugungi asosiy ibora — “yangi”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3482c47540d9d97163ae8696f073fd010d545999041b0fdba662dd5f4a7899db"
+  },
+  {
+    "concept_id": "wp_concept_000096",
+    "legacy_ids": {
+      "en": 96
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "old",
+      "tr": "eski",
+      "ru": "старый",
+      "uz": "eski"
+    },
+    "examples": {
+      "en": "Today’s key expression is “old”.",
+      "tr": "Bugünün anahtar ifadesi “eski”.",
+      "ru": "Ключевое выражение сегодня — «старый».",
+      "uz": "Bugungi asosiy ibora — “eski”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:7fec7b59e45f9e4cb3cac7defc1574c4d64a58dc00ac573e2e4727feac1ed832"
+  },
+  {
+    "concept_id": "wp_concept_000097",
+    "legacy_ids": {
+      "en": 97
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "hot",
+      "tr": "sıcak",
+      "ru": "горячий",
+      "uz": "issiq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “hot”.",
+      "tr": "Bugünün anahtar ifadesi “sıcak”.",
+      "ru": "Ключевое выражение сегодня — «горячий».",
+      "uz": "Bugungi asosiy ibora — “issiq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3dbf70e3e7224c4aadd130e91c2d9759d64a947b6210fe01ce5154360b3698ac"
+  },
+  {
+    "concept_id": "wp_concept_000098",
+    "legacy_ids": {
+      "en": 98
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "cold",
+      "tr": "soğuk",
+      "ru": "холодный",
+      "uz": "sovuq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “cold”.",
+      "tr": "Bugünün anahtar ifadesi “soğuk”.",
+      "ru": "Ключевое выражение сегодня — «холодный».",
+      "uz": "Bugungi asosiy ibora — “sovuq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a5d11677fc55f555bc930e7505deecf153b4d8aeee75c71a76325a1b872e40c2"
+  },
+  {
+    "concept_id": "wp_concept_000099",
+    "legacy_ids": {
+      "en": 99
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "fast",
+      "tr": "hızlı",
+      "ru": "быстрый",
+      "uz": "tez"
+    },
+    "examples": {
+      "en": "Today’s key expression is “fast”.",
+      "tr": "Bugünün anahtar ifadesi “hızlı”.",
+      "ru": "Ключевое выражение сегодня — «быстрый».",
+      "uz": "Bugungi asosiy ibora — “tez”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3d55bbca34e62dd0802aa83ff9e8e488feb1e494c67dba508afc25ff5c05ce5b"
+  },
+  {
+    "concept_id": "wp_concept_000100",
+    "legacy_ids": {
+      "en": 100
+    },
+    "level": "A1",
+    "topic": "Adjectives",
+    "part_of_speech": "adjective",
+    "terms": {
+      "en": "slow",
+      "tr": "yavaş",
+      "ru": "медленный",
+      "uz": "sekin"
+    },
+    "examples": {
+      "en": "Today’s key expression is “slow”.",
+      "tr": "Bugünün anahtar ifadesi “yavaş”.",
+      "ru": "Ключевое выражение сегодня — «медленный».",
+      "uz": "Bugungi asosiy ibora — “sekin”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:94d8358fe10d37b118d3952ea6d751b71de56c5f20cbb13d5bac942572e0ceab"
+  },
+  {
+    "concept_id": "wp_concept_000101",
+    "legacy_ids": {
+      "en": 101
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "head",
+      "tr": "baş",
+      "ru": "голова",
+      "uz": "bosh"
+    },
+    "examples": {
+      "en": "Today’s key expression is “head”.",
+      "tr": "Bugünün anahtar ifadesi “baş”.",
+      "ru": "Ключевое выражение сегодня — «голова».",
+      "uz": "Bugungi asosiy ibora — “bosh”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5573ea65a9b16f8af8b9c5f497e33d68af4a8d866284b1c9d7d27d85633e6f86"
+  },
+  {
+    "concept_id": "wp_concept_000102",
+    "legacy_ids": {
+      "en": 102
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "eye",
+      "tr": "göz",
+      "ru": "глаз",
+      "uz": "ko‘z"
+    },
+    "examples": {
+      "en": "Today’s key expression is “eye”.",
+      "tr": "Bugünün anahtar ifadesi “göz”.",
+      "ru": "Ключевое выражение сегодня — «глаз».",
+      "uz": "Bugungi asosiy ibora — “ko‘z”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:6a52704703ef28433afd4322cad1ba3a3a68024585bb29ff059e332ced80ba63"
+  },
+  {
+    "concept_id": "wp_concept_000103",
+    "legacy_ids": {
+      "en": 103
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "hand",
+      "tr": "el",
+      "ru": "рука",
+      "uz": "qo‘l"
+    },
+    "examples": {
+      "en": "Today’s key expression is “hand”.",
+      "tr": "Bugünün anahtar ifadesi “el”.",
+      "ru": "Ключевое выражение сегодня — «рука».",
+      "uz": "Bugungi asosiy ibora — “qo‘l”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:b47b6e97d0b4d1096f59ae322765622099818fad59aee0b29a7688b7fc5fa046"
+  },
+  {
+    "concept_id": "wp_concept_000104",
+    "legacy_ids": {
+      "en": 104
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "foot",
+      "tr": "ayak",
+      "ru": "нога",
+      "uz": "oyoq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “foot”.",
+      "tr": "Bugünün anahtar ifadesi “ayak”.",
+      "ru": "Ключевое выражение сегодня — «нога».",
+      "uz": "Bugungi asosiy ibora — “oyoq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a78d24a32afa95897f0e9ff24eb28c8e0a9ad48b4ff5e03b9b62730ce13dab17"
+  },
+  {
+    "concept_id": "wp_concept_000105",
+    "legacy_ids": {
+      "en": 105
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "heart",
+      "tr": "kalp",
+      "ru": "сердце",
+      "uz": "yurak"
+    },
+    "examples": {
+      "en": "Today’s key expression is “heart”.",
+      "tr": "Bugünün anahtar ifadesi “kalp”.",
+      "ru": "Ключевое выражение сегодня — «сердце».",
+      "uz": "Bugungi asosiy ibora — “yurak”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:10f0ac48bc57e6652662a17cce9d2b8474b3f0362b72e850d0d5b47f08692d39"
+  },
+  {
+    "concept_id": "wp_concept_000106",
+    "legacy_ids": {
+      "en": 106
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "doctor",
+      "tr": "doktor",
+      "ru": "врач",
+      "uz": "shifokor"
+    },
+    "examples": {
+      "en": "Today’s key expression is “doctor”.",
+      "tr": "Bugünün anahtar ifadesi “doktor”.",
+      "ru": "Ключевое выражение сегодня — «врач».",
+      "uz": "Bugungi asosiy ibora — “shifokor”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:83833c0e9c05ad41cec4adcf29cb34a1a35939eb4ac171c623c070b2ea4ceb02"
+  },
+  {
+    "concept_id": "wp_concept_000107",
+    "legacy_ids": {
+      "en": 107
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "medicine",
+      "tr": "ilaç",
+      "ru": "лекарство",
+      "uz": "dori"
+    },
+    "examples": {
+      "en": "Today’s key expression is “medicine”.",
+      "tr": "Bugünün anahtar ifadesi “ilaç”.",
+      "ru": "Ключевое выражение сегодня — «лекарство».",
+      "uz": "Bugungi asosiy ibora — “dori”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:89e61dca4feb2d6121693e608a6a9a7bb788880d4970dc3fafcf4838ff77e835"
+  },
+  {
+    "concept_id": "wp_concept_000108",
+    "legacy_ids": {
+      "en": 108
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "pain",
+      "tr": "ağrı",
+      "ru": "боль",
+      "uz": "og‘riq"
+    },
+    "examples": {
+      "en": "Today’s key expression is “pain”.",
+      "tr": "Bugünün anahtar ifadesi “ağrı”.",
+      "ru": "Ключевое выражение сегодня — «боль».",
+      "uz": "Bugungi asosiy ibora — “og‘riq”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:ac536a1b5e7ecdceb1e1808fd66eb93ba95732cd1c9d7a2debc7bf3b34043fe2"
+  },
+  {
+    "concept_id": "wp_concept_000109",
+    "legacy_ids": {
+      "en": 109
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "healthy",
+      "tr": "sağlıklı",
+      "ru": "здоровый",
+      "uz": "sog‘lom"
+    },
+    "examples": {
+      "en": "Today’s key expression is “healthy”.",
+      "tr": "Bugünün anahtar ifadesi “sağlıklı”.",
+      "ru": "Ключевое выражение сегодня — «здоровый».",
+      "uz": "Bugungi asosiy ibora — “sog‘lom”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:4a58908e84cc2fafa13971f133aa0dfc732656c7f19d9383c4949f2dfb23708c"
+  },
+  {
+    "concept_id": "wp_concept_000110",
+    "legacy_ids": {
+      "en": 110
+    },
+    "level": "A1",
+    "topic": "Body and health",
+    "part_of_speech": "health word",
+    "terms": {
+      "en": "tired",
+      "tr": "yorgun",
+      "ru": "уставший",
+      "uz": "charchagan"
+    },
+    "examples": {
+      "en": "Today’s key expression is “tired”.",
+      "tr": "Bugünün anahtar ifadesi “yorgun”.",
+      "ru": "Ключевое выражение сегодня — «уставший».",
+      "uz": "Bugungi asosiy ibora — “charchagan”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:3d408c6caa0c2f90b1784510dda9797196f025c749d2c31fe8d72925ad7f0fa1"
+  },
+  {
+    "concept_id": "wp_concept_000111",
+    "legacy_ids": {
+      "en": 111
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "sun",
+      "tr": "güneş",
+      "ru": "солнце",
+      "uz": "quyosh"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sun”.",
+      "tr": "Bugünün anahtar ifadesi “güneş”.",
+      "ru": "Ключевое выражение сегодня — «солнце».",
+      "uz": "Bugungi asosiy ibora — “quyosh”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:4b8859ae5071947ea9432503411aef7d1e89457a9b552828bb2cd431974b7b95"
+  },
+  {
+    "concept_id": "wp_concept_000112",
+    "legacy_ids": {
+      "en": 112
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "rain",
+      "tr": "yağmur",
+      "ru": "дождь",
+      "uz": "yomg‘ir"
+    },
+    "examples": {
+      "en": "Today’s key expression is “rain”.",
+      "tr": "Bugünün anahtar ifadesi “yağmur”.",
+      "ru": "Ключевое выражение сегодня — «дождь».",
+      "uz": "Bugungi asosiy ibora — “yomg‘ir”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:19ab8ba9dbfdfa636f953601607f7b4e1b70410eda5a88be0404bb57c39c9ec7"
+  },
+  {
+    "concept_id": "wp_concept_000113",
+    "legacy_ids": {
+      "en": 113
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "tree",
+      "tr": "ağaç",
+      "ru": "дерево",
+      "uz": "daraxt"
+    },
+    "examples": {
+      "en": "Today’s key expression is “tree”.",
+      "tr": "Bugünün anahtar ifadesi “ağaç”.",
+      "ru": "Ключевое выражение сегодня — «дерево».",
+      "uz": "Bugungi asosiy ibora — “daraxt”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:7d31368be8acbbf337cd44d9ca0e29c2ad66cae381ae203c1d20371e0dab4491"
+  },
+  {
+    "concept_id": "wp_concept_000114",
+    "legacy_ids": {
+      "en": 114
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "flower",
+      "tr": "çiçek",
+      "ru": "цветок",
+      "uz": "gul"
+    },
+    "examples": {
+      "en": "Today’s key expression is “flower”.",
+      "tr": "Bugünün anahtar ifadesi “çiçek”.",
+      "ru": "Ключевое выражение сегодня — «цветок».",
+      "uz": "Bugungi asosiy ibora — “gul”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5bbe1a2d3167f9e5784b04afb2a3689c2159af8d4bca4f9a3e35aa583c83eba3"
+  },
+  {
+    "concept_id": "wp_concept_000115",
+    "legacy_ids": {
+      "en": 115
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "sea",
+      "tr": "deniz",
+      "ru": "море",
+      "uz": "dengiz"
+    },
+    "examples": {
+      "en": "Today’s key expression is “sea”.",
+      "tr": "Bugünün anahtar ifadesi “deniz”.",
+      "ru": "Ключевое выражение сегодня — «море».",
+      "uz": "Bugungi asosiy ibora — “dengiz”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:78020be8884324d3905358de67b1dced619ef7f06400654eb26748263c8d161a"
+  },
+  {
+    "concept_id": "wp_concept_000116",
+    "legacy_ids": {
+      "en": 116
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "phone",
+      "tr": "telefon",
+      "ru": "телефон",
+      "uz": "telefon"
+    },
+    "examples": {
+      "en": "Today’s key expression is “phone”.",
+      "tr": "Bugünün anahtar ifadesi “telefon”.",
+      "ru": "Ключевое выражение сегодня — «телефон».",
+      "uz": "Bugungi asosiy ibora — “telefon”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:5de8d3ecf1613c769a277f193cf8074e4fe296903293f61e669725712c8f6a53"
+  },
+  {
+    "concept_id": "wp_concept_000117",
+    "legacy_ids": {
+      "en": 117
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "message",
+      "tr": "mesaj",
+      "ru": "сообщение",
+      "uz": "xabar"
+    },
+    "examples": {
+      "en": "Today’s key expression is “message”.",
+      "tr": "Bugünün anahtar ifadesi “mesaj”.",
+      "ru": "Ключевое выражение сегодня — «сообщение».",
+      "uz": "Bugungi asosiy ibora — “xabar”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:f995c181ac9b76c02f9d5010127534f41553bd3c2e7c2f1cbde1256a8cd39fde"
+  },
+  {
+    "concept_id": "wp_concept_000118",
+    "legacy_ids": {
+      "en": 118
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "music",
+      "tr": "müzik",
+      "ru": "музыка",
+      "uz": "musiqa"
+    },
+    "examples": {
+      "en": "Today’s key expression is “music”.",
+      "tr": "Bugünün anahtar ifadesi “müzik”.",
+      "ru": "Ключевое выражение сегодня — «музыка».",
+      "uz": "Bugungi asosiy ibora — “musiqa”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:8f48236c6e210f0375fce958ac21b3cdca1deaa602a0338c2e571f413cab44e6"
+  },
+  {
+    "concept_id": "wp_concept_000119",
+    "legacy_ids": {
+      "en": 119
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "photo",
+      "tr": "fotoğraf",
+      "ru": "фотография",
+      "uz": "surat"
+    },
+    "examples": {
+      "en": "Today’s key expression is “photo”.",
+      "tr": "Bugünün anahtar ifadesi “fotoğraf”.",
+      "ru": "Ключевое выражение сегодня — «фотография».",
+      "uz": "Bugungi asosiy ibora — “surat”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:6110fdac98810ce950470b41ef02b55a77eeda8a1720ba6711e5b6f2f8ee60b7"
+  },
+  {
+    "concept_id": "wp_concept_000120",
+    "legacy_ids": {
+      "en": 120
+    },
+    "level": "A1",
+    "topic": "Nature and digital life",
+    "part_of_speech": "noun",
+    "terms": {
+      "en": "internet",
+      "tr": "internet",
+      "ru": "интернет",
+      "uz": "internet"
+    },
+    "examples": {
+      "en": "Today’s key expression is “internet”.",
+      "tr": "Bugünün anahtar ifadesi “internet”.",
+      "ru": "Ключевое выражение сегодня — «интернет».",
+      "uz": "Bugungi asosiy ibora — “internet”."
+    },
+    "usage": {
+      "en": "Use this item in a short, complete sentence and then say it aloud.",
+      "tr": "Bu ifadeyi kısa ve tam bir cümlede kullan; ardından sesli olarak tekrar et.",
+      "ru": "Используйте это выражение в коротком полном предложении, затем произнесите его вслух.",
+      "uz": "Bu iborani qisqa va to‘liq gapda ishlating, so‘ng ovoz chiqarib ayting."
+    },
+    "content_origin": "wordpilot-original-clean-room",
+    "license": "WordPilot proprietary content",
+    "created_at": "2026-07-17",
+    "review_status": "editorial-review-required",
+    "commercial_safe": true,
+    "content_hash": "sha256:a7ea5fd211a507f35765ea1c4f0fcef38cfcbcce49e1b91fcdf72de64dbc2437"
+  }
+]

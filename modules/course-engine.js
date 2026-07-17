@@ -139,8 +139,8 @@ const RUSSIAN_TOPICS=[
 ];
 let russianAlphabet=[],academyGame=null;
 MODE_LABEL.ordering='Cümle Sıralama';
-COURSES.ru.displayCount=1120;
-COURSES.ru.countLabel='1120 kontrollü A1–C2 kelime ve ifade';
+COURSES.ru.displayCount=1300;
+COURSES.ru.countLabel='1300 kontrollü A1–C2 kelime ve ifade';
 COURSES.ru.starter=false;
 
 function normalizeCourseRecord(row,course){
@@ -196,7 +196,7 @@ const wp40UpdateCourseUI=updateCourseUI;
 updateCourseUI=function(){
   wp40UpdateCourseUI();
   const isRu=activeCourse==='ru',tools=$('#russianTools');if(tools)tools.hidden=!isRu;
-  const ruCard=document.querySelector('[data-course="ru"] small');if(ruCard)ruCard.textContent='Türkçe anlatımlı · 1120 kontrollü kayıt + A1–C2 Akademi';
+  const ruCard=document.querySelector('[data-course="ru"] small');if(ruCard)ruCard.textContent='Türkçe anlatımlı · 1300 kontrollü kayıt + A1–C2 Akademi';
   const group=$('#groupFilter');
   if(group&&isRu)group.innerHTML='<option value="">Tüm Rusça konuları</option>'+RUSSIAN_TOPICS.map(topic=>`<option value="${esc(topic)}">${esc(topic)}</option>`).join('');
   const orderingCard=$('#orderingModeCard');if(orderingCard)orderingCard.hidden=!isRu;

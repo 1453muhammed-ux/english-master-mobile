@@ -1,5 +1,5 @@
-/* WordPilot v6.5.2 — professional dashboard navigation and mobile history. */
-const WP510_VERSION='6.5.2';
+/* WordPilot v7.0.0 — professional dashboard navigation and mobile history. */
+const WP510_VERSION='7.0.0';
 const WP510_TAB_KEY=`${STORE}:dashboard_tab`;
 const WP510_GUEST_PROMPT_KEY=`${STORE}:guest_signin_prompt_20`;
 let wp510DashboardTab=localStorage.getItem(WP510_TAB_KEY)||'academy';

@@ -1,0 +1,21 @@
+{
+  "version": "7.1.0-alpha",
+  "branch": "commercial-clean",
+  "legacy_branch": "v7.0.0-private-archive",
+  "clean_concept_count": 120,
+  "active_language_count": 4,
+  "learning_directions": 12,
+  "content_policy": "Only original or explicitly licensed content may enter the commercial branch.",
+  "excluded_from_commercial_build": [
+    "Diziyle Öğren definitions",
+    "Diziyle Öğren example sentences",
+    "Diziyle Öğren translations",
+    "Diziyle Öğren ordering and distractors"
+  ],
+  "audit": {
+    "hash_algorithm": "SHA-256",
+    "record_level_hashes": true,
+    "editorial_review_required": true
+  },
+  "generated_at": "2026-07-17"
+}

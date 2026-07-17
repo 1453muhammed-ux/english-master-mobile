@@ -1,0 +1,17 @@
+WORDPILOT v7.1.0 — VALIDATION REPORT
+
+- JavaScript syntax checked: 24 files
+- JSON parsed: 30 files
+- HTML IDs: 291 unique, duplicates: 0
+- Clean multilingual concepts: 120
+- Public clean English records: 120
+- Russian native records preserved: 1300
+- Uzbek native records preserved: 500
+- Active languages: 4; learning directions: 12
+- Local Conversation Coach prompts: 12 scenarios × 6 prompts per target language = 72
+- Exact long example/usage matches against uploaded 1–5000 TXT sources: 0
+- Record-level SHA-256 hashes: verified
+- Private OpenAI key scan: passed
+- Browser runtime: not executed in the container because local/file URLs are blocked by the managed Chromium policy; static and schema validation completed.
+
+RESULT: PASS

@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 7",
+  "name": "WordPilot 7.1",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=7.0.0",
+  "start_url": "./?wpbuild=7.1.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v6.5: sesli konuşma partneri, yazılı yanıt düzeltme, mobil mikrofon iyileştirmeleri, profesyonel öğrenme merkezi, Reader 2.0 ve A1–C2 Akademi.",
+  "description": "WordPilot 7.1: multilingual language pairs, commercial clean core and Conversation Coach 2.0.",
   "icons": [
     {
       "src": "icon-192.png",

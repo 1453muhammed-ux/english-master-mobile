@@ -1,0 +1,21 @@
+WORDPILOT COMMERCIAL CONTENT POLICY — v1
+
+1. Ticari dalda yalnızca aşağıdaki içerikler kullanılabilir:
+   a) WordPilot tarafından sıfırdan üretilmiş özgün içerik,
+   b) ticari kullanıma açık lisanslı içerik,
+   c) yazılı kullanım izni alınmış içerik,
+   d) kamu malı içerik.
+
+2. Başka bir platformdan alınmış tanım, örnek cümle, çeviri, eş/zıt anlam,
+   quiz seçeneği, sıralama veya veri tabanı düzeni ticari dala taşınamaz.
+
+3. Her ticari kayıt şu alanları taşımalıdır:
+   content_origin, license, created_at, review_status, commercial_safe, content_hash.
+
+4. Halka açık kaynaklar yalnızca araştırma ve doğrulama için kullanılabilir.
+   Halka açık olmak kopyalama izni anlamına gelmez.
+
+5. Editöryal ve hukuki denetimi tamamlanmayan modüller arayüzde kapalı tutulur.
+
+6. Bu teknik politika hukuki danışmanlık yerine geçmez. Genel ücretli yayından önce
+   fikri mülkiyet alanında çalışan bir hukukçuya örnek veri ve lisans belgeleri gösterilmelidir.
