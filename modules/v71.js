@@ -1,4 +1,4 @@
-/* WordPilot v7.1.2 — commercial clean branch, multilingual concept graph and Conversation Coach 2.0. */
+/* WordPilot v7.1.2 — commercial clean branch, multilingual concept graph and Conversation Coach 3.0. */
 const WP71_VERSION='7.1.2';
 const WP71_SETTINGS_KEY=`${STORE}:v71_language_profile`;
 const WP71_CONCEPT_FILE='clean_concepts_v71.json';
@@ -74,10 +74,10 @@ loadCourseWords=async function(course=activeCourse){
 };
 
 const WP71_UI={
-  tr:{home:'Ana Sayfa',words:'Kelimeler',study:'Çalış',league:'Lig',progress:'İlerleme',pair:'Dil yönünü değiştir',hello:'Konuşarak öğren',hero:'Conversation Coach 2.0',heroText:'Seni dinleyen, aynı soruyu tekrarlamayan ve hatalarını açıklama dilinde gösteren kişisel konuşma öğretmeni.',start:'Konuşmaya başla',clean:'Ticari temiz çekirdek',memory:'Konuşma hafızası',modes:'3 düzeltme modu',prompts:'72+ yönlendirilmiş soru'},
-  en:{home:'Home',words:'Words',study:'Practice',league:'League',progress:'Progress',pair:'Change language pair',hello:'Learn by speaking',hero:'Conversation Coach 2.0',heroText:'A personal speaking tutor that listens, avoids repeated questions and explains mistakes in your support language.',start:'Start speaking',clean:'Commercial clean core',memory:'Conversation memory',modes:'3 correction modes',prompts:'72+ guided prompts'},
-  ru:{home:'Главная',words:'Слова',study:'Практика',league:'Лига',progress:'Прогресс',pair:'Изменить языковую пару',hello:'Учитесь говорить',hero:'Conversation Coach 2.0',heroText:'Личный разговорный тренер: слушает, не повторяет вопросы и объясняет ошибки на выбранном языке.',start:'Начать разговор',clean:'Чистое коммерческое ядро',memory:'Память разговора',modes:'3 режима исправлений',prompts:'72+ вопросов'},
-  uz:{home:'Bosh sahifa',words:'So‘zlar',study:'Mashq',league:'Liga',progress:'Natijalar',pair:'Til yo‘nalishini o‘zgartirish',hello:'Gapirib o‘rganing',hero:'Conversation Coach 2.0',heroText:'Sizni tinglaydigan, savollarni takrorlamaydigan va xatolarni tanlangan tilda tushuntiradigan shaxsiy suhbat murabbiyi.',start:'Suhbatni boshlash',clean:'Tijoriy toza yadro',memory:'Suhbat xotirasi',modes:'3 tuzatish rejimi',prompts:'72+ yo‘naltirilgan savol'}
+  tr:{home:'Ana Sayfa',words:'Kelimeler',study:'Çalış',league:'Lig',progress:'İlerleme',pair:'Dil yönünü değiştir',hello:'Konuşarak öğren',hero:'Conversation Coach 3.0',heroText:'Seni dinleyen, aynı soruyu tekrarlamayan ve hatalarını açıklama dilinde gösteren kişisel konuşma öğretmeni.',start:'Konuşmaya başla',clean:'Ticari temiz çekirdek',memory:'Konuşma hafızası',modes:'3 düzeltme modu',prompts:'72+ yönlendirilmiş soru'},
+  en:{home:'Home',words:'Words',study:'Practice',league:'League',progress:'Progress',pair:'Change language pair',hello:'Learn by speaking',hero:'Conversation Coach 3.0',heroText:'A personal speaking tutor that listens, avoids repeated questions and explains mistakes in your support language.',start:'Start speaking',clean:'Commercial clean core',memory:'Conversation memory',modes:'3 correction modes',prompts:'72+ guided prompts'},
+  ru:{home:'Главная',words:'Слова',study:'Практика',league:'Лига',progress:'Прогресс',pair:'Изменить языковую пару',hello:'Учитесь говорить',hero:'Conversation Coach 3.0',heroText:'Личный разговорный тренер: слушает, не повторяет вопросы и объясняет ошибки на выбранном языке.',start:'Начать разговор',clean:'Чистое коммерческое ядро',memory:'Память разговора',modes:'3 режима исправлений',prompts:'72+ вопросов'},
+  uz:{home:'Bosh sahifa',words:'So‘zlar',study:'Mashq',league:'Liga',progress:'Natijalar',pair:'Til yo‘nalishini o‘zgartirish',hello:'Gapirib o‘rganing',hero:'Conversation Coach 3.0',heroText:'Sizni tinglaydigan, savollarni takrorlamaydigan va xatolarni tanlangan tilda tushuntiradigan shaxsiy suhbat murabbiyi.',start:'Suhbatni boshlash',clean:'Tijoriy toza yadro',memory:'Suhbat xotirasi',modes:'3 tuzatish rejimi',prompts:'72+ yo‘naltirilgan savol'}
 };
 function wp71Ui(){return WP71_UI[wp71LanguageProfile.ui]||WP71_UI.tr}
 function wp71ApplyInterfaceText(){
@@ -119,7 +119,7 @@ function wp71EnsureConversationSpotlight(){
   if($('#wp71ConversationSpotlight'))return;
   const anchor=$('.course-selector-section');if(!anchor)return;
   anchor.insertAdjacentHTML('beforebegin',`<section id="wp71ConversationSpotlight" class="wp71-conversation-spotlight">
-    <div class="wp71-conversation-copy"><p class="eyebrow" data-wp71="eyebrow">Konuşarak öğren</p><h2>Conversation Coach 2.0</h2><p data-wp71="description">Seni dinleyen, aynı soruyu tekrarlamayan ve hatalarını açıklama dilinde gösteren kişisel konuşma öğretmeni.</p><div class="wp71-proof-row"><span>✓ <b data-wp71="memory">Konuşma hafızası</b></span><span>✓ <b data-wp71="modes">3 düzeltme modu</b></span><span>✓ <b data-wp71="prompts">72+ yönlendirilmiş soru</b></span><span>✓ <b data-wp71="clean">Ticari temiz çekirdek</b></span></div></div>
+    <div class="wp71-conversation-copy"><p class="eyebrow" data-wp71="eyebrow">Konuşarak öğren</p><h2>Conversation Coach 3.0</h2><p data-wp71="description">Seni dinleyen, aynı soruyu tekrarlamayan ve hatalarını açıklama dilinde gösteren kişisel konuşma öğretmeni.</p><div class="wp71-proof-row"><span>✓ <b data-wp71="memory">Konuşma hafızası</b></span><span>✓ <b data-wp71="modes">3 düzeltme modu</b></span><span>✓ <b data-wp71="prompts">72+ yönlendirilmiş soru</b></span><span>✓ <b data-wp71="clean">Ticari temiz çekirdek</b></span></div></div>
     <div class="wp71-conversation-action"><div class="wp71-orbit"><span>WP</span><i></i><i></i></div><small id="wp71HeroPair">${wp71PairLabel()}</small><button class="primary" type="button" data-v5-open="ai"><b>Konuşmaya başla</b><span>Sesli veya yazılı →</span></button></div>
   </section>`);
 }

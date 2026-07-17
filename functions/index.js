@@ -12,12 +12,14 @@ const OPENAI_TRANSCRIBE_MODEL=defineString('OPENAI_TRANSCRIBE_MODEL',{default:'g
 const REGION='us-central1';
 
 function clean(value,max=600){return String(value||'').replace(/[\u0000-\u001f]/g,' ').replace(/\s+/g,' ').trim().slice(0,max)}
-function languageName(course){return course==='ru'?'Russian':course==='uz'?'Uzbek':course==='tr'?'Turkish':'English'}
-function supportLanguageName(course){return course==='ru'?'Russian':course==='uz'?'Uzbek':course==='en'?'English':'Turkish'}
+const LANGUAGE_NAMES={en:'English',tr:'Turkish',ru:'Russian',uz:'Uzbek',es:'Spanish',de:'German',fr:'French',it:'Italian',pt:'Portuguese',ja:'Japanese',ko:'Korean',zh:'Chinese'};
+const TRANSCRIBE_CODES={en:'en',tr:'tr',ru:'ru',uz:'uz',es:'es',de:'de',fr:'fr',it:'it',pt:'pt',ja:'ja',ko:'ko',zh:'zh'};
+function languageName(course){return LANGUAGE_NAMES[course]||'English'}
+function supportLanguageName(course){return LANGUAGE_NAMES[course]||'English'}
 
 exports.aiCoach=onCall({region:REGION,secrets:[OPENAI_API_KEY],enforceAppCheck:true,cors:true,maxInstances:10,timeoutSeconds:45},async request=>{
   if(!request.auth)throw new HttpsError('unauthenticated','Google sign-in is required.');
-  const data=request.data||{},allowed=['en','tr','ru','uz'],course=allowed.includes(data.course)?data.course:'en',support=allowed.includes(data.supportLanguage)?data.supportLanguage:'tr',scenario=clean(data.scenario,40),message=clean(data.message,600);
+  const data=request.data||{},allowed=Object.keys(LANGUAGE_NAMES),course=allowed.includes(data.course)?data.course:'en',support=allowed.includes(data.supportLanguage)?data.supportLanguage:'tr',scenario=clean(data.scenario,40),message=clean(data.message,600),inputSource=data.inputSource==='voice'?'voice':'typed';
   if(!message)throw new HttpsError('invalid-argument','Message is required.');
   const level=['A1','A2','B1','B2','C1','C2'].includes(data.level)?data.level:'A1',correctionMode=['fluency','gentle','teacher'].includes(data.correctionMode)?data.correctionMode:'gentle';
   const db=getFirestore(),uid=request.auth.uid,usageRef=db.collection('aiUsage').doc(uid),now=Date.now(),day=new Date().toISOString().slice(0,10);
@@ -27,12 +29,12 @@ exports.aiCoach=onCall({region:REGION,secrets:[OPENAI_API_KEY],enforceAppCheck:t
     if(dailyCount>=80)throw new HttpsError('resource-exhausted','Daily conversation limit reached.');
     tx.set(usageRef,{windowStart:fresh?now:windowStart,count:fresh?1:count+1,dailyDay:day,dailyCount:dailyCount+1,updatedAt:FieldValue.serverTimestamp()},{merge:true});
   });
-  const historyRows=Array.isArray(data.history)?data.history.slice(-20).map(x=>({role:x.role==='assistant'?'Tutor':'Learner',text:clean(x.text,500)})):[];
+  const historyRows=Array.isArray(data.history)?data.history.slice(-30).map(x=>({role:x.role==='assistant'?'Tutor':'Learner',text:clean(x.text,500)})):[];
   const history=historyRows.map(x=>`${x.role}: ${x.text}`).join('\n');
-  const tutorQuestions=historyRows.filter(x=>x.role==='Tutor').map(x=>x.text).filter(Boolean).slice(-10);
+  const tutorQuestions=historyRows.filter(x=>x.role==='Tutor').map(x=>x.text).filter(Boolean).slice(-15);
   const language=languageName(course),supportName=supportLanguageName(support);
-  const correctionRule=correctionMode==='fluency'?'Ignore minor mistakes that do not block meaning; mention that they were skipped. Correct only major grammar or word-choice errors.':correctionMode==='teacher'?'Give a precise but concise teaching explanation, naming the grammar or word-choice issue.':'Correct important mistakes gently and keep the conversation moving.';
-  const instructions=`You are WordPilot Conversation Coach 2.0, a professional ${language} speaking tutor for a ${level} learner. The scenario is "${scenario}". The learner's explanation language is ${supportName}.
+  const correctionRule=correctionMode==='fluency'?'Ignore minor mistakes that do not block meaning; mention that they were skipped. Correct only major grammar or word-choice errors.':correctionMode==='teacher'?'Identify the exact grammar, word-choice, repetition, or sentence-completion problem. Explain how the correction changes meaning or naturalness. Never use a generic punctuation explanation when a more important problem exists.':'Correct important mistakes gently and keep the conversation moving.';
+  const instructions=`You are WordPilot Conversation Coach 3.0, a professional ${language} speaking tutor for a ${level} learner. The scenario is "${scenario}". The learner's explanation language is ${supportName}.
 
 Conversation policy:
 - Continue naturally from the learner's latest answer and use facts already shared.
@@ -41,6 +43,9 @@ Conversation policy:
 - If the learner already answered a topic, deepen it with how/why/when/comparison rather than restarting.
 - Keep YANIT to 1-3 natural sentences suitable for ${level}.
 - ${correctionRule}
+- Input source is ${inputSource}. When it is voice, do NOT penalise missing capitalisation or punctuation because speech recognition normally omits them.
+- If transcription seems uncertain, say so instead of confidently inventing a correction.
+- Score grammar, clarity and fluency separately.
 - Never invent personal facts. Never request sensitive personal data.
 - Keep content suitable for general language learning.
 
@@ -52,14 +57,18 @@ ACIKLAMA: <brief explanation in ${supportName}>
 ALTERNATIF: <one natural alternative in ${language}>
 HATA_TURU: <none, grammar, tense, word_choice, article, preposition, spelling, punctuation, fluency, or script>
 NOT: <a brief note in ${supportName}; say when minor issues were intentionally skipped, otherwise leave empty>
-PUAN: <integer 0-100>`;
+PUAN: <integer 0-100>
+DILBILGISI: <integer 0-100>
+ANLASILIRLIK: <integer 0-100>
+AKICILIK: <integer 0-100>`;
   const client=new OpenAI({apiKey:OPENAI_API_KEY.value()});
   const response=await client.responses.create({model:OPENAI_MODEL.value(),instructions,input:`Conversation so far:\n${history}\nLearner: ${message}\nTutor:`,max_output_tokens:440});
   const raw=clean(response.output_text,2400)||'';
-  const labels='YANIT|DURUM|DUZELTILMIS|ACIKLAMA|ALTERNATIF|HATA_TURU|NOT|PUAN';
+  const labels='YANIT|DURUM|DUZELTILMIS|ACIKLAMA|ALTERNATIF|HATA_TURU|NOT|PUAN|DILBILGISI|ANLASILIRLIK|AKICILIK';
   const field=(name,max)=>clean((raw.match(new RegExp(`${name}\\s*:\\s*([\\s\\S]*?)(?=\\n(?:${labels})\\s*:|$)`,'i'))||[])[1],max);
   const status=/DOGRU/i.test(field('DURUM',30))?'correct':'needs_work',score=Math.max(0,Math.min(100,Math.round(Number(field('PUAN',10))||0)));
-  return {text:field('YANIT',1000)||'Please tell me a little more.',status,corrected:field('DUZELTILMIS',600)||message,explanation:field('ACIKLAMA',500),suggestion:field('ALTERNATIF',600),errorType:field('HATA_TURU',40)||'none',note:field('NOT',400),score,mode:'cloud-v71'};
+  const metric=name=>Math.max(0,Math.min(100,Math.round(Number(field(name,10))||score)));
+  return {text:field('YANIT',1000)||'Please tell me a little more.',status,corrected:field('DUZELTILMIS',600)||message,explanation:field('ACIKLAMA',500),suggestion:field('ALTERNATIF',600),errorType:field('HATA_TURU',40)||'none',note:field('NOT',400),score,metrics:{grammar:metric('DILBILGISI'),clarity:metric('ANLASILIRLIK'),fluency:metric('AKICILIK')},mode:'cloud-v80'};
 });
 
 const fs=require('node:fs');
@@ -92,19 +101,19 @@ exports.getContentPack=onCall({region:REGION,enforceAppCheck:true,cors:true,maxI
   const db=getFirestore();await enforceContentRate(db,request.auth.uid);
   const all=readContent(key),offset=Math.max(0,Math.floor(Number(data.offset)||0)),limit=Math.max(1,Math.min(500,Math.floor(Number(data.limit)||250)));
   const base=kind==='exam'?all.tasks:kind==='source'?all.packs:all;const filtered=kind==='stories'?base.filter(x=>!data.course||x.course===course):base;
-  return {version:'7.1.2',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
+  return {version:'8.0.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
 });
 
 
 exports.transcribeAudio=onCall({region:REGION,secrets:[OPENAI_API_KEY],enforceAppCheck:true,cors:true,maxInstances:6,timeoutSeconds:60},async request=>{
   if(!request.auth)throw new HttpsError('unauthenticated','Google sign-in is required.');
-  const data=request.data||{},course=['en','tr','ru','uz'].includes(data.course)?data.course:'en',mime=clean(data.mimeType,80)||'audio/webm',audio=String(data.audioBase64||'');
+  const data=request.data||{},course=Object.keys(LANGUAGE_NAMES).includes(data.course)?data.course:'en',mime=clean(data.mimeType,80)||'audio/webm',audio=String(data.audioBase64||'');
   if(!audio||audio.length>7_000_000)throw new HttpsError('invalid-argument','Audio is missing or too large.');
   const db=getFirestore(),uid=request.auth.uid,ref=db.collection('voiceUsage').doc(uid),now=Date.now();
   await db.runTransaction(async tx=>{const snap=await tx.get(ref),row=snap.exists?snap.data():{},windowStart=Number(row.windowStart)||0,count=Number(row.count)||0,fresh=now-windowStart>60_000;if(!fresh&&count>=8)throw new HttpsError('resource-exhausted','Please wait before recording again.');tx.set(ref,{windowStart:fresh?now:windowStart,count:fresh?1:count+1,updatedAt:FieldValue.serverTimestamp()},{merge:true});});
   const ext=mime.includes('mp4')?'m4a':mime.includes('ogg')?'ogg':'webm';
   const file=new File([Buffer.from(audio,'base64')],`wordpilot-speech.${ext}`,{type:mime});
   const client=new OpenAI({apiKey:OPENAI_API_KEY.value()});
-  const result=await client.audio.transcriptions.create({file,model:OPENAI_TRANSCRIBE_MODEL.value(),language:course==='ru'?'ru':course==='uz'?'uz':course==='tr'?'tr':'en'});
+  const result=await client.audio.transcriptions.create({file,model:OPENAI_TRANSCRIBE_MODEL.value(),language:TRANSCRIBE_CODES[course]||'en'});
   return {text:clean(result.text,1200),mode:'cloud'};
 });

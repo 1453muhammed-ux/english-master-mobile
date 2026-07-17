@@ -1,36 +1,28 @@
-WORDPILOT v5.0 — GÜVENLİK KURULUM PLANI
+WORDPILOT v8.0.0 — GÜVENLİK DURUMU VE SONRAKİ ADIMLAR
 
-GERÇEK: F12 TAMAMEN KAPATILAMAZ
-Bir tarayıcı bir içeriği gösterebiliyorsa o içerik cihazın belleğine veya ağ katmanına gelir. Bu nedenle HTML, JavaScript, CSS ve statik JSON dosyalarını F12’den mutlak biçimde gizlemek mümkün değildir. Sağ tık/klavye engelleri yalnızca sıradan kopyalamayı caydırır; güvenlik duvarı değildir.
+MEVCUT DURUM
+- Firebase App Check reCAPTCHA Enterprise site anahtarı ön yüzde kayıtlıdır.
+- Firestore kuralları kullanıcı profili/alt ilerleme kayıtlarını yalnızca sahibine açar.
+- Leaderboard okunması giriş gerektirir; kullanıcı yalnızca kendi sıralama satırını yazabilir.
+- Feedback kayıtları alan ve uzunluk sınırlarıyla yalnızca giriş yapan kullanıcı tarafından oluşturulur.
+- AI, voice ve protected-content kullanım sayaçları istemciye kapalıdır.
+- Gizli OpenAI anahtarı ön yüzde bulunmaz.
+- Hosting başlıklarında CSP, frame engeli, nosniff, referrer ve mikrofon izin politikası vardır.
 
-V5 PAKETİNDE HAZIR OLAN KORUMALAR
-1. Firebase Hosting güvenlik başlıkları: CSP, frame engeli, nosniff, referrer ve izin politikaları.
-2. Firebase App Check entegrasyon noktası.
-3. Kullanıcı yalnızca kendi /users/{uid} belgesini okuyup yazabilir.
-4. AI anahtarı ön yüzde değil Cloud Functions Secret içinde tutulur.
-5. AI callable function giriş, App Check ve kullanıcı başına hız sınırı ister.
-6. Ders alanlarında sağ tık, seçim ve toplu kopyalama caydırılır.
-7. Site PWA olarak mağazasız kurulabilir; mağazaya çıkmak güvenlik için zorunlu değildir.
+V8 TESTER AYARLARI
+- aiEnabled: false
+- voiceTranscriptionEnabled: false
+- protectedContentEnabled: false
 
-BİRLİKTE EKRAN GÖRÜNTÜLERİYLE YAPACAĞIMIZ SIRA
-A. Firebase App Check > Web uygulaması > reCAPTCHA Enterprise kaydı.
-B. Oluşan genel site key değerini security-config.js içindeki appCheckSiteKey alanına yazma.
-C. Önce metrikleri izleme, sonra Authentication/Firestore/Functions için App Check enforcement açma.
-D. Cloud Functions için Blaze planını etkinleştirme.
-E. OPENAI_API_KEY değerini Firebase Secret Manager'a ekleme ve functions klasörünü dağıtma.
-F. AI çalışınca security-config.js içindeki aiEnabled değerini true yapma.
-G. En güçlü içerik koruması için kelime ve hikâye JSON’larını Hosting’den kaldırıp App Check + giriş isteyen backend/Cloud Storage katmanına taşıma. İçerik küçük parçalar hâlinde verilir, hız sınırı ve kullanım kaydı uygulanır.
+Bu nedenle tester paketi Cloud Functions maliyeti oluşturmadan geliştirilmiş yerel Coach 3.0 ile çalışır. functions klasöründeki AI Coach ve transkripsiyon kodu, OpenAI Secret ve Functions dağıtımı tamamlanmadan canlı değildir.
 
-SALDIRI VE KÖTÜYE KULLANIM İÇİN EK ÖNERİLER
-- Firebase bütçe uyarıları ve Cloud Functions maxInstances sınırı.
-- App Check enforcement.
-- Firestore kurallarını test ederek dağıtma.
-- AI/okuma endpointlerinde kullanıcı başına kota.
-- Şüpheli trafik için Cloud Logging uyarıları.
-- Gizli anahtarları yalnızca Secret Manager’da tutma; GitHub’a veya security-config.js içine koymama.
-- JSON anahtarlarını ve servis hesabı dosyalarını kimseyle paylaşmama.
+ÖNEMLİ GERÇEK
+Tarayıcıya gönderilen HTML, JavaScript, CSS veya statik JSON dosyaları F12 ile mutlak biçimde gizlenemez. Ticari içerik korumasının güçlü sürümü; giriş, App Check, sunucu uç noktası, hız sınırı ve küçük parçalı içerik teslimi gerektirir.
 
-security-config.js BAŞLANGIÇ DURUMU
-appCheckSiteKey: boş
-aiEnabled: false
-Bu ayarlar güvenlik kurulumu tamamlanana kadar uygulamanın mevcut çalışan özelliklerini bozmaz.
+GELECEK CANLI AI SIRASI
+1. Firebase Blaze planı ve bütçe uyarıları.
+2. OPENAI_API_KEY değerinin Secret Manager'a eklenmesi.
+3. Functions dağıtımı ve App Check enforcement kontrolü.
+4. Kota/maliyet testleri.
+5. security-config.js içinde aiEnabled:true.
+6. Yalnızca kontrollü beta kullanıcılarıyla Cloud Coach testi.

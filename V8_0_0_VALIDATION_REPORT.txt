@@ -1,0 +1,41 @@
+WORDPILOT v8.0.0 — VALIDATION REPORT
+
+Static validation completed successfully.
+
+JavaScript files syntax-checked: 27
+JSON files parsed: 30
+HTML IDs: 291 total / 291 unique / 0 duplicates
+Static HTML references: 31 checked / 0 missing local files
+Clean concepts: 1000
+12-language term coverage: {'en': 1000, 'tr': 1000, 'ru': 1000, 'uz': 1000, 'es': 1000, 'de': 1000, 'fr': 1000, 'it': 1000, 'pt': 1000, 'ja': 1000, 'ko': 1000, 'zh': 1000}
+Russian controlled entries: 1500
+Uzbek controlled entries: 1000
+
+FEATURE CHECKS
+- Conversation Coach 3.0: PASS
+- 5-second default pause: PASS
+- 3/5/8 second pause choices: PASS
+- 0.72x default TTS: PASS
+- one-tap language swap: PASS
+- route close button: PASS
+- route without page reload: PASS
+- course-specific league schema: PASS
+- legacy global XP blocked: PASS
+- league tab course respected: PASS
+- V8 service worker cache: PASS
+- V8 cache migration: PASS
+
+RUNTIME-LEVEL VM CHECKS
+- Turkish voice correction examples: PASS
+- Legacy global XP 11073 -> selected course score 0: PASS
+- Selected league tab reads its own coursePoints value: PASS
+- Language route changes without reload and closes dialog: PASS
+
+SECURITY/CONFIGURATION CHECKS
+- aiEnabled remains false: PASS
+- voiceTranscriptionEnabled remains false: PASS
+- Firestore feedback rule present: PASS
+- AI/voice/content usage collections client-denied: PASS
+
+LIMITATION
+A full Chrome end-to-end run could not be completed in this build environment because local browser navigation is blocked by environment policy. Static, syntax, JSON, route VM, correction VM and league VM tests passed. Microphone behaviour must still be verified on the tester's actual Chrome/device because Web Speech Recognition is browser-dependent.

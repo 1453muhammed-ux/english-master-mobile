@@ -1,31 +1,38 @@
-WORDPILOT v7.1.2 — COMMERCIAL CLEAN ALPHA
+WORDPILOT v8.0.0 — CONVERSATION COACH 3.0 TESTER BETA
 
-Test URL:
-https://wordpilot-7a574.web.app/?wpbuild=7.1.2
+Test address after Hosting deployment:
+https://wordpilot-7a574.web.app/?wpbuild=8.0.0
 
-This package is the commercial-clean development branch. V7.0 remains a separate private legacy archive.
+PURPOSE
+This package is a limited tester build for the commercial-clean WordPilot branch. V7.0 remains a separate private legacy archive. V8.0 is not Demo 1.0 and is not yet a public commercial release.
 
-MAIN CHANGES
-- Native language and interface language are one setting and support 12 languages.
-- Target-language choice persists and becomes the selected course on the home screen.
-- Changing the home course also updates the saved target route.
-- The home screen, learning centre, course routing and feedback interface are localised in English, Turkish, Russian, Uzbek, Spanish, German, French, Italian, Portuguese, Japanese, Korean and Chinese.
-- Specialised legacy tools may still fall back to English during Alpha when a translation is missing.
-- Clean connected concept graph expanded from 120 to 1000 entries.
-- Russian expanded to 1500 entries; Uzbek expanded to 1000 entries.
-- Spanish is active with the 1000-concept core and Conversation Coach scenarios.
-- Internal SHA-256, content-origin and proprietary-license metadata is not displayed in learner Notes. Audit metadata remains in internal JSON fields.
-- Complete 12-language flag styles were added.
-- Target-language routing now wins over stale cloud course state, and the word cache is separated by target/support language.
-- A signed-in Feedback & Ideas form writes constrained submissions to the Firestore feedback collection.
+V8.0 HIGHLIGHTS
+- Conversation Coach 3.0 is the primary development focus.
+- Voice input waits 5 seconds by default after the last detected speech segment. Testers may select 3, 5 or 8 seconds.
+- The browser speech recogniser is restarted when it ends unexpectedly, reducing premature microphone closure.
+- Coach speech defaults to 0.72x and may be changed from very slow to normal/fast.
+- Spoken responses are not penalised merely for missing capitalisation or punctuation.
+- Feedback shows corrected sentence, reason, natural alternative, grammar, clarity and fluency scores.
+- Local follow-up questions use recent conversation context and avoid recent repeats.
+- Language route dialog has a close button and one-tap native/target language swap.
+- Language changes apply without reloading the page.
+- League scores are course-specific. Old global XP is never reused as the score of every language.
+- A leaderboard language tab reads only that language's coursePoints value.
+- Users whose old cloud row has no course-specific data show 0 with a migration note until that account opens and syncs V8 once.
 
-EDITORIAL STATUS
-- The original first 120 clean concepts retain their polished review status.
-- The additional 880 aligned concepts use an MIT-licensed lexical seed and are marked lexical-review-required. They must receive human language review before Demo 1.0.
-- Expanded Russian and Uzbek rows also require final editorial review before public commercial launch.
+LANGUAGE AND CONTENT CORE
+- 12 language routes: English, Turkish, Russian, Uzbek, Spanish, German, French, Italian, Portuguese, Japanese, Korean and Chinese.
+- 1000 connected clean concepts.
+- 1500 Russian controlled entries.
+- 1000 Uzbek controlled entries.
+- Existing Firebase Authentication, App Check, profile, progress, PWA/offline and wordpilot_v34 keys are preserved.
 
-PRESERVED
-Firebase authentication and sync, App Check configuration, XP, leagues, profile, PWA/offline support and the wordpilot_v34 progress key are preserved.
+IMPORTANT TESTER LIMITS
+- security-config.js keeps aiEnabled:false and voiceTranscriptionEnabled:false.
+- Therefore the tester build uses the improved local Conversation Coach 3.0 engine by default.
+- The Cloud Functions package contains the advanced AI Coach 3.0 prompt and transcription endpoint, but those functions are not live until separately configured and deployed.
+- Web Speech Recognition behaviour can vary by Chrome version, operating system and microphone quality.
+- Additional clean-core language rows still require human editorial review before Demo 1.0.
 
 STATUS
-Commercial Clean Alpha — not yet Demo 1.0.
+Commercial Clean Tester Beta — not Demo 1.0.
