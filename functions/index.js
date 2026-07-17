@@ -65,7 +65,7 @@ PUAN: <integer 0-100>`;
 const fs=require('node:fs');
 const path=require('node:path');
 const CONTENT_FILES={
-  'course:en':'words.json','course:ru':'ru_words.json','course:uz':'uz_words.json','course:tr':'clean_concepts_v71.json','concepts:clean':'clean_concepts_v71.json',
+  'course:en':'words.json','course:ru':'ru_words.json','course:uz':'uz_words.json','course:tr':'clean_concepts_v711.json','concepts:clean':'clean_concepts_v711.json',
   'stories:all':'stories.json','academy:all':'curriculum_v6.json','ru:alphabet':'ru_alphabet.json','ru:grammar':'ru_grammar.json','ru:dialogues':'ru_dialogues.json','ru:verbs':'ru_verb_lab.json','source:atlas':'source_atlas_v63.json','ru:exam':'ru_exam_lab.json'
 };
 const contentCache=new Map();
@@ -92,7 +92,7 @@ exports.getContentPack=onCall({region:REGION,enforceAppCheck:true,cors:true,maxI
   const db=getFirestore();await enforceContentRate(db,request.auth.uid);
   const all=readContent(key),offset=Math.max(0,Math.floor(Number(data.offset)||0)),limit=Math.max(1,Math.min(500,Math.floor(Number(data.limit)||250)));
   const base=kind==='exam'?all.tasks:kind==='source'?all.packs:all;const filtered=kind==='stories'?base.filter(x=>!data.course||x.course===course):base;
-  return {version:'7.1.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
+  return {version:'7.1.1',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
 });
 
 

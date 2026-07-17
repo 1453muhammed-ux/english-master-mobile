@@ -14,13 +14,13 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=7.1.0">
+  <link rel="stylesheet" href="style.css?v=7.1.1">
   <title>WordPilot · Powered by English Master</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='7.1.0',KEY='wordpilot_asset_build';
+    const BUILD='7.1.1',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v7.1.0</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 XP</span><span class="version">v7.1.1</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -234,7 +234,7 @@
 
       <section id="russianTools" class="russian-tools-section" hidden>
         <div class="russian-tools-head">
-          <div><p class="eyebrow">РУССКИЙ A1–C2 · v6.3</p><h2>Rusça öğrenme merkezi</h2><p>1300 kontrollü kelime ve ifade, A1–C2 Akademi, fiil ve sertifika laboratuvarları.</p></div>
+          <div><p class="eyebrow">РУССКИЙ A1–C2 · v6.3</p><h2>Rusça öğrenme merkezi</h2><p>1500 kontrollü kelime ve ifade, A1–C2 Akademi, fiil ve sertifika laboratuvarları.</p></div>
           <div class="russian-tools-actions"><button class="secondary" type="button" data-nav="kiril-academy">Kiril Akademisi</button><button class="primary" type="button" data-nav="russian-path">A1–A2 Dil Bilgisi ve Diyaloglar →</button></div>
         </div>
         <div id="russianTopicGrid" class="russian-topic-grid"></div>
@@ -816,27 +816,28 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=7.1.0" defer></script>
-<script src="app.js?v=7.1.0" defer></script>
-<script src="modules/firebase-sync.js?v=7.1.0" defer></script>
-<script src="modules/learning-engine.js?v=7.1.0" defer></script>
-<script src="modules/ui-events.js?v=7.1.0" defer></script>
-<script src="modules/course-engine.js?v=7.1.0" defer></script>
-<script src="modules/russian-path.js?v=7.1.0" defer></script>
-<script src="modules/v43.js?v=7.1.0" defer></script>
-<script src="modules/v431.js?v=7.1.0" defer></script>
-<script src="modules/v50.js?v=7.1.0" defer></script>
-<script src="modules/v510.js?v=7.1.0" defer></script>
-<script src="modules/v511.js?v=7.1.0" defer></script>
-<script src="modules/v512.js?v=7.1.0" defer></script>
-<script src="modules/v60.js?v=7.1.0" defer></script>
-<script src="modules/v61.js?v=7.1.0" defer></script>
-<script src="modules/v62.js?v=7.1.0" defer></script>
-<script src="modules/v63.js?v=7.1.0" defer></script>
-<script src="modules/v64.js?v=7.1.0" defer></script>
-<script src="modules/v65.js?v=7.1.0" defer></script>
-<script src="modules/v70.js?v=7.1.0" defer></script>
-<script src="modules/v71.js?v=7.1.0" defer></script>
-<script src="modules/bootstrap.js?v=7.1.0" defer></script>
+<script src="security-config.js?v=7.1.1" defer></script>
+<script src="app.js?v=7.1.1" defer></script>
+<script src="modules/firebase-sync.js?v=7.1.1" defer></script>
+<script src="modules/learning-engine.js?v=7.1.1" defer></script>
+<script src="modules/ui-events.js?v=7.1.1" defer></script>
+<script src="modules/course-engine.js?v=7.1.1" defer></script>
+<script src="modules/russian-path.js?v=7.1.1" defer></script>
+<script src="modules/v43.js?v=7.1.1" defer></script>
+<script src="modules/v431.js?v=7.1.1" defer></script>
+<script src="modules/v50.js?v=7.1.1" defer></script>
+<script src="modules/v510.js?v=7.1.1" defer></script>
+<script src="modules/v511.js?v=7.1.1" defer></script>
+<script src="modules/v512.js?v=7.1.1" defer></script>
+<script src="modules/v60.js?v=7.1.1" defer></script>
+<script src="modules/v61.js?v=7.1.1" defer></script>
+<script src="modules/v62.js?v=7.1.1" defer></script>
+<script src="modules/v63.js?v=7.1.1" defer></script>
+<script src="modules/v64.js?v=7.1.1" defer></script>
+<script src="modules/v65.js?v=7.1.1" defer></script>
+<script src="modules/v70.js?v=7.1.1" defer></script>
+<script src="modules/v71.js?v=7.1.1" defer></script>
+<script src="modules/v711.js?v=7.1.1" defer></script>
+<script src="modules/bootstrap.js?v=7.1.1" defer></script>
 </body>
 </html>

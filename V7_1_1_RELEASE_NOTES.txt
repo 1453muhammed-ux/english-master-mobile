@@ -1,0 +1,22 @@
+WORDPILOT v7.1.1 — RELEASE NOTES
+
+1. GLOBAL LANGUAGE ROUTING
+- 12 native/interface languages and 12 target languages.
+- 132 valid learning directions.
+- Site language follows the selected native language.
+- Selected target language opens as the active home course.
+
+2. CONTENT COUNTS
+- Connected clean concept graph: 1000
+- English learning core: 1000
+- Russian rich course: 1500
+- Uzbek rich course: 1000
+- Spanish: active 1000-concept course
+
+3. LEARNER UI
+- Internal content hashes and legal metadata removed from Notes.
+- Home-course choice and language-route choice remain synchronised.
+- Conversation Coach labels and controls use the selected interface language.
+
+4. HONEST ALPHA LIMIT
+The first 120 concepts are polished. The additional entries are structurally complete but explicitly marked for editorial review. Demo 1.0 will not be declared before that review and the remaining legal/security checks are completed.

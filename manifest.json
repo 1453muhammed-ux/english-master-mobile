@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 7.1",
+  "name": "WordPilot 7.1.1",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=7.1.0",
+  "start_url": "./?wpbuild=7.1.1",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot 7.1: multilingual language pairs, commercial clean core and Conversation Coach 2.0.",
+  "description": "WordPilot 7.1.1: 12-language routing, 1000 connected clean concepts and Conversation Coach 2.1.",
   "icons": [
     {
       "src": "icon-192.png",

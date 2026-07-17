@@ -1,5 +1,5 @@
-/* WordPilot v7.1.0 — commercial clean branch, multilingual concept graph and Conversation Coach 2.0. */
-const WP71_VERSION='7.1.0';
+/* WordPilot v7.1.1 — commercial clean branch, multilingual concept graph and Conversation Coach 2.0. */
+const WP71_VERSION='7.1.1';
 const WP71_SETTINGS_KEY=`${STORE}:v71_language_profile`;
 const WP71_CONCEPT_FILE='clean_concepts_v71.json';
 const WP71_ACTIVE_LANGUAGES=['en','tr','ru','uz'];
@@ -55,7 +55,7 @@ function wp71ConceptToLegacy(c,target=wp71Target(),support=wp71Support()){
     id,concept_id:c.concept_id,english:term,word:term,pronunciation:'',meaningTr:meaning,
     meaning:`${meaning} ★★★★★`,usage:`• ${supportUsage}`,example:`• ${targetExample}`,translation:`• ${supportExample}`,
     synonyms:WP71_PENDING[support],opposite:WP71_PENDING[support],family:WP71_PENDING[support],phrase:'',collocations:'',
-    notes:`WordPilot original · ${c.content_hash||''}\n${c.license||''}`,
+    notes:'',
     cefr:`● ${c.level||'A1'}`,level:c.level||'A1',type:`● ${String(c.part_of_speech||'word')}`,group:`Clean Core · ${c.topic||'Core'}`,
     topic:c.topic||'Core',target_lang:target,support_lang:support,content_origin:c.content_origin,license:c.license,
     review_status:c.review_status,commercial_safe:c.commercial_safe===true,content_hash:c.content_hash

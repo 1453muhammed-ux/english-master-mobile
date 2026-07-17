@@ -19,3 +19,12 @@ WORDPILOT COMMERCIAL CONTENT POLICY — v1
 
 6. Bu teknik politika hukuki danışmanlık yerine geçmez. Genel ücretli yayından önce
    fikri mülkiyet alanında çalışan bir hukukçuya örnek veri ve lisans belgeleri gösterilmelidir.
+
+7. V7.1.1 genişletmesinde kullanılan thousand-most-common-words kelime eşleme paketi
+   MIT lisanslıdır. Lisans metni THIRD_PARTY_LICENSES.txt içinde paketle birlikte tutulur.
+
+8. Kaynak, lisans, inceleme durumu ve SHA-256 alanları içerik denetimi içindir;
+   öğrenci ekranındaki Notlar bölümünde gösterilmez.
+
+9. "lexical-review-required" durumundaki kayıtlar yapısal olarak kullanılabilir olsa da
+   Demo 1.0 veya genel ticari yayın öncesinde insan editör kontrolünden geçirilir.

@@ -1,0 +1,115 @@
+{
+  "version": "7.1.1",
+  "active_languages": [
+    "en",
+    "tr",
+    "ru",
+    "uz",
+    "es",
+    "de",
+    "fr",
+    "it",
+    "pt",
+    "ja",
+    "ko",
+    "zh"
+  ],
+  "languages": [
+    {
+      "id": "en",
+      "name": "English",
+      "native": "English",
+      "flag": "🇬🇧",
+      "voice": "en-US",
+      "status": "active"
+    },
+    {
+      "id": "tr",
+      "name": "Turkish",
+      "native": "Türkçe",
+      "flag": "🇹🇷",
+      "voice": "tr-TR",
+      "status": "active"
+    },
+    {
+      "id": "ru",
+      "name": "Russian",
+      "native": "Русский",
+      "flag": "🇷🇺",
+      "voice": "ru-RU",
+      "status": "active"
+    },
+    {
+      "id": "uz",
+      "name": "Uzbek",
+      "native": "O‘zbekcha",
+      "flag": "🇺🇿",
+      "voice": "uz-UZ",
+      "status": "active"
+    },
+    {
+      "id": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "flag": "🇪🇸",
+      "voice": "es-ES",
+      "status": "active"
+    },
+    {
+      "id": "de",
+      "name": "German",
+      "native": "Deutsch",
+      "flag": "🇩🇪",
+      "voice": "de-DE",
+      "status": "active-beta"
+    },
+    {
+      "id": "fr",
+      "name": "French",
+      "native": "Français",
+      "flag": "🇫🇷",
+      "voice": "fr-FR",
+      "status": "active-beta"
+    },
+    {
+      "id": "it",
+      "name": "Italian",
+      "native": "Italiano",
+      "flag": "🇮🇹",
+      "voice": "it-IT",
+      "status": "active-beta"
+    },
+    {
+      "id": "pt",
+      "name": "Portuguese",
+      "native": "Português",
+      "flag": "🇵🇹",
+      "voice": "pt-PT",
+      "status": "active-beta"
+    },
+    {
+      "id": "ja",
+      "name": "Japanese",
+      "native": "日本語",
+      "flag": "🇯🇵",
+      "voice": "ja-JP",
+      "status": "active-beta"
+    },
+    {
+      "id": "ko",
+      "name": "Korean",
+      "native": "한국어",
+      "flag": "🇰🇷",
+      "voice": "ko-KR",
+      "status": "active-beta"
+    },
+    {
+      "id": "zh",
+      "name": "Chinese",
+      "native": "中文",
+      "flag": "🇨🇳",
+      "voice": "zh-CN",
+      "status": "active-beta"
+    }
+  ]
+}

@@ -1,38 +1,28 @@
-WORDPILOT v7.1.0 — COMMERCIAL CLEAN ALPHA
+WORDPILOT v7.1.1 — COMMERCIAL CLEAN ALPHA
 
-Canlı kontrol adresi (dağıtımdan sonra):
-https://wordpilot-7a574.web.app/?wpbuild=7.1.0
+Test URL:
+https://wordpilot-7a574.web.app/?wpbuild=7.1.1
 
-Bu paket, V7.0 kişisel çalışma arşivinden ayrı ticari temiz geliştirme dalıdır.
-Eski İngilizce 5488 kayıt bu pakette yayımlanmaz. Public words.json dosyası 120 adet
-WordPilot tarafından sıfırdan hazırlanmış, kayıt bazında SHA-256 hash taşıyan clean-room
-kavramdan oluşur.
+This package is the commercial-clean development branch. V7.0 remains a separate private legacy archive.
 
-ANA YENİLİKLER
-- Arayüz dili, açıklama dili ve hedef dil birbirinden ayrıldı.
-- English, Türkçe, Русский ve O‘zbekcha arasında 12 öğrenme yönü için altyapı kuruldu.
-- İspanyolca, Almanca, Fransızca, İtalyanca, Portekizce, Japonca, Korece ve Çince roadmap kaydı eklendi.
-- Conversation Coach 2.0 ana ekranda ön plana alındı.
-- 12 senaryo x 6 soru = hedef dil başına 72 yönlendirilmiş yerel konuşma sorusu eklendi.
-- Aynı soruyu tekrar etmeme, konuşma geçmişi, seviye ve üç düzeltme modu eklendi.
-- Hata türü, düzeltilmiş cümle, açıklama, doğal alternatif, not ve puan kartları eklendi.
-- Cloud AI Function; hedef dil, açıklama dili, düzeltme modu ve son 20 mesajı kullanacak şekilde güncellendi.
-- WordPilot Junior için veri mimarisi/deneyim alanı ayrıldı; V8 öncesinde aktif değildir.
-- İngilizce/Türkçe Academy ve Reader, ticari içerik denetimi tamamlanana kadar Commercial Clean dalında kapalıdır.
+MAIN CHANGES
+- Native language and interface language are one setting and support 12 languages.
+- Target-language choice persists and becomes the selected course on the home screen.
+- Changing the home course also updates the saved target route.
+- Core interface localisation is available in English, Turkish, Russian, Uzbek, Spanish, German, French, Italian, Portuguese, Japanese, Korean and Chinese.
+- Specialised legacy tools fall back to English instead of Turkish during Alpha when a translation is missing.
+- Clean connected concept graph expanded from 120 to 1000 entries.
+- Russian expanded to 1500 entries; Uzbek expanded to 1000 entries.
+- Spanish is active with the 1000-concept core and Conversation Coach scenarios.
+- Internal SHA-256, content-origin and proprietary-license metadata is not displayed in learner Notes. Audit metadata remains in internal JSON fields.
 
-ÖNEMLİ DURUM
-- Bu sürüm Demo 1.0 değildir; V7.1 Commercial Clean Alpha'dır.
-- security-config.js içinde aiEnabled ve voiceTranscriptionEnabled varsayılan olarak false kalır.
-- Gerçek bulut AI için Firebase Functions dağıtımı, OPENAI_API_KEY secret ve maliyet limitleri gerekir.
-- 120 clean-room kaydın review_status alanı "editorial-review-required" durumundadır.
-- Rusça ve Özbekçe mevcut WordPilot içerikleri Türkçe açıklama yönünde korunur.
-  Diğer açıklama dillerinde ilk aşamada 120 bağlantılı kavram çekirdeği kullanılır.
+EDITORIAL STATUS
+- The original first 120 clean concepts retain their polished review status.
+- The additional 880 aligned concepts use an MIT-licensed lexical seed and are marked lexical-review-required. They must receive human language review before Demo 1.0.
+- Expanded Russian and Uzbek rows also require final editorial review before public commercial launch.
 
-İÇERİK DOSYALARI
-- clean_concepts_v71.json: dört dil bağlantılı özgün kavram grafiği
-- language_registry_v71.json: aktif ve planlanan diller
-- content_manifest_v71.json: ticari dal ve denetim politikası
-- words.json: geriye uyumlu 120 kayıtlık temiz İngilizce paketi
+PRESERVED
+Firebase authentication and sync, App Check configuration, XP, leagues, profile, PWA/offline support and the wordpilot_v34 progress key are preserved.
 
-Mevcut kullanıcı ilerleme anahtarı korunur: wordpilot_v34
-TXT kaynak dosyaları veya Diziyle Öğren içerikleri bu dağıtım paketine dahil değildir.
+STATUS
+Commercial Clean Alpha — not yet Demo 1.0.

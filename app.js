@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='7.1.0';
+const VERSION='7.1.1';
 const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
@@ -26,10 +26,10 @@ const FIREBASE_CONFIG={
 const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing';
 
 const COURSES={
-  en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'clean_concepts_v71.json',voice:'en-US',voiceAlt:'en-GB',displayCount:120,countLabel:'120 özgün clean-room kavram · ticari temiz çekirdek',targetLabel:'İNGİLİZCE',starter:true},
-  ru:{id:'ru',name:'Русский',short:'RU',flag:'🇷🇺',file:'ru_words.json',voice:'ru-RU',voiceAlt:'ru-RU',displayCount:1300,countLabel:'1300 kontrollü kelime ve ifade + A1–C2 Akademi',targetLabel:'RUSÇA',starter:true},
-  uz:{id:'uz',name:'O‘zbekcha',short:'UZ',flag:'🇺🇿',file:'uz_words.json',voice:'uz-UZ',voiceAlt:'uz-UZ',displayCount:500,countLabel:'500 kontrollü A1–A2 kelime ve ifade',targetLabel:'ÖZBEKÇE',starter:true},
-  tr:{id:'tr',name:'Türkçe',short:'TR',flag:'🇹🇷',file:'clean_concepts_v71.json',voice:'tr-TR',voiceAlt:'tr-TR',displayCount:120,countLabel:'120 bağlantılı temiz çekirdek kayıt',targetLabel:'TÜRKÇE',starter:true}
+  en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'clean_concepts_v711.json',voice:'en-US',voiceAlt:'en-GB',displayCount:1000,countLabel:'1000 bağlantılı ticari temiz kavram',targetLabel:'İNGİLİZCE',starter:true},
+  ru:{id:'ru',name:'Русский',short:'RU',flag:'🇷🇺',file:'ru_words.json',voice:'ru-RU',voiceAlt:'ru-RU',displayCount:1500,countLabel:'1500 kontrollü kelime ve ifade + bağlantılı çekirdek',targetLabel:'RUSÇA',starter:true},
+  uz:{id:'uz',name:'O‘zbekcha',short:'UZ',flag:'🇺🇿',file:'uz_words.json',voice:'uz-UZ',voiceAlt:'uz-UZ',displayCount:1000,countLabel:'1000 kontrollü kelime ve ifade + bağlantılı çekirdek',targetLabel:'ÖZBEKÇE',starter:true},
+  tr:{id:'tr',name:'Türkçe',short:'TR',flag:'🇹🇷',file:'clean_concepts_v711.json',voice:'tr-TR',voiceAlt:'tr-TR',displayCount:1000,countLabel:'1000 bağlantılı ticari temiz kavram',targetLabel:'TÜRKÇE',starter:true}
 };
 const COURSE_IDS=['en','ru','uz','tr'];
 const ACTIVE_COURSE_KEY=`${STORE}:active_course`;

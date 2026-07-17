@@ -1076,3 +1076,12 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
 @media(max-width:650px){.wp71-pair-button span{max-width:110px;overflow:hidden;text-overflow:ellipsis}.wp71-conversation-spotlight{padding:20px 17px;border-radius:23px;margin-top:12px}.wp71-conversation-copy h2{font-size:30px}.wp71-proof-row{display:grid;grid-template-columns:1fr 1fr}.wp71-proof-row span{border-radius:13px}.wp71-conversation-action{grid-template-columns:1fr}.wp71-orbit{display:none}.wp71-onboarding{padding:19px 15px;border-radius:23px}.wp71-onboarding-brand>span{width:48px;height:48px}.wp71-onboarding-brand h2{font-size:23px}.wp71-experience{grid-template-columns:1fr}.wp71-legal-note{align-items:flex-start;display:grid}.wp71-coach-context{align-items:flex-start;flex-direction:column}#wp71ConversationMetrics{justify-content:flex-start}.course-selector-grid{grid-template-columns:1fr 1fr}.course-card{min-width:0}.top-actions .course-top-badge{display:none}}
 .wp71-audit-notice{border:1px solid #ddd4ff;background:linear-gradient(135deg,#fbfaff,#f1edff);border-radius:22px;padding:20px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}.wp71-audit-notice>span{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:#fff;font-size:25px}.wp71-audit-notice h2{margin:3px 0 6px}.wp71-audit-notice p:last-child{margin:0;color:var(--muted);line-height:1.55}.wp71-audit-notice button{white-space:nowrap}
 @media(max-width:720px){.wp71-audit-notice{grid-template-columns:auto 1fr}.wp71-audit-notice button{grid-column:1/-1;width:100%}}
+
+/* WordPilot v7.1.1 — global language routing */
+.wp711-onboarding-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.wp711-onboarding select{width:100%;min-width:0}
+.course-selector-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.course-selector-grid .course-card{min-width:0}
+@media(max-width:1100px){.course-selector-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.course-selector-grid{display:flex!important;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px}.course-selector-grid .course-card{flex:0 0 220px;scroll-snap-align:start}}
+@media(max-width:700px){.wp711-onboarding-grid{grid-template-columns:1fr}.course-selector-grid .course-card{flex-basis:205px}}

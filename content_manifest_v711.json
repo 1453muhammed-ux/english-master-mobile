@@ -1,0 +1,34 @@
+{
+  "version": "7.1.1-alpha",
+  "branch": "commercial-clean",
+  "legacy_branch": "v7.0.0-private-archive",
+  "clean_concept_count": 1000,
+  "active_language_count": 12,
+  "learning_directions": 132,
+  "rich_course_counts": {
+    "en": 1000,
+    "ru": 1500,
+    "uz": 1000,
+    "es": 1000
+  },
+  "content_policy": "Only original or explicitly licensed content may enter the commercial branch.",
+  "lexical_seed": {
+    "name": "thousand-most-common-words",
+    "license": "MIT",
+    "role": "word selection and multilingual term seed"
+  },
+  "original_wordpilot_layers": [
+    "interface localisation",
+    "learning order",
+    "usage guidance",
+    "practice prompts",
+    "conversation coach"
+  ],
+  "audit": {
+    "hash_algorithm": "SHA-256",
+    "record_level_hashes": true,
+    "editorial_review_required": true,
+    "internal_metadata_hidden_from_learner_ui": true
+  },
+  "generated_at": "2026-07-17"
+}
