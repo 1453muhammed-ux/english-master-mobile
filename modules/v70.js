@@ -1,5 +1,5 @@
 /* WordPilot v7.0.0 — premium command center and expanded RU/UZ content. */
-const WP70_VERSION='7.1.1';
+const WP70_VERSION='7.1.2';
 const WP70_COUNTS={en:5488,ru:1300,uz:500};
 function wp70CourseText(course){
   if(course==='ru')return 'Русский · 1300 kayıt + A1–C2 Akademi';

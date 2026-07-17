@@ -1,5 +1,5 @@
-/* WordPilot v7.1.1 — commercial clean branch, multilingual concept graph and Conversation Coach 2.0. */
-const WP71_VERSION='7.1.1';
+/* WordPilot v7.1.2 — commercial clean branch, multilingual concept graph and Conversation Coach 2.0. */
+const WP71_VERSION='7.1.2';
 const WP71_SETTINGS_KEY=`${STORE}:v71_language_profile`;
 const WP71_CONCEPT_FILE='clean_concepts_v71.json';
 const WP71_ACTIVE_LANGUAGES=['en','tr','ru','uz'];

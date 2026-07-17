@@ -1,4 +1,4 @@
-WORDPILOT v7.1.1 — THIRD-PARTY LICENSES
+WORDPILOT v7.1.2 — THIRD-PARTY LICENSES
 
 Lexical seed used for the expanded multilingual concept graph:
 thousand-most-common-words (MIT License)

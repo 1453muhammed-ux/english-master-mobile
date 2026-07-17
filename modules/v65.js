@@ -1,5 +1,5 @@
 /* WordPilot v7.0.0 — professional navigation, voice conversation, mobile microphone resilience and UI consistency. */
-const WP65_VERSION='7.1.1';
+const WP65_VERSION='7.1.2';
 let wp65AiRecognition=null,wp65AiRecording=null,wp65AiStream=null,wp65AiChunks=[],wp65AiListening=false;
 
 function wp65FlagMarkup(course,size='normal'){

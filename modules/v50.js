@@ -1,6 +1,6 @@
 /* WordPilot v5.0 — voice lab, stories, adaptive learning, language leagues and AI coach.
    Existing localStorage/Firebase course state keys remain unchanged. */
-const V5_VERSION='7.1.1';
+const V5_VERSION='7.1.2';
 const V5_STORY_FILE='stories.json';
 const V5_SECURITY=window.WORDPILOT_SECURITY||{};
 const V5_SCENARIOS={

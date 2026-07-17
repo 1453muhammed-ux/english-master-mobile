@@ -1,5 +1,5 @@
-/* WordPilot v7.1.1 — global language core, 1000 clean concepts and persistent language routing. */
-const WP711_VERSION='7.1.1';
+/* WordPilot v7.1.2 — global language core, 1000 clean concepts and persistent language routing. */
+const WP711_VERSION='7.1.2';
 const WP711_CONCEPT_FILE='clean_concepts_v711.json';
 const WP711_LANGS=["en", "tr", "ru", "uz", "es", "de", "fr", "it", "pt", "ja", "ko", "zh"];
 const WP711_META={"en":{"name":"English","native":"English","flag":"🇬🇧","voice":"en-US","short":"EN"},"tr":{"name":"Turkish","native":"Türkçe","flag":"🇹🇷","voice":"tr-TR","short":"TR"},"ru":{"name":"Russian","native":"Русский","flag":"🇷🇺","voice":"ru-RU","short":"RU"},"uz":{"name":"Uzbek","native":"O‘zbekcha","flag":"🇺🇿","voice":"uz-UZ","short":"UZ"},"es":{"name":"Spanish","native":"Español","flag":"🇪🇸","voice":"es-ES","short":"ES"},"de":{"name":"German","native":"Deutsch","flag":"🇩🇪","voice":"de-DE","short":"DE"},"fr":{"name":"French","native":"Français","flag":"🇫🇷","voice":"fr-FR","short":"FR"},"it":{"name":"Italian","native":"Italiano","flag":"🇮🇹","voice":"it-IT","short":"IT"},"pt":{"name":"Portuguese","native":"Português","flag":"🇵🇹","voice":"pt-PT","short":"PT"},"ja":{"name":"Japanese","native":"日本語","flag":"🇯🇵","voice":"ja-JP","short":"JA"},"ko":{"name":"Korean","native":"한국어","flag":"🇰🇷","voice":"ko-KR","short":"KO"},"zh":{"name":"Chinese","native":"中文","flag":"🇨🇳","voice":"zh-CN","short":"ZH"}};
@@ -29,7 +29,7 @@ wp71SaveLanguageProfile=function(next){
   const support=WP711_LANGS.includes(next?.support)?next.support:(wp71LanguageProfile.support||'tr');
   let target=WP711_LANGS.includes(next?.target)?next.target:(wp71LanguageProfile.target||'en');
   if(target===support)target=support==='en'?'es':'en';
-  wp71LanguageProfile={...wp71LanguageProfile,...next,ui:support,support,target,complete:true};
+  wp71LanguageProfile={...wp71LanguageProfile,...next,ui:support,support,target,complete:true,updatedAt:new Date().toISOString()};
   localStorage.setItem(WP71_SETTINGS_KEY,JSON.stringify(wp71LanguageProfile));
   localStorage.setItem(ACTIVE_COURSE_KEY,target);
   try{const p=JSON.parse(localStorage.getItem(`${STORE}:profile`)||'{}');p.activeCourse=target;localStorage.setItem(`${STORE}:profile`,JSON.stringify(p))}catch{}
@@ -74,7 +74,7 @@ wp71LanguageOptions=function(selected,exclude=''){return WP711_LANGS.filter(id=>
 wp71EnsureOnboarding=function(){
   $('#wp71Onboarding')?.remove();
   document.body.insertAdjacentHTML('beforeend',`<dialog id="wp71Onboarding" class="modal wp71-onboarding wp711-onboarding">
-    <div class="wp71-onboarding-brand"><span>W</span><div><p class="eyebrow">WORDPILOT 7.1.1</p><h2>${wp711T('routeTitle')}</h2><p>${wp711T('routeDesc')}</p></div></div>
+    <div class="wp71-onboarding-brand"><span>W</span><div><p class="eyebrow">WORDPILOT 7.1.2</p><h2>${wp711T('routeTitle')}</h2><p>${wp711T('routeDesc')}</p></div></div>
     <div class="wp71-onboarding-grid wp711-onboarding-grid">
       <label><span>${wp711T('native')}</span><select id="wp71SupportLanguage">${wp71LanguageOptions(wp71Support(),wp71Target())}</select><small>${wp711T('selectNative')}</small></label>
       <label><span>${wp711T('target')}</span><select id="wp71TargetLanguage">${wp71LanguageOptions(wp71Target(),wp71Support())}</select><small>${wp711T('selectTarget')}</small></label>
@@ -114,7 +114,7 @@ function wp711ApplyShell(){
   const hero=$('#wp71ConversationSpotlight');if(hero){hero.querySelector('[data-wp71="eyebrow"]').textContent=t('learnSpeak');hero.querySelector('h2').textContent=t('coach');hero.querySelector('[data-wp71="description"]').textContent=t('coachDesc');hero.querySelector('[data-v5-open="ai"] b').textContent=t('startSpeak');hero.querySelector('[data-wp71="clean"]').textContent=t('clean');hero.querySelector('[data-wp71="memory"]').textContent=t('memory');hero.querySelector('[data-wp71="modes"]').textContent=t('modes');hero.querySelector('[data-wp71="prompts"]').textContent=t('prompts')}
   const pair=$('#wp71PairButton');if(pair){pair.querySelector('span').textContent=wp71PairLabel();pair.title=t('routeTitle')};
   wp711RenderCourseCards();
-  const version=$('.version');if(version)version.textContent='v7.1.1';
+  const version=$('.version');if(version)version.textContent='v7.1.2';
   wp711TranslateLegacy(document.body);
 };
 function wp711TranslateLegacy(root=document.body){
