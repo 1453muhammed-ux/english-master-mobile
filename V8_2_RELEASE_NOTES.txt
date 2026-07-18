@@ -1,0 +1,27 @@
+WORDPILOT v8.2.0 — TESTER BETA
+18 Temmuz 2026
+
+1. BUGÜNÜN ROTASI
+- Ders, Quiz, Hikâye, Konuş, Tekrar ve İlerleme düğmeleri seçilen içeriği hemen alt bölümde açar.
+- Seçilen çalışma alanının başlığı ve açıklaması görünür.
+- Telefon ekranında seçimden sonra ilgili bölüme otomatik kaydırma yapılır.
+
+2. MOBİL KURS SEÇİMİ
+- Yatay kaydırmalı kart şeridi kaldırıldı.
+- Telefon ve tablette iki sütunlu, dengeli kart düzeni kullanılır.
+- Çok dar ekranlarda tek sütuna geçer.
+
+3. 2000 KART VE ÖZEL ARALIK
+- “Tüm gruplar” yerine “2000 kartın tümü” yazılır.
+- Kart numarasıyla doğrudan aralık açılabilir: 50–60, 1001–1050 vb.
+- Hızlı aralık düğmeleri eklendi.
+
+4. SONSUZ LİSTE YERİNE SAYFALAMA
+- Her sayfada 50 kart gösterilir.
+- Önceki 50 / Sonraki 50 düğmeleri bulunur.
+- Toplam sonuç, görünen kart aralığı ve sayfa numarası gösterilir.
+
+5. KORUNAN ÖZELLİKLER
+- v7 Türkçe-okunur İngilizce telaffuzları korunur.
+- 1000 temel kelime + 1000 özgün bağlam kartı korunur.
+- Firebase Authentication, Firestore Rules ve App Check ayarları değiştirilmez.

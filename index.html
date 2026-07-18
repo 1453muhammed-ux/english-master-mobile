@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot 8.1 Tester Beta — 2000 çalışma kartı, Conversation Coach 3.1 ve çoklu hesap seçenekleri.">
+  <meta name="description" content="WordPilot 8.2 Tester Beta — çalışan öğrenme rotaları, 2000 kart, özel aralık ve Conversation Coach 3.1.">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=8.1.1">
-  <title>WordPilot 8.1 · Conversation Coach 3.1</title>
+  <link rel="stylesheet" href="style.css?v=8.2.0">
+  <title>WordPilot 8.2 · Conversation Coach 3.1</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='8.1.1',KEY='wordpilot_asset_build';
+    const BUILD='8.2.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.1.1 · Tester Beta</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.2.0 · Tester Beta</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -500,7 +500,7 @@
 
     <section id="view-library" class="view">
       <div class="section-title">
-        <div><p class="eyebrow">WORD LIBRARY</p><h1><span id="libraryCourseName">English</span> kelime kütüphanesi</h1><p class="muted"><span id="resultCount">0</span> kayıt gösteriliyor</p></div>
+        <div><p class="eyebrow">WORD LIBRARY</p><h1><span id="libraryCourseName">English</span> kelime kütüphanesi</h1><p id="libraryResultSummary" class="muted"><span id="resultCount">0</span></p></div>
         <div class="library-study-actions">
           <button id="studySelectedBtn" class="secondary" type="button" hidden>Seçilenlere çalış (<span id="selectedCount">0</span>)</button>
           <button class="primary desktop-only" data-action="open-study-setup">Bu listeden çalış</button>
@@ -817,31 +817,32 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=8.1.1" defer></script>
-<script src="app.js?v=8.1.1" defer></script>
-<script src="modules/firebase-sync.js?v=8.1.1" defer></script>
-<script src="modules/learning-engine.js?v=8.1.1" defer></script>
-<script src="modules/ui-events.js?v=8.1.1" defer></script>
-<script src="modules/course-engine.js?v=8.1.1" defer></script>
-<script src="modules/russian-path.js?v=8.1.1" defer></script>
-<script src="modules/v43.js?v=8.1.1" defer></script>
-<script src="modules/v431.js?v=8.1.1" defer></script>
-<script src="modules/v50.js?v=8.1.1" defer></script>
-<script src="modules/v510.js?v=8.1.1" defer></script>
-<script src="modules/v511.js?v=8.1.1" defer></script>
-<script src="modules/v512.js?v=8.1.1" defer></script>
-<script src="modules/v60.js?v=8.1.1" defer></script>
-<script src="modules/v61.js?v=8.1.1" defer></script>
-<script src="modules/v62.js?v=8.1.1" defer></script>
-<script src="modules/v63.js?v=8.1.1" defer></script>
-<script src="modules/v64.js?v=8.1.1" defer></script>
-<script src="modules/v65.js?v=8.1.1" defer></script>
-<script src="modules/v70.js?v=8.1.1" defer></script>
-<script src="modules/v71.js?v=8.1.1" defer></script>
-<script src="modules/v711.js?v=8.1.1" defer></script>
-<script src="modules/v712.js?v=8.1.1" defer></script>
-<script src="modules/v80.js?v=8.1.1" defer></script>
-<script src="modules/v81.js?v=8.1.1" defer></script>
-<script src="modules/bootstrap.js?v=8.1.1" defer></script>
+<script src="security-config.js?v=8.2.0" defer></script>
+<script src="app.js?v=8.2.0" defer></script>
+<script src="modules/firebase-sync.js?v=8.2.0" defer></script>
+<script src="modules/learning-engine.js?v=8.2.0" defer></script>
+<script src="modules/ui-events.js?v=8.2.0" defer></script>
+<script src="modules/course-engine.js?v=8.2.0" defer></script>
+<script src="modules/russian-path.js?v=8.2.0" defer></script>
+<script src="modules/v43.js?v=8.2.0" defer></script>
+<script src="modules/v431.js?v=8.2.0" defer></script>
+<script src="modules/v50.js?v=8.2.0" defer></script>
+<script src="modules/v510.js?v=8.2.0" defer></script>
+<script src="modules/v511.js?v=8.2.0" defer></script>
+<script src="modules/v512.js?v=8.2.0" defer></script>
+<script src="modules/v60.js?v=8.2.0" defer></script>
+<script src="modules/v61.js?v=8.2.0" defer></script>
+<script src="modules/v62.js?v=8.2.0" defer></script>
+<script src="modules/v63.js?v=8.2.0" defer></script>
+<script src="modules/v64.js?v=8.2.0" defer></script>
+<script src="modules/v65.js?v=8.2.0" defer></script>
+<script src="modules/v70.js?v=8.2.0" defer></script>
+<script src="modules/v71.js?v=8.2.0" defer></script>
+<script src="modules/v711.js?v=8.2.0" defer></script>
+<script src="modules/v712.js?v=8.2.0" defer></script>
+<script src="modules/v80.js?v=8.2.0" defer></script>
+<script src="modules/v81.js?v=8.2.0" defer></script>
+<script src="modules/v82.js?v=8.2.0" defer></script>
+<script src="modules/bootstrap.js?v=8.2.0" defer></script>
 </body>
 </html>

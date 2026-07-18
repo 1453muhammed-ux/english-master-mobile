@@ -1,0 +1,81 @@
+WORDPILOT v8.2.0 VALIDATION REPORT
+18 Temmuz 2026
+
+SONUÇ: 76/76 kontrol geçti.
+
+PASS — Runtime version is 8.2.0
+PASS — Visible version label is v8.2.0
+PASS — v8.2 module is loaded
+PASS — v8.2 event setup is called
+PASS — v8.2 after-init hook is called
+PASS — Service worker uses v8.2 cache
+PASS — Service worker caches v8.2 module
+PASS — PWA manifest is valid
+PASS — Content manifest version is v8.2.0
+PASS — English learning bank contains 2000 cards
+PASS — English bank contains 1000 base word cards
+PASS — English bank contains 1000 context cards
+PASS — English card IDs are continuous from 1 to 2000
+PASS — All 2000 English cards have pronunciation
+PASS — IPA symbols are absent from Turkish-readable pronunciation
+PASS — Card #1 keeps v7 pronunciation (helou)
+PASS — world exists in English bank
+PASS — learn exists in English bank
+PASS — through exists in English bank
+PASS — Route-stage repair exists
+PASS — Route click handler exists
+PASS — Selected route scrolls to its content
+PASS — Dashboard panels are grouped directly under route
+PASS — Route repair targets all dashboard panels
+PASS — Library explicitly shows all 2000 cards
+PASS — Custom library range form exists
+PASS — Quick range presets exist
+PASS — Library uses 50-card pages
+PASS — Previous/next pagination controls exist
+PASS — Range apply and clear logic exists
+PASS — Custom range filters by exact card ID
+PASS — Tablet/mobile media rules exist
+PASS — Mobile course selector uses a two-column grid
+PASS — Mobile course selector no longer uses horizontal scrolling
+PASS — Very narrow screens fall back to one column
+PASS — Pagination has dedicated responsive styling
+PASS — Infinite load-more button is removed
+PASS — No DiziÖğren link exists in the main page
+PASS — No Google Drive study-PDF link exists in the main page
+PASS — Correct Turkish flag asset is included
+PASS — Firestore rules are included
+PASS — Security configuration is included
+PASS — Legal page is included
+PASS — v8.2 release notes are included
+PASS — v8.2 tester guide is included
+PASS — Referenced script exists: security-config.js
+PASS — Referenced script exists: app.js
+PASS — Referenced script exists: modules/firebase-sync.js
+PASS — Referenced script exists: modules/learning-engine.js
+PASS — Referenced script exists: modules/ui-events.js
+PASS — Referenced script exists: modules/course-engine.js
+PASS — Referenced script exists: modules/russian-path.js
+PASS — Referenced script exists: modules/v43.js
+PASS — Referenced script exists: modules/v431.js
+PASS — Referenced script exists: modules/v50.js
+PASS — Referenced script exists: modules/v510.js
+PASS — Referenced script exists: modules/v511.js
+PASS — Referenced script exists: modules/v512.js
+PASS — Referenced script exists: modules/v60.js
+PASS — Referenced script exists: modules/v61.js
+PASS — Referenced script exists: modules/v62.js
+PASS — Referenced script exists: modules/v63.js
+PASS — Referenced script exists: modules/v64.js
+PASS — Referenced script exists: modules/v65.js
+PASS — Referenced script exists: modules/v70.js
+PASS — Referenced script exists: modules/v71.js
+PASS — Referenced script exists: modules/v711.js
+PASS — Referenced script exists: modules/v712.js
+PASS — Referenced script exists: modules/v80.js
+PASS — Referenced script exists: modules/v81.js
+PASS — Referenced script exists: modules/v82.js
+PASS — Referenced script exists: modules/bootstrap.js
+PASS — Referenced asset exists: manifest.json
+PASS — Referenced asset exists: apple-touch-icon.png
+PASS — Referenced asset exists: icon-192.png
+PASS — Referenced asset exists: style.css

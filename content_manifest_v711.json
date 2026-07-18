@@ -1,5 +1,5 @@
 {
-  "version": "8.1.1-tester-beta",
+  "version": "8.2.0-tester-beta",
   "branch": "commercial-clean",
   "legacy_branch": "v7.0.0-private-archive",
   "clean_concept_count": 1000,
@@ -39,5 +39,5 @@
     "relation_fields_coverage": 2000,
     "pronunciation_scheme": "tr-readable"
   },
-  "notes": "The English bank contains 1000 reviewed lexical cards and 1000 original context cards. English pronunciation uses the Turkish-readable WordPilot v7 convention restored in v8.1.1; IPA display was removed. No DiziÖğren PDF link or copied sentence bank is included."
+  "notes": "The English bank contains 1000 reviewed lexical cards and 1000 original context cards. English pronunciation uses the Turkish-readable WordPilot v7 convention restored in v8.1.1; IPA display was removed. No DiziÖğren PDF link or copied sentence bank is included. v8.2.0 changes navigation and library presentation only: route panels, mobile course grid, custom card ranges and 50-card pagination. The v7 Turkish-readable pronunciation layer remains unchanged."
 }

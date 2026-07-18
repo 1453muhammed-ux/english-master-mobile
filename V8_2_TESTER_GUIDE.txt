@@ -1,0 +1,10 @@
+WORDPILOT v8.2.0 — KISA TEST REHBERİ
+
+1. Siteyi ?wpbuild=8.2.0 ile aç.
+2. Üstte v8.2.0 · Tester Beta yazdığını kontrol et.
+3. Bugünün Rotası'nda altı seçeneğe sırayla bas; her seçimin içeriği hemen altta açılmalı.
+4. Telefon görünümünde kurs kartları yana kaymamalı; iki sütun görünmeli.
+5. Kelimeler bölümünde ilk seçenek “2000 kartın tümü” olmalı.
+6. Özel aralığa 50 ve 60 yaz; yalnızca #50–#60 görünmeli.
+7. Tüm listeye dön; sayfalama 50 kartlık çalışmalı.
+8. hello, world, learn, through gibi kelimelerin Türkçe-okunur telaffuzunu kontrol et.

@@ -1,7 +1,7 @@
-/* WordPilot v8.1.1 Tester Beta
+/* WordPilot v8.2.0 Tester Beta
    Safer content branch, 2000-item English learning bank, gentler scoring,
    natural voice defaults, improved mastery flow and broader authentication UI. */
-const WP81_VERSION='8.1.1';
+const WP81_VERSION='8.2.0';
 const WP81_SCORE_SCHEMA=3;
 const WP81_PAUSE_DEFAULT=10000;
 const WP81_RATE_DEFAULT=.88;
@@ -31,7 +31,7 @@ function wp81ApplyTurkishFlags(root=document){
 }
 
 function wp81ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v8.1.1 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v8.2.0 · Tester Beta';
   const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 2000 çalışma kartı';
   const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 2000 çalışma kartı + A1–C2 Akademi';
   const ruCard=$('.course-card[data-course="ru"] small');if(ruCard)ruCard.textContent='Türkçe anlatımlı · 1500 kontrollü kayıt + A1–C2 Akademi';
