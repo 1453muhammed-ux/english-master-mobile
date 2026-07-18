@@ -1,0 +1,8 @@
+WORDPILOT V8.2.1 TEST
+
+1. Open Home > Ders > Akademiyi aç.
+2. Verify A1–C2 tabs, lesson cards, mini quiz, level test and graded readings.
+3. Open Home > Hikâye > Hikâyeler.
+4. Verify story list, audio, Turkish translation, questions and word popup.
+5. Test English and Russian separately.
+6. Hard refresh once after deployment or open reset-cache.html if an older service worker remains.

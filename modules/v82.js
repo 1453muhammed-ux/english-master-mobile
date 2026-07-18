@@ -1,6 +1,6 @@
 /* WordPilot v8.2.0 Tester Beta
    Route-panel repair, professional mobile course grid and direct library range navigation. */
-const WP82_VERSION='8.2.0';
+const WP82_VERSION='8.2.1';
 const WP82_PAGE_SIZE=50;
 let wp82LibraryPage=1;
 let wp82LibraryRange={start:null,end:null};
@@ -16,8 +16,8 @@ const WP82_ROUTE_LABELS={
 };
 
 function wp82ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v8.2.0 · Tester Beta';
-  document.documentElement.dataset.wpVersion='8.2.0';
+  const version=$('.version');if(version)version.textContent='v8.2.1 · Tester Beta';
+  document.documentElement.dataset.wpVersion='8.2.1';
   const group=$('#groupFilter');
   if(group){
     const first=group.options[0];
@@ -29,6 +29,8 @@ function wp82ApplyBrand(){
   const microsoft=$('#wp81MicrosoftSignIn');if(microsoft){microsoft.hidden=true;microsoft.disabled=true}
   const authLead=$('#authSignedOut>div small');if(authLead)authLead.textContent='Google ile veya herhangi bir e-posta adresiyle (Hotmail/Outlook dahil) hesap oluşturabilirsin.';
   const cloud=$('#cloudNoteText');if(cloud)cloud.innerHTML='<b>Bulut senkronizasyonu</b><br>Google veya e-posta hesabı bağlandığında ilerleme cihazlar arasında eşitlenir.';
+  const academySmall=document.querySelector('[data-dashboard-tab="academy"] small');if(academySmall)academySmall.textContent='102 ders · A1–C2';
+  const storiesSmall=document.querySelector('[data-dashboard-tab="stories"] small');if(storiesSmall)storiesSmall.textContent='102 hikâye · Reader 2.0';
 }
 
 function wp82RefreshRangeLimits(){

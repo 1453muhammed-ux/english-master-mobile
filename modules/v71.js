@@ -287,7 +287,7 @@ function wp71EnsureAiControls(){
   const head=$('.ai-chat-head');head?.insertAdjacentHTML('afterend',`<div class="wp71-coach-context"><span id="wp71CoachPair">${wp71PairLabel()}</span><div id="wp71ConversationMetrics"><span><b>0</b> cevap</span><span><b>—</b> ortalama</span><span><b>1</b> farklı soru</span></div></div>`);
 }
 
-function wp71IsAuditGated(){return ['en','tr'].includes(activeCourse)}
+function wp71IsAuditGated(){return false}
 function wp71ApplyCommercialGates(){
   const gated=wp71IsAuditGated();
   const core=document.querySelector('[data-collection="core5000"]');if(core){core.querySelector('b').textContent='Clean Core 120';core.querySelector('small').textContent='Özgün ve hash kayıtlı ticari çekirdek'}

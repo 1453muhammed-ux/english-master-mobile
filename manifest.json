@@ -7,7 +7,7 @@
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot 8.1 Tester Beta: 2000 English learning cards, Conversation Coach 3.1, Pilot Points and broader account options.",
+  "description": "WordPilot v8.2.1 — A1–C2 Akademi, Reader 2.0 ve 2000 kartlık çalışma sistemi.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -25,5 +25,6 @@
   "categories": [
     "education",
     "productivity"
-  ]
+  ],
+  "version": "8.2.1"
 }

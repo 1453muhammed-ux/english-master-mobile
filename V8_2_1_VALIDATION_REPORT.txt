@@ -1,0 +1,26 @@
+WORDPILOT V8.2.1 VALIDATION REPORT
+
+Passed: 22/22
+
+PASS | Commercial gate disabled
+PASS | Old gate expression removed
+PASS | Academy view exists
+PASS | Stories view exists
+PASS | Academy launch exists
+PASS | Story launch exists
+PASS | 102 stories present | 102
+PASS | 102 academy lessons present | 102
+PASS | 48 graded readings present | 48
+PASS | English lessons present
+PASS | Russian lessons present
+PASS | All lesson levels covered EN
+PASS | All lesson levels covered RU
+PASS | Manifest enabled academy
+PASS | Manifest enabled reader
+PASS | Cache version updated | 28
+PASS | Visible version updated
+PASS | No legacy Drive link in public code/data
+PASS | No legacy source name in learning content/code
+PASS | All lessons have quiz
+PASS | All stories have questions
+PASS | All stories have lines
