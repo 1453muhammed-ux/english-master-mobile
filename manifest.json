@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 8.0 Tester Beta",
+  "name": "WordPilot 8.1 Tester Beta",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=8.0.0",
+  "start_url": "./?wpbuild=8.1.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot 8.0 Tester Beta: 12-language routing, 1000 connected clean concepts and Conversation Coach 3.0.",
+  "description": "WordPilot 8.1 Tester Beta: 2000 English learning cards, Conversation Coach 3.1, Pilot Points and broader account options.",
   "icons": [
     {
       "src": "icon-192.png",

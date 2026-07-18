@@ -58,8 +58,8 @@ function wp510RenderLeaderboardRows(board,currentKey){
   list.innerHTML=rows.map((x,i)=>{
     const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()),medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'',legacy=wp510LegacyCourseRow(x);
     const accuracy=Number(x.coursePoints?.[activeCourse]?.accuracy??x.accuracy)||0;
-    const detail=isCurrent?`Sen${legacy?' · Eski toplam XP':''}`:`${COURSES[activeCourse].short} ligi · ${legacy?'Eski toplam XP':`%${accuracy} doğruluk`}`;
-    return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''} ${legacy?'legacy-score':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>XP</small></strong></div>`;
+    const detail=isCurrent?`Sen${legacy?' · Eski toplam PP':''}`:`${COURSES[activeCourse].short} ligi · ${legacy?'Eski toplam PP':`%${accuracy} doğruluk`}`;
+    return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''} ${legacy?'legacy-score':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>PP</small></strong></div>`;
   }).join('')||'<p class="muted">Bu dönemde henüz puan kaydı yok.</p>';
 }
 function wp510InstallOverrides(){

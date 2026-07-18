@@ -34,7 +34,7 @@ exports.aiCoach=onCall({region:REGION,secrets:[OPENAI_API_KEY],enforceAppCheck:t
   const tutorQuestions=historyRows.filter(x=>x.role==='Tutor').map(x=>x.text).filter(Boolean).slice(-15);
   const language=languageName(course),supportName=supportLanguageName(support);
   const correctionRule=correctionMode==='fluency'?'Ignore minor mistakes that do not block meaning; mention that they were skipped. Correct only major grammar or word-choice errors.':correctionMode==='teacher'?'Identify the exact grammar, word-choice, repetition, or sentence-completion problem. Explain how the correction changes meaning or naturalness. Never use a generic punctuation explanation when a more important problem exists.':'Correct important mistakes gently and keep the conversation moving.';
-  const instructions=`You are WordPilot Conversation Coach 3.0, a professional ${language} speaking tutor for a ${level} learner. The scenario is "${scenario}". The learner's explanation language is ${supportName}.
+  const instructions=`You are WordPilot Conversation Coach 3.1, a professional ${language} speaking tutor for a ${level} learner. The scenario is "${scenario}". The learner's explanation language is ${supportName}.
 
 Conversation policy:
 - Continue naturally from the learner's latest answer and use facts already shared.

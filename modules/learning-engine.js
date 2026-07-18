@@ -144,7 +144,7 @@ function renderDashboardBase(){
   const acc=st.answers?Math.round(st.correct/st.answers*100):0;
   $('#accuracyText').textContent=st.answers?`%${acc}`:'—';
   $('#answeredTotal').textContent=st.answers||0;
-  $('#xpText').textContent=`${Math.round(st.points||0)} XP`;
+  $('#xpText').textContent=`${Math.round(st.points||0)} PP`;
   let insight='İlk oturumunu başlat; güçlü ve zor kelimelerini analiz edelim.';
   if(c.hard)insight=`${c.hard} zor kelimen var. Akıllı tekrar bunları farklı soru biçimleriyle geri getirecek.`;
   else if(st.answers>10)insight=`Genel başarı oranın %${acc}. Doğru bildiğin kelimeler aynı oturumda tekrar edilmez.`;
@@ -159,7 +159,7 @@ function filteredWords(){
   const q=($('#searchInput')?.value||'').toLocaleLowerCase('tr').trim(),g=$('#groupFilter')?.value||'',l=$('#levelFilter')?.value||'',s=$('#statusFilter')?.value||'';
   return words.filter(w=>{
     const hay=`${w.english} ${w.meaning} ${w.example} ${w.translation}`.toLocaleLowerCase('tr'),st=statusOf(w.id),lv=cefr(w);
-    const groupOk=!g||(g==='core5000'?w.id<=5000:w.group===g),levelOk=!l||(l==='A1-A2'?['A1','A2'].includes(lv):l==='B1-B2'?['B1','B2'].includes(lv):lv===l);
+    const groupOk=!g||(g==='base1000'?w.card_type==='word':g==='context1000'?w.card_type==='context':g==='core5000'?w.id<=1000:w.group===g),levelOk=!l||(l==='A1-A2'?['A1','A2'].includes(lv):l==='B1-B2'?['B1','B2'].includes(lv):lv===l);
     const statusOk=!s||(s==='unset'?!st:s==='wrong'?state.history[w.id]?.needsReview===true:s==='favorite'?flagOf(w.id,'favorite'):s==='veryhard'?flagOf(w.id,'veryHard'):s==='ignored'?flagOf(w.id,'ignored'):s==='notmemorized'?st!=='memorized':st===s);
     return(!q||hay.includes(q))&&groupOk&&levelOk&&statusOk;
   });
@@ -334,7 +334,7 @@ function startQuestionTimer(){
 
 
 function updateStudyScore(){
-  $('#studyScore').textContent=`${Math.round(session?.score||0)} XP`;const combo=$('#studyCombo'),value=Number(session?.combo)||0;if(combo){combo.hidden=value<2;combo.textContent=`🔥 ${value} seri`;}updateAttemptDisplay();
+  $('#studyScore').textContent=`${Math.round(session?.score||0)} PP`;const combo=$('#studyCombo'),value=Number(session?.combo)||0;if(combo){combo.hidden=value<2;combo.textContent=`🔥 ${value} seri`;}updateAttemptDisplay();
 }
 function chooseComprehensiveType(w){
   const options=['smart','en-tr','tr-en','dictation'];
@@ -529,11 +529,11 @@ function answer(correct,timeout=false){
   if(correct){
     session.combo=(session.combo||0)+1;session.maxCombo=Math.max(session.maxCombo||0,session.combo);session.answered=true;recordAnswer(w,true);session.correct++;session.done.add(w.id);applyCorrectTarget(w);
     const scored=responseScore(),gained=scored.points;adjustPoints(gained);revealStudyInfo();$$('.choice').forEach(b=>{b.disabled=true;b.classList.add('locked')});
-    $('#studyFeedback').className='feedback good';$('#studyFeedback').textContent=`Doğru ✓ +${gained} XP · ${scored.elapsed.toFixed(1)} sn${session.combo>=2?` · 🔥 ${session.combo} seri`:''}`;
+    $('#studyFeedback').className='feedback good';$('#studyFeedback').textContent=`Doğru ✓ +${gained} PP · ${scored.elapsed.toFixed(1)} sn${session.combo>=2?` · 🔥 ${session.combo} seri`:''}`;
     $('#nextQuestion').hidden=false;$('#showHint').disabled=true;$('#showAnswer').disabled=true;scheduleAutoAdvance(1500);
   }else{
     session.combo=0;session.currentAttempts=(session.currentAttempts||0)+1;recordAnswer(w,false);adjustPoints(-15);const remaining=Math.max(0,3-session.currentAttempts);
-    if(session.currentAttempts<3){$('#studyFeedback').className='feedback bad';$('#studyFeedback').textContent=timeout?`Süre doldu. -15 XP · ${remaining} hakkın kaldı.`:`Yanlış. -15 XP · ${remaining} hakkın kaldı.`;resetCurrentQuestionForRetry()}
+    if(session.currentAttempts<3){$('#studyFeedback').className='feedback bad';$('#studyFeedback').textContent=timeout?`Süre doldu. -15 PP · ${remaining} hakkın kaldı.`:`Yanlış. -15 PP · ${remaining} hakkın kaldı.`;resetCurrentQuestionForRetry()}
     else{session.answered=true;session.done.add(w.id);session.queue.push({word:w,due:session.index+4});if(session.total<300)session.total++;markFinalCorrectChoice();revealStudyInfo();$('#studyFeedback').className='feedback bad';$('#studyFeedback').textContent=`3 hak bitti. Doğru cevap: ${w.english} — ${firstMeaning(w)}.`;$('#nextQuestion').hidden=false;$('#showHint').disabled=true;$('#showAnswer').disabled=true}
   }
   updateStudyScore();renderDashboard();saveSession();save();
@@ -542,8 +542,8 @@ function finishSession(){
   stopQuestionTimer();clearSavedSession();
   if(session&&!session.completed){session.completed=true;state.stats.sessions=(Number(state.stats.sessions)||0)+1;ensureDayBucket().sessions++;save()}
   const score=session?Math.round(session.correct/Math.max(1,session.index)*100):0;$('#studyBadge').textContent='OTURUM TAMAMLANDI';$('#studyQuestion').textContent=`%${score} başarı`;
-  $('#studyPron').textContent=`${session.correct} doğru · ${session.index-session.correct} yanlış · ${Math.round(session.score||0)} XP · en iyi seri ${session.maxCombo||0}`;
-  $('#studyContent').innerHTML=`<div class="flash-card-inner"><h3>Uçuş tamamlandı ✈</h3><p class="muted">XP’in ve ilerlemen kaydedildi. Yanlışların tekrar listene eklendi.</p><button class="primary wide" data-nav="dashboard">Ana sayfaya dön</button></div>`;
+  $('#studyPron').textContent=`${session.correct} doğru · ${session.index-session.correct} yanlış · ${Math.round(session.score||0)} PP · en iyi seri ${session.maxCombo||0}`;
+  $('#studyContent').innerHTML=`<div class="flash-card-inner"><h3>Uçuş tamamlandı ✈</h3><p class="muted">PP’in ve ilerlemen kaydedildi. Yanlışların tekrar listene eklendi.</p><button class="primary wide" data-nav="dashboard">Ana sayfaya dön</button></div>`;
   $('#studyFeedback').textContent='';$('#studyWordInfo').hidden=true;$('#nextQuestion').hidden=true;$('#studySpeak').hidden=true;$('#studyActionBar').hidden=true;$('#studyToggleBar').hidden=true;$('#speedBar').hidden=true;if($('#studyCombo'))$('#studyCombo').hidden=true;renderAll();
 }
 function renderMatchingRound(){
@@ -597,7 +597,7 @@ function selectMatchTile(btn){
   }else{
     left.classList.add('mismatch');right.classList.add('mismatch');
     const wrongWord=words.find(w=>w.id===Number(left.dataset.matchId));
-    session.combo=0;if(wrongWord){recordAnswer(wrongWord,false);adjustPoints(-10);updateStudyScore()}
+    session.combo=0;if(wrongWord){recordAnswer(wrongWord,false);adjustPoints(-2);updateStudyScore()}
     setTimeout(()=>{
       left.classList.remove('selected','mismatch');right.classList.remove('selected','mismatch');
       session.matchSelectedLeft=null;session.matchSelectedRight=null;
@@ -613,7 +613,7 @@ function showHintForCurrent(){
   let box=$('#studyContent').querySelector('.hint-box');
   if(!box){box=document.createElement('div');box.className='hint-box';$('#studyContent').appendChild(box)}
   box.textContent=`İpucu: ${revealPattern(target,session.hintRevealCount)}`;
-  adjustPoints(-5);updateStudyScore();saveSession();
+  adjustPoints(-1);updateStudyScore();saveSession();
 }
 
 

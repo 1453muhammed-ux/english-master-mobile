@@ -1,10 +1,10 @@
 /* WordPilot v7.0.0 — premium command center and expanded RU/UZ content. */
 const WP70_VERSION='7.1.2';
-const WP70_COUNTS={en:5488,ru:1300,uz:500};
+const WP70_COUNTS={en:2000,ru:1300,uz:500};
 function wp70CourseText(course){
   if(course==='ru')return 'Русский · 1300 kayıt + A1–C2 Akademi';
   if(course==='uz')return 'O‘zbekcha · 500 A1–A2 kayıt · Akademi yakında';
-  return 'English · 5488 kayıt + A1–C2 Akademi';
+  return 'English · 2000 çalışma kartı + A1–C2 Akademi';
 }
 function wp70RefreshCounts(){
   if(window.COURSES){

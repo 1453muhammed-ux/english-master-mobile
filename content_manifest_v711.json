@@ -1,12 +1,12 @@
 {
-  "version": "7.1.2-alpha",
+  "version": "8.1.0-tester-beta",
   "branch": "commercial-clean",
   "legacy_branch": "v7.0.0-private-archive",
   "clean_concept_count": 1000,
   "active_language_count": 12,
   "learning_directions": 132,
   "rich_course_counts": {
-    "en": 1000,
+    "en": 2000,
     "ru": 1500,
     "uz": 1000,
     "es": 1000
@@ -30,5 +30,13 @@
     "editorial_review_required": true,
     "internal_metadata_hidden_from_learner_ui": true
   },
-  "generated_at": "2026-07-17"
+  "generated_at": "2026-07-18",
+  "english_learning_bank": {
+    "word_cards": 1000,
+    "context_cards": 1000,
+    "total": 2000,
+    "pronunciation_coverage": 2000,
+    "relation_fields_coverage": 2000
+  },
+  "notes": "The 2000-item English learning bank contains 1000 reviewed lexical cards and 1000 original context-pattern cards. No DiziÖğren PDF link or copied sentence bank is included."
 }

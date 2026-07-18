@@ -7,7 +7,7 @@ function cloudErrorMessage(error,area='Senkronizasyon'){
   const code=String(error?.code||'').replace(/^firestore\//,'');
   const raw=String(error?.message||'').replace(/^FirebaseError:\s*/i,'');
   if(code==='permission-denied')return `${area}: Firebase erişim izni reddedildi.`;
-  if(code==='unauthenticated')return `${area}: Google oturumu yenilenmeli.`;
+  if(code==='unauthenticated')return `${area}: Hesap oturumu yenilenmeli.`;
   if(code==='unavailable'||/network|failed to fetch|load failed/i.test(raw))return `${area}: internet bağlantısı bekleniyor.`;
   if(code==='resource-exhausted')return `${area}: Firebase kotası doldu.`;
   if(code==='invalid-argument'||/unsupported field value|undefined/i.test(raw))return `${area}: kaydedilen veride geçersiz alan var.`;
@@ -26,9 +26,9 @@ function updateAuthUI(){
   if($('#profileEmail'))$('#profileEmail').value=signed?(authUser?.email||''):(profile?.email==='guest@local'?'':profile?.email||'');
   if($('#guestBanner'))$('#guestBanner').hidden=signed;
   if($('#cloudNoteText'))$('#cloudNoteText').innerHTML=signed
-    ?'<b>Google senkronizasyonu açık</b><br>İlerleme ve XP değerleri bu hesapla cihazlar arasında eşitlenir.'
-    :'<b>Misafir modu</b><br>İlerleme Google hesabına kaydolmaz; yalnızca bu cihazda tutulur.';
-  if(!signed)setSyncStatus(window.firebase?'Google ile giriş bekleniyor':'Çevrimdışı kullanım açık','idle');
+    ?'<b>Bulut senkronizasyonu açık</b><br>İlerleme ve PP değerleri bu hesapla cihazlar arasında eşitlenir.'
+    :'<b>Misafir modu</b><br>İlerleme yalnızca bu cihazda tutulur. Cihazlar arası kullanım için bir hesap bağla.';
+  if(!signed)setSyncStatus(window.firebase?'Hesap bağlantısı bekleniyor':'Çevrimdışı kullanım açık','idle');
 }
 function scheduleCloudSync(delay=180){
   if(!authUser||!fbDb||!cloudReady)return;
@@ -46,7 +46,7 @@ function leaderboardCloudPayload(){
 }
 function scheduleLeaderboardWrite(delay=80){
   if(!authUser||!fbDb||!cloudReady)return;
-  clearTimeout(leaderboardWriteTimer);setLeagueSyncStatus('XP eşitleniyor…','syncing');
+  clearTimeout(leaderboardWriteTimer);setLeagueSyncStatus('PP eşitleniyor…','syncing');
   leaderboardWriteTimer=setTimeout(pushLeaderboardNow,delay);
 }
 async function pushLeaderboardNow(){
@@ -58,7 +58,7 @@ async function pushLeaderboardNow(){
     await fbDb.collection('leaderboard').doc(authUser.uid).set(payload,{merge:true});
     updateLeaderboardCacheWithOwn();
     if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(mergeOwnLeaderboardRow(cloudLeaderboardCache[`${leaderboardAudience}:${leaderboardPeriod}`]||[]),authUser.uid);
-    setLeagueSyncStatus('XP güncel ✓','ok');
+    setLeagueSyncStatus('PP güncel ✓','ok');
   }catch(error){console.error('Leaderboard write error',error);setLeagueSyncStatus(cloudErrorMessage(error,'Lig'),'error')}
   finally{leaderboardWriteBusy=false;if(leaderboardWriteQueued){leaderboardWriteQueued=false;scheduleLeaderboardWrite(120)}}
 }
@@ -82,7 +82,7 @@ async function syncCloudNow(){
       fbDb.collection('leaderboard').doc(authUser.uid).set(leaderboardPayload,{merge:true})
     ]);
     setSyncStatus('Senkronize edildi ✓','ok');
-    setLeagueSyncStatus('XP güncel ✓','ok');
+    setLeagueSyncStatus('PP güncel ✓','ok');
     updateLeaderboardCacheWithOwn();
     if($('#view-league')?.classList.contains('active'))renderLeaderboard();
   }catch(error){console.error('Cloud sync error',error);setSyncStatus(cloudErrorMessage(error),'error')}
@@ -99,8 +99,8 @@ async function handleAuthState(user){
   state=mergeStates(remoteStateFromDocument(remoteData),accountCandidate||defaultState());
   const migrationKey=`${STORE}:guest_migrated:${user.uid}`;
   if(hasProgress(guestCandidate)&&!localStorage.getItem(migrationKey)){
-    const transfer=confirm('Bu cihazdaki misafir ilerlemesini Google hesabına aktarmak ister misin?');
-    if(transfer){state=mergeStates(state,guestCandidate);toast('Misafir ilerlemesi Google hesabına aktarıldı.')} 
+    const transfer=confirm('Bu cihazdaki misafir ilerlemesini bağlı hesabına aktarmak ister misin?');
+    if(transfer){state=mergeStates(state,guestCandidate);toast('Misafir ilerlemesi bağlı hesaba aktarıldı.')} 
     localStorage.setItem(migrationKey,transfer?'1':'0');
   }
   const remoteProfile=remoteData?.profile||{};
@@ -268,7 +268,7 @@ function setFriendCode(code,value=true){
 }
 function renderFriendPanel(rows=[]){
   const panel=$('#friendPanel');if(panel)panel.hidden=leaderboardAudience!=='friends';
-  const code=ownFriendCode();if($('#myFriendCode'))$('#myFriendCode').textContent=code||'Google girişi gerekli';
+  const code=ownFriendCode();if($('#myFriendCode'))$('#myFriendCode').textContent=code||'Hesap girişi gerekli';
   if($('#copyFriendCode'))$('#copyFriendCode').disabled=!code;
   const names=new Map((rows||[]).map(row=>[row.friendCode,row.name||row.friendCode]));
   const list=$('#friendCodeList');if(list)list.innerHTML=friendCodes().map(friend=>`<span><b>${esc(names.get(friend)||friend)}</b><small>${esc(friend)}</small><button type="button" data-remove-friend="${esc(friend)}" title="Arkadaşı kaldır">×</button></span>`).join('')||'<p class="muted">Henüz arkadaş kodu eklenmedi.</p>';
@@ -289,13 +289,13 @@ function stopLeaderboardRealtime(){
 }
 function legacyLeagueField(period=leaderboardPeriod){return period==='daily'?'dailyPoints':period==='weekly'?'weeklyPoints':period==='monthly'?'monthlyPoints':'points'}
 function leagueField(period=leaderboardPeriod){return legacyLeagueField(period)}
-function leagueLabel(period=leaderboardPeriod){return period==='daily'?'Bugünkü XP’ye göre':period==='weekly'?'Bu haftaki XP’ye göre':period==='monthly'?'Bu ayki XP’ye göre':'Toplam XP’ye göre'}
+function leagueLabel(period=leaderboardPeriod){return period==='daily'?'Bugünkü PP’ye göre':period==='weekly'?'Bu haftaki PP’ye göre':period==='monthly'?'Bu ayki PP’ye göre':'Toplam PP’ye göre'}
 function leagueScore(row,period=leaderboardPeriod){return Math.max(0,Math.round(Number(row?.[leagueField(period)])||0))}
 function renderLeagueSummary(board,currentKey){
   const rows=board||[],index=rows.findIndex(x=>(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase())),current=index>=0?rows[index]:null;
   const own=current?leagueScore(current):Math.round(periodTotals(leaderboardPeriod).points||0);
   if($('#leagueUserPoints'))$('#leagueUserPoints').textContent=own;if($('#leagueUserRank'))$('#leagueUserRank').textContent=index>=0?`#${index+1}`:'—';if($('#leagueUserCount'))$('#leagueUserCount').textContent=rows.length;
-  if($('#leagueLoginNote')){$('#leagueLoginNote').hidden=!!authUser;$('#leagueLoginNote').textContent=leaderboardAudience==='friends'?'Arkadaş ligi ve arkadaş kodu için Google hesabınla giriş yap.':'Ortak ligde görünmek için Google hesabınla giriş yap. Misafir XP’i yalnızca bu cihazda kalır.'}
+  if($('#leagueLoginNote')){$('#leagueLoginNote').hidden=!!authUser;$('#leagueLoginNote').textContent=leaderboardAudience==='friends'?'Arkadaş ligi ve arkadaş kodu için Google hesabınla giriş yap.':'Ortak ligde görünmek için Google hesabınla giriş yap. Misafir PP’i yalnızca bu cihazda kalır.'}
   if($('#leaguePeriodText'))$('#leaguePeriodText').textContent=`${leagueLabel()} sıralama`;
   $$('[data-league-period]').forEach(btn=>btn.classList.toggle('active',btn.dataset.leaguePeriod===leaderboardPeriod));$$('[data-league-audience]').forEach(btn=>btn.classList.toggle('active',btn.dataset.leagueAudience===leaderboardAudience));renderFriendPanel(rows);
 }
@@ -304,7 +304,7 @@ function leaderAvatar(x){
 }
 function renderLeaderboardRows(board,currentKey){
   const list=$('#leaderboardList');if(!list)return;const rows=(board||[]).slice().sort((a,b)=>leagueScore(b)-leagueScore(a)||String(a.name||'').localeCompare(String(b.name||''),'tr')).slice(0,100);renderLeagueSummary(rows,currentKey);
-  list.innerHTML=rows.map((x,i)=>{const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()),medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'',detail=isCurrent?'Sen':`${COURSES[activeCourse].short} ligi · %${Number(x.coursePoints?.[activeCourse]?.accuracy??x.accuracy)||0} doğruluk`;return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>XP</small></strong></div>`}).join('')||'<p class="muted">Bu dönemde henüz puan kaydı yok.</p>';
+  list.innerHTML=rows.map((x,i)=>{const isCurrent=(x.uid&&x.uid===currentKey)||(!x.uid&&String(x.email||'').toLowerCase()===String(currentKey||'').toLowerCase()),medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'',detail=isCurrent?'Sen':`${COURSES[activeCourse].short} ligi · %${Number(x.coursePoints?.[activeCourse]?.accuracy??x.accuracy)||0} doğruluk`;return `<div class="leaderboard-row ${isCurrent?'current':''} ${i<3?'top-rank':''}"><span class="rank">${medal||i+1}</span>${leaderAvatar(x)}<div><b>${esc(x.name||'Öğrenci')}</b><small>${esc(detail)}</small></div><strong>${leagueScore(x)}<small>PP</small></strong></div>`}).join('')||'<p class="muted">Bu dönemde henüz puan kaydı yok.</p>';
 }
 async function refreshCloudLeaderboard(force=false){
   if(!authUser||!fbDb)return;const cacheKey=`${activeCourse}:${leaderboardAudience}:${leaderboardPeriod}`;
@@ -315,7 +315,7 @@ async function refreshCloudLeaderboard(force=false){
     leaderboardUnsubscribe=query.onSnapshot({includeMetadataChanges:true},snap=>{
       const rows=mergeOwnLeaderboardRow(snap.docs.map(doc=>({uid:doc.id,...doc.data()})));
       cloudLeaderboardCache[cacheKey]=rows;
-      setLeagueSyncStatus(snap.metadata.hasPendingWrites?'XP eşitleniyor…':snap.metadata.fromCache?'Çevrimdışı liste':'Canlı güncel ✓',snap.metadata.hasPendingWrites?'syncing':snap.metadata.fromCache?'idle':'ok');
+      setLeagueSyncStatus(snap.metadata.hasPendingWrites?'PP eşitleniyor…':snap.metadata.fromCache?'Çevrimdışı liste':'Canlı güncel ✓',snap.metadata.hasPendingWrites?'syncing':snap.metadata.fromCache?'idle':'ok');
       if($('#view-league')?.classList.contains('active'))renderLeaderboardRows(rows,authUser.uid);
     },error=>{console.error('Leaderboard realtime error',error);setLeagueSyncStatus('Lig bağlantısı kurulamadı','error');if($('#leaderboardList'))$('#leaderboardList').innerHTML='<p class="muted">Sıralama şu an yüklenemedi.</p>'});
     return;
@@ -333,6 +333,6 @@ async function refreshCloudLeaderboard(force=false){
 
 function renderLeaderboard(){
   const scope=$('#leaderboardScope'),cacheKey=`${activeCourse}:${leaderboardAudience}:${leaderboardPeriod}`;
-  if(authUser&&fbDb){if(scope)scope.textContent=leaderboardAudience==='friends'?'Arkadaşların':'Tüm Google kullanıcıları';const cached=mergeOwnLeaderboardRow(cloudLeaderboardCache[cacheKey]||[]);if(cached.length)renderLeaderboardRows(cached,authUser.uid);else if($('#leaderboardList')){$('#leaderboardList').innerHTML='<p class="muted">XP listesi yükleniyor…</p>';renderLeagueSummary([currentLeaderboardRow()].filter(Boolean),authUser.uid)}refreshCloudLeaderboard();return}
-  if(scope)scope.textContent=leaderboardAudience==='friends'?'Google girişi gerekli':'Bu cihazdaki profiller';let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}updateLeaderboardEntry();try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}if(leaderboardAudience==='friends')board=[];renderLeaderboardRows(board,(profile?.email||'guest@local').toLowerCase());
+  if(authUser&&fbDb){if(scope)scope.textContent=leaderboardAudience==='friends'?'Arkadaşların':'Tüm Google kullanıcıları';const cached=mergeOwnLeaderboardRow(cloudLeaderboardCache[cacheKey]||[]);if(cached.length)renderLeaderboardRows(cached,authUser.uid);else if($('#leaderboardList')){$('#leaderboardList').innerHTML='<p class="muted">PP listesi yükleniyor…</p>';renderLeagueSummary([currentLeaderboardRow()].filter(Boolean),authUser.uid)}refreshCloudLeaderboard();return}
+  if(scope)scope.textContent=leaderboardAudience==='friends'?'Hesap girişi gerekli':'Bu cihazdaki profiller';let board=[];try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}updateLeaderboardEntry();try{board=JSON.parse(localStorage.getItem(LEADERBOARD_KEY))||[]}catch{}if(leaderboardAudience==='friends')board=[];renderLeaderboardRows(board,(profile?.email||'guest@local').toLowerCase());
 }

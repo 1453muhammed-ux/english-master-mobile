@@ -46,7 +46,7 @@ function renderGrammarQuestion(){
   const box=$('#grammarQuizBox'),module=activeGrammarLesson;if(!box||!module)return;
   if(grammarQuestionIndex>=module.quiz.length){
     const old=grammarProgress(module.id),score=Math.round(grammarCorrect/module.quiz.length*100),first=!old?.completed;
-    setRuPathProgress(`g_${module.id}`,{completed:true,score});if(first){const active=session;session=null;adjustPoints(30);session=active;toast('Dil bilgisi modülü tamamlandı: +30 XP')}
+    setRuPathProgress(`g_${module.id}`,{completed:true,score});if(first){const active=session;session=null;adjustPoints(30);session=active;toast('Dil bilgisi modülü tamamlandı: +30 PP')}
     box.innerHTML=`<div class="lesson-complete"><span>✓</span><h3>Modül tamamlandı</h3><p>${module.quiz.length} soruda ${grammarCorrect} doğru · %${score}</p><button type="button" class="primary" data-next-grammar="${module.order+1}">Sonraki modül →</button></div>`;renderGrammarModules();return;
   }
   const q=module.quiz[grammarQuestionIndex];box.innerHTML=`<div class="grammar-quiz-head"><span>SORU ${grammarQuestionIndex+1} / ${module.quiz.length}</span><b>${esc(q.q)}</b></div><div class="grammar-options">${q.options.map((opt,i)=>`<button type="button" data-grammar-answer="${i}">${esc(opt)}</button>`).join('')}</div><p id="grammarQuizFeedback" class="academy-game-feedback"></p>`;
@@ -59,14 +59,14 @@ function answerGrammar(index){
 }
 function showDialogue(id){
   const item=russianDialogues.find(x=>x.id===id);if(!item)return;const panel=$('#pathLessonPanel');panel.hidden=false;
-  panel.innerHTML=`<div class="lesson-head"><div><p class="eyebrow">DİYALOG ${item.order} · ${esc(item.level)}</p><h2>${esc(item.title)}</h2><p>${esc(item.topic)}</p></div><button type="button" class="soft" data-close-path-panel>Kapat</button></div><div class="dialogue-lines">${item.lines.map((line,i)=>`<article><span>${esc(line.speaker)}</span><button type="button" data-path-speak="${esc(line.ru)}" title="Dinle">🔊</button><div><b>${esc(line.stress||line.ru)}</b><small>${esc(line.reading)}</small><p>${esc(line.tr)}</p></div></article>`).join('')}</div><div class="dialogue-actions"><button type="button" class="secondary" data-play-dialogue="${esc(item.id)}">▶ Diyaloğun tamamını dinle</button><button type="button" class="primary" data-complete-dialogue="${esc(item.id)}">${dialogueProgress(item.id)?.completed?'✓ Tamamlandı':'Diyaloğu tamamladım · +20 XP'}</button></div>`;
+  panel.innerHTML=`<div class="lesson-head"><div><p class="eyebrow">DİYALOG ${item.order} · ${esc(item.level)}</p><h2>${esc(item.title)}</h2><p>${esc(item.topic)}</p></div><button type="button" class="soft" data-close-path-panel>Kapat</button></div><div class="dialogue-lines">${item.lines.map((line,i)=>`<article><span>${esc(line.speaker)}</span><button type="button" data-path-speak="${esc(line.ru)}" title="Dinle">🔊</button><div><b>${esc(line.stress||line.ru)}</b><small>${esc(line.reading)}</small><p>${esc(line.tr)}</p></div></article>`).join('')}</div><div class="dialogue-actions"><button type="button" class="secondary" data-play-dialogue="${esc(item.id)}">▶ Diyaloğun tamamını dinle</button><button type="button" class="primary" data-complete-dialogue="${esc(item.id)}">${dialogueProgress(item.id)?.completed?'✓ Tamamlandı':'Diyaloğu tamamladım · +20 PP'}</button></div>`;
   panel.scrollIntoView({behavior:'smooth',block:'start'});
 }
 async function playDialogue(id){
   const item=russianDialogues.find(x=>x.id===id);if(!item)return;for(const line of item.lines){speak(line.ru,'ru-RU');await new Promise(r=>setTimeout(r,Math.max(1400,line.ru.length*70)))}
 }
 function completeDialogue(id){
-  const old=dialogueProgress(id);if(!old?.completed){setRuPathProgress(`d_${id}`,{completed:true});const active=session;session=null;adjustPoints(20);session=active;toast('Diyalog tamamlandı: +20 XP')}
+  const old=dialogueProgress(id);if(!old?.completed){setRuPathProgress(`d_${id}`,{completed:true});const active=session;session=null;adjustPoints(20);session=active;toast('Diyalog tamamlandı: +20 PP')}
   renderDialogueCards();showDialogue(id);
 }
 

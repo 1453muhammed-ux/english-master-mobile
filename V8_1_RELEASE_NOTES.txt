@@ -1,0 +1,39 @@
+WORDPILOT V8.1.0 — TESTER BETA
+18 Temmuz 2026
+
+İÇERİK
+- English öğrenme bankası 2000 çalışma kartına çıkarıldı: 1000 kelime + 1000 özgün bağlam kartı.
+- 2000 kaydın tamamına telaffuz alanı eklendi.
+- 1000 ana kelimenin eş ve zıt anlam alanları dolduruldu; doğrudan ilişki yoksa bu açıkça belirtildi.
+- 194 ana kelimede çalışan eş anlam bağlantısı, 131 ana kelimede çalışan zıt anlam bağlantısı vardır.
+- DiziÖğren kaynaklı olabilecek Google Drive PDF bağlantıları kaldırıldı.
+
+ÖĞRENME
+- Ezberlenen kayıtlar normal quiz havuzundan çıkarılmaya devam eder.
+- Test sonunda doğru kelimeleri topluca “Ezberledim” listesine taşıma seçeneği eklendi.
+- Zor ve işaretsiz kelimeler çalışma sırasında önceliklendirilir.
+- SM-2 teknik adı kullanıcı arayüzünde “Kişisel Tekrar Planı” olarak sadeleştirildi.
+- Oyunlar ana ekranda sürekli görünen hızlı başlatma alanına taşındı.
+
+PUANLAMA
+- Eski yüksek XP değerleri tek seferlik 1/10 ölçeğine dönüştürülür.
+- Yeni puanlar daha küçük Pilot Puanı (PP) değerleriyle verilir.
+- Yanlış, ipucu ve cevap gösterme kesintileri daha ölçülü hale getirildi.
+
+CONVERSATION COACH 3.1
+- Kadın sesleri önceleyen daha doğal TTS seçimi eklendi.
+- Önerilen konuşma hızı 0.88'e çıkarıldı.
+- Sessizlik/düşünme payı 10 saniyeye çıkarıldı; 6, 10, 15 ve 20 saniye seçenekleri eklendi.
+- Puanlama tabanı yükseltildi ve küçük hatalar arasındaki puan farkı azaltıldı.
+- “Mira” robot konuşma maskotu eklendi.
+
+HESAP
+- Google girişine ek olarak e-posta/şifre kayıt ve giriş arayüzü eklendi.
+- Microsoft/Hotmail giriş düğmesi eklendi.
+- E-postasız misafir kullanım seçeneği korunur; veriler yalnızca cihazda kalır.
+- Şifre yenileme ve hesap/bulut verisi silme kontrolleri eklendi.
+- Bu sağlayıcıların Firebase Console'da ayrıca etkinleştirilmesi gerekir.
+
+HUKUK VE GÜVENLİK
+- legal.html içinde Gizlilik Politikası, Kullanım Koşulları, Telif Politikası ve Veri Silme açıklaması eklendi.
+- Türk bayrağı platforma bağlı emoji yerine tutarlı SVG ile gösterilir.

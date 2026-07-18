@@ -1,7 +1,7 @@
 /* WordPilot v7.0.0 — Reader 2.0: graded library, tap dictionary, sentence translation, guided TTS and story-word SM-2. */
 const WP64_VERSION='7.0.0';
 const WP64_LEVELS=['A1','A2','B1','B2','C1','C2'];
-const WP64_LEVEL_XP={A1:30,A2:40,B1:55,B2:70,C1:90,C2:110};
+const WP64_LEVEL_PP={A1:30,A2:40,B1:55,B2:70,C1:90,C2:110};
 const wp64Ui={level:'all',genre:'all',query:'',showAllTranslations:false,activeLine:-1,speaking:false,paused:false,observer:null,dictMap:null,dictCourse:'',wordContext:null};
 
 function wp64Ensure(){
@@ -138,7 +138,7 @@ function v5CheckStory(){
   if(!v5Story)return;let correct=0;v5Story.questions.forEach((q,i)=>{if(Number(v5StoryAnswers[i])===Number(q.answer))correct++});const total=v5Story.questions.length,ratio=total?correct/total:0,ok=ratio>=.8,already=!!v5Ensure().stories?.[v5Story.id]?.completed;
   document.querySelectorAll('[data-story-answer]').forEach(btn=>{const [q,o]=btn.dataset.storyAnswer.split(':').map(Number),selected=Number(v5StoryAnswers[q])===o,answer=Number(v5Story.questions[q].answer)===o;btn.classList.toggle('correct-answer',answer);btn.classList.toggle('wrong-answer',selected&&!answer);btn.disabled=true});
   $('#storyFeedback').textContent=`${correct} / ${total} doğru · %${Math.round(ratio*100)}${ok?' · Hikâye tamamlandı!':' · %80 için tekrar deneyebilirsin.'}`;
-  if(ok){v5Ensure().stories[v5Story.id]={completed:true,score:correct,total,at:new Date().toISOString()};const p=wp64StoryState(v5Story.id);p.percent=100;p.lastLine=Math.max(0,v5Story.lines.length-1);p.completedAt=new Date().toISOString();if(!already)adjustPoints(WP64_LEVEL_XP[v5Story.level]||40);v5Save();setTimeout(()=>renderStoryLibrary(),500)}
+  if(ok){v5Ensure().stories[v5Story.id]={completed:true,score:correct,total,at:new Date().toISOString()};const p=wp64StoryState(v5Story.id);p.percent=100;p.lastLine=Math.max(0,v5Story.lines.length-1);p.completedAt=new Date().toISOString();if(!already)adjustPoints(WP64_LEVEL_PP[v5Story.level]||40);v5Save();setTimeout(()=>renderStoryLibrary(),500)}
 }
 function wp64ContextTranslation(lineIndex){return v5Story?.lines?.[Number(lineIndex)]?.translation||''}
 function wp64ShowWordPopup(btn){

@@ -3,7 +3,7 @@
 const V43_BADGE_LEDGER='wp43_badges';
 let academySpellingPoolCache=[];
 
-COURSES.en.actualCount=5488;
+COURSES.en.actualCount=2000;
 COURSES.ru.actualCount=1300;
 COURSES.uz.actualCount=500;
 
@@ -138,7 +138,7 @@ async function startAcademySpelling(){
 }
 function checkAcademySpelling(){
   if(academyGame?.type!=='spelling')return;const built=academyGame.order.map(i=>academyGame.letters[i]).join(''),correct=normalizeAnswer(built)===normalizeAnswer(academyGame.target.word),feedback=$('#academyGameFeedback');recordAcademyAnswer(correct);
-  if(correct){feedback.className='academy-game-feedback good';feedback.textContent=`Doğru: ${academyGame.target.stress} · +8 XP`;document.querySelectorAll('#academySpellingForm button').forEach(x=>x.disabled=true);setTimeout(startAcademySpelling,900)}
+  if(correct){feedback.className='academy-game-feedback good';feedback.textContent=`Doğru: ${academyGame.target.stress} · +8 PP`;document.querySelectorAll('#academySpellingForm button').forEach(x=>x.disabled=true);setTimeout(startAcademySpelling,900)}
   else{feedback.className='academy-game-feedback bad';feedback.textContent=`Henüz doğru değil. ${academyGame.target.word.length} harfin tamamını sırala.`;academyGame.order=[];renderAcademySpellingBoard()}
 }
 

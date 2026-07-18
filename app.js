@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='8.0.0';
+const VERSION='8.1.0';
 const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
@@ -23,7 +23,6 @@ const FIREBASE_CONFIG={
   appId:'1:1024648950699:web:c7d394327b153ccfe358ee',
   measurementId:'G-QER57NNSES'
 };
-const DRIVE_FOLDER_URL='https://drive.google.com/drive/folders/1MkPkzyqxC_eciWam9PsinZjZRqe67XY8?usp=sharing';
 
 const COURSES={
   en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'clean_concepts_v711.json',voice:'en-US',voiceAlt:'en-GB',displayCount:1000,countLabel:'1000 bağlantılı ticari temiz kavram',targetLabel:'İNGİLİZCE',starter:true},

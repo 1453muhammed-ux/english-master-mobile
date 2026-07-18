@@ -17,7 +17,7 @@ function openProfileBase(){
 }
 function openCollectionBase(type){
   if(type==='daily20'){openStudySetup('smart','daily20');return}nav('library');$('#searchInput').value='';$('#groupFilter').value='';$('#levelFilter').value='';$('#statusFilter').value='';
-  if(type==='core5000')$('#groupFilter').value='core5000';if(type==='phrases')$('#groupFilter').value='5001-6000 Kalıplar';if(type==='beginner')$('#levelFilter').value='A1-A2';if(type==='intermediate')$('#levelFilter').value='B1-B2';
+  if(type==='core5000')$('#groupFilter').value='base1000';if(type==='phrases')$('#groupFilter').value='context1000';if(type==='beginner')$('#levelFilter').value='A1-A2';if(type==='intermediate')$('#levelFilter').value='B1-B2';
   if(type==='hard')$('#statusFilter').value='hard';if(type==='wrong')$('#statusFilter').value='wrong';if(type==='memorized')$('#statusFilter').value='memorized';if(type==='favorite')$('#statusFilter').value='favorite';if(type==='veryhard')$('#statusFilter').value='veryhard';if(type==='notmemorized')$('#statusFilter').value='notmemorized';renderWords(true);
 }
 function isStandalone(){return window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true}
@@ -69,7 +69,7 @@ function setupEvents(){
     const leagueTab=e.target.closest('[data-league-period]');if(leagueTab){leaderboardPeriod=leagueTab.dataset.leaguePeriod;renderLeaderboard();return}
     const leagueAudienceBtn=e.target.closest('[data-league-audience]');if(leagueAudienceBtn){leaderboardAudience=leagueAudienceBtn.dataset.leagueAudience;renderLeaderboard();return}
     const removeFriend=e.target.closest('[data-remove-friend]');if(removeFriend){setFriendCode(removeFriend.dataset.removeFriend,false);return}
-    if(e.target.closest('#copyFriendCode')){const code=ownFriendCode();if(!code){toast('Önce Google hesabıyla giriş yap.');return}navigator.clipboard?.writeText(code).then(()=>toast('Arkadaş kodu kopyalandı.')).catch(()=>toast(`Arkadaş kodun: ${code}`));return}
+    if(e.target.closest('#copyFriendCode')){const code=ownFriendCode();if(!code){toast('Önce bir hesapla giriş yap.');return}navigator.clipboard?.writeText(code).then(()=>toast('Arkadaş kodu kopyalandı.')).catch(()=>toast(`Arkadaş kodun: ${code}`));return}
     const matchTile=e.target.closest('[data-match-side]');if(matchTile){selectMatchTile(matchTile);return}
     const answerBtn=e.target.closest('[data-answer-id]');
     if(answerBtn){
@@ -146,7 +146,7 @@ function setupEvents(){
   window.addEventListener('online',()=>{if(authUser){syncCloudNow();pushLeaderboardNow();refreshCloudLeaderboard(true)}});
   document.addEventListener('submit',e=>{
     if(e.target.id==='friendAddForm'){
-      e.preventDefault();if(!authUser){toast('Arkadaş eklemek için Google hesabıyla giriş yap.');return}const input=$('#friendCodeInput');if(setFriendCode(input.value,true))input.value='';return;
+      e.preventDefault();if(!authUser){toast('Arkadaş eklemek için bir hesapla giriş yap.');return}const input=$('#friendCodeInput');if(setFriendCode(input.value,true))input.value='';return;
     }
     if(e.target.id==='writeForm'){
       e.preventDefault();

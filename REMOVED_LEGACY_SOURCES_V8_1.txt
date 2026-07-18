@@ -1,0 +1,7 @@
+WORDPILOT V8.1 — ESKİ KAYNAK TEMİZLİĞİ
+Tarih: 18 Temmuz 2026
+
+- DiziÖğren kaynaklı olabilecek çalışma PDF'lerine yönlendiren Google Drive bağlantıları index.html ve app.js içinden kaldırıldı.
+- Paket içinde bu Drive klasöründen alınmış PDF bulunmamaktadır.
+- Ticari/yayınlanabilir dalda dış platformlardan kopyalanmış tanım, örnek cümle, çeviri, eş/zıt anlam, quiz seçeneği veya sıralama verisi kullanılamaz.
+- V8.1 English bankası: 1000 incelenmiş kelime kartı + mevcut temiz kayıtlardan WordPilot tarafından oluşturulmuş 1000 özgün bağlam kartı.

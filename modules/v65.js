@@ -23,7 +23,7 @@ function wp65PolishHub(){
 }
 function wp65UpdateHubSummary(){
   const active=document.querySelector('.learning-hub-tabs [data-dashboard-tab].active'),summary=$('#wp65HubSummary');if(!active||!summary)return;
-  const info={academy:'Yapılandırılmış derslerle seviyeni adım adım ilerlet.',games:'Kelime, dinleme, yazma ve cümle oyunlarından birini seç.',speak:'Telaffuzunu ölç veya sesli konuşma partneriyle pratik yap.',stories:'Seviyene uygun metinleri dinle, kelimelere dokun ve testini çöz.',progress:'Kurs XP, doğruluk, tekrar ve lig durumunu tek yerde incele.',collections:'Kiril, fiil, kelime atlası ve yardımcı araçlara ulaş.'};
+  const info={academy:'Yapılandırılmış derslerle seviyeni adım adım ilerlet.',games:'Kelime, dinleme, yazma ve cümle oyunlarından birini seç.',speak:'Telaffuzunu ölç veya sesli konuşma partneriyle pratik yap.',stories:'Seviyene uygun metinleri dinle, kelimelere dokun ve testini çöz.',progress:'Kurs PP, doğruluk, tekrar ve lig durumunu tek yerde incele.',collections:'Kiril, fiil, kelime atlası ve yardımcı araçlara ulaş.'};
   summary.textContent=info[active.dataset.dashboardTab]||'';
 }
 function wp65ResetQuestionVisuals(){
@@ -104,7 +104,7 @@ v5CloudAi=async function(history,message){
 }
 v5SendAiMessage=async function(message){
   const history=v5HistoryForScenario(),userEntry={role:'user',text:message,at:new Date().toISOString()};history.push(userEntry);renderAiCoach();v5AiBusy=true;$('#aiChatInput').disabled=true;
-  let reply;try{if(V5_SECURITY.aiEnabled)reply=await v5CloudAi(history,message);else throw new Error('LOCAL')}catch(error){reply=v5LocalCoachReply(message);if(error?.message==='AUTH_REQUIRED')reply.explanation='Gelişmiş bulut AI için Google hesabıyla giriş yapmalısın.'}
+  let reply;try{if(V5_SECURITY.aiEnabled)reply=await v5CloudAi(history,message);else throw new Error('LOCAL')}catch(error){reply=v5LocalCoachReply(message);if(error?.message==='AUTH_REQUIRED')reply.explanation='Gelişmiş bulut AI için bir hesapla giriş yapmalısın.'}
   const feedback={status:reply.status||'needs_work',corrected:reply.corrected||message,explanation:reply.explanation||reply.correction||'',suggestion:reply.suggestion||''};
   history.push({role:'assistant',text:reply.text||v5LocalCoachReply(message).text,feedback,mode:reply.mode||'local',at:new Date().toISOString()});while(history.length>30)history.shift();v5AiBusy=false;$('#aiChatInput').disabled=false;v5Save();renderAiCoach();
   if($('#wp65AiAutoSpeak')?.checked)speak(reply.text||'',v5VoiceLang());
