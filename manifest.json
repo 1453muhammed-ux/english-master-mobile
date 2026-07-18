@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 8.3 Tester Beta",
+  "name": "WordPilot 9.0 Tester Beta",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=8.3.0",
+  "start_url": "./?wpbuild=9.0.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v8.3.0 — Conversation Coach 4.0, temel ses analizi, 2000 benzersiz İngilizce kelime, A1–C2 Akademi ve Reader 2.0.",
+  "description": "WordPilot v9.0.0 — 3000 benzersiz İngilizce kelime, kaliteli cümle tamamlama, Conversation Coach 4.0 ve güvenli Firebase Functions AI altyapısı.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "8.3.0"
+  "version": "9.0.0"
 }

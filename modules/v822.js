@@ -1,32 +1,32 @@
 /* WordPilot v8.2.2 Tester Beta
-   2000 unique English vocabulary records, A1-C2 estimates,
+   3000 unique English vocabulary records, A1-C2 estimates,
    licensed semantic relations, word-family links and safe progress migration. */
-const WP822_VERSION='8.3.0';
+const WP822_VERSION='9.0.0';
 const WP822_MIGRATION='context-to-lexicon-v1';
 
 COURSES.en.file='words.json';
-COURSES.en.displayCount=2000;
-COURSES.en.actualCount=2000;
-COURSES.en.countLabel='2000 benzersiz kelime kaydı · A1–C2';
+COURSES.en.displayCount=3000;
+COURSES.en.actualCount=3000;
+COURSES.en.countLabel='3000 benzersiz kelime kaydı · A1–C2';
 
 function wp822ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v8.3.0 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
   document.documentElement.dataset.wpVersion=WP822_VERSION;
-  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 2000 benzersiz kelime · A1–C2';
-  const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 2000 benzersiz kelime + A1–C2 Akademi';
-  if($('#proofWordCount')&&activeCourse==='en')$('#proofWordCount').textContent='2000';
+  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 3000 benzersiz kelime · A1–C2';
+  const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 3000 benzersiz kelime + A1–C2 Akademi';
+  if($('#proofWordCount')&&activeCourse==='en')$('#proofWordCount').textContent='3000';
   if($('#proofWordLabel')&&activeCourse==='en')$('#proofWordLabel').textContent='benzersiz İngilizce kelime kaydı';
   if(activeCourse==='en'){
     const group=$('#groupFilter');
     if(group){
       const current=group.value,values=[...group.options].map(o=>o.value).join('|');
-      if(values!=='|base1000|extended1000'){
-        group.innerHTML='<option value="">2000 kelimenin tümü</option><option value="base1000">1–1000 Temel Çekirdek</option><option value="extended1000">1001–2000 Genişletilmiş Sözlük</option>';
-        group.value=['base1000','extended1000'].includes(current)?current:'';
+      if(values!=='|base1000|extended2000'){
+        group.innerHTML='<option value="">3000 kelimenin tümü</option><option value="base1000">1–1000 İncelenmiş Çekirdek</option><option value="extended2000">1001–3000 Genişletilmiş Beta Sözlük</option>';
+        group.value=['base1000','extended2000'].includes(current)?current:'';
       }
     }
     const core=$('[data-collection="core5000"]');if(core){core.hidden=false;core.querySelector('b').textContent='1000 Temel Kelime';core.querySelector('small').textContent='İncelenmiş çekirdek sözlük'}
-    const phrases=$('[data-collection="phrases"]');if(phrases){phrases.hidden=false;phrases.querySelector('b').textContent='1000 Yeni Kelime';phrases.querySelector('small').textContent='Genişletilmiş A1–C2 sözlük'}
+    const phrases=$('[data-collection="phrases"]');if(phrases){phrases.hidden=false;phrases.querySelector('b').textContent='2000 Genişletilmiş Kelime';phrases.querySelector('small').textContent='1001–3000 genişletilmiş A1–C2 sözlük'}
   }
   wp822EnsureLibrarySummary();
 }
@@ -39,7 +39,7 @@ function wp822EnsureLibrarySummary(){
     const filters=view.querySelector('.filters');if(filters)filters.before(box);
   }
   if(box.dataset.version!==WP822_VERSION){
-    box.innerHTML='<div><p class="eyebrow">V8.2.2 SÖZLÜK</p><b>2000 benzersiz kayıt</b><small>1997 tek kelime + 3 temel günlük ifade</small></div><div class="wp822-summary-stats"><span><b>A1–C2</b><small>seviye tahmini</small></span><span><b>161</b><small>eş anlam bağlantısı</small></span><span><b>171</b><small>zıt anlam bağlantısı</small></span><span><b>127</b><small>kelime ailesi</small></span></div>';
+    box.innerHTML='<div><p class="eyebrow">V8.2.2 SÖZLÜK</p><b>3000 benzersiz İngilizce kayıt</b><small>1000 incelenmiş çekirdek + 2000 beta genişletme</small></div><div class="wp822-summary-stats"><span><b>A1–C2</b><small>seviye tahmini</small></span><span><b>161</b><small>eş anlam bağlantısı</small></span><span><b>171</b><small>zıt anlam bağlantısı</small></span><span><b>127</b><small>kelime ailesi</small></span></div>';
     box.dataset.version=WP822_VERSION;
   }
 }
@@ -47,7 +47,7 @@ function wp822EnsureLibrarySummary(){
 const wp822FilteredWordsBase=filteredWords;
 filteredWords=function(){
   const select=$('#groupFilter'),group=select?.value||'';
-  if(!['base1000','extended1000'].includes(group))return wp822FilteredWordsBase();
+  if(!['base1000','extended2000'].includes(group))return wp822FilteredWordsBase();
   select.value='';const rows=wp822FilteredWordsBase();select.value=group;
   return rows.filter(w=>group==='base1000'?Number(w.id)<=1000:Number(w.id)>1000);
 };
@@ -58,7 +58,7 @@ openCollection=function(type){
     nav('library');
     if($('#searchInput'))$('#searchInput').value='';if($('#levelFilter'))$('#levelFilter').value='';if($('#statusFilter'))$('#statusFilter').value='';
     wp822ApplyBrand();
-    if($('#groupFilter'))$('#groupFilter').value=type==='core5000'?'base1000':'extended1000';
+    if($('#groupFilter'))$('#groupFilter').value=type==='core5000'?'base1000':'extended2000';
     if(typeof wp82ClearLibraryRange==='function')wp82ClearLibraryRange();else renderWords(true);
     return;
   }

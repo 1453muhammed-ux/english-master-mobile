@@ -1,6 +1,6 @@
 /* WordPilot v8.2.0 Tester Beta
    Route-panel repair, professional mobile course grid and direct library range navigation. */
-const WP82_VERSION='8.3.0';
+const WP82_VERSION='9.0.0';
 const WP82_PAGE_SIZE=50;
 let wp82LibraryPage=1;
 let wp82LibraryRange={start:null,end:null};
@@ -16,8 +16,8 @@ const WP82_ROUTE_LABELS={
 };
 
 function wp82ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v8.3.0 · Tester Beta';
-  document.documentElement.dataset.wpVersion='8.3.0';
+  const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
+  document.documentElement.dataset.wpVersion='9.0.0';
   const group=$('#groupFilter');
   if(group){
     const first=group.options[0];

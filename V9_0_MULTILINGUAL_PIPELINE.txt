@@ -1,0 +1,18 @@
+WORDPILOT V9 — 3000 ORTAK KAVRAM VE ÇEVİRİ BORU HATTI
+
+Canlı durum:
+- English: 3000 kayıt (1000 incelenmiş çekirdek + 2000 beta genişletme)
+- Русский: 1500 onaylı/kontrollü kayıt
+- O‘zbekcha: 1000 onaylı/kontrollü kayıt
+- Türkçe, Español, Deutsch, Français, Italiano, Português, 日本語, 한국어, 中文:
+  ilk 1000 ortak kavram sırası
+
+concept_ledger_v90.json bütün diller için aynı 1–3000 concept_id ve öğrenme sırasını
+oluşturur. Çeviri sayısı eksik olan dil kartları 3000 varmış gibi gösterilmez;
+“onaylı kayıt + 3000 ortak kavram sırası” biçiminde gösterilir.
+
+Güvenli ilerleme:
+1. Admin-only generateLanguageDraftBatch, en fazla 20 kavramı hedef dile çevirir.
+2. Sonuçlar public JSON'a yazılmaz; Firestore contentDrafts içinde özel taslak kalır.
+3. İnsan editör terim, okunuş, örnek, çeviri ve seviye kontrolü yapar.
+4. Yalnız onaylı kayıt public içerik paketine aktarılır.

@@ -1,0 +1,14 @@
+WORDPILOT V9 — FREEDICT ENGLISH–TURKISH DATA NOTICE
+
+The lexical glosses used for WordPilot records 2001–3000 were selected from the
+FreeDict English–Turkish source files (ingtur-ing.utf8 / ingtur-tur.utf8).
+The source header identifies the dictionary as distributed under the GNU General Public License. The source is old and may contain conversion or sense-splitting
+errors; therefore every imported record is marked commercial_safe=false and
+human review is required before a commercial final release.
+
+The exact reused subset and original source rows are included in:
+  freedict_v90_subset_source.tsv
+
+WordPilot-created examples, UI text, learning order, pronunciation conversion,
+quiz logic and metadata are separate original layers. This notice is not legal
+advice; the data component should receive a final licence review before sale.

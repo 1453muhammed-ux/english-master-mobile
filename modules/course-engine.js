@@ -10,10 +10,32 @@ function normalizeAnswer(value=''){
   return clean(value).normalize('NFKC').toLocaleLowerCase(activeCourse==='ru'?'ru-RU':'tr-TR')
     .replace(/[’‘`ʻʼ]/g,"'").replace(/[.,!?;:"“”]/g,'').replace(/o['’]z/g,"o'z").replace(/g['’]/g,"g'").replace(/\s+/g,' ').trim();
 }
+const WP90_SENTENCE_RECENT_KEY=`${STORE}:sentence_recent_v90`;
+function wp90Shuffle(input){const out=[...input];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out}
+function wp90SentenceType(w){return String(w?.type||'').replace(/^[●○]\s*/,'').trim().toLowerCase()}
+function wp90CompletionExamples(w){
+  const cloud=(typeof window.wp90SentenceCacheFor==='function'?window.wp90SentenceCacheFor(w):[]);
+  const rows=[...cloud,...(Array.isArray(w?.completion_examples)?w.completion_examples:[])].map(firstLine).filter(Boolean);
+  const fallback=firstExample(w);if(fallback)rows.push(fallback);
+  return [...new Set(rows)].filter(sentence=>{const target=String(w?.english||'').trim();return target&&new RegExp(`(^|[^\\p{L}])${escapeRegex(target)}(?=[^\\p{L}]|$)`,'iu').test(sentence)});
+}
+function wp90ReadRecentSentenceIds(){try{return JSON.parse(sessionStorage.getItem(WP90_SENTENCE_RECENT_KEY)||'[]')}catch{return[]}}
+function wp90RememberSentenceId(id){const rows=wp90ReadRecentSentenceIds().filter(x=>x!==id);rows.push(id);sessionStorage.setItem(WP90_SENTENCE_RECENT_KEY,JSON.stringify(rows.slice(-24)))}
+function wp90SentenceDistractors(w){
+  const target=String(w?.english||'').trim(),level=cefr(w),type=wp90SentenceType(w),recent=new Set(wp90ReadRecentSentenceIds());
+  let pool=words.filter(x=>x.id!==w.id&&!recent.has(x.id)&&String(x.english||'').trim()&&wp90SentenceType(x)===type&&cefr(x)===level);
+  if(pool.length<3)pool=words.filter(x=>x.id!==w.id&&!recent.has(x.id)&&String(x.english||'').trim()&&wp90SentenceType(x)===type);
+  if(pool.length<3)pool=words.filter(x=>x.id!==w.id&&!recent.has(x.id)&&String(x.english||'').trim());
+  pool.sort((a,b)=>Math.abs(String(a.english).length-target.length)-Math.abs(String(b.english).length-target.length));
+  return wp90Shuffle(pool.slice(0,18)).slice(0,3).map(x=>String(x.english).trim());
+}
 function sentenceQuestion(w){
-  const sentence=firstExample(w),tokens=sentence.split(/\s+/),cut=Math.max(1,Math.floor(tokens.length/2)),prompt=tokens.slice(0,cut).join(' ')+' …',answer=tokens.slice(cut).join(' ');
-  const alternatives=words.filter(x=>x.id!==w.id&&firstExample(x).split(/\s+/).length>=4).sort(()=>Math.random()-.5).slice(0,3).map(x=>{const t=firstExample(x).split(/\s+/);return t.slice(Math.max(1,Math.floor(t.length/2))).join(' ')});
-  return {prompt,answer,options:[answer,...alternatives].sort(()=>Math.random()-.5)};
+  const examples=wp90CompletionExamples(w),lastKey=`${STORE}:sentence_example:${activeCourse}:${w.id}`;
+  let previous=Number(sessionStorage.getItem(lastKey)||-1),index=examples.length?((previous+1)%examples.length):0;
+  if(examples.length)sessionStorage.setItem(lastKey,String(index));
+  const sentence=examples[index]||`${String(w.english||'').trim()} is the target word in this sentence.`;
+  const answer=String(w.english||'').trim(),prompt=blankTarget(sentence,answer),options=wp90Shuffle([answer,...wp90SentenceDistractors(w)]);
+  wp90RememberSentenceId(w.id);setTimeout(()=>window.wp90PrefetchSentence?.(w),0);return {prompt,answer,options,sentence};
 }
 function courseStateKey(course=activeCourse,email=(profile?.email||'guest@local').toLowerCase()){
   const cleanEmail=String(email||'guest@local').toLowerCase();

@@ -1,5 +1,5 @@
 {
-  "version": "8.2.2-tester-beta",
+  "version": "9.0.0",
   "branch": "commercial-clean",
   "legacy_branch": "v7.0.0-private-archive",
   "clean_concept_count": 1000,
@@ -68,5 +68,74 @@
     "content_origin": "WordPilot original course and graded-reader layer",
     "legacy_drive_links_found": false,
     "status": "tester-beta; ongoing editorial review"
-  }
+  },
+  "shared_concept_rows": 3000,
+  "language_coverage": {
+    "en": {
+      "reviewed_or_live": 3000,
+      "shared_order": 3000,
+      "remaining_draft": 0
+    },
+    "ru": {
+      "reviewed_or_live": 1500,
+      "shared_order": 3000,
+      "remaining_draft": 1500
+    },
+    "uz": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "tr": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "es": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "de": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "fr": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "it": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "pt": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "ja": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "ko": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "zh": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    }
+  },
+  "english_records": {
+    "total": 3000,
+    "reviewed_core": 1000,
+    "beta_extended": 2000
+  },
+  "translation_pipeline": "AI creates private drafts only; human approval required before public release."
 }

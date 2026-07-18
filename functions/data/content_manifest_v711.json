@@ -1,0 +1,141 @@
+{
+  "version": "9.0.0",
+  "branch": "commercial-clean",
+  "legacy_branch": "v7.0.0-private-archive",
+  "clean_concept_count": 1000,
+  "active_language_count": 12,
+  "learning_directions": 132,
+  "rich_course_counts": {
+    "en": 2000,
+    "ru": 1500,
+    "uz": 1000,
+    "es": 1000
+  },
+  "content_policy": "Only original or explicitly licensed content may enter the commercial branch.",
+  "lexical_seed": {
+    "name": "thousand-most-common-words",
+    "license": "MIT",
+    "role": "word selection and multilingual term seed"
+  },
+  "original_wordpilot_layers": [
+    "interface localisation",
+    "learning order",
+    "usage guidance",
+    "practice prompts",
+    "conversation coach"
+  ],
+  "audit": {
+    "hash_algorithm": "SHA-256",
+    "record_level_hashes": true,
+    "editorial_review_required": true,
+    "internal_metadata_hidden_from_learner_ui": true
+  },
+  "generated_at": "2026-07-18",
+  "english_learning_bank": {
+    "unique_records": 2000,
+    "single_word_records": 1997,
+    "essential_phrase_records": 3,
+    "core_records": 1000,
+    "extended_records": 1000,
+    "context_cards": 0,
+    "total": 2000,
+    "pronunciation_coverage": 2000,
+    "cefr_coverage": 2000,
+    "cefr_distribution": {
+      "A1": 520,
+      "A2": 580,
+      "B1": 500,
+      "B2": 330,
+      "C1": 60,
+      "C2": 10
+    },
+    "relation_fields_coverage": 2000,
+    "records_with_synonym_links": 161,
+    "records_with_antonym_links": 171,
+    "records_with_family_links": 127,
+    "pronunciation_scheme": "tr-readable",
+    "semantic_relation_source": "Princeton WordNet 3.0",
+    "extended_commercial_safe": false,
+    "extended_review_requirement": "Human editorial approval required before commercial release"
+  },
+  "notes": "v8.2.2 replaces the former 1000 generated context cards with 1000 distinct lexical records. IDs 1–1000 remain the reviewed core; IDs 1001–2000 are beta auto-enriched records requiring human editorial review. CEFR labels for the extended bank are WordPilot estimates, not external certification. Princeton WordNet 3.0 is used for semantic relation candidates under its included license. No DiziÖğren PDF link or copied sentence bank is included. Academy and Reader remain enabled.",
+  "academy_reader_status": {
+    "academy": "enabled",
+    "academy_lessons": 102,
+    "academy_readings": 48,
+    "reader": "enabled",
+    "reader_stories": 102,
+    "content_origin": "WordPilot original course and graded-reader layer",
+    "legacy_drive_links_found": false,
+    "status": "tester-beta; ongoing editorial review"
+  },
+  "shared_concept_rows": 3000,
+  "language_coverage": {
+    "en": {
+      "reviewed_or_live": 3000,
+      "shared_order": 3000,
+      "remaining_draft": 0
+    },
+    "ru": {
+      "reviewed_or_live": 1500,
+      "shared_order": 3000,
+      "remaining_draft": 1500
+    },
+    "uz": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "tr": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "es": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "de": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "fr": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "it": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "pt": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "ja": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "ko": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    },
+    "zh": {
+      "reviewed_or_live": 1000,
+      "shared_order": 3000,
+      "remaining_draft": 2000
+    }
+  },
+  "english_records": {
+    "total": 3000,
+    "reviewed_core": 1000,
+    "beta_extended": 2000
+  },
+  "translation_pipeline": "AI creates private drafts only; human approval required before public release."
+}

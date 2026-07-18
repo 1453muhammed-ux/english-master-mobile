@@ -35,3 +35,10 @@ WordPilot v8.2.2 uses Princeton WordNet 3.0 only to create semantic
 relation links (synonym, antonym and derivational-family candidates).
 The required license notice is included in:
 PRINCETON_WORDNET_LICENSE.txt
+
+
+4) FreeDict English–Turkish lexical data (records 2001–3000)
+   Source files: ingtur-ing.utf8 / ingtur-tur.utf8
+   Licence declared by source header: GNU General Public License
+   Exact reused subset: freedict_v90_subset_source.tsv
+   Status: beta, human and legal review required before commercial final release.

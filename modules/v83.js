@@ -1,8 +1,8 @@
-/* WordPilot v8.3.0 Tester Beta
+/* WordPilot v9.0.0 Tester Beta
    Conversation Coach 4.0, real-life scenario missions, Mira voice preference,
    smoothed speaking feedback and transcript-based pronunciation analysis.
    No private API key is stored in the browser. */
-const WP83_VERSION='8.3.0';
+const WP83_VERSION='9.0.0';
 const WP83_SESSION_SCHEMA=1;
 let wp83PronunciationMode='word';
 let wp83PronunciationStartedAt=0;
@@ -111,7 +111,7 @@ function wp83RenderScenarioBrief(){
 function wp83PolishCoachMessages(){
   $$('#aiChatMessages .ai-message.assistant > span').forEach(node=>{node.textContent='🤖';node.title='Mira'});
   $$('#aiChatMessages .ai-message.user > span').forEach(node=>node.title='Sen');
-  const backend=$('#aiBackendStatus');if(backend){const cloud=!!V5_SECURITY.aiEnabled;backend.className=`ai-backend-status ${cloud?'ready':'local'}`;backend.innerHTML=cloud?'<b>Coach 4.0 · Güvenli Bulut AI</b><small>Bağlama duyarlı konuşma, ayrıntılı düzeltme ve App Check koruması aktif.</small>':'<b>Coach 4.0 · Yerel senaryo modu</b><small>10 gerçek yaşam senaryosu çevrimdışı çalışır. Üretken bulut AI henüz etkin değil.</small>'}
+  const backend=$('#aiBackendStatus');if(backend){const cloud=!!V5_SECURITY.aiEnabled;backend.className=`ai-backend-status ${cloud?'ready':'local'}`;backend.innerHTML=cloud?'<b>Coach 4.0 · Güvenli Bulut AI</b><small>Bağlama duyarlı konuşma, ayrıntılı düzeltme ve App Check koruması aktif.</small>':'<b>Coach 4.0 · Yerel senaryo modu</b><small>10 gerçek yaşam senaryosu çevrimdışı çalışır. Güvenli bulut AI otomatik denetlenir.</small>'}
   const current=wp83Scenario();if($('#aiScenarioTitle'))$('#aiScenarioTitle').textContent=current.title;if($('#aiScenarioHint'))$('#aiScenarioHint').textContent=current.hint;
   $$('#aiScenarioList [data-ai-scenario]').forEach(btn=>{const row=wp83Scenario(btn.dataset.aiScenario),session=wp83EnsureRoot().scenarioSessions?.[`${activeCourse}:${btn.dataset.aiScenario}`],title=btn.querySelector('b'),small=btn.querySelector('small');if(title)title.textContent=row.title;if(small)small.textContent=row.hint;let badge=btn.querySelector('.wp83-scenario-badge');if(!badge){badge=document.createElement('em');badge.className='wp83-scenario-badge';btn.appendChild(badge)}badge.textContent=session?.completed?.length>=row.tasks.length?'✓ Tamam':`${row.turns} adım`});
 }
@@ -175,8 +175,8 @@ renderPronunciationLab=function(){
 };
 
 function wp83ApplyVersion(){
-  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v8.3.0 · Tester Beta';
-  document.title='WordPilot 8.3.0 · Conversation Coach 4.0';
+  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
+  document.title='WordPilot 9.0.0 · Conversation Coach 4.0';
 }
 
 function setupV83Events(){

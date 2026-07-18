@@ -1,7 +1,7 @@
 /* WordPilot v8.2.0 Tester Beta
    Safer content branch, 2000-item English learning bank, gentler scoring,
    natural voice defaults, improved mastery flow and broader authentication UI. */
-const WP81_VERSION='8.3.0';
+const WP81_VERSION='9.0.0';
 const WP81_SCORE_SCHEMA=3;
 const WP81_PAUSE_DEFAULT=10000;
 const WP81_RATE_DEFAULT=.88;
@@ -31,7 +31,7 @@ function wp81ApplyTurkishFlags(root=document){
 }
 
 function wp81ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v8.3.0 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
   const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 2000 çalışma kartı';
   const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 2000 çalışma kartı + A1–C2 Akademi';
   const ruCard=$('.course-card[data-course="ru"] small');if(ruCard)ruCard.textContent='Türkçe anlatımlı · 1500 kontrollü kayıt + A1–C2 Akademi';
@@ -187,7 +187,7 @@ wp80EnsureCoachControls=function(){
   wp81CoachControlsBase();const delay=$('#wp80SilenceDelay');if(delay){delay.innerHTML='<option value="6000">6 sn</option><option value="10000">10 sn · önerilen</option><option value="15000">15 sn</option><option value="20000">20 sn</option>';delay.value=String(wp80Prefs().coachPauseMs)}
   const rate=$('#wp80CoachRate');if(rate){rate.innerHTML='<option value="0.78">Sakin</option><option value="0.88">Doğal · önerilen</option><option value="0.96">Normal</option><option value="1.04">Hızlı</option>';rate.value=String(wp80Prefs().coachRate)}
   const view=$('#view-ai');if(view&&!view.querySelector('.wp81-coach-mascot'))view.querySelector('.section-title')?.insertAdjacentHTML('afterend','<div class="wp81-coach-mascot"><span class="wp81-bot-face"><i></i><i></i><b></b></span><div><b>Mira seninle konuşmak istiyor</b><small>Düşünmek için zamanın var. Cevabını bitirdiğinde gönderebilirsin.</small></div></div>');
-  const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH 3.1';wp81ApplyBrand();
+  const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH 4.0';wp81ApplyBrand();
 };
 const wp81EvaluationBase=wp80DetailedEvaluation;
 wp80DetailedEvaluation=function(message,mode=wp71CoachMode(),source=wp80LastInputSource){
