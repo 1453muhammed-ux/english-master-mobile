@@ -42,3 +42,5 @@ initV40().then(()=>{
   const box=document.querySelector('#toast');
   if(box){box.textContent='Uygulama başlatılamadı. Sayfayı yenileyin.';box.classList.add('show')}
 });
+
+window.addEventListener('load',()=>setTimeout(()=>{if(typeof wp93AfterInit==='function')wp93AfterInit()},520));

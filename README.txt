@@ -1,11 +1,12 @@
-WordPilot v9.2.0 Tester Beta
+WordPilot v9.3.0 — Content Quality Beta
 
-- 5000 benzersiz İngilizce kelime kartı
-- 1–1000 incelenmiş çekirdek; 1001–5000 beta içerik
-- İngilizce 5000; Rusça 1500; Özbekçe 1000; diğer ortak rotalar 1000 aktif kayıt
-- 5000 yuvalı dürüst çok dilli kavram yol haritası
-- 108 Reader metni ve A1–C2 için altı yeni genişletilmiş okuma
-- 120 özgün kalıp: konuşma, kolokasyon, phrasal verb ve deyim
-- Hikâye sözlük aramasında düzensiz/çekimli biçim desteği ve bağlam kuyruğu
+- 5000 benzersiz İngilizce kelime
+- 1000 incelenmiş çekirdek; 1001–5000 açıkça etiketlenmiş beta katmanı
+- Her kayıt için üç dil bilgisel olarak güvenli cümle tamamlama bağlamı
+- 587 kelimede liste içi eş anlam bağlantısı
+- 378 kelimede liste içi zıt anlam bağlantısı
+- 777 kelimede liste içi kelime ailesi bağlantısı
+- 240 incelenmiş Phrase Lab girdisi: konuşma, kolokasyon, phrasal verb ve deyim
+- Kelime kütüphanesinde içerik kalitesi filtresi ve açık editör durumları
 
-3001–5000 katmanı insan editör ve lisans/hukuk kontrolü tamamlanıncaya kadar ticari final içerik değildir.
+Önemli: Doğrudan eş veya zıt anlamı bulunmayan kelimelere yapay ilişki eklenmez. 1001–5000 arasındaki beta içerik insan editör ve hukuk kontrolü tamamlanmadan ticari final olarak kabul edilmez.

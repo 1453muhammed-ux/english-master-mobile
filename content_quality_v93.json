@@ -1,0 +1,21 @@
+{
+  "version": "9.3.0",
+  "generated_at": "2026-07-18",
+  "word_count": 5000,
+  "reviewed_core": 1000,
+  "source_checked_beta": 2000,
+  "editorial_beta": 2000,
+  "meaning_corrections": 43,
+  "words_with_synonym_links": 587,
+  "words_with_antonym_links": 378,
+  "words_with_family_links": 777,
+  "words_with_verified_patterns": 162,
+  "phrase_count": 240,
+  "phrase_categories": {
+    "conversation": 60,
+    "collocation": 60,
+    "phrasal_verb": 60,
+    "idiom": 60
+  },
+  "policy": "Doğrudan ilişkisi olmayan kelimelere yapay eş/zıt anlam eklenmez. 1001–5000 beta katmanı insan editör ve hukuk kontrolü tamamlanmadan ticari final sayılmaz."
+}

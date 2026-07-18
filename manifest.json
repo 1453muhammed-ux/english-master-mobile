@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "WordPilot 9.2 Tester Beta",
-  "short_name": "WordPilot",
+  "name": "WordPilot 9.3",
+  "short_name": "WordPilot 9.3",
   "start_url": "./?wpbuild=9.2.0",
   "scope": "./",
   "display": "standalone",

@@ -1,0 +1,73 @@
+WordPilot v9.3.0 Validation Report
+Generated: 2026-07-18
+
+[PASS] 5000 word records — 5000
+[PASS] 5000 unique English entries
+[PASS] all words include english — 0
+[PASS] all words include pronunciation — 0
+[PASS] all words include meaningTr — 0
+[PASS] all words include cefr — 0
+[PASS] all words include type — 0
+[PASS] all words include completion_examples — 0
+[PASS] all words include synonyms — 0
+[PASS] all words include opposite — 0
+[PASS] all words include family — 0
+[PASS] all words include quality_code — 0
+[PASS] all words include quality_score — 0
+[PASS] three examples per word
+[PASS] examples contain target
+[PASS] phrase total is 240 — 240
+[PASS] conversation has 60 entries
+[PASS] collocation has 60 entries
+[PASS] phrasal_verb has 60 entries
+[PASS] idiom has 60 entries
+[PASS] phrase entries unique
+[PASS] semantic synonym coverage improves v9.2 baseline — 587
+[PASS] semantic antonym coverage improves v9.2 baseline — 378
+[PASS] family coverage improves v9.2 baseline — 777
+[PASS] only reviewed core commercial safe
+[PASS] v9.3 module exists
+[PASS] index loads v9.3 module
+[PASS] service worker caches v9.3
+[PASS] JS syntax app.js
+[PASS] JS syntax modules/bootstrap.js
+[PASS] JS syntax modules/course-engine.js
+[PASS] JS syntax modules/firebase-sync.js
+[PASS] JS syntax modules/learning-engine.js
+[PASS] JS syntax modules/russian-path.js
+[PASS] JS syntax modules/ui-events.js
+[PASS] JS syntax modules/v43.js
+[PASS] JS syntax modules/v431.js
+[PASS] JS syntax modules/v50.js
+[PASS] JS syntax modules/v510.js
+[PASS] JS syntax modules/v511.js
+[PASS] JS syntax modules/v512.js
+[PASS] JS syntax modules/v60.js
+[PASS] JS syntax modules/v61.js
+[PASS] JS syntax modules/v62.js
+[PASS] JS syntax modules/v63.js
+[PASS] JS syntax modules/v64.js
+[PASS] JS syntax modules/v65.js
+[PASS] JS syntax modules/v70.js
+[PASS] JS syntax modules/v71.js
+[PASS] JS syntax modules/v711.js
+[PASS] JS syntax modules/v712.js
+[PASS] JS syntax modules/v80.js
+[PASS] JS syntax modules/v81.js
+[PASS] JS syntax modules/v82.js
+[PASS] JS syntax modules/v822.js
+[PASS] JS syntax modules/v83.js
+[PASS] JS syntax modules/v90.js
+[PASS] JS syntax modules/v91.js
+[PASS] JS syntax modules/v92.js
+[PASS] JS syntax modules/v93.js
+[PASS] JS syntax security-config.js
+[PASS] JS syntax sw.js
+[PASS] GitHub web upload under 100 files — 85
+
+Passed: 63/63
+File count: 85
+Meaning corrections: 43
+Synonym-linked words: 587
+Antonym-linked words: 378
+Family-linked words: 777

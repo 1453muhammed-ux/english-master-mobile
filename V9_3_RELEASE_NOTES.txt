@@ -1,0 +1,7 @@
+WordPilot v9.3.0
+- Cümle tamamlama katmanı 5000 kayıtta dil bilgisel güvenli üçlü örneklerle yenilendi.
+- Açıkça hatalı veya bozuk 43 Türkçe sözlük karşılığı düzeltildi.
+- WordNet kaynak hizalaması ve kontrollü bağlantılarla eş/zıt anlam ve kelime ailesi kapsamı genişletildi.
+- Phrase Lab 2.0 toplam 240 incelenmiş girdiye çıkarıldı.
+- İçerik kalite rozetleri, kalite puanı ve filtreleri eklendi.
+- Ticari olarak denetlenmemiş beta kayıtların statüsü kullanıcıya açık biçimde gösterilir.
