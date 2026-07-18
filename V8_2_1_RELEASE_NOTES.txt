@@ -1,9 +1,0 @@
-WORDPILOT V8.2.1 — ACADEMY & READER HOTFIX
-
-1. A1–C2 Academy is now enabled for English and Russian.
-2. Reader 2.0 is now enabled and loads the 102-story library.
-3. Academy includes 102 lessons and 48 graded readings.
-4. The obsolete v7 commercial-audit click blocker was removed.
-5. Existing Firebase Authentication, Firestore Rules and App Check configuration are unchanged.
-6. Uzbek Academy remains marked as upcoming; Uzbek words, quiz and review continue to work.
-7. Content is still Tester Beta and requires ongoing human editorial review.
