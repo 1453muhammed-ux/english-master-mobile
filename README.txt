@@ -1,23 +1,30 @@
-WORDPILOT v8.2.2 — TESTER BETA
+WORDPILOT v8.3.0 — TESTER BETA
 
 MAIN CHANGES
+- Conversation Coach 4.0 with Mira
+- 10 structured real-life speaking scenarios
+- Scenario goals, mission progress, useful phrases and session reports
+- Smoothed grammar, clarity and fluency scoring
+- Female system-voice preference for coach replies when available
+- Word, sentence and scenario pronunciation modes
+- Transcript-based pronunciation accuracy, completion, fluency and
+  recognition-confidence metrics
 - 2000 unique English vocabulary records
-- 1997 single words + 3 essential daily expressions
-- A1–C2 metadata across the bank
-- Turkish-readable pronunciation across the bank
-- Princeton WordNet 3.0 synonym, antonym and word-family links
-- 1–1000 core / 1001–2000 extended library filters
-- Custom number ranges and 50-record pagination
-- Academy and Reader enabled
+- A1–C2 Academy and Reader 2.0 enabled
+
+IMPORTANT AI NOTE
+The GitHub/Hosting build works in structured local scenario mode. Generative
+cloud AI is intentionally disabled by default. Enabling it requires deploying
+the included Firebase Functions, adding OPENAI_API_KEY through Secret Manager
+and changing aiEnabled only after usage limits and billing are reviewed.
+No private API key belongs in frontend files.
 
 IMPORTANT EDITORIAL NOTE
-The first 1000 records are the reviewed core. Records 1001–2000 are a
-beta, auto-enriched expansion. Turkish glosses, CEFR estimates and
-pronunciations must receive human editorial review before final commercial
+The first 1000 English records are the reviewed core. Records 1001–2000 are
+a beta, auto-enriched expansion and still require human editorial review of
+Turkish glosses, CEFR estimates and pronunciations before a final commercial
 release.
 
 CACHE
-Open the deployment once with ?wpbuild=8.2.2. The service-worker cache is
-versioned as wordpilot-v8.2.2. User progress for IDs 1–1000 is preserved.
-Old context-card progress for IDs 1001–2000 is cleared once because these
-IDs now represent different vocabulary records.
+Open the deployment once with ?wpbuild=8.3.0. The service-worker cache is
+versioned as wordpilot-v8.3.0. Existing user progress is preserved.

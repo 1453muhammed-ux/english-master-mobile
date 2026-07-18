@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot 8.2.2 Tester Beta — 2000 benzersiz kelime, A1–C2 Akademi, Reader 2.0 ve Conversation Coach 3.1.">
+  <meta name="description" content="WordPilot 8.3.0 Tester Beta — 2000 benzersiz kelime, A1–C2 Akademi, Reader 2.0 ve Conversation Coach 4.0.">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=8.2.2">
-  <title>WordPilot 8.2.2 · 2000 Kelime</title>
+  <link rel="stylesheet" href="style.css?v=8.3.0">
+  <title>WordPilot 8.3.0 · Conversation Coach 4.0</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='8.2.2',KEY='wordpilot_asset_build';
+    const BUILD='8.3.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.2.2 · Tester Beta</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.3.0 · Tester Beta</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -451,7 +451,7 @@
     </section>
 
     <section id="view-ai" class="view v5-view">
-      <div class="section-title"><div><p class="eyebrow">CONVERSATION COACH 3.1</p><h1>Akıllı konuşma öğretmeni</h1><p class="muted">A1–C2 düzeyinde akıcı konuş; koç önceki cevaplarını hatırlasın, yeni sorular sorsun ve hatalarını seçtiğin açıklama dilinde anlatsın.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <div class="section-title"><div><p class="eyebrow">CONVERSATION COACH 4.0</p><h1>Mira ile gerçek konuşma pratiği</h1><p class="muted">Günlük yaşam senaryolarını tamamla; Mira cevabını dinlesin, nazikçe düzeltsin ve oturum sonunda gelişim raporu versin.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
       <div class="ai-coach-layout">
         <aside class="panel ai-scenarios"><p class="eyebrow">SENARYO SEÇ</p><div id="aiScenarioList"></div><div id="aiBackendStatus" class="ai-backend-status"></div></aside>
         <section class="panel ai-chat-panel"><div class="ai-chat-head"><div><span id="aiCourseFlag">🇬🇧</span><div><b id="aiScenarioTitle">Tanışma</b><small id="aiScenarioHint">Kısa ve doğal cevaplar ver</small></div></div><div class="wp65-ai-head-tools"><label>Seviye<select id="wp65AiLevel"><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option></select></label><button id="wp65AiStopSpeech" class="soft" type="button" title="Konuşmayı durdur">■ Sesi durdur</button><button id="aiResetChat" class="soft" type="button">Sıfırla</button></div></div><div id="aiChatMessages" class="ai-chat-messages"></div><form id="aiChatForm" class="ai-chat-form"><div class="wp65-ai-compose"><textarea id="aiChatInput" maxlength="600" rows="2" placeholder="Mesajını yaz veya mikrofonla söyle…" required></textarea><button id="wp65AiMic" class="wp65-ai-mic" type="button" aria-label="Mikrofonla cevap ver">🎙</button><button class="primary" type="submit">Gönder</button></div><div class="wp65-ai-options"><div class="wp65-ai-checks"><label><input id="wp65AiAutoSpeak" type="checkbox" checked> Cevabı seslendir</label><label><input id="wp65AiAutoSend" type="checkbox" checked> Konuşunca gönder</label></div><span id="wp65AiMicStatus">Mikrofon hazır</span></div></form><p class="ai-privacy-note">Ses tanıma önce cihazda denenir. Güvenli bulut AI etkinse düzeltme ve öneriler sunucu üzerinden gelir; özel anahtar tarayıcıya konmaz.</p></section>
@@ -817,33 +817,34 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=8.2.2" defer></script>
-<script src="app.js?v=8.2.2" defer></script>
-<script src="modules/firebase-sync.js?v=8.2.2" defer></script>
-<script src="modules/learning-engine.js?v=8.2.2" defer></script>
-<script src="modules/ui-events.js?v=8.2.2" defer></script>
-<script src="modules/course-engine.js?v=8.2.2" defer></script>
-<script src="modules/russian-path.js?v=8.2.2" defer></script>
-<script src="modules/v43.js?v=8.2.2" defer></script>
-<script src="modules/v431.js?v=8.2.2" defer></script>
-<script src="modules/v50.js?v=8.2.2" defer></script>
-<script src="modules/v510.js?v=8.2.2" defer></script>
-<script src="modules/v511.js?v=8.2.2" defer></script>
-<script src="modules/v512.js?v=8.2.2" defer></script>
-<script src="modules/v60.js?v=8.2.2" defer></script>
-<script src="modules/v61.js?v=8.2.2" defer></script>
-<script src="modules/v62.js?v=8.2.2" defer></script>
-<script src="modules/v63.js?v=8.2.2" defer></script>
-<script src="modules/v64.js?v=8.2.2" defer></script>
-<script src="modules/v65.js?v=8.2.2" defer></script>
-<script src="modules/v70.js?v=8.2.2" defer></script>
-<script src="modules/v71.js?v=8.2.2" defer></script>
-<script src="modules/v711.js?v=8.2.2" defer></script>
-<script src="modules/v712.js?v=8.2.2" defer></script>
-<script src="modules/v80.js?v=8.2.2" defer></script>
-<script src="modules/v81.js?v=8.2.2" defer></script>
-<script src="modules/v82.js?v=8.2.2" defer></script>
-<script src="modules/v822.js?v=8.2.2" defer></script>
-<script src="modules/bootstrap.js?v=8.2.2" defer></script>
+<script src="security-config.js?v=8.3.0" defer></script>
+<script src="app.js?v=8.3.0" defer></script>
+<script src="modules/firebase-sync.js?v=8.3.0" defer></script>
+<script src="modules/learning-engine.js?v=8.3.0" defer></script>
+<script src="modules/ui-events.js?v=8.3.0" defer></script>
+<script src="modules/course-engine.js?v=8.3.0" defer></script>
+<script src="modules/russian-path.js?v=8.3.0" defer></script>
+<script src="modules/v43.js?v=8.3.0" defer></script>
+<script src="modules/v431.js?v=8.3.0" defer></script>
+<script src="modules/v50.js?v=8.3.0" defer></script>
+<script src="modules/v510.js?v=8.3.0" defer></script>
+<script src="modules/v511.js?v=8.3.0" defer></script>
+<script src="modules/v512.js?v=8.3.0" defer></script>
+<script src="modules/v60.js?v=8.3.0" defer></script>
+<script src="modules/v61.js?v=8.3.0" defer></script>
+<script src="modules/v62.js?v=8.3.0" defer></script>
+<script src="modules/v63.js?v=8.3.0" defer></script>
+<script src="modules/v64.js?v=8.3.0" defer></script>
+<script src="modules/v65.js?v=8.3.0" defer></script>
+<script src="modules/v70.js?v=8.3.0" defer></script>
+<script src="modules/v71.js?v=8.3.0" defer></script>
+<script src="modules/v711.js?v=8.3.0" defer></script>
+<script src="modules/v712.js?v=8.3.0" defer></script>
+<script src="modules/v80.js?v=8.3.0" defer></script>
+<script src="modules/v81.js?v=8.3.0" defer></script>
+<script src="modules/v82.js?v=8.3.0" defer></script>
+<script src="modules/v822.js?v=8.3.0" defer></script>
+<script src="modules/v83.js?v=8.3.0" defer></script>
+<script src="modules/bootstrap.js?v=8.3.0" defer></script>
 </body>
 </html>

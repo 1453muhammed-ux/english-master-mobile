@@ -34,11 +34,11 @@ exports.aiCoach=onCall({region:REGION,secrets:[OPENAI_API_KEY],enforceAppCheck:t
   const tutorQuestions=historyRows.filter(x=>x.role==='Tutor').map(x=>x.text).filter(Boolean).slice(-15);
   const language=languageName(course),supportName=supportLanguageName(support);
   const correctionRule=correctionMode==='fluency'?'Ignore minor mistakes that do not block meaning; mention that they were skipped. Correct only major grammar or word-choice errors.':correctionMode==='teacher'?'Identify the exact grammar, word-choice, repetition, or sentence-completion problem. Explain how the correction changes meaning or naturalness. Never use a generic punctuation explanation when a more important problem exists.':'Correct important mistakes gently and keep the conversation moving.';
-  const instructions=`You are WordPilot Conversation Coach 3.1, a professional ${language} speaking tutor for a ${level} learner. The scenario is "${scenario}". The learner's explanation language is ${supportName}.
+  const instructions=`You are Mira, WordPilot Conversation Coach 4.0, a warm and professional ${language} speaking tutor for a ${level} learner. The real-life role-play scenario is "${scenario}". The learner's explanation language is ${supportName}.
 
 Conversation policy:
-- Continue naturally from the learner's latest answer and use facts already shared.
-- Ask exactly ONE short follow-up question in ${language} at the end of YANIT.
+- Stay in the selected real-life role and continue naturally from the learner's latest answer. Use facts already shared.
+- Ask exactly ONE short, practical follow-up question in ${language} at the end of YANIT so the learner can complete the scenario.
 - Never repeat or paraphrase any of these recent tutor questions: ${JSON.stringify(tutorQuestions)}.
 - If the learner already answered a topic, deepen it with how/why/when/comparison rather than restarting.
 - Keep YANIT to 1-3 natural sentences suitable for ${level}.
@@ -68,7 +68,7 @@ AKICILIK: <integer 0-100>`;
   const field=(name,max)=>clean((raw.match(new RegExp(`${name}\\s*:\\s*([\\s\\S]*?)(?=\\n(?:${labels})\\s*:|$)`,'i'))||[])[1],max);
   const status=/DOGRU/i.test(field('DURUM',30))?'correct':'needs_work',score=Math.max(0,Math.min(100,Math.round(Number(field('PUAN',10))||0)));
   const metric=name=>Math.max(0,Math.min(100,Math.round(Number(field(name,10))||score)));
-  return {text:field('YANIT',1000)||'Please tell me a little more.',status,corrected:field('DUZELTILMIS',600)||message,explanation:field('ACIKLAMA',500),suggestion:field('ALTERNATIF',600),errorType:field('HATA_TURU',40)||'none',note:field('NOT',400),score,metrics:{grammar:metric('DILBILGISI'),clarity:metric('ANLASILIRLIK'),fluency:metric('AKICILIK')},mode:'cloud-v80'};
+  return {text:field('YANIT',1000)||'Please tell me a little more.',status,corrected:field('DUZELTILMIS',600)||message,explanation:field('ACIKLAMA',500),suggestion:field('ALTERNATIF',600),errorType:field('HATA_TURU',40)||'none',note:field('NOT',400),score,metrics:{grammar:metric('DILBILGISI'),clarity:metric('ANLASILIRLIK'),fluency:metric('AKICILIK')},mode:'cloud-v83'};
 });
 
 const fs=require('node:fs');
@@ -101,7 +101,7 @@ exports.getContentPack=onCall({region:REGION,enforceAppCheck:true,cors:true,maxI
   const db=getFirestore();await enforceContentRate(db,request.auth.uid);
   const all=readContent(key),offset=Math.max(0,Math.floor(Number(data.offset)||0)),limit=Math.max(1,Math.min(500,Math.floor(Number(data.limit)||250)));
   const base=kind==='exam'?all.tasks:kind==='source'?all.packs:all;const filtered=kind==='stories'?base.filter(x=>!data.course||x.course===course):base;
-  return {version:'8.0.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
+  return {version:'8.3.0',kind,course,offset,limit,total:filtered.length,items:filtered.slice(offset,offset+limit)};
 });
 
 
