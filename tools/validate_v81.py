@@ -52,6 +52,24 @@ for field in required:
 check(all(item.get("commercial_safe") is True for item in words), "All cards are marked commercial-safe")
 check(len({item["content_hash"] for item in words}) == 2000, "Content hashes are unique")
 
+# Turkish-readable pronunciation layer restored from v7.0.
+ipa_chars = set("ɑæʌɔɛɝɪŋʊʃθðʒˈˌ")
+check(all(item.get("pronunciation_scheme") == "tr-readable" for item in words), "All 2000 cards use the Turkish-readable pronunciation scheme")
+check(all(not (set(str(item.get("pronunciation", ""))) & ipa_chars) and "/" not in str(item.get("pronunciation", "")) for item in words), "No IPA symbols remain in displayed pronunciations")
+base_by_term = {item["english"].strip().lower(): item for item in base}
+expected_pronunciations = {
+    "hello": "helou", "world": "vörld", "learn": "lörn",
+    "language": "lenggvec", "through": "tru", "thought": "tot",
+    "good morning": "gud morning", "women": "vimin",
+}
+wrong_samples = {term: base_by_term.get(term, {}).get("pronunciation") for term, expected in expected_pronunciations.items() if base_by_term.get(term, {}).get("pronunciation") != expected}
+check(not wrong_samples, "v7-style pronunciation samples match", str(wrong_samples))
+context_by_id = {int(item["id"]): item for item in context}
+check(context_by_id.get(1001, {}).get("pronunciation") == "sey helou", "Context pronunciation composes correctly: say hello")
+check(context_by_id.get(1011, {}).get("pronunciation") == "dı vörd pörsen", "Context pronunciation composes correctly: the word person")
+pron_map = json.loads((WORK / "tools/turkish_pronunciations_v811.json").read_text(encoding="utf-8"))
+check(len(pron_map) == 1000, "Portable pronunciation map contains 1000 base forms", str(len(pron_map)))
+
 
 def relation_ids(value: object) -> list[int]:
     return [int(match) for match in re.findall(r"\(#(\d+)\)", str(value or ""))]
@@ -74,7 +92,7 @@ function_words = json.loads((WORK / "functions/data/words.json").read_text(encod
 check(function_words == words, "Root and Cloud Functions word banks match")
 
 manifest = json.loads((WORK / "content_manifest_v711.json").read_text(encoding="utf-8"))
-check(manifest.get("version") == "8.1.0-tester-beta", "Content manifest version is v8.1")
+check(manifest.get("version") == "8.1.1-tester-beta", "Content manifest version is v8.1")
 check(manifest.get("english_learning_bank", {}).get("total") == 2000, "Content manifest reports 2000 English cards")
 
 
@@ -110,7 +128,7 @@ for ref in sw_refs:
     if clean and not (WORK / clean).exists():
         missing_sw.append(clean)
 check(not missing_sw, "All service-worker cache references exist", str(sorted(set(missing_sw))))
-check("wordpilot-v8.1.0" in sw_text and "modules/v81.js" in sw_text, "Service worker uses the v8.1 cache and module")
+check("wordpilot-v8.1.1" in sw_text and "modules/v81.js" in sw_text, "Service worker uses the v8.1 cache and module")
 
 # Removed copyrighted/legacy links and stale visible version labels.
 deploy_extensions = {".html", ".js", ".css", ".json", ".svg"}
@@ -134,7 +152,7 @@ check(not forbidden_hits, "No removed Drive links, legacy counts or stale visibl
 v81 = (WORK / "modules/v81.js").read_text(encoding="utf-8")
 learning = (WORK / "modules/learning-engine.js").read_text(encoding="utf-8")
 features = {
-    "v8.1 runtime module is loaded": "modules/v81.js?v=8.1.0" in index_text,
+    "v8.1 runtime module is loaded": "modules/v81.js?v=8.1.1" in index_text,
     "English actualCount is 2000": "COURSES.en.actualCount=2000" in v81,
     "Turkish flag uses local SVG": "assets/flag-tr.svg" in index_text and (WORK / "assets/flag-tr.svg").exists(),
     "Base/context collection filters exist": "base1000" in v81 and "context1000" in v81,
@@ -221,7 +239,7 @@ finally:
 
 passed = sum(1 for status, _, _ in results if status)
 failed = len(results) - passed
-lines = ["WORDPILOT v8.1.0 VALIDATION REPORT", "18 Temmuz 2026", ""]
+lines = ["WORDPILOT v8.1.1 VALIDATION REPORT", "18 Temmuz 2026", ""]
 for status, label, detail in results:
     line = f"{'PASS' if status else 'FAIL'} — {label}"
     if detail:

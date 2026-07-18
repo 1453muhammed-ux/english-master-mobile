@@ -1,7 +1,7 @@
-WORDPILOT v8.1.0 — CONVERSATION COACH 3.1 TESTER BETA
+WORDPILOT v8.1.1 — CONVERSATION COACH 3.1 TESTER BETA
 
 Deployment test address:
-https://wordpilot-7a574.web.app/?wpbuild=8.1.0
+https://wordpilot-7a574.web.app/?wpbuild=8.1.1
 
 STATUS
 Commercial-clean Tester Beta. This package is not Demo 1.0 and is not yet a public commercial release.
@@ -43,7 +43,7 @@ DEPLOYMENT
    firebase deploy --only firestore:rules
 4. Deploy Hosting:
    firebase deploy --only hosting
-5. Open the test URL once with ?wpbuild=8.1.0, then refresh after the service worker updates.
+5. Open the test URL once with ?wpbuild=8.1.1, then refresh after the service worker updates.
 6. Test with a new account and an existing v8.0 account.
 
 FILES TO REVIEW
@@ -54,3 +54,9 @@ FILES TO REVIEW
 - CONTENT_RIGHTS_POLICY.txt
 - THIRD_PARTY_LICENSES.txt
 - SECURITY_SETUP.txt
+
+
+TÜRKÇE-OKUNUR TELAFFUZ (v8.1.1)
+- İngilizce kartlarda IPA yerine v7.0 tarzı Türkçe-okunur biçim kullanılır.
+- 2000/2000 kartta okunuş vardır.
+- Örnek: hello = helou, world = vörld, through = tru.

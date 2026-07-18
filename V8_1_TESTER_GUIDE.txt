@@ -1,8 +1,8 @@
-WORDPILOT v8.1.0 — TESTER REHBERİ
+WORDPILOT v8.1.1 — TESTER REHBERİ
 
 1. TEMİZ AÇILIŞ
-- Siteyi ?wpbuild=8.1.0 parametresiyle aç.
-- Üstte v8.1.0 · Tester Beta yazmalı.
+- Siteyi ?wpbuild=8.1.1 parametresiyle aç.
+- Üstte v8.1.1 · Tester Beta yazmalı.
 - English kartında 2000 çalışma kartı görünmeli.
 - Türkiye bayrağı kırmızı zeminli yerel SVG olarak görünmeli.
 - Ana ekranda eski Google Drive / Çalışma PDF’leri bağlantısı görünmemeli.

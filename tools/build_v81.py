@@ -1,32 +1,26 @@
 import json, re, shutil, textwrap
 from pathlib import Path
-import cmudict
 
-ROOT=Path('/mnt/data/wordpilot_v8_1_work')
-words=json.loads((ROOT/'words.json').read_text(encoding='utf-8'))
-cmu=cmudict.dict()
+ROOT=Path(__file__).resolve().parents[1]
+_existing_words=json.loads((ROOT/'words.json').read_text(encoding='utf-8'))
+words=[x for x in _existing_words if int(x.get('id',0))<=1000 and x.get('card_type','word')=='word']
+if len(words)!=1000:
+    raise ValueError(f'Beklenen 1000 temel İngilizce kartı bulunamadı: {len(words)}')
+PRON_MAP=json.loads((ROOT/'tools/turkish_pronunciations_v811.json').read_text(encoding='utf-8'))
 
-ARPABET={
-'AA':'ɑ','AE':'æ','AH':'ʌ','AO':'ɔ','AW':'aʊ','AY':'aɪ','B':'b','CH':'tʃ','D':'d','DH':'ð','EH':'ɛ','ER':'ɝ','EY':'eɪ','F':'f','G':'ɡ','HH':'h','IH':'ɪ','IY':'i','JH':'dʒ','K':'k','L':'l','M':'m','N':'n','NG':'ŋ','OW':'oʊ','OY':'ɔɪ','P':'p','R':'r','S':'s','SH':'ʃ','T':'t','TH':'θ','UH':'ʊ','UW':'u','V':'v','W':'w','Y':'j','Z':'z','ZH':'ʒ'
-}
-def ipa_word(token):
-    key=re.sub(r"[^a-z']",'',token.lower())
-    prons=cmu.get(key)
-    if not prons:return key
-    out=[]
-    for p in prons[0]:
-        m=re.match(r'([A-Z]+)([012]?)',p)
-        if not m:continue
-        ph,stress=m.groups(); val=ARPABET.get(ph,ph.lower())
-        if stress=='1':val='ˈ'+val
-        elif stress=='2':val='ˌ'+val
-        out.append(val)
-    return ''.join(out).replace('ˈˈ','ˈ')
+def pronunciation_key(text):
+    return re.sub(r"[^a-z0-9']+",' ',str(text or '').lower()).strip()
 
-def ipa_phrase(text):
-    toks=re.findall(r"[A-Za-z']+",text)
-    if not toks:return ''
-    return '/'+ ' '.join(ipa_word(t) for t in toks) +'/'
+def tr_pronunciation(text):
+    return PRON_MAP.get(pronunciation_key(text),'')
+
+def context_pronunciation(base_pronunciation, phrase):
+    phrase=str(phrase or '')
+    if phrase.startswith('say '): return f'sey {base_pronunciation}'
+    if phrase.startswith('the word '): return f'dı vörd {base_pronunciation}'
+    if phrase.startswith('to '): return f'tu {base_pronunciation}'
+    if phrase.startswith('very '): return f'veri {base_pronunciation}'
+    return base_pronunciation
 
 def clean_meaning(s):
     s=re.sub(r'[★●•]+',' ',str(s))
@@ -67,7 +61,11 @@ def relation_text(ids, fallback):
     return '\n'.join(vals[:6]) if vals else fallback
 
 for x in words:
-    x['pronunciation']=ipa_phrase(x.get('english',''))
+    x['pronunciation']=tr_pronunciation(x.get('english',''))
+    if not x['pronunciation']: raise ValueError(f"Eksik Türkçe-okunur telaffuz: {x.get('english')}")
+    x['pronunciation_scheme']='tr-readable'
+    x['pronunciation_origin']='WordPilot v7 Turkish-readable pronunciation layer; missing clean-core forms completed for v8.1.1'
+    x['pronunciation_review_status']='restored-and-checked-v8.1.1'
     x['synonyms']=relation_text(relations[x['id']]['syn'],'Doğrudan eş anlamı yok')
     x['opposite']=relation_text(relations[x['id']]['ant'],'Doğrudan zıt anlamı yok')
     x['content_origin']=x.get('content_origin') or 'WordPilot Clean Core / licensed lexical seed'
@@ -113,7 +111,7 @@ for idx,x in enumerate(words,1001):
     context.append({
       **{k:v for k,v in x.items() if k not in ('id','concept_id','synonyms','opposite','family','phrase','collocations','content_hash')},
       'id':idx,'concept_id':f"ctx-{x.get('concept_id',x['id'])}",'english':phrase,'word':phrase,
-      'pronunciation':ipa_phrase(phrase),'meaning':meaning+' ★★★★☆','meaningTr':meaning,
+      'pronunciation':context_pronunciation(x['pronunciation'],phrase),'meaning':meaning+' ★★★★☆','meaningTr':meaning,
       'usage':f'• Bu kart “{base}” kelimesini kısa bir kalıp içinde kullanmayı öğretir.\n• Ana kelime kartı: #{x["id"]}.',
       'example':f'• I can use “{base}” naturally in a short conversation.',
       'translation':f'• “{tr}” anlamındaki “{base}” kelimesini kısa bir konuşmada doğal biçimde kullanabilirim.',
@@ -124,7 +122,8 @@ for idx,x in enumerate(words,1001):
       'topic':x.get('topic') or x.get('group') or 'Context practice','base_id':x['id'],'card_type':'context',
       'content_origin':'WordPilot original context-card generator based on reviewed Clean Core records',
       'license':'WordPilot original content','created_at':'2026-07-18','review_status':'tester-beta-human-review-recommended',
-      'commercial_safe':True,'content_hash':f'wp81-context-{x["id"]}'
+      'commercial_safe':True,'content_hash':f'wp81-context-{x["id"]}',
+      'pronunciation_scheme':'tr-readable','pronunciation_origin':'WordPilot original context pronunciation composed from reviewed base pronunciation','pronunciation_review_status':'generated-and-checked-v8.1.1'
     })
 all_words=words+context
 (ROOT/'words.json').write_text(json.dumps(all_words,ensure_ascii=False,indent=2),encoding='utf-8')
@@ -132,10 +131,10 @@ all_words=words+context
 
 # Update manifest.
 manifest=json.loads((ROOT/'content_manifest_v711.json').read_text(encoding='utf-8'))
-manifest['version']='8.1.0-tester-beta'
+manifest['version']='8.1.1-tester-beta'
 manifest['clean_concept_count']=1000
 manifest.setdefault('rich_course_counts',{})['en']=2000
-manifest['english_learning_bank']={'word_cards':1000,'context_cards':1000,'total':2000,'pronunciation_coverage':2000,'relation_fields_coverage':2000}
+manifest['english_learning_bank']={'word_cards':1000,'context_cards':1000,'total':2000,'pronunciation_coverage':2000,'pronunciation_scheme':'tr-readable','relation_fields_coverage':2000}
 manifest['notes']='The 2000-item English learning bank contains 1000 reviewed lexical cards and 1000 original context-pattern cards. No DiziÖğren PDF link or copied sentence bank is included.'
 (ROOT/'content_manifest_v711.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 

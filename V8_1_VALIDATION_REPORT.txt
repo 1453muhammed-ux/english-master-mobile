@@ -1,4 +1,4 @@
-WORDPILOT v8.1.0 VALIDATION REPORT
+WORDPILOT v8.1.1 VALIDATION REPORT
 18 Temmuz 2026
 
 PASS — JSON parses: curriculum_v6.json
@@ -40,6 +40,12 @@ PASS — All 2000 cards contain content_hash: missing=[]
 PASS — All 2000 cards contain card_type: missing=[]
 PASS — All cards are marked commercial-safe
 PASS — Content hashes are unique
+PASS — All 2000 cards use the Turkish-readable pronunciation scheme
+PASS — No IPA symbols remain in displayed pronunciations
+PASS — v7-style pronunciation samples match: {}
+PASS — Context pronunciation composes correctly: say hello
+PASS — Context pronunciation composes correctly: the word person
+PASS — Portable pronunciation map contains 1000 base forms: 1000
 PASS — Working synonym quiz links: 194
 PASS — Working antonym quiz links: 131
 PASS — All synonym/antonym target IDs resolve: []
@@ -81,4 +87,4 @@ PASS — No literal OpenAI secret is embedded: []
 PASS — All JavaScript files pass node --check
 PASS — Local HTTP smoke test returns six core files
 
-SUMMARY — 79 passed, 0 failed
+SUMMARY — 85 passed, 0 failed

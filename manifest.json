@@ -2,7 +2,7 @@
   "id": "./",
   "name": "WordPilot 8.1 Tester Beta",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=8.1.0",
+  "start_url": "./?wpbuild=8.1.1",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
