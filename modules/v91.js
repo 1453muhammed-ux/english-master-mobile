@@ -1,5 +1,5 @@
-/* WordPilot v9.1.0 — honest multilingual coverage and dynamic library ranges. */
-const WP91_VERSION='9.1.0';
+/* WordPilot v9.2.0 — honest multilingual coverage and dynamic library ranges. */
+const WP91_VERSION='9.2.0';
 const WP91_COUNTS={en:3000,ru:1500,uz:1000,tr:1000,es:1000,de:1000,fr:1000,it:1000,pt:1000,ja:1000,ko:1000,zh:1000};
 const WP91_REVIEW_LABEL={en:'3000 İngilizce kelime · 1000 incelenmiş + 2000 beta',ru:'1500 kontrollü Rusça kayıt',uz:'1000 kontrollü Özbekçe kayıt',tr:'1000 bağlantılı Türkçe kavram'};
 function wp91Count(id){return Number(WP91_COUNTS[id]||COURSES[id]?.actualCount||COURSES[id]?.displayCount||1000)}
@@ -51,7 +51,7 @@ filteredWords=function(){
 };
 function wp91ApplyTruth(){
   document.documentElement.dataset.wpVersion=WP91_VERSION;document.title='WordPilot 9.1 · Tutarlı Dil Kütüphanesi · Coach 4.0';
-  wp91Set($('.version'),'v9.1.0 · Tester Beta');
+  wp91Set($('.version'),'v9.2.0 · Tester Beta');
   Object.keys(COURSES).forEach(id=>{const n=wp91Count(id);COURSES[id].displayCount=n;COURSES[id].actualCount=n;COURSES[id].reviewedCount=n});
   $$('.course-card[data-course]').forEach(card=>wp91Set(card.querySelector('small'),wp91CourseText(card.dataset.course)));
   wp91Set($('#activeCourseSummary'),`${COURSES[activeCourse]?.name||activeCourse} · ${wp91CourseText(activeCourse)}`);

@@ -22394,5 +22394,1399 @@
     "source": "WordPilot özgün derecelendirilmiş okuma · Açık/kamu malı okuma pedagojisi ve yüklenen kaynakların öğretim yapısı temel alınmıştır.",
     "license": "WordPilot original educational content",
     "readerVersion": "7.0.0"
+  },
+  {
+    "id": "en-v92-a1-01",
+    "course": "en",
+    "title": "The Blue Bicycle",
+    "titleTr": "Mavi Bisiklet",
+    "level": "A1",
+    "topic": "daily life",
+    "genre": "Günlük Yaşam",
+    "emoji": "🚲",
+    "lines": [
+      {
+        "text": "Mina lives in a small apartment with her mother and her cat, Piko.",
+        "translation": "Mina annesi ve kedisi Piko ile küçük bir dairede yaşar."
+      },
+      {
+        "text": "Every morning, she walks to school because the school is close to her home.",
+        "translation": "Her sabah okula yürür çünkü okul evine yakındır."
+      },
+      {
+        "text": "One Monday, Mina sees a blue bicycle in the shop window near the bus stop.",
+        "translation": "Bir pazartesi Mina otobüs durağının yanındaki mağazanın vitrininde mavi bir bisiklet görür."
+      },
+      {
+        "text": "The bicycle has a small bell, a brown seat, and a basket in front.",
+        "translation": "Bisikletin küçük bir zili, kahverengi bir selesi ve önünde bir sepeti vardır."
+      },
+      {
+        "text": "Mina likes it, but she does not have enough money.",
+        "translation": "Mina onu beğenir ama yeterli parası yoktur."
+      },
+      {
+        "text": "She decides to save a little money every week.",
+        "translation": "Her hafta biraz para biriktirmeye karar verir."
+      },
+      {
+        "text": "After school, she helps her neighbor carry bags and water the flowers.",
+        "translation": "Okuldan sonra komşusunun çantaları taşımasına ve çiçekleri sulamasına yardım eder."
+      },
+      {
+        "text": "Her neighbor gives her a small payment and thanks her for the help.",
+        "translation": "Komşusu ona küçük bir ödeme yapar ve yardımı için teşekkür eder."
+      },
+      {
+        "text": "Mina puts the money in a glass jar on her desk.",
+        "translation": "Mina parayı masasındaki cam kavanoza koyar."
+      },
+      {
+        "text": "Weeks pass, and the jar slowly becomes full.",
+        "translation": "Haftalar geçer ve kavanoz yavaşça dolar."
+      },
+      {
+        "text": "On her birthday, her mother takes her to the bicycle shop.",
+        "translation": "Doğum gününde annesi onu bisiklet mağazasına götürür."
+      },
+      {
+        "text": "Mina counts her money and buys the blue bicycle.",
+        "translation": "Mina parasını sayar ve mavi bisikleti satın alır."
+      },
+      {
+        "text": "The shopkeeper adjusts the seat and gives her a bright yellow helmet.",
+        "translation": "Mağaza sahibi seleyi ayarlar ve ona parlak sarı bir kask verir."
+      },
+      {
+        "text": "Mina rides carefully in the park while her mother walks beside her.",
+        "translation": "Mina parkta dikkatle bisiklete binerken annesi yanında yürür."
+      },
+      {
+        "text": "The next morning, Mina wakes up early and looks at the bicycle beside the door.",
+        "translation": "Ertesi sabah Mina erken uyanır ve kapının yanındaki bisiklete bakar."
+      },
+      {
+        "text": "She checks the tires, puts on her helmet, and rings the small bell once.",
+        "translation": "Lastikleri kontrol eder, kaskını takar ve küçük zili bir kez çalar."
+      },
+      {
+        "text": "In the park, she meets her friend Ece, who does not know how to ride.",
+        "translation": "Parkta bisiklete binmeyi bilmeyen arkadaşı Ece ile karşılaşır."
+      },
+      {
+        "text": "Mina holds the back of the seat and walks slowly while Ece tries to balance.",
+        "translation": "Ece dengesini kurmaya çalışırken Mina selenin arkasını tutar ve yavaşça yürür."
+      },
+      {
+        "text": "After several tries, Ece rides a short distance alone, and both girls laugh.",
+        "translation": "Birkaç denemeden sonra Ece kısa bir mesafeyi tek başına gider ve iki kız da güler."
+      },
+      {
+        "text": "Mina understands that saving for the bicycle taught her patience, but sharing it teaches her kindness.",
+        "translation": "Mina, bisiklet için para biriktirmenin ona sabrı; paylaşmanın ise iyiliği öğrettiğini anlar."
+      },
+      {
+        "text": "She is proud because the bicycle is not only a gift; it is also the result of her patience.",
+        "translation": "Gururludur çünkü bisiklet yalnızca bir hediye değil, sabrının da sonucudur."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 4
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 4,
+        "endLine": 8
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 8,
+        "endLine": 12
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 12,
+        "endLine": 15
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why does Mina walk to school?",
+        "qTr": "Mina neden okula yürür?",
+        "options": [
+          "It is close to home",
+          "She has no shoes",
+          "The bus is free"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Where does Mina save her money?",
+        "qTr": "Mina parasını nerede biriktirir?",
+        "options": [
+          "In a glass jar",
+          "Under the bicycle",
+          "At school"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What color is her helmet?",
+        "qTr": "Kaskı ne renktir?",
+        "options": [
+          "Yellow",
+          "Blue",
+          "Brown"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 182,
+    "readMinutes": 2,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-v92-a2-01",
+    "course": "en",
+    "title": "The Community Garden",
+    "titleTr": "Mahalle Bahçesi",
+    "level": "A2",
+    "topic": "community",
+    "genre": "Sıcak Hikâye",
+    "emoji": "🌱",
+    "lines": [
+      {
+        "text": "When Arda moved to a new neighborhood, he knew no one except the owner of his apartment.",
+        "translation": "Arda yeni bir mahalleye taşındığında dairesinin sahibinden başka kimseyi tanımıyordu."
+      },
+      {
+        "text": "The streets were busy during the day, but the building felt quiet in the evenings.",
+        "translation": "Sokaklar gündüzleri hareketliydi ama bina akşamları sessiz geliyordu."
+      },
+      {
+        "text": "One Saturday, he noticed a handwritten sign beside an empty piece of land.",
+        "translation": "Bir cumartesi boş bir arazinin yanında el yazısıyla yazılmış bir ilan fark etti."
+      },
+      {
+        "text": "The sign invited local people to help build a community garden.",
+        "translation": "İlan, mahalle sakinlerini ortak bir bahçe kurmaya yardım etmeye çağırıyordu."
+      },
+      {
+        "text": "Arda had never grown vegetables, yet he decided to join the first meeting.",
+        "translation": "Arda daha önce hiç sebze yetiştirmemişti ama ilk toplantıya katılmaya karar verdi."
+      },
+      {
+        "text": "At the meeting, he met Leyla, a retired science teacher, and Sami, a university student.",
+        "translation": "Toplantıda emekli fen öğretmeni Leyla ve üniversite öğrencisi Sami ile tanıştı."
+      },
+      {
+        "text": "They divided the land into small areas and made a list of tools, seeds, and jobs.",
+        "translation": "Araziyi küçük bölümlere ayırdılar ve alet, tohum ve iş listesi hazırladılar."
+      },
+      {
+        "text": "Arda offered to repair the old wooden fence because he enjoyed practical work.",
+        "translation": "Arda uygulamalı işleri sevdiği için eski ahşap çiti onarmayı teklif etti."
+      },
+      {
+        "text": "During the next two weekends, the group cleaned the ground and carried away broken glass.",
+        "translation": "Sonraki iki hafta sonunda grup toprağı temizledi ve kırık camları taşıdı."
+      },
+      {
+        "text": "They planted tomatoes, beans, herbs, and flowers that attracted bees.",
+        "translation": "Domates, fasulye, otlar ve arıları çeken çiçekler diktiler."
+      },
+      {
+        "text": "Leyla showed everyone how to water the roots without wasting water.",
+        "translation": "Leyla herkese suyu boşa harcamadan kökleri nasıl sulayacağını gösterdi."
+      },
+      {
+        "text": "Sami created a simple online schedule so that each person knew when to visit.",
+        "translation": "Sami herkesin ne zaman geleceğini bilmesi için basit bir çevrim içi program hazırladı."
+      },
+      {
+        "text": "At first, some plants became weak because the weather was unusually hot.",
+        "translation": "Başlangıçta hava alışılmadık derecede sıcak olduğu için bazı bitkiler zayıfladı."
+      },
+      {
+        "text": "Instead of giving up, the group built light covers from reused cloth.",
+        "translation": "Vazgeçmek yerine grup yeniden kullanılan kumaştan hafif örtüler yaptı."
+      },
+      {
+        "text": "By the middle of summer, the garden was green and full of life.",
+        "translation": "Yaz ortasına gelindiğinde bahçe yeşil ve hayat doluydu."
+      },
+      {
+        "text": "Children came to paint signs, and older neighbors shared recipes for the vegetables.",
+        "translation": "Çocuklar tabelaları boyamaya geldi, yaşlı komşular da sebzeler için tarifler paylaştı."
+      },
+      {
+        "text": "The first harvest was not large, but everyone brought a dish to a long outdoor table.",
+        "translation": "İlk hasat büyük değildi ama herkes uzun açık hava masasına bir yemek getirdi."
+      },
+      {
+        "text": "Arda realized that the garden had produced more than food.",
+        "translation": "Arda bahçenin yiyecekten fazlasını ürettiğini fark etti."
+      },
+      {
+        "text": "It had given strangers a reason to meet, work, and trust one another.",
+        "translation": "Yabancılara buluşmak, çalışmak ve birbirlerine güvenmek için bir neden vermişti."
+      },
+      {
+        "text": "In autumn, the group decided that the garden should remain useful after the summer harvest.",
+        "translation": "Sonbaharda grup, bahçenin yaz hasadından sonra da yararlı kalmasına karar verdi."
+      },
+      {
+        "text": "They planted onions and winter herbs, collected dry leaves, and built a small box for compost.",
+        "translation": "Soğan ve kışlık otlar ektiler, kuru yaprakları topladılar ve kompost için küçük bir kutu yaptılar."
+      },
+      {
+        "text": "Arda made a simple bench from wood that a local shop no longer needed.",
+        "translation": "Arda, yerel bir dükkânın artık kullanmadığı tahtalardan basit bir bank yaptı."
+      },
+      {
+        "text": "People began to sit there after work, even when they did not have a garden job.",
+        "translation": "İnsanlar bahçede işleri olmasa bile işten sonra orada oturmaya başladılar."
+      },
+      {
+        "text": "Leyla organized a Saturday class where children learned how seeds change during the year.",
+        "translation": "Leyla, çocukların tohumların yıl boyunca nasıl değiştiğini öğrendiği bir cumartesi dersi düzenledi."
+      },
+      {
+        "text": "Sami added photographs and short instructions to the online schedule for new volunteers.",
+        "translation": "Sami, yeni gönüllüler için çevrim içi programa fotoğraflar ve kısa yönergeler ekledi."
+      },
+      {
+        "text": "When winter rain damaged one corner, the neighbors repaired it together before the next storm.",
+        "translation": "Kış yağmuru bir köşeye zarar verdiğinde komşular bir sonraki fırtınadan önce orayı birlikte onardı."
+      },
+      {
+        "text": "By spring, the garden was not a temporary project anymore; it had become a shared place with its own routines and memories.",
+        "translation": "İlkbahara gelindiğinde bahçe artık geçici bir proje değildi; kendi düzeni ve anıları olan ortak bir yere dönüşmüştü."
+      },
+      {
+        "text": "For the first time since moving, Arda felt that the neighborhood was truly his home.",
+        "translation": "Taşındığından beri ilk kez Arda mahallenin gerçekten evi olduğunu hissetti."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 5
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 5,
+        "endLine": 10
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 10,
+        "endLine": 15
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 15,
+        "endLine": 20
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why did Arda join the meeting?",
+        "qTr": "Arda toplantıya neden katıldı?",
+        "options": [
+          "He wanted to help build a garden",
+          "He wanted to sell his apartment",
+          "He needed a bus ticket"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did Sami create?",
+        "qTr": "Sami ne hazırladı?",
+        "options": [
+          "An online schedule",
+          "A new fence",
+          "A recipe book"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did the garden produce besides food?",
+        "qTr": "Bahçe yiyecek dışında ne üretti?",
+        "options": [
+          "A stronger community",
+          "More traffic",
+          "A larger building"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 267,
+    "readMinutes": 2,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-v92-b1-01",
+    "course": "en",
+    "title": "The Last Train to Samarkand",
+    "titleTr": "Semerkant’a Son Tren",
+    "level": "B1",
+    "topic": "travel and choices",
+    "genre": "Yolculuk",
+    "emoji": "🚆",
+    "lines": [
+      {
+        "text": "Elif reached the station ten minutes before the last evening train to Samarkand.",
+        "translation": "Elif, Semerkant’a giden son akşam treninden on dakika önce istasyona ulaştı."
+      },
+      {
+        "text": "She had spent the day at a conference and carried a notebook filled with new ideas.",
+        "translation": "Günü bir konferansta geçirmişti ve yeni fikirlerle dolu bir defter taşıyordu."
+      },
+      {
+        "text": "The departure board showed a short delay, so she bought tea and found a seat near the platform.",
+        "translation": "Kalkış panosu kısa bir gecikme gösteriyordu; bu yüzden çay aldı ve peronun yanında bir yer buldu."
+      },
+      {
+        "text": "Across from her sat an elderly man holding a carefully wrapped musical instrument.",
+        "translation": "Karşısında özenle sarılmış bir müzik aleti tutan yaşlı bir adam oturuyordu."
+      },
+      {
+        "text": "When the announcement changed from ten minutes to forty, several passengers began to complain.",
+        "translation": "Duyuru on dakikadan kırk dakikaya çıkınca birkaç yolcu şikâyet etmeye başladı."
+      },
+      {
+        "text": "The old man remained calm and asked Elif whether she was visiting family.",
+        "translation": "Yaşlı adam sakin kaldı ve Elif’e ailesini ziyaret edip etmediğini sordu."
+      },
+      {
+        "text": "She explained that she was going to interview a craftswoman for a university project.",
+        "translation": "Bir üniversite projesi için bir zanaatkârla görüşmeye gittiğini açıkladı."
+      },
+      {
+        "text": "The man smiled and said that he had repaired traditional instruments for more than fifty years.",
+        "translation": "Adam gülümsedi ve elli yıldan uzun süredir geleneksel çalgıları onardığını söyledi."
+      },
+      {
+        "text": "He opened the cloth slightly and showed her a wooden instrument marked by age and travel.",
+        "translation": "Bezi biraz açıp yaşın ve yolculukların izlerini taşıyan ahşap bir çalgı gösterdi."
+      },
+      {
+        "text": "Each scratch, he said, belonged to a performance, a wedding, or a long journey.",
+        "translation": "Her çizik, dedi, bir gösteriye, düğüne ya da uzun bir yolculuğa aitti."
+      },
+      {
+        "text": "Elif asked permission to write down his words, and he agreed on one condition: she must also listen to the silence between the stories.",
+        "translation": "Elif sözlerini yazmak için izin istedi; adam bir şartla kabul etti: Hikâyeler arasındaki sessizliği de dinlemeliydi."
+      },
+      {
+        "text": "At first she thought he was joking, but then the station lights went out for several seconds.",
+        "translation": "Önce şaka yaptığını düşündü ama sonra istasyon ışıkları birkaç saniyeliğine söndü."
+      },
+      {
+        "text": "In the darkness, the impatient voices stopped, and everyone heard rain striking the metal roof.",
+        "translation": "Karanlıkta sabırsız sesler sustu ve herkes yağmurun metal çatıya vuruşunu duydu."
+      },
+      {
+        "text": "When the lights returned, the old man quietly played three notes.",
+        "translation": "Işıklar geri geldiğinde yaşlı adam sessizce üç nota çaldı."
+      },
+      {
+        "text": "The sound was small, yet the entire waiting area became still.",
+        "translation": "Ses küçüktü ama bütün bekleme alanı sessizleşti."
+      },
+      {
+        "text": "A child near the ticket office began to smile, and even the angry passengers lowered their voices.",
+        "translation": "Bilet gişesinin yanındaki bir çocuk gülümsemeye başladı; öfkeli yolcular bile seslerini alçalttı."
+      },
+      {
+        "text": "The train finally arrived after an hour, wet and shining under the platform lamps.",
+        "translation": "Tren sonunda bir saat sonra, peron lambalarının altında ıslak ve parlak biçimde geldi."
+      },
+      {
+        "text": "Elif and the old man entered different carriages, but he gave her a card with the address of his workshop.",
+        "translation": "Elif ve yaşlı adam farklı vagonlara bindi; fakat adam ona atölyesinin adresinin yazılı olduğu bir kart verdi."
+      },
+      {
+        "text": "During the journey, Elif looked at her conference notes and then at the new card.",
+        "translation": "Yolculuk sırasında Elif konferans notlarına, sonra yeni karta baktı."
+      },
+      {
+        "text": "She understood that her project did not need only planned interviews; it also needed unexpected encounters.",
+        "translation": "Projesinin yalnızca planlı görüşmelere değil, beklenmedik karşılaşmalara da ihtiyacı olduğunu anladı."
+      },
+      {
+        "text": "The next morning, she changed her schedule and visited the workshop before meeting the craftswoman.",
+        "translation": "Ertesi sabah programını değiştirip zanaatkârla görüşmeden önce atölyeyi ziyaret etti."
+      },
+      {
+        "text": "There she found shelves of instruments, photographs, and letters from musicians around the world.",
+        "translation": "Orada dünyanın dört bir yanındaki müzisyenlerden gelen çalgılar, fotoğraflar ve mektuplarla dolu raflar buldu."
+      },
+      {
+        "text": "Her final project became a study of how objects carry memory from one person to another.",
+        "translation": "Son projesi, nesnelerin hafızayı bir kişiden diğerine nasıl taşıdığı üzerine bir çalışmaya dönüştü."
+      },
+      {
+        "text": "At the workshop, the old man introduced himself as Davron and invited Elif to watch him repair a damaged instrument.",
+        "translation": "Atölyede yaşlı adam kendisini Davron olarak tanıttı ve Elif’i hasarlı bir çalgıyı onarırken izlemeye davet etti."
+      },
+      {
+        "text": "He first examined the wood under a bright lamp, then tapped different areas and listened to the sound.",
+        "translation": "Önce ahşabı parlak bir lambanın altında inceledi, sonra farklı bölgelere hafifçe vurup sesi dinledi."
+      },
+      {
+        "text": "Elif expected special machines, but most of his tools were simple and had been used for decades.",
+        "translation": "Elif özel makineler bekliyordu; ancak aletlerinin çoğu basitti ve onlarca yıldır kullanılıyordu."
+      },
+      {
+        "text": "Davron explained that a repair should protect the history of an object instead of making it look completely new.",
+        "translation": "Davron, bir onarımın nesneyi tamamen yeni göstermek yerine onun tarihini koruması gerektiğini açıkladı."
+      },
+      {
+        "text": "A deep mark near the edge, for example, came from a musician who had crossed the mountains during a winter storm.",
+        "translation": "Örneğin kenardaki derin bir iz, kış fırtınasında dağları aşan bir müzisyenden kalmıştı."
+      },
+      {
+        "text": "Removing the mark would also remove part of the story that gave the instrument meaning.",
+        "translation": "Bu izi silmek, çalgıya anlam veren hikâyenin bir bölümünü de silmek olurdu."
+      },
+      {
+        "text": "Elif recorded the repair process and later compared it with the methods used by the craftswoman she had planned to interview.",
+        "translation": "Elif onarım sürecini kaydetti ve daha sonra bunu görüşmeyi planladığı zanaatkârın yöntemleriyle karşılaştırdı."
+      },
+      {
+        "text": "Both people worked differently, yet both listened carefully to the materials before making a change.",
+        "translation": "İkisi farklı biçimde çalışıyordu; ancak ikisi de bir değişiklik yapmadan önce malzemeyi dikkatle dinliyordu."
+      },
+      {
+        "text": "This comparison became the central idea of her project: skilled work was not only about control, but also about attention.",
+        "translation": "Bu karşılaştırma projesinin ana fikrine dönüştü: ustalık yalnızca kontrol etmekle değil, dikkat etmekle de ilgiliydi."
+      },
+      {
+        "text": "The delayed train had opened a path that no conference program could have planned.",
+        "translation": "Geciken tren, hiçbir konferans programının planlayamayacağı bir yol açmıştı."
+      },
+      {
+        "text": "Years later, she still remembered that the most useful lesson began during a delay she had first considered a waste of time.",
+        "translation": "Yıllar sonra bile en yararlı dersin başlangıçta zaman kaybı saydığı bir gecikme sırasında başladığını hatırlıyordu."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 6
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 6,
+        "endLine": 12
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 12,
+        "endLine": 18
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 18,
+        "endLine": 24
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why was Elif traveling to Samarkand?",
+        "qTr": "Elif neden Semerkant’a gidiyordu?",
+        "options": [
+          "To interview a craftswoman",
+          "To buy a train",
+          "To repair the station"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What happened when the lights went out?",
+        "qTr": "Işıklar söndüğünde ne oldu?",
+        "options": [
+          "People heard the rain clearly",
+          "The train left",
+          "Everyone went home"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did Elif change her project?",
+        "qTr": "Elif projesini nasıl değiştirdi?",
+        "options": [
+          "She studied how objects carry memory",
+          "She cancelled all interviews",
+          "She wrote only about trains"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 374,
+    "readMinutes": 2,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-v92-b2-01",
+    "course": "en",
+    "title": "The Archive Below the Library",
+    "titleTr": "Kütüphanenin Altındaki Arşiv",
+    "level": "B2",
+    "topic": "history and evidence",
+    "genre": "Gizem",
+    "emoji": "🗃️",
+    "lines": [
+      {
+        "text": "The municipal library had occupied the same stone building for almost a century, but few visitors knew that another floor existed below the public reading rooms.",
+        "translation": "Belediye kütüphanesi neredeyse bir yüzyıldır aynı taş binadaydı; ancak çok az ziyaretçi halka açık okuma salonlarının altında başka bir kat olduğunu biliyordu."
+      },
+      {
+        "text": "Nora discovered the basement archive while helping to prepare an exhibition about the town’s industrial past.",
+        "translation": "Nora, kasabanın sanayi geçmişiyle ilgili bir sergi hazırlamaya yardım ederken bodrum arşivini keşfetti."
+      },
+      {
+        "text": "The official catalogue listed maps, council records, and local newspapers, yet one locked cabinet had no number.",
+        "translation": "Resmî katalogda haritalar, meclis kayıtları ve yerel gazeteler vardı; ancak kilitli bir dolabın numarası yoktu."
+      },
+      {
+        "text": "The head librarian, Mr. Kaya, said the cabinet had been closed since a flood damaged the archive twenty years earlier.",
+        "translation": "Baş kütüphaneci Bay Kaya, dolabın yirmi yıl önce arşive zarar veren selden beri kapalı olduğunu söyledi."
+      },
+      {
+        "text": "He believed the contents were probably routine documents, but he agreed to request permission to open it.",
+        "translation": "İçindekilerin muhtemelen sıradan belgeler olduğunu düşünüyordu; yine de açmak için izin istemeyi kabul etti."
+      },
+      {
+        "text": "When the key finally arrived, Nora expected wet paper and unreadable files.",
+        "translation": "Anahtar sonunda geldiğinde Nora ıslak kâğıtlar ve okunamaz dosyalar bekliyordu."
+      },
+      {
+        "text": "Instead, they found dozens of audio tapes, photographs, and handwritten interviews with factory workers.",
+        "translation": "Bunun yerine onlarca ses kaseti, fotoğraf ve fabrika işçileriyle yapılmış el yazısı görüşmeler buldular."
+      },
+      {
+        "text": "The collection had been created by a young teacher named Selim, who disappeared from local records after 1987.",
+        "translation": "Koleksiyon, 1987’den sonra yerel kayıtlardan kaybolan Selim adlı genç bir öğretmen tarafından oluşturulmuştu."
+      },
+      {
+        "text": "Nora began comparing the interviews with the official history planned for the exhibition.",
+        "translation": "Nora görüşmeleri sergi için planlanan resmî tarihle karşılaştırmaya başladı."
+      },
+      {
+        "text": "The difference was striking: public reports celebrated economic growth, while the workers described injuries, polluted water, and repeated demands for safer conditions.",
+        "translation": "Fark çarpıcıydı: Kamu raporları ekonomik büyümeyi kutlarken işçiler yaralanmaları, kirli suyu ve daha güvenli koşullar için tekrarlanan talepleri anlatıyordu."
+      },
+      {
+        "text": "Some accounts contradicted one another, and several speakers remembered dates differently.",
+        "translation": "Bazı anlatılar birbiriyle çelişiyor, birkaç konuşmacı tarihleri farklı hatırlıyordu."
+      },
+      {
+        "text": "Mr. Kaya warned Nora not to treat every personal memory as unquestionable fact.",
+        "translation": "Bay Kaya, Nora’yı her kişisel anıyı sorgulanamaz gerçek olarak görmemesi konusunda uyardı."
+      },
+      {
+        "text": "At the same time, he admitted that official documents could also hide choices, omissions, and political pressure.",
+        "translation": "Aynı zamanda resmî belgelerin de tercihleri, eksiltmeleri ve siyasi baskıyı gizleyebileceğini kabul etti."
+      },
+      {
+        "text": "They created a table showing which claims were supported by photographs, medical records, newspaper articles, or multiple interviews.",
+        "translation": "Hangi iddiaların fotoğraflar, tıbbi kayıtlar, gazeteler veya birden fazla görüşmeyle desteklendiğini gösteren bir tablo hazırladılar."
+      },
+      {
+        "text": "One tape mentioned a night when the river changed color and fish appeared on the surface.",
+        "translation": "Bir kaset, nehrin renginin değiştiği ve balıkların yüzeye çıktığı bir geceden söz ediyordu."
+      },
+      {
+        "text": "The event was absent from the council minutes, but a regional newspaper carried a short report about an unexplained smell.",
+        "translation": "Olay meclis tutanaklarında yoktu; fakat bölgesel bir gazete açıklanamayan bir koku hakkında kısa bir haber yayımlamıştı."
+      },
+      {
+        "text": "Nora contacted retired residents and found three people who independently remembered the same week.",
+        "translation": "Nora emekli sakinlerle iletişime geçti ve aynı haftayı birbirinden bağımsız biçimde hatırlayan üç kişi buldu."
+      },
+      {
+        "text": "Their memories were not identical, but the shared details were strong enough to justify further investigation.",
+        "translation": "Anıları aynı değildi; ancak ortak ayrıntılar daha ileri araştırmayı haklı çıkaracak kadar güçlüydü."
+      },
+      {
+        "text": "The exhibition committee became nervous when Nora proposed adding a section about the dispute.",
+        "translation": "Nora anlaşmazlıkla ilgili bir bölüm eklemeyi önerdiğinde sergi komitesi tedirgin oldu."
+      },
+      {
+        "text": "Some members feared legal complaints, while others worried that the town would appear ungrateful for the jobs the factory had provided.",
+        "translation": "Bazı üyeler yasal şikâyetlerden, diğerleri ise fabrikanın sağladığı işler için kasabanın nankör görüneceğinden endişelendi."
+      },
+      {
+        "text": "Nora argued that a mature community could recognize both opportunity and harm without reducing the past to a simple slogan.",
+        "translation": "Nora olgun bir toplumun geçmişi basit bir slogana indirgemeden hem fırsatı hem zararı kabul edebileceğini savundu."
+      },
+      {
+        "text": "She proposed displaying the evidence in layers, clearly separating verified facts, personal testimony, and unanswered questions.",
+        "translation": "Kanıtları katmanlar hâlinde sergilemeyi; doğrulanmış gerçekleri, kişisel tanıklıkları ve yanıtsız soruları açıkça ayırmayı önerdi."
+      },
+      {
+        "text": "The committee approved a smaller version of the section and invited visitors to record their own memories.",
+        "translation": "Komite bölümün daha küçük bir sürümünü onayladı ve ziyaretçileri kendi anılarını kaydetmeye davet etti."
+      },
+      {
+        "text": "On opening day, the listening station attracted more attention than the polished machinery displayed in the main hall.",
+        "translation": "Açılış gününde dinleme istasyonu, ana salondaki cilalı makinelerden daha fazla ilgi çekti."
+      },
+      {
+        "text": "People stayed to compare stories, correct names, and add documents that had been stored in family homes.",
+        "translation": "İnsanlar hikâyeleri karşılaştırmak, isimleri düzeltmek ve aile evlerinde saklanan belgeleri eklemek için kaldı."
+      },
+      {
+        "text": "A month later, the library announced a permanent oral-history project with public rules for consent, access, and verification.",
+        "translation": "Bir ay sonra kütüphane rıza, erişim ve doğrulama için kamusal kuralları olan kalıcı bir sözlü tarih projesi duyurdu."
+      },
+      {
+        "text": "The locked cabinet had not contained a complete truth, but it had changed the questions the town was willing to ask.",
+        "translation": "Kilitli dolap eksiksiz bir gerçek içermiyordu; fakat kasabanın sormaya hazır olduğu soruları değiştirmişti."
+      },
+      {
+        "text": "The new oral-history project soon faced a practical problem: the library had more material than its small team could process.",
+        "translation": "Yeni sözlü tarih projesi kısa süre içinde pratik bir sorunla karşılaştı: kütüphanenin küçük ekibinin işleyebileceğinden daha fazla malzeme vardı."
+      },
+      {
+        "text": "Volunteers offered help, but Nora insisted that enthusiasm could not replace clear standards for consent, description, and access.",
+        "translation": "Gönüllüler yardım önerdi; ancak Nora, isteğin onay, tanımlama ve erişim için açık standartların yerini alamayacağını vurguladı."
+      },
+      {
+        "text": "The library therefore created a training course in which participants learned how to scan photographs, record names accurately, and mark uncertain information.",
+        "translation": "Bu nedenle kütüphane, katılımcıların fotoğraf taramayı, adları doğru kaydetmeyi ve belirsiz bilgileri işaretlemeyi öğrendiği bir eğitim hazırladı."
+      },
+      {
+        "text": "Families could choose whether an interview was public, restricted for a period, or available only for research.",
+        "translation": "Aileler bir görüşmenin herkese açık, belirli bir süre kısıtlı ya da yalnızca araştırmaya açık olmasını seçebiliyordu."
+      },
+      {
+        "text": "Several residents initially refused to contribute because earlier institutions had taken their documents and never returned copies.",
+        "translation": "Bazı sakinler, önceki kurumlar belgelerini alıp kopyalarını geri vermediği için başlangıçta katkıda bulunmayı reddetti."
+      },
+      {
+        "text": "To rebuild trust, the library brought portable equipment to homes and allowed contributors to keep the originals.",
+        "translation": "Güveni yeniden kurmak için kütüphane taşınabilir ekipmanı evlere götürdü ve katkı sunanların asıl belgeleri kendilerinde tutmasına izin verdi."
+      },
+      {
+        "text": "The project also recorded disagreements rather than forcing every family memory into one official timeline.",
+        "translation": "Proje, bütün aile anılarını tek bir resmî zaman çizelgesine zorlamak yerine anlaşmazlıkları da kaydetti."
+      },
+      {
+        "text": "In one case, two workers remembered the same protest in opposite ways, yet their accounts revealed how fear and responsibility were distributed.",
+        "translation": "Bir olayda iki işçi aynı protestoyu birbirine zıt biçimde hatırlıyordu; yine de anlatıları korku ve sorumluluğun nasıl dağıldığını gösterdi."
+      },
+      {
+        "text": "Nora added a note explaining that contradiction did not make testimony useless; it identified questions that required more evidence.",
+        "translation": "Nora, çelişkinin tanıklığı değersiz kılmadığını; daha fazla kanıt gerektiren soruları belirlediğini açıklayan bir not ekledi."
+      },
+      {
+        "text": "Schools began using selected recordings in local-history lessons, and students interviewed relatives about changes in work, water, and transport.",
+        "translation": "Okullar seçilmiş kayıtları yerel tarih derslerinde kullanmaya başladı; öğrenciler de akrabalarıyla iş, su ve ulaşım değişimleri hakkında görüşmeler yaptı."
+      },
+      {
+        "text": "The archive became less like a sealed room below the library and more like an ongoing agreement between the institution and the town.",
+        "translation": "Arşiv, kütüphanenin altındaki kapalı bir odadan çok kurum ile kent arasında süren bir anlaşmaya benzemeye başladı."
+      },
+      {
+        "text": "Its value depended not only on what it preserved, but on whether people could understand, question, and responsibly add to it.",
+        "translation": "Değeri yalnızca neyi koruduğuna değil, insanların onu anlayabilmesine, sorgulayabilmesine ve sorumlu biçimde katkı sunabilmesine bağlıydı."
+      },
+      {
+        "text": "The project team published a yearly review describing what had been corrected, what remained disputed, and which collections still lacked permission for public use.",
+        "translation": "Proje ekibi her yıl nelerin düzeltildiğini, hangi konuların tartışmalı kaldığını ve hangi koleksiyonların hâlâ halka açık kullanım izni bulunmadığını anlatan bir değerlendirme yayımladı."
+      },
+      {
+        "text": "This regular review prevented the archive from presenting growth as progress unless its methods, relationships, and responsibilities improved as well.",
+        "translation": "Bu düzenli değerlendirme, yöntemleri, ilişkileri ve sorumlulukları da gelişmedikçe arşivin yalnızca büyümeyi ilerleme gibi sunmasını engelledi."
+      },
+      {
+        "text": "For Nora, that was the real purpose of an archive: not to end debate, but to make better debate possible.",
+        "translation": "Nora için arşivin gerçek amacı tartışmayı bitirmek değil, daha iyi bir tartışmayı mümkün kılmaktı."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 7
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 7,
+        "endLine": 14
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 14,
+        "endLine": 21
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 21,
+        "endLine": 28
+      }
+    ],
+    "questions": [
+      {
+        "q": "What was found in the unnumbered cabinet?",
+        "qTr": "Numarasız dolapta ne bulundu?",
+        "options": [
+          "Interviews, tapes and photographs",
+          "New computers",
+          "Only empty boxes"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did Nora verify claims?",
+        "qTr": "Nora iddiaları nasıl doğruladı?",
+        "options": [
+          "She compared several kinds of evidence",
+          "She trusted one memory only",
+          "She removed all uncertain material"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What principle shaped the final exhibition?",
+        "qTr": "Son sergiyi hangi ilke şekillendirdi?",
+        "options": [
+          "Separate verified facts, testimony and open questions",
+          "Avoid every difficult topic",
+          "Present one simple story"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 483,
+    "readMinutes": 3,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-v92-c1-01",
+    "course": "en",
+    "title": "The Committee of Small Decisions",
+    "titleTr": "Küçük Kararlar Komitesi",
+    "level": "C1",
+    "topic": "institutions and ethics",
+    "genre": "Toplumsal Kurgu",
+    "emoji": "⚖️",
+    "lines": [
+      {
+        "text": "The university created the Committee of Small Decisions after several major reforms failed for reasons no one could clearly explain.",
+        "translation": "Üniversite, birkaç büyük reform kimsenin açıkça açıklayamadığı nedenlerle başarısız olduktan sonra Küçük Kararlar Komitesini kurdu."
+      },
+      {
+        "text": "Its title sounded almost comic, yet its task was serious: to examine routine choices that quietly shaped student life.",
+        "translation": "Adı neredeyse komik geliyordu; ancak görevi ciddiydi: Öğrenci yaşamını sessizce şekillendiren rutin tercihleri incelemek."
+      },
+      {
+        "text": "The committee included a professor, a cleaner, two students, an administrator, a librarian, and an accessibility specialist.",
+        "translation": "Komitede bir profesör, bir temizlik görevlisi, iki öğrenci, bir yönetici, bir kütüphaneci ve bir erişilebilirlik uzmanı vardı."
+      },
+      {
+        "text": "Their first case concerned the automatic closing time of a side entrance near the science buildings.",
+        "translation": "İlk dosyaları fen binalarının yakınındaki yan girişin otomatik kapanma saatiyle ilgiliydi."
+      },
+      {
+        "text": "Security staff preferred an early closing because it simplified patrol routes.",
+        "translation": "Güvenlik personeli devriye rotalarını kolaylaştırdığı için erken kapanmayı tercih ediyordu."
+      },
+      {
+        "text": "Students with evening laboratories wanted the entrance kept open, especially during winter.",
+        "translation": "Akşam laboratuvarı olan öğrenciler, özellikle kışın girişin açık kalmasını istiyordu."
+      },
+      {
+        "text": "The original rule had been introduced years earlier after a theft, but no one had reviewed it since cameras and lighting were installed.",
+        "translation": "İlk kural yıllar önce bir hırsızlıktan sonra konmuştu; ancak kamera ve aydınlatma kurulmasından beri kimse gözden geçirmemişti."
+      },
+      {
+        "text": "Rather than voting immediately, the committee observed the entrance for two weeks and collected anonymous travel diaries.",
+        "translation": "Komite hemen oylamak yerine girişi iki hafta gözlemledi ve anonim ulaşım günlükleri topladı."
+      },
+      {
+        "text": "They discovered that the rule affected not only laboratory students but also employees who relied on the last accessible bus stop.",
+        "translation": "Kuralın yalnızca laboratuvar öğrencilerini değil, erişilebilir son otobüs durağına bağımlı çalışanları da etkilediğini keşfettiler."
+      },
+      {
+        "text": "The security benefit, meanwhile, was smaller than expected because the main entrance remained open and required a similar patrol.",
+        "translation": "Bu arada güvenlik yararı beklenenden küçüktü; çünkü ana giriş açık kalıyor ve benzer bir devriye gerektiriyordu."
+      },
+      {
+        "text": "The committee recommended a later closing time, a better-lit path, and a three-month review.",
+        "translation": "Komite daha geç kapanma saati, daha iyi aydınlatılmış bir yol ve üç aylık değerlendirme önerdi."
+      },
+      {
+        "text": "The change seemed minor, but attendance in evening study spaces increased almost immediately.",
+        "translation": "Değişiklik küçük görünüyordu; fakat akşam çalışma alanlarına katılım neredeyse hemen arttı."
+      },
+      {
+        "text": "Their second case involved the default language used in automated emails to international students.",
+        "translation": "İkinci dosya uluslararası öğrencilere gönderilen otomatik e-postalarda kullanılan varsayılan dille ilgiliydi."
+      },
+      {
+        "text": "Administrators believed the messages were neutral because they used standard legal wording.",
+        "translation": "Yöneticiler standart yasal ifadeler kullandıkları için mesajların tarafsız olduğuna inanıyordu."
+      },
+      {
+        "text": "Students described them as confusing, threatening, and difficult to translate.",
+        "translation": "Öğrenciler mesajları kafa karıştırıcı, tehditkâr ve çevrilmesi zor olarak tanımladı."
+      },
+      {
+        "text": "A linguistic review showed that several warnings combined three different obligations in one sentence.",
+        "translation": "Dil incelemesi, birkaç uyarının üç farklı yükümlülüğü tek cümlede birleştirdiğini gösterdi."
+      },
+      {
+        "text": "The committee did not remove the legal information; it reorganized it into short steps with dates, examples, and contact options.",
+        "translation": "Komite yasal bilgiyi kaldırmadı; kısa adımlar, tarihler, örnekler ve iletişim seçenekleri hâlinde yeniden düzenledi."
+      },
+      {
+        "text": "Questions to the support office fell, while timely responses increased.",
+        "translation": "Destek ofisine gelen sorular azalırken zamanında yanıtlar arttı."
+      },
+      {
+        "text": "As the committee gained attention, departments began sending it increasingly complex disputes.",
+        "translation": "Komite dikkat çekmeye başladıkça bölümler giderek daha karmaşık anlaşmazlıkları ona göndermeye başladı."
+      },
+      {
+        "text": "Some members worried that success would destroy the group by expanding its mission beyond manageable limits.",
+        "translation": "Bazı üyeler başarının grubun görevini yönetilebilir sınırların ötesine genişleterek onu yok edeceğinden endişelendi."
+      },
+      {
+        "text": "They therefore adopted a rule: every case had to concern a repeated decision, a measurable effect, and a realistic opportunity for revision.",
+        "translation": "Bu nedenle her dosyanın tekrarlanan bir karar, ölçülebilir bir etki ve gerçekçi bir değişiklik fırsatı içermesi gerektiği kuralını benimsediler."
+      },
+      {
+        "text": "The rule protected the committee from becoming a symbolic court for every frustration on campus.",
+        "translation": "Bu kural komiteyi kampüsteki her hayal kırıklığının sembolik mahkemesine dönüşmekten korudu."
+      },
+      {
+        "text": "It also forced applicants to explain the mechanism of a problem rather than merely stating that an outcome felt unfair.",
+        "translation": "Ayrıca başvuranları yalnızca sonucun adaletsiz hissettirdiğini söylemek yerine sorunun mekanizmasını açıklamaya zorladı."
+      },
+      {
+        "text": "After a year, an external evaluator compared the committee’s work with larger strategic initiatives.",
+        "translation": "Bir yıl sonra dış değerlendirici komitenin çalışmasını daha büyük stratejik girişimlerle karşılaştırdı."
+      },
+      {
+        "text": "The small decisions had produced fewer dramatic announcements, but their benefits were easier to verify and less likely to disappear after leadership changes.",
+        "translation": "Küçük kararlar daha az gösterişli duyuru üretmişti; ancak yararları daha kolay doğrulanıyor ve yönetim değişikliklerinden sonra kaybolma olasılığı daha düşük oluyordu."
+      },
+      {
+        "text": "The evaluator concluded that institutions often fail not because they lack ambitious values, but because ordinary procedures contradict those values every day.",
+        "translation": "Değerlendirici, kurumların çoğu zaman iddialı değerlerden yoksun oldukları için değil, sıradan süreçler her gün bu değerlerle çeliştiği için başarısız olduğu sonucuna vardı."
+      },
+      {
+        "text": "The committee resisted being celebrated as an innovation and published a manual that other groups could adapt.",
+        "translation": "Komite bir yenilik olarak övülmeye direndi ve diğer grupların uyarlayabileceği bir kılavuz yayımladı."
+      },
+      {
+        "text": "The manual emphasized observation, reversible trials, affected voices, and scheduled review.",
+        "translation": "Kılavuz gözlemi, geri döndürülebilir denemeleri, etkilenen kişilerin sesini ve planlı değerlendirmeyi vurguluyordu."
+      },
+      {
+        "text": "It also admitted that not every conflict could be solved through better procedure.",
+        "translation": "Ayrıca her çatışmanın daha iyi bir süreçle çözülemeyeceğini kabul ediyordu."
+      },
+      {
+        "text": "Power, resources, and incompatible interests still mattered, sometimes decisively.",
+        "translation": "Güç, kaynaklar ve bağdaşmayan çıkarlar hâlâ önemliydi; bazen belirleyiciydi."
+      },
+      {
+        "text": "Yet the committee had shown that attention to small rules could reveal where abstract promises became concrete experience.",
+        "translation": "Yine de komite küçük kurallara dikkat etmenin soyut vaatlerin nerede somut deneyime dönüştüğünü gösterebileceğini kanıtlamıştı."
+      },
+      {
+        "text": "During its second year, the committee encountered a case that tested the limits of its method.",
+        "translation": "Komite ikinci yılında, yönteminin sınırlarını sınayan bir olayla karşılaştı."
+      },
+      {
+        "text": "A scholarship application system automatically closed at midnight in the university’s local time, although many applicants lived in regions with unstable internet access.",
+        "translation": "Bir burs başvuru sistemi, başvuranların çoğu internet erişiminin kararsız olduğu bölgelerde yaşamasına rağmen üniversitenin yerel saatine göre gece yarısında otomatik olarak kapanıyordu."
+      },
+      {
+        "text": "The technical team argued that a single deadline was necessary for fairness and data security.",
+        "translation": "Teknik ekip, adalet ve veri güvenliği için tek bir son tarihin gerekli olduğunu savundu."
+      },
+      {
+        "text": "Applicants replied that formally identical rules could produce unequal opportunities when people faced very different material conditions.",
+        "translation": "Başvuranlar ise biçimsel olarak aynı kuralların, insanlar çok farklı maddi koşullarla karşılaştığında eşitsiz fırsatlar yaratabileceğini söyledi."
+      },
+      {
+        "text": "The committee reviewed server logs and discovered that failed uploads increased sharply during the final two hours, especially from a small number of regions.",
+        "translation": "Komite sunucu kayıtlarını inceledi ve özellikle belirli bölgelerden gelen başarısız yüklemelerin son iki saatte keskin biçimde arttığını gördü."
+      },
+      {
+        "text": "Instead of simply extending the deadline, it proposed automatic receipt confirmation, resumable uploads, and a short protected correction period.",
+        "translation": "Yalnızca süreyi uzatmak yerine otomatik teslim onayı, kaldığı yerden devam eden yükleme ve kısa bir korumalı düzeltme süresi önerdi."
+      },
+      {
+        "text": "These changes preserved a common timetable while reducing the effect of technical failure.",
+        "translation": "Bu değişiklikler ortak zaman planını korurken teknik arızanın etkisini azalttı."
+      },
+      {
+        "text": "The case also revealed a deeper issue: no office had been responsible for monitoring who repeatedly failed to complete the process.",
+        "translation": "Olay daha derin bir sorunu da ortaya çıkardı: süreci sürekli tamamlayamayan kişileri izlemekten hiçbir birim sorumlu değildi."
+      },
+      {
+        "text": "Once the university began collecting that information, patterns appeared in housing, disability, language support, and access to equipment.",
+        "translation": "Üniversite bu bilgiyi toplamaya başladığında barınma, engellilik, dil desteği ve ekipmana erişim alanlarında örüntüler ortaya çıktı."
+      },
+      {
+        "text": "Some leaders worried that measuring these differences would create expectations the institution could not afford to meet.",
+        "translation": "Bazı yöneticiler, bu farklılıkları ölçmenin kurumun karşılayamayacağı beklentiler yaratacağından endişelendi."
+      },
+      {
+        "text": "The committee answered that ignorance did not eliminate responsibility; it merely made the distribution of harm harder to see.",
+        "translation": "Komite, bilgisizliğin sorumluluğu ortadan kaldırmadığını; yalnızca zararın dağılımını görmeyi zorlaştırdığını söyledi."
+      },
+      {
+        "text": "It nevertheless distinguished between documenting a problem, reducing an immediate barrier, and promising a complete solution.",
+        "translation": "Yine de bir sorunu belgelemek, acil bir engeli azaltmak ve tam çözüm sözü vermek arasında ayrım yaptı."
+      },
+      {
+        "text": "That distinction helped the university act without pretending that every structural inequality could be repaired through software.",
+        "translation": "Bu ayrım, üniversitenin her yapısal eşitsizliğin yazılımla giderilebileceğini iddia etmeden harekete geçmesine yardımcı oldu."
+      },
+      {
+        "text": "By the end of the year, the committee had become a place where evidence, lived experience, and administrative constraints could meet without any one of them automatically ending the discussion.",
+        "translation": "Yılın sonunda komite, kanıtların, yaşanmış deneyimlerin ve idari kısıtların hiçbirinin tartışmayı otomatik olarak bitirmediği bir buluşma yerine dönüşmüştü."
+      },
+      {
+        "text": "Its decisions remained small in scale, but the reasoning behind them gradually influenced how larger policies were designed.",
+        "translation": "Kararları ölçek olarak küçük kaldı; ancak bu kararların arkasındaki düşünme biçimi daha büyük politikaların tasarlanmasını giderek etkiledi."
+      },
+      {
+        "text": "The institution had not discovered a shortcut to fairness; it had developed a more disciplined way of noticing when ordinary systems moved away from it.",
+        "translation": "Kurum adalete giden bir kestirme yol bulmamıştı; sıradan sistemlerin adaletten ne zaman uzaklaştığını fark etmek için daha disiplinli bir yöntem geliştirmişti."
+      },
+      {
+        "text": "The committee also learned that review itself could become a ritual if recommendations were accepted politely and then forgotten.",
+        "translation": "Komite ayrıca, öneriler nazikçe kabul edilip sonra unutulursa gözden geçirmenin kendisinin de bir ritüele dönüşebileceğini öğrendi."
+      },
+      {
+        "text": "It began assigning each approved change an owner, a public review date, and a small set of indicators that could reveal unintended effects.",
+        "translation": "Kabul edilen her değişikliğe bir sorumlu, açık bir değerlendirme tarihi ve istenmeyen etkileri gösterebilecek küçük bir gösterge seti atamaya başladı."
+      },
+      {
+        "text": "When evidence showed that a trial had failed, reversing it was recorded as responsible learning rather than institutional embarrassment.",
+        "translation": "Kanıtlar bir denemenin başarısız olduğunu gösterdiğinde geri adım atmak kurumsal bir utanç değil, sorumlu öğrenme olarak kaydedildi."
+      },
+      {
+        "text": "That practice reduced the pressure to defend weak decisions merely because time, reputation, or authority had already been invested in them.",
+        "translation": "Bu uygulama, yalnızca zaman, itibar veya yetki harcanmış olduğu için zayıf kararları savunma baskısını azalttı."
+      },
+      {
+        "text": "Gradually, departments stopped asking whether a proposal sounded modern and began asking how its consequences would be observed after implementation.",
+        "translation": "Zamanla bölümler bir önerinin modern görünüp görünmediğini sormayı bıraktı ve uygulamadan sonra sonuçlarının nasıl izleneceğini sormaya başladı."
+      },
+      {
+        "text": "This shift did not make decisions easy, but it made institutional confidence more closely connected to evidence, revision, and accountability.",
+        "translation": "Bu değişim kararları kolaylaştırmadı; ancak kurumsal güveni kanıt, gözden geçirme ve hesap verebilirlikle daha yakından ilişkilendirdi."
+      },
+      {
+        "text": "That habit endured.",
+        "translation": "Bu alışkanlık kalıcı oldu."
+      },
+      {
+        "text": "Its most lasting achievement was not a single policy, but a habit of asking who benefited from a routine and who quietly paid its cost.",
+        "translation": "En kalıcı başarısı tek bir politika değil, bir rutinden kimin yararlandığını ve bedelini kimin sessizce ödediğini sorma alışkanlığıydı."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 8
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 8,
+        "endLine": 16
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 16,
+        "endLine": 24
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 24,
+        "endLine": 32
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why was the committee created?",
+        "qTr": "Komite neden kuruldu?",
+        "options": [
+          "To study routine decisions with hidden effects",
+          "To replace every university department",
+          "To organize social events"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What protected the committee from unlimited expansion?",
+        "qTr": "Komiteyi sınırsız genişlemeden ne korudu?",
+        "options": [
+          "Clear case-selection rules",
+          "A secret budget",
+          "A ban on evidence"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What was its most lasting achievement?",
+        "qTr": "En kalıcı başarısı neydi?",
+        "options": [
+          "A habit of examining who benefits and who pays",
+          "One permanent closing time",
+          "A new university logo"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 522,
+    "readMinutes": 3,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-v92-c2-01",
+    "course": "en",
+    "title": "The Map of Unfinished Futures",
+    "titleTr": "Tamamlanmamış Geleceklerin Haritası",
+    "level": "C2",
+    "topic": "knowledge and uncertainty",
+    "genre": "Felsefi Kurgu",
+    "emoji": "🗺️",
+    "lines": [
+      {
+        "text": "When the coastal city commissioned a map of future climate risks, it expected a technical document: colored zones, probability ranges, and recommendations for infrastructure.",
+        "translation": "Sahil kenti gelecekteki iklim risklerinin haritasını istediğinde teknik bir belge bekliyordu: renkli bölgeler, olasılık aralıkları ve altyapı önerileri."
+      },
+      {
+        "text": "The research team delivered all of those things, yet its youngest cartographer, Mara, insisted that the map remained dangerously incomplete.",
+        "translation": "Araştırma ekibi bunların hepsini sundu; ancak en genç haritacı Mara haritanın tehlikeli biçimde eksik kaldığında ısrar etti."
+      },
+      {
+        "text": "It represented floods, heat, erosion, and wind, but it did not represent the unequal capacity of residents to respond.",
+        "translation": "Harita seli, sıcağı, erozyonu ve rüzgârı gösteriyordu; fakat sakinlerin bunlara karşılık verme kapasitesindeki eşitsizliği göstermiyordu."
+      },
+      {
+        "text": "A wealthy district and a crowded rental neighborhood could share the same physical risk while facing radically different consequences.",
+        "translation": "Varlıklı bir semt ile kalabalık kiralık konut mahallesi aynı fiziksel riski paylaşırken bütünüyle farklı sonuçlarla karşılaşabilirdi."
+      },
+      {
+        "text": "The project director replied that social vulnerability belonged in a separate report because mixing categories would make the map harder to read.",
+        "translation": "Proje yöneticisi, kategorileri karıştırmanın haritayı okumayı zorlaştıracağı gerekçesiyle toplumsal kırılganlığın ayrı bir rapora ait olduğunu söyledi."
+      },
+      {
+        "text": "Mara answered that separation was itself an interpretation, one that made certain losses visible and others administratively convenient to ignore.",
+        "translation": "Mara, ayırmanın kendisinin bir yorum olduğunu; bazı kayıpları görünür, diğerlerini ise idari olarak görmezden gelmeye elverişli kıldığını söyledi."
+      },
+      {
+        "text": "The disagreement might have remained internal if a leaked draft had not appeared in the morning newspaper.",
+        "translation": "Sızdırılan taslak sabah gazetesinde yayımlanmasaydı anlaşmazlık ekip içinde kalabilirdi."
+      },
+      {
+        "text": "Property prices shifted within days, and residents demanded to know whether the red zones predicted disaster or merely justified future redevelopment.",
+        "translation": "Emlak fiyatları günler içinde değişti ve sakinler kırmızı bölgelerin felaketi mi öngördüğünü yoksa gelecekteki dönüşümü mü meşrulaştırdığını sordu."
+      },
+      {
+        "text": "Public meetings became contests between those who treated uncertainty as evidence of incompetence and those who used it as an excuse for delay.",
+        "translation": "Halk toplantıları, belirsizliği yetersizliğin kanıtı sayanlarla onu gecikmenin bahanesi olarak kullananlar arasında yarışa dönüştü."
+      },
+      {
+        "text": "The research team tried to explain that a probability was neither a promise nor an absence of knowledge.",
+        "translation": "Araştırma ekibi olasılığın ne bir vaat ne de bilgi yokluğu olduğunu açıklamaya çalıştı."
+      },
+      {
+        "text": "Their language, however, had been designed for peer review rather than for families deciding whether to repair a home, renew a lease, or move an elderly parent.",
+        "translation": "Ancak dilleri, bir evi onarmaya, kira sözleşmesini yenilemeye ya da yaşlı bir ebeveyni taşımaya karar veren aileler için değil, akademik değerlendirme için tasarlanmıştı."
+      },
+      {
+        "text": "Mara proposed a second map built through neighborhood workshops, where residents could add routes, dependencies, memories, and resources omitted from official data.",
+        "translation": "Mara, sakinlerin resmî veride yer almayan yolları, bağımlılıkları, anıları ve kaynakları ekleyebileceği mahalle çalıştaylarıyla ikinci bir harita önerdi."
+      },
+      {
+        "text": "Engineers feared that subjective information would weaken the authority of the model.",
+        "translation": "Mühendisler öznel bilginin modelin otoritesini zayıflatacağından korktu."
+      },
+      {
+        "text": "Residents replied that the model already contained subjective choices about scale, thresholds, time horizons, and acceptable loss.",
+        "translation": "Sakinler modelin ölçek, eşik, zaman ufku ve kabul edilebilir kayıp konusunda zaten öznel tercihler içerdiğini söyledi."
+      },
+      {
+        "text": "The workshops began in a school gymnasium with a blank wall map and a rule that every contribution had to include its source and degree of confidence.",
+        "translation": "Çalıştaylar bir okul spor salonunda boş bir duvar haritası ve her katkının kaynağıyla güven derecesini belirtmesi kuralıyla başladı."
+      },
+      {
+        "text": "Fishermen marked currents that shifted after harbor construction; nurses identified buildings where electricity-dependent patients lived; teenagers traced informal paths used when buses stopped running.",
+        "translation": "Balıkçılar liman inşaatından sonra değişen akıntıları işaretledi; hemşireler elektriğe bağımlı hastaların yaşadığı binaları belirledi; gençler otobüsler çalışmadığında kullanılan gayriresmî yolları çizdi."
+      },
+      {
+        "text": "Some claims proved inaccurate, but the process made correction visible rather than treating error as a private embarrassment.",
+        "translation": "Bazı iddialar yanlış çıktı; fakat süreç hatayı özel bir utanç gibi görmek yerine düzeltmeyi görünür kıldı."
+      },
+      {
+        "text": "The most disputed contribution came from tenants who mapped buildings where landlords had delayed repairs after earlier storms.",
+        "translation": "En çok tartışılan katkı, önceki fırtınalardan sonra ev sahiplerinin onarımları geciktirdiği binaları haritalayan kiracılardan geldi."
+      },
+      {
+        "text": "Legal advisers warned that publishing the layer could expose the city to complaints, while tenant groups argued that removing it would reproduce the very vulnerability the project claimed to measure.",
+        "translation": "Hukuk danışmanları katmanın yayımlanmasının kenti şikâyetlere açık hâle getireceğini söylerken kiracı grupları onu kaldırmanın projenin ölçtüğünü iddia ettiği kırılganlığı yeniden üreteceğini savundu."
+      },
+      {
+        "text": "A compromise allowed the pattern to be shown at block level, with an independent process for verifying individual cases.",
+        "translation": "Bir uzlaşma, örüntünün ada düzeyinde gösterilmesine ve bireysel vakaların bağımsız biçimde doğrulanmasına izin verdi."
+      },
+      {
+        "text": "The result satisfied no one completely, which Mara considered a sign that the map had begun to reflect genuine conflict rather than erase it.",
+        "translation": "Sonuç kimseyi bütünüyle memnun etmedi; Mara bunu haritanın gerçek çatışmayı silmek yerine yansıtmaya başladığının işareti saydı."
+      },
+      {
+        "text": "As the two maps evolved, the team noticed that their most useful product was not a final image but a record of how claims changed under new evidence.",
+        "translation": "İki harita geliştikçe ekip en yararlı ürünlerinin son bir görüntü değil, iddiaların yeni kanıtlarla nasıl değiştiğinin kaydı olduğunu fark etti."
+      },
+      {
+        "text": "They added version histories, uncertainty notes, minority interpretations, and scheduled dates for revision.",
+        "translation": "Sürüm geçmişleri, belirsizlik notları, azınlık yorumları ve planlı güncelleme tarihleri eklediler."
+      },
+      {
+        "text": "This made the map less visually elegant, but far more honest about the conditions of its own production.",
+        "translation": "Bu, haritayı görsel olarak daha az zarif; fakat kendi üretim koşulları konusunda çok daha dürüst kıldı."
+      },
+      {
+        "text": "The city council initially wanted a single priority list for investment.",
+        "translation": "Kent meclisi başlangıçta yatırım için tek bir öncelik listesi istiyordu."
+      },
+      {
+        "text": "The revised model instead produced several lists depending on whether the goal was to protect property value, reduce danger to life, preserve cultural continuity, or correct historic neglect.",
+        "translation": "Gözden geçirilen model ise hedefin mülk değerini korumak, yaşam tehlikesini azaltmak, kültürel sürekliliği sürdürmek ya da tarihsel ihmali düzeltmek olmasına göre birkaç liste üretti."
+      },
+      {
+        "text": "Choosing among them could no longer be presented as a purely technical act.",
+        "translation": "Bunlar arasında seçim yapmak artık bütünüyle teknik bir işlem gibi sunulamıyordu."
+      },
+      {
+        "text": "Council members had to state publicly which values they were prioritizing and which consequences they were willing to accept.",
+        "translation": "Meclis üyeleri hangi değerlere öncelik verdiklerini ve hangi sonuçları kabul etmeye hazır olduklarını açıkça belirtmek zorunda kaldı."
+      },
+      {
+        "text": "The debate became more difficult, but also more accountable.",
+        "translation": "Tartışma daha zor, fakat aynı zamanda daha hesap verebilir hâle geldi."
+      },
+      {
+        "text": "Years later, a severe storm tested the plans before every recommended project had been completed.",
+        "translation": "Yıllar sonra şiddetli bir fırtına, önerilen projelerin tümü tamamlanmadan planları sınadı."
+      },
+      {
+        "text": "Some defenses worked, others failed, and several neighborhood networks responded faster than official services.",
+        "translation": "Bazı savunmalar işe yaradı, bazıları başarısız oldu ve birkaç mahalle ağı resmî hizmetlerden daha hızlı karşılık verdi."
+      },
+      {
+        "text": "Because the map included revision protocols, the failures did not disappear into institutional memory or become isolated anecdotes.",
+        "translation": "Harita güncelleme protokolleri içerdiği için başarısızlıklar kurumsal hafızada kaybolmadı ya da ayrı anekdotlara dönüşmedi."
+      },
+      {
+        "text": "They became evidence that altered the next version and changed the distribution of resources.",
+        "translation": "Bir sonraki sürümü değiştiren ve kaynakların dağılımını etkileyen kanıtlara dönüştüler."
+      },
+      {
+        "text": "Mara eventually rejected the phrase “finished map,” arguing that a living city could only be represented by an instrument designed to remain corrigible.",
+        "translation": "Mara sonunda “tamamlanmış harita” ifadesini reddetti ve yaşayan bir kentin ancak düzeltilebilir kalmak üzere tasarlanmış bir araçla temsil edilebileceğini savundu."
+      },
+      {
+        "text": "The map’s authority did not come from pretending to eliminate uncertainty.",
+        "translation": "Haritanın otoritesi belirsizliği ortadan kaldırmış gibi davranmaktan gelmiyordu."
+      },
+      {
+        "text": "It came from showing where uncertainty entered, who interpreted it, how decisions followed, and when those decisions would be reconsidered.",
+        "translation": "Belirsizliğin nerede girdiğini, onu kimin yorumladığını, kararların nasıl izlediğini ve ne zaman yeniden değerlendirileceğini göstermesinden geliyordu."
+      },
+      {
+        "text": "The map later attracted the attention of a national planning agency, which wanted to convert the city’s experiment into a standard model for other regions.",
+        "translation": "Harita daha sonra kentin deneyini başka bölgeler için standart bir modele dönüştürmek isteyen ulusal planlama kurumunun dikkatini çekti."
+      },
+      {
+        "text": "Officials admired its layers of uncertainty and participation, but they also wanted indicators that could be compared quickly across hundreds of municipalities.",
+        "translation": "Yetkililer belirsizlik ve katılım katmanlarını beğendi; ancak yüzlerce belediye arasında hızla karşılaştırılabilecek göstergeler de istiyordu."
+      },
+      {
+        "text": "Mara warned that standardization could preserve useful questions while erasing the local relationships that made the answers meaningful.",
+        "translation": "Mara, standartlaştırmanın yararlı soruları korurken cevapları anlamlı kılan yerel ilişkileri silebileceği konusunda uyardı."
+      },
+      {
+        "text": "A fishing village, an industrial port, and a tourist district might all receive the same exposure score even though their seasonal populations, informal economies, and political influence differed profoundly.",
+        "translation": "Bir balıkçı köyü, sanayi limanı ve turistik bölge aynı maruz kalma puanını alabilirdi; oysa mevsimlik nüfusları, kayıt dışı ekonomileri ve siyasi etkileri kökten farklıydı."
+      },
+      {
+        "text": "The agency responded that without common measures, national funds would be distributed through negotiation rather than evidence.",
+        "translation": "Kurum, ortak ölçüler olmadan ulusal fonların kanıt yerine pazarlık yoluyla dağıtılacağını söyledi."
+      },
+      {
+        "text": "Mara agreed that comparison was necessary, but argued that every comparison should carry metadata about what had been excluded, simplified, or translated.",
+        "translation": "Mara karşılaştırmanın gerekli olduğunu kabul etti; ancak her karşılaştırmanın neyin dışlandığı, basitleştirildiği veya çevrildiği hakkında üst veri taşıması gerektiğini savundu."
+      },
+      {
+        "text": "The resulting framework separated a small mandatory core from optional local layers and required each city to publish a narrative explaining its choices.",
+        "translation": "Ortaya çıkan çerçeve küçük bir zorunlu çekirdeği isteğe bağlı yerel katmanlardan ayırdı ve her kentin seçimlerini açıklayan bir anlatı yayımlamasını zorunlu kıldı."
+      },
+      {
+        "text": "This narrative was not treated as decoration; auditors examined whether the quantitative scores were consistent with the assumptions described in it.",
+        "translation": "Bu anlatı süs olarak görülmedi; denetçiler nicel puanların anlatıda açıklanan varsayımlarla tutarlı olup olmadığını inceledi."
+      },
+      {
+        "text": "Conflicts emerged when a city used precise numbers but vague explanations, or when participatory workshops included residents without giving them influence over final priorities.",
+        "translation": "Bir kent kesin sayılar kullanıp belirsiz açıklamalar yaptığında ya da katılımcı atölyelere sakinleri çağırıp nihai öncelikler üzerinde etkileri olmadığında çatışmalar ortaya çıktı."
+      },
+      {
+        "text": "The framework therefore added a participation ledger showing who was invited, who attended, which claims were accepted, and why others were rejected.",
+        "translation": "Bu nedenle çerçeve, kimlerin davet edildiğini, kimlerin katıldığını, hangi iddiaların kabul edildiğini ve diğerlerinin neden reddedildiğini gösteren bir katılım kaydı ekledi."
+      },
+      {
+        "text": "Critics said the ledger would slow urgent action and expose officials to endless challenges.",
+        "translation": "Eleştirmenler bu kaydın acil eylemi yavaşlatacağını ve yetkilileri sonsuz itirazlara açık bırakacağını söyledi."
+      },
+      {
+        "text": "Supporters answered that speed achieved by hiding disagreement often produced policies that were fast to announce and slow to survive.",
+        "translation": "Destekleyenler, anlaşmazlığı gizleyerek sağlanan hızın çoğu zaman ilan edilmesi hızlı fakat yaşaması yavaş politikalar ürettiğini söyledi."
+      },
+      {
+        "text": "A compromise allowed emergency measures to proceed under temporary authority, provided that their assumptions and distributional effects were reviewed afterward.",
+        "translation": "Bir uzlaşma, varsayımlarının ve dağıtımsal etkilerinin daha sonra incelenmesi koşuluyla acil önlemlerin geçici yetki altında uygulanmasına izin verdi."
+      },
+      {
+        "text": "This provision became crucial when another storm forced the evacuation of two districts before the revised defenses were complete.",
+        "translation": "Bu hüküm, yenilenmiş savunmalar tamamlanmadan başka bir fırtına iki bölgenin tahliyesini zorunlu kıldığında hayati hâle geldi."
+      },
+      {
+        "text": "The evacuation saved lives, yet the review showed that residents without cars had waited longer and received less reliable information.",
+        "translation": "Tahliye hayat kurtardı; ancak inceleme arabası olmayan sakinlerin daha uzun beklediğini ve daha az güvenilir bilgi aldığını gösterdi."
+      },
+      {
+        "text": "Rather than presenting the operation as either a success or a failure, the next map recorded both outcomes and linked them to specific logistical decisions.",
+        "translation": "Sonraki harita operasyonu yalnızca başarı ya da başarısızlık olarak sunmak yerine iki sonucu da kaydetti ve bunları belirli lojistik kararlara bağladı."
+      },
+      {
+        "text": "Over time, the project changed the meaning of expertise within the city: technical skill remained essential, but expertise also included the capacity to explain assumptions, revise claims, and remain answerable to affected people.",
+        "translation": "Zamanla proje kentte uzmanlığın anlamını değiştirdi: teknik beceri vazgeçilmez kaldı; ancak uzmanlık artık varsayımları açıklama, iddiaları gözden geçirme ve etkilenen insanlara karşı hesap verebilir olma kapasitesini de içeriyordu."
+      },
+      {
+        "text": "The map continued to be unfinished, not because the team lacked competence, but because a responsible representation of the future had to preserve the possibility that new evidence and new voices could change what the city believed it knew.",
+        "translation": "Harita tamamlanmamış kalmayı sürdürdü; bunun nedeni ekibin yetersizliği değil, geleceğin sorumlu bir temsilinin yeni kanıtların ve yeni seslerin kentin bildiğini sandığı şeyi değiştirebilme olasılığını koruması gerektiğiydi."
+      },
+      {
+        "text": "Other cities adopted the framework unevenly. Some copied its visual design while omitting the revision history that made uncertainty traceable.",
+        "translation": "Diğer kentler çerçeveyi eşit olmayan biçimde benimsedi. Bazıları belirsizliği izlenebilir kılan değişiklik geçmişini dışarıda bırakıp yalnızca görsel tasarımı kopyaladı."
+      },
+      {
+        "text": "Mara described these versions as maps of borrowed confidence: they displayed the appearance of transparency without preserving the practices that could challenge authority.",
+        "translation": "Mara bu sürümleri ödünç alınmış güven haritaları olarak tanımladı: otoriteyi sorgulayabilecek uygulamaları korumadan şeffaflık görüntüsü sunuyorlardı."
+      },
+      {
+        "text": "The original team responded by publishing not only software and symbols, but also training cases in which participants had to confront conflicting evidence and unequal consequences.",
+        "translation": "İlk ekip yalnızca yazılım ve sembolleri değil, katılımcıların çelişkili kanıtlar ve eşitsiz sonuçlarla yüzleşmesini gerektiren eğitim vakalarını da yayımladı."
+      },
+      {
+        "text": "The aim was to transfer a discipline of judgment rather than a finished product, because no technical package could decide in advance which future a community should consider acceptable.",
+        "translation": "Amaç tamamlanmış bir ürün değil, bir yargılama disiplini aktarmaktı; çünkü hiçbir teknik paket bir topluluğun hangi geleceği kabul edilebilir sayması gerektiğine önceden karar veremezdi."
+      },
+      {
+        "text": "The training cases also made participants examine whose absence had shaped the evidence before any map was drawn. A meeting could be technically open and still exclude people through timing, language, transport, disability, or fear of retaliation.",
+        "translation": "Eğitim vakaları katılımcıların, herhangi bir harita çizilmeden önce kanıtları kimin yokluğunun şekillendirdiğini incelemesini de sağladı. Bir toplantı teknik olarak açık olabilir; yine de zamanlama, dil, ulaşım, engellilik veya misilleme korkusu nedeniyle insanları dışlayabilirdi."
+      },
+      {
+        "text": "By treating absence as information rather than silence, the framework became better at identifying not only where risk existed, but where the city’s methods of knowing risk were themselves fragile.",
+        "translation": "Yokluğu sessizlik değil bilgi olarak ele alan çerçeve, yalnızca riskin nerede bulunduğunu değil, kentin riski bilme yöntemlerinin nerede kırılgan olduğunu da daha iyi belirleyebildi."
+      },
+      {
+        "text": "That insight changed every later revision of the project.",
+        "translation": "Bu kavrayış projenin sonraki her değişikliğini etkiledi."
+      },
+      {
+        "text": "In that sense, the unfinished map became more trustworthy than the polished document the city had originally requested.",
+        "translation": "Bu anlamda tamamlanmamış harita, kentin başlangıçta istediği cilalı belgeden daha güvenilir hâle geldi."
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Bölüm 1",
+        "startLine": 0,
+        "endLine": 10
+      },
+      {
+        "title": "Bölüm 2",
+        "startLine": 10,
+        "endLine": 20
+      },
+      {
+        "title": "Bölüm 3",
+        "startLine": 20,
+        "endLine": 30
+      },
+      {
+        "title": "Bölüm 4",
+        "startLine": 30,
+        "endLine": 37
+      }
+    ],
+    "questions": [
+      {
+        "q": "What did Mara believe the original map failed to represent?",
+        "qTr": "Mara’ya göre ilk harita neyi temsil edemiyordu?",
+        "options": [
+          "Unequal capacity to respond to risk",
+          "The color of the sea",
+          "The number of researchers"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why were version histories added?",
+        "qTr": "Sürüm geçmişleri neden eklendi?",
+        "options": [
+          "To show how claims changed with evidence",
+          "To hide disagreements",
+          "To make the map decorative"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What became the basis of the map’s authority?",
+        "qTr": "Haritanın otoritesinin temeli ne oldu?",
+        "options": [
+          "Transparent uncertainty, interpretation and revision",
+          "A claim of perfect certainty",
+          "A single political value"
+        ],
+        "answer": 0
+      }
+    ],
+    "wordCount": 715,
+    "readMinutes": 5,
+    "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
+    "license": "WordPilot original educational content",
+    "readerVersion": "9.2.0"
   }
 ]

@@ -1,0 +1,5 @@
+WORDPILOT V9.2 — KENET / WORDNET DATA NOTICE
+
+3001–5000 arasındaki İngilizce–Türkçe beta kayıtların sözlüksel çekirdeği KeNet Turkish WordNet ve English WordNet 3.1 eşleştirmelerinden üretilmiştir. NlpToolkit-WordNet dağıtımı GPL-3 lisans bildirimine sahiptir. WordPilot tarafından eklenen örnek cümle, çalışma yönergesi, CEFR yerleşimi ve Türkçe-okunur telaffuz katmanı ayrıdır.
+
+Bu katman insan editör ve ticari lisans/hukuk incelemesi tamamlanıncaya kadar commercial_safe=false durumundadır. Satışa sunulan nihai içerikte lisans yükümlülükleri ayrıca doğrulanmalıdır.

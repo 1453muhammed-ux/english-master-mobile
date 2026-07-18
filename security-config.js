@@ -7,5 +7,5 @@ window.WORDPILOT_SECURITY={
   voiceTranscriptionEnabled:false,
   protectedContentEnabled:false,
   aiRegion:'us-central1',
-  appVersion:'9.1.0'
+  appVersion:'9.2.0'
 };

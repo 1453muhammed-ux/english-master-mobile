@@ -142,7 +142,7 @@ function v5CheckStory(){
 }
 function wp64ContextTranslation(lineIndex){return v5Story?.lines?.[Number(lineIndex)]?.translation||''}
 function wp64ShowWordPopup(btn){
-  const raw=btn.dataset.wp64Word,row=wp64Lookup(raw),line=Number(btn.dataset.wp64Line),meaning=row?wp64Meaning(row):'Sözlük kaydında henüz bulunamadı',reading=row?wp64Reading(row):'',context=wp64ContextTranslation(line);
+  const raw=btn.dataset.wp64Word,row=wp64Lookup(raw),line=Number(btn.dataset.wp64Line),meaning=row?wp64Meaning(row):'Bağlam kartı · sözlük inceleme kuyruğunda',reading=row?wp64Reading(row):'',context=wp64ContextTranslation(line);
   wp64Ui.wordContext={raw,row,line,meaning,reading,context,storyId:v5Story?.id||''};
   const popup=$('#wp64WordPopup');popup.innerHTML=`<button type="button" class="wp64-popup-close" data-wp64-popup-close>×</button><p class="eyebrow">${activeCourse==='ru'?'RUSÇA KELİME':'KELİME ANLAMI'}</p><h3>${esc(row?.stress||row?.english||raw)}</h3>${reading?`<p class="wp64-reading">${esc(reading)}</p>`:''}<strong>${esc(meaning)}</strong>${context?`<small><b>Bağlam:</b> ${esc(context)}</small>`:''}<div><button type="button" class="secondary" data-wp64-word-speak>🔊 Dinle</button><button type="button" class="primary" data-wp64-save-word>＋ Kelimelerime ekle</button></div>`;
   popup.hidden=false;const r=btn.getBoundingClientRect(),pw=Math.min(360,window.innerWidth-24);popup.style.width=`${pw}px`;popup.style.left=`${Math.max(12,Math.min(window.innerWidth-pw-12,r.left+r.width/2-pw/2))}px`;popup.style.top=`${Math.min(window.innerHeight-popup.offsetHeight-12,r.bottom+8)}px`;

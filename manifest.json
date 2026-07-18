@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.1 Tester Beta",
+  "name": "WordPilot 9.2 Tester Beta",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=9.1.0",
+  "start_url": "./?wpbuild=9.2.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.1.0 — 3000 benzersiz İngilizce kelime, kaliteli cümle tamamlama, Conversation Coach 4.0 ve güvenli Firebase Functions AI altyapısı.",
+  "description": "WordPilot v9.2.0 — 5000 İngilizce kelime, uzun A1–C2 okumalar, Phrase Lab ve Conversation Coach 4.0.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.1.0"
+  "version": "9.2.0"
 }

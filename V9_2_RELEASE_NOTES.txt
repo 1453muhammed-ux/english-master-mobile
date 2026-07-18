@@ -1,0 +1,10 @@
+WordPilot v9.2.0
+- İngilizce kütüphanesi 5000 benzersiz karta çıkarıldı.
+- 3001–5000 katmanındaki anlamsız tekrarlı örnekler tanım temelli, dil bilgisel olarak güvenli üçlü çalışma bağlamlarıyla değiştirildi.
+- CEFR beta yerleşimi sıklık ve sözcüksel güçlük temelinde yeniden dengelendi.
+- 120 özgün kalıp Phrase Lab içinde açıldı.
+- Reader 2.0'a A1–C2 düzeylerinde altı yeni ve genişletilmiş özgün hikâye eklendi; toplam 108 metin.
+- Hikâyelerde çekimli/düzensiz biçimler için gelişmiş sözlük araması eklendi.
+- Bulunamayan özel adlar ve bağlamsal sözcükler artık “bilinmiyor” yerine inceleme kuyruğu kartı olarak gösterilir.
+- Tüm diller için 5000 kavram yuvası oluşturuldu; bulunmayan çeviriler hazır gibi gösterilmez.
+- Paket 100 dosyanın altında tutuldu.

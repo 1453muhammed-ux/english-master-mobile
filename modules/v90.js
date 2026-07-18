@@ -1,6 +1,6 @@
-/* WordPilot v9.1.0 — 3000-word lexicon, secure AI auto-detection,
+/* WordPilot v9.2.0 — 3000-word lexicon, secure AI auto-detection,
    shared multilingual concept ledger and permanent Coach 4.0 brand lock. */
-const WP90_VERSION='9.1.0';
+const WP90_VERSION='9.2.0';
 const WP90_REVIEWED={en:3000,ru:1500,uz:1000,tr:1000,es:1000,de:1000,fr:1000,it:1000,pt:1000,ja:1000,ko:1000,zh:1000};
 let wp90AiHealthBusy=false,wp90AiHealthChecked=false;
 
@@ -8,7 +8,7 @@ function wp90CoverageText(course){const live=WP90_REVIEWED[course]||1000;return 
 function wp90SetText(node,value){if(node&&node.textContent!==value)node.textContent=value}
 function wp90ApplyVersionLock(){
   if(document.documentElement.dataset.wpVersion!==WP90_VERSION)document.documentElement.dataset.wpVersion=WP90_VERSION;if(document.title!=='WordPilot 9.1 · 3000 Kelime · Conversation Coach 4.0')document.title='WordPilot 9.1 · 3000 Kelime · Conversation Coach 4.0';
-  wp90SetText($('.version'),'v9.1.0 · Tester Beta');
+  wp90SetText($('.version'),'v9.2.0 · Tester Beta');
   wp90SetText($('#view-ai .section-title .eyebrow'),'CONVERSATION COACH 4.0');
   wp90SetText($('#view-ai .section-title h1'),'Conversation Coach 4.0 · Mira');
   wp90SetText($('#wp71ConversationSpotlight h2'),'Conversation Coach 4.0');
