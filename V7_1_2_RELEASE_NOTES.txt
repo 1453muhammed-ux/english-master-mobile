@@ -1,8 +1,0 @@
-WordPilot v7.1.2
-
-- Öğrenme Merkezi ve ana panel başlıkları 12 arayüz diline bağlandı.
-- İspanyolca, Almanca, Fransızca, İtalyanca, Portekizce, Japonca, Korece ve Çince bayrakları eklendi.
-- Hedef dil değişiminde eski Rusça kursunun geri gelmesine yol açan yerel/bulut rota önceliği düzeltildi.
-- Kelime önbelleği hedef dil + açıklama dili çiftiyle ayrıldı.
-- Öneri & Yenilik menüsü eklendi. Google girişli kullanıcıların önerileri Firestore feedback koleksiyonuna güvenli alan sınırlarıyla kaydedilir.
-- V7.0 özel arşiv ve V7.1 ticari temiz içerik politikası korunur.
