@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot 8.2 Tester Beta — çalışan öğrenme rotaları, 2000 kart, özel aralık ve Conversation Coach 3.1.">
+  <meta name="description" content="WordPilot 8.2.2 Tester Beta — 2000 benzersiz kelime, A1–C2 Akademi, Reader 2.0 ve Conversation Coach 3.1.">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=8.2.1">
-  <title>WordPilot 8.2 · Conversation Coach 3.1</title>
+  <link rel="stylesheet" href="style.css?v=8.2.2">
+  <title>WordPilot 8.2.2 · 2000 Kelime</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='8.2.0',KEY='wordpilot_asset_build';
+    const BUILD='8.2.2',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.2.0 · Tester Beta</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v8.2.2 · Tester Beta</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -173,7 +173,7 @@
           </button>
           <button class="collection-card rose" data-collection="phrases">
             <span class="collection-art">⌁</span>
-            <div><b>1000 Bağlam Kartı</b><small>Özgün örnek ve kalıp çalışmaları</small></div>
+            <div><b>1000 Yeni Kelime</b><small>Genişletilmiş A1–C2 sözlük</small></div>
           </button>
           <button class="collection-card amber" data-collection="beginner">
             <span class="collection-art">A</span>
@@ -508,7 +508,7 @@
       </div>
       <div class="filters panel">
         <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Kelime, Türkçe anlam veya örnek ara…"></label>
-        <select id="groupFilter"><option value="">Tüm gruplar</option><option value="base1000">1000 temel kelime</option><option value="context1000">1000 bağlam kartı</option></select>
+        <select id="groupFilter"><option value="">Tüm gruplar</option><option value="base1000">1–1000 Temel Çekirdek</option><option value="extended1000">1001–2000 Genişletilmiş Sözlük</option></select>
         <select id="levelFilter"><option value="">Tüm seviyeler</option><option value="A1">A1</option><option value="A2">A2</option><option value="A1-A2">A1–A2</option><option value="B1">B1</option><option value="B2">B2</option><option value="B1-B2">B1–B2</option><option value="C1">C1</option><option value="C2">C2</option></select>
         <select id="statusFilter"><option value="">Tüm durumlar</option><option value="learn">Öğreniyorum</option><option value="memorized">Ezberledim</option><option value="hard">Zorlanıyorum</option><option value="wrong">Yanlış Yaptıklarım</option><option value="favorite">Favorilerim</option><option value="veryhard">Çok Zorlar</option><option value="notmemorized">Ezberlenmeyenler</option><option value="ignored">Tekrar gösterme</option><option value="unset">Yeni / İşaretsiz</option></select>
       </div>
@@ -817,32 +817,33 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=8.2.1" defer></script>
-<script src="app.js?v=8.2.1" defer></script>
-<script src="modules/firebase-sync.js?v=8.2.1" defer></script>
-<script src="modules/learning-engine.js?v=8.2.1" defer></script>
-<script src="modules/ui-events.js?v=8.2.1" defer></script>
-<script src="modules/course-engine.js?v=8.2.1" defer></script>
-<script src="modules/russian-path.js?v=8.2.1" defer></script>
-<script src="modules/v43.js?v=8.2.1" defer></script>
-<script src="modules/v431.js?v=8.2.1" defer></script>
-<script src="modules/v50.js?v=8.2.1" defer></script>
-<script src="modules/v510.js?v=8.2.1" defer></script>
-<script src="modules/v511.js?v=8.2.1" defer></script>
-<script src="modules/v512.js?v=8.2.1" defer></script>
-<script src="modules/v60.js?v=8.2.1" defer></script>
-<script src="modules/v61.js?v=8.2.1" defer></script>
-<script src="modules/v62.js?v=8.2.1" defer></script>
-<script src="modules/v63.js?v=8.2.1" defer></script>
-<script src="modules/v64.js?v=8.2.1" defer></script>
-<script src="modules/v65.js?v=8.2.1" defer></script>
-<script src="modules/v70.js?v=8.2.1" defer></script>
-<script src="modules/v71.js?v=8.2.1" defer></script>
-<script src="modules/v711.js?v=8.2.1" defer></script>
-<script src="modules/v712.js?v=8.2.1" defer></script>
-<script src="modules/v80.js?v=8.2.1" defer></script>
-<script src="modules/v81.js?v=8.2.1" defer></script>
-<script src="modules/v82.js?v=8.2.1" defer></script>
-<script src="modules/bootstrap.js?v=8.2.1" defer></script>
+<script src="security-config.js?v=8.2.2" defer></script>
+<script src="app.js?v=8.2.2" defer></script>
+<script src="modules/firebase-sync.js?v=8.2.2" defer></script>
+<script src="modules/learning-engine.js?v=8.2.2" defer></script>
+<script src="modules/ui-events.js?v=8.2.2" defer></script>
+<script src="modules/course-engine.js?v=8.2.2" defer></script>
+<script src="modules/russian-path.js?v=8.2.2" defer></script>
+<script src="modules/v43.js?v=8.2.2" defer></script>
+<script src="modules/v431.js?v=8.2.2" defer></script>
+<script src="modules/v50.js?v=8.2.2" defer></script>
+<script src="modules/v510.js?v=8.2.2" defer></script>
+<script src="modules/v511.js?v=8.2.2" defer></script>
+<script src="modules/v512.js?v=8.2.2" defer></script>
+<script src="modules/v60.js?v=8.2.2" defer></script>
+<script src="modules/v61.js?v=8.2.2" defer></script>
+<script src="modules/v62.js?v=8.2.2" defer></script>
+<script src="modules/v63.js?v=8.2.2" defer></script>
+<script src="modules/v64.js?v=8.2.2" defer></script>
+<script src="modules/v65.js?v=8.2.2" defer></script>
+<script src="modules/v70.js?v=8.2.2" defer></script>
+<script src="modules/v71.js?v=8.2.2" defer></script>
+<script src="modules/v711.js?v=8.2.2" defer></script>
+<script src="modules/v712.js?v=8.2.2" defer></script>
+<script src="modules/v80.js?v=8.2.2" defer></script>
+<script src="modules/v81.js?v=8.2.2" defer></script>
+<script src="modules/v82.js?v=8.2.2" defer></script>
+<script src="modules/v822.js?v=8.2.2" defer></script>
+<script src="modules/bootstrap.js?v=8.2.2" defer></script>
 </body>
 </html>

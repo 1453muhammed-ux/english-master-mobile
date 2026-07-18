@@ -27,3 +27,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+PRINCETON WORDNET 3.0
+---------------------
+WordPilot v8.2.2 uses Princeton WordNet 3.0 only to create semantic
+relation links (synonym, antonym and derivational-family candidates).
+The required license notice is included in:
+PRINCETON_WORDNET_LICENSE.txt

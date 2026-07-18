@@ -1170,3 +1170,11 @@ progress{appearance:none;height:8px;border:0;border-radius:999px;overflow:hidden
   .wp82-library-pagination{grid-template-columns:1fr 1fr;padding:10px}.wp82-library-pagination>div{grid-column:1/-1;grid-row:1}.wp82-library-pagination button{grid-row:2;width:100%;font-size:11px;padding:10px 7px}
 }
 @media(max-width:390px){.course-selector-grid{grid-template-columns:1fr!important}.course-selector-grid .course-card small{display:block}.course-selector-grid .course-card{min-height:66px!important}}
+
+/* WordPilot v8.2.2 lexical-bank summary */
+.wp822-lexicon-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:18px 0;padding:20px 24px}
+.wp822-lexicon-summary>div:first-child{display:grid;gap:4px}.wp822-lexicon-summary b{font-size:1.05rem}.wp822-lexicon-summary small{color:var(--muted)}
+.wp822-summary-stats{display:grid;grid-template-columns:repeat(4,minmax(105px,1fr));gap:10px;flex:1;max-width:620px}
+.wp822-summary-stats span{display:grid;gap:2px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:var(--soft)}
+.wp822-summary-stats span b{font-size:.95rem}.wp822-summary-stats span small{font-size:.74rem}
+@media(max-width:760px){.wp822-lexicon-summary{align-items:stretch;flex-direction:column}.wp822-summary-stats{grid-template-columns:repeat(2,1fr);max-width:none}.wp822-summary-stats span{min-width:0}}

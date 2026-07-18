@@ -1,5 +1,5 @@
 {
-  "version": "8.2.1-tester-beta",
+  "version": "8.2.2-tester-beta",
   "branch": "commercial-clean",
   "legacy_branch": "v7.0.0-private-archive",
   "clean_concept_count": 1000,
@@ -32,14 +32,33 @@
   },
   "generated_at": "2026-07-18",
   "english_learning_bank": {
-    "word_cards": 1000,
-    "context_cards": 1000,
+    "unique_records": 2000,
+    "single_word_records": 1997,
+    "essential_phrase_records": 3,
+    "core_records": 1000,
+    "extended_records": 1000,
+    "context_cards": 0,
     "total": 2000,
     "pronunciation_coverage": 2000,
+    "cefr_coverage": 2000,
+    "cefr_distribution": {
+      "A1": 520,
+      "A2": 580,
+      "B1": 500,
+      "B2": 330,
+      "C1": 60,
+      "C2": 10
+    },
     "relation_fields_coverage": 2000,
-    "pronunciation_scheme": "tr-readable"
+    "records_with_synonym_links": 161,
+    "records_with_antonym_links": 171,
+    "records_with_family_links": 127,
+    "pronunciation_scheme": "tr-readable",
+    "semantic_relation_source": "Princeton WordNet 3.0",
+    "extended_commercial_safe": false,
+    "extended_review_requirement": "Human editorial approval required before commercial release"
   },
-  "notes": "The English bank contains 1000 reviewed lexical cards and 1000 original context cards. English pronunciation uses the Turkish-readable WordPilot v7 convention restored in v8.1.1; IPA display was removed. No DiziÖğren PDF link or copied sentence bank is included. v8.2.0 changes navigation and library presentation only: route panels, mobile course grid, custom card ranges and 50-card pagination. The v7 Turkish-readable pronunciation layer remains unchanged. v8.2.1 enables the existing WordPilot Academy and Reader modules; the obsolete UI audit gate was removed. This is not a legal certification and editorial review remains ongoing.",
+  "notes": "v8.2.2 replaces the former 1000 generated context cards with 1000 distinct lexical records. IDs 1–1000 remain the reviewed core; IDs 1001–2000 are beta auto-enriched records requiring human editorial review. CEFR labels for the extended bank are WordPilot estimates, not external certification. Princeton WordNet 3.0 is used for semantic relation candidates under its included license. No DiziÖğren PDF link or copied sentence bank is included. Academy and Reader remain enabled.",
   "academy_reader_status": {
     "academy": "enabled",
     "academy_lessons": 102,

@@ -15,6 +15,7 @@ setupV711Events();
 setupV712Events();
 setupV80Events();
 setupV82Events();
+setupV822Events();
 initV40().then(()=>{
   if(typeof wp62AfterInit==='function')wp62AfterInit();
   if(typeof wp63AfterInit==='function')wp63AfterInit();
@@ -27,6 +28,7 @@ initV40().then(()=>{
   if(typeof wp80AfterInit==='function')wp80AfterInit();
   if(typeof wp81AfterInit==='function')wp81AfterInit();
   if(typeof wp82AfterInit==='function')wp82AfterInit();
+  if(typeof wp822AfterInit==='function')wp822AfterInit();
 }).catch(error=>{
   console.error('WordPilot başlangıç hatası',error);
   const box=document.querySelector('#toast');

@@ -1,0 +1,17 @@
+WORDPILOT v8.2.2 TESTER GUIDE
+
+Check these areas after deployment:
+1. Open Kelimeler and confirm that 2000 unique records are shown.
+2. Select 1–1000 Temel Çekirdek, then 1001–2000 Genişletilmiş Sözlük.
+3. Test a custom interval such as 50–60 and 1951–2000.
+4. Open Eş Anlamlı Quiz and Zıt Anlamlı Quiz.
+5. Open a word information panel and inspect pronunciation, CEFR,
+   synonym, antonym and family fields.
+6. Confirm that Academy and Reader still open.
+7. Confirm that old progress for IDs 1–1000 remains present.
+
+Editorial feedback priority:
+- Incorrect Turkish gloss
+- Incorrect Turkish-readable pronunciation
+- CEFR estimate that appears too easy or too difficult
+- Weak or incorrect semantic relation

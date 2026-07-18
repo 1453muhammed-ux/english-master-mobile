@@ -1,0 +1,33 @@
+WORDPILOT v8.2.2 — 2000-WORD LEXICON BETA
+
+1. English bank
+- Replaced the former 1000 synthetic context cards with 1000 additional,
+  distinct vocabulary records.
+- Total bank: 2000 unique records (1997 single words + 3 essential phrases).
+- Preserved the reviewed IDs 1–1000 and replaced IDs 1001–2000.
+
+2. Learning metadata
+- Every record has a Turkish-readable pronunciation field.
+- Every record has an A1–C2 field.
+- Every record has synonym, antonym and word-family status.
+- High-confidence semantic links use Princeton WordNet 3.0 and point to WordPilot IDs.
+- 161 records have direct synonym links, 171 have direct antonym links and 127 have direct family links.
+- Direct antonyms do not exist for every natural-language word; such records
+  explicitly say that no direct antonym is available.
+
+3. Interface
+- Library groups are now “1–1000 Temel Çekirdek” and
+  “1001–2000 Genişletilmiş Sözlük”.
+- Added a visible lexical-bank summary.
+- Custom ranges and 50-record pagination remain active.
+
+4. Progress migration
+- IDs 1001–2000 previously represented context cards. Their old status,
+  history and flags are cleared once so they are not attached to unrelated
+  new words. Progress for IDs 1–1000 is preserved.
+
+5. Editorial status
+- The first 1000 records remain the reviewed core.
+- Records 1001–2000 are marked commercial_safe=false and still require human
+  editorial review of Turkish gloss, CEFR estimate and pronunciation before
+  a final commercial release.

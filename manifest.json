@@ -2,12 +2,12 @@
   "id": "./",
   "name": "WordPilot 8.1 Tester Beta",
   "short_name": "WordPilot",
-  "start_url": "./?wpbuild=8.2.0",
+  "start_url": "./?wpbuild=8.2.2",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v8.2.1 — A1–C2 Akademi, Reader 2.0 ve 2000 kartlık çalışma sistemi.",
+  "description": "WordPilot v8.2.2 — 2000 benzersiz İngilizce kelime, A1–C2 Akademi ve Reader 2.0.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "8.2.1"
+  "version": "8.2.2"
 }
