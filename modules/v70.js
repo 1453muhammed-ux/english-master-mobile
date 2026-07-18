@@ -1,21 +1,21 @@
 /* WordPilot v7.0.0 — premium command center and expanded RU/UZ content. */
 const WP70_VERSION='7.1.2';
-const WP70_COUNTS={en:2000,ru:1300,uz:500};
+const WP70_COUNTS={en:5000,ru:1500,uz:1000};
 function wp70CourseText(course){
-  if(course==='ru')return 'Русский · 1300 kayıt + A1–C2 Akademi';
-  if(course==='uz')return 'O‘zbekcha · 500 A1–A2 kayıt · Akademi yakında';
-  return 'English · 2000 çalışma kartı + A1–C2 Akademi';
+  if(course==='ru')return 'Русский · 1500 kayıt + A1–C2 Akademi';
+  if(course==='uz')return 'O‘zbekcha · 1000 kontrollü kayıt';
+  return 'English · 5000 kelime + A1–C2 Akademi';
 }
 function wp70RefreshCounts(){
   if(window.COURSES){
-    Object.assign(COURSES.ru,{displayCount:1300,actualCount:1300,countLabel:'1300 kontrollü kelime ve ifade + A1–C2 Akademi'});
-    Object.assign(COURSES.uz,{displayCount:500,actualCount:500,countLabel:'500 kontrollü A1–A2 kelime ve ifade'});
+    Object.assign(COURSES.ru,{displayCount:1500,actualCount:1500,countLabel:'1500 kontrollü kelime ve ifade + A1–C2 Akademi'});
+    Object.assign(COURSES.uz,{displayCount:1000,actualCount:1000,countLabel:'1000 kontrollü kelime ve ifade'});
   }
-  const ru=document.querySelector('[data-course="ru"] small');if(ru)ru.textContent='Türkçe anlatımlı · 1300 kayıt + A1–C2 Akademi';
-  const uz=document.querySelector('[data-course="uz"] small');if(uz)uz.textContent='Türkçe anlatımlı · 500 kayıt · Akademi yakında';
+  const ru=document.querySelector('[data-course="ru"] small');if(ru)ru.textContent='Türkçe anlatımlı · 1500 kayıt + A1–C2 Akademi';
+  const uz=document.querySelector('[data-course="uz"] small');if(uz)uz.textContent='Türkçe anlatımlı · 1000 kontrollü kayıt';
   const summary=document.querySelector('#activeCourseSummary');if(summary)summary.textContent=wp70CourseText(activeCourse);
-  document.querySelectorAll('.wp63-vocab-stats article:first-child b').forEach(x=>x.textContent='1300');
-  document.querySelectorAll('#russianTools p').forEach(p=>{p.innerHTML=p.innerHTML.replace(/1120|1\.120/g,'1300')});
+  document.querySelectorAll('.wp63-vocab-stats article:first-child b').forEach(x=>x.textContent='1500');
+  document.querySelectorAll('#russianTools p').forEach(p=>{p.innerHTML=p.innerHTML.replace(/1120|1\.120|1300/g,'1500')});
 }
 function wp70RefreshCommandCenter(){
   const hub=document.querySelector('.v7-command-center');if(!hub)return;

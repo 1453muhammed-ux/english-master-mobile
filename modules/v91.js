@@ -51,7 +51,7 @@ filteredWords=function(){
 };
 function wp91ApplyTruth(){
   document.documentElement.dataset.wpVersion=WP91_VERSION;document.title='WordPilot 9.1 · Tutarlı Dil Kütüphanesi · Coach 4.0';
-  wp91Set($('.version'),'v9.2.0 · Tester Beta');
+  wp91Set($('.version'),'v9.5.0 · Conversation Coach Pro');
   Object.keys(COURSES).forEach(id=>{const n=wp91Count(id);COURSES[id].displayCount=n;COURSES[id].actualCount=n;COURSES[id].reviewedCount=n});
   $$('.course-card[data-course]').forEach(card=>wp91Set(card.querySelector('small'),wp91CourseText(card.dataset.course)));
   wp91Set($('#activeCourseSummary'),`${COURSES[activeCourse]?.name||activeCourse} · ${wp91CourseText(activeCourse)}`);
@@ -75,5 +75,5 @@ function setupV91Events(){
 function wp91AfterInit(){
   if(typeof wp90ApplyVersionLock==='function')wp90ApplyVersionLock=wp91ApplyTruth;
   wp91ApplyTruth();
-  const observer=new MutationObserver(()=>{clearTimeout(observer._t);observer._t=setTimeout(wp91ApplyTruth,140)});observer.observe(document.body,{childList:true,subtree:true});
+  /* v9.5: eski sürüm gözlemcisi devre dışı */
 }

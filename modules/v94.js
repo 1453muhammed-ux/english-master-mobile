@@ -167,7 +167,7 @@ v5CheckStory=function(){wp94CheckStoryBase();wp94FinishSession(true);setTimeout(
 
 function wp94ApplyVersion(){
   document.documentElement.dataset.wpVersion=WP94_VERSION;document.title='WordPilot 9.4 · Reader 3.0 · 5000 Kelime';
-  $$('.version').forEach(node=>{if(node.textContent!=='v9.4.0 · Reader 3.0 Beta')node.textContent='v9.4.0 · Reader 3.0 Beta'});
+  $$('.version').forEach(node=>{if(node.textContent!=='v9.5.0 · Conversation Coach Pro')node.textContent='v9.5.0 · Conversation Coach Pro'});
   wp91Set($('[data-dashboard-tab="stories"] small'),'Reader 3.0');
   const fc=$('.v5-feature-card.stories');if(fc){wp91Set(fc.querySelector('b'),'Reader 3.0');wp91Set(fc.querySelector('small'),'A1–C2 · 114 metin · odak modu · kelime testi · okuma raporu')}
   wp91Set($('#view-stories .section-title .eyebrow'),'READER 3.0 · A1–C2');wp91Set($('#view-stories .section-title h1'),'WordPilot Reader 3.0');wp91Set($('#view-stories .section-title .muted'),'Derecelendirilmiş uzun okumalar, dokunmatik sözlük, bölüm takibi, kelime testi, yer imleri ve kişisel okuma raporu.');
@@ -206,5 +206,5 @@ function setupV94Events(){
 function wp94AfterInit(){
   wp93Apply=wp94ApplyVersion;try{wp92Apply=wp94ApplyVersion}catch{}try{wp91ApplyTruth=wp94ApplyVersion}catch{}try{wp90ApplyVersionLock=wp94ApplyVersion}catch{}
   setupV94Events();wp94ApplyVersion();wp94LoadLexicon().then(async()=>{if($('#view-stories')?.classList.contains('active'))await renderStoryLibrary();wp94ApplyVersion()});
-  const observer=new MutationObserver(()=>{clearTimeout(observer._t);observer._t=setTimeout(wp94ApplyVersion,180)});observer.observe(document.body,{childList:true,subtree:true});
+  /* v9.5: eski sürüm gözlemcisi devre dışı */
 }

@@ -10,7 +10,7 @@ COURSES.en.actualCount=3000;
 COURSES.en.countLabel='3000 benzersiz kelime kaydı · A1–C2';
 
 function wp822ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
   document.documentElement.dataset.wpVersion=WP822_VERSION;
   const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 3000 benzersiz kelime · A1–C2';
   const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 3000 benzersiz kelime + A1–C2 Akademi';
@@ -104,6 +104,5 @@ function setupV822Events(){
 }
 function wp822AfterInit(){
   wp822ApplyBrand();
-  const observer=new MutationObserver(()=>{clearTimeout(observer._t);observer._t=setTimeout(wp822ApplyBrand,140)});
-  observer.observe(document.body,{childList:true,subtree:true});
+  /* v9.5: eski içerik gözlemcisi devre dışı */
 }

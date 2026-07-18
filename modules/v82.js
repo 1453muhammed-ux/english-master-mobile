@@ -16,21 +16,21 @@ const WP82_ROUTE_LABELS={
 };
 
 function wp82ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
-  document.documentElement.dataset.wpVersion='9.2.0';
+  const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
+  document.documentElement.dataset.wpVersion='9.5.0';
   const group=$('#groupFilter');
   if(group){
     const first=group.options[0];
-    if(first)first.textContent=activeCourse==='en'?'2000 kartın tümü':`Tüm ${COURSES[activeCourse]?.name||''} kayıtları`;
+    if(first)first.textContent=`${Math.max(1,Number(words?.length)||Number(COURSES[activeCourse]?.displayCount)||1000)} kaydın tümü`;
   }
   const allRange=document.querySelector('input[name="rangeType"][value="all"]')?.closest('.radio-card')?.querySelector('small');
-  if(allRange)allRange.textContent=activeCourse==='en'?'2000 kartın tamamı':'Seçilen kaynağın tamamı';
+  if(allRange)allRange.textContent=`${Math.max(1,Number(words?.length)||Number(COURSES[activeCourse]?.displayCount)||1000)} kaydın tamamı`;
   wp82RefreshRangeLimits();
   const microsoft=$('#wp81MicrosoftSignIn');if(microsoft){microsoft.hidden=true;microsoft.disabled=true}
   const authLead=$('#authSignedOut>div small');if(authLead)authLead.textContent='Google ile veya herhangi bir e-posta adresiyle (Hotmail/Outlook dahil) hesap oluşturabilirsin.';
   const cloud=$('#cloudNoteText');if(cloud)cloud.innerHTML='<b>Bulut senkronizasyonu</b><br>Google veya e-posta hesabı bağlandığında ilerleme cihazlar arasında eşitlenir.';
   const academySmall=document.querySelector('[data-dashboard-tab="academy"] small');if(academySmall)academySmall.textContent='102 ders · A1–C2';
-  const storiesSmall=document.querySelector('[data-dashboard-tab="stories"] small');if(storiesSmall)storiesSmall.textContent='102 hikâye · Reader 2.0';
+  const storiesSmall=document.querySelector('[data-dashboard-tab="stories"] small');if(storiesSmall)storiesSmall.textContent='Reader 3.0';
 }
 
 function wp82RefreshRangeLimits(){

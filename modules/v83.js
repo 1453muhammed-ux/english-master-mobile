@@ -2,7 +2,7 @@
    Conversation Coach 4.0, real-life scenario missions, Mira voice preference,
    smoothed speaking feedback and transcript-based pronunciation analysis.
    No private API key is stored in the browser. */
-const WP83_VERSION='9.2.0';
+const WP83_VERSION='9.5.0';
 const WP83_SESSION_SCHEMA=1;
 let wp83PronunciationMode='word';
 let wp83PronunciationStartedAt=0;
@@ -175,8 +175,8 @@ renderPronunciationLab=function(){
 };
 
 function wp83ApplyVersion(){
-  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
-  document.title='WordPilot 9.2.0 · Conversation Coach 4.0';
+  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
+  document.title='WordPilot 9.5.0 · Conversation Coach Pro';
 }
 
 function setupV83Events(){

@@ -22,7 +22,7 @@ const WP80_TEXT={
 };
 function wp80T(key,vars={}){const lang=WP80_TEXT[wp71LanguageProfile?.ui]?wp71LanguageProfile.ui:'en';let text=WP80_TEXT[lang][key]||WP80_TEXT.en[key]||key;Object.entries(vars).forEach(([k,v])=>text=text.replaceAll(`{${k}}`,String(v)));return text}
 function wp80Prefs(){const p=v5Ensure().preferences;p.coachPauseMs=Math.max(3000,Math.min(8000,Number(p.coachPauseMs)||WP80_DEFAULT_PAUSE));p.coachRate=Math.max(.6,Math.min(1.05,Number(p.coachRate)||WP80_DEFAULT_RATE));return p}
-function wp80BrandShell(){const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';const hero=$('#wp71ConversationSpotlight');if(hero){const h=hero.querySelector('h2'),d=hero.querySelector('[data-wp71="description"]');if(h)h.textContent=wp80T('coach');if(d)d.textContent=wp80T('coachDesc')}const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH 4.0';const pairIcon=$('#wp71PairButton em');if(pairIcon)pairIcon.textContent='⇄'}
+function wp80BrandShell(){const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';const hero=$('#wp71ConversationSpotlight');if(hero){const h=hero.querySelector('h2'),d=hero.querySelector('[data-wp71="description"]');if(h)h.textContent=wp80T('coach');if(d)d.textContent=wp80T('coachDesc')}const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH PRO';const pairIcon=$('#wp71PairButton em');if(pairIcon)pairIcon.textContent='⇄'}
 const wp80PreviousApplyShell=wp711ApplyShell;
 wp711ApplyShell=function(){const out=wp80PreviousApplyShell();wp80BrandShell();return out};
 wp71ApplyInterfaceText=wp711ApplyShell;
@@ -68,9 +68,9 @@ function wp80EnsureCoachControls(){
   const head=$('.wp65-ai-head-tools');if(head&&!$('#wp80CoachRate'))head.insertAdjacentHTML('beforeend',`<label class="wp80-coach-select">${wp80T('speed')}<select id="wp80CoachRate"><option value="0.65">${wp80T('slow')}</option><option value="0.72">${wp80T('calm')}</option><option value="0.88">${wp80T('normal')}</option><option value="1">${wp80T('fast')}</option></select></label>`);
   const form=$('#aiChatForm');if(form&&!$('#wp80SilenceDelay'))form.insertAdjacentHTML('beforebegin',`<div class="wp80-listening-bar"><span>🎙</span><p>${wp80T('voiceHint')}</p><label>${wp80T('pause')}<select id="wp80SilenceDelay"><option value="3000">${wp80T('pause25')}</option><option value="5000">${wp80T('pause4')}</option><option value="8000">${wp80T('pause6')}</option></select></label></div>`);
   const prefs=wp80Prefs();if($('#wp80SilenceDelay'))$('#wp80SilenceDelay').value=String(prefs.coachPauseMs);if($('#wp80CoachRate'))$('#wp80CoachRate').value=String(prefs.coachRate);
-  const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH 4.0';const pairIcon=$('#wp71PairButton em');if(pairIcon)pairIcon.textContent='⇄';const title=$('#view-ai .section-title h1');if(title)title.textContent=wp80T('coach');const desc=$('#view-ai .section-title .muted');if(desc)desc.textContent=wp80T('coachDesc');
+  const eye=$('#view-ai .section-title .eyebrow');if(eye)eye.textContent='CONVERSATION COACH PRO';const pairIcon=$('#wp71PairButton em');if(pairIcon)pairIcon.textContent='⇄';const title=$('#view-ai .section-title h1');if(title)title.textContent=wp80T('coach');const desc=$('#view-ai .section-title .muted');if(desc)desc.textContent=wp80T('coachDesc');
   const hero=$('#wp71ConversationSpotlight');if(hero){hero.querySelector('h2').textContent=wp80T('coach');hero.querySelector('[data-wp71="description"]').textContent=wp80T('coachDesc')}
-  const status=$('#wp65AiMicStatus');if(status&&!wp80Listening)status.textContent=wp80T('listenReady');const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
+  const status=$('#wp65AiMicStatus');if(status&&!wp80Listening)status.textContent=wp80T('listenReady');const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
 }
 function wp80SetMicUi(active){const btn=$('#wp65AiMic');if(!btn)return;btn.classList.toggle('recording',active);btn.textContent=active?'■':'🎙';btn.setAttribute('aria-label',active?wp80T('close'):wp80T('listenReady'))}
 function wp80ClearSpeechTimers(){clearTimeout(wp80SilenceTimer);clearTimeout(wp80RestartTimer);wp80SilenceTimer=null;wp80RestartTimer=null}
@@ -200,6 +200,6 @@ function setupV80Events(){
 }
 function wp80AfterInit(){
   wp71EnsureOnboarding();wp80EnsureCoachControls();wp711ApplyShell();wp712ApplyHubTranslations();wp71UpdatePairUI();updateLeaderboardEntry();renderAiCoach();
-  const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
   const scope=$('#leaderboardScope'),leagueCourse=wp80LeagueCourse();if(scope)scope.textContent=wp80T('courseLeague',{course:COURSES[leagueCourse]?.name||leagueCourse});
 }

@@ -1,0 +1,2563 @@
+[
+  {
+    "id": "cafe",
+    "icon": "☕",
+    "title": "Kafede",
+    "hint": "Sipariş, tercih ve ödeme",
+    "category": "daily",
+    "minLevel": "A1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Bir kafe",
+    "role": "Mira barista.",
+    "goal": "İçeceğini seç, özel isteğini belirt ve ödemeyi tamamla.",
+    "turns": 5,
+    "tasks": [
+      "İçecek siparişi ver",
+      "Boyut veya sıcaklık tercihini söyle",
+      "Süt veya şeker tercihini belirt",
+      "Fiyatı ya da paket seçeneğini sor",
+      "Ödeme yöntemini söyle"
+    ],
+    "phrases": {
+      "en": [
+        "Could I have a latte, please?",
+        "Can I get it without sugar?",
+        "Can I pay by card?"
+      ],
+      "ru": [
+        "Можно латте, пожалуйста?",
+        "Можно без сахара?",
+        "Можно оплатить картой?"
+      ]
+    },
+    "starters": {
+      "en": "Hi! What would you like to order today?",
+      "ru": "Здравствуйте! Что вы хотели бы заказать?"
+    },
+    "questions": {
+      "en": [
+        "What drink would you like?",
+        "Would you like a small, medium, or large one?",
+        "Would you like regular milk or another option?",
+        "Is this order for here or to go?",
+        "How would you like to pay?"
+      ],
+      "ru": [
+        "Какой напиток вы хотите?",
+        "Маленький, средний или большой?",
+        "Обычное молоко или другой вариант?",
+        "Здесь или с собой?",
+        "Как вы будете оплачивать?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Could I have a medium coffee, please?",
+        "Can I pay by card?"
+      ],
+      "ru": [
+        "Можно средний кофе, пожалуйста?",
+        "Можно оплатить картой?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "coffee",
+          "tea",
+          "latte",
+          "cappuccino",
+          "order"
+        ],
+        [
+          "small",
+          "medium",
+          "large",
+          "hot",
+          "cold",
+          "iced"
+        ],
+        [
+          "milk",
+          "sugar",
+          "without",
+          "oat",
+          "soy"
+        ],
+        [
+          "price",
+          "cost",
+          "to go",
+          "takeaway",
+          "here"
+        ],
+        [
+          "card",
+          "cash",
+          "pay"
+        ]
+      ],
+      "ru": [
+        [
+          "кофе",
+          "чай",
+          "латте",
+          "капучино",
+          "заказать"
+        ],
+        [
+          "маленьк",
+          "средн",
+          "больш",
+          "горяч",
+          "холод"
+        ],
+        [
+          "молок",
+          "сахар",
+          "без",
+          "овсян",
+          "соев"
+        ],
+        [
+          "сколько",
+          "цена",
+          "с собой",
+          "здесь"
+        ],
+        [
+          "карт",
+          "налич",
+          "оплат"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "taxi",
+    "icon": "🚕",
+    "title": "Taksi",
+    "hint": "Adres, rota, süre ve ücret",
+    "category": "travel",
+    "minLevel": "A1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Şehir merkezinde bir taksi",
+    "role": "Mira taksi şoförü.",
+    "goal": "Gideceğin adresi söyle, süreyi sor ve ödeme yap.",
+    "turns": 5,
+    "tasks": [
+      "Gideceğin yeri söyle",
+      "Adresi veya önemli bir noktayı açıkla",
+      "Yolculuk süresini sor",
+      "Ücreti sor",
+      "Ödeme yöntemini belirt"
+    ],
+    "phrases": {
+      "en": [
+        "Could you take me to this address?",
+        "How long will it take?",
+        "Could you stop here, please?"
+      ],
+      "ru": [
+        "Отвезите меня по этому адресу, пожалуйста.",
+        "Сколько времени займёт дорога?",
+        "Остановите здесь, пожалуйста."
+      ]
+    },
+    "starters": {
+      "en": "Hello. Where would you like to go?",
+      "ru": "Здравствуйте. Куда вам нужно?"
+    },
+    "questions": {
+      "en": [
+        "What is the destination?",
+        "Do you have the exact address?",
+        "Would you prefer the fastest route?",
+        "Do you need an estimate of the fare?",
+        "Will you pay by card or cash?"
+      ],
+      "ru": [
+        "Куда вы едете?",
+        "У вас есть точный адрес?",
+        "Вы хотите самый быстрый маршрут?",
+        "Сказать примерную стоимость?",
+        "Вы будете платить картой или наличными?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Please take me to the city centre.",
+        "How long will the journey take?"
+      ],
+      "ru": [
+        "Отвезите меня в центр города, пожалуйста.",
+        "Сколько времени займёт поездка?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "go",
+          "take me",
+          "airport",
+          "hotel",
+          "station",
+          "address"
+        ],
+        [
+          "address",
+          "street",
+          "near",
+          "next to"
+        ],
+        [
+          "long",
+          "time",
+          "minutes"
+        ],
+        [
+          "fare",
+          "cost",
+          "price",
+          "how much"
+        ],
+        [
+          "card",
+          "cash",
+          "pay"
+        ]
+      ],
+      "ru": [
+        [
+          "ехать",
+          "отвез",
+          "аэропорт",
+          "отель",
+          "вокзал",
+          "адрес"
+        ],
+        [
+          "адрес",
+          "улиц",
+          "рядом"
+        ],
+        [
+          "сколько времени",
+          "долго",
+          "минут"
+        ],
+        [
+          "стоим",
+          "цена",
+          "сколько"
+        ],
+        [
+          "карт",
+          "налич",
+          "оплат"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "train_station",
+    "icon": "🚆",
+    "title": "Tren İstasyonu",
+    "hint": "Bilet, peron ve aktarma",
+    "category": "travel",
+    "minLevel": "A1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Tren istasyonu danışması",
+    "role": "Mira bilet görevlisi.",
+    "goal": "Doğru bileti al, peronu ve tren saatini öğren.",
+    "turns": 5,
+    "tasks": [
+      "Gideceğin şehri söyle",
+      "Tek yön veya dönüş bileti iste",
+      "Tren saatini sor",
+      "Peronu öğren",
+      "Aktarma olup olmadığını sor"
+    ],
+    "phrases": {
+      "en": [
+        "I need a ticket to London.",
+        "What time does the train leave?",
+        "Which platform does it leave from?"
+      ],
+      "ru": [
+        "Мне нужен билет до Москвы.",
+        "Во сколько отправляется поезд?",
+        "С какой платформы он отправляется?"
+      ]
+    },
+    "starters": {
+      "en": "Good afternoon. Where are you travelling to?",
+      "ru": "Добрый день. Куда вы едете?"
+    },
+    "questions": {
+      "en": [
+        "What is your destination?",
+        "Do you need a one-way or return ticket?",
+        "What time would you like to travel?",
+        "Would you like me to show you the platform?",
+        "Are you comfortable changing trains?"
+      ],
+      "ru": [
+        "Куда вы едете?",
+        "Вам билет в одну сторону или туда и обратно?",
+        "В какое время вы хотите ехать?",
+        "Показать вам платформу?",
+        "Вас устраивает поездка с пересадкой?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Which platform does the train leave from?",
+        "Is this a direct train?"
+      ],
+      "ru": [
+        "С какой платформы отправляется поезд?",
+        "Это прямой поезд?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "ticket",
+          "to ",
+          "travel",
+          "destination"
+        ],
+        [
+          "one-way",
+          "return",
+          "round trip"
+        ],
+        [
+          "time",
+          "leave",
+          "depart"
+        ],
+        [
+          "platform",
+          "track"
+        ],
+        [
+          "change",
+          "direct",
+          "transfer"
+        ]
+      ],
+      "ru": [
+        [
+          "билет",
+          "до ",
+          "ехать",
+          "направлен"
+        ],
+        [
+          "в одну сторону",
+          "туда и обратно"
+        ],
+        [
+          "во сколько",
+          "отправ"
+        ],
+        [
+          "платформ",
+          "путь"
+        ],
+        [
+          "пересад",
+          "прямой"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "car_rental",
+    "icon": "🚗",
+    "title": "Araç Kiralama",
+    "hint": "Araç türü, sigorta ve teslim",
+    "category": "travel",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Havaalanı araç kiralama ofisi",
+    "role": "Mira kiralama görevlisi.",
+    "goal": "Uygun aracı seç, sigorta ve teslim koşullarını netleştir.",
+    "turns": 5,
+    "tasks": [
+      "Rezervasyonunu belirt",
+      "Araç türünü seç",
+      "Ehliyet durumunu açıkla",
+      "Sigorta hakkında soru sor",
+      "Teslim saatini öğren"
+    ],
+    "phrases": {
+      "en": [
+        "I have a reservation for a compact car.",
+        "Is insurance included?",
+        "Where should I return the car?"
+      ],
+      "ru": [
+        "У меня забронирован компактный автомобиль.",
+        "Страховка включена?",
+        "Куда вернуть машину?"
+      ]
+    },
+    "starters": {
+      "en": "Welcome. Do you have a car reservation?",
+      "ru": "Здравствуйте. У вас есть бронь на автомобиль?"
+    },
+    "questions": {
+      "en": [
+        "What name is the reservation under?",
+        "What type of car would you prefer?",
+        "May I see your driving licence?",
+        "Would you like full insurance coverage?",
+        "What time will you return the car?"
+      ],
+      "ru": [
+        "На какое имя оформлена бронь?",
+        "Какой автомобиль вы предпочитаете?",
+        "Можно посмотреть ваши водительские права?",
+        "Вам нужна полная страховка?",
+        "Во сколько вы вернёте машину?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Is full insurance included in the price?",
+        "I will return the car tomorrow morning."
+      ],
+      "ru": [
+        "Полная страховка входит в стоимость?",
+        "Я верну машину завтра утром."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "reservation",
+          "booked"
+        ],
+        [
+          "compact",
+          "automatic",
+          "car",
+          "vehicle"
+        ],
+        [
+          "licence",
+          "license",
+          "drive"
+        ],
+        [
+          "insurance",
+          "coverage"
+        ],
+        [
+          "return",
+          "tomorrow",
+          "time"
+        ]
+      ],
+      "ru": [
+        [
+          "бронь",
+          "заброниров"
+        ],
+        [
+          "машин",
+          "автомоб",
+          "автомат"
+        ],
+        [
+          "прав",
+          "водител"
+        ],
+        [
+          "страхов"
+        ],
+        [
+          "верну",
+          "возврат",
+          "время"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "passport_control",
+    "icon": "🛂",
+    "title": "Pasaport Kontrolü",
+    "hint": "Seyahat amacı ve kalış süresi",
+    "category": "travel",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Sınır kontrol noktası",
+    "role": "Mira pasaport görevlisi.",
+    "goal": "Seyahat amacını, kalacağın yeri ve dönüş planını açıkla.",
+    "turns": 5,
+    "tasks": [
+      "Seyahat amacını söyle",
+      "Kalış süresini belirt",
+      "Kalacağın yeri açıkla",
+      "Dönüş biletini belirt",
+      "Yanındaki eşyalar hakkında cevap ver"
+    ],
+    "phrases": {
+      "en": [
+        "I am here for tourism.",
+        "I will stay for ten days.",
+        "I have a return ticket."
+      ],
+      "ru": [
+        "Я приехал(а) как турист.",
+        "Я останусь на десять дней.",
+        "У меня есть обратный билет."
+      ]
+    },
+    "starters": {
+      "en": "Good afternoon. What is the purpose of your visit?",
+      "ru": "Добрый день. Какова цель вашей поездки?"
+    },
+    "questions": {
+      "en": [
+        "Why are you visiting the country?",
+        "How long will you stay?",
+        "Where will you be staying?",
+        "When is your return flight?",
+        "Are you carrying anything that must be declared?"
+      ],
+      "ru": [
+        "С какой целью вы приехали?",
+        "Как долго вы будете находиться в стране?",
+        "Где вы будете жить?",
+        "Когда ваш обратный рейс?",
+        "У вас есть товары, которые нужно декларировать?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I am here for a short holiday.",
+        "I will stay at a hotel in the city centre."
+      ],
+      "ru": [
+        "Я приехал(а) на короткий отпуск.",
+        "Я буду жить в отеле в центре города."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "tourism",
+          "business",
+          "visit",
+          "holiday"
+        ],
+        [
+          "days",
+          "weeks",
+          "stay"
+        ],
+        [
+          "hotel",
+          "apartment",
+          "friend"
+        ],
+        [
+          "return",
+          "flight",
+          "ticket"
+        ],
+        [
+          "declare",
+          "nothing",
+          "luggage"
+        ]
+      ],
+      "ru": [
+        [
+          "туризм",
+          "работ",
+          "гост",
+          "отпуск"
+        ],
+        [
+          "дней",
+          "недель",
+          "остан"
+        ],
+        [
+          "отел",
+          "квартир",
+          "друз"
+        ],
+        [
+          "обратн",
+          "рейс",
+          "билет"
+        ],
+        [
+          "деклар",
+          "ничего",
+          "багаж"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "pharmacy",
+    "icon": "💊",
+    "title": "Eczane",
+    "hint": "Belirti, ilaç ve kullanım",
+    "category": "health",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Bir eczane",
+    "role": "Mira eczacı.",
+    "goal": "Belirtini açıkla ve reçetesiz ürünün kullanımını öğren.",
+    "turns": 5,
+    "tasks": [
+      "Şikâyetini söyle",
+      "Ne zamandır sürdüğünü belirt",
+      "Alerjini veya kullandığın ilacı söyle",
+      "Ürünün nasıl kullanılacağını sor",
+      "Ne zaman doktora gitmen gerektiğini sor"
+    ],
+    "phrases": {
+      "en": [
+        "I have a sore throat.",
+        "I am allergic to penicillin.",
+        "How often should I take this?"
+      ],
+      "ru": [
+        "У меня болит горло.",
+        "У меня аллергия на пенициллин.",
+        "Как часто это принимать?"
+      ]
+    },
+    "starters": {
+      "en": "Hello. How can I help you today?",
+      "ru": "Здравствуйте. Чем я могу вам помочь?"
+    },
+    "questions": {
+      "en": [
+        "What symptoms do you have?",
+        "How long have you had them?",
+        "Do you have any allergies or take regular medicine?",
+        "Would you like me to explain how to use this product?",
+        "Do you have any warning signs that require a doctor?"
+      ],
+      "ru": [
+        "Какие у вас симптомы?",
+        "Как давно они появились?",
+        "У вас есть аллергия или вы принимаете лекарства?",
+        "Объяснить, как использовать это средство?",
+        "Есть ли симптомы, при которых нужно обратиться к врачу?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "How often should I take this medicine?",
+        "Are there any side effects?"
+      ],
+      "ru": [
+        "Как часто принимать это лекарство?",
+        "Есть ли побочные эффекты?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "pain",
+          "throat",
+          "headache",
+          "cough",
+          "fever"
+        ],
+        [
+          "days",
+          "since",
+          "week"
+        ],
+        [
+          "allergic",
+          "allergy",
+          "medicine",
+          "medication"
+        ],
+        [
+          "take",
+          "use",
+          "often",
+          "dose"
+        ],
+        [
+          "doctor",
+          "urgent",
+          "when"
+        ]
+      ],
+      "ru": [
+        [
+          "бол",
+          "горл",
+          "каш",
+          "температур"
+        ],
+        [
+          "дней",
+          "давно",
+          "недел"
+        ],
+        [
+          "аллерг",
+          "лекар"
+        ],
+        [
+          "приним",
+          "использ",
+          "доз"
+        ],
+        [
+          "врач",
+          "срочно",
+          "когда"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "dentist",
+    "icon": "🦷",
+    "title": "Diş Hekimi",
+    "hint": "Ağrı, hassasiyet ve tedavi",
+    "category": "health",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Diş kliniği",
+    "role": "Mira diş hekimi.",
+    "goal": "Sorunu tarif et, ağrının yerini ve şiddetini açıkla.",
+    "turns": 5,
+    "tasks": [
+      "Ağrının yerini söyle",
+      "Ne zaman başladığını belirt",
+      "Ağrı şiddetini açıkla",
+      "Sıcak-soğuk hassasiyetini söyle",
+      "Tedavi sürecini sor"
+    ],
+    "phrases": {
+      "en": [
+        "This tooth has been hurting since yesterday.",
+        "It hurts when I drink something cold.",
+        "Will I need an X-ray?"
+      ],
+      "ru": [
+        "Этот зуб болит со вчерашнего дня.",
+        "Болит, когда я пью что-то холодное.",
+        "Нужен ли рентген?"
+      ]
+    },
+    "starters": {
+      "en": "Hello. What problem are you having with your teeth?",
+      "ru": "Здравствуйте. Что вас беспокоит?"
+    },
+    "questions": {
+      "en": [
+        "Which tooth or area hurts?",
+        "When did the pain begin?",
+        "How strong is the pain from one to ten?",
+        "Is it sensitive to hot or cold food?",
+        "Would you like me to explain the examination and treatment?"
+      ],
+      "ru": [
+        "Какой зуб или участок болит?",
+        "Когда началась боль?",
+        "Насколько сильная боль по шкале от одного до десяти?",
+        "Есть чувствительность к горячему или холодному?",
+        "Объяснить обследование и лечение?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "The pain gets worse at night.",
+        "Is the treatment going to hurt?"
+      ],
+      "ru": [
+        "Ночью боль становится сильнее.",
+        "Лечение будет болезненным?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "tooth",
+          "left",
+          "right",
+          "back"
+        ],
+        [
+          "yesterday",
+          "started",
+          "days"
+        ],
+        [
+          "pain",
+          "ten",
+          "strong"
+        ],
+        [
+          "hot",
+          "cold",
+          "sensitive"
+        ],
+        [
+          "treatment",
+          "x-ray",
+          "procedure"
+        ]
+      ],
+      "ru": [
+        [
+          "зуб",
+          "слева",
+          "справа"
+        ],
+        [
+          "вчера",
+          "начал",
+          "дней"
+        ],
+        [
+          "боль",
+          "сильн",
+          "десяти"
+        ],
+        [
+          "горяч",
+          "холод",
+          "чувств"
+        ],
+        [
+          "лечен",
+          "рентген",
+          "процед"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "bank",
+    "icon": "🏦",
+    "title": "Banka",
+    "hint": "Hesap, kart ve para işlemleri",
+    "category": "services",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Banka müşteri hizmetleri",
+    "role": "Mira banka görevlisi.",
+    "goal": "İşlemini açıkla, gerekli belgeleri ve ücretleri öğren.",
+    "turns": 5,
+    "tasks": [
+      "Yapmak istediğin işlemi söyle",
+      "Kimlik veya hesap bilgini belirt",
+      "Ücretleri sor",
+      "İşlem süresini öğren",
+      "Onay veya belge iste"
+    ],
+    "phrases": {
+      "en": [
+        "I would like to open an account.",
+        "Is there a service fee?",
+        "Could I get a written confirmation?"
+      ],
+      "ru": [
+        "Я хотел(а) бы открыть счёт.",
+        "Есть комиссия за обслуживание?",
+        "Можно получить письменное подтверждение?"
+      ]
+    },
+    "starters": {
+      "en": "Good morning. What banking service do you need?",
+      "ru": "Доброе утро. Какая банковская услуга вам нужна?"
+    },
+    "questions": {
+      "en": [
+        "Would you like to open an account, replace a card, or make a transfer?",
+        "Do you have your identification and account details?",
+        "Would you like information about fees?",
+        "How quickly do you need the transaction completed?",
+        "Do you need a receipt or official confirmation?"
+      ],
+      "ru": [
+        "Вы хотите открыть счёт, заменить карту или сделать перевод?",
+        "У вас есть удостоверение личности и данные счёта?",
+        "Рассказать о комиссиях?",
+        "Как быстро нужно провести операцию?",
+        "Вам нужна квитанция или официальное подтверждение?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I need to replace my bank card.",
+        "How long will the transfer take?"
+      ],
+      "ru": [
+        "Мне нужно заменить банковскую карту.",
+        "Сколько времени займёт перевод?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "account",
+          "card",
+          "transfer",
+          "withdraw"
+        ],
+        [
+          "passport",
+          "id",
+          "account number"
+        ],
+        [
+          "fee",
+          "commission",
+          "cost"
+        ],
+        [
+          "long",
+          "time",
+          "days"
+        ],
+        [
+          "receipt",
+          "confirmation",
+          "document"
+        ]
+      ],
+      "ru": [
+        [
+          "счёт",
+          "карт",
+          "перевод",
+          "снять"
+        ],
+        [
+          "паспорт",
+          "удостовер",
+          "номер сч"
+        ],
+        [
+          "комисс",
+          "стоим"
+        ],
+        [
+          "сколько времени",
+          "дней"
+        ],
+        [
+          "квитанц",
+          "подтвержд",
+          "документ"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "post_office",
+    "icon": "📦",
+    "title": "Postane ve Kargo",
+    "hint": "Paket, takip ve teslim süresi",
+    "category": "services",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Postane gişesi",
+    "role": "Mira posta görevlisi.",
+    "goal": "Paketini gönder, teslim süresini ve takip yöntemini öğren.",
+    "turns": 5,
+    "tasks": [
+      "Göndereceğin ülkeyi söyle",
+      "Paket içeriğini açıkla",
+      "Hızlı veya standart gönderim seç",
+      "Ücreti ve süreyi sor",
+      "Takip numarasını iste"
+    ],
+    "phrases": {
+      "en": [
+        "I would like to send this parcel abroad.",
+        "How long will delivery take?",
+        "Can I track the package online?"
+      ],
+      "ru": [
+        "Я хочу отправить эту посылку за границу.",
+        "Сколько займёт доставка?",
+        "Можно отслеживать посылку онлайн?"
+      ]
+    },
+    "starters": {
+      "en": "Hello. Where would you like to send this parcel?",
+      "ru": "Здравствуйте. Куда вы хотите отправить эту посылку?"
+    },
+    "questions": {
+      "en": [
+        "Which country is the parcel going to?",
+        "What is inside the package?",
+        "Would you like standard or express delivery?",
+        "Would you like an estimate of the price and delivery time?",
+        "Do you need a tracking number?"
+      ],
+      "ru": [
+        "В какую страну отправляется посылка?",
+        "Что находится внутри?",
+        "Обычная или срочная доставка?",
+        "Рассчитать стоимость и срок доставки?",
+        "Вам нужен номер для отслеживания?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I need express delivery, please.",
+        "Could you give me the tracking number?"
+      ],
+      "ru": [
+        "Мне нужна срочная доставка.",
+        "Дайте, пожалуйста, номер для отслеживания."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "send",
+          "country",
+          "abroad"
+        ],
+        [
+          "inside",
+          "contains",
+          "gift",
+          "clothes"
+        ],
+        [
+          "standard",
+          "express",
+          "fast"
+        ],
+        [
+          "price",
+          "cost",
+          "long",
+          "days"
+        ],
+        [
+          "track",
+          "tracking",
+          "number"
+        ]
+      ],
+      "ru": [
+        [
+          "отправ",
+          "стран",
+          "за границ"
+        ],
+        [
+          "внутри",
+          "содерж",
+          "подар",
+          "одежд"
+        ],
+        [
+          "обычн",
+          "срочн",
+          "быстр"
+        ],
+        [
+          "стоим",
+          "цена",
+          "сколько",
+          "дней"
+        ],
+        [
+          "отслеж",
+          "номер"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "phone_call",
+    "icon": "📞",
+    "title": "Telefon Görüşmesi",
+    "hint": "Arama amacı ve mesaj bırakma",
+    "category": "daily",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Resmî bir telefon görüşmesi",
+    "role": "Mira danışma görevlisi.",
+    "goal": "Doğru kişiyle görüşmek iste, arama nedenini söyle ve mesaj bırak.",
+    "turns": 5,
+    "tasks": [
+      "Kendini tanıt",
+      "Görüşmek istediğin kişiyi söyle",
+      "Arama nedenini açıkla",
+      "Uygun zaman sor",
+      "Mesaj ve iletişim bilgini bırak"
+    ],
+    "phrases": {
+      "en": [
+        "May I speak to Ms Taylor, please?",
+        "I am calling about my appointment.",
+        "Could you ask her to call me back?"
+      ],
+      "ru": [
+        "Можно поговорить с госпожой Тейлор?",
+        "Я звоню по поводу своей встречи.",
+        "Попросите её перезвонить мне, пожалуйста."
+      ]
+    },
+    "starters": {
+      "en": "Good morning. How may I direct your call?",
+      "ru": "Доброе утро. С кем вы хотели бы поговорить?"
+    },
+    "questions": {
+      "en": [
+        "May I ask who is calling?",
+        "Who would you like to speak to?",
+        "What is the call about?",
+        "Would another time be convenient?",
+        "What message and phone number should I pass on?"
+      ],
+      "ru": [
+        "Представьтесь, пожалуйста.",
+        "С кем вы хотели бы поговорить?",
+        "По какому вопросу вы звоните?",
+        "Вам будет удобно позвонить в другое время?",
+        "Какое сообщение и номер телефона передать?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Could you ask him to call me back?",
+        "I am calling about tomorrow’s meeting."
+      ],
+      "ru": [
+        "Попросите его перезвонить мне.",
+        "Я звоню по поводу завтрашней встречи."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "my name",
+          "this is",
+          "calling"
+        ],
+        [
+          "speak",
+          "talk",
+          "manager",
+          "mr",
+          "ms"
+        ],
+        [
+          "about",
+          "regarding",
+          "because"
+        ],
+        [
+          "time",
+          "available",
+          "call back"
+        ],
+        [
+          "message",
+          "number",
+          "email"
+        ]
+      ],
+      "ru": [
+        [
+          "меня зовут",
+          "это ",
+          "звоню"
+        ],
+        [
+          "поговор",
+          "соедин",
+          "директор"
+        ],
+        [
+          "по поводу",
+          "вопрос"
+        ],
+        [
+          "время",
+          "удобно",
+          "перезвон"
+        ],
+        [
+          "сообщен",
+          "номер",
+          "почт"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "apartment",
+    "icon": "🏠",
+    "title": "Ev Kiralama",
+    "hint": "Bütçe, koşullar ve sözleşme",
+    "category": "daily",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Emlak ofisi",
+    "role": "Mira emlak danışmanı.",
+    "goal": "İhtiyacını açıkla, evi değerlendir ve sözleşme koşullarını sor.",
+    "turns": 6,
+    "tasks": [
+      "Bütçeni ve bölge tercihini söyle",
+      "Oda sayısını belirt",
+      "Eşyalı olup olmadığını sor",
+      "Fatura ve depozitoyu sor",
+      "Evcil hayvan kuralını öğren",
+      "Sözleşme süresini netleştir"
+    ],
+    "phrases": {
+      "en": [
+        "I am looking for a two-bedroom apartment.",
+        "Are utilities included in the rent?",
+        "How much is the security deposit?"
+      ],
+      "ru": [
+        "Я ищу двухкомнатную квартиру.",
+        "Коммунальные услуги включены в аренду?",
+        "Какой размер залога?"
+      ]
+    },
+    "starters": {
+      "en": "Hello. What kind of apartment are you looking for?",
+      "ru": "Здравствуйте. Какую квартиру вы ищете?"
+    },
+    "questions": {
+      "en": [
+        "What is your monthly budget and preferred area?",
+        "How many bedrooms do you need?",
+        "Would you prefer a furnished apartment?",
+        "Would you like details about utilities and the deposit?",
+        "Do you have any pets?",
+        "How long would you like the lease to be?"
+      ],
+      "ru": [
+        "Какой у вас бюджет и какой район вы предпочитаете?",
+        "Сколько комнат вам нужно?",
+        "Вам нужна меблированная квартира?",
+        "Рассказать о коммунальных услугах и залоге?",
+        "У вас есть домашние животные?",
+        "На какой срок вы хотите заключить договор?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Are utilities included in the monthly rent?",
+        "I would like to sign a one-year lease."
+      ],
+      "ru": [
+        "Коммунальные услуги входят в месячную аренду?",
+        "Я хотел(а) бы заключить договор на один год."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "budget",
+          "area",
+          "district",
+          "rent"
+        ],
+        [
+          "bedroom",
+          "rooms"
+        ],
+        [
+          "furnished",
+          "furniture"
+        ],
+        [
+          "utilities",
+          "deposit",
+          "included"
+        ],
+        [
+          "pet",
+          "cat",
+          "dog"
+        ],
+        [
+          "lease",
+          "contract",
+          "year",
+          "months"
+        ]
+      ],
+      "ru": [
+        [
+          "бюджет",
+          "район",
+          "аренд"
+        ],
+        [
+          "комнат"
+        ],
+        [
+          "меблиров",
+          "мебел"
+        ],
+        [
+          "коммунал",
+          "залог"
+        ],
+        [
+          "животн",
+          "кошк",
+          "собак"
+        ],
+        [
+          "договор",
+          "год",
+          "месяц"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "neighbor",
+    "icon": "🤝",
+    "title": "Komşuyla Konuşma",
+    "hint": "Tanışma, rica ve ortak alan",
+    "category": "social",
+    "minLevel": "A2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Apartman koridoru",
+    "role": "Mira yeni komşun.",
+    "goal": "Tanış, küçük bir rica yap ve ortak alanla ilgili konuş.",
+    "turns": 5,
+    "tasks": [
+      "Kendini tanıt",
+      "Hangi dairede oturduğunu söyle",
+      "Küçük bir rica yap",
+      "Gürültü veya ortak alan hakkında konuş",
+      "İletişim kurmayı teklif et"
+    ],
+    "phrases": {
+      "en": [
+        "I have just moved into apartment twelve.",
+        "Would you mind keeping the music down?",
+        "Please let me know if you need anything."
+      ],
+      "ru": [
+        "Я только что переехал(а) в квартиру двенадцать.",
+        "Не могли бы вы сделать музыку тише?",
+        "Дайте знать, если вам что-нибудь понадобится."
+      ]
+    },
+    "starters": {
+      "en": "Hi! I think we are neighbours. Have you just moved in?",
+      "ru": "Здравствуйте! Кажется, мы соседи. Вы недавно переехали?"
+    },
+    "questions": {
+      "en": [
+        "Which apartment are you in?",
+        "How are you finding the building so far?",
+        "Is there anything you need help with?",
+        "Would you like to discuss a shared-space issue?",
+        "Shall we exchange contact details?"
+      ],
+      "ru": [
+        "В какой квартире вы живёте?",
+        "Как вам дом?",
+        "Вам нужна помощь?",
+        "Хотите обсудить вопрос, связанный с общим пространством?",
+        "Обменяемся контактами?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Would you mind closing the door quietly?",
+        "Please let me know if you need any help."
+      ],
+      "ru": [
+        "Не могли бы вы закрывать дверь потише?",
+        "Дайте знать, если вам нужна помощь."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "my name",
+          "moved",
+          "neighbor"
+        ],
+        [
+          "apartment",
+          "flat",
+          "floor"
+        ],
+        [
+          "could you",
+          "would you",
+          "please",
+          "help"
+        ],
+        [
+          "noise",
+          "music",
+          "hall",
+          "door"
+        ],
+        [
+          "contact",
+          "phone",
+          "message"
+        ]
+      ],
+      "ru": [
+        [
+          "меня зовут",
+          "переех",
+          "сосед"
+        ],
+        [
+          "квартир",
+          "этаж"
+        ],
+        [
+          "не могли",
+          "пожалуйста",
+          "помощ"
+        ],
+        [
+          "шум",
+          "музык",
+          "коридор",
+          "двер"
+        ],
+        [
+          "контакт",
+          "телефон",
+          "сообщ"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "meeting",
+    "icon": "🗓️",
+    "title": "İş Toplantısı",
+    "hint": "Gündem, görev ve son tarih",
+    "category": "work",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Ekip toplantısı",
+    "role": "Mira toplantı yöneticisi.",
+    "goal": "Gündeme katkı ver, durum güncellemesi yap ve sonraki adımı netleştir.",
+    "turns": 6,
+    "tasks": [
+      "Toplantı amacını özetle",
+      "Çalışmanın durumunu anlat",
+      "Bir sorun veya riski belirt",
+      "Çözüm öner",
+      "Görev paylaşımını netleştir",
+      "Son tarihi doğrula"
+    ],
+    "phrases": {
+      "en": [
+        "Let me give you a quick update.",
+        "The main risk is the delivery schedule.",
+        "Could we agree on the next steps?"
+      ],
+      "ru": [
+        "Позвольте дать краткую информацию.",
+        "Главный риск связан со сроками поставки.",
+        "Можем согласовать следующие шаги?"
+      ]
+    },
+    "starters": {
+      "en": "Thanks for joining. Could you briefly summarise where the project stands?",
+      "ru": "Спасибо, что присоединились. Кратко расскажите, на каком этапе проект."
+    },
+    "questions": {
+      "en": [
+        "What is the main purpose of today’s meeting?",
+        "What has been completed since the last update?",
+        "What issue could affect the schedule?",
+        "What solution would you recommend?",
+        "Who should take responsibility for each action?",
+        "Can we confirm the deadline?"
+      ],
+      "ru": [
+        "Какова главная цель сегодняшней встречи?",
+        "Что было завершено после последнего отчёта?",
+        "Какая проблема может повлиять на график?",
+        "Какое решение вы предлагаете?",
+        "Кто должен отвечать за каждое действие?",
+        "Подтвердим срок выполнения?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Let me give you a quick project update.",
+        "Could we confirm the next steps and deadline?"
+      ],
+      "ru": [
+        "Позвольте дать краткий отчёт по проекту.",
+        "Подтвердим следующие шаги и срок?"
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "purpose",
+          "goal",
+          "agenda"
+        ],
+        [
+          "completed",
+          "finished",
+          "progress",
+          "update"
+        ],
+        [
+          "risk",
+          "problem",
+          "delay",
+          "issue"
+        ],
+        [
+          "solution",
+          "suggest",
+          "recommend"
+        ],
+        [
+          "responsible",
+          "task",
+          "who"
+        ],
+        [
+          "deadline",
+          "date",
+          "finish"
+        ]
+      ],
+      "ru": [
+        [
+          "цель",
+          "повест"
+        ],
+        [
+          "заверш",
+          "готов",
+          "прогресс",
+          "отчёт"
+        ],
+        [
+          "риск",
+          "проблем",
+          "задерж"
+        ],
+        [
+          "решен",
+          "предлага"
+        ],
+        [
+          "ответствен",
+          "задач",
+          "кто"
+        ],
+        [
+          "срок",
+          "дата",
+          "заверш"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "presentation",
+    "icon": "📊",
+    "title": "Sunum Yapma",
+    "hint": "Giriş, ana fikir ve soru-cevap",
+    "category": "work",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Profesyonel sunum",
+    "role": "Mira dinleyici ve moderatör.",
+    "goal": "Konunu tanıt, ana bulguları açıkla ve bir soruya cevap ver.",
+    "turns": 6,
+    "tasks": [
+      "Kendini ve konuyu tanıt",
+      "Sunumun yapısını açıkla",
+      "Ana bulguyu söyle",
+      "Bir örnek veya veri ver",
+      "Sonucu özetle",
+      "Dinleyici sorusunu cevapla"
+    ],
+    "phrases": {
+      "en": [
+        "Today I would like to focus on …",
+        "The key finding is …",
+        "To sum up, …"
+      ],
+      "ru": [
+        "Сегодня я хотел(а) бы сосредоточиться на …",
+        "Главный вывод заключается в том, что …",
+        "Подводя итог, …"
+      ]
+    },
+    "starters": {
+      "en": "Welcome. Please begin by introducing yourself and your topic.",
+      "ru": "Добро пожаловать. Представьтесь и назовите тему выступления."
+    },
+    "questions": {
+      "en": [
+        "How will you structure the presentation?",
+        "What is the most important finding?",
+        "Can you give a concrete example or figure?",
+        "Why does this result matter?",
+        "How would you summarise your conclusion?",
+        "How would you respond to a critical question?"
+      ],
+      "ru": [
+        "Как будет построена ваша презентация?",
+        "Какой вывод самый важный?",
+        "Можете привести конкретный пример или цифру?",
+        "Почему этот результат важен?",
+        "Как вы сформулируете итог?",
+        "Как вы ответите на критический вопрос?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Today I would like to present our main findings.",
+        "Thank you for your attention. I am happy to take questions."
+      ],
+      "ru": [
+        "Сегодня я хотел(а) бы представить наши основные результаты.",
+        "Спасибо за внимание. Я готов(а) ответить на вопросы."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "name",
+          "topic",
+          "present"
+        ],
+        [
+          "first",
+          "then",
+          "finally",
+          "structure"
+        ],
+        [
+          "finding",
+          "result",
+          "key"
+        ],
+        [
+          "example",
+          "data",
+          "percent",
+          "figure"
+        ],
+        [
+          "conclusion",
+          "summary",
+          "sum up"
+        ],
+        [
+          "question",
+          "because",
+          "evidence"
+        ]
+      ],
+      "ru": [
+        [
+          "меня зовут",
+          "тема",
+          "представ"
+        ],
+        [
+          "сначала",
+          "затем",
+          "наконец",
+          "структур"
+        ],
+        [
+          "вывод",
+          "результат"
+        ],
+        [
+          "пример",
+          "данн",
+          "процент",
+          "цифр"
+        ],
+        [
+          "итог",
+          "заключен"
+        ],
+        [
+          "вопрос",
+          "потому",
+          "доказ"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "negotiation",
+    "icon": "🤝",
+    "title": "Müzakere",
+    "hint": "Teklif, gerekçe ve uzlaşma",
+    "category": "work",
+    "minLevel": "B2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Ticari görüşme",
+    "role": "Mira karşı şirket temsilcisi.",
+    "goal": "Teklifini sun, şartları tartış ve dengeli bir uzlaşmaya ulaş.",
+    "turns": 6,
+    "tasks": [
+      "Önceliğini açıkla",
+      "İlk teklifini sun",
+      "Teklifini gerekçelendir",
+      "Karşı teklife cevap ver",
+      "Uzlaşma öner",
+      "Anlaşmayı özetle"
+    ],
+    "phrases": {
+      "en": [
+        "Our main priority is long-term reliability.",
+        "We could agree to this if …",
+        "Let me summarise what we have agreed."
+      ],
+      "ru": [
+        "Наш главный приоритет — долгосрочная надёжность.",
+        "Мы можем согласиться, если …",
+        "Позвольте подвести итог договорённостей."
+      ]
+    },
+    "starters": {
+      "en": "Thank you for meeting with us. What is your main priority in this agreement?",
+      "ru": "Спасибо за встречу. Каков ваш главный приоритет в этом соглашении?"
+    },
+    "questions": {
+      "en": [
+        "What outcome is most important to you?",
+        "What is your initial proposal?",
+        "What evidence supports your position?",
+        "How would you respond to a lower counteroffer?",
+        "What compromise could work for both sides?",
+        "Can you summarise the final terms?"
+      ],
+      "ru": [
+        "Какой результат для вас наиболее важен?",
+        "Каково ваше первоначальное предложение?",
+        "Какие аргументы подтверждают вашу позицию?",
+        "Как вы ответите на более низкое встречное предложение?",
+        "Какой компромисс устроит обе стороны?",
+        "Можете кратко изложить итоговые условия?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "We are prepared to be flexible on the delivery date.",
+        "This compromise would benefit both sides."
+      ],
+      "ru": [
+        "Мы готовы проявить гибкость в вопросе срока поставки.",
+        "Этот компромисс выгоден обеим сторонам."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "priority",
+          "important",
+          "goal"
+        ],
+        [
+          "offer",
+          "proposal",
+          "price",
+          "terms"
+        ],
+        [
+          "because",
+          "evidence",
+          "reason"
+        ],
+        [
+          "counteroffer",
+          "cannot",
+          "accept",
+          "consider"
+        ],
+        [
+          "compromise",
+          "flexible",
+          "both"
+        ],
+        [
+          "agree",
+          "summary",
+          "terms"
+        ]
+      ],
+      "ru": [
+        [
+          "приоритет",
+          "важн",
+          "цель"
+        ],
+        [
+          "предлож",
+          "цена",
+          "услов"
+        ],
+        [
+          "потому",
+          "аргумент",
+          "причин"
+        ],
+        [
+          "встречн",
+          "не можем",
+          "принять",
+          "рассмотр"
+        ],
+        [
+          "компромисс",
+          "гибк",
+          "обе"
+        ],
+        [
+          "соглас",
+          "итог",
+          "услов"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "customer_support",
+    "icon": "🎧",
+    "title": "Müşteri Hizmetleri",
+    "hint": "Sorun, kanıt ve çözüm talebi",
+    "category": "services",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Telefon veya canlı destek hattı",
+    "role": "Mira müşteri temsilcisi.",
+    "goal": "Sorunu düzenli anlat, kanıt sun ve uygun çözümü talep et.",
+    "turns": 6,
+    "tasks": [
+      "Ürün veya hizmeti tanımla",
+      "Sorunun ne zaman başladığını söyle",
+      "Denediklerini açıkla",
+      "Sipariş veya hesap bilgisi ver",
+      "İstediğin çözümü söyle",
+      "Çözüm süresini sor"
+    ],
+    "phrases": {
+      "en": [
+        "I am calling about order number …",
+        "The problem started yesterday.",
+        "I would like a replacement or a refund."
+      ],
+      "ru": [
+        "Я звоню по поводу заказа номер …",
+        "Проблема началась вчера.",
+        "Я хотел(а) бы замену или возврат денег."
+      ]
+    },
+    "starters": {
+      "en": "Hello, customer support. Could you describe the problem?",
+      "ru": "Здравствуйте, служба поддержки. Опишите, пожалуйста, проблему."
+    },
+    "questions": {
+      "en": [
+        "Which product or service is affected?",
+        "When did the problem begin?",
+        "What troubleshooting steps have you already tried?",
+        "Could you provide the order or account number?",
+        "Would you prefer a repair, replacement, or refund?",
+        "When do you need the issue resolved?"
+      ],
+      "ru": [
+        "С каким товаром или услугой возникла проблема?",
+        "Когда появилась проблема?",
+        "Что вы уже пробовали сделать?",
+        "Назовите номер заказа или счёта.",
+        "Вы предпочитаете ремонт, замену или возврат?",
+        "Когда нужно решить проблему?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I have already restarted the device twice.",
+        "I would like a full refund, please."
+      ],
+      "ru": [
+        "Я уже дважды перезапускал(а) устройство.",
+        "Я хотел(а) бы получить полный возврат."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "product",
+          "service",
+          "order",
+          "device"
+        ],
+        [
+          "started",
+          "yesterday",
+          "since"
+        ],
+        [
+          "tried",
+          "restart",
+          "checked"
+        ],
+        [
+          "order number",
+          "account",
+          "reference"
+        ],
+        [
+          "refund",
+          "replacement",
+          "repair"
+        ],
+        [
+          "when",
+          "time",
+          "days",
+          "resolve"
+        ]
+      ],
+      "ru": [
+        [
+          "товар",
+          "услуг",
+          "заказ",
+          "устройств"
+        ],
+        [
+          "начал",
+          "вчера",
+          "с"
+        ],
+        [
+          "пробовал",
+          "перезапуст",
+          "провер"
+        ],
+        [
+          "номер заказ",
+          "счёт",
+          "номер"
+        ],
+        [
+          "возврат",
+          "замен",
+          "ремонт"
+        ],
+        [
+          "когда",
+          "срок",
+          "дней",
+          "реш"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "networking",
+    "icon": "🌐",
+    "title": "Profesyonel Tanışma",
+    "hint": "Uzmanlık, bağlantı ve takip",
+    "category": "social",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Konferans veya iş etkinliği",
+    "role": "Mira aynı etkinliğe katılan bir uzman.",
+    "goal": "Kendini profesyonelce tanıt, ortak ilgi bul ve iletişim kur.",
+    "turns": 5,
+    "tasks": [
+      "Adını ve alanını söyle",
+      "Mevcut çalışmanı anlat",
+      "Karşı tarafa alanıyla ilgili soru sor",
+      "Ortak ilgi noktası bul",
+      "İletişim bilgisi paylaşmayı teklif et"
+    ],
+    "phrases": {
+      "en": [
+        "I work in the field of …",
+        "What kind of projects are you working on?",
+        "It would be great to stay in touch."
+      ],
+      "ru": [
+        "Я работаю в области …",
+        "Над какими проектами вы работаете?",
+        "Буду рад(а) оставаться на связи."
+      ]
+    },
+    "starters": {
+      "en": "Hi, I’m Mira. What brings you to this event?",
+      "ru": "Здравствуйте, я Мира. Что привело вас на это мероприятие?"
+    },
+    "questions": {
+      "en": [
+        "What field do you work in?",
+        "What are you currently working on?",
+        "What part of my work interests you?",
+        "Do our projects have anything in common?",
+        "Would you like to exchange contact details?"
+      ],
+      "ru": [
+        "В какой области вы работаете?",
+        "Над чем вы сейчас работаете?",
+        "Что вас заинтересовало в моей работе?",
+        "Есть ли что-то общее у наших проектов?",
+        "Хотите обменяться контактами?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I am currently working on an international research project.",
+        "It would be great to stay in touch."
+      ],
+      "ru": [
+        "Сейчас я работаю над международным исследовательским проектом.",
+        "Буду рад(а) оставаться на связи."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "work",
+          "field",
+          "specialise"
+        ],
+        [
+          "project",
+          "currently",
+          "research"
+        ],
+        [
+          "what",
+          "your work",
+          "projects"
+        ],
+        [
+          "common",
+          "similar",
+          "both"
+        ],
+        [
+          "contact",
+          "email",
+          "linkedin",
+          "stay in touch"
+        ]
+      ],
+      "ru": [
+        [
+          "работ",
+          "област",
+          "специал"
+        ],
+        [
+          "проект",
+          "сейчас",
+          "исслед"
+        ],
+        [
+          "ваш",
+          "проект",
+          "чем"
+        ],
+        [
+          "общ",
+          "похож",
+          "оба"
+        ],
+        [
+          "контакт",
+          "почт",
+          "связ"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "internship",
+    "icon": "🧑‍💻",
+    "title": "Staj Görüşmesi",
+    "hint": "Motivasyon, beceri ve öğrenme hedefi",
+    "category": "work",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Staj başvurusu görüşmesi",
+    "role": "Mira işe alım uzmanı.",
+    "goal": "Motivasyonunu ve becerilerini açıklayıp staj hedefini netleştir.",
+    "turns": 6,
+    "tasks": [
+      "Kendini tanıt",
+      "Neden başvurduğunu söyle",
+      "İlgili becerini açıkla",
+      "Bir deneyim örneği ver",
+      "Öğrenmek istediğini söyle",
+      "Uygunluk tarihini belirt"
+    ],
+    "phrases": {
+      "en": [
+        "I am interested in this internship because …",
+        "One of my strengths is …",
+        "I would like to develop my skills in …"
+      ],
+      "ru": [
+        "Меня интересует эта стажировка, потому что …",
+        "Одна из моих сильных сторон — …",
+        "Я хотел(а) бы развить навыки в области …"
+      ]
+    },
+    "starters": {
+      "en": "Welcome. Could you briefly introduce yourself?",
+      "ru": "Добро пожаловать. Кратко расскажите о себе."
+    },
+    "questions": {
+      "en": [
+        "Why are you interested in this internship?",
+        "Which skill would be most useful in this role?",
+        "Can you describe a relevant project or experience?",
+        "How do you learn from feedback?",
+        "What would you like to achieve during the internship?",
+        "When would you be available to start?"
+      ],
+      "ru": [
+        "Почему вас интересует эта стажировка?",
+        "Какой навык будет наиболее полезен?",
+        "Расскажите о подходящем проекте или опыте.",
+        "Как вы воспринимаете обратную связь?",
+        "Чего вы хотите достичь во время стажировки?",
+        "Когда вы можете начать?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I am eager to learn from an experienced team.",
+        "I would be available to start next month."
+      ],
+      "ru": [
+        "Я хочу учиться у опытной команды.",
+        "Я могу начать в следующем месяце."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "my name",
+          "student",
+          "graduate"
+        ],
+        [
+          "because",
+          "interested",
+          "apply"
+        ],
+        [
+          "skill",
+          "good at",
+          "strength"
+        ],
+        [
+          "project",
+          "experience",
+          "worked"
+        ],
+        [
+          "learn",
+          "develop",
+          "improve"
+        ],
+        [
+          "start",
+          "available",
+          "month"
+        ]
+      ],
+      "ru": [
+        [
+          "меня зовут",
+          "студент",
+          "выпуск"
+        ],
+        [
+          "потому",
+          "интерес",
+          "подал"
+        ],
+        [
+          "навык",
+          "умею",
+          "сильн"
+        ],
+        [
+          "проект",
+          "опыт",
+          "работал"
+        ],
+        [
+          "науч",
+          "развить",
+          "улучш"
+        ],
+        [
+          "начать",
+          "могу",
+          "месяц"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "conference",
+    "icon": "🎓",
+    "title": "Akademik Konferans",
+    "hint": "Araştırma, yöntem ve tartışma",
+    "category": "academic",
+    "minLevel": "B2",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Akademik konferans soru-cevap bölümü",
+    "role": "Mira oturum başkanı.",
+    "goal": "Araştırmanı özetle, yöntemini savun ve eleştirel soruya cevap ver.",
+    "turns": 6,
+    "tasks": [
+      "Araştırma sorusunu söyle",
+      "Veri veya materyali açıkla",
+      "Yöntemi özetle",
+      "Ana bulguyu belirt",
+      "Sınırlılığı kabul et",
+      "Gelecek çalışma öner"
+    ],
+    "phrases": {
+      "en": [
+        "This study examines …",
+        "Our analysis suggests that …",
+        "One limitation of the study is …"
+      ],
+      "ru": [
+        "Это исследование рассматривает …",
+        "Наш анализ показывает, что …",
+        "Одно из ограничений исследования — …"
+      ]
+    },
+    "starters": {
+      "en": "Thank you for your presentation. What is the central research question?",
+      "ru": "Спасибо за доклад. Каков главный исследовательский вопрос?"
+    },
+    "questions": {
+      "en": [
+        "What data or material did you analyse?",
+        "Why did you choose this method?",
+        "What is the strongest finding?",
+        "How do you interpret an alternative explanation?",
+        "What is the main limitation?",
+        "What should future research examine?"
+      ],
+      "ru": [
+        "Какие данные или материалы вы анализировали?",
+        "Почему вы выбрали этот метод?",
+        "Какой результат наиболее убедителен?",
+        "Как вы оцениваете альтернативное объяснение?",
+        "Каково главное ограничение?",
+        "Что следует изучить в будущем?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "Our findings should be interpreted with caution.",
+        "Future research should include a larger sample."
+      ],
+      "ru": [
+        "Наши результаты следует интерпретировать с осторожностью.",
+        "В будущих исследованиях нужна более крупная выборка."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "research",
+          "question",
+          "study"
+        ],
+        [
+          "data",
+          "sample",
+          "material"
+        ],
+        [
+          "method",
+          "analysis",
+          "used"
+        ],
+        [
+          "finding",
+          "result",
+          "shows"
+        ],
+        [
+          "limitation",
+          "however",
+          "caution"
+        ],
+        [
+          "future",
+          "research",
+          "next"
+        ]
+      ],
+      "ru": [
+        [
+          "исслед",
+          "вопрос"
+        ],
+        [
+          "данн",
+          "выборк",
+          "материал"
+        ],
+        [
+          "метод",
+          "анализ"
+        ],
+        [
+          "результат",
+          "вывод",
+          "показ"
+        ],
+        [
+          "огранич",
+          "однако",
+          "осторож"
+        ],
+        [
+          "будущ",
+          "исслед",
+          "дальше"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "visa_interview",
+    "icon": "🛂",
+    "title": "Vize Görüşmesi",
+    "hint": "Amaç, finans ve geri dönüş planı",
+    "category": "travel",
+    "minLevel": "B1",
+    "supportedCourses": [
+      "en",
+      "ru"
+    ],
+    "place": "Konsolosluk görüşmesi",
+    "role": "Mira vize görevlisi.",
+    "goal": "Seyahat planını tutarlı biçimde açıkla ve gerekli soruları cevapla.",
+    "turns": 6,
+    "tasks": [
+      "Seyahat amacını söyle",
+      "Tarih ve süreyi belirt",
+      "Konaklama planını açıkla",
+      "Masrafları nasıl karşılayacağını söyle",
+      "İş veya eğitim bağını açıkla",
+      "Geri dönüş planını belirt"
+    ],
+    "phrases": {
+      "en": [
+        "The purpose of my trip is …",
+        "I will cover the expenses myself.",
+        "I plan to return on …"
+      ],
+      "ru": [
+        "Цель моей поездки — …",
+        "Я оплачу расходы самостоятельно.",
+        "Я планирую вернуться …"
+      ]
+    },
+    "starters": {
+      "en": "Good morning. Please explain the purpose of your trip.",
+      "ru": "Доброе утро. Объясните цель вашей поездки."
+    },
+    "questions": {
+      "en": [
+        "What are your planned travel dates?",
+        "Where will you stay?",
+        "Who will pay for the trip?",
+        "What do you do for work or study?",
+        "Why will you return after the visit?",
+        "Do you have documents supporting your plan?"
+      ],
+      "ru": [
+        "Каковы даты вашей поездки?",
+        "Где вы будете жить?",
+        "Кто оплачивает поездку?",
+        "Где вы работаете или учитесь?",
+        "Почему вы вернётесь после поездки?",
+        "У вас есть документы, подтверждающие план?"
+      ]
+    },
+    "pron": {
+      "en": [
+        "I will stay for seven days and return to my job.",
+        "I have documents confirming my hotel reservation."
+      ],
+      "ru": [
+        "Я останусь на семь дней и вернусь на работу.",
+        "У меня есть подтверждение бронирования отеля."
+      ]
+    },
+    "keywords": {
+      "en": [
+        [
+          "purpose",
+          "tourism",
+          "business",
+          "visit"
+        ],
+        [
+          "date",
+          "days",
+          "week"
+        ],
+        [
+          "hotel",
+          "stay",
+          "apartment"
+        ],
+        [
+          "pay",
+          "expenses",
+          "sponsor"
+        ],
+        [
+          "work",
+          "job",
+          "study",
+          "university"
+        ],
+        [
+          "return",
+          "back",
+          "ticket"
+        ]
+      ],
+      "ru": [
+        [
+          "цель",
+          "туризм",
+          "работ",
+          "визит"
+        ],
+        [
+          "дата",
+          "дней",
+          "недел"
+        ],
+        [
+          "отел",
+          "жить",
+          "квартир"
+        ],
+        [
+          "оплат",
+          "расход",
+          "спонсор"
+        ],
+        [
+          "работ",
+          "учусь",
+          "университет"
+        ],
+        [
+          "верн",
+          "обратно",
+          "билет"
+        ]
+      ]
+    }
+  }
+]

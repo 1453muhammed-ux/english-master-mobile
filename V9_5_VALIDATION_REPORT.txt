@@ -1,0 +1,49 @@
+WORDPILOT V9.5.0 VALIDATION REPORT
+
+PASS | words.json geçerli JSON | 5000
+PASS | İngilizce gerçek kayıt sayısı | 5000
+PASS | İngilizce kayıtlar benzersiz | 5000/5000
+PASS | Rusça gerçek kayıt sayısı | 1500
+PASS | Özbekçe gerçek kayıt sayısı | 1000
+PASS | Reader metni sayısı | 114
+PASS | Phrase Lab kayıt sayısı | 240
+PASS | Yeni Coach Pro senaryoları | 20
+PASS | Yeni senaryo kimlikleri benzersiz
+PASS | Senaryo zorunlu alanları tam
+PASS | Yeni senaryolar EN/RU destekli
+PASS | Her senaryoda görev var
+PASS | Her senaryoda EN/RU soru akışı var
+PASS | Her senaryoda görev anahtarları var
+PASS | Tek sürüm etiketi v9.5.0
+PASS | Uygulama sürümü 9.5.0
+PASS | Manifest v9.5 açıklaması
+PASS | Service Worker v9.5 önbelleği
+PASS | v95 modülü index içinde
+PASS | v95 modülü bootstrap öncesi
+PASS | Yeni senaryo verisi çevrimdışı listede
+PASS | v95 olay kurulumu bootstrap içinde
+PASS | v95 başlatma çağrısı bootstrap içinde
+PASS | İngilizce sayı kaynağı 5000
+PASS | Rusça sayı kaynağı 1500
+PASS | Özbekçe sayı kaynağı 1000
+PASS | Türkçe sayı kaynağı 1000
+PASS | Toplam EN/RU senaryo hedefi 30 | 30
+PASS | Senaryo kategori filtresi
+PASS | Senaryo arama filtresi
+PASS | CEFR seviye uygunluğu
+PASS | Anahtar kelime tabanlı görev algılama
+PASS | Rapor ölçütü: Dil bilgisi
+PASS | Rapor ölçütü: Anlaşılırlık
+PASS | Rapor ölçütü: Akıcılık
+PASS | Rapor ölçütü: Kelime çeşitliliği
+PASS | Rapor ölçütü: Doğallık
+PASS | Yerel/Bulut AI durumu açık
+PASS | Coach Pro filtre CSS
+PASS | Coach Pro rapor CSS
+PASS | Eski görünür sürüm/sayı metinleri temiz
+PASS | Tüm JavaScript sözdizimi geçerli | 36 dosya
+PASS | GitHub web yükleme sınırı altında | 90 dosya
+
+RESULT: 43/43 checks passed
+
+NOT: Bu rapor JSON, veri bütünlüğü, JavaScript sözdizimi ve statik entegrasyon kontrolleridir. Canlı tarayıcı, mikrofon ve cihaz sesi testi dağıtımdan sonra ayrıca yapılmalıdır.

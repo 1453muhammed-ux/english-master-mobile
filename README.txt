@@ -1,4 +1,4 @@
-WordPilot v9.4.0 — Reader 3.0 Beta
+WordPilot v9.5.0 — Conversation Coach Pro
 
 Ana kapsam:
 - 5000 İngilizce kelime

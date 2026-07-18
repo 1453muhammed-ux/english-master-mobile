@@ -8,9 +8,9 @@ const WP81_RATE_DEFAULT=.88;
 
 // The v8.1 English course uses 1000 reviewed word cards + 1000 original context cards.
 COURSES.en.file='words.json';
-COURSES.en.displayCount=2000;
-COURSES.en.actualCount=2000;
-COURSES.en.countLabel='2000 çalışma kartı · 1000 kelime + 1000 özgün bağlam kartı';
+COURSES.en.displayCount=5000;
+COURSES.en.actualCount=5000;
+COURSES.en.countLabel='5000 İngilizce kelime · A1–C2';
 COURSES.tr.flag='TR';
 
 const wp81LoadCourseWordsBase=loadCourseWords;
@@ -31,9 +31,9 @@ function wp81ApplyTurkishFlags(root=document){
 }
 
 function wp81ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v9.2.0 · Tester Beta';
-  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 2000 çalışma kartı';
-  const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 2000 çalışma kartı + A1–C2 Akademi';
+  const version=$('.version');if(version)version.textContent='v9.5.0 · Conversation Coach Pro';
+  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 5000 İngilizce kelime';
+  const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 5000 kelime + A1–C2 Akademi';
   const ruCard=$('.course-card[data-course="ru"] small');if(ruCard)ruCard.textContent='Türkçe anlatımlı · 1500 kontrollü kayıt + A1–C2 Akademi';
   const uzCard=$('.course-card[data-course="uz"] small');if(uzCard)uzCard.textContent='Türkçe anlatımlı · 1000 kontrollü kayıt';
   if($('#proofWordCount')&&activeCourse==='en')$('#proofWordCount').textContent='2000';
@@ -261,4 +261,4 @@ document.addEventListener('click',event=>{
 
 // Reapply human-readable wording after dynamic dashboard renders.
 const wp81Observer=new MutationObserver(()=>{clearTimeout(wp81Observer._t);wp81Observer._t=setTimeout(()=>{wp81ApplyBrand();wp81HumanizeReview();wp81EnsureAuthUI();wp81NormalizePointCopy(document)},80)});
-document.addEventListener('DOMContentLoaded',()=>wp81Observer.observe(document.body,{childList:true,subtree:true}));
+/* v9.5: eski marka gözlemcisi devre dışı; tek kaynak v95.js */

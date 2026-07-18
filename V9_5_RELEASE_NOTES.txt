@@ -1,0 +1,11 @@
+WordPilot v9.5.0 — Conversation Coach Pro
+
+- Tek sürüm etiketi: bütün ekranlarda v9.5.0.
+- Gerçek veri sayıları: İngilizce 5000, Rusça 1500, Özbekçe 1000, Türkçe 1000.
+- Eski 2000/1300 ve v9.2 etiketlerini yeniden yazan gözlemciler devre dışı bırakıldı.
+- 30 kontrollü İngilizce/Rusça konuşma senaryosu; Özbekçe/Türkçe için mevcut 10 çok dilli senaryo korunur.
+- Senaryo kategori ve arama filtreleri.
+- Seviye uygunluğu (A1–C2) ve minimum seviye rozeti.
+- Anahtar kelime tabanlı görev algılama; boş cevapla görev tamamlanmaz.
+- Beş ölçütlü rapor: dil bilgisi, anlaşılırlık, akıcılık, kelime çeşitliliği, doğallık.
+- Bulut AI etkin değilse bu durum açıkça yerel pratik olarak gösterilir.

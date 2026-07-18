@@ -8,7 +8,7 @@ function wp90CoverageText(course){const live=WP90_REVIEWED[course]||1000;return 
 function wp90SetText(node,value){if(node&&node.textContent!==value)node.textContent=value}
 function wp90ApplyVersionLock(){
   if(document.documentElement.dataset.wpVersion!==WP90_VERSION)document.documentElement.dataset.wpVersion=WP90_VERSION;if(document.title!=='WordPilot 9.1 · 3000 Kelime · Conversation Coach 4.0')document.title='WordPilot 9.1 · 3000 Kelime · Conversation Coach 4.0';
-  wp90SetText($('.version'),'v9.2.0 · Tester Beta');
+  wp90SetText($('.version'),'v9.5.0 · Conversation Coach Pro');
   wp90SetText($('#view-ai .section-title .eyebrow'),'CONVERSATION COACH 4.0');
   wp90SetText($('#view-ai .section-title h1'),'Conversation Coach 4.0 · Mira');
   wp90SetText($('#wp71ConversationSpotlight h2'),'Conversation Coach 4.0');
@@ -44,7 +44,7 @@ updateCourseUI=function(){const out=wp90UpdateCourseUIBase();wp90ApplyVersionLoc
 const wp90HandleAuthStateBase=handleAuthState;
 handleAuthState=async function(user){await wp90HandleAuthStateBase(user);wp90AiHealthChecked=false;await wp90DetectCloudAi(true);wp90ApplyVersionLock()};
 function setupV90Events(){document.addEventListener('click',event=>{if(event.target.closest('#aiBackendStatus'))wp90DetectCloudAi(true)},true)}
-function wp90AfterInit(){wp90ApplyVersionLock();const observer=new MutationObserver(()=>{clearTimeout(observer._t);observer._t=setTimeout(wp90ApplyVersionLock,90)});observer.observe(document.body,{childList:true,subtree:true});setTimeout(()=>wp90DetectCloudAi(false),900)}
+function wp90AfterInit(){wp90ApplyVersionLock();/* v9.5: eski sürüm gözlemcisi devre dışı */setTimeout(()=>wp90DetectCloudAi(false),900)}
 
 const WP90_SENTENCE_CACHE_PREFIX='wordpilot:v90:sentence:';
 const wp90SentencePending=new Set();

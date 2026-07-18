@@ -23,7 +23,7 @@ function wp93OpenWord(id){
 }
 function wp93Apply(){
   document.documentElement.dataset.wpVersion=WP93_VERSION;document.title='WordPilot 9.3 · İçerik Kalitesi · 5000 Kelime';
-  wp91Set($('.version'),'v9.3.0 · Content Quality Beta');
+  wp91Set($('.version'),'v9.5.0 · Conversation Coach Pro');
   wp91Set($('#view-ai .section-title .eyebrow'),'CONVERSATION COACH 4.0');wp91Set($('#view-ai .section-title h1'),'Conversation Coach 4.0 · Mira');
   wp93EnsureQualityFilter();
   const p=$('#wp90CoveragePanel');if(p)p.innerHTML=`<div><p class="eyebrow">V9.3 İÇERİK KALİTESİ</p><b>5000 benzersiz İngilizce kelime</b><small>1000 incelenmiş çekirdek · 4000 açıkça işaretli beta · yapay eş/zıt anlam üretilmez</small></div><div class="wp90-coverage-stats"><span><b>${WP93_QUALITY.words_with_synonym_links}</b><small>eş anlam bağlantılı</small></span><span><b>${WP93_QUALITY.words_with_antonym_links}</b><small>zıt anlam bağlantılı</small></span><span><b>${WP93_QUALITY.words_with_family_links}</b><small>kelime ailesi</small></span><span><b>${WP93_QUALITY.phrase_count}</b><small>incelenmiş kalıp</small></span></div>`;
@@ -35,5 +35,5 @@ function setupV93Events(){document.addEventListener('change',e=>{if(e.target?.id
 function wp93AfterInit(){
   try{wp92Apply=wp93Apply}catch{}try{wp90ApplyVersionLock=wp93Apply}catch{}try{openWord=wp93OpenWord}catch{}
   wp93Apply();setupV93Events();
-  const o=new MutationObserver(()=>{clearTimeout(o._t);o._t=setTimeout(wp93Apply,180)});o.observe(document.body,{childList:true,subtree:true});
+  /* v9.5: eski sürüm gözlemcisi devre dışı */
 }

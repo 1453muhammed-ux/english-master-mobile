@@ -150,10 +150,10 @@ async function wp65MicDiagnostic(){
   const text=$('#wp65MicDiagnosticText');if(!text)return;text.textContent='Mikrofon izni kontrol ediliyor…';try{await wp65RequestMicrophone();const has=!!wp65RecognitionCtor();text.textContent=has?'Mikrofon izni açık ve canlı ses tanıma kullanılabilir.':'Mikrofon izni açık; bu tarayıcı canlı yazıya dökmeyi desteklemiyor.'}catch(e){text.textContent=wp65MicMessage(e)}
 }
 function wp65UpdateCounts(){
-  COURSES.ru.displayCount=1300;COURSES.ru.actualCount=1300;COURSES.ru.countLabel='1300 kontrollü kelime ve ifade + A1–C2 Akademi';
-  const card=document.querySelector('[data-course="ru"] small');if(card)card.textContent='Türkçe anlatımlı · 1300 kayıt + A1–C2 Akademi';
-  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='ru')summary.textContent='Русский · 1300 kontrollü kayıt + A1–C2 Akademi';
-  document.querySelectorAll('.wp63-vocab-stats article:first-child b').forEach(x=>x.textContent='1120');
+  COURSES.ru.displayCount=1500;COURSES.ru.actualCount=1500;COURSES.ru.countLabel='1500 kontrollü kelime ve ifade + A1–C2 Akademi';
+  const card=document.querySelector('[data-course="ru"] small');if(card)card.textContent='Türkçe anlatımlı · 1500 kayıt + A1–C2 Akademi';
+  const summary=$('#activeCourseSummary');if(summary&&activeCourse==='ru')summary.textContent='Русский · 1500 kontrollü kayıt + A1–C2 Akademi';
+  document.querySelectorAll('.wp63-vocab-stats article:first-child b').forEach(x=>x.textContent='1500');
 }
 function setupV65Events(){
   wp65PolishHub();wp65UpdateCounts();
