@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.3",
-  "short_name": "WordPilot 9.3",
-  "start_url": "./?wpbuild=9.2.0",
+  "name": "WordPilot 9.4 · Reader 3.0",
+  "short_name": "WordPilot 9.4",
+  "start_url": "./?wpbuild=9.4.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.2.0 — 5000 İngilizce kelime, uzun A1–C2 okumalar, Phrase Lab ve Conversation Coach 4.0.",
+  "description": "WordPilot v9.4.0 — Reader 3.0, 5000 İngilizce kelime, 114 A1–C2 okuma, dokunmatik sözlük, kelime testi ve okuma raporları.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.2.0"
+  "version": "9.4.0"
 }

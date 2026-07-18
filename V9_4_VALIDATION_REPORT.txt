@@ -1,0 +1,48 @@
+WORDPILOT V9.4.0 — READER 3.0 DOĞRULAMA RAPORU
+
+Sonuç: 31/31 kontrol geçti.
+
+[GEÇTİ] GitHub web yükleme dosya sayısı — 88 dosya
+[GEÇTİ] İngilizce kelime sayısı — 5000
+[GEÇTİ] İngilizce kelimeler benzersiz — 5000 benzersiz
+[GEÇTİ] Reader toplam hikâye sayısı — 114
+[GEÇTİ] Dil bazlı hikâye sayıları — {'en': 60, 'ru': 48, 'uz': 6}
+[GEÇTİ] Reader 3.0 açılış hikâyeleri — 6 özgün hikâye
+[GEÇTİ] Her CEFR seviyesinde yeni hikâye — {'A1': 1, 'A2': 1, 'B1': 1, 'B2': 1, 'C1': 1, 'C2': 1}
+[GEÇTİ] Hikâye kimlikleri benzersiz
+[GEÇTİ] Tüm hikâye satırlarında çeviri — 0 hata
+[GEÇTİ] Tüm hikâye sorularında geçerli cevap — 0 hata
+[GEÇTİ] Bölüm sınırları geçerli — 0 hata
+[GEÇTİ] Reader ek sözlüğü — 217 kayıt
+[GEÇTİ] Biçim ve düzensiz fiil eşlemeleri — 65 eşleme
+[GEÇTİ] Reader 3.0 modülü sayfaya bağlı
+[GEÇTİ] Sürüm metni 9.4.0
+[GEÇTİ] Reader 3.0 arayüz metinleri
+[GEÇTİ] Service Worker v9.4 önbelleği
+[GEÇTİ] Reader sözlüğü çevrimdışı listede
+[GEÇTİ] PWA manifest sürümü — 9.4.0
+[GEÇTİ] Eski Google Drive bağlantısı yok — Politika metnindeki kaynak temizliği açıklamaları korunur
+[GEÇTİ] OpenAI özel anahtarı yok
+[GEÇTİ] JavaScript sözdizimi — 35 JS dosyası; 0 hata
+[GEÇTİ] Reader 3.0 DOM çalışma testi — ['coverageAvg 95 min 83 max 100', 'JSDOM_RUNTIME_OK']
+[GEÇTİ] Odak modu
+[GEÇTİ] Tema ayarları
+[GEÇTİ] Cümle yer imi
+[GEÇTİ] Kelime testi
+[GEÇTİ] Kişisel özet
+[GEÇTİ] Okuma raporu
+[GEÇTİ] Durum filtresi
+[GEÇTİ] Uzunluk filtresi
+
+Kapsam özeti:
+- 5000 benzersiz İngilizce kelime korunmuştur.
+- 114 toplam hikâye: 60 İngilizce, 48 Rusça, 6 Özbekçe.
+- A1–C2 seviyelerinin her birine bir özgün Reader 3.0 açılış metni eklenmiştir.
+- Reader ek sözlüğü 217 bağlam kelimesi ve 65 biçim/düzensiz fiil eşlemesi içerir.
+- Gerçek Reader analiz motoruyla İngilizce hikâyelerde ortalama sözlük kapsamı %95; gözlenen en düşük kapsam %83’tür.
+- Firebase planı, Firestore kuralları ve ücretli AI ayarları değiştirilmemiştir.
+
+Test notu:
+- JavaScript sözdizimi Node.js ile kontrol edildi.
+- Reader 3.0 açılış, hikâye kartı, metin görünümü, beş istatistik kartı, çalışma merkezi, yer imleri ve filtreler JSDOM tarayıcı simülasyonunda çalıştırıldı.
+- Canlı Firebase Hosting üzerinde cihaz/tarayıcı testi, deploy sonrasında ayrıca yapılmalıdır.

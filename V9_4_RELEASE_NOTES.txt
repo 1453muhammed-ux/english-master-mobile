@@ -1,0 +1,11 @@
+WORDPILOT V9.4.0 — READER 3.0
+
+- Reader 2.0 arayüzü Reader 3.0 olarak yenilendi.
+- 6 özgün uzun İngilizce okuma eklendi; toplam 114 hikâye.
+- Yazı boyutu, satır aralığı, kâğıt/sepya/gece teması ve odak modu eklendi.
+- Bölüm navigasyonu, cümle yer imleri, aktif okuma süresi ve kaldığın yer takibi eklendi.
+- 217 kayıtlı Reader ek sözlüğü ve 65 biçim/fiil eşlemesi eklendi.
+- Hikâye içi kelime testi, kişisel özet ve tekrar merkezi eklendi.
+- Okuma süresi, kelime/dakika, anlama, sözlük kapsamı ve kaydedilen kelimeleri gösteren rapor eklendi.
+- Özel adlar artık “bilinmiyor” olarak gösterilmez.
+- Firebase planı veya ücretli AI ayarları değiştirilmedi.

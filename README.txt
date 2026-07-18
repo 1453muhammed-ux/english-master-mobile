@@ -1,12 +1,11 @@
-WordPilot v9.3.0 — Content Quality Beta
+WordPilot v9.4.0 — Reader 3.0 Beta
 
-- 5000 benzersiz İngilizce kelime
-- 1000 incelenmiş çekirdek; 1001–5000 açıkça etiketlenmiş beta katmanı
-- Her kayıt için üç dil bilgisel olarak güvenli cümle tamamlama bağlamı
-- 587 kelimede liste içi eş anlam bağlantısı
-- 378 kelimede liste içi zıt anlam bağlantısı
-- 777 kelimede liste içi kelime ailesi bağlantısı
-- 240 incelenmiş Phrase Lab girdisi: konuşma, kolokasyon, phrasal verb ve deyim
-- Kelime kütüphanesinde içerik kalitesi filtresi ve açık editör durumları
+Ana kapsam:
+- 5000 İngilizce kelime
+- 114 A1–C2 derecelendirilmiş okuma
+- Reader 3.0 odak modu, yazı/tema ayarları, bölüm takibi
+- Dokunmatik sözlük ve Reader ek sözlüğü
+- Hikâye kelime testi, kişisel özet, yer imleri ve okuma raporu
+- Conversation Coach 4.0 ve Phrase Lab 2.0 korunur
 
-Önemli: Doğrudan eş veya zıt anlamı bulunmayan kelimelere yapay ilişki eklenmez. 1001–5000 arasındaki beta içerik insan editör ve hukuk kontrolü tamamlanmadan ticari final olarak kabul edilmez.
+3001–5000 kelime katmanı ve bazı ileri içerikler beta olarak açıkça işaretlenir.

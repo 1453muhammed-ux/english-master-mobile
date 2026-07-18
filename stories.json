@@ -23788,5 +23788,913 @@
     "source": "WordPilot v9.2 özgün derecelendirilmiş okuma",
     "license": "WordPilot original educational content",
     "readerVersion": "9.2.0"
+  },
+  {
+    "id": "en-r30-a1-01",
+    "course": "en",
+    "title": "The Little Reading Room",
+    "titleTr": "Küçük Okuma Odası",
+    "level": "A1",
+    "topic": "Community",
+    "genre": "Community",
+    "emoji": "📚",
+    "lines": [
+      {
+        "text": "On Monday morning, Lina sees a small empty room next to the town bakery. The door is open, and sunlight falls across the wooden floor.",
+        "translation": "Pazartesi sabahı Lina kasaba fırınının yanında küçük, boş bir oda görür. Kapı açıktır ve güneş ışığı ahşap zemine düşer."
+      },
+      {
+        "text": "The baker tells her that the room belonged to his aunt. She loved books, but the room has been closed for three years.",
+        "translation": "Fırıncı ona odanın teyzesine ait olduğunu söyler. Teyzesi kitapları severmiş, fakat oda üç yıldır kapalıdır."
+      },
+      {
+        "text": "Lina has an idea. She asks, “Can we make a reading room for the neighbourhood?” The baker smiles and gives her the old key.",
+        "translation": "Lina’nın aklına bir fikir gelir. “Mahalle için bir okuma odası yapabilir miyiz?” diye sorar. Fırıncı gülümser ve ona eski anahtarı verir."
+      },
+      {
+        "text": "After school, Lina and her friend Omar clean the windows, sweep the floor, and carry two small tables inside.",
+        "translation": "Okuldan sonra Lina ve arkadaşı Omar pencereleri temizler, zemini süpürür ve içeri iki küçük masa taşır."
+      },
+      {
+        "text": "They do not have many books, so they write a sign: “Bring one book, take one book.” They put the sign near the bus stop.",
+        "translation": "Çok kitapları olmadığı için “Bir kitap getir, bir kitap al” yazan bir tabela hazırlarlar. Tabelayı otobüs durağının yakınına koyarlar."
+      },
+      {
+        "text": "The next day, an old woman brings a box of storybooks. A university student brings dictionaries, and a taxi driver brings travel magazines.",
+        "translation": "Ertesi gün yaşlı bir kadın bir kutu hikâye kitabı getirir. Bir üniversite öğrencisi sözlükler, bir taksi şoförü de gezi dergileri getirir."
+      },
+      {
+        "text": "By Friday, the shelves are full. Children sit on bright cushions, adults read newspapers, and two neighbours practise English together.",
+        "translation": "Cuma gününe kadar raflar dolar. Çocuklar renkli minderlerde oturur, yetişkinler gazete okur ve iki komşu birlikte İngilizce çalışır."
+      },
+      {
+        "text": "Lina makes simple rules: speak quietly, return books, and help new readers. Everyone agrees.",
+        "translation": "Lina basit kurallar hazırlar: sessiz konuş, kitapları geri getir ve yeni okurlara yardım et. Herkes kabul eder."
+      },
+      {
+        "text": "On Saturday, the baker brings warm bread and tea. People read, talk, and share book ideas for two happy hours.",
+        "translation": "Cumartesi günü fırıncı sıcak ekmek ve çay getirir. İnsanlar iki keyifli saat boyunca okur, konuşur ve kitap fikirlerini paylaşır."
+      },
+      {
+        "text": "Before Lina goes home, she writes one more sign: “This room belongs to everyone who enters with curiosity.”",
+        "translation": "Lina eve gitmeden önce bir tabela daha yazar: “Bu oda merakla içeri giren herkese aittir.”"
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why was the room empty?",
+        "qTr": "Oda neden boştu?",
+        "options": [
+          "It had been closed for three years.",
+          "It was too far from town.",
+          "The baker used it at night.",
+          "It had no door."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What do Lina and Omar do first?",
+        "qTr": "Lina ve Omar önce ne yapar?",
+        "options": [
+          "They clean the room.",
+          "They buy a bus.",
+          "They sell magazines.",
+          "They paint the bakery."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What does the sign ask people to do?",
+        "qTr": "Tabela insanlardan ne yapmalarını ister?",
+        "options": [
+          "Bring and take a book.",
+          "Pay for every book.",
+          "Read only newspapers.",
+          "Come only on Monday."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Who brings travel magazines?",
+        "qTr": "Gezi dergilerini kim getirir?",
+        "options": [
+          "A taxi driver.",
+          "The baker’s aunt.",
+          "A child.",
+          "Omar’s teacher."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Which rule is NOT mentioned?",
+        "qTr": "Hangi kural belirtilmemiştir?",
+        "options": [
+          "Buy a new book every week.",
+          "Speak quietly.",
+          "Return books.",
+          "Help new readers."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What is the main idea of the story?",
+        "qTr": "Hikâyenin ana fikri nedir?",
+        "options": [
+          "A shared space can grow through small contributions.",
+          "Old rooms should always stay closed.",
+          "Only students enjoy reading.",
+          "A bakery is better than a library."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Açık Kapı",
+        "startLine": 0,
+        "endLine": 3
+      },
+      {
+        "title": "Rafların Dolması",
+        "startLine": 3,
+        "endLine": 7
+      },
+      {
+        "title": "Herkesin Odası",
+        "startLine": 7,
+        "endLine": 10
+      }
+    ],
+    "wordCount": 211,
+    "readMinutes": 2,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Lina eve gitmeden önce bir tabela daha yazar: “Bu oda merakla içeri giren herkese aittir.”",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
+  },
+  {
+    "id": "en-r30-a2-01",
+    "course": "en",
+    "title": "The Week of the Broken Clock",
+    "titleTr": "Bozuk Saat Haftası",
+    "level": "A2",
+    "topic": "Daily Life",
+    "genre": "Daily Life",
+    "emoji": "🕰️",
+    "lines": [
+      {
+        "text": "The large clock in Green Square had shown the correct time for almost eighty years. People used it before work, after school, and when they met friends.",
+        "translation": "Green Meydanı’ndaki büyük saat yaklaşık seksen yıl boyunca doğru zamanı göstermişti. İnsanlar onu işe gitmeden önce, okuldan sonra ve arkadaşlarıyla buluşurken kullanırdı."
+      },
+      {
+        "text": "One rainy Tuesday, the clock stopped at 10:17. At first, nobody worried. They thought the town engineer would repair it before lunch.",
+        "translation": "Yağmurlu bir salı günü saat 10.17’de durdu. İlk başta kimse endişelenmedi. Kasaba mühendisinin öğle yemeğinden önce onu tamir edeceğini düşündüler."
+      },
+      {
+        "text": "However, the engineer was visiting another town, and the clock needed a special part. The repair would take one week.",
+        "translation": "Ancak mühendis başka bir kasabayı ziyaret ediyordu ve saat özel bir parçaya ihtiyaç duyuyordu. Onarım bir hafta sürecekti."
+      },
+      {
+        "text": "Without the clock, small problems appeared. A bus driver left early, two shop workers arrived late, and a music teacher started a lesson ten minutes before her students came.",
+        "translation": "Saat olmayınca küçük sorunlar ortaya çıktı. Bir otobüs şoförü erken hareket etti, iki mağaza çalışanı geç kaldı ve bir müzik öğretmeni öğrencileri gelmeden on dakika önce derse başladı."
+      },
+      {
+        "text": "Mert, a fourteen-year-old student, suggested a simple plan. He placed a whiteboard under the clock and wrote the correct time on it every hour.",
+        "translation": "On dört yaşındaki öğrenci Mert basit bir plan önerdi. Saatin altına beyaz bir tahta koydu ve her saat başında doğru zamanı üzerine yazdı."
+      },
+      {
+        "text": "Soon, other people joined him. The pharmacist checked the time at noon, the café owner updated it in the afternoon, and the night guard changed it before midnight.",
+        "translation": "Kısa süre sonra başkaları da ona katıldı. Eczacı öğlen saati kontrol etti, kafe sahibi öğleden sonra güncelledi ve gece bekçisi gece yarısından önce değiştirdi."
+      },
+      {
+        "text": "The whiteboard became more than a clock. People added short messages: “The library closes at six,” “Free concert on Friday,” and “Please return the blue umbrella.”",
+        "translation": "Beyaz tahta bir saatten fazlası oldu. İnsanlar kısa mesajlar ekledi: “Kütüphane altıda kapanıyor”, “Cuma günü ücretsiz konser” ve “Lütfen mavi şemsiyeyi geri getirin.”"
+      },
+      {
+        "text": "By Thursday, neighbours who had never spoken were discussing buses, weather, and local events while they waited for the new time.",
+        "translation": "Perşembe gününe kadar daha önce hiç konuşmamış komşular yeni saatin yazılmasını beklerken otobüsleri, havayı ve yerel etkinlikleri tartışıyordu."
+      },
+      {
+        "text": "On Monday, the engineer returned and repaired the old clock. Its hands moved again, and everyone clapped.",
+        "translation": "Pazartesi günü mühendis döndü ve eski saati tamir etti. Akrep ve yelkovan yeniden hareket etti ve herkes alkışladı."
+      },
+      {
+        "text": "Mert started to remove the whiteboard, but the mayor asked him to leave it there. “The clock tells us the time,” she said, “but the board helps us talk to one another.”",
+        "translation": "Mert beyaz tahtayı kaldırmaya başladı, fakat belediye başkanı ondan tahtayı orada bırakmasını istedi. “Saat bize zamanı söyler,” dedi, “ama tahta birbirimizle konuşmamıza yardım ediyor.”"
+      },
+      {
+        "text": "The town kept both. The clock returned to its old job, while the whiteboard became a place for useful news, kind notes, and lost objects.",
+        "translation": "Kasaba ikisini de tuttu. Saat eski görevine dönerken beyaz tahta yararlı haberler, nazik notlar ve kayıp eşyalar için bir yer oldu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "When did the clock stop?",
+        "qTr": "Saat ne zaman durdu?",
+        "options": [
+          "At 10:17 on Tuesday.",
+          "At noon on Friday.",
+          "At 6:00 on Monday.",
+          "At midnight on Sunday."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why could the engineer not repair it immediately?",
+        "qTr": "Mühendis neden hemen tamir edemedi?",
+        "options": [
+          "He was away and a special part was needed.",
+          "He did not know the town.",
+          "The mayor closed the square.",
+          "The clock was too new."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did Mert put under the clock?",
+        "qTr": "Mert saatin altına ne koydu?",
+        "options": [
+          "A whiteboard.",
+          "A new bus map.",
+          "A television.",
+          "A wooden shelf."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did the board change during the week?",
+        "qTr": "Tahta hafta boyunca nasıl değişti?",
+        "options": [
+          "It became a place for community messages.",
+          "It was used only by the engineer.",
+          "It was moved into the library.",
+          "It stopped showing the time."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What happened after the clock was repaired?",
+        "qTr": "Saat tamir edildikten sonra ne oldu?",
+        "options": [
+          "The town kept the whiteboard too.",
+          "Mert took the clock home.",
+          "The square was closed.",
+          "People stopped meeting there."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What lesson does the mayor express?",
+        "qTr": "Belediye başkanı hangi dersi ifade eder?",
+        "options": [
+          "Information can also create conversation.",
+          "Old clocks are never useful.",
+          "Only officials should write notices.",
+          "Technology always causes problems."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Saat Duruyor",
+        "startLine": 0,
+        "endLine": 4
+      },
+      {
+        "title": "Ortak Çözüm",
+        "startLine": 4,
+        "endLine": 8
+      },
+      {
+        "title": "İki Farklı Görev",
+        "startLine": 8,
+        "endLine": 11
+      }
+    ],
+    "wordCount": 272,
+    "readMinutes": 2,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Kasaba ikisini de tuttu. Saat eski görevine dönerken beyaz tahta yararlı haberler, nazik notlar ve kayıp eşyalar için bir yer oldu.",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
+  },
+  {
+    "id": "en-r30-b1-01",
+    "course": "en",
+    "title": "The Garden Above Platform Nine",
+    "titleTr": "Dokuzuncu Peronun Üstündeki Bahçe",
+    "level": "B1",
+    "topic": "Environment",
+    "genre": "Environment",
+    "emoji": "🌿",
+    "lines": [
+      {
+        "text": "Central Station was the busiest building in the city, yet almost nobody looked above its glass roof. On the tenth floor, behind a locked metal door, there was a flat area filled with dust, broken chairs, and pipes that carried warm air from the platforms below.",
+        "translation": "Merkez İstasyon şehrin en yoğun binasıydı, fakat neredeyse hiç kimse cam çatısının üstüne bakmazdı. Onuncu katta, kilitli metal bir kapının arkasında toz, kırık sandalyeler ve aşağıdaki peronlardan sıcak hava taşıyan borularla dolu düz bir alan vardı."
+      },
+      {
+        "text": "Nadia discovered the roof while preparing a school project about unused urban spaces. She expected to find only machinery, but she also noticed deep containers that had once held decorative plants. Rainwater collected beside them after every storm.",
+        "translation": "Nadia kullanılmayan kent alanları hakkındaki okul projesini hazırlarken çatıyı keşfetti. Yalnızca makineler bulmayı bekliyordu, fakat bir zamanlar süs bitkileri taşıyan derin kapları da fark etti. Her fırtınadan sonra yanlarında yağmur suyu birikiyordu."
+      },
+      {
+        "text": "She drew a plan for a small garden that would use the collected water and the station’s waste heat. Her science teacher liked the idea, but the station manager worried about safety, cost, and additional work for his staff.",
+        "translation": "Toplanan suyu ve istasyonun atık ısısını kullanacak küçük bir bahçe için plan çizdi. Fen bilgisi öğretmeni fikri beğendi, ancak istasyon müdürü güvenlik, maliyet ve personeline çıkacak ek iş konusunda endişeliydi."
+      },
+      {
+        "text": "Instead of arguing, Nadia invited the manager to a meeting with students, engineers, gardeners, and two passengers who travelled through the station every day. They listed every risk on a large sheet of paper and tried to answer it with a practical step.",
+        "translation": "Nadia tartışmak yerine müdürü öğrenciler, mühendisler, bahçıvanlar ve her gün istasyondan geçen iki yolcuyla toplantıya davet etti. Her riski büyük bir kâğıda yazdılar ve her birine pratik bir adımla cevap vermeye çalıştılar."
+      },
+      {
+        "text": "The engineers agreed to inspect the roof and mark safe zones. A local garden centre offered lightweight soil. The students promised to work only with trained adults, and the passengers organised a small online campaign for tools and seeds.",
+        "translation": "Mühendisler çatıyı incelemeyi ve güvenli bölgeleri işaretlemeyi kabul etti. Yerel bir bahçe merkezi hafif toprak teklif etti. Öğrenciler yalnızca eğitimli yetişkinlerle çalışmaya söz verdi ve yolcular aletler ile tohumlar için küçük bir çevrim içi kampanya düzenledi."
+      },
+      {
+        "text": "Construction began in early spring. Volunteers cleaned the area, repaired the containers, and built narrow paths between them. They planted herbs near the warm pipes, flowers in the sunny corners, and strong vegetables where the wind was less powerful.",
+        "translation": "Çalışmalar ilkbaharın başında başladı. Gönüllüler alanı temizledi, kapları onardı ve aralarına dar yollar yaptı. Sıcak boruların yakınına otlar, güneşli köşelere çiçekler ve rüzgârın daha zayıf olduğu yerlere dayanıklı sebzeler diktiler."
+      },
+      {
+        "text": "The first month was difficult. Several plants dried out because the roof was windier than expected. Then a sudden storm damaged two boxes. Nadia felt responsible, but the gardeners explained that experiments often reveal information that plans cannot predict.",
+        "translation": "İlk ay zordu. Çatı beklenenden daha rüzgârlı olduğu için birkaç bitki kurudu. Ardından ani bir fırtına iki kutuya zarar verdi. Nadia kendini sorumlu hissetti, fakat bahçıvanlar deneylerin çoğu zaman planların öngöremediği bilgileri ortaya çıkardığını açıkladı."
+      },
+      {
+        "text": "The team added wind screens, changed the watering schedule, and replaced weak plants with local varieties. By midsummer, the roof looked completely different. Bees moved between purple flowers, tomatoes climbed simple frames, and station workers ate lunch beside the herb beds.",
+        "translation": "Ekip rüzgâr perdeleri ekledi, sulama programını değiştirdi ve zayıf bitkileri yerel türlerle değiştirdi. Yaz ortasında çatı tamamen farklı görünüyordu. Arılar mor çiçekler arasında dolaşıyor, domatesler basit desteklere tırmanıyor ve istasyon çalışanları ot yataklarının yanında öğle yemeği yiyordu."
+      },
+      {
+        "text": "The garden also changed the station below. A display near Platform Nine showed the amount of rainwater collected and the temperature difference created by the plants. Travellers began leaving suggestions for other environmental projects.",
+        "translation": "Bahçe aşağıdaki istasyonu da değiştirdi. Dokuzuncu Peron yakınındaki bir ekran toplanan yağmur suyu miktarını ve bitkilerin oluşturduğu sıcaklık farkını gösteriyordu. Yolcular başka çevre projeleri için öneriler bırakmaya başladı."
+      },
+      {
+        "text": "At the end of the year, Nadia presented the results to the city council. She did not claim that one roof could solve climate change. Instead, she explained how a neglected place had become a laboratory, a rest area, and a meeting point because many people shared responsibility.",
+        "translation": "Yılın sonunda Nadia sonuçları belediye meclisine sundu. Tek bir çatının iklim değişikliğini çözebileceğini iddia etmedi. Bunun yerine ihmal edilmiş bir yerin, birçok insan sorumluluğu paylaştığı için nasıl laboratuvara, dinlenme alanına ve buluşma noktasına dönüştüğünü anlattı."
+      },
+      {
+        "text": "The council approved three similar projects. Nadia’s favourite result, however, was smaller: every morning, the station manager now climbed the stairs before work to check the first flowers opening above the trains.",
+        "translation": "Meclis üç benzer projeyi onayladı. Ancak Nadia’nın en sevdiği sonuç daha küçüktü: İstasyon müdürü artık her sabah işe başlamadan önce trenlerin üstünde açan ilk çiçekleri kontrol etmek için merdivenleri çıkıyordu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "How did Nadia find the roof?",
+        "qTr": "Nadia çatıyı nasıl buldu?",
+        "options": [
+          "While researching unused urban spaces.",
+          "While missing a train.",
+          "During a gardening lesson.",
+          "While repairing station pipes."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What was the manager’s main reaction at first?",
+        "qTr": "Müdürün ilk tepkisi neydi?",
+        "options": [
+          "Concern about safety, cost, and workload.",
+          "Excitement about selling vegetables.",
+          "Anger about the school project.",
+          "A wish to close the station."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did the group respond to the risks?",
+        "qTr": "Grup risklere nasıl yanıt verdi?",
+        "options": [
+          "They listed them and matched each with a practical step.",
+          "They ignored them until spring.",
+          "They asked the students to work alone.",
+          "They moved the garden underground."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did the first failures teach the team?",
+        "qTr": "İlk başarısızlıklar ekibe ne öğretti?",
+        "options": [
+          "Experiments reveal facts that plans may miss.",
+          "Local plants cannot survive in cities.",
+          "Wind is never predictable.",
+          "The project should be cancelled."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did the garden affect passengers?",
+        "qTr": "Bahçe yolcuları nasıl etkiledi?",
+        "options": [
+          "It encouraged ideas for other environmental projects.",
+          "It made train tickets cheaper.",
+          "It reduced the number of platforms.",
+          "It stopped all storms."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What is the central message?",
+        "qTr": "Temel mesaj nedir?",
+        "options": [
+          "Shared responsibility can transform neglected places.",
+          "One garden can solve every climate problem.",
+          "Only experts should design public spaces.",
+          "School projects should remain theoretical."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Keşif",
+        "startLine": 0,
+        "endLine": 3
+      },
+      {
+        "title": "Planı Gerçeğe Dönüştürmek",
+        "startLine": 3,
+        "endLine": 7
+      },
+      {
+        "title": "Bahçenin Etkisi",
+        "startLine": 7,
+        "endLine": 11
+      }
+    ],
+    "wordCount": 438,
+    "readMinutes": 3,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Meclis üç benzer projeyi onayladı. Ancak Nadia’nın en sevdiği sonuç daha küçüktü: İstasyon müdürü artık her sabah işe başlamadan önce trenlerin üstünde açan ilk çiçekleri kontrol etmek için merdivenleri çıkıyordu.",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
+  },
+  {
+    "id": "en-r30-b2-01",
+    "course": "en",
+    "title": "The Archive of Everyday Sounds",
+    "titleTr": "Gündelik Sesler Arşivi",
+    "level": "B2",
+    "topic": "Culture",
+    "genre": "Culture",
+    "emoji": "🎧",
+    "lines": [
+      {
+        "text": "When the city museum announced a project called “The Sound of Home,” most people expected recordings of famous musicians or historic speeches. Instead, curator Selin asked residents to submit ordinary sounds that might disappear within the next twenty years.",
+        "translation": "Şehir müzesi “Evin Sesi” adlı bir proje duyurduğunda çoğu insan ünlü müzisyenlerin ya da tarihî konuşmaların kayıtlarını bekledi. Bunun yerine küratör Selin, sakinlerden önümüzdeki yirmi yıl içinde kaybolabilecek sıradan sesleri göndermelerini istedi."
+      },
+      {
+        "text": "The first contributions seemed almost too simple: the bell of an old tram, a market seller calling the price of cherries, a tailor’s metal scissors, and the slow lift in a six-storey apartment building.",
+        "translation": "İlk katkılar neredeyse fazla basit görünüyordu: eski bir tramvayın zili, kiraz fiyatını bağıran bir pazar satıcısı, bir terzinin metal makası ve altı katlı bir apartmandaki yavaş asansör."
+      },
+      {
+        "text": "Selin’s team created a website where each recording appeared with a short memory. Visitors could hear the sound and read who recorded it, where it belonged, and why it mattered. Within a month, hundreds of files arrived.",
+        "translation": "Selin’in ekibi her kaydın kısa bir anıyla birlikte yer aldığı bir internet sitesi hazırladı. Ziyaretçiler sesi dinleyebiliyor, kimin kaydettiğini, nereye ait olduğunu ve neden önemli olduğunu okuyabiliyordu. Bir ay içinde yüzlerce dosya geldi."
+      },
+      {
+        "text": "The quantity created a problem. Some recordings were unclear, some included private conversations, and several people submitted the same church bell. The museum needed rules without making the project feel cold or bureaucratic.",
+        "translation": "Miktar bir sorun yarattı. Bazı kayıtlar net değildi, bazıları özel konuşmalar içeriyordu ve birkaç kişi aynı kilise çanını göndermişti. Müzenin projeyi soğuk ya da bürokratik hissettirmeden kurallara ihtiyacı vardı."
+      },
+      {
+        "text": "The team formed a public review group made up of sound engineers, historians, teenagers, older residents, and a lawyer who specialised in privacy. They agreed that technical quality mattered, but emotional and social meaning mattered too.",
+        "translation": "Ekip ses mühendisleri, tarihçiler, gençler, yaşlı sakinler ve mahremiyet konusunda uzman bir avukattan oluşan halka açık bir değerlendirme grubu kurdu. Teknik kalitenin önemli olduğu konusunda anlaştılar, ancak duygusal ve toplumsal anlamın da önemli olduğunu söylediler."
+      },
+      {
+        "text": "One debate centred on a recording from a family kitchen. It contained the click of a pressure cooker, dishes being washed, and a grandmother humming. The family wanted to share it, but the grandmother had died before the project began and could not give permission.",
+        "translation": "Tartışmalardan biri bir aile mutfağından gelen kayıt üzerinde yoğunlaştı. Kayıtta düdüklü tencerenin tıkırtısı, yıkanan tabaklar ve bir büyükannenin mırıldanması vardı. Aile kaydı paylaşmak istiyordu, fakat büyükanne proje başlamadan önce ölmüş ve izin verememişti."
+      },
+      {
+        "text": "The lawyer explained that legal permission from the family might be enough, yet the group also considered dignity. They decided to include only a short section in which no words could be understood, together with the family’s explanation of why the humming represented care.",
+        "translation": "Avukat aileden alınan yasal iznin yeterli olabileceğini açıkladı, ancak grup saygınlığı da düşündü. Yalnızca hiçbir kelimenin anlaşılmadığı kısa bir bölümü ve mırıldanmanın neden özeni temsil ettiğine dair ailenin açıklamasını eklemeye karar verdiler."
+      },
+      {
+        "text": "Another question concerned change. A bus company offered perfect studio recordings of new electric buses, but students argued that the archive should also preserve the rough engines that the new vehicles would replace. Both sounds were finally accepted as a pair.",
+        "translation": "Bir başka soru değişimle ilgiliydi. Bir otobüs şirketi yeni elektrikli otobüslerin kusursuz stüdyo kayıtlarını sundu, ancak öğrenciler arşivin yeni araçların yerini alacağı gürültülü motorları da koruması gerektiğini savundu. Sonunda iki ses bir çift olarak kabul edildi."
+      },
+      {
+        "text": "As the archive grew, teachers began using it in class. Geography students compared neighbourhoods through their soundscapes. Language learners studied rhythm and accent. Design students identified places where noise made public life difficult.",
+        "translation": "Arşiv büyüdükçe öğretmenler onu derslerde kullanmaya başladı. Coğrafya öğrencileri mahalleleri ses ortamları üzerinden karşılaştırdı. Dil öğrenenler ritim ve aksan çalıştı. Tasarım öğrencileri gürültünün kamusal yaşamı zorlaştırdığı yerleri belirledi."
+      },
+      {
+        "text": "The museum then created listening walks. Participants followed a map, heard an archived sound at each stop, and compared it with the present environment. Sometimes the old and new sounds were similar; sometimes the contrast was surprising.",
+        "translation": "Müze daha sonra dinleme yürüyüşleri hazırladı. Katılımcılar bir haritayı takip ediyor, her durakta arşivlenmiş bir sesi dinliyor ve onu mevcut çevreyle karşılaştırıyordu. Bazen eski ve yeni sesler benzerdi; bazen karşıtlık şaşırtıcıydı."
+      },
+      {
+        "text": "A year later, the exhibition opened in a dark room filled with small lights. Visitors selected a light, put on headphones, and entered another person’s memory for thirty seconds. Many stayed much longer than expected.",
+        "translation": "Bir yıl sonra sergi küçük ışıklarla dolu karanlık bir odada açıldı. Ziyaretçiler bir ışık seçiyor, kulaklıklarını takıyor ve otuz saniyeliğine başka birinin anısına giriyordu. Birçoğu beklenenden çok daha uzun kaldı."
+      },
+      {
+        "text": "Selin realised that the archive did not simply preserve noises. It showed that daily life is built from repeated details that people stop noticing until they are gone. The project’s value came from listening carefully before disappearance turned ordinary sounds into distant history.",
+        "translation": "Selin arşivin yalnızca sesleri korumadığını fark etti. Gündelik yaşamın, insanlar kaybolana kadar fark etmeyi bıraktıkları tekrarlanan ayrıntılardan kurulduğunu gösteriyordu. Projenin değeri, kayboluş sıradan sesleri uzak tarihe dönüştürmeden önce dikkatle dinlemekten geliyordu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What kinds of sounds did Selin request?",
+        "qTr": "Selin ne tür sesler istedi?",
+        "options": [
+          "Ordinary sounds that might disappear.",
+          "Only professional music.",
+          "Secret government recordings.",
+          "Sounds made inside the museum."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why did the museum create a review group?",
+        "qTr": "Müze neden değerlendirme grubu kurdu?",
+        "options": [
+          "To balance quality, meaning, and privacy.",
+          "To sell the recordings.",
+          "To choose a new museum director.",
+          "To replace the website."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How was the grandmother’s recording handled?",
+        "qTr": "Büyükannenin kaydı nasıl ele alındı?",
+        "options": [
+          "A short section without understandable words was included.",
+          "The entire private conversation was published.",
+          "It was destroyed immediately.",
+          "The grandmother’s voice was recreated by an actor."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why were old and new bus sounds paired?",
+        "qTr": "Eski ve yeni otobüs sesleri neden eşleştirildi?",
+        "options": [
+          "To document technological change.",
+          "To advertise the bus company.",
+          "To hide the engine noise.",
+          "To teach drivers music."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did teachers use the archive?",
+        "qTr": "Öğretmenler arşivi nasıl kullandı?",
+        "options": [
+          "For geography, language, and design studies.",
+          "Only for museum history.",
+          "To replace all textbooks.",
+          "To record student grades."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What does the ending suggest?",
+        "qTr": "Son bölüm neyi öne sürer?",
+        "options": [
+          "Attention gives ordinary details historical value.",
+          "Only rare sounds deserve preservation.",
+          "Technology makes memory unnecessary.",
+          "Public archives should avoid emotion."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Sesleri Toplamak",
+        "startLine": 0,
+        "endLine": 4
+      },
+      {
+        "title": "Seçim ve Sorumluluk",
+        "startLine": 4,
+        "endLine": 8
+      },
+      {
+        "title": "Arşivin Yeni Hayatı",
+        "startLine": 8,
+        "endLine": 12
+      }
+    ],
+    "wordCount": 457,
+    "readMinutes": 4,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Selin arşivin yalnızca sesleri korumadığını fark etti. Gündelik yaşamın, insanlar kaybolana kadar fark etmeyi bıraktıkları tekrarlanan ayrıntılardan kurulduğunu gösteriyordu. Projenin değeri, kayboluş sıradan sesleri uzak tarihe dönüştürmeden önce dikkatle dinlemekten geliyordu.",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
+  },
+  {
+    "id": "en-r30-c1-01",
+    "course": "en",
+    "title": "The Algorithm That Refused to Rank People",
+    "titleTr": "İnsanları Sıralamayı Reddeden Algoritma",
+    "level": "C1",
+    "topic": "Technology",
+    "genre": "Technology",
+    "emoji": "🤖",
+    "lines": [
+      {
+        "text": "The city’s scholarship office had a familiar problem: far more students applied for support than the budget could accommodate. For years, a committee read every file, but the process was slow, inconsistent, and exhausting. Two applicants with similar circumstances could receive different results simply because their files were reviewed on different days.",
+        "translation": "Şehrin burs ofisinin tanıdık bir sorunu vardı: Destek için bütçenin karşılayabileceğinden çok daha fazla öğrenci başvuruyordu. Yıllarca bir komite her dosyayı okudu, ancak süreç yavaş, tutarsız ve yorucuydu. Benzer koşullara sahip iki başvuru sahibi, dosyaları farklı günlerde incelendiği için farklı sonuçlar alabiliyordu."
+      },
+      {
+        "text": "A technology company proposed an algorithm that would score applicants and produce a ranked list. Its presentation was persuasive. The system could process thousands of applications in minutes, identify missing documents, and apply the same formal criteria to everyone.",
+        "translation": "Bir teknoloji şirketi başvuru sahiplerine puan verecek ve sıralı bir liste oluşturacak algoritma önerdi. Sunumu ikna ediciydi. Sistem binlerce başvuruyu dakikalar içinde işleyebilir, eksik belgeleri belirleyebilir ve aynı resmî ölçütleri herkese uygulayabilirdi."
+      },
+      {
+        "text": "Dr. Elif Arman, who led the city’s data ethics unit, supported automation but questioned the ranking objective. A score, she argued, would create an appearance of precision even when the underlying values remained uncertain. Was a student caring for a disabled parent more disadvantaged than one working two night jobs? No equation could answer without making a moral choice.",
+        "translation": "Şehrin veri etiği birimine liderlik eden Dr. Elif Arman otomasyonu destekledi, ancak sıralama hedefini sorguladı. Bir puanın, alttaki değerler belirsiz kalsa bile kesinlik görünümü yaratacağını savundu. Engelli bir ebeveyne bakan öğrenci, iki gece işinde çalışan bir öğrenciden daha mı dezavantajlıydı? Hiçbir denklem ahlaki bir seçim yapmadan cevap veremezdi."
+      },
+      {
+        "text": "The company replied that human committees also made moral choices, often without recording them. At least an algorithm could be audited. Elif agreed with the criticism but not the conclusion. Making a questionable judgement faster and more consistently did not automatically make it fair.",
+        "translation": "Şirket insan komitelerinin de çoğu zaman kayıt tutmadan ahlaki seçimler yaptığını söyledi. En azından bir algoritma denetlenebilirdi. Elif eleştiriye katıldı, fakat sonuca katılmadı. Tartışmalı bir yargıyı daha hızlı ve daha tutarlı vermek onu otomatik olarak adil yapmıyordu."
+      },
+      {
+        "text": "She proposed a different design. Instead of ranking people, the system would organise evidence, detect contradictions, explain which criteria were relevant, and show several possible groups of applicants under different policy priorities. It would refuse to produce a single final order.",
+        "translation": "Farklı bir tasarım önerdi. Sistem insanları sıralamak yerine kanıtları düzenleyecek, çelişkileri tespit edecek, hangi ölçütlerin ilgili olduğunu açıklayacak ve farklı politika öncelikleri altında birkaç olası başvuru grubu gösterecekti. Tek bir nihai sıra üretmeyi reddedecekti."
+      },
+      {
+        "text": "Some officials disliked this idea because it preserved responsibility instead of removing it. They had hoped technology would protect them from criticism. Elif insisted that public decisions should remain attributable to people who could explain and defend them. A tool could improve judgement, but it should not become a convenient mask for authority.",
+        "translation": "Bazı yetkililer bu fikri sevmedi çünkü sorumluluğu kaldırmak yerine koruyordu. Teknolojinin onları eleştiriden korumasını ummuşlardı. Elif kamusal kararların, onları açıklayıp savunabilen insanlara ait kalması gerektiğinde ısrar etti. Bir araç yargıyı geliştirebilirdi, fakat otorite için kullanışlı bir maskeye dönüşmemeliydi."
+      },
+      {
+        "text": "The redesigned system was tested with past applications. It found several useful patterns: reviewers had undervalued unpaid care work, overreacted to small gaps in documentation, and treated neighbourhood data as if it described every individual who lived there. These findings led the committee to revise its guidelines.",
+        "translation": "Yeniden tasarlanan sistem geçmiş başvurularla test edildi. Birkaç yararlı örüntü buldu: Değerlendiriciler ücretsiz bakım emeğine düşük değer vermiş, belgelerdeki küçük boşluklara aşırı tepki göstermiş ve mahalle verilerini orada yaşayan her bireyi tanımlıyormuş gibi ele almıştı. Bu bulgular komitenin yönergelerini gözden geçirmesine yol açtı."
+      },
+      {
+        "text": "During the live pilot, each application appeared with a structured summary, uncertainty markers, and a record of which human reviewer made each decision. Applicants could request an explanation and correct factual errors before the final allocation.",
+        "translation": "Canlı pilot sırasında her başvuru yapılandırılmış bir özet, belirsizlik işaretleri ve her kararı hangi insan değerlendiricinin verdiğine dair kayıtla görünüyordu. Başvuru sahipleri açıklama isteyebiliyor ve nihai dağıtımdan önce olgusal hataları düzeltebiliyordu."
+      },
+      {
+        "text": "The process was not dramatically faster. Meetings still involved disagreement, and difficult cases remained difficult. Yet the disagreements became more visible and specific. Instead of arguing vaguely about who “deserved” support, reviewers had to state which need, risk, or public goal they were prioritising.",
+        "translation": "Süreç olağanüstü ölçüde hızlanmadı. Toplantılar hâlâ anlaşmazlık içeriyordu ve zor vakalar zor kalıyordu. Ancak anlaşmazlıklar daha görünür ve belirgin hâle geldi. Değerlendiriciler kimin desteği “hak ettiği” konusunda belirsiz biçimde tartışmak yerine hangi ihtiyaca, riske ya da kamusal hedefe öncelik verdiklerini belirtmek zorundaydı."
+      },
+      {
+        "text": "At the end of the year, the city published an evaluation. Administrative errors had fallen, appeals were resolved more quickly, and applicants reported greater trust because they could understand the process. The system had not eliminated judgement; it had made judgement easier to examine.",
+        "translation": "Yılın sonunda şehir bir değerlendirme yayımladı. İdari hatalar azalmış, itirazlar daha hızlı çözülmüş ve başvuru sahipleri süreci anlayabildikleri için daha fazla güven bildirmişti. Sistem yargıyı ortadan kaldırmamış; yargının incelenmesini kolaylaştırmıştı."
+      },
+      {
+        "text": "The company later marketed the project as an example of “responsible artificial intelligence,” although Elif remained cautious about the phrase. The most responsible feature, she said, was not intelligence but restraint: the system knew which task it should not pretend to complete.",
+        "translation": "Şirket daha sonra projeyi “sorumlu yapay zekâ” örneği olarak pazarladı, ancak Elif bu ifadeye karşı temkinli kaldı. Ona göre en sorumlu özellik zekâ değil, kendini sınırlamaydı: Sistem hangi görevi tamamlamış gibi davranmaması gerektiğini biliyordu."
+      }
+    ],
+    "questions": [
+      {
+        "q": "What problem did the original scholarship process have?",
+        "qTr": "İlk burs sürecinin hangi sorunu vardı?",
+        "options": [
+          "It was slow and inconsistent.",
+          "It received too few applications.",
+          "It had no formal criteria at all.",
+          "It was controlled by students."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why did Elif question a single score?",
+        "qTr": "Elif tek bir puanı neden sorguladı?",
+        "options": [
+          "It could hide moral choices behind false precision.",
+          "It required too much computer memory.",
+          "It could not detect missing files.",
+          "It would always favour wealthy students."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What was the redesigned system forbidden to do?",
+        "qTr": "Yeniden tasarlanan sistemin ne yapmasına izin verilmedi?",
+        "options": [
+          "Produce one final ranking.",
+          "Organise documents.",
+          "Mark uncertainty.",
+          "Identify contradictions."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What bias did testing reveal?",
+        "qTr": "Testler hangi önyargıyı ortaya çıkardı?",
+        "options": [
+          "Unpaid care work had been undervalued.",
+          "Every applicant received equal support.",
+          "Reviewers ignored all neighbourhood data.",
+          "Documents were never checked."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why did trust improve?",
+        "qTr": "Güven neden arttı?",
+        "options": [
+          "Applicants could understand and challenge the process.",
+          "The algorithm made every decision alone.",
+          "All disagreement disappeared.",
+          "The budget became unlimited."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What does “restraint” mean in the final paragraph?",
+        "qTr": "Son paragrafta “kendini sınırlama” ne anlama gelir?",
+        "options": [
+          "Knowing which decision the system should not claim to make.",
+          "Processing applications more slowly.",
+          "Refusing to store any data.",
+          "Avoiding all use of technology."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Hızlı Bir Sıralama Vaadi",
+        "startLine": 0,
+        "endLine": 4
+      },
+      {
+        "title": "Farklı Bir Tasarım",
+        "startLine": 4,
+        "endLine": 8
+      },
+      {
+        "title": "Görünür Yargı",
+        "startLine": 8,
+        "endLine": 11
+      }
+    ],
+    "wordCount": 501,
+    "readMinutes": 4,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Şirket daha sonra projeyi “sorumlu yapay zekâ” örneği olarak pazarladı, ancak Elif bu ifadeye karşı temkinli kaldı. Ona göre en sorumlu özellik zekâ değil, kendini sınırlamaydı: Sistem hangi görevi tamamlamış gibi davranmaması gerektiğini biliyordu.",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
+  },
+  {
+    "id": "en-r30-c2-01",
+    "course": "en",
+    "title": "The Parliament of Unfinished Questions",
+    "titleTr": "Bitmemiş Sorular Meclisi",
+    "level": "C2",
+    "topic": "Society",
+    "genre": "Society",
+    "emoji": "🏛️",
+    "lines": [
+      {
+        "text": "The coastal republic of Varen had a constitutional habit that foreign journalists found theatrical. Whenever parliament passed a law that depended on uncertain scientific forecasts, the law had to include an “unfinished question”: a statement describing what remained unknown, who might be harmed if the assumption proved wrong, and the date on which the issue would be reopened.",
+        "translation": "Kıyı cumhuriyeti Varen’in yabancı gazetecilerin teatral bulduğu anayasal bir alışkanlığı vardı. Parlamento belirsiz bilimsel tahminlere dayanan bir yasa çıkardığında, yasa “bitmemiş bir soru” içermek zorundaydı: Neyin bilinmediğini, varsayım yanlış çıkarsa kimin zarar görebileceğini ve konunun hangi tarihte yeniden açılacağını açıklayan bir ifade."
+      },
+      {
+        "text": "The rule had emerged after a disastrous harbour project. Engineers had predicted modest sea-level change, ministers had converted the prediction into apparent certainty, and contracts had been written as though no alternative future existed. When the water rose faster than expected, officials blamed the model, while the model’s authors replied that their uncertainty had been removed from the political documents.",
+        "translation": "Kural felaketle sonuçlanan bir liman projesinden sonra ortaya çıkmıştı. Mühendisler deniz seviyesinde sınırlı değişim öngörmüş, bakanlar tahmini görünürde kesinliğe çevirmiş ve sözleşmeler başka hiçbir gelecek yokmuş gibi yazılmıştı. Su beklenenden hızlı yükseldiğinde yetkililer modeli suçlamış, modelin yazarları ise belirsizliklerinin siyasi belgelerden çıkarıldığını söylemişti."
+      },
+      {
+        "text": "Decades later, the unfinished-question clause was tested by a proposal to build a chain of automated sea walls. Supporters argued that the walls could protect homes without the enormous social cost of relocating entire districts. Critics warned that the technology might redirect floods toward poorer communities and create permanent dependence on a private maintenance company.",
+        "translation": "On yıllar sonra bitmemiş soru hükmü, otomatik deniz duvarları zinciri kurma önerisiyle sınandı. Destekleyenler duvarların bütün mahalleleri taşımak gibi büyük bir toplumsal maliyet olmadan evleri koruyabileceğini savundu. Eleştirenler teknolojinin selleri daha yoksul topluluklara yönlendirebileceği ve özel bir bakım şirketine kalıcı bağımlılık yaratabileceği konusunda uyardı."
+      },
+      {
+        "text": "The parliamentary committee initially treated the clause as a drafting exercise. Staff produced a polite sentence acknowledging that “some uncertainty remains.” Professor Mara Venn, an invited climate researcher, rejected the wording. Uncertainty, she said, was not decorative humility. It had a shape: specific unknowns, uneven consequences, and signals that should trigger a change of policy.",
+        "translation": "Parlamento komitesi ilk başta hükmü bir metin yazma alıştırması gibi ele aldı. Personel “bir miktar belirsizliğin sürdüğünü” kabul eden nazik bir cümle hazırladı. Davetli iklim araştırmacısı Profesör Mara Venn bu ifadeyi reddetti. Ona göre belirsizlik dekoratif bir alçakgönüllülük değildi. Belirli bilinmeyenleri, eşit olmayan sonuçları ve politika değişikliğini tetiklemesi gereken işaretleri olan bir şekli vardı."
+      },
+      {
+        "text": "Her intervention changed the hearings. Fishermen described currents that did not appear in national maps. Insurance analysts explained that protection in one zone could raise prices in another. Residents of low-income areas asked who would receive compensation if experimental barriers increased local flooding. Software engineers admitted that the control system had never been tested during simultaneous power and communication failures.",
+        "translation": "Onun müdahalesi oturumları değiştirdi. Balıkçılar ulusal haritalarda görünmeyen akıntıları anlattı. Sigorta analistleri bir bölgedeki korumanın başka bir bölgede fiyatları artırabileceğini açıkladı. Düşük gelirli bölgelerin sakinleri deneysel bariyerler yerel selleri artırırsa kimin tazminat alacağını sordu. Yazılım mühendisleri kontrol sisteminin eş zamanlı elektrik ve iletişim arızaları sırasında hiç test edilmediğini kabul etti."
+      },
+      {
+        "text": "The company behind the walls complained that the process rewarded hypothetical objections and made decisive action impossible. Its director presented a familiar argument: every policy contained risk, delay also caused harm, and demanding perfect knowledge was a disguised form of refusal. Several members of parliament found this persuasive.",
+        "translation": "Duvarların arkasındaki şirket sürecin varsayımsal itirazları ödüllendirdiğinden ve kararlı eylemi imkânsız kıldığından şikâyet etti. Şirket müdürü tanıdık bir sav sundu: Her politika risk içeriyordu, gecikme de zarar veriyordu ve kusursuz bilgi istemek gizlenmiş bir reddediş biçimiydi. Birkaç milletvekili bunu ikna edici buldu."
+      },
+      {
+        "text": "Mara agreed that certainty was impossible, but she distinguished uncertainty from ignorance and ignorance from irresponsibility. The purpose of the clause was not to postpone action until doubt disappeared. It was to design action that remained reversible, observable, and answerable to those carrying the risk.",
+        "translation": "Mara kesinliğin imkânsız olduğunu kabul etti, fakat belirsizliği bilgisizlikten, bilgisizliği de sorumsuzluktan ayırdı. Hükmün amacı şüphe ortadan kalkana kadar eylemi ertelemek değildi. Amaç, geri döndürülebilir, gözlemlenebilir ve riski taşıyanlara karşı hesap verebilir bir eylem tasarlamaktı."
+      },
+      {
+        "text": "The committee rewrote the proposal. Instead of approving the entire chain, it authorised three pilot walls in districts with different coastlines. Independent sensors would publish real-time data. A public fund would compensate communities for measurable redirected harm. The maintenance software would be open to inspection, and the city could take control if the company failed.",
+        "translation": "Komite öneriyi yeniden yazdı. Bütün zinciri onaylamak yerine farklı kıyı çizgilerine sahip bölgelerde üç pilot duvara izin verdi. Bağımsız sensörler gerçek zamanlı veri yayımlayacaktı. Kamu fonu, ölçülebilir biçimde yönlendirilmiş zarar için topluluklara tazminat verecekti. Bakım yazılımı incelemeye açık olacak ve şirket başarısız olursa şehir kontrolü devralabilecekti."
+      },
+      {
+        "text": "Most importantly, the law’s unfinished question became a full page. It listed assumptions about storms, energy supply, maintenance costs, migration, and public trust. Beside each assumption appeared an indicator and a threshold: if the indicator crossed that point, parliament would have to reconsider the policy rather than quietly continue.",
+        "translation": "En önemlisi, yasanın bitmemiş sorusu tam bir sayfaya dönüştü. Fırtınalar, enerji arzı, bakım maliyetleri, göç ve kamu güveni hakkındaki varsayımları sıralıyordu. Her varsayımın yanında bir gösterge ve eşik vardı: Gösterge o noktayı aşarsa parlamento sessizce devam etmek yerine politikayı yeniden değerlendirmek zorunda kalacaktı."
+      },
+      {
+        "text": "The revised law passed by a narrow majority. Commentators described it either as sophisticated caution or bureaucratic weakness. Yet the pilot produced an unexpected political effect. Because uncertainty had been stated publicly, later corrections did not look like humiliating reversals. Changing the plan became evidence that the monitoring system was working.",
+        "translation": "Gözden geçirilmiş yasa dar bir çoğunlukla kabul edildi. Yorumcular onu ya gelişmiş bir ihtiyat ya da bürokratik zayıflık olarak tanımladı. Ancak pilot beklenmedik bir siyasi etki yarattı. Belirsizlik açıkça ifade edildiği için sonraki düzeltmeler küçük düşürücü geri dönüşler gibi görünmedi. Planı değiştirmek izleme sisteminin çalıştığının kanıtı hâline geldi."
+      },
+      {
+        "text": "Two years later, one wall was raised, another was redesigned, and the third was removed after data showed that it intensified flooding in a neighbouring inlet. The affected community received compensation without a long legal battle because the possibility had already been recognised in the law.",
+        "translation": "İki yıl sonra bir duvar yükseltildi, diğeri yeniden tasarlandı ve üçüncüsü veriler komşu bir koydaki selleri artırdığını gösterince kaldırıldı. Etkilenen topluluk, olasılık yasada önceden kabul edildiği için uzun bir hukuk mücadelesi olmadan tazminat aldı."
+      },
+      {
+        "text": "The episode did not turn Varen into a paradise of rational government. Politicians still exaggerated, companies still lobbied, and citizens still disagreed about acceptable risk. The clause merely made one form of dishonesty harder: pretending that a decision had no unresolved remainder.",
+        "translation": "Bu olay Varen’i akılcı yönetimin cennetine dönüştürmedi. Siyasetçiler hâlâ abartıyor, şirketler hâlâ lobi yapıyor ve vatandaşlar kabul edilebilir risk konusunda hâlâ anlaşamıyordu. Hüküm yalnızca bir tür sahtekârlığı zorlaştırdı: Bir kararın çözülmemiş hiçbir kalanı yokmuş gibi davranmayı."
+      },
+      {
+        "text": "At the next constitutional anniversary, a student asked Mara whether every society needed a parliament of unfinished questions. She answered that every society already had one, though it was often hidden in hospitals, households, laboratories, courtrooms, and flooded streets. The real choice was whether those questions would be recorded before failure, or discovered afterward by the people least able to escape the consequences.",
+        "translation": "Bir sonraki anayasa yıl dönümünde bir öğrenci Mara’ya her toplumun bitmemiş sorular meclisine ihtiyacı olup olmadığını sordu. Mara her toplumun zaten böyle bir meclisi olduğunu, ancak bunun çoğu zaman hastanelerde, evlerde, laboratuvarlarda, mahkeme salonlarında ve su basmış sokaklarda gizlendiğini söyledi. Asıl seçim, bu soruların başarısızlıktan önce kaydedilip kaydedilmeyeceği ya da sonuçlardan kaçma gücü en az olan insanlar tarafından sonradan keşfedilip keşfedilmeyeceğiydi."
+      }
+    ],
+    "questions": [
+      {
+        "q": "Why was the unfinished-question clause created?",
+        "qTr": "Bitmemiş soru hükmü neden oluşturuldu?",
+        "options": [
+          "A harbour project had hidden scientific uncertainty.",
+          "Journalists requested more dramatic laws.",
+          "The republic wanted to ban engineering models.",
+          "Parliament had stopped reviewing contracts."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What did Mara object to in the first draft?",
+        "qTr": "Mara ilk taslakta neye itiraz etti?",
+        "options": [
+          "It treated uncertainty as a vague decorative phrase.",
+          "It contained too much technical detail.",
+          "It promised compensation.",
+          "It required public hearings."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How did Mara define responsible action under uncertainty?",
+        "qTr": "Mara belirsizlik altında sorumlu eylemi nasıl tanımladı?",
+        "options": [
+          "Reversible, observable, and answerable.",
+          "Fast, secret, and permanent.",
+          "Certain, cheap, and popular.",
+          "Private, centralised, and automatic."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What made the pilot law adaptive?",
+        "qTr": "Pilot yasayı uyarlanabilir yapan neydi?",
+        "options": [
+          "Indicators and thresholds required reconsideration.",
+          "The company could change rules alone.",
+          "The walls were never monitored.",
+          "All districts received identical walls."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Why did later corrections not appear humiliating?",
+        "qTr": "Sonraki düzeltmeler neden küçük düşürücü görünmedi?",
+        "options": [
+          "The possibility of change had been acknowledged publicly.",
+          "No one learned about the changes.",
+          "The original forecast had been perfect.",
+          "The company controlled the media."
+        ],
+        "answer": 0
+      },
+      {
+        "q": "What is the final argument of the story?",
+        "qTr": "Hikâyenin son savı nedir?",
+        "options": [
+          "Unresolved questions should be made visible before vulnerable people bear the cost.",
+          "Every decision should wait for perfect certainty.",
+          "Scientific models should replace democratic debate.",
+          "Public disagreement can be permanently eliminated."
+        ],
+        "answer": 0
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Hükmün Kökeni",
+        "startLine": 0,
+        "endLine": 4
+      },
+      {
+        "title": "Belirsizliğin Şekli",
+        "startLine": 4,
+        "endLine": 8
+      },
+      {
+        "title": "Uyarlanabilir Yasa",
+        "startLine": 8,
+        "endLine": 13
+      }
+    ],
+    "wordCount": 687,
+    "readMinutes": 5,
+    "readerVersion": "3.0.0",
+    "source": "WordPilot original Reader 3.0 launch collection",
+    "license": "WordPilot original content",
+    "summaryTr": "Bir sonraki anayasa yıl dönümünde bir öğrenci Mara’ya her toplumun bitmemiş sorular meclisine ihtiyacı olup olmadığını sordu. Mara her toplumun zaten böyle bir meclisi olduğunu, ancak bunun çoğu zaman hastanelerde, evlerde, laboratuvarlarda, mahkeme salonlarında ve su basmış sokaklarda gizlendiğini söyledi. Asıl seçim, bu soruların başarısızlıktan önce kaydedilip kaydedilmeyeceği ya da sonuçlardan kaçma gücü en az olan insanlar tarafından sonradan keşfedilip keşfedilmeyeceğiydi.",
+    "series": "Reader 3.0 Açılış Serisi",
+    "commercial_safe": true,
+    "review_status": "wordpilot-original-reviewed-v9.4"
   }
 ]

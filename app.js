@@ -2,7 +2,7 @@
 const $=(s,r=document)=>r.querySelector(s);
 const $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const STORE='wordpilot_v34'; // Eski anahtar korunur; mevcut ilerleme kaybolmaz.
-const VERSION='9.2.0';
+const VERSION='9.4.0';
 const SW_FILE='sw.js';
 const LEADERBOARD_KEY=`${STORE}:leaderboard`;
 const GUEST_ACK_KEY=`${STORE}:guest_acknowledged`;
@@ -25,7 +25,7 @@ const FIREBASE_CONFIG={
 };
 
 const COURSES={
-  en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'clean_concepts_v711.json',voice:'en-US',voiceAlt:'en-GB',displayCount:1000,countLabel:'1000 bağlantılı ticari temiz kavram',targetLabel:'İNGİLİZCE',starter:true},
+  en:{id:'en',name:'English',short:'EN',flag:'🇬🇧',file:'clean_concepts_v711.json',voice:'en-US',voiceAlt:'en-GB',displayCount:5000,countLabel:'5000 İngilizce kelime · 1000 incelenmiş çekirdek + 4000 beta',targetLabel:'İNGİLİZCE',starter:true},
   ru:{id:'ru',name:'Русский',short:'RU',flag:'🇷🇺',file:'ru_words.json',voice:'ru-RU',voiceAlt:'ru-RU',displayCount:1500,countLabel:'1500 kontrollü kelime ve ifade + bağlantılı çekirdek',targetLabel:'RUSÇA',starter:true},
   uz:{id:'uz',name:'O‘zbekcha',short:'UZ',flag:'🇺🇿',file:'uz_words.json',voice:'uz-UZ',voiceAlt:'uz-UZ',displayCount:1000,countLabel:'1000 kontrollü kelime ve ifade + bağlantılı çekirdek',targetLabel:'ÖZBEKÇE',starter:true},
   tr:{id:'tr',name:'Türkçe',short:'TR',flag:'🇹🇷',file:'clean_concepts_v711.json',voice:'tr-TR',voiceAlt:'tr-TR',displayCount:1000,countLabel:'1000 bağlantılı ticari temiz kavram',targetLabel:'TÜRKÇE',starter:true}

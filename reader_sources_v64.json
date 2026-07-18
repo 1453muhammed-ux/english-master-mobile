@@ -1,6 +1,6 @@
 {
-  "version": "7.0.0",
-  "policy": "No copyrighted graded-reader text is copied. All 60 new texts are original WordPilot educational content.",
+  "version": "9.4.0",
+  "policy": "Telifli derecelendirilmiş okuma metinleri kopyalanmaz. Reader 3.0 metinleri WordPilot için özgün hazırlanır; kaynaklar yalnız öğretim yapısı ve kamu malı yayın modeli için incelenir.",
   "inspiration": [
     {
       "name": "Project Gutenberg",
@@ -19,10 +19,12 @@
     }
   ],
   "counts": {
-    "existing": 42,
-    "newEnglish": 30,
-    "newRussian": 30,
-    "total": 102
+    "legacyAndAcademy": 42,
+    "reader2OriginalEnglish": 30,
+    "reader2OriginalRussian": 30,
+    "v92LongEnglish": 6,
+    "reader3LaunchEnglish": 6,
+    "total": 114
   },
   "targets": {
     "A1": [
@@ -49,5 +51,15 @@
       2520,
       4000
     ]
-  }
+  },
+  "reader3_features": [
+    "odak modu",
+    "yazı ve tema ayarları",
+    "bölüm navigasyonu",
+    "cümle yer imleri",
+    "dokunmatik sözlük",
+    "kelime testi",
+    "kişisel özet",
+    "okuma raporu"
+  ]
 }
