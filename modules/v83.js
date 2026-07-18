@@ -1,8 +1,8 @@
-/* WordPilot v9.0.0 Tester Beta
+/* WordPilot v9.1.0 Tester Beta
    Conversation Coach 4.0, real-life scenario missions, Mira voice preference,
    smoothed speaking feedback and transcript-based pronunciation analysis.
    No private API key is stored in the browser. */
-const WP83_VERSION='9.0.0';
+const WP83_VERSION='9.1.0';
 const WP83_SESSION_SCHEMA=1;
 let wp83PronunciationMode='word';
 let wp83PronunciationStartedAt=0;
@@ -175,8 +175,8 @@ renderPronunciationLab=function(){
 };
 
 function wp83ApplyVersion(){
-  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
-  document.title='WordPilot 9.0.0 · Conversation Coach 4.0';
+  document.documentElement.dataset.wpVersion=WP83_VERSION;const version=$('.version');if(version)version.textContent='v9.1.0 · Tester Beta';
+  document.title='WordPilot 9.1.0 · Conversation Coach 4.0';
 }
 
 function setupV83Events(){

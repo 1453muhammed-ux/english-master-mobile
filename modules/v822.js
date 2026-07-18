@@ -1,7 +1,7 @@
 /* WordPilot v8.2.2 Tester Beta
    3000 unique English vocabulary records, A1-C2 estimates,
    licensed semantic relations, word-family links and safe progress migration. */
-const WP822_VERSION='9.0.0';
+const WP822_VERSION='9.1.0';
 const WP822_MIGRATION='context-to-lexicon-v1';
 
 COURSES.en.file='words.json';
@@ -10,7 +10,7 @@ COURSES.en.actualCount=3000;
 COURSES.en.countLabel='3000 benzersiz kelime kaydı · A1–C2';
 
 function wp822ApplyBrand(){
-  const version=$('.version');if(version)version.textContent='v9.0.0 · Tester Beta';
+  const version=$('.version');if(version)version.textContent='v9.1.0 · Tester Beta';
   document.documentElement.dataset.wpVersion=WP822_VERSION;
   const summary=$('#activeCourseSummary');if(summary&&activeCourse==='en')summary.textContent='English · 3000 benzersiz kelime · A1–C2';
   const enCard=$('.course-card[data-course="en"] small');if(enCard)enCard.textContent='Türkçe anlatımlı · 3000 benzersiz kelime + A1–C2 Akademi';

@@ -1,0 +1,15 @@
+WORDPILOT v9.1.0 VALIDATION REPORT
+
+[PASS] words.json count 3000
+[PASS] ru_words.json count 1500
+[PASS] uz_words.json count 1000
+[PASS] clean_concepts_v711.json count 1000
+[PASS] v91 loaded 
+[PASS] v91 events 
+[PASS] v91 init 
+[PASS] version 
+[PASS] honest counts 
+[PASS] dynamic range 
+[PASS] coach lock 
+
+RESULT: 11/11 checks passed
