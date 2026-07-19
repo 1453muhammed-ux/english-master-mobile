@@ -1,0 +1,253 @@
+WORDPILOT v9.9.0 — UX RESET & NAVIGATION
+DOĞRULAMA RAPORU
+
+Tarih: 2026-07-19 04:59
+Sonuç: 240/240 kontrol geçti.
+
+001. [GEÇTİ] JSON parse: clean_concepts_v71.json
+002. [GEÇTİ] JSON parse: clean_concepts_v711.json
+003. [GEÇTİ] JSON parse: coach_scenarios_v95.json
+004. [GEÇTİ] JSON parse: concept_ledger_v90.json
+005. [GEÇTİ] JSON parse: concept_ledger_v92.json
+006. [GEÇTİ] JSON parse: concept_master_v96.json
+007. [GEÇTİ] JSON parse: content_manifest_v71.json
+008. [GEÇTİ] JSON parse: content_manifest_v711.json
+009. [GEÇTİ] JSON parse: content_quality_v93.json
+010. [GEÇTİ] JSON parse: curriculum_v6.json
+011. [GEÇTİ] JSON parse: firebase.json
+012. [GEÇTİ] JSON parse: language_registry_v71.json
+013. [GEÇTİ] JSON parse: language_registry_v711.json
+014. [GEÇTİ] JSON parse: manifest.json
+015. [GEÇTİ] JSON parse: phrases_v92.json
+016. [GEÇTİ] JSON parse: phrases_v93.json
+017. [GEÇTİ] JSON parse: reader_lexicon_v94.json
+018. [GEÇTİ] JSON parse: reader_sources_v64.json
+019. [GEÇTİ] JSON parse: ru_alphabet.json
+020. [GEÇTİ] JSON parse: ru_dialogues.json
+021. [GEÇTİ] JSON parse: ru_exam_lab.json
+022. [GEÇTİ] JSON parse: ru_grammar.json
+023. [GEÇTİ] JSON parse: ru_verb_lab.json
+024. [GEÇTİ] JSON parse: ru_words.json
+025. [GEÇTİ] JSON parse: source_atlas_v63.json
+026. [GEÇTİ] JSON parse: source_manifest.json
+027. [GEÇTİ] JSON parse: stories.json
+028. [GEÇTİ] JSON parse: uz_words.json
+029. [GEÇTİ] JSON parse: words.json
+030. [GEÇTİ] JavaScript syntax: app.js
+031. [GEÇTİ] JavaScript syntax: modules/bootstrap.js
+032. [GEÇTİ] JavaScript syntax: modules/course-engine.js
+033. [GEÇTİ] JavaScript syntax: modules/firebase-sync.js
+034. [GEÇTİ] JavaScript syntax: modules/learning-engine.js
+035. [GEÇTİ] JavaScript syntax: modules/russian-path.js
+036. [GEÇTİ] JavaScript syntax: modules/ui-events.js
+037. [GEÇTİ] JavaScript syntax: modules/v43.js
+038. [GEÇTİ] JavaScript syntax: modules/v431.js
+039. [GEÇTİ] JavaScript syntax: modules/v50.js
+040. [GEÇTİ] JavaScript syntax: modules/v510.js
+041. [GEÇTİ] JavaScript syntax: modules/v511.js
+042. [GEÇTİ] JavaScript syntax: modules/v512.js
+043. [GEÇTİ] JavaScript syntax: modules/v60.js
+044. [GEÇTİ] JavaScript syntax: modules/v61.js
+045. [GEÇTİ] JavaScript syntax: modules/v62.js
+046. [GEÇTİ] JavaScript syntax: modules/v63.js
+047. [GEÇTİ] JavaScript syntax: modules/v64.js
+048. [GEÇTİ] JavaScript syntax: modules/v65.js
+049. [GEÇTİ] JavaScript syntax: modules/v70.js
+050. [GEÇTİ] JavaScript syntax: modules/v71.js
+051. [GEÇTİ] JavaScript syntax: modules/v711.js
+052. [GEÇTİ] JavaScript syntax: modules/v712.js
+053. [GEÇTİ] JavaScript syntax: modules/v80.js
+054. [GEÇTİ] JavaScript syntax: modules/v81.js
+055. [GEÇTİ] JavaScript syntax: modules/v82.js
+056. [GEÇTİ] JavaScript syntax: modules/v822.js
+057. [GEÇTİ] JavaScript syntax: modules/v83.js
+058. [GEÇTİ] JavaScript syntax: modules/v90.js
+059. [GEÇTİ] JavaScript syntax: modules/v91.js
+060. [GEÇTİ] JavaScript syntax: modules/v92.js
+061. [GEÇTİ] JavaScript syntax: modules/v93.js
+062. [GEÇTİ] JavaScript syntax: modules/v94.js
+063. [GEÇTİ] JavaScript syntax: modules/v95.js
+064. [GEÇTİ] JavaScript syntax: modules/v96.js
+065. [GEÇTİ] JavaScript syntax: modules/v97.js
+066. [GEÇTİ] JavaScript syntax: modules/v98.js
+067. [GEÇTİ] JavaScript syntax: modules/v99.js
+068. [GEÇTİ] JavaScript syntax: security-config.js
+069. [GEÇTİ] JavaScript syntax: sw.js
+070. [GEÇTİ] English library contains 5000 records
+071. [GEÇTİ] English IDs are unique
+072. [GEÇTİ] English IDs cover 1–5000
+073. [GEÇTİ] English headwords are populated
+074. [GEÇTİ] English headwords are unique
+075. [GEÇTİ] Every English record has Concept ID
+076. [GEÇTİ] English Concept IDs are unique
+077. [GEÇTİ] English CEFR values are present
+078. [GEÇTİ] English Turkish meanings are present
+079. [GEÇTİ] Russian library contains 1500 records
+080. [GEÇTİ] Russian IDs are unique
+081. [GEÇTİ] Russian words are populated
+082. [GEÇTİ] Russian Turkish translations are populated
+083. [GEÇTİ] Uzbek library contains 1000 records
+084. [GEÇTİ] Uzbek IDs are unique
+085. [GEÇTİ] Uzbek headwords are populated
+086. [GEÇTİ] Uzbek meanings are populated
+087. [GEÇTİ] Concept master contains 5000 records
+088. [GEÇTİ] Concept master IDs are unique
+089. [GEÇTİ] Concept master English terms are populated
+090. [GEÇTİ] Concept master Turkish terms are populated
+091. [GEÇTİ] Concept master contains language terms object
+092. [GEÇTİ] Reader contains 114 stories
+093. [GEÇTİ] Reader story IDs are unique
+094. [GEÇTİ] Reader covers A1–C2
+095. [GEÇTİ] Every Reader story has lines
+096. [GEÇTİ] Every Reader story has questions
+097. [GEÇTİ] Phrase Lab contains 240 entries
+098. [GEÇTİ] Phrase Lab IDs are unique
+099. [GEÇTİ] Phrase Lab has 60 conversation patterns
+100. [GEÇTİ] Phrase Lab has 60 collocations
+101. [GEÇTİ] Phrase Lab has 60 phrasal verbs
+102. [GEÇTİ] Phrase Lab has 60 idioms
+103. [GEÇTİ] Phrase Lab commercial flags are true
+104. [GEÇTİ] Academy contains 102 lessons
+105. [GEÇTİ] English Academy contains 48 lessons
+106. [GEÇTİ] Russian Academy contains 54 lessons
+107. [GEÇTİ] Academy contains 48 lesson readings
+108. [GEÇTİ] English Academy contains 18 lesson readings
+109. [GEÇTİ] Russian Academy contains 30 lesson readings
+110. [GEÇTİ] EN A1 lesson count is 8
+111. [GEÇTİ] EN A2 lesson count is 8
+112. [GEÇTİ] EN B1 lesson count is 8
+113. [GEÇTİ] EN B2 lesson count is 8
+114. [GEÇTİ] EN C1 lesson count is 8
+115. [GEÇTİ] EN C2 lesson count is 8
+116. [GEÇTİ] RU A1 lesson count is 9
+117. [GEÇTİ] RU A2 lesson count is 9
+118. [GEÇTİ] RU B1 lesson count is 9
+119. [GEÇTİ] RU B2 lesson count is 9
+120. [GEÇTİ] RU C1 lesson count is 9
+121. [GEÇTİ] RU C2 lesson count is 9
+122. [GEÇTİ] EN A1 reading count is 3
+123. [GEÇTİ] EN A2 reading count is 3
+124. [GEÇTİ] EN B1 reading count is 3
+125. [GEÇTİ] EN B2 reading count is 3
+126. [GEÇTİ] EN C1 reading count is 3
+127. [GEÇTİ] EN C2 reading count is 3
+128. [GEÇTİ] RU A1 reading count is 5
+129. [GEÇTİ] RU A2 reading count is 5
+130. [GEÇTİ] RU B1 reading count is 5
+131. [GEÇTİ] RU B2 reading count is 5
+132. [GEÇTİ] RU C1 reading count is 5
+133. [GEÇTİ] RU C2 reading count is 5
+134. [GEÇTİ] Index title is WordPilot 9.9
+135. [GEÇTİ] Index description identifies v9.9.0
+136. [GEÇTİ] Index cache build is 9.9.0
+137. [GEÇTİ] Index loads v99 module
+138. [GEÇTİ] Index loads bootstrap after v99
+139. [GEÇTİ] All local index JS/CSS query versions are 9.9.0
+140. [GEÇTİ] App runtime version is 9.9.0
+141. [GEÇTİ] Security config version is 9.9.0
+142. [GEÇTİ] Manifest version is 9.9.0
+143. [GEÇTİ] Manifest app name identifies UX Reset
+144. [GEÇTİ] Manifest start URL uses wpbuild 9.9.0
+145. [GEÇTİ] Service Worker cache is 9.9.0
+146. [GEÇTİ] Service Worker caches v99 module
+147. [GEÇTİ] Bootstrap initializes v99 events
+148. [GEÇTİ] Bootstrap runs v99 after init
+149. [GEÇTİ] README identifies v9.9.0
+150. [GEÇTİ] Release notes identify UX Reset
+151. [GEÇTİ] Central WP_APP_META is exported
+152. [GEÇTİ] Central metadata contains version:'9.9.0'
+153. [GEÇTİ] Central metadata contains totalLessons:102
+154. [GEÇTİ] Central metadata contains totalReadings:48
+155. [GEÇTİ] Central metadata contains stories:114
+156. [GEÇTİ] Central metadata contains phraseLab:240
+157. [GEÇTİ] Central metadata contains en:5000
+158. [GEÇTİ] Central metadata contains ru:1500
+159. [GEÇTİ] Central metadata contains uz:1000
+160. [GEÇTİ] Home contains Academy route
+161. [GEÇTİ] Home contains active word set route
+162. [GEÇTİ] Home contains Reader route
+163. [GEÇTİ] Home contains Conversation Coach route
+164. [GEÇTİ] Home contains review route
+165. [GEÇTİ] Home contains progress route
+166. [GEÇTİ] Home contains tools route
+167. [GEÇTİ] Desktop navigation definition is simplified
+168. [GEÇTİ] Mobile navigation contains five destinations
+169. [GEÇTİ] Core language set is EN RU UZ TR
+170. [GEÇTİ] Language expansion toggle exists
+171. [GEÇTİ] Concept Atlas host exists
+172. [GEÇTİ] Concept mapper is moved into Tools
+173. [GEÇTİ] Old roadmap removal exists
+174. [GEÇTİ] Old route panel removal exists
+175. [GEÇTİ] Old quick practice removal exists
+176. [GEÇTİ] Academy Reading is renamed to Ders Okumaları
+177. [GEÇTİ] Academy first reading auto-opens
+178. [GEÇTİ] Reader identity says independent Reader Pro
+179. [GEÇTİ] Profile contains direct feedback action
+180. [GEÇTİ] Feedback ticket generator exists
+181. [GEÇTİ] Feedback payload contains view,ticket,viewport,userAgent
+182. [GEÇTİ] Feedback payload contains appVersion:WP99_META.version
+183. [GEÇTİ] Feedback payload contains status:'new'
+184. [GEÇTİ] Admin view exists
+185. [GEÇTİ] Admin supports feedback status new
+186. [GEÇTİ] Admin supports feedback status reviewing
+187. [GEÇTİ] Admin supports feedback status planned
+188. [GEÇTİ] Admin supports feedback status done
+189. [GEÇTİ] Admin supports feedback status rejected
+190. [GEÇTİ] Admin authorization reads admins collection
+191. [GEÇTİ] Feedback inbox reads latest 100 records
+192. [GEÇTİ] Desktop bottom navigation is hidden by v9.9 CSS
+193. [GEÇTİ] Mobile language pair is hidden by v9.9 CSS
+194. [GEÇTİ] Mobile floating feedback button is hidden
+195. [GEÇTİ] Horizontal overflow protection exists
+196. [GEÇTİ] Dashboard legacy conversation spotlight is hidden
+197. [GEÇTİ] Dashboard legacy route stage is hidden
+198. [GEÇTİ] Rules define admin helper
+199. [GEÇTİ] Rules read admins UID document
+200. [GEÇTİ] Admin documents have no frontend writes
+201. [GEÇTİ] Feedback creation requires signed-in owner
+202. [GEÇTİ] Feedback read is owner or admin
+203. [GEÇTİ] Feedback update/delete is admin-only
+204. [GEÇTİ] Feedback allowed fields include ticket
+205. [GEÇTİ] Feedback allowed fields include view and viewport
+206. [GEÇTİ] Feedback allowed fields include userAgent
+207. [GEÇTİ] Runtime: onboarding shows WORDPILOT 9.9
+208. [GEÇTİ] Runtime: onboarding legal title is Turkish
+209. [GEÇTİ] Runtime: page title is v9.9
+210. [GEÇTİ] Runtime: version badge is v9.9.0
+211. [GEÇTİ] Runtime: four primary home cards render
+212. [GEÇTİ] Runtime: all primary cards keep arrow affordance
+213. [GEÇTİ] Runtime: home heading is visible
+214. [GEÇTİ] Runtime: desktop nav has five correct items
+215. [GEÇTİ] Runtime: desktop bottom nav is hidden
+216. [GEÇTİ] Runtime: only four core languages show initially
+217. [GEÇTİ] Runtime: old route stage is hidden
+218. [GEÇTİ] Runtime: old roadmap is absent
+219. [GEÇTİ] Runtime: Concept Atlas moved to Tools
+220. [GEÇTİ] Runtime: Tools and Admin views exist
+221. [GEÇTİ] Runtime: desktop has no horizontal overflow
+222. [GEÇTİ] Runtime: Tools view opens
+223. [GEÇTİ] Runtime: Tools contains Concept Atlas
+224. [GEÇTİ] Runtime: Tools contains roadmap
+225. [GEÇTİ] Runtime: Tools contains feedback action
+226. [GEÇTİ] Runtime: Academy reading route opens
+227. [GEÇTİ] Runtime: Academy reading title is explicit
+228. [GEÇTİ] Runtime: Academy first reading auto-opens
+229. [GEÇTİ] Runtime: Academy first reading is selected
+230. [GEÇTİ] Runtime: Academy metadata distinguishes Reader
+231. [GEÇTİ] Runtime: mobile bottom nav has five correct items
+232. [GEÇTİ] Runtime: mobile bottom nav is visible
+233. [GEÇTİ] Runtime: mobile pair switcher is hidden
+234. [GEÇTİ] Runtime: mobile version badge is hidden
+235. [GEÇTİ] Runtime: mobile feedback header button is hidden
+236. [GEÇTİ] Runtime: mobile floating feedback button is hidden
+237. [GEÇTİ] Runtime: mobile has no horizontal overflow
+238. [GEÇTİ] Runtime: no JavaScript page errors
+239. [GEÇTİ] Runtime: no console errors
+240. [GEÇTİ] GitHub web upload file count will remain below 100
+
+Özet:
+- v9.9 merkezi sürüm ve içerik sayıları doğrulandı.
+- Ana sayfa, masaüstü/mobil gezinme, Reader–Academy ayrımı ve Kavram Atlası taşıması tarayıcıda test edildi.
+- Firestore öneri ve yönetici yetki kuralları kontrol edildi.
+- JavaScript dosyalarının tamamı sözdizimi kontrolünden, JSON dosyalarının tamamı ayrıştırma kontrolünden geçti.
+- Paket rapor eklendiğinde 96 dosya içerir ve GitHub web yükleme sınırının altındadır.

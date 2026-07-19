@@ -11,6 +11,11 @@ service cloud.firestore {
       return signedIn() && request.auth.uid == uid;
     }
 
+    function admin() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
     // User profile and course progress.
     match /users/{uid} {
       allow read, create, update, delete: if owner(uid);
@@ -30,7 +35,15 @@ service cloud.firestore {
       allow delete: if owner(uid);
     }
 
-    // Suggestions and bug reports can only be created by their sender.
+    // Owner/admin registry. Create the owner document manually in Firebase Console:
+    // admins/<Firebase UID>  { role: "owner" }
+    match /admins/{uid} {
+      allow read: if owner(uid);
+      allow write: if false;
+    }
+
+    // Suggestions and bug reports are created by their sender.
+    // The sender may read their own ticket; only an authorised admin may manage it.
     match /feedback/{feedbackId} {
       allow create: if signedIn()
         && request.resource.data.keys().hasOnly([
@@ -44,6 +57,10 @@ service cloud.firestore {
           'targetLanguage',
           'appVersion',
           'page',
+          'view',
+          'ticket',
+          'viewport',
+          'userAgent',
           'status',
           'createdAt'
         ])
@@ -73,10 +90,19 @@ service cloud.firestore {
         && request.resource.data.appVersion.size() <= 20
         && request.resource.data.page is string
         && request.resource.data.page.size() <= 100
+        && request.resource.data.view is string
+        && request.resource.data.view.size() <= 40
+        && request.resource.data.ticket is string
+        && request.resource.data.ticket.size() <= 32
+        && request.resource.data.viewport is string
+        && request.resource.data.viewport.size() <= 30
+        && request.resource.data.userAgent is string
+        && request.resource.data.userAgent.size() <= 300
         && request.resource.data.status == 'new'
         && request.resource.data.createdAt == request.time;
 
-      allow read, update, delete: if false;
+      allow read: if admin() || (signedIn() && resource.data.uid == request.auth.uid);
+      allow update, delete: if admin();
     }
 
     // Only Cloud Functions Admin SDK may manage usage counters.

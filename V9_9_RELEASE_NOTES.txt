@@ -1,0 +1,53 @@
+WORDPILOT v9.9.0 — UX RESET & NAVIGATION
+
+1. ANA SAYFA
+- “Bugün ne yapmak istiyorsun?” alanı yeniden tasarlandı.
+- Dört ana başlangıç yolu oluşturuldu: Derse devam et, Kelime setimi çalış, Reader Pro’da oku ve Conversation Coach.
+- Tekrar, ilerleme ve araçlar ikincil bağlantılara taşındı.
+- Eski hızlı pratik, tekrarlanan öneri kartları, eski yol haritası ve eski rota blokları kaldırıldı veya gizlendi.
+- Ana sayfa belirgin biçimde kısaltıldı.
+
+2. GEZİNME
+- Masaüstü menüsü: Ana Sayfa, Akademi, Kelimeler, Reader, İlerleme.
+- Mobil menü: Ana Sayfa, Akademi, Kelimeler, Reader, Profil.
+- Masaüstünde mobil alt gezinme çubuğu gösterilmez.
+- Mobil üst çubuk sadeleştirildi; yatay taşma giderildi.
+
+3. READER PRO VE DERS OKUMALARI
+- Reader Pro bağımsız 114 metinlik okuma kütüphanesi olarak tanımlandı.
+- Academy içindeki “Okuma Kütüphanesi” adı “Ders Okumaları” olarak değiştirildi.
+- Academy Ders Okumaları yalnızca derse bağlı kısa pekiştirme metinleri olarak gösterilir.
+- Ders Okumaları ekranı ilk metni otomatik açar.
+- Ekranda seviye içi, dil içi ve Reader’dan bağımsız içerik sayıları görünür.
+
+4. KAVRAM ATLASI
+- “Aynı numarayı bütün dillerde karşılaştır” paneli kelime listesinin üstünden kaldırıldı.
+- 1–5000 ortak kavram karşılaştırması ayrı “Kavram Atlası ve yenilikler” ekranına taşındı.
+- Kelimeler ekranında Kavram Atlası için kısa bir araç düğmesi bırakıldı.
+
+5. MERKEZİ VERİ GERÇEĞİ
+- Sürüm ve temel içerik sayıları WP_APP_META üzerinden merkezileştirildi.
+- 5000 English, 1500 Русский, 1000 O‘zbekcha, 102 Academy dersi, 48 Ders Okuması, 114 Reader metni ve 240 Phrase Lab kaydı tek kaynaktan gösterilir.
+- Eski modüllerin sürüm rozetini veya sayıları geriye çevirmesi engellendi.
+
+6. ÖNERİ VE YÖNETİCİ MERKEZİ
+- Öneriler takip kodu, sürüm, aktif ekran, ekran ölçüsü ve tarayıcı bilgisiyle kaydedilir.
+- Kullanıcı öneri formuna masaüstü üst çubuğundan, Profil’den veya Araçlar ekranından ulaşabilir.
+- Mobil yüzen öneri düğmesi kaldırılarak arayüz sadeleştirildi.
+- Firestore `admins/<UID>` yetkisi bulunan hesaplarda Yönetici Gelen Kutusu görünür.
+- Öneri durumları yönetilebilir: Yeni, İnceleniyor, Planlandı, Tamamlandı ve Reddedildi.
+
+7. KORUNAN ÖZELLİKLER
+- 5000 kelimelik English kütüphanesi
+- 1500 Русский ve 1000 O‘zbekcha kayıt
+- 5000 ortak Concept ID
+- 114 Reader Pro metni
+- 240 Phrase Lab kaydı
+- Conversation Coach Pro
+- Smart Word Session
+- Reader Pro ile kelime seti ve Cümle Laboratuvarı bağlantısı
+
+8. FIREBASE NOTU
+- Güncel `firestore.rules` yayımlanmalıdır.
+- Yönetici hesabının Firebase UID değeriyle `admins/<UID>` belgesi bir kez oluşturulmalıdır.
+- Belge için örnek alan: `role: "owner"`.
