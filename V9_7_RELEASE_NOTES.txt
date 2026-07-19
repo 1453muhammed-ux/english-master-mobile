@@ -1,0 +1,81 @@
+WordPilot v9.7.0 — Smart Word Session
+Yayın tarihi: 19 Temmuz 2026
+
+ANA DEĞİŞİKLİK
+WordPilot çalışma akışı oyun merkezli yapıdan kelime seti merkezli yapıya geçirildi.
+Kullanıcı bir kez kelime seçtiğinde aynı kelimeler bütün çalışma türlerinde korunur.
+
+1. KALICI AKTİF KELİME SETİ
+- Seçilen kelimeler tarayıcıda aktif çalışma seti olarak saklanır.
+- Sayfa veya bölüm değişse bile set kaybolmaz.
+- Alt bölümde “Aktif kelime setin” çubuğu görünür.
+- Kullanıcı tek dokunuşla kaldığı oturuma dönebilir.
+- Sistem özellikle beş kelimelik kısa oturumlar için tasarlanmıştır; en fazla 12 kelime destekler.
+
+2. YÖNÜ YENİDEN SEÇMEDEN DEĞİŞTİRME
+- EN → TR ve TR → EN yönleri oturum merkezinden değiştirilebilir.
+- Dil yönü değiştiğinde kelimeleri yeniden seçmek veya oyunu yeniden kurmak gerekmez.
+- Aynı yapı seçilen diğer kurslarda da hedef dil → Türkçe ve Türkçe → hedef dil olarak çalışır.
+
+3. AYNI KELİMELERLE USTALIK DÖNGÜSÜ
+- Tanı ve dinle
+- Anlamı seç
+- Yönlü yazma
+- Cümle tamamlama
+- Cümle devamını seçme
+- Karışık cümleyi doğru sıraya koyma
+- Numaralı çeviri/cümle yapbozu
+- Eş anlam oyunu
+- Zıt anlam oyunu
+- Kelime ailesi
+- Seçilen kelimelerin örneklerinden mini hikâye
+- Karışık final testi
+
+İlgili veri bulunmayan oyunlar zorla açılmaz. Örneğin doğrulanmış kelime ailesi veya
+zıt anlam bağlantısı olmayan bir sette bu bölüm “içerik bulunmuyor” durumunda gösterilir.
+
+4. OYUN SONU DEVAM AKIŞI
+- Oyun bitince kullanıcı ana menüye atılmaz.
+- “Bu kelimelerle devam et” ekranı açılır.
+- Sıradaki önerilen çalışma gösterilir.
+- Bütün oyunlar görüntülenebilir.
+- Yalnızca zorlanılan kelimelerle yeni tur başlatılabilir.
+
+5. KELİME BAZLI USTALIK
+- Her kelime için doğru ve yanlış cevaplar tutulur.
+- Kelimenin kaç farklı çalışma türünde kullanıldığı kaydedilir.
+- Her kelimeye 0–100 arasında ustalık puanı hesaplanır.
+- Düşük puanlı veya tekrar gerektiren kelimeler ayrı final turuna alınabilir.
+
+6. MİNİ HİKÂYE
+- Seçilen kelimelerin gerçek örnek cümleleri tek okuma akışında birleştirilir.
+- Hedef kelimeler hikâye içinde vurgulanır.
+- Cümleler ayrı ayrı seslendirilebilir.
+- Türkçe destek satırları açılıp kapatılabilir.
+- Hikâye tamamlandığında ilgili kelimelerin bağlam çalışması kaydedilir.
+
+7. TEKRAR PLANI VE GEÇMİŞ SETLER
+- Aktif set yarın, 3 gün veya 7 gün sonrasına planlanabilir.
+- Önceki setler geçmiş setler alanında korunur.
+- Eski bir set tek dokunuşla yeniden açılabilir.
+- Yeni set oluşturulurken mevcut set otomatik arşivlenir.
+
+8. SÜRÜM VE ÖNBELLEK
+- Bütün aktif sürüm göstergeleri v9.7.0 olarak birleştirildi.
+- Sayfa başlığı, manifest, app sürümü ve Service Worker önbelleği v9.7.0 oldu.
+- Önceki modüllerin sürüm yazısını eski değere çevirmesi engellendi.
+
+KORUNAN İÇERİK
+- 5000 İngilizce kelime
+- 5000 ortak Concept ID rotası
+- 1500 Rusça kayıt
+- 1000 Özbekçe kayıt
+- 114 Reader metni
+- 240 Phrase Lab kaydı
+- Reader 3.0
+- Conversation Coach Pro
+
+DAĞITIM NOTU
+Paket statik GitHub/Firebase Hosting yapısını korur. Blaze, ücretli AI veya yeni sunucu
+kurulumu gerektirmez. Canlı dağıtımdan sonra mobil dokunma, cihaz sesi ve Service Worker
+güncelleme davranışı gerçek cihazda ayrıca kontrol edilmelidir.

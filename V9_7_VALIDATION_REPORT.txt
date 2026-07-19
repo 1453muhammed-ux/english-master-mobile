@@ -1,0 +1,91 @@
+WordPilot v9.7.0 — Smart Word Session Doğrulama Raporu
+Tarih: 19 Temmuz 2026
+
+SONUÇ: 83/83 kontrol geçti.
+
+01. [GEÇTİ] index.html mevcut
+02. [GEÇTİ] v9.7 modülü mevcut
+03. [GEÇTİ] index v9.7 modülünü yüklüyor
+04. [GEÇTİ] index başlığı v9.7.0
+05. [GEÇTİ] üst sürüm etiketi v9.7.0
+06. [GEÇTİ] app VERSION 9.7.0
+07. [GEÇTİ] manifest version 9.7.0
+08. [GEÇTİ] manifest başlangıç sürümü 9.7.0
+09. [GEÇTİ] Service Worker cache v9.7.0
+10. [GEÇTİ] Service Worker v9.7 modülünü önbelleğe alıyor
+11. [GEÇTİ] Service Worker ana veri dosyalarını önbelleğe alıyor
+12. [GEÇTİ] bootstrap v9.7 olaylarını kuruyor
+13. [GEÇTİ] bootstrap v9.7 başlangıç sonrası işlemini çağırıyor
+14. [GEÇTİ] README v9.7 olarak güncel
+15. [GEÇTİ] paket GitHub web sınırının altında — 97 dosya
+16. [GEÇTİ] İngilizce kayıt sayısı 5000
+17. [GEÇTİ] İngilizce ID aralığı 1–5000
+18. [GEÇTİ] İngilizce ID değerleri benzersiz
+19. [GEÇTİ] İngilizce kelime değerleri benzersiz
+20. [GEÇTİ] 5000 kaydın temel alanları dolu
+21. [GEÇTİ] 5000 kayıtta üç çalışma örneği var
+22. [GEÇTİ] Ortak kavram haritası 5000 kayıt
+23. [GEÇTİ] Kavram sırası 1–5000
+24. [GEÇTİ] Concept ID değerleri benzersiz
+25. [GEÇTİ] Kavram haritasında EN ve TR alanları
+26. [GEÇTİ] Rusça kayıt sayısı 1500
+27. [GEÇTİ] Rusça ID değerleri 1–1500
+28. [GEÇTİ] Özbekçe kayıt sayısı 1000
+29. [GEÇTİ] Özbekçe ID değerleri 1–1000
+30. [GEÇTİ] Reader toplam 114 metin
+31. [GEÇTİ] Reader dil dağılımı 60 EN / 48 RU / 6 UZ — {'en': 60, 'ru': 48, 'uz': 6}
+32. [GEÇTİ] İngilizce Reader A1–C2 kapsamı — {'A1': 12, 'A2': 12, 'B1': 9, 'B2': 9, 'C1': 9, 'C2': 9}
+33. [GEÇTİ] Phrase Lab toplam 240 kayıt
+34. [GEÇTİ] Phrase Lab dört kategoride 60’ar kayıt — {'conversation': 60, 'collocation': 60, 'phrasal_verb': 60, 'idiom': 60}
+35. [GEÇTİ] Bütün JSON dosyaları ayrıştırılıyor
+36. [GEÇTİ] v9.7 sürüm sabiti
+37. [GEÇTİ] aktif set localStorage anahtarı
+38. [GEÇTİ] geçmiş set localStorage anahtarı
+39. [GEÇTİ] en fazla 12 kelimelik kontrollü set
+40. [GEÇTİ] seçimden aktif set oluşturma
+41. [GEÇTİ] aktif seti seçimlere geri yükleme
+42. [GEÇTİ] set arşivleme
+43. [GEÇTİ] geçmiş seti yeniden açma
+44. [GEÇTİ] aktif set çubuğu
+45. [GEÇTİ] oturum merkezi dialogu
+46. [GEÇTİ] EN/TR yön değiştirme
+47. [GEÇTİ] tanı ve dinle modu
+48. [GEÇTİ] anlamı seç modu
+49. [GEÇTİ] yönlü yazma modu
+50. [GEÇTİ] cümle tamamlama modu
+51. [GEÇTİ] cümle devamı modu
+52. [GEÇTİ] cümle sıralama modu
+53. [GEÇTİ] numaralı çeviri yapbozu
+54. [GEÇTİ] eş anlam modu
+55. [GEÇTİ] zıt anlam modu
+56. [GEÇTİ] kelime ailesi modu
+57. [GEÇTİ] mini hikâye modu
+58. [GEÇTİ] karışık final modu
+59. [GEÇTİ] içerik yoksa modu kapatma
+60. [GEÇTİ] kelime bazlı ustalık puanı
+61. [GEÇTİ] mod bazlı tamamlanma kaydı
+62. [GEÇTİ] zor kelimeleri yeniden seçme
+63. [GEÇTİ] 1/3/7 günlük tekrar planı
+64. [GEÇTİ] oyun sonu devam ekranı
+65. [GEÇTİ] sıradaki çalışma önerisi
+66. [GEÇTİ] mini hikâyede hedef kelime vurgusu
+67. [GEÇTİ] mini hikâyede cümle sesi
+68. [GEÇTİ] mini hikâyede çeviri aç/kapat
+69. [GEÇTİ] yeni set oluşturma akışı
+70. [GEÇTİ] eski sürüm etiketlerini kilitleme
+71. [GEÇTİ] mobil v9.7 düzeni
+72. [GEÇTİ] Bütün JavaScript dosyalarının sözdizimi geçerli — 38 dosya
+73. [GEÇTİ] Tarayıcı smoke testinde sayfa hatası yok — []
+74. [GEÇTİ] Tarayıcıda sürüm etiketi doğru
+75. [GEÇTİ] Tarayıcıda sayfa başlığı doğru
+76. [GEÇTİ] Tarayıcıda 5 kelimelik set oluşturuluyor
+77. [GEÇTİ] Oturum merkezi açılıyor
+78. [GEÇTİ] Aktif set çubuğu görünür
+79. [GEÇTİ] Oturum merkezinde çalışma seçenekleri oluşuyor — 13
+80. [GEÇTİ] Çeviri yapbozu çalışma alanı açılıyor
+81. [GEÇTİ] Mini hikâyede beş hedef kelime vurgulanıyor — 5
+82. [GEÇTİ] Çalışma yönü yeniden seçim olmadan değişiyor
+83. [GEÇTİ] Tekrar tarihi kaydediliyor
+
+Tarayıcı smoke testi, paket içeriğinin küçültülmüş yerel veri kopyasıyla Chromium üzerinde çalıştırılmıştır.
+Canlı Firebase Hosting, gerçek mobil cihaz, mikrofon ve cihaz ses testleri dağıtımdan sonra ayrıca yapılmalıdır.

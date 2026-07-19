@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.5 · Conversation Coach Pro",
-  "short_name": "WordPilot 9.5",
-  "start_url": "./?wpbuild=9.4.0",
+  "name": "WordPilot 9.7 · Smart Word Session",
+  "short_name": "WordPilot 9.7",
+  "start_url": "./?wpbuild=9.7.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.5.0 — Conversation Coach Pro, Reader 3.0 ve 5000 İngilizce kelime.",
+  "description": "WordPilot v9.7.0 — kalıcı kelime setleri, cümle, çeviri, mini hikâye, eş-zıt anlam ve ustalık takibi.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.4.0"
+  "version": "9.7.0"
 }
