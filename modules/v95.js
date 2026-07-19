@@ -1,6 +1,6 @@
 /* WordPilot v9.5.0 — Conversation Coach Pro and single-source UI truth. */
-const WP95_VERSION='9.5.0';
-const WP95_LABEL='v9.5.0 · Conversation Coach Pro';
+const WP95_VERSION='9.6.0';
+const WP95_LABEL='v9.6.0 · Unified Concept Route';
 const WP95_COUNTS={en:5000,ru:1500,uz:1000,tr:1000};
 const WP95_CATEGORIES={all:'Tüm senaryolar',daily:'Günlük yaşam',travel:'Seyahat',health:'Sağlık',services:'Hizmetler',work:'İş hayatı',academic:'Akademik',social:'Sosyal'};
 const WP95_LEVELS=['A1','A2','B1','B2','C1','C2'];
@@ -15,7 +15,7 @@ function wp95Count(course=activeCourse){
 function wp95CourseText(course){const n=wp95Count(course);if(course==='en')return `${n} İngilizce kelime · A1–C2 Akademi`;if(course==='ru')return `${n} kontrollü Rusça kayıt · A1–C2 Akademi`;if(course==='uz')return `${n} kontrollü Özbekçe kayıt`;return `${n} bağlantılı Türkçe kavram`}
 function wp95Set(node,text){if(node&&node.textContent!==text)node.textContent=text}
 function wp95ApplyTruth(){
-  document.documentElement.dataset.wpVersion=WP95_VERSION;document.title='WordPilot 9.5 · Conversation Coach Pro · Reader 3.0';
+  document.documentElement.dataset.wpVersion=WP95_VERSION;document.title='WordPilot 9.6 · Unified Concept Route · Reader 3.0';
   document.querySelectorAll('.version').forEach(n=>wp95Set(n,WP95_LABEL));
   const meta=document.querySelector('meta[name="description"]');if(meta)meta.content='WordPilot v9.5.0 — Conversation Coach Pro, Reader 3.0 ve gerçek veri sayılarına bağlı çok dilli öğrenme platformu.';
   Object.keys(WP95_COUNTS).forEach(id=>{if(!COURSES[id])return;const n=wp95Count(id);COURSES[id].displayCount=n;COURSES[id].actualCount=n;COURSES[id].reviewedCount=n;COURSES[id].countLabel=wp95CourseText(id)});
@@ -88,5 +88,5 @@ function setupV95Events(){
 }
 async function wp95AfterInit(){
   await wp95LoadScenarios();wp83RecordTurn=wp95RecordTurn;wp83FinishSession=wp95FinishSession;wp95ApplyTruth();if(wp95EnsureActiveScenario()){}renderAiCoach();
-  const observer=new MutationObserver(()=>{clearTimeout(observer._t);observer._t=setTimeout(()=>{wp95ApplyTruth();if($('#view-ai')?.classList.contains('active')){wp95CoachCopy();wp95FilterScenarioList()}},180)});observer.observe(document.body,{childList:true,subtree:true});
+  /* v9.6: eski tek-kaynak gözlemcisi devre dışı; son arayüz doğrusu v96 tarafından yönetilir. */
 }

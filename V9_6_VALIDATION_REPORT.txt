@@ -1,0 +1,64 @@
+WordPilot v9.6.0 — Validation Report
+Generated: 2026-07-18
+
+PASS | JSON parse: clean_concepts_v71.json
+PASS | JSON parse: clean_concepts_v711.json
+PASS | JSON parse: concept_ledger_v90.json
+PASS | JSON parse: content_manifest_v71.json
+PASS | JSON parse: content_manifest_v711.json
+PASS | JSON parse: curriculum_v6.json
+PASS | JSON parse: firebase.json
+PASS | JSON parse: language_registry_v71.json
+PASS | JSON parse: language_registry_v711.json
+PASS | JSON parse: manifest.json
+PASS | JSON parse: reader_sources_v64.json
+PASS | JSON parse: ru_alphabet.json
+PASS | JSON parse: ru_dialogues.json
+PASS | JSON parse: ru_exam_lab.json
+PASS | JSON parse: ru_grammar.json
+PASS | JSON parse: ru_verb_lab.json
+PASS | JSON parse: ru_words.json
+PASS | JSON parse: source_atlas_v63.json
+PASS | JSON parse: source_manifest.json
+PASS | JSON parse: stories.json
+PASS | JSON parse: uz_words.json
+PASS | JSON parse: words.json
+PASS | JSON parse: concept_ledger_v92.json
+PASS | JSON parse: phrases_v92.json
+PASS | JSON parse: phrases_v93.json
+PASS | JSON parse: content_quality_v93.json
+PASS | JSON parse: reader_lexicon_v94.json
+PASS | JSON parse: coach_scenarios_v95.json
+PASS | JSON parse: concept_master_v96.json
+PASS | Master concept count | 5000
+PASS | Unique concept IDs
+PASS | Unique learning ranks
+PASS | en aligned terms | 5000
+PASS | tr aligned terms | 5000
+PASS | ru aligned terms | 1000
+PASS | uz aligned terms | 1000
+PASS | es aligned terms | 1000
+PASS | de aligned terms | 1000
+PASS | fr aligned terms | 1000
+PASS | it aligned terms | 1000
+PASS | pt aligned terms | 1000
+PASS | ja aligned terms | 1000
+PASS | ko aligned terms | 1000
+PASS | zh aligned terms | 1000
+PASS | Index v9.6 label
+PASS | v96 module loaded
+PASS | Static proof count 5000
+PASS | No static Microsoft provider copy
+PASS | Phrase Lab static 240
+PASS | v96 setup hook
+PASS | v96 after-init hook
+PASS | Service worker cache v9.6
+PASS | Master concept offline cache
+PASS | HTML local asset references
+PASS | GitHub web upload file count <100 | 94
+PASS | No visible 2000 proof in index
+PASS | No old v9.5 query in index
+
+Summary: 57/57 checks passed.
+Files: 94
+Concept master size: 5473234 bytes

@@ -1,0 +1,13 @@
+WordPilot v9.6.0 — Unified Concept Route
+
+- 12 dil için ortak 1–5000 concept_id sırası eklendi.
+- İngilizce ve Türkçe destek anlamları 5000 kavrama bağlandı.
+- Rusça, Özbekçe, İspanyolca, Almanca, Fransızca, İtalyanca, Portekizce, Japonca, Korece ve Çince için ilk 1000 temiz kavram aynı numarayla eşlendi.
+- Eksik çeviriler uydurulmaz; Kavram Haritası içinde Hazırlanıyor olarak görünür.
+- Rusçanın 500 ek kaydı ayrı kurs bankası olarak korunur; yanlış concept_id ile zorla eşlenmez.
+- Kurs kartları aynı 5000 rota formatına geçirildi ve hazır çeviri sayısı ayrıca gösterildi.
+- Kelime kütüphanesine 1–5000 Kavram Haritası eklendi.
+- 2000 çalışma kartı, 120 kalıp, eski Rusça sürüm etiketi ve Microsoft giriş metni gibi canlı arayüz tutarsızlıkları düzeltildi.
+- Service Worker önbelleği v9.6.0'a yükseltildi.
+
+CEFR notu: global başlangıç etiketi ortaktır; veri yapısı her dil için ayrı CEFR düzeltmesini destekler.
