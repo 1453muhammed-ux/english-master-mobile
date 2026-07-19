@@ -24,7 +24,11 @@
       "README.txt",
       "WORDPILOT_DESIGN_SYSTEM.txt",
       "**/*.txt",
-      "**/*.py"
+      "**/*.py",
+      "DEPLOY_WORDPILOT.cmd",
+      "**/*.cmd",
+      "V9_9_2_RELEASE_NOTES.txt",
+      "V9_9_2_VALIDATION_REPORT.txt"
     ],
     "headers": [
       {

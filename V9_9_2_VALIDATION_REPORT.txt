@@ -1,0 +1,47 @@
+WORDPILOT v9.9.2 — DOĞRULAMA RAPORU
+====================================
+Tarih: 19 Temmuz 2026
+Temel: WordPilot v9.9.0 temiz kaynak paketi
+
+SONUÇ
+- 168 / 168 statik doğrulama başarılı.
+- Admin owner entegrasyon senaryosu başarılı.
+- Viewer ve inactive rol senaryoları başarılı.
+- Firebase Hosting Emulator isteği HTTP 200 döndürdü.
+
+DOĞRULANANLAR
+- 101 proje dosyasının gerekli ana yapısı.
+- Tüm JavaScript dosyalarında node --check sözdizimi kontrolü.
+- Tüm JSON dosyalarında ayrıştırma kontrolü.
+- index.html içindeki yerel script ve link hedeflerinin varlığı.
+- v9.9.2 sürüm bilgilerinin index, app, manifest, service worker ve güvenlik yapılandırmasında tutarlılığı.
+- v992 modülünün index.html ve bootstrap.js bağlantıları.
+- Service Worker içinde v9.9.2 önbelleği, v91 ve v992 dosyaları.
+- Admin düğmesinin owner hesabında görünmesi.
+- Viewer rolünde Yönetim Merkezi erişimi ve salt okunur yetki.
+- active:false admin hesabında Yönetim Merkezi düğmesinin gizlenmesi.
+- Feedback listesi, detay paneli, atama ve yönetim alanları.
+- Firestore batch update ve history kayıt akışı için tarayıcı-DOM mock testi.
+- .firebaserc içinde wordpilot-7a574 proje seçimi.
+- Windows dağıtım komutunun Firestore Rules + Hosting kapsamı.
+
+ENTEGRASYON TESTİ ÇIKTISI
+- Yönetim Merkezi düğmesi: görünür
+- Admin kabuğu: oluşturuldu
+- Feedback liste satırı: oluşturuldu
+- Detay ekranı: açıldı
+- Status update: reviewing
+- Priority update: high
+- Atama: uid-owner
+- History action: feedback_updated
+- Sürüm: 9.9.2
+
+ROL TESTİ
+- viewer / active:true: erişim var, feedback yönetimi yok
+- owner / active:false: erişim yok, düğme gizli
+
+NOT
+Bu çalışma ortamında Firestore Emulator JAR dosyası ağ kısıtı nedeniyle indirilemediği için
+firestore.rules gerçek emülatör derlemesi çalıştırılamadı. Kurallar; yapı, alan izinleri,
+rol kontrolleri, update diff sınırı ve history create koşulları açısından statik olarak kontrol edildi.
+Firebase Console veya firebase deploy komutu, yayınlama sırasında kuralları ayrıca derleyecektir.

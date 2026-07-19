@@ -1,46 +1,26 @@
-WORDPILOT v9.9.1 — GÜVENLİK DURUMU VE ADMIN CENTER KURULUMU
+WORDPILOT v9.9.2 — FIREBASE SECURITY SETUP
+==========================================
 
-MEVCUT DURUM
-- Firebase App Check reCAPTCHA Enterprise site anahtarı ön yüzde kayıtlıdır.
-- Firestore kuralları kullanıcı profili ve alt ilerleme kayıtlarını yalnızca sahibine açar.
-- Leaderboard okunması giriş gerektirir; kullanıcı yalnızca kendi sıralama satırını yazabilir.
-- Feedback kayıtları alan ve uzunluk sınırlarıyla yalnızca giriş yapan kullanıcı tarafından oluşturulur.
-- AI, voice ve protected-content kullanım sayaçları istemciye kapalıdır.
-- Gizli OpenAI anahtarı ön yüzde bulunmaz.
-- Hosting başlıklarında CSP, frame engeli, nosniff, referrer ve mikrofon izin politikası vardır.
+1. Firebase Authentication hesabının UID değerini alın.
+2. Firestore'da admins koleksiyonunu açın.
+3. Belge kimliği olarak aynı UID değerini kullanın.
+4. Şu alanları ekleyin:
 
-ADMIN CENTER ROL BELGESİ
-Firestore Console içinde yönetici kullanıcının Firebase UID değeriyle şu belge oluşturulur:
+role        string   owner
+active      boolean  true
+displayName string   Muhammed Aslan
 
-Koleksiyon: admins
-Belge kimliği: <Firebase UID>
-Örnek alanlar:
-- role: "owner"
-- active: true
-- displayName: "Ece Aslan"
+ROL YETKİLERİ
+- owner: tam yetki ve feedback silme
+- admin: feedback ve içerik yönetimi
+- support: feedback yönetimi
+- editor: feedback okuma, ileride içerik yönetimi
+- viewer: salt okunur yönetim görünümü
 
-DESTEKLENEN ROLLER
-- owner: Tam sistem sahibi; feedback güncelleme ve silme yetkisi.
-- admin: Feedback yönetimi ve gelecekteki içerik yönetimi.
-- support: Feedback durum yönetimi.
-- editor: Feedback salt okunur; gelecekte içerik düzenleme.
-- viewer: Salt okunur yönetim görünümü.
+GÜVENLİK KURALLARI
+Bu paketteki firestore.rules dosyası Hosting ile birlikte yayımlanmalıdır:
 
-GÜVENLİK DAVRANIŞI
-- `active: false` olan admin hesabı Yönetim Merkezi’ne giremez.
-- `active` alanı olmayan eski `{ role: "owner" }` belgeleri geriye uyumlu olarak aktif kabul edilir.
-- Tanımsız veya büyük harfle yazılmış roller kabul edilmez; rol değerlerini küçük harfle yazın.
-- Feedback güncellemesinde yalnızca status, updatedAt ve adminUid alanları değiştirilebilir.
-- Feedback silme yalnızca owner rolüne açıktır.
-- Admin koleksiyonu istemci tarafından oluşturulamaz veya değiştirilemez.
+firebase deploy --only firestore:rules,hosting
 
-YAYIN SIRASI
-1. Firebase hesabında owner rol belgesini kontrol edin.
-2. `firebase deploy --only firestore:rules,hosting` komutunu çalıştırın.
-3. WordPilot’a owner hesabıyla giriş yapın.
-4. Profil → Yönetim Merkezi düğmesini açın.
-5. Yetkisiz başka bir hesapta düğmenin görünmediğini doğrulayın.
-6. owner/admin/support ve editor/viewer feedback durum yetkilerini ayrı ayrı test edin.
-
-ÖNEMLİ GERÇEK
-Tarayıcıya gönderilen HTML, JavaScript, CSS veya statik JSON dosyaları F12 ile mutlak biçimde gizlenemez. Ticari içerik korumasının güçlü sürümü; giriş, App Check, sunucu uç noktası, hız sınırı ve küçük parçalı içerik teslimi gerektirir.
+Tamamlandı veya Kapatıldı durumundaki feedback kayıtlarında publicReply alanı zorunludur.
+Her yönetim güncellemesi feedback/{id}/history alt koleksiyonuna değiştirilemeyen bir kayıt ekler.

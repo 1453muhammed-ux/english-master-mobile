@@ -1,34 +1,33 @@
-WordPilot v9.9.1 — Admin & Feedback Center · Aşama 1
+WORDPILOT v9.9.2 — ADMIN & FEEDBACK CENTER
+==========================================
 
-Bu paket WordPilot v9.9.0 UX Reset sürümünü temel alır. Smart Word Session, Reader Pro, Conversation Coach ve mevcut feedback kayıt akışı korunmuştur.
+Bu paket WordPilot v9.9.0 temiz kaynak yapısı üzerine hazırlanmış tam sürümdür.
+Eski sürüm klasörünün üzerine dosya eklemek yerine bu klasörü ayrı kullanın.
 
-Aşama 1 tamamlananlar:
-- Firestore `admins/<Firebase UID>` belgesindeki role ve active alanlarını doğrulayan yönetici erişimi
-- Desteklenen roller: owner, admin, support, editor, viewer
-- Yetkisiz kullanıcıların Admin ekranına doğrudan yönlendirilmesini engelleyen güvenli nav guard
-- Profil ekranında yalnızca aktif yöneticiye görünen “Yönetim Merkezi” düğmesi
-- Masaüstü için sol menülü profesyonel Admin Center kabuğu
-- Telefon ve tablette açılır yönetim menüsü
-- Genel Bakış, Feedback, Content Center ve İşlem Geçmişi ekran iskeletleri
-- Mevcut feedback gelen kutusunun yeni kabuk içinde korunması
-- Rol bazlı feedback durum değiştirme kontrolü
-- Güncellenmiş Firestore Rules ve servis çalışanı önbelleği
+ÖNEMLİ DOSYALAR
+- index.html: uygulamanın ana sayfası
+- modules/v992.js: Admin & Feedback Center Aşama 2
+- style.css: ana ve responsive tasarım
+- firestore.rules: v9.9.2 güvenlik kuralları
+- firebase.json: Hosting ve Firestore dağıtım ayarları
+- .firebaserc: wordpilot-7a574 proje seçimi
+- DEPLOY_WORDPILOT.cmd: Windows için kolay dağıtım
+- YUKLEME_ADIMLARI.txt: kısa yükleme rehberi
 
-Firebase admin belgesi örneği:
-admins/<Firebase UID>
-{
-  role: "owner",
-  active: true,
-  displayName: "Ece Aslan"
-}
+ADMIN BELGESİ
+Firestore > admins > Firebase Authentication UID
 
-Geriye uyumluluk:
-- `active` alanı bulunmayan eski admin belgeleri aktif kabul edilir.
-- `role: "owner"` biçimindeki mevcut belge çalışmaya devam eder.
+role: owner
+active: true
+displayName: Muhammed Aslan
 
-Dağıtım:
-1. Paket içindeki site dosyalarını Firebase Hosting’e yükleyin.
-2. `firebase deploy --only firestore:rules,hosting` komutunu çalıştırın.
-3. Dağıtımdan sonra uygulamaya yönetici hesabıyla giriş yapın.
-4. Profil → Yönetim Merkezi yolunu kontrol edin.
-5. Telefon görünümünde hamburger menüsünü ve WordPilot’a dönüş düğmesini test edin.
+Desteklenen roller:
+owner, admin, support, editor, viewer
+
+DAĞITIM
+DEPLOY_WORDPILOT.cmd dosyasına çift tıklayın veya terminalde:
+
+firebase deploy --only firestore:rules,hosting
+
+Canlı adres:
+https://wordpilot-7a574.web.app

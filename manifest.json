@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.9.1 · Admin Center",
-  "short_name": "WordPilot 9.9.1",
-  "start_url": "./?wpbuild=9.9.1",
+  "name": "WordPilot 9.9.2 · Feedback Center",
+  "short_name": "WordPilot 9.9.2",
+  "start_url": "./?wpbuild=9.9.2",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.9.1 — rol tabanlı Admin Center, güvenli yönetici erişimi ve responsive yönetim ekranları.",
+  "description": "WordPilot v9.9.2 — profesyonel Admin & Feedback Center ve güvenli kayıt yönetimi.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.9.1"
+  "version": "9.9.2"
 }

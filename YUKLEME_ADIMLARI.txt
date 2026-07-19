@@ -1,0 +1,18 @@
+WORDPILOT v9.9.2 YÜKLEME
+========================
+
+1. ZIP dosyasını bilgisayarda yeni bir klasöre çıkarın.
+2. english-master-mobile-main klasörünü açın.
+3. DEPLOY_WORDPILOT.cmd dosyasına çift tıklayın.
+4. Siyah pencere açıldığında işlem tamamlanana kadar kapatmayın.
+5. "Deploy complete!" ve "WordPilot v9.9.2 basariyla yayinlandi" yazılarını görün.
+6. https://wordpilot-7a574.web.app adresini açıp Ctrl + F5 yapın.
+
+Komutla yüklemek için aynı klasörde terminal açıp:
+
+firebase deploy --only firestore:rules,hosting
+
+NOT:
+- Cloud Shell kullanmak zorunda değilsiniz.
+- Eski WordPilot klasörünün üzerine kopyalamayın.
+- Bu sürüm için Firestore Rules ve Hosting birlikte yüklenmelidir.

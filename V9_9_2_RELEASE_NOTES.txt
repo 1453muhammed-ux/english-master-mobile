@@ -1,0 +1,38 @@
+WORDPILOT v9.9.2 — ADMIN & FEEDBACK CENTER / AŞAMA 2
+====================================================
+
+TEMEL DÜZELTME
+- Yönetim Merkezi düğmesi profil ekranına güvenilir biçimde eklenir.
+- Firebase giriş durumu değiştiğinde admin yetkisi otomatik yeniden kontrol edilir.
+- Admin belgesi için role ve active alanları doğrulanır.
+- owner, admin, support, editor ve viewer rolleri desteklenir.
+- Yetkisiz hesapların admin görünümünü doğrudan açması engellenir.
+
+FEEDBACK CENTER
+- Başlık, mesaj, kullanıcı, e-posta ve takip kodunda arama.
+- Durum, kategori, öncelik ve atama filtreleri.
+- Yeni, İnceleniyor, Planlandı, Üzerinde çalışılıyor, Tamamlandı ve Kapatıldı durumları.
+- Düşük, Normal, Yüksek ve Kritik öncelik seviyeleri.
+- Kaydı mevcut yöneticiye atama ve atamayı kaldırma.
+- Kullanıcıya gösterilecek yanıt alanı.
+- Yalnızca yöneticilerin görebileceği özel not alanı.
+- En fazla 10 etiket.
+- Teknik bağlam görünümü.
+- Her değişiklik için değiştirilemeyen feedback geçmişi.
+- Masaüstünde iki panelli, telefonda tam ekran detay görünümü.
+
+GÜVENLİK
+- owner/admin/support feedback yönetebilir.
+- editor/viewer feedback kayıtlarını salt okunur görebilir.
+- Tamamlandı veya Kapatıldı durumunda kullanıcıya açık yanıt zorunludur.
+- Feedback belgesi yalnızca izin verilen yönetim alanlarında güncellenebilir.
+- Geçmiş kayıtları güncellenemez veya silinemez.
+- Feedback kalıcı silme yalnızca owner rolüne açıktır.
+
+DAĞITIM
+- .firebaserc dosyası wordpilot-7a574 projesini otomatik seçer.
+- DEPLOY_WORDPILOT.cmd dosyası Firestore Rules ve Hosting dağıtımını birlikte yapar.
+- Service Worker önbelleği wordpilot-v9.9.2 olarak yenilendi.
+
+SONRAKİ AŞAMA
+- v9.9.3 / Aşama 3: Kullanıcının "Gönderilerim" ekranı ve yönetici yanıtlarını takip etmesi.

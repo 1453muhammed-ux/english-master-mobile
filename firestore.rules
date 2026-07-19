@@ -36,7 +36,7 @@ service cloud.firestore {
         ];
     }
 
-    function adminOwner() {
+    function systemOwner() {
       return admin()
         && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'owner';
     }
@@ -60,15 +60,14 @@ service cloud.firestore {
       allow delete: if owner(uid);
     }
 
-    // Role-aware admin registry. Create the owner document manually in Firebase Console:
-    // admins/<Firebase UID>  { role: "owner", active: true }
+    // Role-aware admin registry. Admin records are created manually by the system owner.
+    // admins/<Firebase UID> { role: "owner", active: true, displayName: "Muhammed Aslan" }
     match /admins/{uid} {
       allow read: if owner(uid);
       allow write: if false;
     }
 
     // Suggestions and bug reports are created by their sender.
-    // The sender may read their own ticket; only an authorised admin may manage it.
     match /feedback/{feedbackId} {
       allow create: if signedIn()
         && request.resource.data.keys().hasOnly([
@@ -127,9 +126,16 @@ service cloud.firestore {
         && request.resource.data.createdAt == request.time;
 
       allow read: if admin() || (signedIn() && resource.data.uid == request.auth.uid);
+
       allow update: if feedbackManager()
         && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
           'status',
+          'priority',
+          'assignedTo',
+          'assignedName',
+          'publicReply',
+          'internalNote',
+          'tags',
           'updatedAt',
           'adminUid'
         ])
@@ -137,15 +143,64 @@ service cloud.firestore {
           'new',
           'reviewing',
           'planned',
-          'done',
-          'rejected'
+          'in_progress',
+          'resolved',
+          'closed'
         ]
+        && request.resource.data.priority in [
+          'low',
+          'normal',
+          'high',
+          'critical'
+        ]
+        && request.resource.data.assignedTo is string
+        && request.resource.data.assignedTo.size() <= 128
+        && request.resource.data.assignedName is string
+        && request.resource.data.assignedName.size() <= 80
+        && request.resource.data.publicReply is string
+        && request.resource.data.publicReply.size() <= 2000
+        && request.resource.data.internalNote is string
+        && request.resource.data.internalNote.size() <= 3000
+        && request.resource.data.tags is list
+        && request.resource.data.tags.size() <= 10
+        && (
+          !(request.resource.data.status in ['resolved', 'closed'])
+          || request.resource.data.publicReply.size() >= 3
+        )
         && request.resource.data.updatedAt == request.time
         && request.resource.data.adminUid == request.auth.uid;
-      allow delete: if adminOwner();
+
+      allow delete: if systemOwner();
+
+      // Immutable history written in the same batch as each admin update.
+      match /history/{historyId} {
+        allow read: if admin();
+        allow create: if feedbackManager()
+          && request.resource.data.keys().hasOnly([
+            'action',
+            'changes',
+            'actorUid',
+            'actorName',
+            'actorRole',
+            'appVersion',
+            'createdAt'
+          ])
+          && request.resource.data.action == 'feedback_updated'
+          && request.resource.data.changes is list
+          && request.resource.data.changes.size() > 0
+          && request.resource.data.changes.size() <= 20
+          && request.resource.data.actorUid == request.auth.uid
+          && request.resource.data.actorName is string
+          && request.resource.data.actorName.size() <= 80
+          && request.resource.data.actorRole is string
+          && request.resource.data.actorRole.size() <= 40
+          && request.resource.data.appVersion == '9.9.2'
+          && request.resource.data.createdAt == request.time;
+        allow update, delete: if false;
+      }
     }
 
-    // Only Cloud Functions Admin SDK may manage usage counters.
+    // Reserved for later server-side usage and global audit systems.
     match /aiUsage/{uid} {
       allow read, write: if false;
     }
@@ -155,6 +210,10 @@ service cloud.firestore {
     }
 
     match /contentUsage/{uid} {
+      allow read, write: if false;
+    }
+
+    match /adminAudit/{auditId} {
       allow read, write: if false;
     }
 

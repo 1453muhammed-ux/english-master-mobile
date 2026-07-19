@@ -1,9 +1,9 @@
-/* WordPilot v9.9.1 — Admin Center foundation on UX Reset: simplified home, clear Reader/Academy split, concept tools and secure feedback inbox. */
+/* WordPilot v9.9.2 — UX Reset foundation with Admin & Feedback Center Phase 2. */
 const WP99_META=Object.freeze({
-  version:'9.9.1',
-  label:'v9.9.1 · Admin Center',
-  title:'WordPilot 9.9.1 · Admin & Feedback Center',
-  description:'WordPilot v9.9.1 — rol tabanlı Admin Center, güvenli yönetici erişimi ve responsive yönetim ekranları.',
+  version:'9.9.2',
+  label:'v9.9.2 · Feedback Center',
+  title:'WordPilot 9.9.2 · Admin & Feedback Center',
+  description:'WordPilot v9.9.2 — profesyonel Admin & Feedback Center, rol tabanlı yönetim ve kayıt geçmişi.',
   academy:{totalLessons:102,enLessons:48,ruLessons:54,totalReadings:48,enReadings:18,ruReadings:30},
   reader:{stories:114},
   phraseLab:240,
@@ -161,7 +161,7 @@ function wp99EnsureAdminView(){
   if(document.querySelector('#view-admin'))return;
   document.querySelector('main')?.insertAdjacentHTML('beforeend',`<section id="view-admin" class="view wp99-admin-view"><div class="section-title"><div><p class="eyebrow">YÖNETİCİ MERKEZİ</p><h1>Öneri ve hata gelen kutusu</h1><p class="muted">Yalnızca Firestore’daki admins koleksiyonunda yetkilendirilen hesaplar görebilir.</p></div><div class="wp99-admin-head-actions"><button id="wp99FeedbackRefresh" class="secondary" type="button">Yenile</button><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div></div><section class="wp99-admin-metrics"><article><span>Yeni</span><b id="wp99AdminNew">0</b></article><article><span>İnceleniyor</span><b id="wp99AdminReview">0</b></article><article><span>Planlandı</span><b id="wp99AdminPlanned">0</b></article><article><span>Tamamlandı</span><b id="wp99AdminDone">0</b></article></section><section class="panel wp99-admin-controls"><label>Durum<select id="wp99FeedbackFilter"><option value="all">Tümü</option><option value="new">Yeni</option><option value="reviewing">İnceleniyor</option><option value="planned">Planlandı</option><option value="done">Tamamlandı</option><option value="rejected">Reddedildi</option></select></label><span id="wp99AdminCount">0 kayıt</span></section><div id="wp99FeedbackList" class="wp99-feedback-list"><div class="wp99-admin-empty">Yönetici yetkisi kontrol ediliyor…</div></div></section>`)
 }
-function wp99FeedbackStatusLabel(status){return ({new:'Yeni',reviewing:'İnceleniyor',planned:'Planlandı',done:'Tamamlandı',rejected:'Kapatıldı'})[status]||status}
+function wp99FeedbackStatusLabel(status){return ({new:'Yeni',reviewing:'İnceleniyor',planned:'Planlandı',done:'Tamamlandı',rejected:'Reddedildi'})[status]||status}
 function wp99RenderFeedback(){
   const filter=document.querySelector('#wp99FeedbackFilter')?.value||'all',rows=filter==='all'?wp99FeedbackRows:wp99FeedbackRows.filter(x=>x.status===filter),host=document.querySelector('#wp99FeedbackList');if(!host)return;
   const counts={new:0,reviewing:0,planned:0,done:0};wp99FeedbackRows.forEach(x=>{if(counts[x.status]!==undefined)counts[x.status]++});
