@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.7 · Smart Word Session",
-  "short_name": "WordPilot 9.7",
-  "start_url": "./?wpbuild=9.7.0",
+  "name": "WordPilot 9.8 · Reader Pro",
+  "short_name": "WordPilot 9.8",
+  "start_url": "./?wpbuild=9.8.0",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.7.0 — kalıcı kelime setleri, cümle, çeviri, mini hikâye, eş-zıt anlam ve ustalık takibi.",
+  "description": "WordPilot v9.8.0 Reader Pro — hikâyeden akıllı kelime seti, cümle laboratuvarı ve Smart Word Session bağlantısı.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.7.0"
+  "version": "9.8.0"
 }

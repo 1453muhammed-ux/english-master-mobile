@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot 9.7.0 Smart Word Session — kalıcı kelime setleri, cümle, çeviri, hikâye ve ustalık takibi">
+  <meta name="description" content="WordPilot 9.8.0 Reader Pro — hikâyeden akıllı kelime seti, cümle laboratuvarı ve Smart Word Session bağlantısı">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=9.7.0">
-  <title>WordPilot 9.7.0 · Smart Word Session · Reader 3.0</title>
+  <link rel="stylesheet" href="style.css?v=9.8.0">
+  <title>WordPilot 9.8.0 · Reader Pro · Smart Word Session</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='9.7.0',KEY='wordpilot_asset_build';
+    const BUILD='9.8.0',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v9.7.0 · Smart Word Session</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v9.8.0 · Reader Pro</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -86,7 +86,7 @@
         <div class="learning-hub-tabs v7-action-grid" role="tablist" aria-label="Öğrenme alanları">
           <button class="active" type="button" role="tab" aria-selected="true" data-dashboard-tab="academy"><span>🎓</span><b>Ders</b><small>A1–C2 Akademi</small></button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="games"><span>🎯</span><b>Quiz</b><small>Oyun ve pratik</small></button>
-          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="stories"><span>📖</span><b>Hikâye</b><small>Reader 3.0</small></button>
+          <button type="button" role="tab" aria-selected="false" data-dashboard-tab="stories"><span>📖</span><b>Hikâye</b><small>Reader Pro</small></button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="speak"><span>🎙</span><b>Konuş</b><small>Telaffuz ve AI</small></button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="collections"><span>🧠</span><b>Tekrar</b><small>Zamanı gelenler ve listeler</small></button>
           <button type="button" role="tab" aria-selected="false" data-dashboard-tab="progress"><span>📈</span><b>İlerleme</b><small>Analiz ve lig</small></button>
@@ -459,7 +459,7 @@
     </section>
 
     <section id="view-stories" class="view v5-view">
-      <div class="section-title"><div><p class="eyebrow">READER 3.0 · A1–C2</p><h1>WordPilot Reader 3.0</h1><p class="muted">Derecelendirilmiş uzun okumalar, dokunmatik sözlük, bölüm takibi, kelime testi, yer imleri ve kişisel okuma raporu.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
+      <div class="section-title"><div><p class="eyebrow">READER PRO · A1–C2</p><h1>WordPilot Reader Pro</h1><p class="muted">Oku, dinle, hikâyeden kelime seti oluştur ve aynı cümleleri aktif üretim oyunlarıyla pekiştir.</p></div><button class="secondary" type="button" data-nav="dashboard">← Ana sayfa</button></div>
       <div class="story-layout"><aside class="panel story-library"><div class="story-library-head"><b id="storyCourseTitle">English hikâyeleri</b><span id="storyProgressText">0 / 0 tamamlandı</span></div><div id="storyList"></div></aside><article id="storyReader" class="panel story-reader"><div class="story-empty"><span>📖</span><h2>Bir hikâye seç</h2><p>Metni dinleyebilir, çeviriyi açabilir ve soruları çözebilirsin.</p></div></article></div>
     </section>
 
@@ -817,42 +817,43 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=9.7.0" defer></script>
-<script src="app.js?v=9.7.0" defer></script>
-<script src="modules/firebase-sync.js?v=9.7.0" defer></script>
-<script src="modules/learning-engine.js?v=9.7.0" defer></script>
-<script src="modules/ui-events.js?v=9.7.0" defer></script>
-<script src="modules/course-engine.js?v=9.7.0" defer></script>
-<script src="modules/russian-path.js?v=9.7.0" defer></script>
-<script src="modules/v43.js?v=9.7.0" defer></script>
-<script src="modules/v431.js?v=9.7.0" defer></script>
-<script src="modules/v50.js?v=9.7.0" defer></script>
-<script src="modules/v510.js?v=9.7.0" defer></script>
-<script src="modules/v511.js?v=9.7.0" defer></script>
-<script src="modules/v512.js?v=9.7.0" defer></script>
-<script src="modules/v60.js?v=9.7.0" defer></script>
-<script src="modules/v61.js?v=9.7.0" defer></script>
-<script src="modules/v62.js?v=9.7.0" defer></script>
-<script src="modules/v63.js?v=9.7.0" defer></script>
-<script src="modules/v64.js?v=9.7.0" defer></script>
-<script src="modules/v65.js?v=9.7.0" defer></script>
-<script src="modules/v70.js?v=9.7.0" defer></script>
-<script src="modules/v71.js?v=9.7.0" defer></script>
-<script src="modules/v711.js?v=9.7.0" defer></script>
-<script src="modules/v712.js?v=9.7.0" defer></script>
-<script src="modules/v80.js?v=9.7.0" defer></script>
-<script src="modules/v81.js?v=9.7.0" defer></script>
-<script src="modules/v82.js?v=9.7.0" defer></script>
-<script src="modules/v822.js?v=9.7.0" defer></script>
-<script src="modules/v83.js?v=9.7.0" defer></script>
-<script src="modules/v90.js?v=9.7.0" defer></script>
-<script src="modules/v91.js?v=9.7.0" defer></script>
-<script src="modules/v92.js?v=9.7.0" defer></script>
-<script src="modules/v93.js?v=9.7.0" defer></script>
-<script src="modules/v94.js?v=9.7.0" defer></script>
-<script src="modules/v95.js?v=9.7.0" defer></script>
-<script src="modules/v96.js?v=9.7.0" defer></script>
-<script src="modules/v97.js?v=9.7.0" defer></script>
-<script src="modules/bootstrap.js?v=9.7.0" defer></script>
+<script src="security-config.js?v=9.8.0" defer></script>
+<script src="app.js?v=9.8.0" defer></script>
+<script src="modules/firebase-sync.js?v=9.8.0" defer></script>
+<script src="modules/learning-engine.js?v=9.8.0" defer></script>
+<script src="modules/ui-events.js?v=9.8.0" defer></script>
+<script src="modules/course-engine.js?v=9.8.0" defer></script>
+<script src="modules/russian-path.js?v=9.8.0" defer></script>
+<script src="modules/v43.js?v=9.8.0" defer></script>
+<script src="modules/v431.js?v=9.8.0" defer></script>
+<script src="modules/v50.js?v=9.8.0" defer></script>
+<script src="modules/v510.js?v=9.8.0" defer></script>
+<script src="modules/v511.js?v=9.8.0" defer></script>
+<script src="modules/v512.js?v=9.8.0" defer></script>
+<script src="modules/v60.js?v=9.8.0" defer></script>
+<script src="modules/v61.js?v=9.8.0" defer></script>
+<script src="modules/v62.js?v=9.8.0" defer></script>
+<script src="modules/v63.js?v=9.8.0" defer></script>
+<script src="modules/v64.js?v=9.8.0" defer></script>
+<script src="modules/v65.js?v=9.8.0" defer></script>
+<script src="modules/v70.js?v=9.8.0" defer></script>
+<script src="modules/v71.js?v=9.8.0" defer></script>
+<script src="modules/v711.js?v=9.8.0" defer></script>
+<script src="modules/v712.js?v=9.8.0" defer></script>
+<script src="modules/v80.js?v=9.8.0" defer></script>
+<script src="modules/v81.js?v=9.8.0" defer></script>
+<script src="modules/v82.js?v=9.8.0" defer></script>
+<script src="modules/v822.js?v=9.8.0" defer></script>
+<script src="modules/v83.js?v=9.8.0" defer></script>
+<script src="modules/v90.js?v=9.8.0" defer></script>
+<script src="modules/v91.js?v=9.8.0" defer></script>
+<script src="modules/v92.js?v=9.8.0" defer></script>
+<script src="modules/v93.js?v=9.8.0" defer></script>
+<script src="modules/v94.js?v=9.8.0" defer></script>
+<script src="modules/v95.js?v=9.8.0" defer></script>
+<script src="modules/v96.js?v=9.8.0" defer></script>
+<script src="modules/v97.js?v=9.8.0" defer></script>
+<script src="modules/v98.js?v=9.8.0" defer></script>
+<script src="modules/bootstrap.js?v=9.8.0" defer></script>
 </body>
 </html>

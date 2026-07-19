@@ -1,0 +1,51 @@
+WORDPILOT v9.8.0 — READER PRO
+================================
+
+TEMEL YENİLİK
+Reader artık Smart Word Session'dan ayrı bir alan değildir. Kullanıcı hikâyede
+kelime seçtiğinde bu kelimeler tek dokunuşla v9.7 çalışma setine aktarılır ve
+aynı set bütün oyunlarda korunur.
+
+1. HİKÂYEDEN AKILLI KELİME SETİ
+- Hikâyedeki ana sözlük kimliğine bağlı kelimeler Reader içinde seçilebilir.
+- Kullanıcının öğrenme geçmişi, tekrar ihtiyacı, kelime sıklığı ve içerik kalite
+  puanı dikkate alınarak 5 kelimelik öneri hazırlanır.
+- Kullanıcı kendi seçimini yapabilir, seçimi temizleyebilir veya hikâyeden daha
+  önce kaydettiği kelimeleri sete getirebilir.
+- Seçilen set Smart Word Session'a aktarılır.
+- Reader ek sözlüğündeki kimliksiz kayıtlar uydurma Concept ID ile bağlanmaz.
+
+2. CÜMLE LABORATUVARI
+Aynı hikâye cümleleri üç ayrı etkinlikte kullanılır:
+- Dinle ve gölgele: cümleyi dinle, sesli tekrar et ve ilerlemeyi kaydet.
+- Çeviri yapbozu: Türkçe cümleden numaralı İngilizce parçaları doğru sırala.
+- Cümleyi bul: Türkçe karşılığa ait doğru İngilizce cümleyi ayırt et.
+
+3. KESİNTİSİZ OKUMA SONU ROTASI
+Hikâye testi bittiğinde kullanıcı ana menüye gönderilmez. Aynı ekrandan:
+- cümle laboratuvarına,
+- okuma raporuna,
+- seçilen veya önerilen kelimelerle Smart Word Session'a
+geçebilir.
+
+4. READER PRO KÜTÜPHANESİ
+- Hikâye kartları çalışılabilir ana sözlük kelimesi sayısını gösterir.
+- Seçimi bulunan hikâyelerde seçili kelime rozeti görünür.
+- Kelime bilgi penceresine “Reader setine ekle” düğmesi eklendi.
+- Reader 3.0'ın tema, odak modu, yazı boyutu, dinleme, dokunmatik sözlük,
+  cümle çevirisi, yer imi, kelime testi, özet ve rapor özellikleri korundu.
+
+5. VERİ VE TEKNİK DURUM
+- 5000 İngilizce kelime korundu.
+- 1500 Rusça ve 1000 Özbekçe kayıt korundu.
+- 114 Reader metni korundu: 60 İngilizce, 48 Rusça, 6 Özbekçe.
+- 240 Phrase Lab kaydı korundu.
+- Ortak 5000 Concept ID rotası korundu.
+- PWA ve Service Worker önbelleği v9.8.0'a yükseltildi.
+- Eski v9.5–v9.7 doğrulama ve sürüm raporları GitHub paketinden temizlendi.
+
+DOĞRULAMA
+- 163/163 otomatik kaynak, veri, bağlantı ve JavaScript kontrolü geçti.
+- Reader Pro işlevleri ayrı Node tabanlı fonksiyonel testte doğrulandı.
+- Yerel tarayıcı adresleri çalışma ortamındaki kurum politikasıyla engellendiği
+  için Firebase dağıtımından sonra telefon ve masaüstü görsel testi gereklidir.

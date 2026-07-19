@@ -1,0 +1,181 @@
+WORDPILOT v9.8.0 — READER PRO VALIDATION REPORT
+==========================================================
+Result: 163/163 checks passed
+
+Scope:
+- Existing v9.7 Smart Word Session preserved.
+- Reader-to-session word bridge validated statically and with a Node functional harness.
+- Sentence Lab modes: listen/shadow, translation puzzle, sentence matching.
+- Data counts, script wiring, cache version, syntax and GitHub file limit checked.
+
+[PASS] JSON parses: clean_concepts_v71.json
+[PASS] JSON parses: clean_concepts_v711.json
+[PASS] JSON parses: concept_ledger_v90.json
+[PASS] JSON parses: content_manifest_v71.json
+[PASS] JSON parses: content_manifest_v711.json
+[PASS] JSON parses: curriculum_v6.json
+[PASS] JSON parses: firebase.json
+[PASS] JSON parses: language_registry_v71.json
+[PASS] JSON parses: language_registry_v711.json
+[PASS] JSON parses: manifest.json
+[PASS] JSON parses: reader_sources_v64.json
+[PASS] JSON parses: ru_alphabet.json
+[PASS] JSON parses: ru_dialogues.json
+[PASS] JSON parses: ru_exam_lab.json
+[PASS] JSON parses: ru_grammar.json
+[PASS] JSON parses: ru_verb_lab.json
+[PASS] JSON parses: ru_words.json
+[PASS] JSON parses: source_atlas_v63.json
+[PASS] JSON parses: source_manifest.json
+[PASS] JSON parses: stories.json
+[PASS] JSON parses: uz_words.json
+[PASS] JSON parses: words.json
+[PASS] JSON parses: concept_ledger_v92.json
+[PASS] JSON parses: phrases_v92.json
+[PASS] JSON parses: phrases_v93.json
+[PASS] JSON parses: content_quality_v93.json
+[PASS] JSON parses: reader_lexicon_v94.json
+[PASS] JSON parses: coach_scenarios_v95.json
+[PASS] JSON parses: concept_master_v96.json
+[PASS] English word count is 5000 — 5000
+[PASS] English IDs are unique
+[PASS] English IDs cover 1–5000
+[PASS] Russian word count is 1500 — 1500
+[PASS] Russian IDs are unique
+[PASS] Uzbek word count is 1000 — 1000
+[PASS] Uzbek IDs are unique
+[PASS] Unified concept route has 5000 rows — 5000
+[PASS] Phrase Lab has 240 reviewed rows — 240
+[PASS] Reader has 114 stories — 114
+[PASS] Reader English story count is 60
+[PASS] Reader Russian story count is 48
+[PASS] Reader Uzbek story count is 6
+[PASS] All stories have lines
+[PASS] All story lines have text and translation
+[PASS] All stories have questions
+[PASS] English Reader covers A1–C2
+[PASS] Static header says v9.8.0 Reader Pro
+[PASS] Document title says Reader Pro
+[PASS] Cache-busting build is 9.8.0
+[PASS] App runtime version is 9.8.0
+[PASS] Manifest version is 9.8.0
+[PASS] Manifest start URL uses 9.8.0
+[PASS] Service worker cache is v9.8.0
+[PASS] Service worker includes v98 module
+[PASS] Index loads v98 module
+[PASS] v98 loads before bootstrap
+[PASS] Bootstrap wires v98 events
+[PASS] Bootstrap runs v98 after init
+[PASS] Story-to-session bridge implemented
+[PASS] Five-word recommendation implemented
+[PASS] Reader word selector implemented
+[PASS] Popup set action implemented
+[PASS] Saved-word import implemented
+[PASS] Sentence laboratory implemented
+[PASS] Listen and shadow implemented
+[PASS] Translation puzzle implemented
+[PASS] Sentence match implemented
+[PASS] Completion continuation route implemented
+[PASS] Reading report bridge implemented
+[PASS] Smart set source metadata implemented
+[PASS] Per-story selection persistence implemented
+[PASS] Per-story lab progress implemented
+[PASS] Twelve-word safety limit implemented
+[PASS] No fake IDs for supplemental lexicon implemented
+[PASS] Reader Pro CSS present: .wp98-reader-bridge
+[PASS] Reader Pro CSS present: .wp98-word-grid
+[PASS] Reader Pro CSS present: .wp98-sentence-lab
+[PASS] Reader Pro CSS present: .wp98-lab-tabs
+[PASS] Reader Pro CSS present: .wp98-puzzle-answer
+[PASS] Reader Pro CSS present: .wp98-match-options
+[PASS] Reader Pro CSS present: .wp98-completion-route
+[PASS] Reader Pro CSS present: @media(max-width:640px)
+[PASS] Script reference exists: security-config.js
+[PASS] Script reference exists: app.js
+[PASS] Script reference exists: modules/firebase-sync.js
+[PASS] Script reference exists: modules/learning-engine.js
+[PASS] Script reference exists: modules/ui-events.js
+[PASS] Script reference exists: modules/course-engine.js
+[PASS] Script reference exists: modules/russian-path.js
+[PASS] Script reference exists: modules/v43.js
+[PASS] Script reference exists: modules/v431.js
+[PASS] Script reference exists: modules/v50.js
+[PASS] Script reference exists: modules/v510.js
+[PASS] Script reference exists: modules/v511.js
+[PASS] Script reference exists: modules/v512.js
+[PASS] Script reference exists: modules/v60.js
+[PASS] Script reference exists: modules/v61.js
+[PASS] Script reference exists: modules/v62.js
+[PASS] Script reference exists: modules/v63.js
+[PASS] Script reference exists: modules/v64.js
+[PASS] Script reference exists: modules/v65.js
+[PASS] Script reference exists: modules/v70.js
+[PASS] Script reference exists: modules/v71.js
+[PASS] Script reference exists: modules/v711.js
+[PASS] Script reference exists: modules/v712.js
+[PASS] Script reference exists: modules/v80.js
+[PASS] Script reference exists: modules/v81.js
+[PASS] Script reference exists: modules/v82.js
+[PASS] Script reference exists: modules/v822.js
+[PASS] Script reference exists: modules/v83.js
+[PASS] Script reference exists: modules/v90.js
+[PASS] Script reference exists: modules/v91.js
+[PASS] Script reference exists: modules/v92.js
+[PASS] Script reference exists: modules/v93.js
+[PASS] Script reference exists: modules/v94.js
+[PASS] Script reference exists: modules/v95.js
+[PASS] Script reference exists: modules/v96.js
+[PASS] Script reference exists: modules/v97.js
+[PASS] Script reference exists: modules/v98.js
+[PASS] Script reference exists: modules/bootstrap.js
+[PASS] JavaScript syntax: app.js
+[PASS] JavaScript syntax: security-config.js
+[PASS] JavaScript syntax: modules/bootstrap.js
+[PASS] JavaScript syntax: modules/course-engine.js
+[PASS] JavaScript syntax: modules/firebase-sync.js
+[PASS] JavaScript syntax: modules/learning-engine.js
+[PASS] JavaScript syntax: modules/russian-path.js
+[PASS] JavaScript syntax: modules/ui-events.js
+[PASS] JavaScript syntax: modules/v43.js
+[PASS] JavaScript syntax: modules/v431.js
+[PASS] JavaScript syntax: modules/v50.js
+[PASS] JavaScript syntax: modules/v510.js
+[PASS] JavaScript syntax: modules/v511.js
+[PASS] JavaScript syntax: modules/v512.js
+[PASS] JavaScript syntax: modules/v60.js
+[PASS] JavaScript syntax: modules/v61.js
+[PASS] JavaScript syntax: modules/v62.js
+[PASS] JavaScript syntax: modules/v63.js
+[PASS] JavaScript syntax: modules/v64.js
+[PASS] JavaScript syntax: modules/v65.js
+[PASS] JavaScript syntax: modules/v70.js
+[PASS] JavaScript syntax: modules/v71.js
+[PASS] JavaScript syntax: modules/v711.js
+[PASS] JavaScript syntax: modules/v712.js
+[PASS] JavaScript syntax: modules/v80.js
+[PASS] JavaScript syntax: modules/v81.js
+[PASS] JavaScript syntax: modules/v82.js
+[PASS] JavaScript syntax: modules/v822.js
+[PASS] JavaScript syntax: modules/v83.js
+[PASS] JavaScript syntax: modules/v90.js
+[PASS] JavaScript syntax: modules/v91.js
+[PASS] JavaScript syntax: modules/v92.js
+[PASS] JavaScript syntax: modules/v93.js
+[PASS] JavaScript syntax: modules/v94.js
+[PASS] JavaScript syntax: modules/v95.js
+[PASS] JavaScript syntax: modules/v96.js
+[PASS] JavaScript syntax: modules/v97.js
+[PASS] JavaScript syntax: modules/v98.js
+[PASS] GitHub web-upload file count is under 100 — 94
+[PASS] Old v9.5 validation/report files removed
+[PASS] Old v9.6 validation/report files removed
+[PASS] Old v9.7 validation/report files removed
+[PASS] README identifies Reader Pro
+
+Functional harness:
+- 6 actual dictionary rows resolved from a sample story.
+- 5-word suggestion, selection persistence and Smart Word Session transfer passed.
+- Reader bridge, sentence lab, translation puzzle and sentence-match HTML generation passed.
+
+Limit:
+- The container browser is restricted by an organization policy from opening local test URLs. Therefore the final Firebase/mobile visual pass must be performed after deployment; no live-browser claim is made in this report.
