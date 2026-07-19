@@ -13,7 +13,32 @@ service cloud.firestore {
 
     function admin() {
       return signedIn()
-        && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+        && exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+        && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in [
+          'owner',
+          'admin',
+          'support',
+          'editor',
+          'viewer'
+        ]
+        && (
+          !get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.keys().hasAny(['active'])
+          || get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true
+        );
+    }
+
+    function feedbackManager() {
+      return admin()
+        && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in [
+          'owner',
+          'admin',
+          'support'
+        ];
+    }
+
+    function adminOwner() {
+      return admin()
+        && get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role == 'owner';
     }
 
     // User profile and course progress.
@@ -35,8 +60,8 @@ service cloud.firestore {
       allow delete: if owner(uid);
     }
 
-    // Owner/admin registry. Create the owner document manually in Firebase Console:
-    // admins/<Firebase UID>  { role: "owner" }
+    // Role-aware admin registry. Create the owner document manually in Firebase Console:
+    // admins/<Firebase UID>  { role: "owner", active: true }
     match /admins/{uid} {
       allow read: if owner(uid);
       allow write: if false;
@@ -102,7 +127,22 @@ service cloud.firestore {
         && request.resource.data.createdAt == request.time;
 
       allow read: if admin() || (signedIn() && resource.data.uid == request.auth.uid);
-      allow update, delete: if admin();
+      allow update: if feedbackManager()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'status',
+          'updatedAt',
+          'adminUid'
+        ])
+        && request.resource.data.status in [
+          'new',
+          'reviewing',
+          'planned',
+          'done',
+          'rejected'
+        ]
+        && request.resource.data.updatedAt == request.time
+        && request.resource.data.adminUid == request.auth.uid;
+      allow delete: if adminOwner();
     }
 
     // Only Cloud Functions Admin SDK may manage usage counters.

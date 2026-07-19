@@ -1,0 +1,22 @@
+WORDPILOT v9.9.1 — FIREBASE YÜKLEME ADIMLARI
+
+1. Bu paketin içindeki `english-master-mobile-main` klasörünü açın.
+2. Terminali bu klasörde başlatın.
+3. Firebase hesabınız açıksa şu komutu çalıştırın:
+
+   firebase deploy --only firestore:rules,hosting
+
+4. Dağıtım tamamlandıktan sonra WordPilot sitesini Ctrl+F5 ile açın.
+5. Uygulamada v9.9.1 · Admin Center etiketini kontrol edin.
+6. Yönetici hesabınızla giriş yapın.
+7. Profil → Yönetim Merkezi düğmesine basın.
+8. Genel Bakış, Feedback, Content Center ve İşlem Geçmişi menülerini kontrol edin.
+9. Telefonda Yönetim Merkezi’ni açarak hamburger menüsünü test edin.
+
+ADMIN BELGESİ
+Firestore → admins → yönetici Firebase UID belgesi:
+- role: owner
+- active: true
+
+NOT
+`active` alanını eklemediyseniz mevcut `role: owner` belgesi çalışmaya devam eder. Yine de profesyonel yapı için `active: true` eklenmesi önerilir.

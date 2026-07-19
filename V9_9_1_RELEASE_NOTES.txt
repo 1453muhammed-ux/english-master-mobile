@@ -1,0 +1,41 @@
+WORDPILOT v9.9.1 — ADMIN & FEEDBACK CENTER
+AŞAMA 1: ADMIN TEMEL YAPISI
+
+1. YÖNETİCİ ERİŞİMİ
+- Admin erişimi artık yalnızca belge varlığına göre verilmez.
+- `admins/<UID>` belgesindeki `role` alanı doğrulanır.
+- `active: false` olan hesapların erişimi kapatılır.
+- Desteklenen roller: owner, admin, support, editor ve viewer.
+- Eski `{ role: "owner" }` belgeleri geriye uyumlu olarak çalışır.
+
+2. GÜVENLİ YÖNLENDİRME
+- Yetkisiz kullanıcıların `admin` görünümünü doğrudan açması engellenir.
+- Giriş yapılmamışsa kullanıcı Profil ekranına yönlendirilir.
+- Oturum kapandığında açık Admin ekranı otomatik olarak Ana Sayfa’ya döner.
+
+3. YÖNETİM MERKEZİ KABUĞU
+- Masaüstünde profesyonel sol menü ve sabit yönetim üst çubuğu eklendi.
+- Genel Bakış, Feedback, Content Center ve İşlem Geçmişi ekranları oluşturuldu.
+- Telefonda açılır yönetim menüsü ve ekran karartma katmanı eklendi.
+- Yönetici adı, e-postası, rolü ve bağlantı durumu gösterilir.
+
+4. GENEL BAKIŞ
+- Feedback durum özetleri gösterilir.
+- Firebase Authentication, admin kaydı, güvenli yönlendirme ve responsive kabuk hazırlığı kontrol edilir.
+- Son feedback kayıtları ön izlenir.
+- Sonraki geliştirme aşaması ekranda açıkça belirtilir.
+
+5. MEVCUT FEEDBACK AKIŞI
+- v9.9.0 feedback koleksiyonu ve kayıt biçimi korunur.
+- Temel durum filtresi ve durum değiştirme özelliği yeni kabuk içine taşınır.
+- owner, admin ve support rolleri durum değiştirebilir.
+- editor ve viewer rolleri feedback kayıtlarını salt okunur görür.
+
+6. FIRESTORE RULES
+- Aktif ve tanımlı admin rolü kontrolü eklendi.
+- Feedback güncelleme owner/admin/support rolleriyle sınırlandı.
+- Feedback silme yalnızca owner rolüne bırakıldı.
+
+7. SÜRÜM VE ÖNBELLEK
+- Uygulama, manifest, security config ve Service Worker 9.9.1’e yükseltildi.
+- `modules/v991.js` çevrimdışı çekirdek pakete eklendi.

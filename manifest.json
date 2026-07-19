@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "WordPilot 9.9 · UX Reset",
-  "short_name": "WordPilot 9.9",
-  "start_url": "./?wpbuild=9.9.0",
+  "name": "WordPilot 9.9.1 · Admin Center",
+  "short_name": "WordPilot 9.9.1",
+  "start_url": "./?wpbuild=9.9.1",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F5F7FB",
   "theme_color": "#0B1020",
-  "description": "WordPilot v9.9.0 — sade ana sayfa, net Academy/Reader ayrımı, Kavram Atlası ve güvenli öneri yönetimi.",
+  "description": "WordPilot v9.9.1 — rol tabanlı Admin Center, güvenli yönetici erişimi ve responsive yönetim ekranları.",
   "icons": [
     {
       "src": "icon-192.png",
@@ -26,5 +26,5 @@
     "education",
     "productivity"
   ],
-  "version": "9.9.0"
+  "version": "9.9.1"
 }

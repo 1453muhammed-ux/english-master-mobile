@@ -1,3 +1,5 @@
-WORDPILOT v8.0.0 — APP CHECK DURUMU
+WORDPILOT v9.9.1 — APP CHECK DURUMU
 
-Firebase App Check / reCAPTCHA Enterprise entegrasyonu korunmuştur. Cloud Firestore enforcement kullanıcı tarafından etkinleştirilmiştir. Yeni statik içerik laboratuvarları mevcut doğrulanmış uygulama üzerinden çalışır.
+Firebase App Check / reCAPTCHA Enterprise entegrasyonu korunmuştur. Admin Center yalnızca Firebase Authentication oturumu ve Firestore `admins/<UID>` rol belgesi doğrulandıktan sonra açılır.
+
+v9.9.1 değişikliği App Check ayarlarını kapatmaz veya gevşetmez. Cloud Firestore enforcement, güvenli feedback oluşturma kuralları ve sunucu tarafı AI korumaları mevcut yapı üzerinden çalışmaya devam eder.

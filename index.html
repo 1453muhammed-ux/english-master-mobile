@@ -10,17 +10,17 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WordPilot">
-  <meta name="description" content="WordPilot 9.9.0 — sade ana sayfa, net Academy/Reader ayrımı, Kavram Atlası ve güvenli öneri yönetimi">
+  <meta name="description" content="WordPilot v9.9.1 — rol tabanlı Admin Center, güvenli yönetici erişimi ve responsive yönetim ekranları">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
-  <link rel="stylesheet" href="style.css?v=9.9.0">
-  <title>WordPilot 9.9 · UX Reset & Navigation</title>
+  <link rel="stylesheet" href="style.css?v=9.9.1">
+  <title>WordPilot 9.9.1 · Admin & Feedback Center</title>
   <script>
   // Yeni sürüm ilk kez görüldüğünde yalnızca eski önbellek ve Service Worker temizlenir.
   // localStorage silinmediği için misafir ve kullanıcı ilerlemeleri korunur.
   (()=>{
-    const BUILD='9.9.0',KEY='wordpilot_asset_build';
+    const BUILD='9.9.1',KEY='wordpilot_asset_build';
     if(localStorage.getItem(KEY)===BUILD)return;
     localStorage.setItem(KEY,BUILD);
     Promise.all([
@@ -48,7 +48,7 @@
       <button data-nav="progress">İlerleme</button>
     </nav>
     <div class="top-actions">
-      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v9.9.0 · UX Reset</span>
+      <span id="courseTopBadge" class="course-top-badge">English</span><span id="xpText" class="xp-pill">0 PP</span><span class="version">v9.9.1 · Admin Center</span>
       <button id="installBtn" class="icon-btn" hidden title="Uygulamayı yükle">⇩</button>
       <button id="profileBtn" class="avatar" data-action="open-profile" aria-label="Profil" title="Profili aç">M</button>
     </div>
@@ -817,44 +817,45 @@
 </dialog>
 
 <div id="toast" class="toast"></div>
-<script src="security-config.js?v=9.9.0" defer></script>
-<script src="app.js?v=9.9.0" defer></script>
-<script src="modules/firebase-sync.js?v=9.9.0" defer></script>
-<script src="modules/learning-engine.js?v=9.9.0" defer></script>
-<script src="modules/ui-events.js?v=9.9.0" defer></script>
-<script src="modules/course-engine.js?v=9.9.0" defer></script>
-<script src="modules/russian-path.js?v=9.9.0" defer></script>
-<script src="modules/v43.js?v=9.9.0" defer></script>
-<script src="modules/v431.js?v=9.9.0" defer></script>
-<script src="modules/v50.js?v=9.9.0" defer></script>
-<script src="modules/v510.js?v=9.9.0" defer></script>
-<script src="modules/v511.js?v=9.9.0" defer></script>
-<script src="modules/v512.js?v=9.9.0" defer></script>
-<script src="modules/v60.js?v=9.9.0" defer></script>
-<script src="modules/v61.js?v=9.9.0" defer></script>
-<script src="modules/v62.js?v=9.9.0" defer></script>
-<script src="modules/v63.js?v=9.9.0" defer></script>
-<script src="modules/v64.js?v=9.9.0" defer></script>
-<script src="modules/v65.js?v=9.9.0" defer></script>
-<script src="modules/v70.js?v=9.9.0" defer></script>
-<script src="modules/v71.js?v=9.9.0" defer></script>
-<script src="modules/v711.js?v=9.9.0" defer></script>
-<script src="modules/v712.js?v=9.9.0" defer></script>
-<script src="modules/v80.js?v=9.9.0" defer></script>
-<script src="modules/v81.js?v=9.9.0" defer></script>
-<script src="modules/v82.js?v=9.9.0" defer></script>
-<script src="modules/v822.js?v=9.9.0" defer></script>
-<script src="modules/v83.js?v=9.9.0" defer></script>
-<script src="modules/v90.js?v=9.9.0" defer></script>
-<script src="modules/v91.js?v=9.9.0" defer></script>
-<script src="modules/v92.js?v=9.9.0" defer></script>
-<script src="modules/v93.js?v=9.9.0" defer></script>
-<script src="modules/v94.js?v=9.9.0" defer></script>
-<script src="modules/v95.js?v=9.9.0" defer></script>
-<script src="modules/v96.js?v=9.9.0" defer></script>
-<script src="modules/v97.js?v=9.9.0" defer></script>
-<script src="modules/v98.js?v=9.9.0" defer></script>
-<script src="modules/v99.js?v=9.9.0" defer></script>
-<script src="modules/bootstrap.js?v=9.9.0" defer></script>
+<script src="security-config.js?v=9.9.1" defer></script>
+<script src="app.js?v=9.9.1" defer></script>
+<script src="modules/firebase-sync.js?v=9.9.1" defer></script>
+<script src="modules/learning-engine.js?v=9.9.1" defer></script>
+<script src="modules/ui-events.js?v=9.9.1" defer></script>
+<script src="modules/course-engine.js?v=9.9.1" defer></script>
+<script src="modules/russian-path.js?v=9.9.1" defer></script>
+<script src="modules/v43.js?v=9.9.1" defer></script>
+<script src="modules/v431.js?v=9.9.1" defer></script>
+<script src="modules/v50.js?v=9.9.1" defer></script>
+<script src="modules/v510.js?v=9.9.1" defer></script>
+<script src="modules/v511.js?v=9.9.1" defer></script>
+<script src="modules/v512.js?v=9.9.1" defer></script>
+<script src="modules/v60.js?v=9.9.1" defer></script>
+<script src="modules/v61.js?v=9.9.1" defer></script>
+<script src="modules/v62.js?v=9.9.1" defer></script>
+<script src="modules/v63.js?v=9.9.1" defer></script>
+<script src="modules/v64.js?v=9.9.1" defer></script>
+<script src="modules/v65.js?v=9.9.1" defer></script>
+<script src="modules/v70.js?v=9.9.1" defer></script>
+<script src="modules/v71.js?v=9.9.1" defer></script>
+<script src="modules/v711.js?v=9.9.1" defer></script>
+<script src="modules/v712.js?v=9.9.1" defer></script>
+<script src="modules/v80.js?v=9.9.1" defer></script>
+<script src="modules/v81.js?v=9.9.1" defer></script>
+<script src="modules/v82.js?v=9.9.1" defer></script>
+<script src="modules/v822.js?v=9.9.1" defer></script>
+<script src="modules/v83.js?v=9.9.1" defer></script>
+<script src="modules/v90.js?v=9.9.1" defer></script>
+<script src="modules/v91.js?v=9.9.1" defer></script>
+<script src="modules/v92.js?v=9.9.1" defer></script>
+<script src="modules/v93.js?v=9.9.1" defer></script>
+<script src="modules/v94.js?v=9.9.1" defer></script>
+<script src="modules/v95.js?v=9.9.1" defer></script>
+<script src="modules/v96.js?v=9.9.1" defer></script>
+<script src="modules/v97.js?v=9.9.1" defer></script>
+<script src="modules/v98.js?v=9.9.1" defer></script>
+<script src="modules/v99.js?v=9.9.1" defer></script>
+<script src="modules/v991.js?v=9.9.1" defer></script>
+<script src="modules/bootstrap.js?v=9.9.1" defer></script>
 </body>
 </html>

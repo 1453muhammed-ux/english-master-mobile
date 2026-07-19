@@ -1,0 +1,169 @@
+WORDPILOT v9.9.1 — ADMIN & FEEDBACK CENTER
+AŞAMA 1 DOĞRULAMA RAPORU
+
+Tarih: 2026-07-19 07:24
+Sonuç: 163/163 kontrol geçti.
+
+001. [GEÇTİ] JSON parse: clean_concepts_v71.json
+002. [GEÇTİ] JSON parse: clean_concepts_v711.json
+003. [GEÇTİ] JSON parse: coach_scenarios_v95.json
+004. [GEÇTİ] JSON parse: concept_ledger_v90.json
+005. [GEÇTİ] JSON parse: concept_ledger_v92.json
+006. [GEÇTİ] JSON parse: concept_master_v96.json
+007. [GEÇTİ] JSON parse: content_manifest_v71.json
+008. [GEÇTİ] JSON parse: content_manifest_v711.json
+009. [GEÇTİ] JSON parse: content_quality_v93.json
+010. [GEÇTİ] JSON parse: curriculum_v6.json
+011. [GEÇTİ] JSON parse: firebase.json
+012. [GEÇTİ] JSON parse: language_registry_v71.json
+013. [GEÇTİ] JSON parse: language_registry_v711.json
+014. [GEÇTİ] JSON parse: manifest.json
+015. [GEÇTİ] JSON parse: phrases_v92.json
+016. [GEÇTİ] JSON parse: phrases_v93.json
+017. [GEÇTİ] JSON parse: reader_lexicon_v94.json
+018. [GEÇTİ] JSON parse: reader_sources_v64.json
+019. [GEÇTİ] JSON parse: ru_alphabet.json
+020. [GEÇTİ] JSON parse: ru_dialogues.json
+021. [GEÇTİ] JSON parse: ru_exam_lab.json
+022. [GEÇTİ] JSON parse: ru_grammar.json
+023. [GEÇTİ] JSON parse: ru_verb_lab.json
+024. [GEÇTİ] JSON parse: ru_words.json
+025. [GEÇTİ] JSON parse: source_atlas_v63.json
+026. [GEÇTİ] JSON parse: source_manifest.json
+027. [GEÇTİ] JSON parse: stories.json
+028. [GEÇTİ] JSON parse: uz_words.json
+029. [GEÇTİ] JSON parse: words.json
+030. [GEÇTİ] JavaScript syntax: app.js
+031. [GEÇTİ] JavaScript syntax: security-config.js
+032. [GEÇTİ] JavaScript syntax: sw.js
+033. [GEÇTİ] JavaScript syntax: modules/bootstrap.js
+034. [GEÇTİ] JavaScript syntax: modules/course-engine.js
+035. [GEÇTİ] JavaScript syntax: modules/firebase-sync.js
+036. [GEÇTİ] JavaScript syntax: modules/learning-engine.js
+037. [GEÇTİ] JavaScript syntax: modules/russian-path.js
+038. [GEÇTİ] JavaScript syntax: modules/ui-events.js
+039. [GEÇTİ] JavaScript syntax: modules/v43.js
+040. [GEÇTİ] JavaScript syntax: modules/v431.js
+041. [GEÇTİ] JavaScript syntax: modules/v50.js
+042. [GEÇTİ] JavaScript syntax: modules/v510.js
+043. [GEÇTİ] JavaScript syntax: modules/v511.js
+044. [GEÇTİ] JavaScript syntax: modules/v512.js
+045. [GEÇTİ] JavaScript syntax: modules/v60.js
+046. [GEÇTİ] JavaScript syntax: modules/v61.js
+047. [GEÇTİ] JavaScript syntax: modules/v62.js
+048. [GEÇTİ] JavaScript syntax: modules/v63.js
+049. [GEÇTİ] JavaScript syntax: modules/v64.js
+050. [GEÇTİ] JavaScript syntax: modules/v65.js
+051. [GEÇTİ] JavaScript syntax: modules/v70.js
+052. [GEÇTİ] JavaScript syntax: modules/v71.js
+053. [GEÇTİ] JavaScript syntax: modules/v711.js
+054. [GEÇTİ] JavaScript syntax: modules/v712.js
+055. [GEÇTİ] JavaScript syntax: modules/v80.js
+056. [GEÇTİ] JavaScript syntax: modules/v81.js
+057. [GEÇTİ] JavaScript syntax: modules/v82.js
+058. [GEÇTİ] JavaScript syntax: modules/v822.js
+059. [GEÇTİ] JavaScript syntax: modules/v83.js
+060. [GEÇTİ] JavaScript syntax: modules/v90.js
+061. [GEÇTİ] JavaScript syntax: modules/v91.js
+062. [GEÇTİ] JavaScript syntax: modules/v92.js
+063. [GEÇTİ] JavaScript syntax: modules/v93.js
+064. [GEÇTİ] JavaScript syntax: modules/v94.js
+065. [GEÇTİ] JavaScript syntax: modules/v95.js
+066. [GEÇTİ] JavaScript syntax: modules/v96.js
+067. [GEÇTİ] JavaScript syntax: modules/v97.js
+068. [GEÇTİ] JavaScript syntax: modules/v98.js
+069. [GEÇTİ] JavaScript syntax: modules/v99.js
+070. [GEÇTİ] JavaScript syntax: modules/v991.js
+071. [GEÇTİ] Index title identifies 9.9.1 Admin Center
+072. [GEÇTİ] Index description identifies Admin Center
+073. [GEÇTİ] Local asset exists: security-config.js
+074. [GEÇTİ] Local asset exists: app.js
+075. [GEÇTİ] Local asset exists: modules/firebase-sync.js
+076. [GEÇTİ] Local asset exists: modules/learning-engine.js
+077. [GEÇTİ] Local asset exists: modules/ui-events.js
+078. [GEÇTİ] Local asset exists: modules/course-engine.js
+079. [GEÇTİ] Local asset exists: modules/russian-path.js
+080. [GEÇTİ] Local asset exists: modules/v43.js
+081. [GEÇTİ] Local asset exists: modules/v431.js
+082. [GEÇTİ] Local asset exists: modules/v50.js
+083. [GEÇTİ] Local asset exists: modules/v510.js
+084. [GEÇTİ] Local asset exists: modules/v511.js
+085. [GEÇTİ] Local asset exists: modules/v512.js
+086. [GEÇTİ] Local asset exists: modules/v60.js
+087. [GEÇTİ] Local asset exists: modules/v61.js
+088. [GEÇTİ] Local asset exists: modules/v62.js
+089. [GEÇTİ] Local asset exists: modules/v63.js
+090. [GEÇTİ] Local asset exists: modules/v64.js
+091. [GEÇTİ] Local asset exists: modules/v65.js
+092. [GEÇTİ] Local asset exists: modules/v70.js
+093. [GEÇTİ] Local asset exists: modules/v71.js
+094. [GEÇTİ] Local asset exists: modules/v711.js
+095. [GEÇTİ] Local asset exists: modules/v712.js
+096. [GEÇTİ] Local asset exists: modules/v80.js
+097. [GEÇTİ] Local asset exists: modules/v81.js
+098. [GEÇTİ] Local asset exists: modules/v82.js
+099. [GEÇTİ] Local asset exists: modules/v822.js
+100. [GEÇTİ] Local asset exists: modules/v83.js
+101. [GEÇTİ] Local asset exists: modules/v90.js
+102. [GEÇTİ] Local asset exists: modules/v91.js
+103. [GEÇTİ] Local asset exists: modules/v92.js
+104. [GEÇTİ] Local asset exists: modules/v93.js
+105. [GEÇTİ] Local asset exists: modules/v94.js
+106. [GEÇTİ] Local asset exists: modules/v95.js
+107. [GEÇTİ] Local asset exists: modules/v96.js
+108. [GEÇTİ] Local asset exists: modules/v97.js
+109. [GEÇTİ] Local asset exists: modules/v98.js
+110. [GEÇTİ] Local asset exists: modules/v99.js
+111. [GEÇTİ] Local asset exists: modules/v991.js
+112. [GEÇTİ] Local asset exists: modules/bootstrap.js
+113. [GEÇTİ] Local asset exists: manifest.json
+114. [GEÇTİ] Local asset exists: apple-touch-icon.png
+115. [GEÇTİ] Local asset exists: icon-192.png
+116. [GEÇTİ] Local asset exists: style.css
+117. [GEÇTİ] Index loads v991 module
+118. [GEÇTİ] v991 loads after v99
+119. [GEÇTİ] Bootstrap loads after v991
+120. [GEÇTİ] All local JS/CSS query versions are 9.9.1
+121. [GEÇTİ] CSS parses without top-level errors
+122. [GEÇTİ] Admin desktop shell CSS exists
+123. [GEÇTİ] Admin mobile drawer CSS exists
+124. [GEÇTİ] Normal app navigation hides in admin mode
+125. [GEÇTİ] App runtime version is 9.9.1
+126. [GEÇTİ] Security config version is 9.9.1
+127. [GEÇTİ] Manifest version is 9.9.1
+128. [GEÇTİ] Manifest start URL uses 9.9.1
+129. [GEÇTİ] Service Worker cache is 9.9.1
+130. [GEÇTİ] Service Worker caches v991 module
+131. [GEÇTİ] Bootstrap initializes v991 events
+132. [GEÇTİ] Bootstrap runs v991 after init
+133. [GEÇTİ] Admin roles include owner/admin/support/editor/viewer
+134. [GEÇTİ] Admin active=false is rejected
+135. [GEÇTİ] Admin route guard exists
+136. [GEÇTİ] Profile button is hidden for non-admin
+137. [GEÇTİ] Profile entry is named Yönetim Merkezi
+138. [GEÇTİ] Admin overview panel exists
+139. [GEÇTİ] Feedback panel exists
+140. [GEÇTİ] Content Center placeholder exists
+141. [GEÇTİ] Audit placeholder exists
+142. [GEÇTİ] Mobile menu behavior exists
+143. [GEÇTİ] WordPilot return action exists
+144. [GEÇTİ] Feedback management is role-gated
+145. [GEÇTİ] Editor/viewer receive read-only UI
+146. [GEÇTİ] v9.9 admin functions are replaced
+147. [GEÇTİ] Admin shell template IDs are unique
+148. [GEÇTİ] Firestore admin roles are validated
+149. [GEÇTİ] Firestore supports legacy missing active field
+150. [GEÇTİ] Inactive admin is denied
+151. [GEÇTİ] Feedback manager role function exists
+152. [GEÇTİ] Feedback update fields are restricted
+153. [GEÇTİ] Feedback status values are restricted
+154. [GEÇTİ] Feedback update uses server time
+155. [GEÇTİ] Feedback delete is owner-only
+156. [GEÇTİ] English library remains 5000 records
+157. [GEÇTİ] Russian library remains 1500 records
+158. [GEÇTİ] Uzbek library remains 1000 records
+159. [GEÇTİ] Reader remains 114 stories
+160. [GEÇTİ] Academy remains 102 lessons
+161. [GEÇTİ] Academy remains 48 readings
+162. [GEÇTİ] README identifies v9.9.1
+163. [GEÇTİ] Release notes exist
